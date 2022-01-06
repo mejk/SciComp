@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Linux: Some basic &amp; useful commands &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/linux-basic-commands-2.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Brief introduction to Python" href="python-intro.html" />
+    <link rel="prev" title="1. Linux - the basics" href="Linux-basics.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week02/linux-basic-commands-2.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Linux: Some basic &amp; useful commands" />
+<meta property="og:description" content="Linux: Some basic &amp; useful commands  Learning goals:  To get an overview of the most common Linux commands  How to find help on your computer  How to copy, move" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week02/linux-basic-commands-2.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-get-help">
+   2.1. How to get help
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-am-i-and-who-is-in-the-system">
+   2.2. Who am I and who is in the system?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-the-name-of-my-system-and-related">
+   2.3. What is the name of my system and related
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-directory-operations">
+   2.4. File / directory operations
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-special-conventions-related-to-files-and-directories">
+     2.4.1. Some special conventions related to files and directories
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#home-directory-and-work-directory-current-directory">
+     2.4.2. Home directory and work directory / current directory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#show-the-files-and-directories">
+     2.4.3. Show the files and directories
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#wildcards">
+   2.5. Wildcards
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moving-between-directories">
+   2.6. Moving between directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#creating-and-deleting-files-and-directories">
+   2.7. Creating and deleting files and directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying-renaming-and-moving-files-and-directories">
+   2.8. Copying, renaming and moving files and directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-in-your-files-seeing-file-contents">
+   2.9. What is in your files - seeing file contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#find-files-and-directories">
+   2.10. Find files and directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#compare-files-extract-information">
+   2.11. Compare files, extract information
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linking-files">
+   2.12. Linking files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#processes-view-stop-modify">
+   2.13. Processes: View, stop, modify
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-permissions-and-ownership">
+   2.14. File permissions and ownership
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#environment">
+   2.15. Environment
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="linux-some-basic-useful-commands">
+<h1><span class="section-number">2. </span>Linux: Some basic &amp; useful commands<a class="headerlink" href="#linux-some-basic-useful-commands" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To get an overview of the most common Linux commands</p></li>
+<li><p class="card-text">How to find help on your computer</p></li>
+<li><p class="card-text">How to copy, move and remove data and directories</p></li>
+<li><p class="card-text">How to find information about the computer</p></li>
+<li><p class="card-text">How to use wildcards</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> Linux CLI commands, finding help on commands, wildcards</p>
+<!--
+**Associated material:** Cheat sheet of the most common Linux commands.
+-->
+<p class="card-text"><strong>More information:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://ubuntu.com/tutorials/command-line-for-beginners">The Linux command line for beginners</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://linuxcommand.org/">The Linux Command Line by William Shotts</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This section lists some of the most important and useful commands with examples. More commands will be introduced later with the introduction of other tools.</p>
+<p></p>
+<p>Additionally, some notes regarding the difference between Linux (bash shell) and OSX (zsh) are provided.</p>
+<p></p>
+<div class="section" id="how-to-get-help">
+<h2><span class="section-number">2.1. </span>How to get help<a class="headerlink" href="#how-to-get-help" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>As the very first thing, let’s list a couple of methods how to get help using the command line</p>
+<p><code class="docutils literal notranslate"><span class="pre">man</span></code>: <b style="color:#1371a9;">Get help on any command.</b></p>
+<p>To get help on help, try</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">man</span>
+</pre></div>
+</div>
+<p>It is instructive to check each of the commands below using man. If for some reason there is no man-page (that’s how the manual pages are often called) for a command, that probably means that full documentation was not installed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">apropos</span></code>:
+<b style="color:#1371a9;">
+You know what you want to do but cannot remember the command.
+</b></p>
+<p>This can return a long list of commands, but it provides a lot of information. For example, to get to know what kind of copying commands are available, try</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apropos</span> <span class="n">copy</span>
+</pre></div>
+</div>
+<p>As you can see, the list is very comprehensive.</p>
+</div>
+<div class="section" id="who-am-i-and-who-is-in-the-system">
+<h2><span class="section-number">2.2. </span>Who am I and who is in the system?<a class="headerlink" href="#who-am-i-and-who-is-in-the-system" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">whoami</span></code>:
+<b style="color:#1371a9;">
+Who am I. Show my username
+</b></p>
+<p>As simple as that. This command doesn’t have many options as can be checked using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">whoami</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ whoami 
+ sam
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">who</span></code>:
+<b style="color:#1371a9;">
+Who is logged in the system and the sessions they have
+</b></p>
+<p>This shows also the users logged in the system, since when and some other information. The command <code class="docutils literal notranslate"><span class="pre">who</span></code> has lots of options (check using <code class="docutils literal notranslate"><span class="pre">who</span></code>) including</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">who</span> <span class="pre">-a</span></code>: Shows all the users logged in, the last time the system was booted and some other information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">who</span> <span class="pre">-b</span></code>: Shows when the systems was booted the last time.</p></li>
+</ul>
+<p><strong>Example 1:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ who 
+ sam  tty1         Nov 12 15:21 (:0)
+ sam  pts/1        Nov 12 15:21 (:0)
+ sam  pts/2        Nov 12 15:21 (:0)
+</pre></div>
+</div>
+<p><strong>Example 2:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ who -b
+         system boot  Nov 12 14:54
+</pre></div>
+</div>
+<p><strong>Example 3:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ who -a
+         system boot  Nov 12 14:54
+         run-level 5  Nov 12 14:54
+ sam  tty1         Nov 12 15:21 (:0)
+ sam  pts/1        Nov 12 15:21 (:0)
+ sam  pts/2        Nov 12 15:21 (:0)
+</pre></div>
+</div>
+</div>
+<div class="section" id="what-is-the-name-of-my-system-and-related">
+<h2><span class="section-number">2.3. </span>What is the name of my system and related<a class="headerlink" href="#what-is-the-name-of-my-system-and-related" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Below are some of the useful system information commands. There are several more for various purposes, but here only some the more common ones are listed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">hostname</span></code>:
+<b style="color:#1371a9;">
+Show (can also used to change) hostname (=the name of your computer).
+</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">hostname</span></code> has several options (check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">hostname</span></code>) including</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hostname</span> <span class="pre">-I</span> <span class="pre">-a</span></code>: Shows your IP addresses.</p></li>
+</ul>
+<p><strong>OSX note:</strong> This command also exists on Mac, but the options are different, check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">hostname</span></code></p>
+<p><strong>Example:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ hostname
+ linux
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">uname</span></code>:
+<b style="color:#1371a9;">
+Shows system information.
+</b></p>
+<p>This is a very useful command and it has several options (check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">uname</span></code>) including</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-a</span></code>: Shows all information.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-r</span></code>: Shows the kernel release.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">uname</span> <span class="pre">-o</span></code>: Shows the operating system.</p></li>
+</ul>
+<p><strong>OSX note:</strong> This command also exists on Mac, but some of the options are different, check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">hostname</span></code></p>
+<p><strong>Example 1:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sam@linux:~$ uname 
+ Linux
+</pre></div>
+</div>
+<p><strong>Example 2:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ uname -a
+ Linux linux 5.4.0-53-generic #59-Ubuntu SMP Wed Oct 21 09:38:44 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">lscpu</span></code>:
+<b style="color:#1371a9;">
+Shows information about your CPUs (list CPU).
+</b></p>
+<p>Has several options (check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">lscpu</span></code>).</p>
+<p><strong>OSX note 1:</strong> This command doesn’t exist on Mac by default. Instead, you can use the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">system_profiler</span> <span class="n">SPHardwareDataType</span>
+</pre></div>
+</div>
+<p><strong>OSX note 2:</strong> It is possible to get the Linux command + some others by installing the package <code class="docutils literal notranslate"><span class="pre">util-linux</span></code> using Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">util</span><span class="o">-</span><span class="n">linux</span>
+</pre></div>
+</div>
+<p><strong>Example</strong> (the output is truncated to fit in a smaller space):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sam@linux:~$ lscpu 
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   39 bits physical, 48 bits virtual
+CPU(s):                          12
+On-line CPU(s) list:             0-11
+Thread(s) per core:              2
+Core(s) per socket:              6
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           158
+Model name:                      Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz
+Stepping:                        10
+CPU MHz:                         4266.032
+CPU max MHz:                     4500.0000
+CPU min MHz:                     800.0000
+BogoMIPS:                        5199.98
+Virtualization:                  VT-x
+L1d cache:                       192 KiB
+L1i cache:                       192 KiB
+L2 cache:                        1.5 MiB
+L3 cache:                        12 MiB
+NUMA node0 CPU(s):               0-11
+Vulnerability Itlb multihit:     KVM: Mitigation: Split huge pages
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">lsb_release</span></code>:
+<b style="color:#1371a9;">
+Shows distribution specific information. LSB = Linux Standard Base
+</b></p>
+<p>Has options (check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">lsb_release</span></code>).</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">lsb_release</span> <span class="pre">-v</span></code>: Shows the version.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lsb_release</span> <span class="pre">-a</span></code>: Shows all information.</p></li>
+</ul>
+<p><strong>OSX note:</strong> This command doesn’t exist on Mac<br></p>
+<p><strong>Example</strong> (the output is truncated to fit in a smaller space):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sam@linux:~$ lsb_release -a
+No LSB modules are available.
+Distributor ID: Ubuntu
+Description:    Ubuntu 20.04.1 LTS
+Release:        20.04
+Codename:       focal     
+</pre></div>
+</div>
+</div>
+<div class="section" id="file-directory-operations">
+<h2><span class="section-number">2.4. </span>File / directory operations<a class="headerlink" href="#file-directory-operations" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>This section focuses on various file operations, such as how to how to see the current work directory, how to list, create, copy and delete files and directories and how to move between directories. The concepts of file permissions and ownership are also discussed.</p>
+<div class="section" id="some-special-conventions-related-to-files-and-directories">
+<h3><span class="section-number">2.4.1. </span>Some special conventions related to files and directories<a class="headerlink" href="#some-special-conventions-related-to-files-and-directories" title="Permalink to this headline">¶</a></h3>
+<hr>
+<ul class="simple">
+<li><p>Single dot (.) refers to the current directory</p></li>
+<li><p>Double dots (..) refers to the directory at the next higher level.</p></li>
+<li><p>Tilde (~) refers to home directory</p></li>
+<li><p>Hidden files start with a dot (.)</p></li>
+<li><p>Hyphen (-) refers to the previous directory where you were</p></li>
+</ul>
+</div>
+<div class="section" id="home-directory-and-work-directory-current-directory">
+<h3><span class="section-number">2.4.2. </span>Home directory and work directory / current directory<a class="headerlink" href="#home-directory-and-work-directory-current-directory" title="Permalink to this headline">¶</a></h3>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: <b style="color:#1371a9;">Show where I am.</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">pwd</span></code> prints the current directory on screen (also called <em>work directory</em> - pwd = print work directory). There are not man options for <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">pwd</span></code>). The <code class="docutils literal notranslate"><span class="pre">pwd</span></code> command shows the full path.</p>
+<p><strong>Example:<p></p></strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ pwd   
+ /home/sam
+</pre></div>
+</div>
+<p>This means that the user <code class="docutils literal notranslate"><span class="pre">sam</span></code> is currently in his/her home directory.</p>
+</div>
+<div class="section" id="show-the-files-and-directories">
+<h3><span class="section-number">2.4.3. </span>Show the files and directories<a class="headerlink" href="#show-the-files-and-directories" title="Permalink to this headline">¶</a></h3>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">ls</span></code>: <b style="color:#1371a9;">Show the files and directories, that is, the contents of current directory</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">ls</span></code> has a lot of useful options as one can see by using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code>. Here are some (the option <code class="docutils literal notranslate"><span class="pre">-l</span></code> is used in connection with most of them since it is very useful to see the file/directory details):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-l</span></code>: Long listing, shows the file/directory properties including size, time of last modification, owner and access rights.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lt</span></code>: The option <code class="docutils literal notranslate"><span class="pre">-t</span></code> lists the files ordered such that the most recently modified is listed first. This is very useful with the option <code class="docutils literal notranslate"><span class="pre">-l</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-ltr</span></code>: Using the previous with the option <code class="docutils literal notranslate"><span class="pre">-r</span></code> lists the files in reverse order: such that the most recently modified is listed last.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code>: The option <code class="docutils literal notranslate"><span class="pre">-t</span></code> lists all the files including the hidden files that start with a dot.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lS</span></code>: The option <code class="docutils literal notranslate"><span class="pre">-S</span></code> lists the files with the largest one first.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-lh</span></code>: The option <code class="docutils literal notranslate"><span class="pre">-h</span></code> lists the files such that size is in a human readable format. This means sizes are given in the form 1k, 1M, 1G. This is very useful.</p></li>
+</ul>
+<p><strong>Note: The dot directories.</strong>  When using <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">-la</span></code>, there are two directories that have the names dot (.) and (..) listed. As described above, dot refers to the current directory and double dot to the one directly above. These can be used when moving around directories as will be done below.</p>
+<p><strong>Note: File details when using the long listing.</strong></p>
+<!--    
+<table class="lblue">
+    <tr>
+        <td>
+            <img src="./img/dot-directories.svg" width="100%"/>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+        Figure: When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user's, group's and other's. `r`=right to read,`x`=right to execute, `w`=right to write, `-`=no right's given. Dash in the first column means file while `d` stands for directory.  
+        </td>
+    </tr>
+</table>    
+
+-->
+<div class="figure align-default" id="heart">
+<a class="reference internal image-reference" href="../../_images/dot-directories.svg"><img alt="../../_images/dot-directories.svg" src="../../_images/dot-directories.svg" width="750px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user’s, group’s and other’s. <code class="docutils literal notranslate"><span class="pre">r</span></code>=right to read,<code class="docutils literal notranslate"><span class="pre">x</span></code>=right to execute, <code class="docutils literal notranslate"><span class="pre">w</span></code>=right to write, <code class="docutils literal notranslate"><span class="pre">-</span></code>=no right’s given. Dash in the first column means file while <code class="docutils literal notranslate"><span class="pre">d</span></code> stands for directory.</span><a class="headerlink" href="#heart" title="Permalink to this image">¶</a></p>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">tree</span></code>: <b style="color:#1371a9;">Show the directory structure.</b></p>
+<div class="int"> 
+This is a neat tool that can be used to view the directory structure.
+The command `tree` may already be in your system. To check if that is the case, open a terminal window and type
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">tree</span>
+</pre></div>
+</div>
+<p>If you see something like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">tree</span>
+</pre></div>
+</div>
+<p>Then the command is already installed. If that is not the case, you can do it as follows:</p>
+<ul>
+<li><p>In Ubuntu/Debian-based systems:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">tree</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>Let’s check how it works. The command gives the directory tree (as in the Figure) with respect to the argument. If the argument is the root directory <code class="docutils literal notranslate"><span class="pre">/</span></code>, the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">/</span>
+</pre></div>
+</div>
+<p>prints the directory tree starting from the root level on the screen. You can stop it by pressing</p>
+<p><kbd>ctrl-C</kbd></p>
+<p><strong>Note:</strong> The keystroke <kbd>ctrl-C</kbd> can always be used to stop a process than runs on your screen. It is <em>very</em> useful. There are other ones as well but they will be introduced later.</p>
+<p>If the above would be all there is to <code class="docutils literal notranslate"><span class="pre">tree</span></code>, then it wouldn’t be super useful. But fortunately it takes different optional arguments. One particularly useful one is the option <code class="docutils literal notranslate"><span class="pre">-L</span> <span class="pre">number</span></code> that defines the level. For example,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">-</span><span class="n">L</span> <span class="mi">1</span> <span class="o">/</span>
+</pre></div>
+</div>
+<p>shows only one level below the root directory and</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tree</span> <span class="o">-</span><span class="n">L</span> <span class="mi">1</span> <span class="o">-</span><span class="n">t</span> <span class="o">/</span>
+</pre></div>
+</div>
+<p>provides listing that is ordered from the ones that was modified the the longest time ago to the latest one.</p>
+<p>To get more information about <code class="docutils literal notranslate"><span class="pre">tree</span></code>, simply type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">man</span> <span class="n">tree</span>
+</pre></div>
+</div>
+<p>on the terminal screen.</p>
+<p><strong>OSX note:</strong> If this command is not on your Mac, you can install it using Homebrew</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">tree</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="wildcards">
+<h2><span class="section-number">2.5. </span>Wildcards<a class="headerlink" href="#wildcards" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Below is a list of common wildcards. They are very useful when searching, listing copying and so on. These should not be mixed up with the conventions listed above. There is a distinction between wildcards and regular expressions, but we are not going to discuss the latter here.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">*</span></code>: match any number (zero or more) of characters. Example: <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">a*</span></code> lists all the files and directories starting with the letter a (small a only, capitalization matters).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">?</span></code>: Match a single character.  Example: <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">a?v*</span></code> lists files that start with the letter a, the second character can be any character, the third character is small v followed by any number of arbitrary characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code>: range of characters. For example <code class="docutils literal notranslate"><span class="pre">A\[abc\]D</span></code>, matches strings that start with the letter A, end to the letter D and have any combination of the characters abc between them. Example: <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">a[dvc]*</span></code> lists files that start with an a, then have any combination of dvc followed by any number of any characters.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[!</span> <span class="pre">]</span></code>: The exclamation mark is logical not. When used in example <code class="docutils literal notranslate"><span class="pre">A\[!abc\]D</span></code>, matches strings that start with the letter A, end to the letter D but doesn’t have any of abc between them. Example: <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">a[!dvc]*</span></code> lists files that start with an a, then have no  combination of dvc followed by any number of any characters.</p></li>
+</ul>
+</div>
+<div class="section" id="moving-between-directories">
+<h2><span class="section-number">2.6. </span>Moving between directories<a class="headerlink" href="#moving-between-directories" title="Permalink to this headline">¶</a></h2>
+<hr>
+Now that we know how to see where we are, and list the files and directories, let's look at how to move between directories.
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code>: <b style="color:#1371a9;">Change directory.</b></p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span></code> means change directory. If you want to move, for example, into your downloads directory (it is assumed that you are in your home directory), type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">Downloads</span>
+</pre></div>
+</div>
+<p><strong>Capitalization.</strong>
+Capitalization matters, usually the downloads directory is spelled with a capital but you can of course check that by using the <code class="docutils literal notranslate"><span class="pre">ls</span> </code> command.</p>
+<p><strong>Using tilde (~) to get your home directory.</strong>
+Tilde is refers to your home directory and it is really handy. For example, to move your home directory from wherever you are, typing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~</span>
+</pre></div>
+</div>
+<p>will take you home. Or, if you want to move from some remote directory to the downloads directory, simply type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">Downloads</span>
+</pre></div>
+</div>
+<p>The slash character is needed since it refers to a directory.</p>
+<p><strong>Using plain <code class="docutils literal notranslate"><span class="pre">cd</span></code> to get your home directory.</strong>
+Simply using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+</pre></div>
+</div>
+<p>moves you back to your home directory.</p>
+<p><strong>Using double dots  <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> to move up one level.</strong> Simply using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">..</span>
+</pre></div>
+</div>
+<p>moves you up one level. For example, if you are in the downloads directory, <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">..</span></code> moves back to your home directory since it is one level above, that is, it is the <em>parent directory</em>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pushd</span></code>: <b style="color:#1371a9;">Switch easily between two (or more) directories.</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">pushd</span></code> adds a directory (or directories) in the directory stack and allows you to move easily between them. In the simplest case, if you are currently located in your home directory, just  type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pushd</span> <span class="o">~</span><span class="n">Downloads</span>
+</pre></div>
+</div>
+<p>This adds the directory <code class="docutils literal notranslate"><span class="pre">Downloads</span></code> to the stack and moves you there. Typing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pushd</span>
+</pre></div>
+</div>
+<p>takes you back home or whatever is the other directory in the stack (there can be more than one). Executing <code class="docutils literal notranslate"><span class="pre">pushd</span></code> once more takes you to <code class="docutils literal notranslate"><span class="pre">Downloads</span></code>. This is very handy when moving between directories that have long paths.</p>
+<p><strong>How to see which directories are included in the stack?</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dirs</span> <span class="o">-</span><span class="n">v</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="creating-and-deleting-files-and-directories">
+<h2><span class="section-number">2.7. </span>Creating and deleting files and directories<a class="headerlink" href="#creating-and-deleting-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Now that we know how to see where we are and list the files and directories, let’s look at how to create and delete files and directories.</p>
+<p><code class="docutils literal notranslate"><span class="pre">touch</span></code>: <b style="color:#1371a9;">Create an empty file.</b></p>
+<p>Doesn’t sound like much of a command but in practise this it is  very useful. In addition to generating new empty files, <code class="docutils literal notranslate"><span class="pre">touch</span></code> can also be used to change the time when a file has been modified. This can be very helpful if the system (like some HPC systems) automatically deletes files older than some specified time if they are in some particular directories (such as temporary work directories).</p>
+<p>To create a file called my_text_file.txt, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">touch</span> <span class="n">my_test_file</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">mkdir</span></code>: <b style="color:#1371a9;">Create a new directory.</b>
+To create a new empty directory, called my_test_directory, try:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">my_test_directory</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rmdir</span></code>: <b style="color:#1371a9;">Delete a directory.</b></p>
+<p>To delete a directory, it must be empty (this is a good safeguard). If the directory is not empty, <code class="docutils literal notranslate"><span class="pre">rmdir</span></code> won’t do anything. Since the newly created directory is empty, let’s delete it:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rmdir</span> <span class="n">my_test_directory</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">rm</span></code>: <b style="color:#1371a9;">Delete files.</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">rm</span></code> is (obviously) very useful but also potentially <em>very</em> dangerous especially some of the options. The dangerous options are listed separately with a warning.</p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">rm</span></code> does not remove directories, empty or not, unless the corresponding option is given, see below. Here are some useful options <code class="docutils literal notranslate"><span class="pre">rm</span></code> takes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-v</span></code> : Verbose. Does not prompt but tells what was done.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-i</span> </code> : Interactive remove, prompt for every file being removed.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-d</span></code> : Removes empty directories.</p></li>
+</ul>
+<!--    
+<div class="red"> 
+    
+ **Important: Be *very* careful with the following options and DO NOT EXECUTE THEM NOW** 
+
+- `rm *`: Deletes *absolutely everything* in the current directory. There is no way to recover any of the files unless there is a separate backup.
+- `rm -r *`: Deletes *absolutely everything recursively*. That is, everything including subdirectories are deleted. As the most drastic example, the superuser can delete the whole system if this is accidentally executed at the root directory. 
+```
+    </div>
+</div>    
+-->
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Important: Be <em>very</em> careful with the following options and DO NOT EXECUTE THEM NOW</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">*</span> </code>  : Deletes <em>absolutely everything</em> in the current directory. There is no way to recover any of the files unless there is a separate backup.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">*</span> </code>  : Deletes <em>absolutely everything recursively</em>. That is, everything including subdirectories are deleted. As the most drastic example, the superuser can delete the whole system if this is accidentally executed at the root directory.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="copying-renaming-and-moving-files-and-directories">
+<h2><span class="section-number">2.8. </span>Copying, renaming and moving files and directories<a class="headerlink" href="#copying-renaming-and-moving-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<hr>
+Now that we know how to see where we are and list the files and directories, let's look at how to create and delete files and directories.
+<p><code class="docutils literal notranslate"><span class="pre">cp</span></code>: <b style="color:#1371a9;">Copy files or/and directories.</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">cp</span></code> has lots of useful options, check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code>. The wildcards listed above are also very useful with this command. Here are some useful options:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-r</span></code>: Copies recursively, that is, copies also subdirectories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-p</span> </code>: This option preserves the date last modified (timestamps), ownership and mode. A very useful option.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-i</span> </code>: Interactive copying. Asks if an existing file should be overwritten or kept.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-n</span></code>: Doesn’t allow overwriting existing files.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">-u</span></code>: If a file with the same name exists, it is overwritten only of the source file is newer than the existing file at the destination.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">mv</span></code>: <b style="color:#1371a9;">Move or rename files and directories.</b></p>
+<p>The command <code class="docutils literal notranslate"><span class="pre">mv</span></code> can be used with both files and directories. Below are some useful options (very similar to <code class="docutils literal notranslate"><span class="pre">cp</span></code>):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">-i</span> </code>: Interactive mode. Very useful to avoid overwriting files or/and directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">-n</span></code>: Prevents overwriting existing files/directories.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">-u</span></code>: If a file/directory with the same name exists, it is overwritten only of the source is newer than the destination.</p></li>
+</ul>
+<p><strong>Example:</strong> Let’s 1) create an empty file, but first check that it is not there, 2) copy it, 3) rename the original, 4) list the files using a wildcard, 4) remove the original, 5) remove the copy as well, and finally 6) check that both of the files have been deleted.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> sam@linux:~$ ls test.txt   
+ ls: cannot access &#39;test.txt&#39;: No such file or directory
+ sam@linux:~$ touch test.txt  
+ sam@linux:~$ ls test.txt   
+ test.txt
+ sam@linux:~$ cp test.txt test-copy.txt  
+ sam@linux:~$ ls test*  
+ test.txt test-copy.txt 
+ sam@linux:~$ mv test.txt test-original.txt  
+ sam@linux:~$ ls test*  
+ test-original.txt test-copy.txt  
+ sam@linux:~$ rm test-original.txt   
+ sam@linux:~$ rm test-copy.txt   
+ sam@linux:~$ ls test*
+ ls: cannot access &#39;test*&#39;: No such file or directory
+</pre></div>
+</div>
+</div>
+<div class="section" id="what-is-in-your-files-seeing-file-contents">
+<h2><span class="section-number">2.9. </span>What is in your files - seeing file contents<a class="headerlink" href="#what-is-in-your-files-seeing-file-contents" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>At this time we don’t have files with content but since we will needs these commands shortly, let’s list them briefly and elaborate when we have files with content.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cat</span></code>: <b style="color:#1371a9;">Concatenate files and print on screen (or standard output to be more precise).</b></p>
+<p><code class="docutils literal notranslate"><span class="pre">head</span></code>: <b style="color:#1371a9;">Show the first 10 lines of a file.</b></p>
+<p><code class="docutils literal notranslate"><span class="pre">tail</span></code>: <b style="color:#1371a9;">Show the last 10 lines of a file.</b></p>
+<p><code class="docutils literal notranslate"><span class="pre">more</span></code>: <b style="color:#1371a9;">Show the file contents screenful-by-screenful.</b></p>
+<p><code class="docutils literal notranslate"><span class="pre">less</span></code>: <b style="color:#1371a9;">Opposite of more.</b></p>
+</div>
+<div class="section" id="find-files-and-directories">
+<h2><span class="section-number">2.10. </span>Find files and directories<a class="headerlink" href="#find-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">find</span></code>: <b style="color:#1371a9;">Find files and directories.</b></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">find</span></code> command is <em>very</em> powerful and it has lots of options and different ways to use them. It also finds files and directories very fast. Here, the basic usage with some options are provided. This is how the command works:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="p">[</span><span class="n">where</span> <span class="n">to</span> <span class="n">search</span><span class="p">]</span> <span class="p">[</span><span class="n">criterion</span> <span class="k">for</span> <span class="n">searching</span> <span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">date</span> <span class="n">of</span> <span class="n">modification</span><span class="o">...</span><span class="p">)]</span> <span class="p">[</span><span class="o">-</span><span class="n">options</span><span class="p">]</span> <span class="p">[</span><span class="n">what</span> <span class="n">to</span> <span class="n">find</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>The command <code class="docutils literal notranslate"><span class="pre">find</span></code> is somewhat more complex than the ones above. It’s usage is illustrated with examples:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-name</span> <span class="pre">myfile.txt</span></code>: Searches the current directory and any directory below it for a file or directory with the precise name <code class="docutils literal notranslate"><span class="pre">myfile.txt</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-name</span> <span class="pre">&quot;myfile*&quot;</span></code>: Searches the current directory and any directory below it for a file or directory that start(s) with <code class="docutils literal notranslate"><span class="pre">myfile</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">find</span> <span class="pre">.</span> <span class="pre">-type</span> <span class="pre">d</span> <span class="pre">-name</span> <span class="pre">MYDIR</span></code>: Searches the current directory and any directory below it for a directory (<code class="docutils literal notranslate"><span class="pre">-type</span> <span class="pre">d</span></code>) with the precise name <code class="docutils literal notranslate"><span class="pre">MYDIR</span></code>.</p></li>
+</ul>
+<p><strong>Example 1:</strong> Since at this time you don’t have (assuming you have a new installation) much on your computer, let’s search for something we know have:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sam@linux:~$ find . -type d -name Downloads  
+./Downloads
+</pre></div>
+</div>
+<p><strong>Example 2:</strong> Let’s us a wildcard:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sam@linux:~$ find . -type d -name &quot;Down&quot;  
+./Downloads
+</pre></div>
+</div>
+<!--
+# More  Linux commands
+<hr>
+
+-->
+</div>
+<div class="section" id="compare-files-extract-information">
+<h2><span class="section-number">2.11. </span>Compare files, extract information<a class="headerlink" href="#compare-files-extract-information" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">diff</span></code>:
+<b style="color:#1371a9;">
+Compare the contents of files
+</b>
+Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="n">file1</span> <span class="n">file2</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong> Assume that you have two files, one of the is an older version of some text and the other newer. To see the difference (=changes), use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">diff</span> <span class="n">old</span><span class="o">.</span><span class="n">txt</span> <span class="n">new</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">grep</span></code>:
+<b style="color:#1371a9;">
+Extract lines with a given pattern from output
+</b></p>
+<p><strong>Example:</strong> List all the files with details and in chronological order, but print on screen only the ones that have the pattern <code class="docutils literal notranslate"><span class="pre">txt</span></code> in them:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">lt</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="linking-files">
+<h2><span class="section-number">2.12. </span>Linking files<a class="headerlink" href="#linking-files" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ln</span></code>: <b style="color:#1371a9;">Link two files.</b></p>
+<p>The most common option is <code class="docutils literal notranslate"><span class="pre">-s</span></code> that makes  a symbolic or soft link.</p>
+<p><strong>Example:</strong> Link the file new.txt to the file target.txt. This means, for example, that if you delete <code class="docutils literal notranslate"><span class="pre">link.txt</span></code> the file that has the actual content (<code class="docutils literal notranslate"><span class="pre">target.txt</span></code>) remains intact or if you edit <code class="docutils literal notranslate"><span class="pre">link.txt</span></code>, the changes will be put in <code class="docutils literal notranslate"><span class="pre">target.txt</span></code> (similarly, if you directly edit <code class="docutils literal notranslate"><span class="pre">target.txt</span></code>, the changes appear immediately in <code class="docutils literal notranslate"><span class="pre">link.txt</span></code>). This is a very handy command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="n">target</span><span class="o">.</span><span class="n">txt</span> <span class="n">link</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="processes-view-stop-modify">
+<h2><span class="section-number">2.13. </span>Processes: View, stop, modify<a class="headerlink" href="#processes-view-stop-modify" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">ps</span></code>: <b style="color:#1371a9;">Change the execution priority.</b></p>
+<p>This is a very useful command. Here are some examples</p>
+<p>Show <em>all</em> processes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">-</span><span class="n">e</span>
+</pre></div>
+</div>
+<p>Show your active processes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+</pre></div>
+</div>
+<p>Show <em>all</em> of your processes:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>ps -fe | grep ${USER}
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">top</span></code>: <b style="color:#1371a9;">Show the processes in the system.</b></p>
+<p>Opens a screen (on your terminal) that shows the processes on your computer and, for example, how much memory and CPU they take, and what is their priority. This is a very handy command. You can quit the screen by typing <code class="docutils literal notranslate"><span class="pre">q</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">kill</span></code>: <b style="color:#1371a9;">Kill/end processes.</b></p>
+<p>Example 1: The following kills the process number 11220</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="mi">11220</span>
+</pre></div>
+</div>
+<p>Example 2: The following kills all of your process and logs you out</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">kill</span> <span class="o">-</span><span class="mi">9</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">nice</span></code>: <b style="color:#1371a9;">Change the execution/scheduling priority.</b></p>
+<p>Priority <code class="docutils literal notranslate"><span class="pre">-20</span></code> is the highest and <code class="docutils literal notranslate"><span class="pre">+19</span></code> the lowest priority. This is important since, when you run your simulations, you should set the priority of the simulation as <code class="docutils literal notranslate"><span class="pre">+19</span></code>. When you do that, the simulation has the lowest priority meaning that you can also use the computer do something else when needed but when you are not using it for other tasks, your simulation will take full resources.</p>
+</div>
+<div class="section" id="file-permissions-and-ownership">
+<h2><span class="section-number">2.14. </span>File permissions and ownership<a class="headerlink" href="#file-permissions-and-ownership" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p><code class="docutils literal notranslate"><span class="pre">chmod</span></code>: <b style="color:#1371a9;">Change the access rights.</b></p>
+<p>This is a very useful command.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Click for a figure showing file details, access rights &amp; ownership<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-default" id="directories">
+<a class="reference internal image-reference" href="../../_images/dot-directories.svg"><img alt="../../_images/dot-directories.svg" src="../../_images/dot-directories.svg" width="750px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user’s, group’s and other’s. <code class="docutils literal notranslate"><span class="pre">r</span></code>=right to read,<code class="docutils literal notranslate"><span class="pre">x</span></code>=right to execute, <code class="docutils literal notranslate"><span class="pre">w</span></code>=right to write, <code class="docutils literal notranslate"><span class="pre">-</span></code>=no right’s given. Dash in the first column means file while <code class="docutils literal notranslate"><span class="pre">d</span></code> stands for directory.</span><a class="headerlink" href="#directories" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details><p><code class="docutils literal notranslate"><span class="pre">chown</span></code>: <b style="color:#1371a9;">Change ownership.</b></p>
+<p><strong>Example:</strong> Assume that you edited a file <code class="docutils literal notranslate"><span class="pre">text.txt</span></code> as the superuser and now you want to Change the ownership the the user <code class="docutils literal notranslate"><span class="pre">sam</span></code> who belongs to the group <code class="docutils literal notranslate"><span class="pre">users</span></code> (you can see the user and the group by using the option <code class="docutils literal notranslate"><span class="pre">-l</span></code> with <code class="docutils literal notranslate"><span class="pre">ls</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">chown</span> <span class="n">sam</span><span class="p">:</span><span class="n">users</span> <span class="n">text</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="environment">
+<h2><span class="section-number">2.15. </span>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">printenv</span></code>: <b style="color:#1371a9;">Show the environment variables</b></p>
+<p><strong>Example:</strong> See all the environment variables that have the text <code class="docutils literal notranslate"><span class="pre">PATH</span></code> in them (capitalization matters):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">printenv</span> <span class="o">|</span>  <span class="n">grep</span> <span class="n">PATH</span>
+</pre></div>
+</div>
+<!--
+`sort`: <b style="color:#1371a9;">As the name says, sorts.</b>
+
+`env`: <b style="color:#1371a9;">Move.</b>
+
+
+`export`: <b style="color:#1371a9;">Move.</b>
+-->
+<!--
+## Beyond the terminal: Shell scripting
+<hr>
+
+-->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="Linux-basics.html" title="previous page"><span class="section-number">1. </span>Linux - the basics</a>
+    <a class='right-next' id="next-link" href="python-intro.html" title="next page"><span class="section-number">3. </span>Brief introduction to Python</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

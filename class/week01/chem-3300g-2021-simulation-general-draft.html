@@ -1,0 +1,577 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General aspects of modeling and computer simulations</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "firasm/jupyterbook_course_template");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://firasm.github.io/jupyterbook_course_template/class/week01/chem-3300g-2021-simulation-general-draft.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://firasm.github.io/jupyterbook_course_template/class/week01/chem-3300g-2021-simulation-general-draft.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="General aspects of modeling and computer simulations" />
+<meta property="og:description" content="General aspects of modeling and computer simulations  &lt;blockquote&gt;     Big Science. Hallelujah. Big Science. Yodellayheehoo. &lt;P&gt;&lt;/p&gt;     You know. I think we sh" />
+
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Computer Methods in Chemistry - CHEM3300G
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="week01_summary.html">
+   Week 1
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lecture1.html">
+     Introduction to computational modeling &amp; methods in chemistry/physics
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lecture1.html#summary">
+     Summary
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="python-intro.html">
+     Brief introduction to Python and Jupyter
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+ <li class="toctree-l1 collapsible-parent">
+  <a class="reference internal" href="../week02/week02_summary.html">
+   Week 2
+  </a>
+  <ul class="collapse-ul">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../week02/videos.html">
+     Videos
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../week02/homework.html">
+     Homework
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../week02/readings.html">
+     Readings
+    </a>
+   </li>
+  </ul>
+  <i class="fas fa-chevron-down">
+  </i>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lab Materials
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../labs.html">
+   Lab Stuff
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week01/chem-3300g-2021-simulation-general-draft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/week01/chem-3300g-2021-simulation-general-draft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information-water-models">
+   Additional information: Water models
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historical">
+     Historical:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantum-mechanical">
+     Quantum mechanical
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classical-md-level">
+     Classical MD level:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-grained">
+     Coarse-grained:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#some-general-references-to-water-models">
+     Some general references to water models
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="nt">code</span><span class="p">.</span><span class="nc">lblue</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#1371a9</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="nt">pre</span><span class="o">,</span>
+<span class="nt">code</span><span class="p">.</span><span class="nc">wlblue</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#1371a9</span><span class="p">;</span> 
+  <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">code</span><span class="p">.</span><span class="nc">com</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#f603ed</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="nt">b</span><span class="p">.</span><span class="nc">lblue</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#1371a9</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">int</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">red</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">clblue</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">try</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">info</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">lblue</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+code.lblue{
+  color: #1371a9; 
+}
+pre,
+code.wlblue{
+  color: #1371a9; 
+  background-color: white;
+}
+code.com{
+  color: #f603ed; 
+}
+b.lblue{
+  color: #1371a9; 
+}
+
+div.int{
+    margin-left: 40px;
+}
+
+div.red{
+    margin-left: 10px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+div.clblue{
+    margin-left: 10px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+div.try{
+    margin-left: 10px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+div.info{
+    margin-left: 10px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+table.lblue{
+    margin-left: 2px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+
+</style>
+</div></div>
+</div>
+<div class="section" id="general-aspects-of-modeling-and-computer-simulations">
+<h1>General aspects of modeling and computer simulations<a class="headerlink" href="#general-aspects-of-modeling-and-computer-simulations" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+    Big Science. Hallelujah. Big Science. Yodellayheehoo. <P></p>
+    You know. I think we should put some mountains here. <br>
+    Otherwise, what are all the characters going to fall off of?<br>
+    And what about stairs? Yodellayheehoo. Ooo coo coo.<p></p>
+    &nbsp; &nbsp; -Laurie Anderson, <em>Big Science</em> 
+</blockquote>    <p>Before setting up our own simulations, let’s discuss a few general and important aspects that relate to all computer simulations and modeling.</p>
+<table class="lblue">
+    <tr>
+        <td>
+            <img src="./img/modeling-schema.svg" width="100%"/>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+        Figure: Some general aspects about modeling and computer simulations. Building a model and setting up simulations is a complex process and each stage needs to be considered carefully and validated extensively.  Mistake at any level can render the whole process wrong with heaps of meaningless data. That happens more frequently that one would expect; that the software doesn't crash doesn't imply anything about the correctness of the results.   
+        </td>
+    </tr>
+</table>    <p>Let’s make consider the items in the Figure using an example.</p>
+<ol class="simple">
+<li><p><strong>Physical phenomenon/phenomena:</strong> Let’s use the behavior of bulk water as an example. We need to decide what we wish to model. Liquid-gas or liquid-ice phase transition? Structure of water? Or perhaps diffusion of water or the dynamics of the hydrogen bond network? One also needs to review previous research to know what kind of problems there have been and what are the undisputed correct results (if any).</p></li>
+<li><p><strong>Construct/choose a model:</strong> We need to decide what is the level, that is, the level of detail, and time and length scales that we are interested in. Let’s assume that we are not interested in quantum mechanical aspects. That suggests the level of classical molecular dynamics. There are tens of existing models including acronyms such as ST2, TIP3P, TIP4P, TIP4P/2005, TIP5P, TIP5P/2008, SPC, SPC/E and so on. How do we know which one(s) to choose? Should one use more than one model? What hsa been done with these models? Is it/are they able to capture the phenomena of interest?</p></li>
+<li><p><strong>Choose numerical algorithms:</strong> Even in the case we are planning to use a software package, we need to decide which one of the algorihms the package offers we should use. For example, for integration of the equations of motions each package offers several options. If we are going to write our own code, then we need to decide which one to implement. How do we deal with interactions? They need to be truncated but what is the most reliable way to do it? Does the system have long range interactions? If so, do we wish to use Fourier transform-based algorithms or real space ones? In either case, there are several choises that one needs to understand. If we are writing out own code, we need to decide how to speed up the simulations - normal MD scales as <span class="math notranslate nohighlight">\(\mathcal{O}(N^2)\)</span> where <span class="math notranslate nohighlight">\(N\)</span> is the number of particles. We can do better using tables or multisteping. Which one to choose? Do we need constant temperature or pressure constant pressure to better mimic experimental conditions? Which method to choose? What kind of boundary conditions do we need? How can we simulate bulk conditions with a relatively small number of particles?</p></li>
+<li><p><strong>Write/choose a simulation program:</strong> Do we need to write our own code or can we use one the existing packages? This problem is very general and we could choose a software package. There are lots of possibilities including Gromacs, NAMD, Amber, CHARMM, DL Poly, LAMMPS and others. Or should we write your own code? If so, which programming language to use? Fortran, C, C++, python, CUDA or something else? Will this program be used in other projects? How much time will it take to write a code, debug and verify it? Do we wish to provide as open source? If so, how will it be maintained? Debugging is the most time consuming and important part!</p></li>
+<li><p><strong>Perform computer simulations:</strong> Before starting simulations: Have you debugged your code or/and
+checked that the package that you have chosen is appropriate and has no errors in the parts relevant
+for you? Do you understand the input data and parameters, and the simulation protocol? Imprtant: even the most well-established codes have errors and problems, but the biggest error source of all is the user! Finally, how to run very long runs?</p></li>
+<li><p><strong>Analyze data and interpret:</strong> This is where  the interesting part starts - provided we have confidence in our simulations.</p></li>
+<li><p><strong>Additional questions:</strong> What kind of resources are available? How long will the simulations take, that is, how large systems and for how long time can be simulated. How about data storage, is there enough?</p></li>
+</ol>
+<p>In the above, there are several terms and concepts that are new. We will encounter them when we set up simulations. The aim here is to given a rough idea how complex the issue is: Simply downloading a well-known software package and using the default parameters and inputs is not acceptable. The software will run, but there is no guarantee that the results will be correct or relevant. The software is not to blame, it does what the user tells it do. The user is the source of most errors - even if/when there is a bug/bugs (and there are always are some), it is the the user’s responsibility to test and ensure the validity of results. If bugs are found in a published software, one should notify the developers with precise information including test results.</p>
+<div class="section" id="additional-information-water-models">
+<h2>Additional information: Water models<a class="headerlink" href="#additional-information-water-models" title="Permalink to this headline">¶</a></h2>
+<p>To put the example above to further perspective and to give an idea how complex water the simple looking humble water molecule is, below are lists of water models at different levels of description. None of the lists are by no means exhaustive.</p>
+<div class="section" id="historical">
+<h3>Historical:<a class="headerlink" href="#historical" title="Permalink to this headline">¶</a></h3>
+<p>The Rontgen two species model (1897), the Bernal and Fowler model with tetrahedral geometry (1933), Linux Pauling’s model that established clathrate structure (1935), the model of John Pople that show hydrogen bond bending (1951)</p>
+</div>
+<div class="section" id="quantum-mechanical">
+<h3>Quantum mechanical<a class="headerlink" href="#quantum-mechanical" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="classical-md-level">
+<h3>Classical MD level:<a class="headerlink" href="#classical-md-level" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>TIP = Transferrable Intermolecular Potential</p></li>
+<li><p>SPC = Simple Point Charge</p></li>
+</ul>
+<p>BF, ST2, TIPS, TIPS2,  TIP3P, TIP3Pm, TIP3P/Fs TIP4P, TIP4P-Ew, TIP4P/2005, TIP4P/2005f, TIP4P/<span class="math notranslate nohighlight">\(\varepsilon\)</span>, TIP4P/FQ, TIP4P-HB, TIP4P-i, TIPTP/ice, TIP4P-pol, TIP4PQ, TIP4P-QDP, TIP4P-D, TIP5P, TIP5P-E, TIP5P/2019, OPC, SPC, SPC/E, SPC/<span class="math notranslate nohighlight">\(\varepsilon\)</span>, SPC/A, SPC/F, SPC/F2, SPC/FQ, SPC/Fw, SPC-pol, SPC/HW</p>
+</div>
+<div class="section" id="coarse-grained">
+<h3>Coarse-grained:<a class="headerlink" href="#coarse-grained" title="Permalink to this headline">¶</a></h3>
+<p>MARTINI, MARTINI polarized, ELBA, SIRAH, DPD, Mercedes-Benz, BMW, mW</p>
+</div>
+<div class="section" id="some-general-references-to-water-models">
+<h3>Some general references to water models<a class="headerlink" href="#some-general-references-to-water-models" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><span class="xref myst"></span></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+            &copy; Copyright Mikko Karttunen.<br/>
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2. Installation of Python and Jupyter &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/python-installation.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Python virtual environments" href="../../extras/python-virtual-environment.html" />
+    <link rel="prev" title="1. Installation of tools: WSL2/Linux etc." href="../../extras/install-wsl.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week02/python-installation.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Installation of Python and Jupyter" />
+<meta property="og:description" content="Installation of Python and Jupyter  Gromacs  Gromacs  Learning goals:  To be able to install and verify software  Install and start Python and Jupyter  Keywords" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week02/python-installation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation">
+   2.1. Installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#keep-python-up-to-date">
+   2.2. Keep Python up-to-date
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#virtual-environments">
+   2.3. Virtual environments
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="installation-of-python-and-jupyter">
+<h1><span class="section-number">2. </span>Installation of Python and Jupyter<a class="headerlink" href="#installation-of-python-and-jupyter" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="reference internal image-reference" href="../../_images/Python_logo_and_wordmark.svg"><img alt="Gromacs" class="align-right" src="../../_images/Python_logo_and_wordmark.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../_images/Jupyter_logo.svg"><img alt="Gromacs" class="align-right" src="../../_images/Jupyter_logo.svg" width="150px" /></a>
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To be able to install and verify software</p></li>
+<li><p class="card-text">Install and start Python and Jupyter</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> Python, Anaconda, conda, pip, Project Jupyter, Jupyter Lab, Jupyter Notebook, package conflict</p>
+<p class="card-text"><strong>Note:</strong> Since Python and Jupyter are core components of the course, it is imperative that the installation works.</p>
+<p class="card-text"><strong>Associated material:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference internal" href="../../extras/python-virtual-environment.html"><span class="doc std std-doc">Python virtual environments</span></a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>We will install Python 3. The previous version, Python 2, has been officially deprecated and it is no longer maintained.</p>
+<p>While Python 3 and Python 2 are compatible to a large extent, there are differences and incompatibilities. This should be kept in mind especially when searching for information from the net or when using books that provide examples in Python 2.</p>
+<div class="section" id="installation">
+<h2><span class="section-number">2.1. </span>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>There are two main options:</p>
+<ol class="simple">
+<li><p>Anaconda (or Conda)-based installation and</p></li>
+<li><p>pip (Python Package Installer).</p></li>
+</ol>
+<p>Both are good choices but there are differences. Conda installation gives immediately a very large number of packages including the most relevant ones needed in this course. It is a very convenient choice and the preferred one here. Anaconda has a both a graphical user interface as well as command line (<code class="docutils literal notranslate"><span class="pre">conda</span></code>). In addition, both Jupyter Lab and Jupyter Notebook are installed automatically with Anaconda. Pip, however, gets new packages usually faster but all packages must be separately installed and there is no graphical user interface. This also means that Jupyter must be installed separately. With <code class="docutils literal notranslate"><span class="pre">pip</span></code> one also has to be more careful with package conflicts and it is generally a good idea to use so called <em>virtual environment</em> to avoid problems.</p>
+<p>In brief, Anaconda is easier. In addition to Python, Jupyter Notebook and Lab will be installed immediately. Anaconda is available for Windows 10, MacOS and Linux. Pip may be your choice if you have already experience with Python but Anaconda is recommended for the current purposes.</p>
+<p><strong>Note regarding Windows vs WSL/WSL2:</strong> The Anaconda installer works great in Windows and it also works in WSL/WSL2 through the Linux installation process. It may be more convenient to use the Anaconda installer in Windows, although that is a matter of personal choice. In addition, WSL/WSL2 have a basic Python installation present (not the full Anaconda distribution, though) in case needed.</p>
+<p><strong>Note regarding Mac:</strong> Older Macs come with Python 2, but is no longer the case since MacOS Catalina. Independent of Python is present, the Anaconda installation is recommended.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Linux &amp; WSL/WSL2<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">With Linux and WSL/WSL2 you already have Python installed. It may be, however, more convenient to install Anaconda as it comes with almost all possible necessary tools. Pip installation is also provided below as one of the options.</p>
+<p class="card-text"><strong>Option 1: Anaconda</strong></p>
+<p class="card-text">This is the recommended way.</p>
+<ul class="simple">
+<li><p class="card-text">Go to the <a class="reference external" href="https://docs.anaconda.com/anaconda/install">Anaconda Installation page</a></p></li>
+<li><p class="card-text">The page lists a pre-requisites that need to be installed. If you are using an Ubuntu based installation, simply open terminal window and copy install the dependencies. Here’s how you can install the pre-requisites:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">libgl1</span><span class="o">-</span><span class="n">mesa</span><span class="o">-</span><span class="n">glx</span> <span class="n">libegl1</span><span class="o">-</span><span class="n">mesa</span> <span class="n">libxrandr2</span> <span class="n">libxrandr2</span> <span class="n">libxss1</span> <span class="n">libxcursor1</span> <span class="n">libxcomposite1</span> <span class="n">libasound2</span> <span class="n">libxi6</span> <span class="n">libxtst6</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="card-text">Then download the Anaconda Installer from <a class="reference external" href="https://docs.anaconda.com/anaconda/install">Anaconda Installation page</a> and follow the instructions.</p></li>
+<li><p class="card-text">As the last step of the installation, you are asked to verify your installation. Do not skip this step!</p>
+<ul>
+<li><p class="card-text">For this step, open a new terminal and type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code>. If you get a list of routines, then your installation is complete.</p></li>
+</ul>
+</li>
+<li><p class="card-text">Below are screenshots from the installation process.</p></li>
+<li><p class="card-text">Note that  Jupyter Lab and Jupyter Notebook are now present</p></li>
+</ul>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-1.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-1.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-2.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-2.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-3.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-3.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-4.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-4.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-5.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-5.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-6.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-6.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-lnx-7.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-lnx-7.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<p class="card-text"><strong>Option 2: pip</strong></p>
+<p class="card-text">Please notice that the Anaconda installation is preferred.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Windows 10<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On Windows 10 the best and the easiest option is to install Anaconda.</p>
+<ul class="simple">
+<li><p class="card-text">Go to the <a class="reference external" href="https://docs.anaconda.com/anaconda/install">Anaconda Installation page</a></p></li>
+<li><p class="card-text">Select the option for Windows and follow the instructions on the page.</p>
+<ul>
+<li><p class="card-text">The installation will provide you with the option to install PyCharm. It is optional, decide based on your needs.</p></li>
+</ul>
+</li>
+<li><p class="card-text">As the last step of the installation, you are asked to verify your installation. Do not skip this step!</p></li>
+<li><p class="card-text">After verification, open the Anaconda Navigator from the menu.</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+MacOS<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Option 1: Anaconda using the graphical installer</strong></p>
+<p class="card-text">The easiest way is to install Anaconda using the graphical installer:</p>
+<ol class="simple">
+<li><p class="card-text">Go to the <a class="reference external" href="https://docs.anaconda.com/anaconda/install">Anaconda Installation page</a></p></li>
+<li><p class="card-text">Select the option for macOS and follow the instructions on the page.</p></li>
+<li><p class="card-text">As the last step of the installation, you are asked to verify your installation. Do not skip this step!</p></li>
+<li><p class="card-text">Done!</p></li>
+</ol>
+<ul class="simple">
+<li><p class="card-text">Below are screenshots from the installation process, and as the last figure shows, both Jupyter Lab and Jupyter Notebook are present:</p></li>
+</ul>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-mac-1.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-mac-1.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-mac-2.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-mac-2.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-mac-3.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-mac-3.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-mac-4.png"><img alt="Anaconda" class="bg-light" src="../../_images/ana-mac-4.png" style="width: 500px;" /></a>
+</div>
+<P></p>
+<p class="card-text"><strong>Option 2: Anaconda using command line</strong></p>
+<p class="card-text">If, for some reason, the graphical installer doesn’t appeal to you, it is also possible to install Anaconda using command line:</p>
+<ul class="simple">
+<li><p class="card-text">The <a class="reference external" href="https://docs.anaconda.com/anaconda/install">Anaconda Installation page</a> offers also the option to install using command line. If that is what you prefer, then choose this option instead of the graphical installer.</p></li>
+</ul>
+<p class="card-text"><strong>Option 3: Using the distribution from the Python home page</strong></p>
+<p class="card-text">Anaconda is recommended, but this is also an option:</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.python.org/downloads/mac-osx/">Download</a> and follow the instructions.</p></li>
+</ul>
+<p class="card-text"><strong>Option 4: Pip using Homebrew</strong></p>
+<p class="card-text">It is possible to install Python, pip and other tools using Homebrew. We will not cover this here, Anaconda installation is recommended.</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://docs.brew.sh/Homebrew-and-Python">Homebrew and Python</a></p></li>
+</ul>
+</div>
+</details></div>
+<div class="section" id="keep-python-up-to-date">
+<h2><span class="section-number">2.2. </span>Keep Python up-to-date<a class="headerlink" href="#keep-python-up-to-date" title="Permalink to this headline">¶</a></h2>
+<p>Updating all packages is very easy,</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="o">--</span><span class="nb">all</span>
+</pre></div>
+</div>
+<p>To update <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</pre></div>
+</div>
+<p>Install packages:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">&lt;</span><span class="n">package</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="virtual-environments">
+<h2><span class="section-number">2.3. </span>Virtual environments<a class="headerlink" href="#virtual-environments" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Install and use <a class="reference internal" href="../../extras/python-virtual-environment.html"><span class="doc std std-doc">Python virtual environments</span></a>. That is very helpful and also helps to avoid potential package conflicts upon updates.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../extras/install-wsl.html" title="previous page"><span class="section-number">1. </span>Installation of tools: WSL2/Linux etc.</a>
+    <a class='right-next' id="next-link" href="../../extras/python-virtual-environment.html" title="next page"><span class="section-number">3. </span>Python virtual environments</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

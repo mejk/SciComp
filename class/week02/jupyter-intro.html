@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1. Jupyter Notebook / Jupyter Lab &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/jupyter-intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2. The vi editor" href="../../extras/vi-editor.html" />
+    <link rel="prev" title="3. Python virtual environments" href="../../extras/python-virtual-environment.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week02/jupyter-intro.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Jupyter Notebook / Jupyter Lab" />
+<meta property="og:description" content="Jupyter Notebook / Jupyter Lab  Jupyter  Learning goals:  To understand what Jupyter Notebook and Jupyter Lab are  To be able to use Jupyter and understand its " />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week02/jupyter-intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-jupyter-lab-notebook">
+   1.1. What is Jupyter Lab / Notebook?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-lab-or-notebook">
+   1.2. Jupyter Lab or Notebook?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-start-jupyter-notebook-lab">
+   1.3. How to start Jupyter Notebook / Lab?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#jupyter-interface">
+   1.4. Jupyter interface
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-and-markdown-cells">
+   1.5. Code and markdown cells
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#code-cells">
+     1.5.1. Code cells
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#markdown-cells">
+     1.5.2. Markdown cells
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finally">
+   1.6. Finally…
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter-notebook-jupyter-lab">
+<h1><span class="section-number">1. </span>Jupyter Notebook / Jupyter Lab<a class="headerlink" href="#jupyter-notebook-jupyter-lab" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="reference internal image-reference" href="../../_images/Jupyter_logo.svg"><img alt="Jupyter" class="align-right" src="../../_images/Jupyter_logo.svg" width="150px" /></a>
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To understand what Jupyter Notebook and Jupyter Lab are</p></li>
+<li><p class="card-text">To be able to use Jupyter and understand its basic structure with code and markdown cells</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> Python, Anaconda, conda, Project Jupyter, Jupyter Lab, Jupyter Notebook, Jupyter notebook, <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>, interactive environment for scientific computing, markdown cell, code cell</p>
+<p class="card-text"><strong>Note:</strong> Since Python and Jupyter are core components of the course, it is imperative that the installation works.</p>
+<p class="card-text"><strong>Associated material:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab Documentation</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/user/interface.html">The JupyterLab Interface</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://jupyterlab.readthedocs.io/en/stable/getting_started/faq.html">Frequently Asked Questions (FAQ)</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">A gallery of interesting Jupyter Notebooks</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Working%20With%20Markdown%20Cells.html">Markdown basics</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="what-is-jupyter-lab-notebook">
+<h2><span class="section-number">1.1. </span>What is Jupyter Lab / Notebook?<a class="headerlink" href="#what-is-jupyter-lab-notebook" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://jupyter.org/">Jupyter notebook</a>  can be described as a web browser-based document that has the ability to combine live code with plotting, interactions, text and multimedia. In addition to Python, it can handle many other programming languages as well. It is better to call it a platform or an environment rather than a document since it provides an interactive browser-based environment for scientific computing, analysis and documentation.  Jupyter notebooks have the file extension <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>. The files are in <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> format and do not depend on the operating system one uses. Importantly, Jupyter notebooks provide the possibility to create live lab books that are reproducible. Jupyter notebooks are used extensively in a broad range of fields such as analysis of simulation data, machine learning, digital humanities, meteorology, and so on.</p>
+<p>The applications that can open, execute and save Jupyter notebooks are called <em>Jupyter Notebook</em> and <em>Jupyter Lab</em>. The former is older but has more extensions for handling different types of data.</p>
+<p>There is also <em>Jupyter Book</em> that uses markdown and Jupyter notebooks to create live textbooks that can even execute code. This document was made using Jupyter Book. There are also several other related projects, see the <a class="reference external" href="https://jupyter.org/">Project Jupyter page</a>. Jupyter is open source software.</p>
+<p>Please see the links in the header for information.</p>
+</div>
+<div class="section" id="jupyter-lab-or-notebook">
+<h2><span class="section-number">1.2. </span>Jupyter Lab or Notebook?<a class="headerlink" href="#jupyter-lab-or-notebook" title="Permalink to this headline">¶</a></h2>
+<p>There are two applications that can open Jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) files, Jupyter Notebook and Jupyter Lab. Below are some of the main differences between the two:</p>
+<ul class="simple">
+<li><p>Both of them run in a web browser.</p></li>
+<li><p><em>Jupyter Lab</em> is newer. Due that, not all the extensions that work with <em>Jupyter Notebook</em> work with <em>Jupyter Lab.</em> This is, however, changing rapidly.</p></li>
+<li><p>The user interface of <em>Jupyter Lab</em> is very versatile. One can open simultaneously many notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) files, even terminal windows and stand-alone Python (or other programming language) windows.</p></li>
+<li><p>With <em>Jupyter Notebook</em> one works with a single notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) file at a time.</p></li>
+</ul>
+<p>So which one to choose? Here, we prefer Jupyter Lab. However, everything works in Jupyter Notebook as well so the choice is yours. For the advanced users, Jupyter Notebook has some features that are not yet available on Jupyter Lab such as the use of variables in markdown cells. We won’t be using such features here and it is highly likely that they get implemented in Jupyter Lab as well.</p>
+</div>
+<div class="section" id="how-to-start-jupyter-notebook-lab">
+<h2><span class="section-number">1.3. </span>How to start Jupyter Notebook / Lab?<a class="headerlink" href="#how-to-start-jupyter-notebook-lab" title="Permalink to this headline">¶</a></h2>
+<p>Click on the tab that corresponds to your operating system. Independent of your operating system, launching Jupyter Lab (we’ll use Lab from now on) opens a new web browser or tab using your default browser.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Windows 10 and Mac<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On both Windows and Mac, simply run the Anaconda Navigator from your program menu. The interface is the same in both cases and it looks like this:</p>
+<P></p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/ana-interface.png"><img alt="Anaconda Mac/Windows interface" class="bg-light" src="../../_images/ana-interface.png" style="width: 100%;" /></a>
+</div>
+<P></p>
+<p class="card-text">Simply clicking <code class="docutils literal notranslate"><span class="pre">Launch</span></code> on Jupyter Lab or Jupyter Notebook starts it. Similarly, one can start any of the other applications that come bundled with Anaconda.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Linux &amp; WSL/WSL2<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On Linux and WSL/WSL2, Jupyter Lab and Jupyter Notebook must be started on the command line. The following commands start Jupyter Lab and Jupyter Notebook, respectively.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">lab</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span>
+</pre></div>
+</div>
+<p class="card-text">If needed, you can get help with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">lab</span> <span class="o">--</span><span class="n">help</span>
+<span class="n">jupyter</span><span class="o">-</span><span class="n">notebook</span> <span class="o">--</span><span class="n">help</span>
+</pre></div>
+</div>
+<P></p>
+</div>
+</details></div>
+<div class="section" id="jupyter-interface">
+<h2><span class="section-number">1.4. </span>Jupyter interface<a class="headerlink" href="#jupyter-interface" title="Permalink to this headline">¶</a></h2>
+<p>The initial web browser window is identical in all operating systems. Note that the Jupyter window (or tab) is <em>not</em> connected to internet. Instead, it runs locally on your computer. The figure below shows the initial browser window when starting Jupyter Lab. There are a few points to here:</p>
+<ul class="simple">
+<li><p>The web address: <code class="docutils literal notranslate"><span class="pre">localhost:8888/lab</span></code>. This is a local address, this means that the application (Jupyter Lab) is running on your computer (<code class="docutils literal notranslate"><span class="pre">localhost</span></code>) and connected to port <code class="docutils literal notranslate"><span class="pre">8888</span></code>.</p></li>
+<li><p>The window has tabs on the left hand side for listing files, extensions, help etc.</p></li>
+<li><p>The top menus offer functionality such as starting and stopping kernels, running selected cells and so on.</p></li>
+<li><p>The icons on top of the left hand side pane have the options to open new Launchers,  create new folders, upload files and refresh the current list. In the figure below, no files are present in the current directory (the list is empty).</p></li>
+</ul>
+<p>The initial Launcher Window in a web browser looks like this:</p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/j-notebook-interface.svg"><img alt="Anaconda Mac/Windows interface" class="bg-light" src="../../_images/j-notebook-interface.svg" width="100%" /></a>
+</div>
+<P></p>
+</div>
+<div class="section" id="code-and-markdown-cells">
+<h2><span class="section-number">1.5. </span>Code and markdown cells<a class="headerlink" href="#code-and-markdown-cells" title="Permalink to this headline">¶</a></h2>
+<p>Clicking the Python 3 notebook icon opens the Jupyter workspace window. It is the same in all operating systems. The figure below shows some of the important features:</p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/j-notebook-interface-2.svg"><img alt="Anaconda Mac/Windows interface" class="bg-light" src="../../_images/j-notebook-interface-2.svg" width="100%" /></a>
+</div>
+<P></p>
+<p>One of the very useful features on Jupyter notebooks is that there are different types of cells (the white area inside the blue rectangle). The two basic types are <em>markdown cells</em> and <em>code cells</em>. The cell type can be easily changed from the dropdown menu as indicated in the figure. This separation makes it very convenient and easy to write interactive, reproducible and well-documented notebooks.</p>
+<div class="section" id="code-cells">
+<h3><span class="section-number">1.5.1. </span>Code cells<a class="headerlink" href="#code-cells" title="Permalink to this headline">¶</a></h3>
+<p>As the name suggests, these are the cells in which one writes (live) code. Here, we use Python 3 and that is also clearly indicated in the workspace. Once code is written, it has to be executed. One can use the icons or the ‘Run’ and ‘Kernel’ tabs. The ‘Kernel’ tab contains several very useful options including ‘Restart Kernel and Clear All Outputs’. This is very useful if one wants to make sure that everything is consistent (remember, the cells are sequential and sometimes cell-wise execution of commands using different variables may lead to problems).</p>
+<p>Code cells can also be executed by clicking <code class="docutils literal notranslate"><span class="pre">Ctrl-Enter</span></code> (this does not advance the cursor to the next cell) or <code class="docutils literal notranslate"><span class="pre">Shift-Enter</span></code> (advances the cursor to the next cell).</p>
+</div>
+<div class="section" id="markdown-cells">
+<h3><span class="section-number">1.5.2. </span>Markdown cells<a class="headerlink" href="#markdown-cells" title="Permalink to this headline">¶</a></h3>
+<p><em>Markdown</em> means that one can enter normal text, but there is no executable code. <em>Markdown</em> is language that is simple and quick to use for documentation (link to the preference is provided in the header). It allows for titles, lists, figures, mathematics and so on. Even markdown cells must be executed for the text (and other markup such as mathematics) is rendered properly. Execution works just like for code cells.</p>
+<p>Below is a figure that demonstrates some of the above matters and also the multi-window feature of Jupyter Lab (if it is too small, click on it to see it full size).</p>
+<div class="figure align-center">
+<a class="bg-light reference internal image-reference" href="../../_images/j-lab-1.svg"><img alt="Anaconda Mac/Windows interface" class="bg-light" src="../../_images/j-lab-1.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="finally">
+<h2><span class="section-number">1.6. </span>Finally…<a class="headerlink" href="#finally" title="Permalink to this headline">¶</a></h2>
+<p>There is much more to the Jupyter notebooks (see the links in the header) but the above provides the fundamentals. When working with them, always <em>remember to save your work.</em></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="../../extras/python-virtual-environment.html" title="previous page"><span class="section-number">3. </span>Python virtual environments</a>
+    <a class='right-next' id="next-link" href="../../extras/vi-editor.html" title="next page"><span class="section-number">2. </span>The <code class="docutils literal notranslate"><span class="pre">vi</span></code> editor</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

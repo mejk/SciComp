@@ -1,0 +1,70 @@
+Traceback (most recent call last):
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/nbclient/client.py", line 1087, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/usr/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/nbclient/client.py", line 540, in async_execute
+    await self.async_execute_cell(
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/nbclient/client.py", line 832, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/opt/VENV/JBook/lib/python3.8/site-packages/nbclient/client.py", line 740, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Important: Try the command in the Code cells in your own notebook. 
+# The hashtag (#) character starts a comment.
+# Note that if a comment is put in the middle of a Code cell, everything that is after it
+# is ignored by the interpreter.
+
+help()
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
+[0;32m<ipython-input-1-c0b331d65c79>[0m in [0;36m<module>[0;34m[0m
+[1;32m      4[0m [0;31m# is ignored by the interpreter.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m [0;34m[0m[0m
+[0;32m----> 6[0;31m [0mhelp[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/lib/python3.8/_sitebuiltins.py[0m in [0;36m__call__[0;34m(self, *args, **kwds)[0m
+[1;32m    101[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwds[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    102[0m         [0;32mimport[0m [0mpydoc[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 103[0;31m         [0;32mreturn[0m [0mpydoc[0m[0;34m.[0m[0mhelp[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;32m/usr/lib/python3.8/pydoc.py[0m in [0;36m__call__[0;34m(self, request)[0m
+[1;32m   1916[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1917[0m             [0mself[0m[0;34m.[0m[0mintro[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1918[0;31m             [0mself[0m[0;34m.[0m[0minteract[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1919[0m             self.output.write('''
+[1;32m   1920[0m [0mYou[0m [0mare[0m [0mnow[0m [0mleaving[0m [0mhelp[0m [0;32mand[0m [0mreturning[0m [0mto[0m [0mthe[0m [0mPython[0m [0minterpreter[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.8/pydoc.py[0m in [0;36minteract[0;34m(self)[0m
+[1;32m   1928[0m         [0;32mwhile[0m [0;32mTrue[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1929[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1930[0;31m                 [0mrequest[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mgetline[0m[0;34m([0m[0;34m'help> '[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1931[0m                 [0;32mif[0m [0;32mnot[0m [0mrequest[0m[0;34m:[0m [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1932[0m             [0;32mexcept[0m [0;34m([0m[0mKeyboardInterrupt[0m[0;34m,[0m [0mEOFError[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.8/pydoc.py[0m in [0;36mgetline[0;34m(self, prompt)[0m
+[1;32m   1948[0m         [0;34m"""Read one line, using input() when appropriate."""[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1949[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0minput[0m [0;32mis[0m [0msys[0m[0;34m.[0m[0mstdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m-> 1950[0;31m             [0;32mreturn[0m [0minput[0m[0;34m([0m[0mprompt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m   1951[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m   1952[0m             [0mself[0m[0;34m.[0m[0moutput[0m[0;34m.[0m[0mwrite[0m[0;34m([0m[0mprompt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/opt/VENV/JBook/lib/python3.8/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
+[1;32m    852[0m         """
+[1;32m    853[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 854[0;31m             raise StdinNotImplementedError(
+[0m[1;32m    855[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    856[0m             )
+
+[0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
+StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.
+

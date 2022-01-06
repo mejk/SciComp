@@ -1,0 +1,2146 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3. Brief introduction to Python &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/python-intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Background on computers, computing and High Performance Computing" href="../week01/hpc-intro.html" />
+    <link rel="prev" title="2. Linux: Some basic &amp; useful commands" href="linux-basic-commands-2.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week02/python-intro.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Brief introduction to Python" />
+<meta property="og:description" content="Brief introduction to Python  Python  Jupyter  Learning goals:  To learn the basics of python.  To learn how to use Jupyter Lab/Notebook.  Keywords: Python, Jup" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week02/python-intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/week02/python-intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-what-is-it-good-for">
+   3.1. Python, what is it good for?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-vs-other-languages">
+     3.1.1. Python vs other languages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-basics-the-necessary-prerequisites">
+   3.2. Python basics – the necessary prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-the-rest-of-this-section">
+   3.3. How to use the rest of this section
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-python-virtual-environment">
+     3.3.1. Install Python virtual environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-help">
+     3.3.2. Getting help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-and-data-types">
+     3.3.3. Variables and data types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keywords-variable-names-and-first-touch-of-import">
+     3.3.4. Keywords, variable names and first touch of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integers-floats">
+     3.3.5. Integers &amp; floats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings-and-slicing-operator">
+     3.3.6. Strings and slicing operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     3.3.7. Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuples-ordered-immutable-lists-of-elements">
+     3.3.8. Tuples - ordered immutable lists of elements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     3.3.9. Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combined-variables">
+     3.3.10. Combined variables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-who-s-who-type-len-id">
+       3.3.10.1. Checking who’s who:
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         type
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         len
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         id
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-conversion">
+     3.3.11. Type conversion
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operators">
+       3.3.11.1. Operators
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-modules">
+   3.4. Import modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-in-python">
+   3.5. Plotting in python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variation-to-the-theme-plots-xkcd-style">
+     3.5.1. Variation to the theme: plots xkcd style
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-with-data-from-the-disk">
+     3.5.2. Plotting with data from the disk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-very-brief-intro-to-loops-and-conditionals">
+     3.5.3. A very brief intro to loops and conditionals
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-loop">
+       3.5.3.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         for
+        </span>
+       </code>
+       loop
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#while-loops-and-breaking-stopping-a-loop">
+       3.5.3.2.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         while
+        </span>
+       </code>
+       loops and breaking/stopping a loop
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-elif-else-statement">
+       3.5.3.3.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+       </code>
+       -
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         elif
+        </span>
+       </code>
+       -
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         else
+        </span>
+       </code>
+       statement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-was-not-covered">
+   3.6. What was not covered
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="brief-introduction-to-python">
+<h1><span class="section-number">3. </span>Brief introduction to Python<a class="headerlink" href="#brief-introduction-to-python" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="reference internal image-reference" href="../../_images/Python_logo_and_wordmark.svg"><img alt="Python" class="align-right" src="../../_images/Python_logo_and_wordmark.svg" width="150px" /></a>
+<a class="reference internal image-reference" href="../../_images/Jupyter_logo.svg"><img alt="Jupyter" class="align-right" src="../../_images/Jupyter_logo.svg" width="150px" /></a>
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To learn the basics of python.</p></li>
+<li><p class="card-text">To learn how to use Jupyter Lab/Notebook.</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> Python, Jupyter Notebook, Jupyter Lab</p>
+<p class="card-text"><strong>Associated material:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference internal" href="jupyter-intro.html"><span class="doc std std-doc">Introduction to Jupyter</span></a> with screenshots and explanations of the interface</p></li>
+<li><p class="card-text">On the web:</p>
+<ul>
+<li><p class="card-text"><a class="reference external" href="https://thepythonguru.com/">Python tutorials for beginners</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.learnpython.org/">Python interactive tutorial</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://pythonbasics.org/">Learn Python Programming </a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://elitedatascience.com/python-seaborn-tutorial">Python Seaborn tutorial (plotting)</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://cs231n.github.io/python-numpy-tutorial/">Python Numpy Tutorial</a></p></li>
+</ul>
+</li>
+</ul>
+<p class="card-text"><strong>Important note:</strong> Python 2 has been phased out. The last release was python 2.7.18 on April 20, 2020. The latest release (Nov. 2020) is python 3.9). The codes in this section have been tested with python 3.8.</p>
+<!--
+### Resources for more information
+
+- [Python language reference](http://docs.python.org/index.html)
+- [Python programming](http://en.wikibooks.org/wiki/Python_Programming)
+- [Introduction to Python for Undergraduate Engineers](http://en.wikibooks.org/wiki/An_Introduction_to_Python_For_Undergraduate_Engineers)
+- [Python tutorial](https://www.w3schools.com/python/default.asp)
+-->
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="python-what-is-it-good-for">
+<h2><span class="section-number">3.1. </span>Python, what is it good for?<a class="headerlink" href="#python-what-is-it-good-for" title="Permalink to this headline">¶</a></h2>
+<div class="bg-light text-info border border-info">
+<small>
+<blockquote class="epigraph">
+<div><p>War, what is it good for? Absolutely nothing! Ho!”</p>
+<p class="attribution">—Elaine Benes in Seinfeld</p>
+</div></blockquote>
+<p></small></div></p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Seinfeld: War, What Is It Good For? (Clip)<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qqS1Ty79mOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><hr>
+<p>Since its introduction in 1998, Python has become one of the word’s most popular programming languages and often required for jobs that involve any  programming.</p>
+<p>Python is modern a interpreted language, as opposed to compiled programming languages such as C, C++, Fortran, Pascal, and so on. Being an interpreted language means that a Python interpreter reads the code line-by-line as it is executed. In contrast, a compiled language has to be run through a compiler to produce an executable program. The compiled executable works only on the platform where it was compiled, but a code that is interpreted is more portable between different platforms.</p>
+<a class="reference internal image-reference" href="../../_images/Guido_van_Rossum.jpg"><img alt="Guido van Rossum" class="align-right" src="../../_images/Guido_van_Rossum.jpg" style="width: 200px;" /></a>
+<p>Python was originally created by <a class="reference external" href="https://en.wikipedia.org/wiki/Guido_van_Rossum">Guido van Rossum</a>, a Dutch programmer. The first Python implementation was done in December 1989 by van Rossum – to keep himself busy, as he says. Current version of Python is 3 and, importantly,  Python 2 has been deprecated and won’t be maintained after 2020.</p>
+<p>Below, some properties of Python are listed. If they do not sound familiar, do not worry as we will learn them along the course.</p>
+<p><strong>Properties:</strong></p>
+<ul class="simple">
+<li><p>General purpose and Jupyter provides interactivity, free and open source</p></li>
+<li><p>Dynamically typed (as opposed to statically typed). This means that one doesn’t have to declare variables.</p></li>
+<li><p>Object oriented</p></li>
+<li><p>Portable (Linux, Unix, OSX, Windows, mobile phones…)</p></li>
+<li><p>Versatile. Python is used in an enormous number of different applications, commercially, in research and in industry</p></li>
+<li><p>Easy to learn. This is indeed the case! The barrier to start using Python is very low.</p></li>
+<li><p>Extensible, it uses modules. The number of available modules is very large.</p></li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul class="simple">
+<li><p>Speed can be an issue since Python is an <em><a class="reference external" href="https://en.wikipedia.org/wiki/Interpreted_language">interpreted language</a></em>.
+However, there are efficient libraries and the possibility use tools such as <a class="reference external" href="https://en.wikipedia.org/wiki/Cython">Cython</a> and even GPUs.</p></li>
+</ul>
+<p><strong>Famous examples/applications/users:</strong></p>
+<ul class="simple">
+<li><p>YouTube, reddit, Yahoo, Google (Gmail, Groups, Maps), CERN, NASA</p></li>
+<li><p>Part of the core components in Linux distributions</p></li>
+<li><p>Information security industry</p></li>
+<li><p>Applications such as Abaqus, Gimp, Inkscape, Spotify…</p></li>
+</ul>
+<p><strong>Huge number of modules and libraries. Examples:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.scipy.org/">SciPy</a>, <a class="reference external" href="https://biopython.org/">Biopython</a>, <a class="reference external" href="https://numpy.org/">NumPy</a>, <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>, <a class="reference external" href="https://www.sagemath.org/">Sage</a>, <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a>, <a class="reference external" href="https://github.com/bjodah/chempy">Chempy</a>, <a class="reference external" href="https://www.mdanalysis.org/">MDAnalysis</a>, <a class="reference external" href="http://emma-project.org">pyEMMA</a>, <a class="reference external" href="https://www.rdkit.org">RDKit</a>, <a class="reference external" href="http://nglviewer.org/nglview/latest/">nglview</a>, <a class="reference external" href="https://github.com/deepchem/deepchem">DeepChem</a></p></li>
+</ul>
+<p><strong>Used a scripting language in:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.blender.org/">Blender</a>, <a class="reference external" href="https://www.gimp.org/">Gimp</a>, <a class="reference external" href="https://inkscape.org/">Inkscape</a>, Totem, SPSS, <a class="reference external" href="https://pymol.org">PyMOL</a></p></li>
+</ul>
+<p><strong>Other:</strong></p>
+<ul class="simple">
+<li><p>Jython: compiler that produces Java byte code from a python code</p></li>
+<li><p>PyS60: Symbian [obsolete now] phones</p></li>
+<li><p>Python for Android</p></li>
+</ul>
+<p>It is hard to tell exactly how popular Python is (since it is not easy to define a good metric), but in both StackExchange and <a class="reference external" href="https://github.com/">Github</a> it ranks among the most popular ones. When it comes to programming and programming languages, it is good to keep in mind the following quotation:</p>
+<div class="bg-light text-info border border-info">
+<small>
+<blockquote class="epigraph">
+<div><p><em>There are only two kinds of programming languages: those people always bitch about and those nobody uses.</em></p>
+<p class="attribution">—Bjarne Stroustrup, developer of C++</p>
+</div></blockquote>
+</small>
+</div><P></p>
+<div class="section" id="python-vs-other-languages">
+<h3><span class="section-number">3.1.1. </span>Python vs other languages<a class="headerlink" href="#python-vs-other-languages" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="http://wiki.python.org/moin/LanguageComparisons">Language comparisons</a></p></li>
+<li><p><a class="reference external" href="http://pythonconquerstheuniverse.wordpress.com/2009/10/03/python-java-a-side-by-side-comparison/">More language comparisons</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="python-basics-the-necessary-prerequisites">
+<h2><span class="section-number">3.2. </span>Python basics – the necessary prerequisites<a class="headerlink" href="#python-basics-the-necessary-prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>Let’s get into Python. As mentioned above, it is very easy to start using it. We have to, however, understand a few basic things. The aim here is not programming in a broad sense but rather to use python for various simple tasks. Topic such as <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming"><em>object oriented programming</em></a> will not be covered, the emphasis is put on simple data analysis an providing code snippets that can be re-used, for example, in analyses of experimental and computational data, in producing high quality plots for manuscripts, theses, talks and posters, and in using modules and packages for tasks such as <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_model">Markov analysis</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. This part gives a very brief introduction and jump start to python. That is done in practise in mind: This section shows some plotting techniques for data generated inside python as well as for data that is read from a file/files. A few of the most important modules are briefly introduced: <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and <a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a> for plotting, <a class="reference external" href="https://numpy.org/">numpy</a> for handling array data and <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_model">pandas</a> for statistical analyses. More will introduced as we progress. One important point is that python is a very versatile language and the number built-in and contributed modules is enormous. It is impossible to know all, or even a reasonable fraction, of them. Instead, it is very important to know how to search for information <em>and</em> how to use it. It is also very important to keep the following advice in mind:</p>
+<div class="bg-light text-info border border-info">
+<small>
+<blockquote class="epigraph">
+<div><p><em>First, solve the problem. Then, write the code.</em></p>
+<p class="attribution">—John Johnson</p>
+</div></blockquote>
+<p></small></div><p></p></p>
+<p>It may sound strange at first sight, but the statement is very important. One cannot start from writing a code but instead, there must be an idea as what is being analyzed or simulated. There is also the question if the code will be used only for a few times on a particular task or if it will be something that will be used frequently and by several users. It is also <em>absolutely vital</em> to verify even the simplest codes against known results/data.</p>
+<p>Methods are common throughout the fields. For example, the <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo method</a> is used to optimize public transportation schedules, design of integrated circuits, used in modeling quantum phenomena, to mention a few applications. Similarly, machine learning is used in everything from image processing to analyzing protein conformations and optimization methods are used in virtually all fields.</p>
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><span class="xref myst">Some general notes on programming</span></p></li>
+</ul>
+</div>
+<div class="section" id="how-to-use-the-rest-of-this-section">
+<h2><span class="section-number">3.3. </span>How to use the rest of this section<a class="headerlink" href="#how-to-use-the-rest-of-this-section" title="Permalink to this headline">¶</a></h2>
+<p>The best way to learn is to try out the code snippets. That can be done in Jupyter notebook (that is the assumption here) or using <code class="docutils literal notranslate"><span class="pre">spyder</span></code> or such, or even plain <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">terminal</span></code>. When using <a class="reference external" href="https://jupyter.org/">Jupyter Lab</a>, one should be aware that once a kernel has been executed, the definitions become available throughout the notebook and that is sometimes a bit deceiving for tracking dependencies. In such a case, interrupting and re-running the kernel should clarify the situation.</p>
+<p>Some execution cells have pieces that are commented out. In some cases that is done to avoid long outputs, but it is very good to try them out.</p>
+<p>Since we have already installed and open Jupyter Lab, let’s do that again. Open Jupyter Lab from your program menu or command line depending which operating system or/and installation method you used. The code snippets below are to be executed in Jupyter Lab.</p>
+<div class="section" id="install-python-virtual-environment">
+<h3><span class="section-number">3.3.1. </span>Install Python virtual environment<a class="headerlink" href="#install-python-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<p>It is a very good idea to use Python virtual environments. See the topic in the panel on the left hand side.</p>
+</div>
+<div class="section" id="getting-help">
+<h3><span class="section-number">3.3.2. </span>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
+<p>At this point you should have Jupyter Lab open and a notebook running in it. Remember to give the notebook a name and save it regularly.</p>
+<p>Below is an easy way to get help. We will elaborate on it later.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Important: Try the command in the Code cells in your own notebook. </span>
+<span class="c1"># The hashtag (#) character starts a comment.</span>
+<span class="c1"># Note that if a comment is put in the middle of a Code cell, everything that is after it</span>
+<span class="c1"># is ignored by the interpreter.</span>
+
+<span class="n">help</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Welcome to Python 3.8&#39;s help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at https://docs.python.org/3.8/tutorial/.
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type &quot;quit&quot;.
+
+To get a list of available modules, keywords, symbols, or topics, type
+&quot;modules&quot;, &quot;keywords&quot;, &quot;symbols&quot;, or &quot;topics&quot;.  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as &quot;spam&quot;, type &quot;modules spam&quot;.
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">c0b331d65c79</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># is ignored by the interpreter.</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">help</span><span class="p">()</span>
+
+<span class="nn">/usr/lib/python3.8/_sitebuiltins.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span>         <span class="kn">import</span> <span class="nn">pydoc</span>
+<span class="ne">--&gt; </span><span class="mi">103</span>         <span class="k">return</span> <span class="n">pydoc</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">/usr/lib/python3.8/pydoc.py</span> in <span class="ni">__call__</span><span class="nt">(self, request)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1916</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1917</span>             <span class="bp">self</span><span class="o">.</span><span class="n">intro</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1918</span>             <span class="bp">self</span><span class="o">.</span><span class="n">interact</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1919</span>             <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1920</span><span class="s1"> You are now leaving help and returning to the Python interpreter.</span>
+
+<span class="nn">/usr/lib/python3.8/pydoc.py</span> in <span class="ni">interact</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1928</span><span class="s1">         while True:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1929</span><span class="s1">             try:</span>
+<span class="ne">-&gt; </span><span class="mi">1930</span><span class="s1">                 request = self.getline(&#39;help&gt; &#39;)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1931</span><span class="s1">                 if not request: break</span>
+<span class="g g-Whitespace">   </span><span class="mi">1932</span><span class="s1">             except (KeyboardInterrupt, EOFError):</span>
+
+<span class="nn">/usr/lib/python3.8/pydoc.py</span> in <span class="ni">getline</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1948</span><span class="s1">         &quot;&quot;&quot;Read one line, using input() when appropriate.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1949</span><span class="s1">         if self.input is sys.stdin:</span>
+<span class="ne">-&gt; </span><span class="mi">1950</span><span class="s1">             return input(prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1951</span><span class="s1">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1952</span><span class="s1">             self.output.write(prompt)</span>
+
+<span class="nn">/opt/VENV/JBook/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">852</span><span class="s1">         &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">853</span><span class="s1">         if not self._allow_stdin:</span>
+<span class="ne">--&gt; </span><span class="mi">854</span><span class="s1">             raise StdinNotImplementedError(</span>
+<span class="g g-Whitespace">    </span><span class="mi">855</span><span class="s1">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">856</span><span class="s1">             )</span>
+
+<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="variables-and-data-types">
+<h3><span class="section-number">3.3.3. </span>Variables and data types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h3>
+<p>Below, we will discuss the basics of variables in Python. The intention is not to cover all aspects, but enough to get going and to be able to use the concepts efficiently. Note:  a good way to name your variables is to use <em>descriptive variable names</em>. There are some restrictions on variable naming and those restrictions will be discussed below.</p>
+<p>Unlike the usual programming languages such as <a class="reference external" href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Fortran">Fortran</a>, Python is <em>dynamically typed</em>. In <em>statically typed</em> languages such as C/C++ and Fortran, the types variables must be known and fixed and cannot be changed. In <em>dynamically typed</em> languages such as Python and <a class="reference external" href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> that is not the case. This means that in addition to the value, the type of a variable may be changed. The second notable difference to languages such as C/C++ is that in Python one not have does declare variables. The type and value of a variable are assigned when the variable used the first time. This is best illustrated by an example (the variable names are arbitrary, the part that indicates the variable type is used for clarity):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_int</span>        <span class="o">=</span> <span class="mi">2</span>                                        <span class="c1"># integer</span>
+<span class="n">a_float</span>      <span class="o">=</span> <span class="mf">2.0</span>                                      <span class="c1"># float</span>
+<span class="n">a_string</span>     <span class="o">=</span> <span class="s1">&#39;Hello world&#39;</span>                            <span class="c1"># string</span>
+<span class="n">a_tuple</span>      <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;CHEM3300G&#39;</span><span class="p">,</span><span class="s1">&#39;Chemistry&#39;</span><span class="p">,(</span><span class="mi">24</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2020</span><span class="p">))</span>    <span class="c1"># tuple</span>
+<span class="n">a_list</span>       <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">]</span>                          <span class="c1"># list</span>
+<span class="n">a_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Monday&#39;</span><span class="p">:</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span><span class="s1">&#39;Tuesday&#39;</span><span class="p">:</span><span class="s1">&#39;mardi&#39;</span><span class="p">}</span>     <span class="c1"># dictionary</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note also that variables are assigned by using the <em>assignment operator</em> <code class="docutils literal notranslate"><span class="pre">=</span></code>. In logical comparisons (True/False), the <em>comparison operator</em> <code class="docutils literal notranslate"><span class="pre">==</span></code> is used.</p>
+<p>To see the value of the variable, we must use the command print (if you have used Python 2 before or searched help from the net, notice that in Python 3 brackets are required):</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a_int</span><span class="p">,</span><span class="n">a_float</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_dictionary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 2.0
+Hello world
+(&#39;CHEM3300G&#39;, &#39;Chemistry&#39;, (24, 1, 2020))
+[1.0, 2.0, 3.0]
+{&#39;Monday&#39;: &#39;lundi&#39;, &#39;Tuesday&#39;: &#39;mardi&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also just type the variable to see its value (but only one at a time):</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_string</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello world&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here are a few things to notice:</p>
+<ul class="simple">
+<li><p>Hashtag starts a comment.</p></li>
+<li><p>Alignment at the beginning of the line matters.Try shifting any of the lines above by one and you will get an error message.</p></li>
+<li><p>The value of the variable is not echoed (=printed on screen) after it has been assigned. - The above are the most commonly used data types in python. Python has many other useful data types including Fortran-like intrinsic type for complex numbers. Below is a list of some of them with an example of how they are used. We will discuss some of them in more detail in a moment. More information is available at the Python web page.</p></li>
+</ul>
+<p><strong>Basic variable types:</strong></p>
+<ol class="simple">
+<li><p>integer:
+<code class="docutils literal notranslate"><span class="pre">a_int</span> <span class="pre">=</span> <span class="pre">1</span></code></p></li>
+<li><p>float:
+<code class="docutils literal notranslate"><span class="pre">a_float</span> <span class="pre">=</span> <span class="pre">1.0</span></code></p></li>
+<li><p>complex:
+<code class="docutils literal notranslate"><span class="pre">a_complex</span> <span class="pre">=</span> <span class="pre">1.0+1.0j</span></code></p></li>
+<li><p>string:
+<code class="docutils literal notranslate"><span class="pre">a_string</span> <span class="pre">=</span> <span class="pre">'barley'</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">a_float</span> <span class="o">=</span> <span class="mf">1.0</span>
+<span class="n">a_complex</span> <span class="o">=</span> <span class="mf">1.0</span><span class="o">+</span><span class="mf">1.0</span><span class="n">j</span>
+<span class="n">a_string</span> <span class="o">=</span> <span class="s1">&#39;barley&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Compound variable types:</strong></p>
+<ol class="simple">
+<li><p>list:
+<code class="docutils literal notranslate"><span class="pre">a_list</span> <span class="pre">=</span> <span class="pre">[1.0,2.0,'hops']</span></code></p></li>
+<li><p>tuple:
+<code class="docutils literal notranslate"><span class="pre">a_tuple</span> <span class="pre">=</span> <span class="pre">(1.0,2.0,'hops')</span></code></p></li>
+<li><p>dictionary:
+<code class="docutils literal notranslate"><span class="pre">a_dictionary</span> <span class="pre">=</span> <span class="pre">{'hops1':'saaz','hops2':'spalt'}</span></code></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_list</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="s1">&#39;hops&#39;</span><span class="p">]</span>
+<span class="n">a_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="s1">&#39;hops&#39;</span><span class="p">)</span>
+<span class="n">a_dictionary</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hops1&#39;</span><span class="p">:</span><span class="s1">&#39;saaz&#39;</span><span class="p">,</span><span class="s1">&#39;hops2&#39;</span><span class="p">:</span><span class="s1">&#39;spalt&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Execute the above variable assignments</strong> by putting them to a code cell in Jupyter. If you do that and print them out, you will notice that the variables have changed since their first definition above.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a_int</span><span class="p">,</span><span class="n">a_float</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_dictionary</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 1.0
+barley
+(1.0, 2.0, &#39;hops&#39;)
+[1.0, 2.0, &#39;hops&#39;]
+{&#39;hops1&#39;: &#39;saaz&#39;, &#39;hops2&#39;: &#39;spalt&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you notice, tuple, list and dictionary use different brackets and for the type dictionary the syntax relates the two values separated by a semicolon and comma separates list items. We will discuss these data types in more detail below.</p>
+<p><strong>Mutable and immutable data types:</strong></p>
+<p>There is one important issue that should be mentioned here: Data types are divided into <em>mutable</em> and <em>immutable</em>. The content of a <em>mutable</em> variable can be changed. Dictionary and list are <em>mutable data types</em>.  String, integer, float and tuple are <em>immutable data types</em>. The key to understanding the difference is to understand that <em>everything</em> in Python is an object. We will discuss this issue with examples when we progress.</p>
+</div>
+<div class="section" id="keywords-variable-names-and-first-touch-of-import">
+<h3><span class="section-number">3.3.4. </span>Keywords, variable names and first touch of <code class="docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#keywords-variable-names-and-first-touch-of-import" title="Permalink to this headline">¶</a></h3>
+<p>Python is very flexible with variable names but there are some restrictions. Here is a brief summary:</p>
+<ul class="simple">
+<li><p>allowed: variable names can be of arbitrary length</p></li>
+<li><p>allowed: both letters and numbers</p></li>
+<li><p>allowed: the character underscore (<code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
+<li><p>not allowed: the character <code class="docutils literal notranslate"><span class="pre">&#64;</span></code></p></li>
+<li><p>not allowed: spaces</p></li>
+<li><p>distinction: there is a distinction (like in C/C++) between upper and lower case. Both are allowed.</p></li>
+<li><p>restriction: variable names must start with letter</p></li>
+<li><p>not allowed: variable names cannot be one of the <em>keywords</em> (see below)</p></li>
+</ul>
+<p>There are recommendations for good programming style in python.</p>
+<p>We can <em>import</em> the <em>module</em> <code class="docutils literal notranslate"><span class="pre">keyword</span></code> as given below and check the. There are an enormous amount of modules for various purposes. This import mechanism makes python extremely flexible. We will use this mechanism extensively and discuss matters as they arise. For now, take this as an example how to import a module and how to call them.
+<code class="docutils literal notranslate"><span class="pre">keyword</span></code> is a <em>built-in module</em>. Modules typically contain <em>functions</em> or <em>methods</em> and they called using the <em>dot operator</em> (<code class="docutils literal notranslate"><span class="pre">.</span></code>). Below, we import the module <code class="docutils literal notranslate"><span class="pre">keyword</span></code> and then call the function <code class="docutils literal notranslate"><span class="pre">kwlist</span></code> from it.</p>
+<p><code class="docutils literal notranslate"><span class="pre">import</span></code>: the command <code class="docutils literal notranslate"><span class="pre">import</span></code> provides a mechanism to <em>import</em> or bring in libraries, modules, packages or your own code that is in a separate file. This is very powerful and it is the main mechanism for bringing in libraries and modules to your code. In the next cell, we use the command <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">keyword</span></code> to import <em>module</em> called <code class="docutils literal notranslate"><span class="pre">keyword</span></code>. That module provides the list of the reserved Python keywords. It also provides a mechanism to check if a word belongs to reserved Python keywords. There are also other ways for importing but the command <code class="docutils literal notranslate"><span class="pre">import</span></code> is the most common one.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## These are Python keywords that are not allowed as variable names.</span>
+
+<span class="kn">import</span> <span class="nn">keyword</span>                                          <span class="c1"># import keyword module. It is a built-in one.</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>                                  <span class="c1"># Print out the list of reserved keywords.</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The number of keywords:&#39;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">))</span>  <span class="c1"># How many keywords are there?.</span>
+<span class="nb">print</span> <span class="p">(</span><span class="s1">&#39;The keywords are: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="nb">type</span><span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">))</span>     <span class="c1"># Just for curiosity, what the data type?</span>
+
+<span class="n">test_word</span> <span class="o">=</span> <span class="s2">&quot;coffee&quot;</span>                                    <span class="c1"># define a variable for testing </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is&quot;</span><span class="p">,</span><span class="n">test_word</span><span class="p">,</span><span class="s2">&quot;a Python keyword?&quot;</span><span class="p">,</span> <span class="n">keyword</span><span class="o">.</span><span class="n">iskeyword</span><span class="p">(</span><span class="n">test_word</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;False&#39;, &#39;None&#39;, &#39;True&#39;, &#39;and&#39;, &#39;as&#39;, &#39;assert&#39;, &#39;async&#39;, &#39;await&#39;, &#39;break&#39;, &#39;class&#39;, &#39;continue&#39;, &#39;def&#39;, &#39;del&#39;, &#39;elif&#39;, &#39;else&#39;, &#39;except&#39;, &#39;finally&#39;, &#39;for&#39;, &#39;from&#39;, &#39;global&#39;, &#39;if&#39;, &#39;import&#39;, &#39;in&#39;, &#39;is&#39;, &#39;lambda&#39;, &#39;nonlocal&#39;, &#39;not&#39;, &#39;or&#39;, &#39;pass&#39;, &#39;raise&#39;, &#39;return&#39;, &#39;try&#39;, &#39;while&#39;, &#39;with&#39;, &#39;yield&#39;]
+The number of keywords: 35
+The keywords are: 
+ &lt;class &#39;list&#39;&gt;
+Is coffee a Python keyword? False
+</pre></div>
+</div>
+</div>
+</div>
+<p>One question that may come to mind is: How did you know the commands <code class="docutils literal notranslate"><span class="pre">keyword.kwlist</span></code> and <code class="docutils literal notranslate"><span class="pre">keyword.iskeyword</span></code>? The <code class="docutils literal notranslate"><span class="pre">help</span></code> command tells it. In addition, when called a function from a module, one needs to use the name of the module like we did above (for example: <code class="docutils literal notranslate"><span class="pre">keyword.kwlist</span></code>).</p>
+<p>Some other obvious questions are: 1) what are the built-in functions, 2) how to know what the <em>methods associated with each of the modules</em> are and 3) how does one get more modules. There is help. Uncomment the ones below one-by-one and execute the cell</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## Uncomment one-by-one or run these in different cells</span>
+
+<span class="c1">#help(&quot;keyword&quot;)     # help on the module &#39;keyword&#39;. Try also help(&quot;keywords&quot;)</span>
+<span class="c1">#help(&quot;builtins&quot;)    # help on build-ins </span>
+<span class="c1">#help(&quot;modules&quot;)     # this will list all the modules that are installed (can be massive)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="integers-floats">
+<h3><span class="section-number">3.3.5. </span>Integers &amp; floats<a class="headerlink" href="#integers-floats" title="Permalink to this headline">¶</a></h3>
+<p>Integers are the simplest data type. Let’s assign some integers (when the decimal point is not given, the type is defined as an integer), change the value of one of them and then perform a simple division:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="o">=</span><span class="mi">2</span>
+<span class="n">b</span><span class="o">=</span><span class="mi">4</span>
+<span class="n">c</span><span class="o">=</span><span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 4 3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span>   <span class="o">=</span> <span class="mi">7</span>
+<span class="n">d</span>   <span class="o">=</span> <span class="n">a</span><span class="o">/</span><span class="n">c</span>
+<span class="n">dd</span>  <span class="o">=</span> <span class="n">a</span><span class="o">%</span><span class="k">c</span>
+<span class="n">ddd</span> <span class="o">=</span> <span class="n">a</span><span class="o">//</span><span class="n">c</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="n">dd</span><span class="p">,</span><span class="n">ddd</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7 2.3333333333333335 1 2
+</pre></div>
+</div>
+</div>
+</div>
+<p>The above seems quite mundane, but there is one important matter: The variable <code class="docutils literal notranslate"><span class="pre">d</span></code> is formed by dividing <code class="docutils literal notranslate"><span class="pre">a</span></code> by <code class="docutils literal notranslate"><span class="pre">c</span></code>. Both <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span></code> are integers but <code class="docutils literal notranslate"><span class="pre">d</span></code> is a float. This may not see remarkable but in Python 2 as well as many in some other languages division of two integers (modulo operation) gives an integer. In Python 3 this is not the case and this can cause some trouble when converting from old Python 2 code to Python 3: In Python 2, Fortran and C/C++, the division <code class="docutils literal notranslate"><span class="pre">a/c</span></code> would yield 2 instead of 2.3333. The operator <code class="docutils literal notranslate"><span class="pre">%</span></code> gives the remainder and the operator <code class="docutils literal notranslate"><span class="pre">//</span></code> takes the modulo of the quotient. Note also the following:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">aa</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">aa</span><span class="p">))</span>
+<span class="n">bb</span> <span class="o">=</span> <span class="n">aa</span><span class="o">+</span><span class="mf">1.0</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aa</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">aa</span><span class="p">),</span><span class="nb">type</span><span class="p">(</span><span class="n">bb</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>8 &lt;class &#39;int&#39;&gt;
+8 &lt;class &#39;int&#39;&gt; &lt;class &#39;float&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here we have printed out the <em>value</em> and <em>type</em>. Adding and integer to an integer yields an integer but adding a float to an integer yields a float. As discussed above, Python is <em>dynamically typed</em> and this is an example of <em>type reassignment</em>. This is not possible in C, C++ or Fortran; with those programming languages you may or may not get an error message during compilation (depending on your compiler).</p>
+</div>
+<div class="section" id="strings-and-slicing-operator">
+<h3><span class="section-number">3.3.6. </span>Strings and slicing operator<a class="headerlink" href="#strings-and-slicing-operator" title="Permalink to this headline">¶</a></h3>
+<p>Strings are, as the name suggests, strings of characters. In Python, they defined by single quotes (double quotes work). Note that if a number is within a string Python sees it as a character (text) and <em>not</em> as a number. Recall the string variable we used above:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="s1">&#39;barley&#39;</span>    <span class="c1"># One can use either simple or double quotes</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">a_string</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>barley
+&lt;class &#39;str&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can add strings together, or concatenated, using <code class="docutils literal notranslate"><span class="pre">+</span></code>:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="n">a_string</span> <span class="o">+</span> <span class="s1">&#39; is important for brewing&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>barley is important for brewing
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note also that that if you execute the cell several times, it keeps adding to itself (try it out, just re-execute the Jupyter cell for a few times. Let’s re-assign the variable (in case you did  re-execute the Jupyter cell). This is how to change line (notice the space or lack of it after <code class="docutils literal notranslate"><span class="pre">\n</span></code>:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a_string</span> <span class="o">=</span> <span class="s1">&#39;barley&#39;</span>
+<span class="n">a_string</span> <span class="o">=</span> <span class="n">a_string</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">is important for brewing&#39;</span> <span class="o">+</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> and hops are needed too&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>barley
+is important for brewing
+ and hops are needed too
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since quotations are used to define strings, one needs to <em>escape</em> them if one wants to use quotation marks as part of the string:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b_string</span> <span class="o">=</span> <span class="s2">&quot;Barley is </span><span class="se">\&quot;</span><span class="s2">good</span><span class="se">\&quot;</span><span class="s2"> for you.&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Barley is &quot;good&quot; for you.
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also access elements of a string very easily by calling the index. Like in C/C++ (and unlike in Fortran), indexing starts from zero. To call the second element,</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">a_string</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Slicing:</strong> There is more to strings: We can use the <em>slicing operator</em> to access parts of a string. The syntax is</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">varname</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">stop</span><span class="p">:</span><span class="n">step</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Let’s try this:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Original string:&#39;</span><span class="p">,</span> <span class="n">a_string</span><span class="p">,</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sliced string:&#39;</span><span class="p">,</span><span class="n">a_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">],</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Sliced string with a step of two:&#39;</span><span class="p">,</span><span class="n">a_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">9</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Original string: Hello world 
+
+
+Sliced string: Hello wor 
+
+Sliced string with a step of two: Hlowr
+</pre></div>
+</div>
+</div>
+</div>
+<p>Slicing is very useful in many tasks. Here’s a short summary how it works and check the you understand the output:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">b_string</span> <span class="o">=</span> <span class="s1">&#39;La Femme is a French band&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_string</span><span class="p">)</span>        <span class="c1"># print the variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>   <span class="c1"># print the 5 first characters</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_string</span><span class="p">[</span><span class="mi">5</span><span class="p">:])</span>    <span class="c1"># print elements from the 6th element till the end</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_string</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># the the 7 first characters skipping every second</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_string</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span>  <span class="c1"># print every 2nd element starting from the second (index 1)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>La Femme is a French band
+La F
+mme is a French band
+L e
+aFmei  rnhbn
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is one more thing to notice. Strings are immutable data types. This means that once we define a string, its elements cannot be changed. This is best illustrated by an example. Let’s try to delete the second element:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">b_string</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="n">f90e9bc1070f</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">del</span> <span class="n">b_string</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="ne">TypeError</span>: &#39;str&#39; object doesn&#39;t support item deletion
+</pre></div>
+</div>
+</div>
+</div>
+<p>It doesn’t work since strings are immutable. We can, of course delete the whole variable. Let’s do that and try to print and we see that the error message is a results of the fact that after deletion the variable <code class="docutils literal notranslate"><span class="pre">b_string</span></code> no longer exists:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">b_string</span>
+<span class="nb">print</span> <span class="p">(</span><span class="n">b_string</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">32</span><span class="o">-</span><span class="mi">2557116</span><span class="n">de93c</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">del</span> <span class="n">b_string</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span> <span class="p">(</span><span class="n">b_string</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;b_string&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lists">
+<h3><span class="section-number">3.3.7. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<p>Unlike strings, lists are <em>mutable</em> and we can change their <em>elements</em>, and we can append more elements. This is best demonstrated by examples. Let’s first generate a list and print out the values of its elements. Lists are defined using square brackets:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">]</span>                                              <span class="c1"># generate a list &amp; print</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a and its length:&quot;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">))</span>                           <span class="c1"># number of elements (length)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;rhubarb&#39;</span><span class="p">]</span>                                          <span class="c1"># elements in a list don&#39;t have to be of same type</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b and its 3rd element:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span><span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>                        <span class="c1"># Print b and its third element</span>
+<span class="n">empty</span> <span class="o">=</span> <span class="p">[]</span>                                                     <span class="c1"># we can create empty lists. This is often quite handy</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;empty list:&quot;</span><span class="p">,</span> <span class="n">empty</span><span class="p">)</span>                                    <span class="c1"># Print empty</span>
+<span class="n">listinlist</span> <span class="o">=</span> <span class="p">[</span><span class="mf">1.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,[</span><span class="s1">&#39;barley&#39;</span><span class="p">,</span><span class="s1">&#39;hops&#39;</span><span class="p">]]</span>                       <span class="c1"># we can also have list as an element of a list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List in list &amp; 3rd element:&quot;</span><span class="p">,</span> <span class="n">listinlist</span><span class="p">,</span><span class="n">listinlist</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># Print the variable and its third element (it is a list!)</span>
+<span class="n">b</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">15</span>                                                      <span class="c1"># Change the third element of b</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b after changing the 3rd element:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;slice 0th to 3rd element:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span>                     <span class="c1"># Slicing works the same as with strings</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;more slices:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> 
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">::</span><span class="mi">2</span><span class="p">])</span> 
+<span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>                                                   <span class="c1"># We can use the method append() to add value to the list</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;b after appending to it:&quot;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>                           <span class="c1"># Shows that number 11 was added (appended) at the end </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a and its length: [1.0, 2.0, 3.0] 3
+b and its 3rd element: [1.0, 2, &#39;rhubarb&#39;] rhubarb
+empty list: []
+List in list &amp; 3rd element: [1.0, 2.0, [&#39;barley&#39;, &#39;hops&#39;]] [&#39;barley&#39;, &#39;hops&#39;]
+b after changing the 3rd element: [1.0, 2, 15]
+slice 0th to 3rd element: [1.0, 2]
+more slices: [1.0, 15]
+[1.0, 15]
+b after appending to it: [1.0, 2, 15, 11]
+</pre></div>
+</div>
+</div>
+</div>
+<!-- Try slicing with the variable `listinlist`.
+--></div>
+<div class="section" id="tuples-ordered-immutable-lists-of-elements">
+<h3><span class="section-number">3.3.8. </span>Tuples - ordered immutable lists of elements<a class="headerlink" href="#tuples-ordered-immutable-lists-of-elements" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Tuple">Tuples</a> are sometimes confusing, probably because they seem similar to lists. The term has its origin in mathematics (set theory) and  it can be defined as an <em>ordered set of elements</em>. N-tuple is an ordered list of <em>N</em> elements. If you are a database person, ‘record’ is roughly the same.  Tuples in python are <em>immutable</em>, their elements cannot be changed once they have been created unlike was the case with lists. This is a useful feature in certain situations.  Here are some practical points concerning tuples:</p>
+<ul class="simple">
+<li><p>Indexing starts from zero (the same as with lists)</p></li>
+<li><p>It is not possible to add (append/extend) or remove (remove/pop)  elements from a tuple.</p></li>
+<li><p>Tuples are a safe way to store data (when appropriate). This is where immutability is the key.</p></li>
+<li><p>Slicing works the same as with lists</p></li>
+<li><p>When assigning a tuple, one uses the regular parenthesis</p></li>
+<li><p>Since they are immutable, it is faster to retrieve information from a tuple than a list</p></li>
+<li><p>There is a conversion routine between tuples and lists</p></li>
+<li><p>Elements in a tuple can be mixed: You can have floats, integers, strings, lists, etc.</p></li>
+</ul>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span><span class="s1">&#39;mardi&#39;</span><span class="p">,</span><span class="s1">&#39;mercredi&#39;</span><span class="p">,</span><span class="s1">&#39;jeudi&#39;</span><span class="p">,</span><span class="s1">&#39;vendredi&#39;</span><span class="p">,</span><span class="s1">&#39;samedi&#39;</span><span class="p">,</span><span class="s1">&#39;dimanche&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>             <span class="c1"># print the tuple</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>          <span class="c1"># print element two</span>
+<span class="c1">#days[1] = tuesday      # Elements cannot be changed (immutable). This gives an error message</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;lundi&#39;, &#39;mardi&#39;, &#39;mercredi&#39;, &#39;jeudi&#39;, &#39;vendredi&#39;, &#39;samedi&#39;, &#39;dimanche&#39;)
+mardi
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remove the comment on the last line and execute. We cannot change the elements individually. We can, of course, reassign the tuple:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;monday&#39;</span><span class="p">,</span><span class="s1">&#39;tuesday&#39;</span><span class="p">,</span><span class="s1">&#39;wednesday&#39;</span><span class="p">,</span><span class="s1">&#39;thursday&#39;</span><span class="p">,</span><span class="s1">&#39;friday&#39;</span><span class="p">,</span><span class="s1">&#39;saturday&#39;</span><span class="p">,</span><span class="s1">&#39;sunday&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">days</span><span class="p">)</span>        <span class="c1"># check that everything was reassigned</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">])</span>   <span class="c1"># slicing works as before</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">days</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">7</span><span class="p">:</span><span class="mi">2</span><span class="p">])</span> <span class="c1"># print every second element staring from the first one</span>
+<span class="c1">#days = days.append(&#39;new day&#39;) # Comment out and try. Tuples are immutable -&gt; we can&#39;t add to them</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&#39;monday&#39;, &#39;tuesday&#39;, &#39;wednesday&#39;, &#39;thursday&#39;, &#39;friday&#39;, &#39;saturday&#39;, &#39;sunday&#39;)
+(&#39;monday&#39;, &#39;tuesday&#39;, &#39;wednesday&#39;)
+(&#39;monday&#39;, &#39;wednesday&#39;, &#39;friday&#39;, &#39;sunday&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h3><span class="section-number">3.3.9. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>This may sound like an odd variable, but it is very useful. Dictionaries are <em>key-value pairs</em>. The most obvious examples are a dictionary and a phone book, but this data type is very useful for many purposes. Curly brackets are used when defining a dictionary. Below, we use the dot notation to call the function <code class="docutils literal notranslate"><span class="pre">keys()</span></code> to list all the keys of a dictionary.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">engfra</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Monday&#39;</span><span class="p">:</span><span class="s1">&#39;lundi&#39;</span><span class="p">,</span><span class="s1">&#39;Tuesday&#39;</span><span class="p">:</span><span class="s1">&#39;mardi&#39;</span><span class="p">,</span><span class="s1">&#39;Wednesday&#39;</span><span class="p">:</span><span class="s1">&#39;mercredi&#39;</span><span class="p">}</span> <span class="c1"># Define key-value pairs</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">engfra</span><span class="p">))</span>      <span class="c1"># Check the data type</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">engfra</span><span class="p">[</span><span class="s1">&#39;Monday&#39;</span><span class="p">])</span>  <span class="c1"># print out the value corresponding to the key Monday</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">engfra</span><span class="p">[</span><span class="s1">&#39;Monday&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">engfra</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>     <span class="c1"># This is how you can list keywords of a dictionary</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
+lundi
+lundi
+dict_keys([&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="combined-variables">
+<h3><span class="section-number">3.3.10. </span>Combined variables<a class="headerlink" href="#combined-variables" title="Permalink to this headline">¶</a></h3>
+<p>It is also possible to define <em>combined</em> variables. This is very useful in many applications. Let’s illustrate this with an example. Remember that curly braces, angular brackets and normal brackets have very specific meanings as discussed above.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a combined variable. Pay attention to the different brackets</span>
+
+<span class="n">music</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;Drake&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;Toosie slide&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Hotline Bling&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Laugh Now Cry Later&#39;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;Justin Bieber&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;Sorry&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Yummy&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Lonely&#39;</span>
+    <span class="p">],</span>
+    <span class="s1">&#39;La Femme&#39;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s1">&#39;Ou va la monde&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;Hypsoline&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;It</span><span class="se">\&#39;</span><span class="s1">s time to wake up&#39;</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">music</span><span class="p">))</span>                      <span class="c1"># Check the variable type</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">music</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>                     <span class="c1"># Let&#39;s print the keys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">music</span><span class="p">[</span><span class="s1">&#39;Drake&#39;</span><span class="p">])</span>                   <span class="c1"># print out the values associated with the key &#39;Drake&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">music</span><span class="p">[</span><span class="s1">&#39;Justin Bieber&#39;</span><span class="p">][</span><span class="mi">1</span><span class="p">])</span>        <span class="c1"># print out the second value associated with the key &#39;Justin Bieber&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">music</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>                   <span class="c1"># Instead of keys, we can also print the values only</span>
+<span class="n">music</span><span class="p">[</span><span class="s1">&#39;La Femme&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Sur la planche&#39;</span> <span class="c1"># Since the value for each key is a list, we can change the values</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">music</span><span class="p">[</span><span class="s1">&#39;La Femme&#39;</span><span class="p">])</span>                <span class="c1"># Check that the substitution was made</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;dict&#39;&gt;
+dict_keys([&#39;Drake&#39;, &#39;Justin Bieber&#39;, &#39;La Femme&#39;])
+[&#39;Toosie slide&#39;, &#39;Hotline Bling&#39;]
+Yummy
+dict_values([[&#39;Toosie slide&#39;, &#39;Hotline Bling&#39;], [&#39;Sorry&#39;, &#39;Yummy&#39;], [&#39;Ou va la monde&#39;, &#39;Hypsoline&#39;]])
+[&#39;Sur la planche&#39;, &#39;Hypsoline&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Links to music that was referenced in the example.</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Note:</strong> Videos may contain material that some people may find offensive. Watch at your own discretion. YouTube is also a bot unpredictable in what it allows so you may or may not be able to watch the videos.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="7d7daf30-31c1-4679-aa0f-95c4edc36f68" name="78fd165a-7ea2-4f63-90ae-c315b7c7e9bd" type="radio">
+</input><label class="tabbed-label" for="7d7daf30-31c1-4679-aa0f-95c4edc36f68">
+Justin Bieber:</label><div class="tabbed-content docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xQOO2xGQ1Pc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<input id="11fa629f-eeef-42bf-888d-c48b436fe8f0" name="78fd165a-7ea2-4f63-90ae-c315b7c7e9bd" type="radio">
+</input><label class="tabbed-label" for="11fa629f-eeef-42bf-888d-c48b436fe8f0">
+La Femme:</label><div class="tabbed-content docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/iMDwrnLrdgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<input id="6094cd64-064d-4079-9f93-2854038a9fc8" name="78fd165a-7ea2-4f63-90ae-c315b7c7e9bd" type="radio">
+</input><label class="tabbed-label" for="6094cd64-064d-4079-9f93-2854038a9fc8">
+Drake:</label><div class="tabbed-content docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xWggTb45brM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+</details><div class="section" id="checking-who-s-who-type-len-id">
+<h4><span class="section-number">3.3.10.1. </span>Checking who’s who: <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code><a class="headerlink" href="#checking-who-s-who-type-len-id" title="Permalink to this headline">¶</a></h4>
+<p>Here is a list of some commands that are helpful in inspecting variables. We have already used some of them above</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>         <span class="c1"># What is type of the variable</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>       <span class="c1"># notice the difference to the above</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">engfra</span><span class="p">))</span>    <span class="c1"># The one from above</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">id</span><span class="p">(</span><span class="n">engfra</span><span class="p">))</span>      <span class="c1"># identity of a variable. Gives the unique identifier of the variable (not memory address)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">engfra</span><span class="p">))</span>     <span class="c1"># Length of a variable</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;int&#39;&gt;
+&lt;class &#39;float&#39;&gt;
+&lt;class &#39;dict&#39;&gt;
+140422546971840
+3
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="type-conversion">
+<h3><span class="section-number">3.3.11. </span>Type conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h3>
+<p>Like in C/C++ and Fortran, python has type conversion functions. Some of them are different from their C/C++ and Fortran counterparts. Try them out.</p>
+<table>
+<tr> 
+    <td>Conversion
+    </td>
+    <td>What it does
+    </td> 
+    </tr>
+<tr> 
+    <td>
+        <code>int(x)</code>
+    </td>
+    <td>    Converts x to an integer 
+    </td> 
+    </tr>
+<tr> 
+    <td>
+        <code>str(x)</code>
+    </td>
+    <td>    Converts x to a string  </td> 
+    </tr>
+<tr> 
+    <td>
+        <code>float(x)</code>
+    </td>
+    <td>  Converts x to a float 
+    </td> 
+    </tr>
+<tr> 
+    <td>
+        <code>complex(x)</code>
+    </td>
+    <td>  Converts to a complex number 
+    </td> 
+    </tr>
+<tr> 
+    <td>
+        <code>hex(x)</code>
+    </td>
+    <td>    Converts to a hexadecimal 
+    </td> 
+    </tr>
+</table>
+<p>Need help? It is very easy. Execute the cell below and it will tell what <em>methods</em> the <em>class</em> complex (which belongs to the module <em>builtins</em>) has:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;complex&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="operators">
+<h4><span class="section-number">3.3.11.1. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h4>
+<p>Basic Python does not include many mathematical operators or functions. More or less all functions have to called in by importing a module or modules and we will discuss that in a moment. The arithmetic operators that are included in basic Python are the usual ones and the order of execution follows the common rules:</p>
+<table>
+<tr>
+    <td>    
+        <code>+</code>
+    </td>
+    <td> 
+        addition
+    </td>
+    <td> <code>* </code>
+    </td>
+    <td> 
+        multiplication
+    </td>
+    <td><code>**</code>
+    </td>
+    <td>
+        exponentiation
+    </td>
+<!--    </tr>
+    <tr>
+-->
+    <td>    
+        <code>-</code>
+    </td>
+    <td> 
+        subtraction
+    </td>
+    <td> <code>/ </code>
+    </td>
+    <td> 
+        division
+    </td>
+    <td> <code>%</code>
+    </td>
+    <td>
+        modular division
+    </td>
+    </tr>
+</table>
+<p>Python has also C-style assignment operators:</p>
+<table>
+<tr>
+    <td>  <code>a+=b</code> </td><td> for </td><td><code>a=a+b</code> </td>
+    </tr><tr>
+    <td>  <code>a*=b</code> </td><td> for </td><td> <code>a=a*b</code> </td>
+        </tr><tr>
+    <td>  <code>a**=b</code> </td><td> for </td><td> <code>a=a**b</code> </td>  
+    </tr><tr>
+    <td>  <code>a-=b</code> </td><td> for </td><td> <code>a=a-b</code> </td></tr><tr>
+    <td>  <code>a/=b</code> </td><td> for </td><td> <code>a=a/b</code> </td></tr><tr>
+    <td> <code> a%=b</code> </td><td> for </td><td> <code>a=a%b</code> </td>
+    </tr>
+    </table>
+<p>And the usual relational operators:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, <code class="docutils literal notranslate"><span class="pre">!=</span></code></p>
+<p>Need help? It is very easy: Just try for example</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;+&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="import-modules">
+<h2><span class="section-number">3.4. </span>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h2>
+<p>Above, we used <code class="docutils literal notranslate"><span class="pre">import</span></code> to load a <em>module</em>, and we then used <em>the dot</em> notation to access a <em>function</em> from it. This is what we did:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="kn">import</span> <span class="nn">keyword</span>                <span class="c1"># import keyword module</span>
+  <span class="nb">print</span> <span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>        <span class="c1"># Print out the list of reserved keywords.</span>
+</pre></div>
+</div>
+<p></p>
+<p>As briefly explained above, the module <code class="docutils literal notranslate"><span class="pre">keyword</span></code> is a built-in one. It provides the list of reserved keywords. In the above, <code class="docutils literal notranslate"><span class="pre">kwlist</span></code> is <em>function</em> or *of the <em>module</em>. In general, one accesses the <em>functions</em> or <em>methods</em> of a <em>module</em> using the <em>dot operator</em>. We will be using this extensively. The figure shows some of the basics and terminology. In the figure, an <em>alias</em> is created when importing module <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<!--
+<table>
+    <tr>
+        <td>
+            <img src="./img/python-import.svg" width="98%"/>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+        Figure: Basic terminology related to importing modules in python. Numpy is library that provides lots of efficient array/matrix operations and numerical operations and it is used extensively in lots of applications. Aliasing using `as` The path to this directory would then be <code class="wlblue">/home/sam</code>. Green: The directory <code class="wlblue">/opt</code> is a good place to put your own software (that you compile) such as Gromacs. 
+        </td>
+    </tr>
+</table>
+
+-->
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/python-import.svg"><img alt="Python_import" src="../../_images/python-import.svg" width="100%" /></a>
+<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Basic terminology related to importing modules in python. Numpy is library that provides lots of efficient array/matrix operations and numerical operations and it is used extensively in lots of applications. Aliasing using <code class="docutils literal notranslate"><span class="pre">as</span></code>; technically speaking this is not true aliasing but rather binding (in this case <code class="docutils literal notranslate"><span class="pre">np</span></code>) to the namespace (in this case <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)) but that is beyond the point here.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">...</span><span class="ow">and</span> <span class="n">don</span><span class="s1">&#39;t forget to check what the modules in the figure do:</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="s2">&quot;random.randint&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on method randint in random:
+
+random.randint = randint(a, b) method of random.Random instance
+    Return random integer in range [a, b], including both end points.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-in-python">
+<h2><span class="section-number">3.5. </span>Plotting in python<a class="headerlink" href="#plotting-in-python" title="Permalink to this headline">¶</a></h2>
+<p>It’s time to do some plotting. The example below is organized as follows:</p>
+<ul class="simple">
+<li><p>generate simple data and for plotting</p></li>
+<li><p>plot the data using matplotlib.</p></li>
+<li><p>while <a class="reference external" href="https://matplotlib.org/">matplotlib</a> can generate beautiful plots, we import <a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a> to decorate the plot</p></li>
+<li><p>replot the data with matplotlib and Seaborn decorations. This produces a publication-quality plot</p></li>
+<li><p>examples also include how to include and select plot title, loglog plot, markers and linestyle, and use <a class="reference external" href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a> in labels</p></li>
+</ul>
+<p>There are also other options to do plotting such as <a class="reference external" href="https://en.wikipedia.org/wiki/Plotly">Plotly</a>. Here, we use matplotlib as it is probably the most common way and it is very easy for Matlab users to use matplotlib due to syntactic similarity.</p>
+<p>This also provides an introduction to <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, loops and plotting options.</p>
+<p><code class="docutils literal notranslate"><span class="pre">np.arange(start=1,</span> <span class="pre">stop=10,</span> <span class="pre">step=3)</span></code></p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mf">0.2</span><span class="p">)</span>    <span class="c1"># generate some simple data starting in the range 0.1-10 with steps of 0.2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_data</span><span class="p">)</span>                     <span class="c1"># Let&#39;s check the data</span>
+<span class="n">y_data</span> <span class="o">=</span> <span class="n">x_data</span><span class="o">**</span><span class="mi">2</span>                <span class="c1"># Let&#39;s use the data to generate a simple function.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.1 0.3 0.5 0.7 0.9 1.1 1.3 1.5 1.7 1.9 2.1 2.3 2.5 2.7 2.9 3.1 3.3 3.5
+ 3.7 3.9 4.1 4.3 4.5 4.7 4.9 5.1 5.3 5.5 5.7 5.9 6.1 6.3 6.5 6.7 6.9 7.1
+ 7.3 7.5 7.7 7.9 8.1 8.3 8.5 8.7 8.9 9.1 9.3 9.5 9.7 9.9]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#---- Create a quick plot using matplotlib</span>
+<span class="c1">#</span>
+<span class="c1">#     A pretty publication-quality plot is created below after this one</span>
+<span class="c1">#     using decorations, colors etc. from Seaborn. </span>
+<span class="c1">#</span>
+<span class="c1">#     Linestyles and markers are more or less the same as in Matlab. See:</span>
+<span class="c1">#     https://matplotlib.org/2.0.2/api/markers_api.html#module-matplotlib.markers</span>
+<span class="c1">#     https://matplotlib.org/2.0.2/api/lines_api.html#matplotlib.lines.Line2D.set_linestyle</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;One can have a title too&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;p&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x-title&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y-title&quot;</span><span class="p">)</span>
+<span class="c1"># plt.legend(loc=&#39;center right&#39;)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/python-intro_79_0.png" src="../../_images/python-intro_79_0.png" />
+</div>
+</div>
+<p>The above shows how easy and quick it is to generate plots from data and to add titles and labels, and to change line styles and markers. Let’s take this a bit further. Seaborn is based on matplotlib and it allows changing styles, color palettes and other decorations very easily. In the next cell, we import Seaborn and define background, grid, fonts and line widths. These definitions have been used to create figures for publications and the line widths and other styles have been selected such that the plots look good when printed.</p>
+<p>The best way to use the cell below is to save it separately and then import it. If you plan to use these or some other settings in this same manner, that is what you should do.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#=============================================================</span>
+<span class="c1">#</span>
+<span class="c1"># Import Seaborn to make a pretty plot.</span>
+<span class="c1">#</span>
+<span class="c1"># Seaborn is excellent for controlling decorations, line widths</span>
+<span class="c1"># color palettes, etc.</span>
+<span class="c1">#</span>
+<span class="c1">#   - Define background for the plot</span>
+<span class="c1">#   - Define if a grid is used (background)</span>
+<span class="c1">#   - Define font families</span>
+<span class="c1">#   - Define line widths</span>
+<span class="c1">#</span>
+<span class="c1"># Ideally, this should be put in a separate file and imported, </span>
+<span class="c1"># but is included here as an example.</span>
+<span class="c1">#=============================================================</span>
+
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_context</span><span class="p">(</span><span class="s2">&quot;paper&quot;</span><span class="p">,</span> <span class="n">font_scale</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">})</span>
+
+<span class="c1">#---- This allows the use of LaTeX + the use sans-serif fonts also for tick labels:</span>
+
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text.latex&#39;</span><span class="p">,</span> <span class="n">preamble</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;\usepackage</span><span class="si">{cmbright}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># There are 5 presents for background: darkgrid, whitegrid, dark, white, and ticks</span>
+<span class="c1"># Define how ticks are placed and define font families</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;ticks&quot;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_style</span><span class="p">(</span><span class="s2">&quot;whitegrid&quot;</span><span class="p">,</span> 
+ <span class="p">{</span><span class="s1">&#39;axes.edgecolor&#39;</span><span class="p">:</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;axes.grid&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+ <span class="s1">&#39;axes.axisbelow&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+ <span class="s1">&#39;axes.labelcolor&#39;</span><span class="p">:</span> <span class="s1">&#39;.15&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;grid.color&#39;</span><span class="p">:</span> <span class="s1">&#39;0.9&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;grid.linestyle&#39;</span><span class="p">:</span> <span class="s1">&#39;-&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;xtick.direction&#39;</span><span class="p">:</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> 
+ <span class="s1">&#39;ytick.direction&#39;</span><span class="p">:</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;xtick.bottom&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+ <span class="s1">&#39;xtick.top&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+ <span class="s1">&#39;ytick.left&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+ <span class="s1">&#39;ytick.right&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span> 
+ <span class="s1">&#39;font.family&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;sans-serif&#39;</span><span class="p">],</span>
+ <span class="s1">&#39;font.sans-serif&#39;</span><span class="p">:</span> <span class="p">[</span>
+  <span class="s1">&#39;Liberation Sans&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;Bitstream Vera Sans&#39;</span><span class="p">,</span>
+  <span class="s1">&#39;sans-serif&#39;</span><span class="p">],})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The cell below plots the data using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> with the  <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> settings to make the above plot pretty with nice and consistent fonts, control of tick marks, legends and so on. The line widths were determined in the previous cell so that if the plot is included in an article or thesis, everything should look good. At the end, there is an option to save as <code class="docutils literal notranslate"><span class="pre">png</span></code> and <code class="docutils literal notranslate"><span class="pre">svg</span></code>. While <code class="docutils literal notranslate"><span class="pre">png</span></code> is good for importing plots into Word, LaTeX or LibreOffice, <code class="docutils literal notranslate"><span class="pre">svg</span></code> (=<a class="reference external" href="https://en.wikipedia.org/wiki/Scalable_Vector_Graphics">Scalable Vector Graphics</a>) is scale free. That is, it can be used in posters without loss of resolution and it can be edited (without the need to replot), say, if one wants to change the line type or color. <code class="docutils literal notranslate"><span class="pre">svg</span></code> files can be edited using the excellent <code class="docutils literal notranslate"><span class="pre">inkscape</span></code> program (free and available for Windows, Mac and Linux) and then saved to <code class="docutils literal notranslate"><span class="pre">png</span></code> or any other format if necessary. Note also that <code class="docutils literal notranslate"><span class="pre">svg</span></code> can be directly imported in LibreOffice files and also in Jupyter Labs/Notebook and on web sites. It’s usually a good idea so save in both formats but if one needs to pick one, <code class="docutils literal notranslate"><span class="pre">svg</span></code> is a much more flexible choice.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#=============================================================================</span>
+<span class="c1">#</span>
+<span class="c1"># Let&#39;s make the plot pretty with settings from above.</span>
+<span class="c1">#</span>
+<span class="c1">#  - Produces a publication quality plot for an article or thesis.</span>
+<span class="c1">#=============================================================================</span>
+
+<span class="c1">#---- Choose Seaborn colour palette. </span>
+<span class="c1">#     This is the only Seaborn piece in this cell, all the rest would work without it.</span>
+<span class="c1">#     The previous cell does all the decorations and that&#39;s what Seaborn did for us.</span>
+<span class="c1">#</span>
+<span class="c1">#     More palettes: See: https://seaborn.pydata.org/tutorial/color_palettes.html</span>
+
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s2">&quot;tab10&quot;</span><span class="p">)</span>
+
+<span class="c1">#---- This allows modification of tick positions (&amp; a few other things)</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="p">(</span><span class="n">AutoMinorLocator</span><span class="p">,</span> <span class="n">MultipleLocator</span><span class="p">)</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1"># Set x and y-minor ticks:</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">5.0</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">xaxis</span><span class="o">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">MultipleLocator</span><span class="p">(</span><span class="mf">1.0</span><span class="p">))</span>
+
+<span class="c1">#---- Plot data. One can use LaTeX for legends (label gets picked up by </span>
+<span class="c1">#     the legend part below).</span>
+<span class="c1">#     Linestyles and markers are more or less the same as in Matlab. See:</span>
+<span class="c1">#     https://matplotlib.org/2.0.2/api/markers_api.html#module-matplotlib.markers</span>
+<span class="c1">#     https://matplotlib.org/2.0.2/api/lines_api.html#matplotlib.lines.Line2D.set_linestyle</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$x^2$&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
+
+<span class="c1">#---- Axis labels and legend:</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;x-axis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;y-axis&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Function&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span><span class="n">fancybox</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#---- It&#39;s very easy to plot vertical and horizontal lines for example </span>
+<span class="c1">#     for the average values or put them in any arbitrary position.</span>
+<span class="c1">#     Linestyles are the same as in Matlab</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_data</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_data</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="c1">#---- You can add text using the coordinate positions (x,y)</span>
+<span class="c1">#     The example also shows how to concatenate text from extracted data</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="s1">&#39;Curve: $y=x^2$</span><span class="se">\n</span><span class="s1">Average x value is: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_data</span><span class="p">),</span><span class="n">decimals</span><span class="o">=</span><span class="mi">2</span><span class="p">)),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1">#---- Uncomment to save. First give a name. Then a high resolution png and svg files are generated</span>
+
+<span class="c1">#printfile = &#39;testplot&#39;</span>
+<span class="c1">#plt.savefig(printfile+&#39;.svg&#39;)</span>
+<span class="c1">#plt.savefig(printfile+&#39;.png&#39;,dpi=300)</span>
+
+<span class="c1">#---- Show </span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="c1">#---- One can plot more so let&#39;s generate a log-log plot:</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;One can have a title too&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;$x^2$&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Function&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span><span class="n">fancybox</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/python-intro_83_0.png" src="../../_images/python-intro_83_0.png" />
+<img alt="../../_images/python-intro_83_1.png" src="../../_images/python-intro_83_1.png" />
+</div>
+</div>
+<div class="section" id="variation-to-the-theme-plots-xkcd-style">
+<h3><span class="section-number">3.5.1. </span>Variation to the theme: plots xkcd style<a class="headerlink" href="#variation-to-the-theme-plots-xkcd-style" title="Permalink to this headline">¶</a></h3>
+<p>Not that this is useful, but it is fun: One can eve plot using the <a class="reference external" href="https://xkcd.com/">XKCD comics</a> style. To make the plots look more authentic, install the humor sans font (not required, though) from the terminal window using the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">fonts-humor-sans</span></code></p>
+<p>Let’s plot the same plot as above.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>        <span class="c1"># Using LaTeX doesn&#39;t work with xkcd style so let&#39;s turn it off</span>
+
+<span class="c1">#-- Note: we use the &#39;with&#39; since we don&#39;t want to make this permanent (only in this context)</span>
+
+<span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">randomness</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>   <span class="c1"># This turns on the xkcd mode. It has 3 parameters</span>
+<span class="c1">#with plt.xkcd():                                   # Use default values for the parameters</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;X-AXIS&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Y-AXIS&quot;</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_data</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">y_data</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>   
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;One can have a title too&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_data</span><span class="p">,</span><span class="n">y_data</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">r</span><span class="s1">&#39;$x^2$&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-.&#39;</span><span class="p">)</span> <span class="c1"># Note that after turning of LaTeX, this is the way we can have it/</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Function&quot;</span><span class="p">,</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">,</span><span class="n">fancybox</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/python-intro_85_0.png" src="../../_images/python-intro_85_0.png" />
+</div>
+</div>
+<!--
+### Drawing chemical structures (and much more)
+
+RDKit is the package for doing that, it is extremely powerful. We won't discuss it further, but simply just provide an example.
+
+- [Installation¶](https://www.rdkit.org/docs/Install.html)
+--><div class="cell tag_remove-input docutils container">
+</div>
+<!-- 
+### NGLView: View molecules interactively in Jupyter
+
+- [Installation instructions](https://github.com/nglviewer/nglview)
+
+--><p><strong>For more examples and demos, see for example:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://matplotlib.org/index.html">matplotlib</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/gallery/index.html">matplotlib examples</a></p></li>
+<li><p><a class="reference external" href="https://matplotlib.org/tutorials/index.html">matplotlib tutorials</a></p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/index.html">Seaborn</a></p></li>
+<li><p><a class="reference external" href="https://seaborn.pydata.org/tutorial.html">Seaborn User guide and tutorial</a></p></li>
+</ul>
+</div>
+<div class="section" id="plotting-with-data-from-the-disk">
+<h3><span class="section-number">3.5.2. </span>Plotting with data from the disk<a class="headerlink" href="#plotting-with-data-from-the-disk" title="Permalink to this headline">¶</a></h3>
+<p>The following shows one way of reading data from a file that has data in columns separated by spaces. Seaborn is again used for pretty plots. This also demonstrates numpy and pandas, two very useful modules. This is not very elegant but aim is to demonstrate plotting using data stored in a file, how to use a <em>for loop</em> and how one can get some quick statistics.</p>
+<p>We will use two approaches: 1) Direct reading and plotting, and 2) reading the data, converting it to <a class="reference external" href="https://pandas.pydata.org/"><em>pandas dataframe</em></a> and then plotting. The second part is shown since <em>pandas dataframe</em> is a very useful (and very commonly used) way of handling data. There are many other ways to plot by calling Seaborn directly, using <em>scatter</em> etc.</p>
+<p><strong>Data:</strong> It is assumed that data is in <code class="docutils literal notranslate"><span class="pre">$HOME/test_plot/test_data.dat</span></code></p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="n">pretty_plots</span>
+<span class="n">pretty_plots</span><span class="o">.</span><span class="n">pretty_plot</span><span class="p">(</span><span class="n">pal</span><span class="o">=</span><span class="s1">&#39;tab10&#39;</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="s1">&#39;paper&#39;</span><span class="p">)</span>
+
+<span class="c1">#---- Get home directory. Demonstrates the module os    </span>
+    
+<span class="n">home_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;HOME&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;My home directory is:&#39;</span><span class="p">,</span> <span class="n">home_dir</span><span class="p">)</span>
+
+<span class="c1">#---- Input data: x,y1,y2 data is in this file ----------</span>
+
+<span class="n">data_1</span> <span class="o">=</span> <span class="n">home_dir</span><span class="o">+</span><span class="s1">&#39;/test_plot/test_data.dat&#39;</span>
+
+<span class="c1">#---- Let&#39;s assign arrays and --------------------</span>
+<span class="c1">#     read the data from the file line-by-line into the variables:</span>
+<span class="c1">#     Floats are read from a line and appended to the arrays.</span>
+<span class="c1">#     The data file is opened for reading only.</span>
+
+<span class="n">x</span><span class="p">,</span> <span class="n">y_1</span><span class="p">,</span> <span class="n">y_2</span> <span class="o">=</span>   <span class="p">[],</span> <span class="p">[],</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">open</span><span class="p">(</span><span class="n">data_1</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">):</span>
+  <span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
+  <span class="n">x</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+  <span class="n">y_1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+  <span class="n">y_2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">values</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1">#---- Let&#39;s create a pandas dataframe from the data</span>
+<span class="c1">#     Note really necessary, but demonstrates pandas</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">&quot;time in ns&quot;</span>    <span class="p">:</span> <span class="n">x</span><span class="p">,</span> 
+    <span class="s2">&quot;measurement 1&quot;</span> <span class="p">:</span> <span class="n">y_1</span><span class="p">,</span> 
+    <span class="s2">&quot;measurement 2&quot;</span> <span class="p">:</span> <span class="n">y_2</span>
+<span class="p">})</span>
+
+<span class="c1">#---- To write the data as a csv file with the column headers</span>
+<span class="c1">#     give a name for the out file and uncomment:</span>
+
+<span class="c1">#df.to_csv(outfile, index=False)</span>
+
+<span class="c1">#---- This is one reason why dataframes are so handy. Let&#39;s print it on screen, </span>
+<span class="c1">#     easy to see variables and get statistics:</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Dataframe:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+
+<span class="c1">#---- Compute the averages of the two data columns using numpy and print them on screen:</span>
+
+<span class="n">y_1_mean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;measurement 1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">y_2_mean</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;measurement 2&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_1_mean</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">y_2_mean</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">aa</span><span class="o">=</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;measurement 1&#39;</span><span class="p">,</span><span class="s1">&#39;measurement 2&#39;</span><span class="p">]]</span>
+
+<span class="c1">#--- print some more statistics</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">aa</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">describe</span><span class="p">())</span>
+
+<span class="c1">#---- Create a simple plot of the data in one figure</span>
+<span class="c1">#     A pretty plot is created below after this one.</span>
+<span class="c1">#     Note: ax provides a handle to share the axis</span>
+
+
+<span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time in ns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;measurement 1&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data column 1&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time in ns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;measurement 2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;tab:orange&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data column 2&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time in ns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;measurement 1&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time in ns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;measurement 2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;line&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;measurement data&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">)</span>
+
+<span class="c1">#---- Plot lines for the average values</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y_1_mean</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y_2_mean</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+<span class="c1">#---- Plot the average values in the figure.</span>
+<span class="c1">#     Note: Since LaTeX is enabled, the underscore character needs to be escaped using backslash</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;Average y\_1: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">y_1_mean</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.35</span><span class="p">,</span> <span class="s1">&#39;Average y\_2: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">y_2_mean</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>My home directory is: /home/mkarttu
+
+Dataframe:
+
+   time in ns  measurement 1  measurement 2
+0         1.0           1.00           2.00
+1         2.0           1.10           1.90
+2         3.0           0.90           1.95
+3         4.0           1.20           2.10
+4         5.0           1.02           2.05
+
+
+1.044
+2.0
+
+
+       measurement 1  measurement 2
+count       5.000000       5.000000
+mean        1.044000       2.000000
+std         0.112606       0.079057
+min         0.900000       1.900000
+25%         1.000000       1.950000
+50%         1.020000       2.000000
+75%         1.100000       2.050000
+max         1.200000       2.100000
+</pre></div>
+</div>
+<img alt="../../_images/python-intro_92_1.png" src="../../_images/python-intro_92_1.png" />
+</div>
+</div>
+<p>…and of course we can plot this using the xkcd style by reusing the xkcd cell from above:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rc</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">,</span> <span class="n">usetex</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="k">with</span> <span class="n">plt</span><span class="o">.</span><span class="n">xkcd</span><span class="p">(</span><span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">length</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">randomness</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span> 
+    <span class="n">ax</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time in ns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;measurement 1&#39;</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data column 1&#39;</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s1">&#39;time in ns&#39;</span><span class="p">,</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;measurement 2&#39;</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;scatter&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Data column 2&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;measurement data&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center right&#39;</span><span class="p">)</span>
+
+<span class="c1">#---- Plot lines for the average values &amp; also write the avg values in the figure</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y_1_mean</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;:&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">y_2_mean</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
+
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s1">&#39;Average y_1: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">y_1_mean</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.35</span><span class="p">,</span> <span class="s1">&#39;Average y_2: &#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">around</span><span class="p">(</span><span class="n">y_2_mean</span><span class="p">,</span><span class="n">decimals</span><span class="o">=</span><span class="mi">1</span><span class="p">)),</span><span class="n">rotation</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/python-intro_94_0.png" src="../../_images/python-intro_94_0.png" />
+</div>
+</div>
+</div>
+<div class="section" id="a-very-brief-intro-to-loops-and-conditionals">
+<h3><span class="section-number">3.5.3. </span>A very brief intro to loops and conditionals<a class="headerlink" href="#a-very-brief-intro-to-loops-and-conditionals" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="for-loop">
+<h4><span class="section-number">3.5.3.1. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.python.org/moin/ForLoop">For loops in python</a></p></li>
+</ul>
+<p>We already saw an example of this. But here is the<code class="docutils literal notranslate"><span class="pre">for</span></code> loop in brief. Note intendation. It is critical.</p>
+<ol class="simple">
+<li><p>In example 1, we woop over a range of values, pring out, append values to a list, convert list to a <em>numpy</em> array. Why the last? If/when one needs to perform numerical calculations numpy has lots of optimized routines. As an example, perform an element-wise numpy operation. Why not use lists? Lists are much slower but they are convenient for reading in data and some other stuff.</p></li>
+<li><p>In example 2, the loop goes over the characters of a string. This is closely related to what was done above when we read lines using a <em>for loop</em>.</p></li>
+</ol>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#-------------------------------</span>
+<span class="c1"># Example 1. </span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>                                             <span class="c1"># We already used the variable a above so let&#39;s initialize it.</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[]</span>                                            <span class="c1"># initalize list b and check that it is empty.</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>    
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span><span class="mi">17</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span><span class="o">+</span><span class="n">i</span>
+    <span class="n">b</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>                                   <span class="c1"># Append values to the list</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The value of a is&#39;</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="s1">&#39;index:&#39;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+
+<span class="n">b_new</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>                               <span class="c1"># Convert b to a numpy array. </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">))</span>                                 <span class="c1"># Let&#39;s check the original and converted</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">b_new</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">b_new</span><span class="p">))</span>    
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">b_new</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[]
+The value of a is 11 index: 11
+The value of a is 23 index: 12
+The value of a is 36 index: 13
+The value of a is 50 index: 14
+The value of a is 65 index: 15
+The value of a is 81 index: 16
+[11, 12, 13, 14, 15, 16] &lt;class &#39;list&#39;&gt;
+[11 12 13 14 15 16] &lt;class &#39;numpy.ndarray&#39;&gt;
+[3.31662479 3.46410162 3.60555128 3.74165739 3.87298335 4.        ]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#-------------------------------------</span>
+<span class="c1"># Example 2.</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="s2">&quot;Ferme les yeux est imagine-toi par Soprano et Blacko.&quot;</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">)</span>  <span class="c1"># the part end=&#39;&#39; prints without changing line. Comment it out and see.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ferme les yeux est imagine-toi par Soprano et Blacko.
+</pre></div>
+</div>
+</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Music: Ferme les yeux et imagine toi, Soprano ft. Blacko<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/1PhrvI6ecRs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></div>
+<div class="section" id="while-loops-and-breaking-stopping-a-loop">
+<h4><span class="section-number">3.5.3.2. </span><code class="docutils literal notranslate"><span class="pre">while</span></code> loops and breaking/stopping a loop<a class="headerlink" href="#while-loops-and-breaking-stopping-a-loop" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p><a class="reference external" href="https://wiki.python.org/moin/WhileLoop">While loops in python</a>
+The <code class="docutils literal notranslate"><span class="pre">while</span></code> loops is used for executing a loop <em>while</em> some (logical) condition is true. Here is also the simples <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p></li>
+</ul>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#----------------------------------------------</span>
+<span class="c1"># Example. A simple while loop and a break statement</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">max</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">4</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Need a break?&#39;</span><span class="p">)</span>
+        <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="if-elif-else-statement">
+<h4><span class="section-number">3.5.3.3. </span><code class="docutils literal notranslate"><span class="pre">if</span></code> - <code class="docutils literal notranslate"><span class="pre">elif</span></code> - <code class="docutils literal notranslate"><span class="pre">else</span></code> statement<a class="headerlink" href="#if-elif-else-statement" title="Permalink to this headline">¶</a></h4>
+<p>This is used to test a condition. Note that it is critical to have proper indentation.</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#---------------------------------------</span>
+<span class="c1"># Example. </span>
+<span class="c1">#</span>
+<span class="c1">#   Let&#39;s generate random integers between 0 and 100. The argument size gives length of the array (vary it and re-run)</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span>  
+    <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">6</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Condition 1:&#39;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">30</span> <span class="ow">and</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">40</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Condition 2:&#39;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Condition 3:&#39;</span><span class="p">,</span><span class="n">j</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+    <span class="n">j</span> <span class="o">=</span> <span class="n">j</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Condition 2: 0 39
+Condition 3: 1 58
+</pre></div>
+</div>
+</div>
+</div>
+<!--
+### Using functions
+--></div>
+</div>
+</div>
+<div class="section" id="what-was-not-covered">
+<h2><span class="section-number">3.6. </span>What was not covered<a class="headerlink" href="#what-was-not-covered" title="Permalink to this headline">¶</a></h2>
+<p>The above covers the basics and provides a starting point for being able to produce and analyze data. The main thing that was not covered is object oriented programming. For those who are interested, here is some further reading:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/python3-object-oriented-programming/">Object-Oriented Programming (OOP) in Python 3</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="linux-basic-commands-2.html" title="previous page"><span class="section-number">2. </span>Linux: Some basic &amp; useful commands</a>
+    <a class='right-next' id="next-link" href="../week01/hpc-intro.html" title="next page"><span class="section-number">4. </span>Background on computers, computing and High Performance Computing</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

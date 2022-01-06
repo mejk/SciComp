@@ -1,0 +1,910 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Molecular visualization and VMD &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week03/vmd.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week03/vmd.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Molecular visualization and VMD" />
+<meta property="og:description" content="Molecular visualization and VMD  VMD  1UBQ  &lt;!-- **This file:**  - Provides instructions for installing VMD and links to additional plugins. --&gt;   Learning goal" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week03/vmd.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-visualize">
+   Why visualize?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#physical-models-the-model-of-watson-and-crick">
+     Physical models: The model of Watson and Crick
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#molecular-graphics">
+     Molecular graphics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#experiments-and-visualization">
+     Experiments and visualization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-reading">
+     More reading
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#videos-discussing-visualization">
+     Videos discussing visualization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#visualization-and-the-pdb-database">
+     Visualization and the PDB database
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#molecular-visualization-software-vmd">
+   Molecular visualization software: VMD
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#list-of-some-popular-visualization-software">
+     List of some popular visualization software
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-vmd">
+   What is VMD
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operating-systems">
+     Operating systems
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#vmd-basic-operation">
+   VMD: Basic operation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example-visualizing-human-islet-amyloid-polypeptide">
+     Example: Visualizing human islet amyloid polypeptide
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#vmd-s-user-interface">
+     VMD’s user interface
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#load-a-molecule">
+       Load a molecule
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#representations-and-rendering">
+       Representations and rendering
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#image-rendering-practicals">
+       Image rendering practicals
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#rendering-with-tachyon">
+       Rendering with Tachyon
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-selections">
+     More on selections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#properties-of-a-selected-atom">
+     Properties of a selected atom
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#data-analysis">
+     Data analysis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#scripting-and-extensions">
+     Scripting and extensions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-features">
+     More features
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pdb-database-downloads">
+     PDB database downloads
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#movies-with-vmd">
+     Movies with VMD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#customizing-vmd">
+     Customizing VMD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-tcl-tk-command-shell">
+     The Tcl/Tk  command shell
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="molecular-visualization-and-vmd">
+<h1>Molecular visualization and VMD<a class="headerlink" href="#molecular-visualization-and-vmd" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="bg-primary reference internal image-reference" href="../../_images/vmd_logo.gif"><img alt="VMD" class="bg-primary align-right" src="../../_images/vmd_logo.gif" style="width: 250px;" /></a>
+<a class="bg-primary reference internal image-reference" href="../../_images/1ubq-cropped.jpg"><img alt="1UBQ" class="bg-primary align-right" src="../../_images/1ubq-cropped.jpg" style="width: 250px;" /></a>
+<!--
+**This file:** 
+- Provides instructions for installing VMD and links to additional plugins.
+-->
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To learn the importance and utility of molecular visualization</p></li>
+<li><p class="card-text">To learn the basic use of VMD</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> visualization, physical model, molecular graphics, VMD, VMD Plugins, atomistic simulations</p>
+<p class="card-text"><strong>Associated material:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference internal" href="../../extras/vmd-install.html"><span class="doc std std-doc">VMD installation</span></a></p></li>
+<li><p class="card-text"><a class="reference internal" href="../../extras/vmd-plugins.html"><span class="doc std std-doc">VMD plugins</span></a></p></li>
+</ul>
+<p class="card-text"><strong>More on VMD:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD Home Page</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Training/Tutorials/vmd/tutorial-html/index.html">VMD tutorial</a> from the VMD web site</p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html">VMD documentation and tutorials</a> from the VMD web site</p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/plugins/">VMD plugin library and documentation for extensions</a></p></li>
+<li><p class="card-text"><a class="reference external" href="http://www.ks.uiuc.edu/Research/vmd/doxygen/">VMD programmer’s guide</a></p></li>
+</ul>
+<!--
+**Alternatives to VMD:** Pymol
+-->
+<p class="card-text"><strong>Note:</strong> This visualization was done with <a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD</a> using its internal Tachyon rendering with high resolution settings. The molecule is the structure <a class="reference external" href="https://www.rcsb.org/structure/1UBQ">1UBQ</a> (ubiquitin) from the PDB database. The visualization combines several different representations.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="why-visualize">
+<h2>Why visualize?<a class="headerlink" href="#why-visualize" title="Permalink to this headline">¶</a></h2>
+<p>Visualization is a key part of any data analysis, computational or experimental. It can quickly reveal important features or problems. Using simulation data to produce movies is particular powerful as it allows one to focus the time evolution of  particular part(s) of any molecule(s) or molecular property. One can also easily overlay properties/structures for comparison.</p>
+<div class="section" id="physical-models-the-model-of-watson-and-crick">
+<h3>Physical models: The model of Watson and Crick<a class="headerlink" href="#physical-models-the-model-of-watson-and-crick" title="Permalink to this headline">¶</a></h3>
+<p>The <em>physical</em> molecular model of Watson and Crick for the double stranded DNA is probably the most famous such a model. Although a physical model, it is a visualization based on (in this case experimental) data. Molecular graphics, that is, molecular visualization using computers, can of course produce different representations based on both experimental and computational data. Even in the case of experimental data, a <em>molecular model</em> is required to create a representation.</p>
+<div class="figure align-left" id="id4">
+<a class="reference internal image-reference" href="../../_images/DNA_Model_Crick-Watson.jpg"><img alt="Crick-Watson" src="../../_images/DNA_Model_Crick-Watson.jpg" style="width: 250px;" /></a>
+<p class="caption"><span class="caption-text"><em>The physical molecular model (National Science Museum, London, UK) that <a class="reference external" href="https://en.wikipedia.org/wiki/Francis_Crick">Crick</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/James_Watson">Watson</a> built for DNA in 1953. The individual nucleobases were cut out of aluminum. In terms of molecular models, they used rods or licorice for bonds and sheets for nucleobases.   The model itself was based on experimental data of <a class="reference external" href="https://en.wikipedia.org/wiki/Rosalind_Franklin">Rosalind Franklin</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Maurice_Wilkins">Maurice Wilkins</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Alec_Stokes">Alexander Stokes</a>. The model allowed Crick and Watson to model how the helical structure and hydrogen bonding emerges based on the data. The DNA is a <a class="reference external" href="https://en.wikipedia.org/wiki/Nucleic_acid_double_helix">double helix</a> and around the same time (1953), <a class="reference external" href="https://en.wikipedia.org/wiki/Linus_Pauling">Linus Pauling</a> proposed a <a class="reference external" href="https://en.wikipedia.org/wiki/Obsolete_models_of_DNA_structure">triple-helical model</a> for DNA.  Figure: Wikipedia, public domain.</em></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="molecular-graphics">
+<h3>Molecular graphics<a class="headerlink" href="#molecular-graphics" title="Permalink to this headline">¶</a></h3>
+<p>The term <a class="reference external" href="https://en.wikipedia.org/wiki/Molecular_graphics"><em>molecular graphics</em></a> is most commonly used to refer to computer-based visualization of molecules although the term can be interpreted more broadly. It dates back to an MIT project on interactive molecular structures in the 1960’s and in particular to <a class="reference external" href="https://en.wikipedia.org/wiki/Cyrus_Levinthal">Cyrus Levinthal</a> who applied computer graphics to show protein structures. Levinthal is also known for <a class="reference external" href="https://en.wikipedia.org/wiki/Levinthal%27s_paradox">Levinthal’s paradox</a>. Interestingly, Levinthal got his PhD in physics but later moved on to Molecular Biology.</p>
+<p>The difficulty with molecular graphics is that one has two dimensional representations of 3D objects (molecules). There are very interesting developments in using virtual reality applications for molecular modeling, see for example <a class="bibtex reference internal" href="#cassidy2020" id="id1">[1]</a>.</p>
+<p>One of the strengths of visualization software is to apply different representations at the same time. That allows one to visualize different aspects and their relations.</p>
+</div>
+<div class="section" id="experiments-and-visualization">
+<h3>Experiments and visualization<a class="headerlink" href="#experiments-and-visualization" title="Permalink to this headline">¶</a></h3>
+<p>Visualization is equally important for experimental data, in particular for data from <a class="reference external" href="https://en.wikipedia.org/wiki/X-ray_scattering_techniques">x-ray scattering</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance">NMR</a> (Nuclear Magnetic Resonance; <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1991/summary/">Nobel Prize in Chemistry 1991</a> to <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1991/ernst/biographical/">Richard Ernst</a>) and <a class="reference external" href="https://en.wikipedia.org/wiki/Cryogenic_electron_microscopy">CryoEM</a> (Cryogenic Electron Microscopy; <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2017/summary/">Nobel Prize in Chemistry in 2017</a> to <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2017/dubochet/biographical/">Jacques Dubochet</a>, <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2017/frank/biographical/">Joachim Frank</a> and <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2017/henderson/biographical/">Richard Henderson</a>). Most of the  <a class="reference external" href="https://www.rcsb.org/">RCSB Protein Databank (PDB)</a> database entries are results of using these methods.</p>
+</div>
+<div class="section" id="more-reading">
+<h3>More reading<a class="headerlink" href="#more-reading" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Molecular_graphics">Molecular graphics</a> from Wikipedia</p></li>
+<li><p><a class="reference external" href="http://www.umass.edu/microbio/rasmol/history.htm">History of Visualization of Biological Macromolecules</a> by Eric Martz and Eric Francoeur</p></li>
+<li><p><a class="reference external" href="http://www.umass.edu/molvis/francoeur/index.html">History of Visualization of Biological Macromolecules: On-line Museum</a></p></li>
+</ul>
+</div>
+<div class="section" id="videos-discussing-visualization">
+<h3>Videos discussing visualization<a class="headerlink" href="#videos-discussing-visualization" title="Permalink to this headline">¶</a></h3>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Movie: Molecular Visualization: Principles and Practice by Stuart Jantzen</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/G5FxPdBMUHE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Molecular visualization with VMD: Westgrid / Compute Canada workshop</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_skmrS6X4Ys" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Virtual Reality Molecular Dynamics Visualization</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/zzrBcHMWL3U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Cecilia Clementi: Learning molecular models from simulation and experimental data</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">This is a full research talk by <a class="reference external" href="https://en.wikipedia.org/wiki/Cecilia_Clementi">Prof. Cecilia Clementi</a> in “Machine Learning for Physics and the Physics of Learning.”</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WVSy8bdD4Gg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Scalable Molecular Visualization and Analysis Tools with VMD by John Stone, UIUC</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><a class="reference external" href="http://www.ks.uiuc.edu/~johns/">Dr. John Stone</a> is the lead developer of VMD.</p>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/EZwzzr5XS8Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details></div>
+<div class="section" id="visualization-and-the-pdb-database">
+<h3>Visualization and the PDB database<a class="headerlink" href="#visualization-and-the-pdb-database" title="Permalink to this headline">¶</a></h3>
+<!--
+[History of Visualization of Biological Macromolecules](http://www.umass.edu/microbio/rasmol/history.htm)
+-->
+<p>The <a class="reference external" href="https://www.rcsb.org/">PDB database</a> (Protein Data Bank)) uses visualization very effectively for  the deposited structures. Each molecule has 3D representations that can be rotated and changed on-line. In addition, PDB has the <em>Molecule of the Month</em>. For example, see the entry for <a class="reference external" href="http://pdb101.rcsb.org/motm/246"><em>Sars-CoV-2 Spike protein</em></a> in <a class="reference external" href="http://pdb101.rcsb.org/motm"><em>Molecule of the Month</em></a>. The static images use different representations and colors to express chosen features and at the bottom of the page it is possible to explore the structure and change representations on-line (the JSmol tab). This shows how much information visualization can convey more or less immediately.</p>
+<p>See for example:</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Example PDB web page with visualization</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="800" height="650" src="https://www.rcsb.org/3d-view/ngl/6wgs"></iframe>
+</div>
+</details></div>
+</div>
+<div class="section" id="molecular-visualization-software-vmd">
+<h2>Molecular visualization software: VMD<a class="headerlink" href="#molecular-visualization-software-vmd" title="Permalink to this headline">¶</a></h2>
+<p>Here, we use VMD for visualization<a class="bibtex reference internal" href="#humphrey1996a" id="id2">[4]</a>. It is one of the world’s most popular visualization and analysis software for molecular systems.</p>
+<div class="section" id="list-of-some-popular-visualization-software">
+<h3>List of some popular visualization software<a class="headerlink" href="#list-of-some-popular-visualization-software" title="Permalink to this headline">¶</a></h3>
+<p>Before start with VMD, let’s list some alternatives. There are, of course, lots of excellent software packages for visualization. Below is a list of some of the popular ones and choice often depends on the purpose, that is, is the aim to visualize (and analyze) data from experiments or simulations and produce figures for publications and reports or perhaps have live demonstrations on web page or even interactive web pages. For example, VMD and PyMol are great choice for the former but not suitable for latter purpose. For web based visualization one could use software such as Jmol/JSmol or NGL, but they are not as well suited for complex visualization and analysis as VMD or PyMol.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD - Visual Molecular Dynamics</a></p>
+<ul>
+<li><p>Linux, MacOS and Windows</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://pymol.org">PyMol</a></p></li>
+<li><p><a class="reference external" href="http://jmol.sourceforge.net/">Jmol</a></p></li>
+<li><p><a class="reference external" href="https://avogadro.cc/">Avogadro</a></p>
+<ul>
+<li><p>Avogadro’s is somewhat different from VMD and PyMol in that, besides visualization, it is primarily a molecule editor, that is, it can be used to construct molecules. Avogadro is not the software of choice for generating movies, but it has unique capabilities in molecular design. It has also extension for geometry optimization, molecular orbitals, <a class="reference external" href="https://en.wikipedia.org/wiki/Atoms_in_molecules">QTAIM</a> (Quantum Theory of Atoms in Molecules) calculations, calculation of spectra and other features.</p></li>
+<li><p>Open source</p></li>
+<li><p>GUI driven and has capability for plugins</p></li>
+<li><p>Linux, MacOS and Windows</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_molecular_graphics_systems">List of molecular graphics systems</a> from Wikipedia</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Molecular_design_software">List of molecular design software</a> from Wikipedia.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="what-is-vmd">
+<h2>What is VMD<a class="headerlink" href="#what-is-vmd" title="Permalink to this headline">¶</a></h2>
+<p>VMD - Visual Molecular Dynamics - is a general purpose  software for 3D molecular visualization and data analysis of molecular systems. Together the <a class="reference external" href="https://www.ks.uiuc.edu/Research/namd/">NAMD</a> simulation software, it can also be used to run interactive MD simulations and for setting up NAMD simulations. Both VMD and NAMD are developed in Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign<a class="bibtex reference internal" href="#humphrey1996a" id="id3">[4]</a>.</p>
+<p>VMD  was originally designed for visualization and analysis of biological systems, but it is a general purpose software that is not limited to any particular system.  It can read essentially all common molecular file formats and data produced by most common software including PDB, XYZ, NAMD, Gromacs, Amber, CPMD, and it can be used to visualize and analyze data from classical, coarse-grained and quantum simulations. VMD includes a lot of various analysis tools and it  has a plugin system for developers. VMD is also able to use CUDA acceleration if an NVIDIA GPU is present.</p>
+<div class="section" id="operating-systems">
+<h3>Operating systems<a class="headerlink" href="#operating-systems" title="Permalink to this headline">¶</a></h3>
+<p>VMD is available for Linux, Windows and OSX. VMD has both a GUI and a command line interface.</p>
+</div>
+</div>
+<div class="section" id="vmd-basic-operation">
+<h2>VMD: Basic operation<a class="headerlink" href="#vmd-basic-operation" title="Permalink to this headline">¶</a></h2>
+<p>Here, only the basic operations of VMD are reviewed. It is impossible to provide all its details as VMD has extremely feature set for both visualization and analysis. The focus here is on visualization only. The aim of the examples below is to show some of VMD’s capabilities and the demonstrate some of the features of its user interface.</p>
+<div class="section" id="example-visualizing-human-islet-amyloid-polypeptide">
+<h3>Example: Visualizing human islet amyloid polypeptide<a class="headerlink" href="#example-visualizing-human-islet-amyloid-polypeptide" title="Permalink to this headline">¶</a></h3>
+<p>Let’s start with a simple example. For that,  we download a molecule from the <a class="reference external" href="https://www.rcsb.org">PDB database</a>. In this case, the PDB ID <a class="reference external" href="https://www.rcsb.org/structure/5MGQ">5MGQ</a> was selected. The molecule 5MGQ is an oxidized and amidated human islet amyloid polypeptide (IAPP) and it is an important molecule in diabetes II.</p>
+<p>The structure in that file contains 20 frames and we will use the last frame. The term <em>frame</em> means a snapshot of the molecule. Frames can come, for example, from repeated experiments or from different times steps of a simulation. In the case of VMD, the number of frames contained in a file is indicated in the VMD Main window as will be shown in the next section where the VMD user interface is demonstrated.</p>
+<p>The figure below shows five different representations of the molecule 5MGQ created by VMD. The figures show the same molecule form the exact same angle; nothing else has been changed except the representation, that is, coloring method, drawing method and material. What exactly these terms mean will be come apparent shortly, at this time the important thing is to see that one can convey different information by different representations. The names of the drawing methods (VMD uses these names as do many other software) are provided under each of the images.</p>
+<p>It is also important to notice that one can very easily (and we will see how this works) overlay representations. This is illustrated in the third image from the left where two representations, <em>new cartoon</em> and <em>licorice</em>, have been overlayed. The number of ways of selecting atoms and molecules and how they are represented is extremely versatile. We will see how that works in the second example in thee next section. As it is clear from the figure, VMD can produce high-quality publication level graphics. It can also be used to render very high quality molecular movies as will be discussed later.</p>
+<div class="figure align-left" id="id5">
+<a class="reference internal image-reference" href="../../_images/vmd-rendering-example.svg"><img alt="../../_images/vmd-rendering-example.svg" src="../../_images/vmd-rendering-example.svg" width="700px" /></a>
+<p class="caption"><span class="caption-text"><em>Different representations of the PDB ID <a class="reference external" href="https://www.rcsb.org/structure/5MGQ">5MGQ</a> (final structure out of 20 frames)),  oxidized and amidated human islet amyloid polypeptide (IAPP). This peptide is involved in the human diabetes II. Different representations are useful different purposes. From left to right: Lines with the residues show in different color, New Cartoon with coloring using secondary structure, New Cartoon and Licorice representations superposed, van der Waals, and Bonds. These and many others are available in VMD in <code class="docutils literal notranslate"><span class="pre">Graphics</span> <span class="pre">-&gt;</span>&#160; <span class="pre">Representations</span></code>. Rendering using <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code>. Click the image to see it in high resolution.</em></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="vmd-s-user-interface">
+<h3>VMD’s user interface<a class="headerlink" href="#vmd-s-user-interface" title="Permalink to this headline">¶</a></h3>
+<p>The user interface of VMD does not depend on the operating system. Starting VMD opens three windows: The VMD Main window, the Display window and VMD console. The best way to get familiar with VMD is to use it.</p>
+<p>When VMD is started, the screen looks like below (with the exception that your Display window will have black background as I have changed mine to white in my default settings). In the examples below, the file <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code> that comes with Gromacs is used. If/when you have Gromacs installed, the file is located under the Gromacs installation directory in <code class="docutils literal notranslate"><span class="pre">share/gromacs/top</span></code>. As the name indicates, the file is in Gromacs’ <code class="docutils literal notranslate"><span class="pre">.gro</span></code> format and VMD knows how to read the format (as it did with the above PDB case). The file is a small box (size of 1.86206 nm as shown on the last line of the file) of 216 SPC water molecules. I strongly encourage you to download the above PDB file (<a class="reference external" href="https://www.rcsb.org/structure/5MGQ">5MGQ</a>), or any other PDB file, as well as try <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code> once Gromacs has been installed.</p>
+<p>Below are an example of a <code class="docutils literal notranslate"><span class="pre">.gro</span></code> file and a picture of the VMD opening screens.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Example of the .gro format</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The output below has been extracted (5 water molecules out of 216 were selected) from the file <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code> that comes with Gromacs. The <code class="docutils literal notranslate"><span class="pre">.gro</span></code> format but during a simulation binary formats are used since they take much less space to store. If you don’t have Gromacs installed yet and hence no access to <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code>, you can copy and save the example below and visualize it in VMD (example is shown below). Notice that to save the date, you must use an ASCII text editor such as <code class="docutils literal notranslate"><span class="pre">vi</span></code> or comparable.</p>
+<ul class="simple">
+<li><p class="card-text">The 1st line has comments. Arbitrary information can be included and this line is ignored by analysis software. In this case is says: 5 water molecules, SPC model, temperature of 300K and box size of 1.86206.</p></li>
+<li><p class="card-text">The 2nd line: The total number of atoms. This information is required by the <code class="docutils literal notranslate"><span class="pre">.gro</span></code> format.</p></li>
+<li><p class="card-text">The lines starting with number and SOL: 1SOL is the 1st solvent molecule. 2SOL: second solvent molecule and so on. Each solvent/water molecule consist of three atoms: OW, HW1, HW2.</p>
+<ul>
+<li><p class="card-text">OW: Water oxygen</p></li>
+<li><p class="card-text">HW1 and HW2: Water hydrogens 1 and 2.</p></li>
+</ul>
+</li>
+<li><p class="card-text">The 3rd column: Numbering of individual atoms. Each atom must have a unique identifier.</p></li>
+<li><p class="card-text">Columns 4-6: x, y and z coordinates in nanometers.</p></li>
+<li><p class="card-text">The last line: the size of the simulation box in nanometers.</p></li>
+</ul>
+<p class="card-text">For example, VMD understand this format and can read and visualize the data. Notice also that formatting is strict (column position does matter).</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="n">H2O</span><span class="p">,</span><span class="n">SPC</span><span class="o">-</span><span class="n">MODEL</span><span class="p">,</span><span class="mi">300</span><span class="n">K</span><span class="p">,</span><span class="n">BOX</span><span class="p">(</span><span class="n">M</span><span class="p">)</span><span class="o">=</span><span class="mf">1.86206</span>
+  <span class="mi">15</span>
+    <span class="mi">1</span><span class="n">SOL</span>     <span class="n">OW</span>    <span class="mi">1</span>    <span class="o">.</span><span class="mi">230</span>    <span class="o">.</span><span class="mi">628</span>    <span class="o">.</span><span class="mi">113</span>
+    <span class="mi">1</span><span class="n">SOL</span>    <span class="n">HW1</span>    <span class="mi">2</span>    <span class="o">.</span><span class="mi">137</span>    <span class="o">.</span><span class="mi">626</span>    <span class="o">.</span><span class="mi">150</span>
+    <span class="mi">1</span><span class="n">SOL</span>    <span class="n">HW2</span>    <span class="mi">3</span>    <span class="o">.</span><span class="mi">231</span>    <span class="o">.</span><span class="mi">589</span>    <span class="o">.</span><span class="mi">021</span>
+    <span class="mi">2</span><span class="n">SOL</span>     <span class="n">OW</span>    <span class="mi">4</span>    <span class="o">.</span><span class="mi">225</span>    <span class="o">.</span><span class="mi">275</span>   <span class="o">-.</span><span class="mi">866</span>
+    <span class="mi">2</span><span class="n">SOL</span>    <span class="n">HW1</span>    <span class="mi">5</span>    <span class="o">.</span><span class="mi">260</span>    <span class="o">.</span><span class="mi">258</span>   <span class="o">-.</span><span class="mi">774</span>
+    <span class="mi">2</span><span class="n">SOL</span>    <span class="n">HW2</span>    <span class="mi">6</span>    <span class="o">.</span><span class="mi">137</span>    <span class="o">.</span><span class="mi">230</span>   <span class="o">-.</span><span class="mi">878</span>
+    <span class="mi">3</span><span class="n">SOL</span>     <span class="n">OW</span>    <span class="mi">7</span>    <span class="o">.</span><span class="mi">019</span>    <span class="o">.</span><span class="mi">368</span>    <span class="o">.</span><span class="mi">647</span>
+    <span class="mi">3</span><span class="n">SOL</span>    <span class="n">HW1</span>    <span class="mi">8</span>   <span class="o">-.</span><span class="mi">063</span>    <span class="o">.</span><span class="mi">411</span>    <span class="o">.</span><span class="mi">686</span>
+    <span class="mi">3</span><span class="n">SOL</span>    <span class="n">HW2</span>    <span class="mi">9</span>   <span class="o">-.</span><span class="mi">009</span>    <span class="o">.</span><span class="mi">295</span>    <span class="o">.</span><span class="mi">584</span>
+    <span class="mi">4</span><span class="n">SOL</span>     <span class="n">OW</span>   <span class="mi">10</span>    <span class="o">.</span><span class="mi">569</span>   <span class="o">-.</span><span class="mi">587</span>   <span class="o">-.</span><span class="mi">697</span>
+    <span class="mi">4</span><span class="n">SOL</span>    <span class="n">HW1</span>   <span class="mi">11</span>    <span class="o">.</span><span class="mi">476</span>   <span class="o">-.</span><span class="mi">594</span>   <span class="o">-.</span><span class="mi">734</span>
+    <span class="mi">4</span><span class="n">SOL</span>    <span class="n">HW2</span>   <span class="mi">12</span>    <span class="o">.</span><span class="mi">580</span>   <span class="o">-.</span><span class="mi">498</span>   <span class="o">-.</span><span class="mi">653</span>
+    <span class="mi">5</span><span class="n">SOL</span>     <span class="n">OW</span>   <span class="mi">13</span>   <span class="o">-.</span><span class="mi">307</span>   <span class="o">-.</span><span class="mi">351</span>    <span class="o">.</span><span class="mi">703</span>
+    <span class="mi">5</span><span class="n">SOL</span>    <span class="n">HW1</span>   <span class="mi">14</span>   <span class="o">-.</span><span class="mi">364</span>   <span class="o">-.</span><span class="mi">367</span>    <span class="o">.</span><span class="mi">784</span>
+    <span class="mi">5</span><span class="n">SOL</span>    <span class="n">HW2</span>   <span class="mi">15</span>   <span class="o">-.</span><span class="mi">366</span>   <span class="o">-.</span><span class="mi">341</span>    <span class="o">.</span><span class="mi">623</span>
+     <span class="mf">1.86206</span>   <span class="mf">1.86206</span>   <span class="mf">1.86206</span>
+</pre></div>
+</div>
+<p class="card-text">The output, when visualized using VMD, looks like this:</p>
+<div class="figure align-left">
+<a class="bg-light reference internal image-reference" href="../../_images/5spc-waters.png"><img alt="5spc" class="bg-light" src="../../_images/5spc-waters.png" style="width: 350px;" /></a>
+</div>
+</div>
+</details><div class="figure align-left" id="id6">
+<a class="reference internal image-reference" href="../../_images/vmd-start-annot.svg"><img alt="../../_images/vmd-start-annot.svg" src="../../_images/vmd-start-annot.svg" width="850px" /></a>
+<p class="caption"><span class="caption-text"><em>Upon opening VMD, three windows are displayed. The option <code class="docutils literal notranslate"><span class="pre">Save</span> <span class="pre">Visualization</span> <span class="pre">State...</span></code> is very useful as it allows one to save the visualization project and read it with <em>Load Visualization State</em> when restarting. Another great feature is that saved state can be used cross-platform, that is, it doesn’t matter if it was saved on a Mac, it can be used on Windows or Linux as well (file path may need to adjusted, however). The console allows one to execute commands directly. The downside with the console is that one cannot use the arrow keys to move back and forth or recall previous commands. There is, however, a remedy: Under <code class="docutils literal notranslate"><span class="pre">Extensions</span></code> there is the option <code class="docutils literal notranslate"><span class="pre">Tk</span> <span class="pre">Console</span></code> that has all those features.</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="load-a-molecule">
+<h4>Load a molecule<a class="headerlink" href="#load-a-molecule" title="Permalink to this headline">¶</a></h4>
+<p>As the next step, the file  <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code> was loaded (<code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">New</span> <span class="pre">Molecule</span></code>). The Display window (not shown here) first shows the molecules using <code class="docutils literal notranslate"><span class="pre">Line</span></code> representation; the default representation can be changed but lines are very quick to render so there is no need to change that setting.</p>
+<p>Let’s first focus on <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">Main</span> <span class="pre">window</span></code> and <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code>. The figure below shows some of the key feature including the molecule name, the number of frames (the file <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code> has only one frame), the number of atoms and so on.
+The window <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code> is opened through <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">Main</span> <span class="pre">-&gt;</span> <span class="pre">Graphics</span> <span class="pre">-&gt;</span> <span class="pre">Representations</span></code>. That windows shows the selected molecule; here we have only one molecules but it is possible to have more although the most typical situation is  to work with a single molecule. <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code>.</p>
+<p>Some of the other important features <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code> include the <code class="docutils literal notranslate"><span class="pre">Representations</span> <span class="pre">panel</span></code>. Here, it shows that the <code class="docutils literal notranslate"><span class="pre">Drawing</span> <span class="pre">Method</span></code> (red circle) or <code class="docutils literal notranslate"><span class="pre">Style</span></code> (in the  <code class="docutils literal notranslate"><span class="pre">Representations</span> <span class="pre">panel</span></code>) is <code class="docutils literal notranslate"><span class="pre">Lines</span></code>, <code class="docutils literal notranslate"><span class="pre">Coloring</span> <span class="pre">Method</span></code> or <code class="docutils literal notranslate"><span class="pre">Color</span></code> is <code class="docutils literal notranslate"><span class="pre">Name</span></code> and the all atoms have been selected. The buttons <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Rep</span></code> and <code class="docutils literal notranslate"><span class="pre">Delete</span> <span class="pre">Rep</span></code> allows creation deletion of representations. This is also how different representations can be overlayed: Simply by creating new representations. The <code class="docutils literal notranslate"><span class="pre">Material</span></code> selector has the material/texture for representation. In addition there are the tabs <code class="docutils literal notranslate"><span class="pre">Draw</span> <span class="pre">style</span></code> (the currently selected one) , <code class="docutils literal notranslate"><span class="pre">Selections</span></code> (it has the keywords and keys for selecting atoms and molecules by different criteria), <code class="docutils literal notranslate"><span class="pre">Trajectory</span></code> (when one has multiple frames especially for movies and analysis, this tab has update options for the frames)) and <code class="docutils literal notranslate"><span class="pre">Periodic</span></code> (allows selection of periodic images of the system).</p>
+<div class="figure align-left" id="id7">
+<a class="reference internal image-reference" href="../../_images/vmd-representations-annot.svg"><img alt="../../_images/vmd-representations-annot.svg" src="../../_images/vmd-representations-annot.svg" width="850px" /></a>
+<p class="caption"><span class="caption-text"><em>The <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">Main</span></code> window and <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code> (under <code class="docutils literal notranslate"><span class="pre">Graphics</span></code>). Some of key features are indicated. The <code class="docutils literal notranslate"><span class="pre">Drawing</span> <span class="pre">Method</span></code> selector has been opened to demonstrate the different methods for representing molecules. In the above figure showing 5MGQ, lines, new cartoon, licorice, van der Walls (VDW) and bonds were used. Coloring allows to emphasize, for example, atoms, groups or structures. In the 5MGQ, the second image from the left used <code class="docutils literal notranslate"><span class="pre">New</span> <span class="pre">Cartoon</span></code> as the <code class="docutils literal notranslate"><span class="pre">Drawing</span> <span class="pre">Method</span></code> and <code class="docutils literal notranslate"><span class="pre">Secondary</span> <span class="pre">Structure</span></code> as the <code class="docutils literal notranslate"><span class="pre">Coloring</span> <span class="pre">Method</span></code>. The <code class="docutils literal notranslate"><span class="pre">Selections</span></code> tab shows the different standard selections.</em></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="representations-and-rendering">
+<h4>Representations and rendering<a class="headerlink" href="#representations-and-rendering" title="Permalink to this headline">¶</a></h4>
+<p>Now that we have a better understanding of how to load a molecules/molecules and the interface, let’s take a more detailed look into representations and discuss rendering (=how save images on the disk). The figure below shows the <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">Main</span></code> window, <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code>, <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Render</span> <span class="pre">Controls</span></code> (accessible under <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">Main</span> <span class="pre">-&gt;</span> <span class="pre">File</span> <span class="pre">-&gt;</span> <span class="pre">Render</span></code>) and the system in the <code class="docutils literal notranslate"><span class="pre">Display</span></code> window.</p>
+<p>Here, we have <em>overlayed representations</em>. The different representations are listed in <code class="docutils literal notranslate"><span class="pre">Representations</span> <span class="pre">panel</span></code>. Two different arbitrary residues have been selected and they are represented using different styles and coloring methods. The rest of the molecules are show using <code class="docutils literal notranslate"><span class="pre">CPK</span></code> representation; the name <a class="reference external" href="https://en.wikipedia.org/wiki/Space-filling_model">CPK</a> comes from the creators of this model, Robert Corey, Linus Pauling and Walter Koltun.</p>
+<p>To save the figure, one has to <em>render</em> it. VMD has different methods for rendering. The most basic one is the one that is open in the <code class="docutils literal notranslate"><span class="pre">File</span> <span class="pre">Render</span> <span class="pre">Controls</span></code> window: The snapshot method. This method does exactly what the name suggests: It takes an exact snapshot of the Display window. There are no controls for resolution - it is determined by the window size. This method offers a quick way to create figures, but the quality is not good enough for publications.</p>
+<p><em>High-quality figures</em> require a different rendering method, such as <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code> that is available from the selector.</p>
+<p><strong>More on the topic:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/allversions/repimages/">Molecular Representations in VMD</a> from the VMD web site</p></li>
+</ul>
+<div class="figure align-left" id="id8">
+<a class="reference internal image-reference" href="../../_images/vmd-render-annot.svg"><img alt="../../_images/vmd-render-annot.svg" src="../../_images/vmd-render-annot.svg" width="850px" /></a>
+<p class="caption"><span class="caption-text"><em>Main, rendering, graphics and display window with some of the important issues indicated. In particular, pay attention to the <code class="docutils literal notranslate"><span class="pre">Selection</span> <span class="pre">panel</span></code> and how the selections are shown in the <code class="docutils literal notranslate"><span class="pre">Display</span></code> window. The axes have been turned off from <code class="docutils literal notranslate"><span class="pre">Display</span> <span class="pre">-&gt;</span> <span class="pre">Axes</span></code> and the background has been changed from black to white from <code class="docutils literal notranslate"><span class="pre">Graphics</span> <span class="pre">-&gt;</span> <span class="pre">Colors</span> <span class="pre">-&gt;</span> <span class="pre">Display</span> <span class="pre">-&gt;</span> <span class="pre">Background</span> <span class="pre">-&gt;</span> <span class="pre">Colors</span></code>.</em></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="image-rendering-practicals">
+<h4>Image rendering practicals<a class="headerlink" href="#image-rendering-practicals" title="Permalink to this headline">¶</a></h4>
+<p>VMD supports a large number of high-quality rendering methods including <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code> (comes with VMD) and <code class="docutils literal notranslate"><span class="pre">povray</span></code> (installation of PovRay is required for that).</p>
+<p>One important point with the different rendering methods is that they use <a class="reference external" href="https://en.wikipedia.org/wiki/Ray_tracing_(graphics)">ray tracing</a> and thus the basic rendering on screen may (and typically does) look different than the final high-resolution picture saved into a file. This simply means that one has to find the proper settings for a given system, simply by trying out the different options.  High resolution rendering may also take significant amount of time as the process is computationally intensive.</p>
+<p>Summary of the above and some additional practical points:</p>
+<ul class="simple">
+<li><p>The screen capture mode for rending gives <em>exactly</em> what is on the screen including the screen size. That is, the screen size determines the resolution. Thus, for high quality publication level images, other methods have to be used.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Graphics</span> <span class="pre">-&gt;</span> <span class="pre">Representations</span> <span class="pre">-&gt;</span> <span class="pre">Material</span></code>: The choice of material has a significant effect on rendering in the high quality rendering modes (=other than screen capture). Importantly, the ray tracing methods like Tachyon and PovRay produce significantly different output as compared to the screen display.</p></li>
+<li><p>Pay attention to the resolution for objects such as bonds and spheres when rendering. The settings are in <code class="docutils literal notranslate"><span class="pre">Graphics</span> <span class="pre">-&gt;</span> <span class="pre">Representations</span></code></p></li>
+<li><p>Lights can be adjusted under <code class="docutils literal notranslate"><span class="pre">Display</span> <span class="pre">-&gt;</span> <span class="pre">Lights</span></code>: There are 4 options</p></li>
+<li><p>For the high quality rendering options using ray tracing methods (such as Tachyon and PovRay), the options under <code class="docutils literal notranslate"><span class="pre">Display</span> <span class="pre">setting</span> <span class="pre">-&gt;</span> <span class="pre">Ray</span> <span class="pre">tracing</span> <span class="pre">options</span></code> should be adjusted as necessary.</p></li>
+<li><p>Under <code class="docutils literal notranslate"><span class="pre">Display</span></code>, there are several important options such as using <code class="docutils literal notranslate"><span class="pre">Perspective</span></code> and <code class="docutils literal notranslate"><span class="pre">Orthographic</span></code> view. The latter is often the most suitable.</p></li>
+</ul>
+</div>
+<div class="section" id="rendering-with-tachyon">
+<h4>Rendering with Tachyon<a class="headerlink" href="#rendering-with-tachyon" title="Permalink to this headline">¶</a></h4>
+<p>Below are quick instructions for high quality images when using <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code> rendering. As discussed above, the end result will be different from what one sees on the screen so it is good to try different options for <code class="docutils literal notranslate"><span class="pre">Materials</span></code>, lights and shadows and one should always ensure that the resolution of the objects is high enough (the default setting is not). The following options work in many cases:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Display</span> <span class="o">-&gt;</span> <span class="n">Rendermode</span> <span class="o">-&gt;</span> <span class="n">GLSL</span>
+<span class="n">Display</span> <span class="o">--&gt;</span> <span class="n">Display</span> <span class="n">Setting</span> <span class="o">--&gt;</span> <span class="n">Shadow</span> <span class="n">ON</span><span class="p">,</span> <span class="n">Ambient</span> <span class="n">Occl</span><span class="o">.</span> <span class="n">ON</span>
+</pre></div>
+</div>
+<p>For materials, the following seems to work quite well with Tachyon:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EdgyShiny</span><span class="p">,</span> <span class="n">Glass2</span><span class="p">,</span> <span class="n">AOSHiny</span><span class="p">,</span> <span class="n">AOEdgy</span>
+</pre></div>
+</div>
+<p>When selecting the rendering method: The following options <em>after the render command</em> work well. Adjust the resolution appropriately, the lines below are examples that produce large (1024 x 1024 px) high quality pictures. Increasing the value of <code class="docutils literal notranslate"><span class="pre">-aasamples</span></code> and using <code class="docutils literal notranslate"><span class="pre">-auto_skylight</span></code> add to rendering time.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">aasamples</span> <span class="mi">2</span> <span class="o">%</span><span class="n">s</span> <span class="o">-</span><span class="n">add_skylight</span> <span class="mf">0.7</span> <span class="o">-</span><span class="nb">format</span> <span class="n">TARGA</span> <span class="o">-</span><span class="n">res</span> <span class="mi">1024</span> <span class="mi">1024</span> <span class="o">-</span><span class="n">o</span> <span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="n">tga</span>
+<span class="o">-</span><span class="n">aasamples</span> <span class="mi">2</span> <span class="o">-</span><span class="n">fullshade</span> <span class="o">%</span><span class="n">s</span> <span class="o">-</span><span class="nb">format</span> <span class="n">TARGA</span> <span class="o">-</span><span class="n">o</span> <span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="n">tga</span>
+</pre></div>
+</div>
+<p>Currently, Tachyon rendering can produce the following three formats: <code class="docutils literal notranslate"><span class="pre">TARGA</span></code>, <code class="docutils literal notranslate"><span class="pre">PSD48</span></code> (photoshop) and <code class="docutils literal notranslate"><span class="pre">BMP</span></code>. The common
+<code class="docutils literal notranslate"><span class="pre">JPEG</span></code> and <code class="docutils literal notranslate"><span class="pre">PNG</span></code> do not work.</p>
+</div>
+</div>
+<div class="section" id="more-on-selections">
+<h3>More on selections<a class="headerlink" href="#more-on-selections" title="Permalink to this headline">¶</a></h3>
+<p>In addition to using the readily available options from the <code class="docutils literal notranslate"><span class="pre">Selections</span></code> tab, VMD has also other very powerful methods for selections. One can use, distance from a given atom (or other unit), coordinates, masses, charges and so on. The figure shows and example of distance based selection. Note also that one can activate and deactivate representations but double-clicking them - in the figure, the selection indicated in red has been deactivated.</p>
+<p><strong>Important:</strong> When <em>making movies</em> using distances or coordinates for selections, it is <em>imperative</em> to select</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Graphical</span> <span class="n">Representations</span> <span class="o">-&gt;</span> <span class="n">Trajectory</span> <span class="o">-&gt;</span> <span class="n">Update</span> <span class="n">Selection</span> <span class="n">Every</span> <span class="n">Frame</span>
+</pre></div>
+</div>
+<p>If not selected, the selection criterion/criteria will use the starting frame as the reference with no updates. This applies to movies (both on screen and rendered) only and has no effect on static images.</p>
+<div class="figure align-left" id="id9">
+<a class="reference internal image-reference" href="../../_images/vmd-selections-annot.svg"><img alt="../../_images/vmd-selections-annot.svg" src="../../_images/vmd-selections-annot.svg" width="850px" /></a>
+<p class="caption"><span class="caption-text">The figure shows the use distance based selection. Note that VMD uses Ångströms for distances (Gromacs uses nanometers). The central molecules and the ones within 8 Å are shown with different materials and colors.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="properties-of-a-selected-atom">
+<h3>Properties of a selected atom<a class="headerlink" href="#properties-of-a-selected-atom" title="Permalink to this headline">¶</a></h3>
+<p>Choosing</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">VMD</span> <span class="n">Main</span> <span class="o">-&gt;</span> <span class="n">Mouse</span> <span class="o">-&gt;</span> <span class="n">Query</span>
+</pre></div>
+</div>
+<p>allows one the query the properties of any atom by clicking on them. The properties as shown in the <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">console</span></code> window. Several other  useful options are available under the <code class="docutils literal notranslate"><span class="pre">Mouse</span></code> menu.</p>
+<div class="figure align-left" id="id10">
+<a class="reference internal image-reference" href="../../_images/vmd-query-annot.svg"><img alt="../../_images/vmd-query-annot.svg" src="../../_images/vmd-query-annot.svg" width="850px" /></a>
+<p class="caption"><span class="caption-text">The <code class="docutils literal notranslate"><span class="pre">VMD</span></code> console window show the properties of the selected atom. The properties use the same keywords as the selection menu and <code class="docutils literal notranslate"><span class="pre">Graphical</span> <span class="pre">Representations</span></code>.</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="data-analysis">
+<h3>Data analysis<a class="headerlink" href="#data-analysis" title="Permalink to this headline">¶</a></h3>
+<p>The above focused on visualization. VMD has a wide range of built-in tools for data analysis and a plugin framework that allows users to develop their own analysis tools. We won’t cover data analysis here.  One matter is, however, worth pointing out: VMD has no preset limit for the length of a trajectory. The only limitation is available memory.</p>
+</div>
+<div class="section" id="scripting-and-extensions">
+<h3>Scripting and extensions<a class="headerlink" href="#scripting-and-extensions" title="Permalink to this headline">¶</a></h3>
+<p>VMD also offers a very powerful scripting interface using Tcl/Tk and this is the method for developing analysis tools. VMD It has also an interface to <a class="reference external" href="https://www.plumed.org/">PLUMED</a> collective variable analysis (requires separate installation of PLUMED). Besides reading all the major file formats, VMD has plugins for experimental data. These include MDFF for Cryo-EM data and others.</p>
+</div>
+<div class="section" id="more-features">
+<h3>More features<a class="headerlink" href="#more-features" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>VMD has  some <a class="reference external" href="https://www.ks.uiuc.edu/Research/namd/">NAMD</a>-specific tools for setting up molecular simulations.</p></li>
+<li><p>VMD has an interface for reading PDB entries by accession number directly from the <a class="reference external" href="https://www.rcsb.org/">PDB database</a>. Read more <a class="reference external" href="https://www.rcsb.org/pages/about-us/index">background information</a> about the PDB database.</p></li>
+<li><p>VMD also has an interface to <a class="reference external" href="http://www.poissonboltzmann.org/">APBS</a> (Adaptive Poisson Boltzmann Solver) for calculations of continuum electrostatics.</p></li>
+<li><p>VMD has a toolkit for force field parameterization called <a class="reference external" href="http://www.ks.uiuc.edu/Research/vmd/plugins/fftk/">Force Field Toolkit</a> plugin (ffTK)</p></li>
+</ul>
+<p>Note that many of the plugins require installation of additional software or/and libraries.</p>
+</div>
+<div class="section" id="pdb-database-downloads">
+<h3>PDB database downloads<a class="headerlink" href="#pdb-database-downloads" title="Permalink to this headline">¶</a></h3>
+<p>VMD has the capability to download  PDB files directly from the PDB database. Note, however, that version 1.9.3 appears to have a problem with this feature. The ability to download has been fixed in the 1.9.4-alpha41 versions (at this time there is no stable release of 1.9.4; the alpha51 works on MacOS Catalina and Linux, but crashes on Windows 10).</p>
+<p>This feature is available under</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Extensions</span> <span class="o">-&gt;</span> <span class="n">Data</span> <span class="o">-&gt;</span> <span class="n">PDB</span> <span class="n">Database</span> <span class="n">Query</span>
+</pre></div>
+</div>
+<p>The PDB database is available at</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.rcsb.org/">RCSB Protein Databank (PDB)</a></p></li>
+</ul>
+</div>
+<div class="section" id="movies-with-vmd">
+<h3>Movies with VMD<a class="headerlink" href="#movies-with-vmd" title="Permalink to this headline">¶</a></h3>
+<p>This topic will covered when we have trajectory data from simulations.</p>
+</div>
+<div class="section" id="customizing-vmd">
+<h3>Customizing VMD<a class="headerlink" href="#customizing-vmd" title="Permalink to this headline">¶</a></h3>
+<p>Initial settings can be easily changed from</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Extensions</span> <span class="o">-&gt;</span> <span class="n">VMD</span> <span class="n">Preferences</span>
+</pre></div>
+</div>
+<p>Change to according to your preference if needed and  save the by clicking <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">Settings</span> <span class="pre">to</span> <span class="pre">VMDRC</span></code>.
+For example, my preferences are white background and orthographic viewing.</p>
+</div>
+<div class="section" id="the-tcl-tk-command-shell">
+<h3>The Tcl/Tk  command shell<a class="headerlink" href="#the-tcl-tk-command-shell" title="Permalink to this headline">¶</a></h3>
+<p>VMD uses the Tcl/Tk language and shell for scripting. Scripting allows automatization of tasks and more detailed analysis of properties but we won’t cover the topic here.  Tcl stands for  Tool Command Language and Tk is the graphical user interface toolkit for Tcl. Tcl/Tk is supported across the different operating systems (Windows, Linux, OSX).</p>
+</div>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-class/week03/vmd-0"><dl class="citation">
+<dt class="bibtex label" id="cassidy2020"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>Kevin C. Cassidy, Jan Šefč’ık, Yogindra Raghav, Alexander Chang, and Jacob D. Durrant. ProteinVR: web-based molecular visualization in virtual reality. <em>PLOS Computational Biology</em>, 16(3):e1007747, mar 2020. <a class="reference external" href="https://doi.org/10.1371/journal.pcbi.1007747">doi:10.1371/journal.pcbi.1007747</a>.</p>
+</dd>
+<dt class="bibtex label" id="humphrey1996a"><span class="brackets">4</span><span class="fn-backref">(<a href="#id2">1</a>,<a href="#id3">2</a>)</span></dt>
+<dd><p>William Humphrey, Andrew Dalke, and Klaus Schulten. VMD: visual molecular dynamics. <em>Journal of Molecular Graphics</em>, 14(1):33–38, Feb 1996. <a class="reference external" href="https://doi.org/10.1016/0263-7855(96)00018-5">doi:10.1016/0263-7855(96)00018-5</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

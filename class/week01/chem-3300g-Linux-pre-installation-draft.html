@@ -1,0 +1,810 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecture X &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week01/chem-3300g-Linux-pre-installation-draft.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week01/chem-3300g-Linux-pre-installation-draft.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Lecture X" />
+<meta property="og:description" content="Lecture X  Learning goals:  Have an overview of some of the requirements for your personal computational environment.  Assess what you need to do the get the co" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week01/chem-3300g-Linux-pre-installation-draft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/week01/chem-3300g-Linux-pre-installation-draft.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-we-are-going-to-do">
+   What we are going to do:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pre-installation-decisions">
+   Pre-installation decisions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#which-version-distribution-of-linux-should-i-install">
+   Which version/distribution of Linux should I install?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-information">
+     More information:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-installation">
+   Linux installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#windows-wsl-wsl2-vs-dual-boot-vs-virtual-machine">
+   Windows: WSL/WSL2 vs dual boot vs virtual machine
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#osx">
+     OSX
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#osx-macports-homebrew">
+     OSX: Macports / Homebrew
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%html</span>
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="nt">code</span><span class="p">.</span><span class="nc">lblue</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#1371a9</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="nt">pre</span><span class="o">,</span>
+<span class="nt">code</span><span class="p">.</span><span class="nc">wlblue</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#1371a9</span><span class="p">;</span> 
+  <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">code</span><span class="p">.</span><span class="nc">com</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#f603ed</span><span class="p">;</span> 
+<span class="p">}</span>
+<span class="nt">b</span><span class="p">.</span><span class="nc">lblue</span><span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#1371a9</span><span class="p">;</span> 
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">int</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">red</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">red</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">clblue</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">try</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">div</span><span class="p">.</span><span class="nc">info</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+<span class="nt">table</span><span class="p">.</span><span class="nc">lblue</span><span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#1371a9</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+
+
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style>
+code.lblue{
+  color: #1371a9; 
+}
+pre,
+code.wlblue{
+  color: #1371a9; 
+  background-color: white;
+}
+code.com{
+  color: #f603ed; 
+}
+b.lblue{
+  color: #1371a9; 
+}
+
+div.int{
+    margin-left: 40px;
+}
+
+div.red{
+    margin-left: 10px;
+    border: 1px solid red;
+    padding: 10px;
+}
+
+div.clblue{
+    margin-left: 10px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+div.try{
+    margin-left: 10px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+div.info{
+    margin-left: 10px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+
+
+table.lblue{
+    margin-left: 2px;
+    border: 1px solid #1371a9;
+    padding: 10px;
+}
+
+
+
+
+</style>
+</div></div>
+</div>
+<div class="section" id="lecture-x">
+<h1>Lecture X<a class="headerlink" href="#lecture-x" title="Permalink to this headline">¶</a></h1>
+<p><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p>Have an overview of some of the requirements for your personal computational environment.</p></li>
+<li><p>Assess what you need to do the get the command line terminal and Linux/Unix tools</p></li>
+<li><p>Learn how to install OS.</p></li>
+<li><p>Optional: How to use a live Linux distribution. For that, an empty USB key is needed (8GB recommended).</p></li>
+</ul>
+<p><strong>Keywords:</strong> Dual boot, Linux, WSL, WSL2, OSX, virtual machine, backup, live distribution</p>
+<p><strong>Associated material:</strong></p>
+<hr><div class="section" id="what-we-are-going-to-do">
+<h2>What we are going to do:<a class="headerlink" href="#what-we-are-going-to-do" title="Permalink to this headline">¶</a></h2>
+<p>Independent of the operating system:</p>
+<ul class="simple">
+<li><p>We need to set up command line terminal and it will be used extensively throughout the course</p></li>
+<li><p>All of them are Linux (well… technically the OSX one is based on Free BSD but that doesn’t make any practical difference here).</p></li>
+</ul>
+<p>This is what we will do:</p>
+<ol class="simple">
+<li><p>Set up command line terminal either by installing full Linux, WSL/WSL2 in Windows or Linux in a virtual machine. A decision needs to be made and we discuss these options below.</p></li>
+<li><p>Learn the basics of command line and the main differences between Linux, Windows and/or Mac.</p></li>
+<li><p>In this course we need Gromacs, VMD, Python and Jupyter Lab/Notebook:</p>
+<ul class="simple">
+<li><p>They have pre-requisites and we need to install them first. This includes software such as a C/C++-compiler, Xcode for OSX users, cmake, and so on.
+-After the prerequisites have been installed, we install Gromacs, VMD, Python and Jupyter.</p></li>
+</ul>
+</li>
+</ol>
+<p></p>
+<table class="lblue" style="float: right" width="810px" height="150">
+    <tr>
+        <td>
+            <img src="./img/linux-decision.svg" width="800px"/>                                               
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+            Figure. The three main operating systems and the main options. 
+        </td>
+    </tr>
+</table>  
+</div>
+<div class="section" id="pre-installation-decisions">
+<h2>Pre-installation decisions<a class="headerlink" href="#pre-installation-decisions" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p><strong>What is your operating system and what you need to do (if anything):</strong></p>
+<p>The listing below should help to choose as what to do. Main requirements and limitations are listed.</p>
+<ol class="simple">
+<li><p><em style="color:red;">If you have pure Linux or dual boot:</em> You are good to go, no need to do anything at this time (…you can check that your system is up-to-date).</p></li>
+<li><p><em style="color:red;">If you have Mac OSX:</em> OSX is based on Free BSD (Unix) and it has a command line terminal. Nothing needs to be done at this time. Optionally, you can install Linux in a virtual machine.</p></li>
+<li><p><em style="color:red;">If you have Windows:</em> There are different options to choose from:</p></li>
+<li><p><em style="color:navy;">You can install dual boot</em>. In that case you will have both Linux and Windows installed and you select at boot time which one you want to use. This works independent of which version of Windows you have, but you must have enough free space on your hard drive</p>
+<ul class="simple">
+<li><p>If you have enough disk space, this is a very clean and efficient option.</p></li>
+<li><p>I strongly recommend not to do this if you have Microsoft Surface. While not impossible, there are reports that the process is not necessarily straightforward.</p></li>
+<li><p>On my personal computers, setting up dual boot is my usual approach and I have had no problems on various versions of Lenovo, Samsung, Dell, HP, Alienware, and custom computers.</p></li>
+</ul>
+</li>
+<li><p><em style="color:navy;">You can install WSL/WSL2</em>. This provides you with a Linux installation with command line tools. Important: For WSL, you must have Windows 10, for WSL2 the only the following Windows 10 versions are compatible: version 2004 (May 2020), version 1909 (Nov. 2019) and version 1903 (May 2019).</p>
+<ul class="simple">
+<li><p>Installation of WSL is straightforward and WSL is supported by Microsoft. WSL gives a CLI but no GUI. In practise you will have Windows and Linux on your system running at the same time. Linux does have access to your files on the Windows side <em>but</em> Windows has no access to the files on the Linux side. All Linux CLI tools work well.</p></li>
+<li><p>GPU computing: WSL has no access to the GPU(s) so GPU computing from the Linux terminal is not possible.</p></li>
+</ul>
+</li>
+<li><p><em style="color:navy;">You can install Linux in a virtual machine</em> inside your Windows. This works with all recent versions of Windows.</p>
+<ul class="simple">
+<li><p>This requires that the computer must have enough RAM. In practise, one should have at least 16 Gb since the RAM has to be divided between Windows and Linux.</p></li>
+<li><p>Linux inside a virtual machine is full Linux with GUI as well as CLI.</p></li>
+<li><p>GPU computing: Virtual machine has no access to the GPU(s).</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Important: The responsibility is yours.</strong> When you install any software the responsibility is entirely yours. This is particularly important in the case you have a Windows computer and you have to select between the different options. It is important to you back up your data and essential files. Doing that ensures that in the case something goes wrong, you will be able to recover your previous work and software. While it is rare that something goes wrong, one should take the necessary precautions. Recovering a crippled computer may be very hard or impossible.</p>
+</div>
+<div class="section" id="which-version-distribution-of-linux-should-i-install">
+<h2>Which version/distribution of Linux should I install?<a class="headerlink" href="#which-version-distribution-of-linux-should-i-install" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>There are a lot of great Linux distributions to choose from. Here, instructions are given for Ubuntu-based systems. It is by no means the only choice.</p>
+<p><strong>Recommendation regarding distribution:</strong> The instructions in this document are for Ubuntu-based distributions to keep things simple. If you have not used Linux before, then the easiest way is use one of the Ubuntu based ones. There are many other excellent distributions and you can typically try them without installinf by simply making a Live USB (see below).</p>
+<p><strong>Recommendation regarding Ubuntu version:</strong> It is strongly recommended to install an LTS (Long Term Support) version. At this time (fall 2020), the latest LTS version is 20.04 LTS. The instructions below have been tested with this particular version (as well as to some degree using 18.04 LTS). Why LTS and not the absolute latest? Ubuntu releases come in 6 month cycles (April and October), but the LTS versions are released every two years. Importantly, the LTS versions are supported and maintaned for <em>five</em> years. In other words it is a stable solution without the need to upgrade.</p>
+<p><strong>Recommendation regarding Ubuntu flavor:</strong> There are a lot of excellent choices and ultimately it depends what you like / what seems visually the most appealing to you.</p>
+<p><strong>Which distribution/version/flavor you use?</strong> Right now, our student office computers run the default Ubuntu, my 2007 iMac runs Ubuntu Budgie and my laptop runs KDE Neon. All of the computers run LTS versions of Ubuntu (mostly 18.04 LTS and 20.04 LTS). I have used Linux since 1993 and tried many distributions including Slackware, Redhat/Fedore, SuSe, Gentoo, Arc, Elementary OS and so on.</p>
+<p></p>
+<div class="try">
+<p><strong>Try it first using Live USB <em>without</em> installing.</strong> This allows you try it out without installing. This is important since this weay you can see that Wifi and other devices work properly and also check that you like the interface. Here are the basic steps (the suggestions below are Ubuntu or Ubuntu-based for ease):</p>
+<ol class="simple">
+<li><p>To make a Live USB you need a USB pen, larger than 4GB is recommended (and often needed). If you want  to try several distributions/flavors at the same time, just have 2 or more pens ready. Note that the USB pen needs to be erased (and formatted) in the process so make sure that if it isn’t empty, you copy all the important files to another USB/SD/HD/SSD.</p></li>
+<li><p>Take a look and browse at the web pages of the different flavors/distributions and see what pleases you visually. Functionally, they all contain the same features.</p></li>
+</ol>
+<p>Suggestions:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubuntu.com/download/desktop">Ubuntu Desktop default</a></p>
+<ul>
+<li><p>Note: Pick Ubuntu 20.04 LTS (20.04.01 LTS at the time of writing this), NOT any of the newer ones.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://ubuntu.com/download/flavours">The official Ubuntu flavours</a>.</p>
+<ul>
+<li><p>For those coming from Windows or Mac, Ubuntu Budgie may be the most familiar looking. Simply take a look at their respective pages and see what pleases you visually.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://elementary.io/">Elementary OS 5.1 Hera</a></p>
+<ul>
+<li><p>Uses Ubuntu/Debian package management.</p></li>
+<li><p>Beautiful Mac-like user interface design</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://linuxmint.com/download.php">Linux Mint 20 Ulyana:</a></p>
+<ul>
+<li><p>Uses Ubuntu/Debian package management.</p></li>
+<li><p>Beautiful Windows-like design</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p>Once you have made your choice, download the one(s) you want. The files that you download are so-called <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_image">ISO images</a>. It is a standard archive format that we use to create a bootable USB. Note that the ISO images can be large, anything between 1 and 4 GB.</p></li>
+<li><p>Create a bootable USB. The links below contain step-by-step instructions and work for all of the above Linux flavours/versions.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubuntu.com/tutorials/create-a-usb-stick-on-windows">Ubuntu tutorials: Create a bootable USB stick on Windows</a></p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p><a class="reference external" href="https://ubuntu.com/tutorials/create-a-usb-stick-on-macos">Ubuntu tutorials: Create a bootable USB stick on macOS</a></p></li>
+</ul>
+<ol class="simple">
+<li><p>Now you can try it out. Simply insert the USB and reboot your computer.</p></li>
+</ol>
+<p>Potential problems:</p>
+<ul class="simple">
+<li><p>The computer boots back to Windows (or Mac). This means that USB is not recognized as a boot device. This is easy to change:</p>
+<ul>
+<li><p>Reboot the computer and enter bios. How this is done depends on bit on your computer. When you reboot, many computers usually show (for a few seconds) what are the keys to press to enter bios. This depends on your computer, but here are a few examples:</p>
+<ul>
+<li><p>The two most common keys to hold down while booting are F10 and F12.</p></li>
+<li><p>Dell XPS 13:</p></li>
+<li><p>Lenovo:</p></li>
+<li><p>Not here? Then you have to search the web. It is good to know this since if there evere is a serious problem with your Windows, you may need this to be able to recover your computer and OS.</p></li>
+</ul>
+</li>
+<li><p>Once in bios, go into the boot menu and change the order of bootable devices such that USB comes first. Save and reboot. Now (provided the USB is inserted), the computer should boot to Linux.</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p>Now you should be running Linux from the USB. Try it out, connect the Wifi, open software from the menus and see that everything works as expected. If everything is fine and you like the visual features, then all is good. Let’s not install yet before discussing a few issues. So select reboot from the menu, and remove the USB when requested.</p></li>
+<li><p>If you want to try another distribution/flavour, just repeat the steps.</p></li>
+</ol>
+</div>
+<div class="section" id="more-information">
+<h3>More information:<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://itsfoss.com/best-linux-beginners/">From It’s FOSS: Best Linux Distributions That are Most Suitable for Beginners</a></p></li>
+<li><p><a class="reference external" href="https://itsfoss.com/which-ubuntu-install/">From It’s FOSS: Explained: Which Ubuntu Version Should I Use?</a></p></li>
+<li><p><a class="reference external" href="https://ubuntu.com/blog/what-is-an-ubuntu-lts-release">From Ubuntu Blog: What is an Ubuntu LTS release?</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="linux-installation">
+<h2>Linux installation<a class="headerlink" href="#linux-installation" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Now that you have tested at least one Linux distribution from a USB, it is time to install. There are four possible choices depending what you want. Each has their own advantages and disadvantages:</p>
+<p></p>
+<div class="info">
+1. <b>Pure Linux</b>, that is, the other exisiting operating system(s) will be completely deleted and after the installation Linux will be the only OS.
+<ul class="simple">
+<li><p>Requirements:</p>
+<ul>
+<li><p>Linux is not very resource hungry. This means that if there is an older unused computer hanging around, it will probably run Linux just fine. Practical examples: I have installed Linux (Ubuntu Budgie 20.04 LTS) on an 2007 iMac with 8Gb memory and it runs fine. There are also special lightweight Linux versions that run perfectly well even on older netbooks (I have tried some versions on an old Toshiba netwook with 2 Gb of memory).</p></li>
+</ul>
+</li>
+<li><p>Advantages: Clean installation.</p></li>
+<li><p>Disadvantages: If you need software that runs only on Mac or Windows.</p></li>
+<li><p><a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ubuntu/new-computer-linux-only-win-preinstalled.md">Instructions: New computer came with windows pre-installed but you want Linux only</a></p></li>
+</ul>
+<ol class="simple">
+<li><p><b>Dual boot.</b> Allows you to select at boot time which OS you want to use.</p>
+<ul class="simple">
+<li><p>Requirements:</p>
+<ul>
+<li><p>You need to have enough strorage space depending on your needs. Examples: if one doesn’t need to store large files, a 256Gb SSD works just fine. Linux is less resource-hungry than Windows or Mac, so if your computer runs one of them, there should be no issues.</p></li>
+</ul>
+</li>
+<li><p>Advantages:</p>
+<ul>
+<li><p>Windows and Linux are clearly separated each of them being a full native installation.</p></li>
+</ul>
+</li>
+<li><p>Disadvantages:</p>
+<ul>
+<li><p>You need to boot to switch from Linux to Windows or vice versa (but then again, that is quick).</p></li>
+<li><p>Some manufacturers ship Windows installed with <a class="reference external" href="https://en.wikipedia.org/wiki/BitLocker">BitLocker</a> turned on. If that is the case, things become more complex as the HD/SSD tends to be fragmented and it is not necessearily trivial to defragment it.</p></li>
+</ul>
+</li>
+<li><p>Additional:</p>
+<ul>
+<li><p>The Linux side can access the files on the Windows side but not vice versa.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><b>Install Linux in a virtual machine inside your current OS</b>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Requirements: Since memory is shared between the two oprating systems when the virtual machine is turned on, one needs enough RAM. Typically 16 Gb seems to work fine, 12 Gb is ok and 8 Gb not quite enough.</p></li>
+<li><p>Advantages:</p>
+<ul>
+<li><p>Allows you to install full Linux (or other operating systems, including different versions) in a contained environment without need to repartition the hard drive/SSD.</p></li>
+</ul>
+</li>
+<li><p>Disadvantages:</p>
+<ul>
+<li><p>As discussed above, memory shared between the two OSs when virtual machine is turned on. The practical lower limit for RAM is 12 Gb.</p></li>
+<li><p>Virtual machine doesn’t allow access for GPUs (if you don’t have discrete GPU, then this is not an issue)</p></li>
+</ul>
+</li>
+</ul>
+<ol class="simple">
+<li><p><b>If running Windows 10, install Linux using WSL/WSL2</b> (<a class="reference external" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux">WSL=Windows Subsystem for Linux</a>). This is different from the three options below in that you don’t automatically get the GUI Linux tools, but just the command line terminal. It is possible to use GUI-based application as well, but for that one has to install an emulator for the X-windows environment.</p></li>
+</ol>
+<p></p>
+<p><strong>Important:</strong> For WSL, you must have Windows 10 and for WSL2 the only the following Windows 10 versions are compatible: version 2004 (May 2020), version 1909 (Nov. 2019) and version 1903 (May 2019).</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> - Advantages: Installation of WSL is straightforward and WSL is supported by Microsoft. WSL gives a CLI but no GUI. In practise you will have Windows and Linux on your system running at the same time. Linux does have access to your files on the Windows side *but* Windows has no access to the files on the Linux side. All Linux CLI tools work well.
+ * GPU computing: WSL has no access to the GPU(s).
+</pre></div>
+</div>
+</div>    </div>
+<div class="section" id="windows-wsl-wsl2-vs-dual-boot-vs-virtual-machine">
+<h2>Windows: WSL/WSL2 vs dual boot vs virtual machine<a class="headerlink" href="#windows-wsl-wsl2-vs-dual-boot-vs-virtual-machine" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="osx">
+<h3>OSX<a class="headerlink" href="#osx" title="Permalink to this headline">¶</a></h3>
+<p>Terminal application comes as standard (but lacks features; we will install them later).</p>
+<p>In OSX it can be found at</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="n">Applications</span> <span class="o">-&gt;</span> <span class="n">Utilities</span> <span class="o">-&gt;</span> <span class="n">Terminal</span>
+</pre></div>
+</div>
+<p>Note: I don’t have access to a Mac -&gt; no screenshots will be provided.</p>
+</div>
+<div class="section" id="osx-macports-homebrew">
+<h3>OSX: Macports / Homebrew<a class="headerlink" href="#osx-macports-homebrew" title="Permalink to this headline">¶</a></h3>
+<p>To install Gromacs, you need MacPorts or comparable. Homebrew is a good alternative.</p>
+<p>Here is Introduction to MacPorts</p>
+<p>Follow the detailed installation instructions at the MacPorts web site.</p>
+<p>Here is a summary of the steps:</p>
+<ul class="simple">
+<li><p>You must install Xcode from Apple. Xcode provides the compilers, libraries and other development tools</p></li>
+<li><p>Apple’s Command Line Developer Tools</p></li>
+<li><p>Install MacPorts for your version of OSX. There are several ways but the pkg installer as listed first at the MacPorts web site is the easiest way.</p></li>
+<li><p>You should also install the X11 windowing environment. There are several options, but the xorg server as provided by MacPorts is probably the best and easiest choice.</p></li>
+<li><p>For available software (ports), see  “Available ports”</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week01"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

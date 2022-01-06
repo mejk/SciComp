@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lab 1: Installation of tools. &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/labs/lab_1.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/labs/lab_1.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="Lab 1: Installation of tools." />
+<meta property="og:description" content="Lab 1: Installation of tools.  We need to set up command line terminal. It will be used extensively throughout the course.  All of command line terminal options" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/labs/lab_1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-of-basic-tools">
+   Installation of basic tools
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#additional-information">
+     Additional information
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-1-terminal-wsl-wsl2-xcode-and-such">
+     Task 1: Terminal, WSL/WSL2, Xcode and such
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-2-package-manager">
+     Task 2: Package manager
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-3-create-work-directory-for-the-course">
+     Task 3: Create work directory for the course
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-4-install-vmd">
+     Task 4: Install VMD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#task-5-install-python-and-jupyter-lab">
+     Task 5: Install Python and Jupyter Lab
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#done-let-s-move-to-the-next-step">
+   DONE, let’s move to the next step
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#task-6-try-the-command-line-terminal">
+   Task 6: Try the command line terminal
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="lab-1-installation-of-tools">
+<h1>Lab 1: Installation of tools.<a class="headerlink" href="#lab-1-installation-of-tools" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>We need to set up command line terminal. It will be used extensively throughout the course.</p></li>
+<li><p>All of command line terminal options are either Linux or Linux-like (technically the OSX one is based on Free BSD but that doesn’t make any practical difference here).</p></li>
+</ul>
+<div class="section" id="installation-of-basic-tools">
+<h2>Installation of basic tools<a class="headerlink" href="#installation-of-basic-tools" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Set up command line terminal either by installing full Linux, WSL/WSL2 in Windows or Linux in a virtual machine. A decision needs to be made and we discuss these options below.</p></li>
+<li><p>Learn the basics of command line and the main differences between Linux, Windows and/or Mac.</p></li>
+<li><p>In this course we need Gromacs, VMD, Python and Jupyter Lab/Notebook:</p>
+<ul class="simple">
+<li><p>They have pre-requisites and we need to install them first. This includes software such as a C/C++-compiler, Xcode for OSX users, <code class="docutils literal notranslate"><span class="pre">cmake</span></code>, and so on.</p></li>
+<li><p>After the prerequisites have been installed, we install Gromacs, VMD, Python and Jupyter.</p></li>
+</ul>
+</li>
+</ol>
+<p>The figure shows a summary of the options depending on your current OS. For Windows users the recommended choice is WSL2 (WSL2 has some advantages over WSL, but WSL works as well). Dual boot Windows 10/Linux is a good choice but requires more work and care. Virtual machine is a safe choice but requires a lot of memory. Mac users already have a command line terminal. It can be found in</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Finder</span> <span class="o">-&gt;</span> <span class="n">Applications</span> <span class="o">-&gt;</span> <span class="n">Utilities</span> <span class="o">-&gt;</span> <span class="n">Terminal</span>
+</pre></div>
+</div>
+<p>That same location has also <code class="docutils literal notranslate"><span class="pre">XQuartz</span></code> that will be needed to run GUI based applications.</p>
+<div class="figure align-left" id="id1">
+<a class="reference internal image-reference" href="../../_images/linux-decision.svg"><img alt="Linux vs others" src="../../_images/linux-decision.svg" width="700px" /></a>
+<p class="caption"><span class="caption-text"><em>The three main operating systems and the main options.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>If you are happy with the recommended choices, the move on the next section and installation. If you want more information, just click the <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> below to read more.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>When you install any software <em>the responsibility is entirely yours</em>. It is important to you back up your data and essential files. Doing that ensures that in the case something goes wrong, you will be able to recover your previous work and software. While it is rare that something goes wrong, one should take the necessary precautions. And remember to do virus checks.</p>
+<p>Recovering a crippled computer may be very hard or impossible.</p>
+</div>
+<div class="section" id="additional-information">
+<h3>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">dropdowns</span></code> provide more information for those interested and are not required reading.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Pre-installation considerations</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>What is your operating system and what you need to do (if anything):</strong></p>
+<p class="card-text">The listing below should help to choose what to do. Main requirements and limitations are listed.</p>
+<ul class="simple">
+<li><p class="card-text"><strong>If you have pure Linux or dual boot:</strong> You are good to go, no need to do anything at this time (…you can check that your system is up-to-date).</p></li>
+<li><p class="card-text"><strong>If you have Mac OSX:</strong> OSX is based on Free BSD (Unix) and it has a command line terminal. Nothing needs to be done regarding getting a terminal. Optionally, you can install Linux in a virtual machine but we are not covering that here.</p></li>
+<li><p class="card-text"><strong>If you have Windows:</strong> There are different options to choose from:</p>
+<ul>
+<li><p class="card-text"><strong>The recommended choice for Windows users is to install WSL/WSL2</strong> - with preference for WSL2. This provides you with a Linux installation and full command line tools.</p>
+<ul>
+<li><p class="card-text"><em>Important:</em> to Install WSL, you must have Windows 10. For WSL2 only the following Windows 10 versions are compatible: version 2004 (May 2020), version 1909 (Nov. 2019) and version 1903 (May 2019). Check your Windows version but if you have kept your Windows 10 installation up-to-date, it is highly likely that you have one of above versions. WSL2 is the recommended option.</p></li>
+<li><p class="card-text">Installation of WSL/WSL2 is straightforward and WSL/WSL2 is supported by Microsoft. WSL/WSL2 gives a CLI but no GUI. In practise you will have Windows and Linux on your system at the same time. Linux does have access to your files on the Windows side <em>but</em> Windows has no access to the files on the Linux side. All Linux CLI tools work well.</p></li>
+</ul>
+</li>
+<li><p class="card-text"><strong>Dual boot is another option</strong>. In that case you will have both Linux and Windows installed and you select at boot time which one you want to use. This works independent of which version of Windows you have, but you must have enough free space on your hard drive</p>
+<ul>
+<li><p class="card-text">If you have enough disk space, this is a very clean and efficient option.</p></li>
+<li><p class="card-text">I strongly recommend not to do this if you have Microsoft Surface. While not impossible, there are reports that the process is not necessarily straightforward.</p></li>
+<li><p class="card-text">This is more risky than the very straightforward WSL/WSL2 installation.</p></li>
+</ul>
+</li>
+<li><p class="card-text"><strong>The third options is to install Linux in a virtual machine inside your Windows.</strong> This works with all recent versions of Windows.</p>
+<ul>
+<li><p class="card-text">This requires that the computer must have enough RAM. In practise, one should have at least 16 Gb since the RAM has to be divided between Windows and Linux.</p></li>
+<li><p class="card-text">Linux inside a virtual machine is full Linux with GUI as well as CLI.</p></li>
+<li><p class="card-text">We will not cover the installation here but it is straightforward albeit more time consuming that WSL/WSL2.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="card-text"><strong>GPU computing:</strong></p>
+<p class="card-text">Gromacs as well as several other software like NAMD and Amber can use GPUs for simulations. GPUs provide a significant speedup compared to running the simulations on CPUs. Depending on your computer, you may be able to use GPUs. If not, don’t worry, all the simulations have been tested with an older CPU-only laptop to ensure that the simulations will complete within reasonable time.</p>
+<ul class="simple">
+<li><p class="card-text">Linux: If you have NVIDIA GPUs, you will be able to use the for simulations provided you install / have installed the CUDA drivers. If you have AMD GPUs, things are different. The concerns are the same as for MacOS below</p></li>
+<li><p class="card-text">WSL/WSL2: No access to GPUs. This features is, however, coming to WSL2 but it is not available at this time (Dec 2020).</p></li>
+<li><p class="card-text">MacOS: Apple uses AMD GPUs. They are not compatible with NVIDIAs CUDA but use OpenCL instead. Gromacs has support OpenCL but I have not tested it. If you decide (later when we install Gromacs) to try to compile Gromacs with OpenCL you are own your own since I cannot test/debug it.</p></li>
+<li><p class="card-text">Virtual machine: No access to the GPU(s).</p></li>
+<li><p class="card-text">VMD: If you have a GPU, VMD is able to use it speed up visualization. There is nothing you need to do about this since VMD will recognize automatically if a GPU is present.</p></li>
+</ul>
+<p class="card-text"><strong>Important: The responsibility is yours.</strong> When you install any software the responsibility is entirely yours.
+It is important to you back up your data and essential files. Doing that ensures that in the case something goes wrong, you will be able to recover your previous work and software. While it is rare that something goes wrong, one should take the necessary precautions. Recovering a crippled computer may be very hard or impossible.</p>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Try Linux without installing</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">If you are curious about installing Linux either as a dual boot or the only operating system, you can try it first using Live USB <em>without</em> installing.**</p>
+<p class="card-text">This allows you try it out and see if it works on your computer. This is important since this way you can see that Wifi and other devices work properly and also check if you like the user interface. Here are the basic steps (the suggestions below are Ubuntu or Ubuntu-based for ease):</p>
+<ul>
+<li><p class="card-text">To make a Live USB you need a USB pen. 4GB is recommended (and often needed). If you want  to try several distributions/flavors at the same time, just have 2 or more pens ready. Note that the USB pen needs to be erased (and formatted) in the process so make sure that you copy all the important files to another USB/SD/HD/SSD.</p></li>
+<li><p class="card-text">Browse the web pages of the different flavors/distributions and see which one pleases you visually. Functionally, they all contain the same features.</p>
+<p class="card-text">Suggestions:</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://ubuntu.com/download/desktop">Ubuntu Desktop default</a></p>
+<ul>
+<li><p class="card-text">Note: Pick Ubuntu 20.04 LTS (20.04.01 LTS at the time of writing this), NOT any of the newer ones.</p></li>
+</ul>
+</li>
+<li><p class="card-text"><a class="reference external" href="https://ubuntu.com/download/flavours">The official Ubuntu flavours</a>.</p>
+<ul>
+<li><p class="card-text">For those coming from Windows or Mac, Ubuntu Budgie may be the most familiar looking. Simply take a look at their respective pages and see what pleases you visually.</p></li>
+</ul>
+</li>
+<li><p class="card-text"><a class="reference external" href="https://elementary.io/">Elementary OS 5.1 Hera</a></p>
+<ul>
+<li><p class="card-text">Uses Ubuntu/Debian package management.</p></li>
+<li><p class="card-text">Beautiful Mac-like user interface design</p></li>
+</ul>
+</li>
+<li><p class="card-text"><a class="reference external" href="https://linuxmint.com/download.php">Linux Mint 20 Ulyana:</a></p>
+<ul>
+<li><p class="card-text">Uses Ubuntu/Debian package management.</p></li>
+<li><p class="card-text">Beautiful Windows-like design</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="card-text">Once you have made your choice, download the one(s) you want. The files that you download are so-called <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_image">ISO images</a>. It is a standard archive format that we use to create a bootable USB. Note that the ISO images can be large, anything between 1 and 4 GB.</p></li>
+<li><p class="card-text">Create a bootable USB. The links below contain step-by-step instructions and work for all of the above Linux flavours/versions.</p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://ubuntu.com/tutorials/create-a-usb-stick-on-windows">Ubuntu tutorials: Create a bootable USB stick on Windows</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://ubuntu.com/tutorials/create-a-usb-stick-on-macos">Ubuntu tutorials: Create a bootable USB stick on macOS</a></p></li>
+</ul>
+</li>
+<li><p class="card-text">Now you can try it out. Simply insert the USB and reboot your computer.</p>
+<ul class="simple">
+<li><p class="card-text">Potential problems:</p>
+<ul>
+<li><p class="card-text">The computer boots back to Windows (or Mac). This means that USB is not recognized as a boot device. This is easy to change:</p>
+<ul>
+<li><p class="card-text">Solution: Reboot the computer and enter Bios. How this is done depends on bit on your computer. When you reboot, many computers usually show (for a few seconds) what are the keys to press to enter bios. This depends on your computer, but here are a few examples:</p>
+<ul>
+<li><p class="card-text">The most common keys to hold down while booting are F2, F10 and F12.</p></li>
+<li><p class="card-text">Lenovo: F2</p></li>
+<li><p class="card-text">Not here? Then you have to search the web. It is good to know this since if there ever is a serious problem with your Windows, you may need this to be able to recover your computer and OS.</p></li>
+<li><p class="card-text">Once in Bios, go into the <code class="docutils literal notranslate"><span class="pre">boot</span> <span class="pre">menu</span></code> and change the order of bootable devices such that USB comes first. Save and reboot. Now (provided the USB is inserted), the computer should boot to Linux.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p class="card-text">Now you should be running Linux from the USB. Try it out, connect the Wifi, open software from the menus and see that everything works as expected. If everything is fine and you like the visual features, then all is good. Now you can quit or install.</p></li>
+<li><p class="card-text">If you want to try another distribution/flavour, just repeat the steps.</p></li>
+</ul>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>I want to try/install Linux but which version?</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Which version/distribution of Linux should I install?</strong></p>
+<p class="card-text">There are a lot of great Linux distributions to choose from.</p>
+<p class="card-text"><strong>Recommendation regarding distribution:</strong> The instructions in this document are for Ubuntu-based distributions to keep things simple. If you have not used Linux before, then the easiest way is use one of the Ubuntu based ones. There are many other excellent distributions and you can typically try them without installing by simply making a Live USB (see the other <code class="docutils literal notranslate"><span class="pre">dropdown</span></code>).</p>
+<p class="card-text"><strong>Recommendation regarding Ubuntu version:</strong> It is strongly recommended to install an LTS (Long Term Support) version. At this time (fall 2020), the latest LTS version is 20.04 LTS. The instructions below have been tested with this particular version (as well as to some degree using 18.04 LTS). Why LTS and not the absolute latest? Ubuntu releases come in 6 month cycles (April and October), but the LTS versions are released every two years. Importantly, the LTS versions are supported and maintained for <em>five</em> years. In other words it is a stable solution without the need to upgrade.</p>
+<p class="card-text"><strong>Recommendation regarding Ubuntu flavor:</strong> There are a lot of excellent choices and ultimately it depends what you like / what seems visually the most appealing to you.</p>
+<p class="card-text"><strong>Which distribution/version/flavor you use?</strong> Right now, our student office computers run the default Ubuntu, my 2007 iMac runs Ubuntu Budgie and my laptop runs KDE Neon. All of the computers run LTS versions of Ubuntu (mostly 18.04 LTS and 20.04 LTS). I have used Linux since 1993 and tried many distributions including Slackware, Redhat/Fedora, SuSe, Gentoo, Arc, Elementary OS and so on.</p>
+<p class="card-text"><strong>More information:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://itsfoss.com/best-linux-beginners/">From It’s FOSS: Best Linux Distributions That are Most Suitable for Beginners</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://itsfoss.com/which-ubuntu-install/">From It’s FOSS: Explained: Which Ubuntu Version Should I Use?</a></p></li>
+<li><p class="card-text"><a class="reference external" href="https://ubuntu.com/blog/what-is-an-ubuntu-lts-release">From Ubuntu Blog: What is an Ubuntu LTS release?</a></p></li>
+</ul>
+</div>
+</details><p>Time to start the installations. The time each step takes depends on your operating system.</p>
+</div>
+<div class="section" id="task-1-terminal-wsl-wsl2-xcode-and-such">
+<h3>Task 1: Terminal, WSL/WSL2, Xcode and such<a class="headerlink" href="#task-1-terminal-wsl-wsl2-xcode-and-such" title="Permalink to this headline">¶</a></h3>
+<p>Based on your current operating system: Choose one of the tab options that is the most suitable for you. What we are going to do is the following independent of the operating system. Proceed through Tasks 1-3 in this order. As for Tasks 4-5, you can change their mutual order (but must be after Tasks 1-3).</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="88d21c6c-bb7e-4f23-94b1-b548b4a046b2" name="baf3b817-31a5-4932-a06d-eb8487b9f6af" type="radio">
+</input><label class="tabbed-label" for="88d21c6c-bb7e-4f23-94b1-b548b4a046b2">
+Linux</label><div class="tabbed-content docutils">
+<p>Update your system if necessary. Go to the next step.</p>
+</div>
+<input id="e6d9b716-6811-4dbd-a394-f231bcf1c542" name="baf3b817-31a5-4932-a06d-eb8487b9f6af" type="radio">
+</input><label class="tabbed-label" for="e6d9b716-6811-4dbd-a394-f231bcf1c542">
+Windows 10: Install WSL/WSL2</label><div class="tabbed-content docutils">
+<p>WSL/WSL2 is needed for command line terminal. It gives Linux distribution <em>without</em> GUI. It is possible to also use GUI with some extra software as will be indicated.</p>
+<p>Here is the procedure:</p>
+<ul class="simple">
+<li><p>First: Check the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Detailed instructions from Microsoft</a></p>
+<ul>
+<li><p><strong>Note:</strong> If you are not in the <em>Windows Insiders</em> program (if you don’t know what it is, then you aren’t), you must follow the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps"><em>Manual Installation steps</em></a></p></li>
+<li><p>The installation  took about 20 minutes on an old 1.3 GHz laptop.</p></li>
+<li><p>Requires the use of <code class="docutils literal notranslate"><span class="pre">PowerShell</span> <span class="pre">as</span> <span class="pre">Administrator</span></code>. Pay attention when the instruction ask you to open the <code class="docutils literal notranslate"><span class="pre">PowerShell</span> <span class="pre">as</span> <span class="pre">an</span> </code>Administrator`.</p></li>
+</ul>
+</li>
+<li><p>For Ubuntu distribution, choose 20.04 LTS. Here’s what to choose at the Microsoft App Store: <a class="reference external" href="https://www.microsoft.com/en-ca/p/ubuntu-2004-lts/9n6svws3rx71?activetab=pivot:overviewtab">Ubuntu 20.04 LTS at MS App Store</a></p></li>
+<li><p>After installation, you <em>must</em> update WSL/WSL2</p></li>
+</ul>
+<p>Here are the detailed steps for WSL2 (if in doubt, see the video below):</p>
+<ul>
+<li><p>Open PowerShell as an Administrator. In PowerShell, give the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dism</span><span class="o">.</span><span class="n">exe</span> <span class="o">/</span><span class="n">online</span> <span class="o">/</span><span class="n">enable</span><span class="o">-</span><span class="n">feature</span> <span class="o">/</span><span class="n">featurename</span><span class="p">:</span><span class="n">Microsoft</span><span class="o">-</span><span class="n">Windows</span><span class="o">-</span><span class="n">Subsystem</span><span class="o">-</span><span class="n">Linux</span> <span class="o">/</span><span class="nb">all</span> <span class="o">/</span><span class="n">norestart</span>
+</pre></div>
+</div>
+<p>Reboot your computer</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Reboot</span> <span class="n">computer</span>
+</pre></div>
+</div>
+</li>
+<li><p>After rebooting, download the WSL2 package: <a class="reference external" href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">WSL kernel update</a></p></li>
+<li><p>Next: Give the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Enable</span><span class="o">-</span><span class="n">WindowsOptionalFeature</span> <span class="o">-</span><span class="n">Online</span> <span class="o">-</span><span class="n">FeatureName</span> <span class="n">VirtualMachinePlatform</span> <span class="o">-</span><span class="n">NoRestart</span>
+</pre></div>
+</div>
+</li>
+<li><p>After this, give the command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">default</span><span class="o">-</span><span class="n">version</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</li>
+<li><p>If all went fine, open Microsoft App Store and search for Ubuntu. Select, <code class="docutils literal notranslate"><span class="pre">Ubuntu</span> <span class="pre">20.04</span> <span class="pre">LTS</span></code> and get it.</p></li>
+<li><p>Once you have it, click <code class="docutils literal notranslate"><span class="pre">Launch</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Launch</span>
+</pre></div>
+</div>
+</li>
+<li><p>The procedure will ask you to create a user account. This a user account for your <code class="docutils literal notranslate"><span class="pre">Linux</span> <span class="pre">shell</span></code>. You can choose any username you want.</p></li>
+<li><p>Once done, you <em>must</em> run <code class="docutils literal notranslate"><span class="pre">update</span></code> to get the latest updates for your syste,. This is done with the Ubuntu package manager by giving the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+</pre></div>
+</div>
+</li>
+<li><p>After the process finishes, run the <code class="docutils literal notranslate"><span class="pre">upgrade</span></code> procedure by giving the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This will take some time. But once it finishes, you have a new WSL2 system installed and you’re good to proceed.</p>
+<ul>
+<li><p><strong>IMPORTANT:</strong> The home directory is different from you Windows home. WSL2 can see you Windows  directories but not the other way around. Your Windows directories are located at</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">c</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>You will need this later.</p>
+<ul>
+<li><p>Optional: Do you  also want GUI with WSL2? You can install any of the following for that (not shown on the video):</p>
+<ul>
+<li><p><a class="reference external" href="https://sourceforge.net/projects/vcxsrv/">VcxSrv</a>. Free.</p>
+<ul>
+<li><p>WSL2 requires some extra settings: 1) When staring XLaunch, in <code class="docutils literal notranslate"><span class="pre">Extra</span> <span class="pre">Settings</span></code> select also <code class="docutils literal notranslate"><span class="pre">Disable</span> <span class="pre">access</span> <span class="pre">control</span></code>.     You also need to give the commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export DISPLAY=$(awk &#39;/nameserver / {print $2; exit}&#39; /etc/resolv.conf 2&gt;/dev/null):0
+export LIBGL_ALWAYS_INDIRECT=1
+</pre></div>
+</div>
+<p>Open an X-application and see that it works. If it does, then put the two above lines at the end of your <code class="docutils literal notranslate"><span class="pre">.bashrc</span></code>.
+These instructions are from <a class="reference external" href="https://stackoverflow.com/questions/61110603/how-to-set-up-working-x11-forwarding-on-wsl2">Stackoverflow</a>. The setting have been tested and they work.</p>
+</li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://sourceforge.net/projects/xming/">Xming</a>. Free.</p></li>
+<li><p><a class="reference external" href="https://x410.dev/">X410</a> from Microsoft App Store.</p>
+<ul class="simple">
+<li><p>This is not free but works well. When using with WSL2, X410 needs to be give permission to get through the firewall. See <a class="reference external" href="https://x410.dev/cookbook/wsl/using-x410-with-wsl2/">Using X410 with WSL2</a></p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>You can also watch the following video of WSL2 installation on laptop:</p>
+<p>The video follows the manual installation steps (=<em>non Windows Insiders Program</em> ones)</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Video: Installation of WSL2 on a Windows 10 laptop</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The video shows the <em>full installation</em> of WSL2 on a Windows 10 laptop. The video is unedited so it shows the full downloads (scroll over to speed it up) as well. If the video appears too small, you can make it full screen on access it directly on another browser window. It is 1080 resolution, just select it if it seems like low resolution in the first place.</p>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/501562652?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+</div>
+</details></div>
+<input id="a145f3c4-74c4-4e71-b0e8-a30b19f21022" name="baf3b817-31a5-4932-a06d-eb8487b9f6af" type="radio">
+</input><label class="tabbed-label" for="a145f3c4-74c4-4e71-b0e8-a30b19f21022">
+MacOS</label><div class="tabbed-content docutils">
+<ul class="simple">
+<li><p>Check which version of MacOS you have (under <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">this</span> <span class="pre">Mac</span></code>).</p>
+<ul>
+<li><p>if you have <code class="docutils literal notranslate"><span class="pre">Catalina</span></code>: It is <em>not</em> advisable to update it to <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">Sur</span></code> as there are reports that some of the tools that we need may not work. This may, of course, change / have changed (Nov 2020). The installations have been tested on <code class="docutils literal notranslate"><span class="pre">Catalina</span></code> but not <code class="docutils literal notranslate"><span class="pre">Big</span> <span class="pre">Sur</span></code>.</p></li>
+</ul>
+</li>
+</ul>
+<p>Check if you have <code class="docutils literal notranslate"><span class="pre">Xcode</span></code>. If not install it, it is required. <code class="docutils literal notranslate"><span class="pre">Xcode</span></code> requires registration but it is free. It provides the necessary compilers and other tools that are needed for setting up Gromacs and other software.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://developer.apple.com/xcode/">Xcode</a>. Follow the instructions as Apple’s web site.</p>
+<ul>
+<li><p>Xcode provides the compilers, libraries and other development tools</p></li>
+<li><p>This may take some time depending on your internet connection.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="task-2-package-manager">
+<h3>Task 2: Package manager<a class="headerlink" href="#task-2-package-manager" title="Permalink to this headline">¶</a></h3>
+<div class="tabbed-set docutils">
+<input checked="checked" id="05801d73-2009-43e1-bc48-59ed77447490" name="5cd7e31f-b245-4240-9dd3-9a4751f35010" type="radio">
+</input><label class="tabbed-label" for="05801d73-2009-43e1-bc48-59ed77447490">
+Linux</label><div class="tabbed-content docutils">
+<p>You already have a package manager, so there is nothing to do.</p>
+</div>
+<input id="ae6e5597-0362-40ac-abd9-376aca6660ec" name="5cd7e31f-b245-4240-9dd3-9a4751f35010" type="radio">
+</input><label class="tabbed-label" for="ae6e5597-0362-40ac-abd9-376aca6660ec">
+WSL/WSL2</label><div class="tabbed-content docutils">
+<p>When WSL/WSL2 was installed, you got a package manager. There is nothing to do at this step.</p>
+</div>
+<input id="44b5ebc4-2fb8-4e36-a3d4-cde392e57e55" name="5cd7e31f-b245-4240-9dd3-9a4751f35010" type="radio">
+</input><label class="tabbed-label" for="44b5ebc4-2fb8-4e36-a3d4-cde392e57e55">
+MacOS</label><div class="tabbed-content docutils">
+<p>The next task is to install a package manager such as  <a class="reference external" href="https://www.macports.org/">MacPorts</a> or <a class="reference external" href="https://brew.sh/">Homebrew</a>. Here, we use <a class="reference external" href="https://brew.sh/">Homebrew</a> but MacPorts works well too. However, the instructions on these pages are for Homebrew only.</p>
+<p>See the installation and operating instructions at the <a class="reference external" href="https://brew.sh/">Homebrew</a> web site. Here is a copy from the web site.</p>
+<p><strong>Installation:</strong></p>
+<ul class="simple">
+<li><p>Open a terminal window and give the following command:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span>
+</pre></div>
+</div>
+<p>Once done, update Homebrew:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">update</span>
+</pre></div>
+</div>
+<p>Now you are ready install software using Homebrew. For how to do it and further instructions, see  <a class="reference external" href="https://brew.sh/">Homebrew</a> web site.</p>
+</div>
+</div>
+</div>
+<div class="section" id="task-3-create-work-directory-for-the-course">
+<h3>Task 3: Create work directory for the course<a class="headerlink" href="#task-3-create-work-directory-for-the-course" title="Permalink to this headline">¶</a></h3>
+<p>Independent of your operating system:</p>
+<ul>
+<li><p>Open a terminal window and type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This changes the directory to your <code class="docutils literal notranslate"><span class="pre">home</span> <span class="pre">directory</span></code> (we will go through Linux commands separately, right now we just want to create a work directory for the course material).</p>
+<ul>
+<li><p>Then, give the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">CHEM3300G</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>This created a directory called <code class="docutils literal notranslate"><span class="pre">CHEM3300G</span></code>. This is the directory we will use for installing Gromacs, running simulations and analyzing data.</p>
+<ul>
+<li><p>Check that the directory is there by giving the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">-</span><span class="n">lt</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="task-4-install-vmd">
+<h3>Task 4: Install VMD<a class="headerlink" href="#task-4-install-vmd" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The instructions are provided here: <a class="reference internal" href="../../extras/vmd-install.html"><span class="doc std std-doc">VMD installation</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="task-5-install-python-and-jupyter-lab">
+<h3>Task 5: Install Python and Jupyter Lab<a class="headerlink" href="#task-5-install-python-and-jupyter-lab" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>The instructions are provided here: <a class="reference internal" href="../week02/python-installation.html"><span class="doc std std-doc">Python and Jupyter installation</span></a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="done-let-s-move-to-the-next-step">
+<h2>DONE, let’s move to the next step<a class="headerlink" href="#done-let-s-move-to-the-next-step" title="Permalink to this headline">¶</a></h2>
+<p>Now we are done with most important tools. There are still a few things to install but we do so next week. The important issue is that now we have the basic tools for visualization and analysis.</p>
+</div>
+<div class="section" id="task-6-try-the-command-line-terminal">
+<h2>Task 6: Try the command line terminal<a class="headerlink" href="#task-6-try-the-command-line-terminal" title="Permalink to this headline">¶</a></h2>
+<p>Now it is time to try to command line terminal. Go to</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../week02/linux-basic-commands-2.html"><span class="doc std std-doc">Basic Linux commands</span></a></p></li>
+</ul>
+<p>go through the page and work through the commands there.</p>
+<p><strong>Important:</strong> When there is a warning sign, take it <em>very</em> seriously as there are a few commands that are dangerous!</p>
+<p>If there are commands or concepts you don’t understand, please ask during the next class.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

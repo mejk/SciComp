@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VMD - Visual Molecular Dynamics &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week03/vmd_lab_1.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week03/vmd_lab_1.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="VMD - Visual Molecular Dynamics" />
+<meta property="og:description" content="VMD - Visual Molecular Dynamics  VMD  1UBQ  Keywords: VMD,  visualization, atomistic simulations  About VMD:  Humphrey, W., Dalke, A. and Schulten, K., “VMD - V" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week03/vmd_lab_1.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-on-vmd">
+   More on VMD:
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-vmd">
+   What is VMD
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#features">
+   Features
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basics">
+   Basics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-molecular-data">
+     Loading molecular data
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#orthographic-vs-perspective-mode">
+       Orthographic vs perspective mode
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#loading-and-viewing-a-trajectory">
+     Loading and viewing a trajectory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving-and-re-loading-a-visualization">
+     Saving and re-loading a visualization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#customizing-vmd">
+     Customizing VMD
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#representations">
+     Representations
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#saving">
+     Saving
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rendering-and-tuning-its-quality">
+     Rendering and tuning its quality
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#high-quality-rendering">
+     High-quality rendering
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#tachyon">
+       Tachyon
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#povray-rendering">
+       Povray rendering
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#removing-periodic-images">
+     Removing periodic images
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updating-every-frame">
+     Updating every frame
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#making-movies">
+   Making movies
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-ffmpeg-encoder">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       ffmpeg
+      </span>
+     </code>
+     encoder
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#renderers">
+     Renderers
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced">
+   Advanced
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extensions">
+   Extensions
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-the-tcl-tk-command-shell">
+     Using the Tcl/Tk  command shell
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#showing-elapsed-time">
+     Showing elapsed time
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualization-of-martini-simulations">
+   Visualization of MARTINI simulations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tips-and-tricks">
+   Tips and Tricks
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#convert-sequentially-number-files-to-a-movie">
+     Convert sequentially number files to a movie
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="vmd-visual-molecular-dynamics">
+<h1>VMD - Visual Molecular Dynamics<a class="headerlink" href="#vmd-visual-molecular-dynamics" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="bg-primary reference internal image-reference" href="class/week03/../images/logos/vmd_logo.gif"><img alt="VMD" class="bg-primary align-right" src="class/week03/../images/logos/vmd_logo.gif" style="width: 250px;" /></a>
+<a class="bg-primary reference internal image-reference" href="class/week03/../images/1ubq-cropped.jpg"><img alt="1UBQ" class="bg-primary align-right" src="class/week03/../images/1ubq-cropped.jpg" style="width: 250px;" /></a>
+<p class="card-text"><strong>Keywords:</strong> VMD,  visualization, atomistic simulations</p>
+<p class="card-text"><strong>About VMD:</strong></p>
+<p class="card-text">Humphrey, W., Dalke, A. and Schulten, K., <em>“VMD - Visual Molecular Dynamics”</em>,
+J. Molec. Graphics, 1996, vol. 14, pp. 33-38.</p>
+<p class="card-text"><strong>Associated material:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><span class="xref myst">VMD plugins</span></p></li>
+<li><p class="card-text"><span class="xref myst">VMD selections</span></p></li>
+<li><p class="card-text"><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html">VMD documentation</a> from the VMD Home Page</p></li>
+</ul>
+<p class="card-text"><strong>Alternatives to VMD:</strong> Pymol</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<p>Why visualize?</p>
+</div>
+<div class="section" id="more-on-vmd">
+<h2>More on VMD:<a class="headerlink" href="#more-on-vmd" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/">VMD Home Page</a></p></li>
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Training/Tutorials/vmd/tutorial-html/index.html">VMD tutorial</a> from the VMD web site</p></li>
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/current/docs.html">VMD documentation and tutorials</a> from the VMD web site</p></li>
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/plugins/">VMD plugin library and documentation for extensions</a></p></li>
+<li><p><a class="reference external" href="http://www.ks.uiuc.edu/Research/vmd/doxygen/">VMD programmer’s guide</a></p></li>
+</ul>
+</div>
+<div class="section" id="what-is-vmd">
+<h2>What is VMD<a class="headerlink" href="#what-is-vmd" title="Permalink to this headline">¶</a></h2>
+<p>VMD - Visual Molecular Dynamics - is a general purpose  software for 3D molecular visualization and data analysis of molecular systems. It can read file formats and data produced by most common software including PDB, xyz, NAMD, Gromacs, Amber, CPMD, and it can used to visualize and analyze data from both classical and quantum simulations. VMD includes a lot of various analysis tools and it also has a plugin system for developers. VMD is also able to use CUDA acceleration of an NVIDIA GPU is present.</p>
+<p>VMD is developed in Theoretical and Computational Biophysics Group at the University of Illinois at Urbana-Champaign.</p>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<p><strong>Operating systems:</strong> VMD is available for Linux, Windows and OSX. VMD has both a GUI and a command line interface.</p>
+<p><strong>Visualization:</strong> VMD can produce publication quality graphics and movies. It supports verious rendering methods including <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code> (internal) and <code class="docutils literal notranslate"><span class="pre">povray</span></code> (installation of povray is required for that). It has very powerful tools for section  atoms, molecules and groups based on various criteria.</p>
+<p><strong>Data analysis:</strong> VMD has a wide range of built-in analysis tools. There is no set limit for the length of a trajectory apart from available memory.</p>
+<p><strong>Scripting and extensions:</strong> VMD also offers a very powerful scripting interface using Tcl/Tk. It has also an interface to <a class="reference external" href="https://www.plumed.org/">PLUMED</a> collective variable analysis (requires separate installation of PLUMED).</p>
+<p><strong>But I am an experimentalist:</strong> Besides reading all the major file formats, VMD has plugins that are intended for experimental data. These include MDFF for Cryo-EM data and others.</p>
+<p><strong>Special:</strong></p>
+<ul class="simple">
+<li><p>VMD has  some <a class="reference external" href="https://www.ks.uiuc.edu/Research/namd/">NAMD</a>-specific tools for setting up molecular simulations.</p></li>
+<li><p>VMD has an interface for reading PDB entries by accession number directly from the <a class="reference external" href="https://www.rcsb.org/">PDB database</a>. Read more <a class="reference external" href="https://www.rcsb.org/pages/about-us/index">background information</a> about the PDB database.</p></li>
+<li><p>VMD also has an interface to <a class="reference external" href="http://www.poissonboltzmann.org/">APBS</a> (Adaptive Poisson Boltzmann Solver) for calculations of continuum electrostatics.</p></li>
+<li><p>VMD has a toolkit for force field parameterization called <a class="reference external" href="http://www.ks.uiuc.edu/Research/vmd/plugins/fftk/">Force Field Toolkit</a> plugin (ffTK)</p></li>
+</ul>
+<p>Note that many of the plugins require installation of additional software or/and libraries.</p>
+</div>
+<div class="section" id="basics">
+<h2>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h2>
+<p>Movie showing the basic VMD window.</p>
+<div class="section" id="loading-molecular-data">
+<h3>Loading molecular data<a class="headerlink" href="#loading-molecular-data" title="Permalink to this headline">¶</a></h3>
+<p><strong>PDB database:</strong> VMD has the capability to download  PDB files directly from the PDB database.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.rcsb.org/">RCSB Protein Databank (PDB)</a></p></li>
+</ul>
+<p><strong>PDB file:</strong></p>
+<p><strong>Note: Trouble loading from PDB directly to VMD?</strong></p>
+<p>There seems to be some issues loading molecules directly from PDB to vmd-1.9.3 but the feature works in 1.9.4-alpha51.</p>
+<!--
+However, vmd-1.9.3 can still retrieve PDB files and download them. The files can then be read into VMD. 
+-->
+<p>As an example, let’s retrieve (from PDB) the COVID-19 spike protein, PDB accession code <code class="docutils literal notranslate"><span class="pre">6ZB4</span></code></p>
+<p>Here’s the PDB web site entry for it:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.rcsb.org/structure/6ZB4">SARS CoV-2 Spike protein, Closed conformation, C1 symmetry</a>.</p></li>
+</ul>
+<p>Movie showing some basic VMD operations usingh <code class="docutils literal notranslate"><span class="pre">6ZB4</span></code>. These include zooming, rotating and resetting the view, switching between the perspective and orthographic modes, creating representations, using selections, changing colors, querying for information about a selected residue and some other simple tasks.</p>
+<div class="section" id="orthographic-vs-perspective-mode">
+<h4>Orthographic vs perspective mode<a class="headerlink" href="#orthographic-vs-perspective-mode" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="loading-and-viewing-a-trajectory">
+<h3>Loading and viewing a trajectory<a class="headerlink" href="#loading-and-viewing-a-trajectory" title="Permalink to this headline">¶</a></h3>
+<p>Trajectory and structure</p>
+</div>
+<div class="section" id="saving-and-re-loading-a-visualization">
+<h3>Saving and re-loading a visualization<a class="headerlink" href="#saving-and-re-loading-a-visualization" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="customizing-vmd">
+<h3>Customizing VMD<a class="headerlink" href="#customizing-vmd" title="Permalink to this headline">¶</a></h3>
+<p>In older versions of VMD, one could simply edit the <code class="docutils literal notranslate"><span class="pre">.vmdrc</span></code> file located in the home directory. That is, however, not recommended. The better (and also very easy way) to change the initial settings is to use the <code class="docutils literal notranslate"><span class="pre">VMD</span> <span class="pre">Preferences</span></code> menu under <code class="docutils literal notranslate"><span class="pre">Extensions</span></code> abd from there saving the settings by clicing <code class="docutils literal notranslate"><span class="pre">Write</span> <span class="pre">Settings</span> <span class="pre">to</span> <span class="pre">VMDRC</span></code>. This works in Windows, Linux and Mac. For example, my preferences are white background, orthographic viewing and not showing waters.</p>
+</div>
+<div class="section" id="representations">
+<h3>Representations<a class="headerlink" href="#representations" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ks.uiuc.edu/Research/vmd/allversions/repimages/">Molecular Representations in VMD</a> from the VMD web site</p></li>
+</ul>
+</div>
+<div class="section" id="saving">
+<h3>Saving<a class="headerlink" href="#saving" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="rendering-and-tuning-its-quality">
+<h3>Rendering and tuning its quality<a class="headerlink" href="#rendering-and-tuning-its-quality" title="Permalink to this headline">¶</a></h3>
+<p>Resolution settings</p>
+<p>Colors and materials</p>
+<p>Axes on/off</p>
+<p>Orthographic vs perspective</p>
+<p>Depth cueing</p>
+<p>Clipping plane</p>
+<p>Volumetric rendering</p>
+<p>http://mgltools.scripps.edu/downloads#msms</p>
+</div>
+<div class="section" id="high-quality-rendering">
+<h3>High-quality rendering<a class="headerlink" href="#high-quality-rendering" title="Permalink to this headline">¶</a></h3>
+<p>There are several ways to produce very high quality publication level graphics. Here, two of the most common ones are covered, interal <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code> and <code class="docutils literal notranslate"><span class="pre">povray</span></code> rendering. Independent of teh technique - and this also applied to the screenshot method - is that the display size needs to be chosen appropriately. While with the screenshot method the screen size is exactly as it is on the display, for  <code class="docutils literal notranslate"><span class="pre">Tachyon</span></code> and <code class="docutils literal notranslate"><span class="pre">povray</span></code> rendering the proportions are preserved and the actualy resolution can be changed when calling the renderer. Thus, the proprtions must be chosen to be commensurate with the desired resolution.</p>
+<p>This is how the display size can be chosen from the VMD command shell:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">display</span> <span class="n">resize</span> <span class="mi">100</span><span class="n">x100</span>
+</pre></div>
+</div>
+<div class="section" id="tachyon">
+<h4>Tachyon<a class="headerlink" href="#tachyon" title="Permalink to this headline">¶</a></h4>
+<p>Display -&gt; Rendermode -&gt; GLSL
+Display –&gt; Display Setting –&gt; Shadow ON, Ambient Occl. ON</p>
+<p>Select the rendering method as <code class="docutils literal notranslate"><span class="pre">tachyon</span></code></p>
+<p>In the ‘Render command` window</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="n">aasamples</span> <span class="mi">12</span> <span class="o">%</span><span class="n">s</span> <span class="o">-</span><span class="n">auto_skylight</span> <span class="mf">0.7</span> <span class="o">-</span><span class="nb">format</span> <span class="n">TARGA</span> <span class="o">-</span><span class="n">res</span> <span class="mi">2048</span> <span class="mi">2048</span> <span class="o">-</span><span class="n">o</span> <span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="n">tga</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">-</span><span class="n">res</span> <span class="mi">12460</span> <span class="mi">9620</span> <span class="o">-</span><span class="n">aasamples</span> <span class="mi">36</span> <span class="o">-</span><span class="n">add_skylight</span> <span class="mf">1.0</span> <span class="o">%</span><span class="n">s</span> <span class="o">-</span><span class="n">normalize</span> <span class="o">-</span><span class="nb">format</span> <span class="n">PSD48</span> <span class="o">-</span><span class="n">o</span> <span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="n">psd</span>
+</pre></div>
+</div>
+<p>formats:</p>
+<p><code class="docutils literal notranslate"><span class="pre">TARGA</span></code>, <code class="docutils literal notranslate"><span class="pre">PSD48</span></code>, <code class="docutils literal notranslate"><span class="pre">BMP</span></code>,</p>
+<!--
+`JPEG`, `PNG`, 
+-->
+<p>From VMD console:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">render</span> <span class="n">Tachyon</span> <span class="n">filename</span><span class="o">.</span><span class="n">dat</span> <span class="s2">&quot;/path/to/tachyon_binary&quot;</span> <span class="n">filename</span><span class="o">.</span><span class="n">dat</span> <span class="o">-</span><span class="n">aasamples</span> <span class="mi">12</span> <span class="o">-</span><span class="nb">format</span> <span class="n">TARGA</span> <span class="o">-</span><span class="n">res</span> <span class="mi">4096</span> <span class="mi">4096</span> <span class="o">-</span><span class="n">o</span> <span class="n">outfile</span><span class="o">.</span><span class="n">tga</span>
+</pre></div>
+</div>
+<p>Transparent molecular surfaces (value 1 seems to work well)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">-</span><span class="n">trans_max_surfaces</span> 
+</pre></div>
+</div>
+<p>Speed it up? Check the number of threads using, for example, <code class="docutils literal notranslate"><span class="pre">lscpu</span></code>. I have 4 cores and 2 threads per core, that is, 8 threads in total.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span> <span class="o">-</span><span class="n">numthreads</span> <span class="mi">8</span> <span class="o">-</span><span class="n">aasamples</span> <span class="mi">12</span> <span class="o">%</span><span class="n">s</span> <span class="o">-</span><span class="n">auto_skylight</span> <span class="mf">0.7</span> <span class="o">-</span><span class="nb">format</span> <span class="n">TARGA</span>  <span class="o">-</span><span class="n">trans_max_surfaces</span> <span class="mi">1</span>
+ <span class="o">-</span><span class="n">res</span> <span class="mi">2048</span> <span class="mi">2048</span> <span class="o">-</span><span class="n">o</span> <span class="o">%</span><span class="n">s</span><span class="o">.</span><span class="n">tga</span>
+
+</pre></div>
+</div>
+<p>Transparent background</p>
+<p><strong>High resolution movie:</strong></p>
+<p>Before rendering any movies, ensnure that you have enough storage space available.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>irst create the .dat file for each frame by choosing the following
+
+Extension -&gt; Visualization -&gt; Movie Maker
+
+Change the Movie Maker settings as
+
+Renderer -&gt; Tachyon
+Name of the movie frame
+Movie Settings -&gt; Trajectory with ‘4. Delete image files’ uncheked
+Format -&gt; Targa Frames
+
+Run this to generate the .dat files
+Now process the *.dat files with the following option as slurm jobs
+
+tachyon=/software/vmd-1.9.2-x86_64/lib64/tachyon_LINUXAMD64
+
+${tachyon} -numthreads 16 -aasamples 12 frame.${a}.dat -format TGA -res 512 512 -o frame.${a}.tga;
+(Change all the numbers accordingly)
+If a huge number of frames are required, then the job can be split as multiple slurm jobs which will speed up the whole process
+
+Finally process all the image files with ffmpeg
+
+ffmpeg -threads 16 -r 30 -i frmae.%05d.tga -s 512x512 -vcodec libx264 -b 5000k movie.mpg
+(by assuming all the frames has dimension 512x512. If the frame dimension has changed by display resize command, then that value needs to be used here)
+One can also play with the ffmpeg options
+</pre></div>
+</div>
+<!--
+pdbalias atom HOH O OH2
+pdbalias residue HOH TIP3
+-->
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://mini.ourphysics.org/wiki/index.php/How_to_make_images_for_publication_using_VMD">How to make images for publication using VMD</a></p></li>
+<li><p><a class="reference external" href="http://linuxrajib.blogspot.com/2016/03/vmd-high-resolution-image-and-movie.html">Simulate, analyze, plot blog</a></p></li>
+<li><p><a class="reference external" href="https://rangsimanketkaew.github.io/">Rangsiman Ketkaew</a></p></li>
+</ul>
+</div>
+<div class="section" id="povray-rendering">
+<h4>Povray rendering<a class="headerlink" href="#povray-rendering" title="Permalink to this headline">¶</a></h4>
+<!-- 
+Povray stands for *Persistence of vision*. It can be easily installed in Linux and Mac:
+
+
+````{tabbed} Linux & WSL/WSL2:
+```
+sudo apt install povray
+```
+````
+
+````{tabbed} Mac:
+```
+brew install povray
+```
+````
+
+-->
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://knottsgroup.groups.et.byu.net/labbook/index.php?n=Main.UsingVMD">povray stuff</a></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="removing-periodic-images">
+<h3>Removing periodic images<a class="headerlink" href="#removing-periodic-images" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="updating-every-frame">
+<h3>Updating every frame<a class="headerlink" href="#updating-every-frame" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="making-movies">
+<h2>Making movies<a class="headerlink" href="#making-movies" title="Permalink to this headline">¶</a></h2>
+<p>Under <em>Extensions</em>  <em>Visualization</em>  <em>Movie Maker</em></p>
+<div class="section" id="the-ffmpeg-encoder">
+<h3>The <code class="docutils literal notranslate"><span class="pre">ffmpeg</span></code> encoder<a class="headerlink" href="#the-ffmpeg-encoder" title="Permalink to this headline">¶</a></h3>
+<div class="tabbed-set docutils">
+<input checked="checked" id="8353e38c-66b8-40a6-8c29-b209ad5210ad" name="5e551a85-84fc-424e-b433-ab93ede3210d" type="radio">
+</input><label class="tabbed-label" for="8353e38c-66b8-40a6-8c29-b209ad5210ad">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">ffmpeg</span>
+</pre></div>
+</div>
+</div>
+<input id="36d3e32f-3818-4440-bf3d-e86f42e280c8" name="5e551a85-84fc-424e-b433-ab93ede3210d" type="radio">
+</input><label class="tabbed-label" for="36d3e32f-3818-4440-bf3d-e86f42e280c8">
+Mac:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">ffmpeg</span>
+</pre></div>
+</div>
+</div>
+<input id="d671d48b-0a12-4811-ae27-5f0359807029" name="5e551a85-84fc-424e-b433-ab93ede3210d" type="radio">
+</input><label class="tabbed-label" for="d671d48b-0a12-4811-ae27-5f0359807029">
+Windows 10</label><div class="tabbed-content docutils">
+<ul class="simple">
+<li><p>Download from <a class="reference external" href="https://www.ffmpeg.org/download.html">ffmepg</a></p></li>
+</ul>
+</div>
+</div>
+<!--
+```
+sudo port install ffmpeg +gpl +postproc +lame +theora +libogg +vorbis
+ +xvid +x264 +a52 +faac +faad +dts +nonfree
+```
+-->
+</div>
+<div class="section" id="renderers">
+<h3>Renderers<a class="headerlink" href="#renderers" title="Permalink to this headline">¶</a></h3>
+<p><strong>Windows specific:</strong></p>
+</div>
+</div>
+<div class="section" id="advanced">
+<h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="extensions">
+<h2>Extensions<a class="headerlink" href="#extensions" title="Permalink to this headline">¶</a></h2>
+<p>Under the menu <em>Extensions</em></p>
+<div class="section" id="using-the-tcl-tk-command-shell">
+<h3>Using the Tcl/Tk  command shell<a class="headerlink" href="#using-the-tcl-tk-command-shell" title="Permalink to this headline">¶</a></h3>
+<p>Tcl stands for  Tool Command Language and Tk is the graphical usner interface toolkit for Tcl. Tcl/Tk is supported across the different operating systems (Windows, Linux, OSX).</p>
+</div>
+<div class="section" id="showing-elapsed-time">
+<h3>Showing elapsed time<a class="headerlink" href="#showing-elapsed-time" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="visualization-of-martini-simulations">
+<h2>Visualization of MARTINI simulations<a class="headerlink" href="#visualization-of-martini-simulations" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="http://cgmartini.nl/index.php/tutorials-general-introduction-gmx5/cgviz-gmx5">Martini tutorials: visualizing Martini systems using VMD</a></p></li>
+</ul>
+</div>
+<div class="section" id="tips-and-tricks">
+<h2>Tips and Tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">¶</a></h2>
+<p>Put two movies on top of each other.  They must have the same dimensions.</p>
+<p>Source:[aaa] (https://stackoverflow.com/questions/11552565/vertically-or-horizontally-stack-several-videos-using-ffmpeg)</p>
+<p>Vertically:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">input1</span> <span class="o">-</span><span class="n">i</span> <span class="n">input2</span> <span class="o">-</span><span class="n">filter_complex</span> <span class="n">vstack</span><span class="o">=</span><span class="n">inputs</span><span class="o">=</span><span class="mi">2</span> <span class="n">output</span>
+</pre></div>
+</div>
+<p>Horizontally:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">i</span> <span class="n">input0</span> <span class="o">-</span><span class="n">i</span> <span class="n">input1</span> <span class="o">-</span><span class="n">filter_complex</span> <span class="n">hstack</span><span class="o">=</span><span class="n">inputs</span><span class="o">=</span><span class="mi">2</span> <span class="n">output</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://trac.ffmpeg.org/wiki/How%20to%20speed%20up%20/%20slow%20down%20a%20video">Other sources:</a></p></li>
+</ul>
+<div class="section" id="convert-sequentially-number-files-to-a-movie">
+<h3>Convert sequentially number files to a movie<a class="headerlink" href="#convert-sequentially-number-files-to-a-movie" title="Permalink to this headline">¶</a></h3>
+<p>Flags:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="o">-</span><span class="n">r</span> <span class="p">:</span><span class="n">framerate</span>
+  <span class="o">-</span><span class="n">i</span> <span class="p">:</span> <span class="nb">input</span> <span class="n">files</span> <span class="n">number</span> <span class="n">sequentially</span> <span class="p">(</span><span class="n">the</span> <span class="n">example</span> <span class="n">below</span> <span class="n">has</span> <span class="mi">5</span> <span class="n">digits</span> <span class="k">with</span> <span class="n">leading</span> <span class="n">zeros</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ffmpeg</span> <span class="o">-</span><span class="n">r</span> <span class="mi">1</span> <span class="o">-</span><span class="n">i</span> <span class="n">movie</span><span class="o">-%</span><span class="mi">05</span><span class="n">d</span><span class="o">.</span><span class="n">png</span> <span class="n">apl</span><span class="o">-</span><span class="n">movie</span><span class="o">.</span><span class="n">mp4</span>
+</pre></div>
+</div>
+<!--
+### COnvert svg to png using inkscape on command like.
+# Flags:
+#  -W  : width (if no height is given, it's computed automatically)
+-->
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">inkscape</span> <span class="o">-</span><span class="n">z</span> <span class="o">-</span><span class="n">e</span> <span class="n">output</span><span class="o">.</span><span class="n">png</span>  <span class="o">-</span><span class="n">w</span> <span class="mi">1000</span>  <span class="nb">input</span><span class="o">.</span><span class="n">svg</span>    
+</pre></div>
+</div>
+<p>Set the background color for transparent svg:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1">#ffffff = white</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>inkscape -z --export-background=&quot;#ffffff&quot; -e $output.png  -w 1024  $input.svg
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#===============================================================================
+#
+# Simple bash script to convert a bunch of svg&#39;s to png&#39;s and convert to a movie
+#-------------------------------------------------------------------------------
+#  Sets background to white (transparent svg)
+#  Adjust the numbers and file names as necessary
+#  Copy and save.
+#-------------------------------------------------------------------------------
+#
+#!/bin/bash
+fnbase=&quot;movie-&quot;
+for i in {0..10}
+do
+    printf -v ii &#39;%05d&#39; $i
+    echo $ii
+    fnsvg=${fnbase}${ii}&quot;.svg&quot;
+    fnpng=${fnbase}${ii}&quot;.png&quot;
+    echo $fnsvg
+    inkscape -z --export-background=&quot;#ffffff&quot; -e ${fnpng}  -w 1024  ${fnsvg} 
+done
+
+ffmpeg -r 1 -i movie-%05d.png apl-movie.mp4
+
+exit
+
+#=================================================================================
+
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>

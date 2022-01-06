@@ -1,0 +1,1531 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First look into particle simulations &#8212; SciComp9502B</title>
+    
+  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week03/moldy-1-with-old-stuff.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+<!-- Opengraph tags -->
+<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week03/moldy-1-with-old-stuff.html" />
+<meta property="og:type"        content="article" />
+<meta property="og:title"       content="First look into particle simulations" />
+<meta property="og:description" content="First look into particle simulations  Learning goals:  To learn the basic terms and terminology of particle simulations  To have a basic understanding of molecu" />
+<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
+
+<meta name="twitter:card" content="summary" />
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../index.html">
+  
+  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9505B
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Lectures
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/Linux-basics.html">
+   1. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   2. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-intro.html">
+   3. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   4. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="random_numbers.html">
+   5. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More material
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   1. On computation and codes
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  Installation instructions
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   1. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   2. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   3. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  How-tos
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   1. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   2. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   3. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   4. Helpful software
+  </a>
+ </li>
+</ul>
+<p class="caption collapsible-parent">
+ <span class="caption-text">
+  More on computers / help
+ </span>
+</p>
+<ul class="nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
+   ssh keys, aliases and connecting using ssh keys
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+   <i class="fas fa-external-link-alt">
+   </i>
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week03/moldy-1-with-old-stuff.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#particle-vs-continuum-simulations">
+   Particle vs continuum simulations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulation-methods-for-particle-systems">
+   Simulation methods for particle systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monte-carlo">
+     Monte Carlo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+     Classical Molecular Dynamics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-the-output-of-a-particle-simulation">
+     What is the output of a particle simulation?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#system-sizes">
+     System sizes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#random-numbers-in-mc">
+     Random numbers in MC
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#classical-md">
+   Classical MD
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id12">
+   Simulation methods for particle systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Monte Carlo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#newton-s-laws">
+     Newton’s laws:
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#newton-s-first-law">
+       Newton’s first law:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#newton-s-second-law">
+       Newton’s second law:
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#newton-s-third-law">
+       Newton’s third law:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equations-of-motion">
+     Equations of motion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-conservation">
+     Energy conservation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#but-experimental-system-are-at-constant-temperature-not-constant-energy">
+       But experimental system are at constant temperature, not constant energy
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration-of-the-equations-of-motion">
+     Integration of the equations of motion
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boundary-conditions">
+     Boundary conditions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minimum-image-convention">
+     Minimum image convention
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#initialization">
+     Initialization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-minimization-vs-equilibration-vs-production-simulation">
+     Energy minimization vs equilibration vs production simulation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#initial-velocities">
+       Initial velocities
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integration-finite-differences">
+     Integration: finite differences
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cut-off-radius">
+     Cut-off radius
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thermodynamic-ensembles">
+     Thermodynamic ensembles
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#thermostats">
+     Thermostats
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#berendsen-thermostat">
+       Berendsen thermostat
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#nose-hoover-thermostat">
+       Nosé-Hoover thermostat
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#v-rescale-thermostat">
+       v-rescale thermostat
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#andersen-thermostat">
+       Andersen thermostat
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#lowe-andersen-thermostat">
+       Lowe-Andersen thermostat
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#barostats">
+     Barostats
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-concepts-hamiltonian">
+   Basic concepts: Hamiltonian
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-concepts-statistical-mechanics">
+   Basic concepts: Statistical mechanics
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#phase-space">
+     Phase space
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#force-fields">
+   Force fields
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#molecular-interactions-bonded-and-non-bonded">
+     Molecular interactions: Bonded and non-bonded
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interactions-between-unlike-atoms-lorentz-berthelot-rules">
+     Interactions between unlike atoms: Lorentz-Berthelot rules
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boundary-conditions-open-closed-and-periodic">
+   Boundary conditions: Open, closed and periodic
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#md-workflow">
+   MD workflow
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#energy-minimization">
+     Energy minimization
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-equilibration">
+     Pre-equilibration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#equilibration">
+     Equilibration
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#production-run">
+     Production run
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trajectory-data-analysis">
+     Trajectory / data analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#atomic-and-molar-masses">
+   Atomic and molar masses
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historical-notes">
+     Historical notes:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#how-to-estimate-the-number-of-molecules-and-box-size">
+     How to estimate the number of molecules and box size
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#example-estimate-for-the-number-of-water-molecules-and-the-size-of-the-simulation-box">
+       Example: Estimate for the number of water molecules and the size of the simulation box
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="first-look-into-particle-simulations">
+<h1>First look into particle simulations<a class="headerlink" href="#first-look-into-particle-simulations" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To learn the basic terms and terminology of particle simulations</p></li>
+<li><p class="card-text">To have a basic understanding of molecular topologies</p></li>
+<li><p class="card-text">To understand the difference between particle and continuum models</p></li>
+<li><p class="card-text">To understand the concept of force field</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> Particle simulations, molecular dynamics, Monte Carlo, continuum simulations, molecular topology, force field, interactions</p>
+<p class="card-text"><strong>Note:</strong> The links are provided for additional information for those interested, not as required reading.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>It is finally the time to discuss some of the basic concepts of particle simulations. As this is the first description, it  does not aim to be complete, but rather practical in the sense that basic concepts and terminology are introduced. This information will be needed and elaborated later and this knowledge will help in setting up simulations and in data analysis.</p>
+<hr>
+<div class="section" id="particle-vs-continuum-simulations">
+<h2>Particle vs continuum simulations<a class="headerlink" href="#particle-vs-continuum-simulations" title="Permalink to this headline">¶</a></h2>
+<p>Although <em>particle simulations</em>  seems almost too obvious a term, it needs some attention. The most common basic object in a particle simulation is an atom or, rather, a <em>generalized atom</em>. In this course we are mostly dealing with atoms in the sense that they don’t have electrons. Their overall averaged properties are included in the <em>force fields</em> as we will discuss.</p>
+<blockquote>
+<b>Force field:</b> The parameters and functions that describe interactions in simulations.
+</blockquote>
+<p>These electron-less atoms do, however, have many other properties allowing for comparisons between the simulation results and experiments as long as one is in the same atomistic scales (for example energies, diffusion coefficients and such). The important concept here is that by <em>particle simulations</em> we refer to a system which is composed of <em>discrete entities</em>.</p>
+<blockquote>
+<b>Atom:</b> From the Greek word atomos, which means "uncuttable".
+</blockquote>
+<p>These discrete entities may also be <em>coarse-grained atoms</em> (sometimes also called <em>superatoms</em>). The concept of a coarse-grained atom can be thought of as follows: Assume that there is some method that allows us to average over some chosen physical properties of a group of atoms, for example a group of atoms in a polymer, and combine them to a single larger entity. That new entity is then a <em>coarse-grained</em> atom. At first sight such a procedure may sound like that may sound like heresy or nonsense, but there are some well-justified and rigorous methods for such procedures. Such methods will not be discusses here but in case interested, see for example references<a class="bibtex reference internal" href="#murtola2009d" id="id1">[7]</a><a class="bibtex reference internal" href="#fritz2011" id="id2">[2]</a>. An example of such an approach is the so-called MARTINI force field<a class="bibtex reference internal" href="#marrink2013" id="id3">[5]</a> in which four ‘atomistic’ atoms are a coarse-grained into one larger unit.</p>
+<div class="figure align-left" id="id17">
+<a class="bg-light reference internal image-reference" href="../../_images/water-coarse-grain.svg"><img alt="coarse-grained atoms" class="bg-light" src="../../_images/water-coarse-grain.svg" width="450px" /></a>
+<p class="caption"><span class="caption-text"><em>Examples of coarse graining. Left: A single water molecule with its hydrogens and oxygens coarse grained to a single new coarse-grained water. Right: Four water molecules coarse-grained to a single coarse-grained water molecule. This approach is used in the very popular MARTINI model<a class="bibtex reference internal" href="#marrink2013" id="id4">[5]</a>. Note that the size of a water molecule is about 2.8  Å.</em></span><a class="headerlink" href="#id17" title="Permalink to this image">¶</a></p>
+</div>
+<p>Simulations of even large non-atomistic entities such as planets are in the category of particle simulations since they are <em>discrete entities</em>. In such simulations, the internal structure of planets or celestial bodies is not included in the simulated properties. This is similar in  spirit to not taking electrons into account in atomic-level molecular dynamics simulations.  Other examples that may not be so obvious at first sight are entities such as lattice defects in solid state systems. Defects can be treated as discrete entities and they have properties such as size and they interact over distances. Here, we use ‘atomistic’ atoms and the term <em>atomistic</em> is used for describing systems at the atomic scale of Ångströms and nanometers.</p>
+<div class="figure align-left" id="id18">
+<a class="bg-light reference internal image-reference" href="../../_images/lattice-hexagonal.svg"><img alt="continuum modeling" class="bg-light" src="../../_images/lattice-hexagonal.svg" width="700px" /></a>
+<p class="caption"><span class="caption-text"><em>Two examples of a lattice. Left: A hexagonal lattice with one lattice site highlighted in red. The nearest neighbors (6) of the site are marked in blue. Midle: A square lattice. The nearest neighbors (4) of a selected site (red) are marked in blue. When simulating continuum models, the partial differential equations are solved using finite difference methods on a lattice. Thus, the space is not continuous like in a particle simulation (right).</em></span><a class="headerlink" href="#id18" title="Permalink to this image">¶</a></p>
+</div>
+<p>In contrast to <em>particle simulations</em>, in <em>continuum modeling</em> one often uses a fixed underlying <em>lattice</em> or grid in which one solves <em>finite difference</em> equations. In such simulations the material (say, a liquid, gas or a solid) is described by a <em>continuous field</em> instead of an atom. This means that, unlike in an atomistic simulations, the material no longer has internal structure but it is described by a field or several fields. The field(s) is (are)  placed on a discrete grid and the evolution of the field(s) is (are) solved on a computer; the corresponding equations of motion are solved on a lattice or using finite element methods (FEM). Such approaches are commonly used in the fields of materials research and reaction-diffusion systems.</p>
+<div class="figure align-left" id="id19">
+<a class="bg-light reference internal image-reference" href="../../_images/rayleigh-benard-cell.png"><img alt="continuum modeling" class="bg-light" src="../../_images/rayleigh-benard-cell.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-text"><em>Example of continuum modeling. Assume a situation in which fluid is placed between two plates. The lower plate is kept at a higher temperature than the upper one (left). As the warmer and lighter fluid raises to the top, the top layer cools and becomes denser and heavier. This can lead to rotation of water as indicated by the arrows: the heavier fluid drops and lighter rises. The picture on the right shows a top view of such a situation using continuum modeling (<em>phase-field model</em>). Model this type of a system would require too many particles and hence one has to use continuum models. In this case, the equations of motion (partial differential equations) were solved on a square lattice. This type of physical situation occurs, for example in oceans and is called Rayleigh-Benard convection.</em></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Movie a simulation of a reaction-diffusion system using a field</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">A movie showing an example of <em>continuum modeling</em>. The model (the so-called Gray-Scott model) describes chemical reactions between two species. The reaction starts from the lower left hand corner and as the time progresses, the whole system is covered leading to a stripy patters; this pattern describes one density of one of the chemical components, the other component has a complementary pattern. After the stripes have formed, one can observe slower evolution of the pattern. That is called <em>coarsening</em>. In this case, the partial differential equations describing the system were solved on a square lattice in two dimensions.</p>
+<div style="padding:102.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/501235656?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<p><a href="https://vimeo.com/501235656">Gray-Scott model</a> from <a href="https://vimeo.com/softsimu">mikko karttunen</a>.</p>
+</div>
+</details><!--
+It is also noteworthy that *electronic structure calculations* do not belong to the category of particle simulations either as the positions of the nuclei are fixed and the electronic structure is determined by a *minimization process*. Minimization is very different from an actual simulation as will be discussed later.
+-->
+</div>
+<div class="section" id="simulation-methods-for-particle-systems">
+<h2>Simulation methods for particle systems<a class="headerlink" href="#simulation-methods-for-particle-systems" title="Permalink to this headline">¶</a></h2>
+<p>The main simulation methods for particle systems are Monte Carlo and Molecular Dynamics (MD).</p>
+<div class="section" id="monte-carlo">
+<h3>Monte Carlo<a class="headerlink" href="#monte-carlo" title="Permalink to this headline">¶</a></h3>
+<p>In this course the focus is on the molecular dynamics method, but for completeness, let’s briefly discuss the Monte Carlo (MC) method since it is one the most widely used simulation techniques (if not <em>the most widely used</em>) with applications ranging from social sciences, to optimizing public transport networks to particle simulations.</p>
+<p>The MC method does <em>not</em> solve any equations of motion, instead it is a <em>stochastic optimization</em> method using an energy function: No time integration is involved but one uses random numbers for optimizing selected properties. In the case molecular systems, one typically optimizes (minimizes) the potential energy. This also means that, in its basic form, MC cannot measure any dynamical properties (there are variants like the kinetic Monte Carlo but even that doesn’t have time integration). Instead, MC uses <a class="reference external" href="https://en.wikipedia.org/wiki/Ensemble_average_(statistical_mechanics)"><em>ensemble averaging</em></a> to compute the system’s properties.</p>
+<p>The basic idea of MC simulation is that it uses <a class="reference external" href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator"><em>pseudo-random numbers</em></a> to overcome local energy barriers to reach the minimum energy state. Ranodm numbers are used to give the system a small probability to move in the direction that is energetically unfavorable. That is, in a crude sense the system ‘gambles’ to find the global minimum state; the name Monte Carlo comes from the <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_Casino">Monte Carlo Casino</a> in the city of <a class="reference external" href="https://en.wikipedia.org/wiki/Monaco">Monaco</a> in Southern France.
+In terms of an atomistic system, only the positions of the atoms are used and there are no velocities. Since the particles have mutual interactions described by a potential energy, minimization of potential energy yields the equilibrium configuration of the system.  The part that sometimes causes confusion is that in MC, term <em>Monte Carlo steps</em> is used. The term indicates the number of so-called <em>Monte Carlo sweeps</em> and it is sometimes falsely equated to the <em>time steps</em> in MD simulations. In MD, there is a real time step (typically in terms of femtoseconds) but the MC step does not correspond to any physical time.</p>
+<div class="figure align-left" id="id20">
+<a class="bg-light reference internal image-reference" href="../../_images/energy-minimum.svg"><img alt="energy-minimum" class="bg-light" src="../../_images/energy-minimum.svg" width="650px" /></a>
+<p class="caption"><span class="caption-text"><em>The concept behind the <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo method</a>. Consider that a system’s state is described the green sphere and the that the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_landscape">energy landscape</a> is given by the dashed line. Deterministic optimization finds the closest minimum as indicated by the arrow in the left hand side figure. Once the minimum has been reached, the system stays there. Monte Carlo is a stochastic optimization method. It uses random numbers to enable the system to move uphill in the energetically unfavorable direction as indicated by the arrow in the right hand side figure. Once the system crosses the saddle point, it can find the global minimum.</em></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
+</div>
+<p>Technically, a Monte Carlo simulation is the evaluation of statistical mechanical <em>configuration integral</em> and we will discuss this point later and it generates <em>representative samples</em> of the system.The key ingredients are the application of a <em>probability distribution</em> and the use of random numbers. In the case of physical systems, the equilibrium state has a unique distribution: the <em>Boltzmann distribution</em>.</p>
+<p>Although it may not be clear from the above, one of the great advantages of the MC method is its flexibility. In terms of atoms or particles, it can be used to simulate classical and quantum mechanical systems. It can also be applied to systems of very different nature such as optimizing train scheduling for railway networks and to numerically solve complex mathematical integrals that have no analytical solution.</p>
+</div>
+<div class="section" id="classical-molecular-dynamics">
+<h3>Classical Molecular Dynamics<a class="headerlink" href="#classical-molecular-dynamics" title="Permalink to this headline">¶</a></h3>
+<p>Now that we have an idea of the Monte Carlo, let’s move on our main interest, the MD method.
+We can define classical Molecular Dynamics the following way:</p>
+<div class="admonition-definition-of-molecular-dynamics-md admonition">
+<p class="admonition-title">Definition of Molecular Dynamics (MD)</p>
+<p>Molecular Dynamics is the evolution of Newton’s equations motion in time.</p>
+<!-- In short, the problem is simply to solve numerically `F=ma`. -->
+</div>
+<p>This definition has several important points:</p>
+<ol class="simple">
+<li><p>We have a <em>dynamical system</em> that evolves in time. That is, it provides <em>time-resolved</em> information. This is in contrast to the Monte Carlo method.</p></li>
+<li><p>The evolution of the system in the <a class="reference external" href="https://en.wikipedia.org/wiki/Phase_space"><em>phase space</em></a> is determined by solving Newton’s equations of motion for all the particles that comprise the system.</p></li>
+<li><p>In the absence of external forces and fields, the system must evolve toward <em>equilibrium</em>, that is, the state of minimum free energy. <em>Statistical mechanics</em> tells us that equilibrium described by a unique distribution, the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_distribution"><em>Boltzmann distribution</em></a>.</p></li>
+</ol>
+<p>The first published article using classical MD simulations titled “<em>Phase Transition for a Hard Sphere System</em>” was published by Alder and Wainwright in 1957<a class="bibtex reference internal" href="#alder1957" id="id5">[1]</a>. They simulated systems of 32 hard particles and also shorter simulations with 108 particles.  As already discussed, the first MC simulations were performed a few years before in 1952 by Metropolis et al.<a class="bibtex reference internal" href="#metropolis1953" id="id6">[2]</a>. Other landmarks include the paper of Gibson et al., <em>“Dynamics of Radiation Damage”</em> which is the first time for using continous potentials in an MD simulation the same sprit as we do today<a class="bibtex reference internal" href="#gibson1960" id="id7">[3]</a>. Another interesting point is the number of time steps taken in their simulation. They had 500 atoms and reported a total 219 steps which took over 3.5 hours. Keep this number in mind for the time when we set up our own simulations. Another landamark in MD simulations is the emergence of force fields and the first QM/MM simulations which can be traced to the articles of Warshel, Karplus and Lifson in the late 1960’s and early 1970s<a class="bibtex reference internal" href="#lifson1968" id="id8">[4]</a><a class="bibtex reference internal" href="#warshel1972" id="id9">[10]</a>.</p>
+</div>
+<div class="section" id="what-is-the-output-of-a-particle-simulation">
+<h3>What is the output of a particle simulation?<a class="headerlink" href="#what-is-the-output-of-a-particle-simulation" title="Permalink to this headline">¶</a></h3>
+<p>The basic result of a particle simulation is a <em>trajectory</em>, that is, the positions of atoms written at a requested output interval (the output interval is typically given as an input parameter for the simulation). In the case of an MD simulation, it is also possible to output the velocities and forces together with the positions. MC simulation, however, does not have velocities or forces. Instead, it has energies. They can be written out at the the requested interval. Once shoudl also notice that whereas MD simulation has time and output interval is given in terms of time (or steps that can be easily convered to time), in a Monte Carlo simulation the MC step has no relation to real time.</p>
+<p>Most simulations programs also output other quantities such as energies, pressures, the size of the simulation box and so on. However, the trajectory is the most fundamental outcome of a particle simulation and it is the basis of more detailed analyses.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Example output from an MD simulation</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The actual output format varies depends on the software, but in the most typical case positions of all atoms are stored. It is also possible to store velocities and forces in the case of MD simulations. The example below shows an output in the format of Gromacs <code class="docutils literal notranslate"><span class="pre">.gro</span></code> file.</p>
+<p class="card-text">The output below has been extracted (5 water molecules out of 216 were selected) from the file <code class="docutils literal notranslate"><span class="pre">spc216.gro</span></code> that comes with Gromacs; the full file will be used when we set up simulations that include water. Notice also that most software, including Gromacs can output trajectory data in multiple formats. The example below is the human-readable <code class="docutils literal notranslate"><span class="pre">.gro</span></code> format but during a simulation binary formats are used since they take much less space to store. File formats will be discussed in detail in later lectures.</p>
+<ul class="simple">
+<li><p class="card-text">The 1st line has comments. Arbitrary information can be included and this line is igonred by analysis software. In this case is says: 5 water molecules, SPC model, temperature of 300K and box size of 1.86206.</p></li>
+<li><p class="card-text">The 2nd line: The total number of atoms. This information is required by the <code class="docutils literal notranslate"><span class="pre">.gro</span></code> format.</p></li>
+<li><p class="card-text">The lines starting with number and SOL: 1SOL is the 1st solvent molecule. 2SOL: second solvent molecule and so on. Each solvent/water molecule consist of three atoms: OW, HW1, HW2.</p>
+<ul>
+<li><p class="card-text">OW: Water oxygen</p></li>
+<li><p class="card-text">HW1 and HW2: Water hydrogens 1 and 2.</p></li>
+</ul>
+</li>
+<li><p class="card-text">The 3rd column: Numbering of individual atoms. Each atom must have a unique identifier.</p></li>
+<li><p class="card-text">Columns 4-6: x, y and z coordinates in nanometers.</p></li>
+<li><p class="card-text">The last line: the size of the simulation box in nanometers.</p></li>
+</ul>
+<p class="card-text">For example, VMD understand this format and can read and visualize the data. Notice also that formatting is strict (column position do matter)..</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span><span class="n">H2O</span><span class="p">,</span><span class="n">SPC</span><span class="o">-</span><span class="n">MODEL</span><span class="p">,</span><span class="mi">300</span><span class="n">K</span><span class="p">,</span><span class="n">BOX</span><span class="p">(</span><span class="n">M</span><span class="p">)</span><span class="o">=</span><span class="mf">1.86206</span>
+  <span class="mi">15</span>
+    <span class="mi">1</span><span class="n">SOL</span>     <span class="n">OW</span>    <span class="mi">1</span>    <span class="o">.</span><span class="mi">230</span>    <span class="o">.</span><span class="mi">628</span>    <span class="o">.</span><span class="mi">113</span>
+    <span class="mi">1</span><span class="n">SOL</span>    <span class="n">HW1</span>    <span class="mi">2</span>    <span class="o">.</span><span class="mi">137</span>    <span class="o">.</span><span class="mi">626</span>    <span class="o">.</span><span class="mi">150</span>
+    <span class="mi">1</span><span class="n">SOL</span>    <span class="n">HW2</span>    <span class="mi">3</span>    <span class="o">.</span><span class="mi">231</span>    <span class="o">.</span><span class="mi">589</span>    <span class="o">.</span><span class="mi">021</span>
+    <span class="mi">2</span><span class="n">SOL</span>     <span class="n">OW</span>    <span class="mi">4</span>    <span class="o">.</span><span class="mi">225</span>    <span class="o">.</span><span class="mi">275</span>   <span class="o">-.</span><span class="mi">866</span>
+    <span class="mi">2</span><span class="n">SOL</span>    <span class="n">HW1</span>    <span class="mi">5</span>    <span class="o">.</span><span class="mi">260</span>    <span class="o">.</span><span class="mi">258</span>   <span class="o">-.</span><span class="mi">774</span>
+    <span class="mi">2</span><span class="n">SOL</span>    <span class="n">HW2</span>    <span class="mi">6</span>    <span class="o">.</span><span class="mi">137</span>    <span class="o">.</span><span class="mi">230</span>   <span class="o">-.</span><span class="mi">878</span>
+    <span class="mi">3</span><span class="n">SOL</span>     <span class="n">OW</span>    <span class="mi">7</span>    <span class="o">.</span><span class="mi">019</span>    <span class="o">.</span><span class="mi">368</span>    <span class="o">.</span><span class="mi">647</span>
+    <span class="mi">3</span><span class="n">SOL</span>    <span class="n">HW1</span>    <span class="mi">8</span>   <span class="o">-.</span><span class="mi">063</span>    <span class="o">.</span><span class="mi">411</span>    <span class="o">.</span><span class="mi">686</span>
+    <span class="mi">3</span><span class="n">SOL</span>    <span class="n">HW2</span>    <span class="mi">9</span>   <span class="o">-.</span><span class="mi">009</span>    <span class="o">.</span><span class="mi">295</span>    <span class="o">.</span><span class="mi">584</span>
+    <span class="mi">4</span><span class="n">SOL</span>     <span class="n">OW</span>   <span class="mi">10</span>    <span class="o">.</span><span class="mi">569</span>   <span class="o">-.</span><span class="mi">587</span>   <span class="o">-.</span><span class="mi">697</span>
+    <span class="mi">4</span><span class="n">SOL</span>    <span class="n">HW1</span>   <span class="mi">11</span>    <span class="o">.</span><span class="mi">476</span>   <span class="o">-.</span><span class="mi">594</span>   <span class="o">-.</span><span class="mi">734</span>
+    <span class="mi">4</span><span class="n">SOL</span>    <span class="n">HW2</span>   <span class="mi">12</span>    <span class="o">.</span><span class="mi">580</span>   <span class="o">-.</span><span class="mi">498</span>   <span class="o">-.</span><span class="mi">653</span>
+    <span class="mi">5</span><span class="n">SOL</span>     <span class="n">OW</span>   <span class="mi">13</span>   <span class="o">-.</span><span class="mi">307</span>   <span class="o">-.</span><span class="mi">351</span>    <span class="o">.</span><span class="mi">703</span>
+    <span class="mi">5</span><span class="n">SOL</span>    <span class="n">HW1</span>   <span class="mi">14</span>   <span class="o">-.</span><span class="mi">364</span>   <span class="o">-.</span><span class="mi">367</span>    <span class="o">.</span><span class="mi">784</span>
+    <span class="mi">5</span><span class="n">SOL</span>    <span class="n">HW2</span>   <span class="mi">15</span>   <span class="o">-.</span><span class="mi">366</span>   <span class="o">-.</span><span class="mi">341</span>    <span class="o">.</span><span class="mi">623</span>
+     <span class="mf">1.86206</span>   <span class="mf">1.86206</span>   <span class="mf">1.86206</span>
+</pre></div>
+</div>
+<p class="card-text">The output, when visualized using VMD, looks like this:</p>
+<div class="figure align-left">
+<a class="bg-light reference internal image-reference" href="../../_images/5spc-waters.png"><img alt="5spc" class="bg-light" src="../../_images/5spc-waters.png" style="width: 350px;" /></a>
+</div>
+</div>
+</details></div>
+<div class="section" id="system-sizes">
+<h3>System sizes<a class="headerlink" href="#system-sizes" title="Permalink to this headline">¶</a></h3>
+<p>Let’s start with atoms. The size of an atom is in the scale of Ångströms (10<span class="math notranslate nohighlight">\(^{-10}\)</span> m). Thus, it is quite easy to see that describing anything in <em>macroscopic</em> length scales is simply impossible; just make a simple estimate of how many water molecules would it take to fill a nanoscopic container of size 10 nm<span class="math notranslate nohighlight">\(\times\)</span>10 nm<span class="math notranslate nohighlight">\(\times\)</span>10 nm! For reference, if you look at the example <code class="docutils literal notranslate"><span class="pre">.gro</span></code> file from the <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> above, the last line gives the dimensions of the <em>simulation box</em> in nanometers: the box length is 1.86206 nanometers. When using the more or less correct density of water, the box can fit a maximum of about 216 water molecules. Since each water has (using the SPC model) three atoms, the total number of atoms is 648.</p>
+<p>One advantage of continuum simulations using fields is that it is possible to describe systems in much larger length scales since one is not limited to atoms. What one loses is the atomic specificity and its consequences. There are approaches that allow continuum methods to be more material specific but such a techniques are outside the scope of this course. For those interested, such methods include phase-field<a class="bibtex reference internal" href="#steinbach2009" id="id10">[9]</a> and phase-field crystal methods<a class="bibtex reference internal" href="#provatas2007using" id="id11">[8]</a>.</p>
+</div>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>This section introduced a number of concepts related particle modeling. In the next sections, we will make these concepts more quantitative and put them into practise when we set up and analyze simulations and simulation data.</p>
+<div class="section" id="random-numbers-in-mc">
+<h3>Random numbers in MC<a class="headerlink" href="#random-numbers-in-mc" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="classical-md">
+<h2>Classical MD<a class="headerlink" href="#classical-md" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="id12">
+<h2>Simulation methods for particle systems<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>Monte Carlo<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<p>In this course the focus is on the molecular dynamics method, but for completeness, let’s briefly discuss the Monte Carlo (MC) method since it is one the most widely used simulation techniques with applications ranging from social sciences to particles.</p>
+<p>The MC method does not solve any equations of motion, instead it is a <em>stochastic optimization</em> method: No time integration is involved but one uses random numbers for optimizing selected properties. In the case molecular systems, one typically optimizes the potential energy. This also means that, in its basic form, MC cannot measure any dynamical properties (there are variants like the kinetic Monte Carlo but even that doesn’t have time integration). Instead, MC uses <em>ensemble averaging</em> to compute the system’s properties.</p>
+<p>The basic idea of MC simulation is that it uses <em>pseudo-random numbers</em> to generate <em>representative samples</em> of the system. In terms of an atomistic system, only the positions of the atoms are used and there are no velocities. The part that sometimes causes confusion is that in MC, term <em>Monte Carlo steps</em> is used. The term indicates the number of so-called <em>Monte Carlo sweeps</em> and it is sometimes falsely equated to the <em>time steps</em> in MD simulations. In MD, there is a real time step (typically in terms of femtoseconds) but the MC step does not correspond to any physical time.</p>
+<p>Technically, a Monte Carlo simulation is the evaluation of statistical mechanical <em>configuration integral</em> and we will discuss this point later. The key ingredient the application of a <em>probability distribution</em>. In the case of physical systems, the equilibrium state has a unique distribution: the <em>Boltzmann distribution</em>.</p>
+<p>Although it may not be clear from the above, one of the great advantages of the MC method is its flexibility. In terms of atoms or particles, it can be used to simulate classical and quantum mechanical systems. It can also be applied to systems of very different nature such as optimizing train scheduling for railway networks and to numerically solve complex mathematical integrals that have no analytical solution.</p>
+<p>We can define classical Molecular Dynamics the following way:</p>
+<div class="admonition-definition-of-molecular-dynamics-md admonition">
+<p class="admonition-title">Definition of Molecular Dynamics (MD)</p>
+<p>Molecular Dynamics is the evolution of Newton’s equations motion in time.</p>
+<!-- In short, the problem is simply to solve numerically `F=ma`. -->
+</div>
+<p>This definition has several important points:</p>
+<ol class="simple">
+<li><p>We have a <em>dynamical system</em> that evolves in time. That is, it provides <em>time-resolved</em> information. This is in contrast to the to Monte Carlo method.</p></li>
+<li><p>The evolution of the system in the <em>phase space</em> is determined by solving Newton’s equations of motion for all the particles that comprise the system.</p></li>
+<li><p>In the absence of external force and fields, the system must evolve toward <em>equilibrium</em>. <em>Statistical mechanics</em> tells us that equilibrium described by a unique distribution, the <em>Boltzmann distribution</em>.</p></li>
+</ol>
+<p>The first published article using classical MD simulations titled “<em>Phase Transition for a Hard Sphere System</em>” was published by Alder and Wainwright in 1957<a class="bibtex reference internal" href="#alder1957" id="id14">[1]</a>. They simulated systems of 32 hard particles and also shorter simulations with 108 particles.</p>
+</div>
+<div class="section" id="newton-s-laws">
+<h3>Newton’s laws:<a class="headerlink" href="#newton-s-laws" title="Permalink to this headline">¶</a></h3>
+<p>Let’s remind ourselves of Newton’s laws of motion.</p>
+<div class="section" id="newton-s-first-law">
+<h4>Newton’s first law:<a class="headerlink" href="#newton-s-first-law" title="Permalink to this headline">¶</a></h4>
+<p>Possibly the simplest way of expressing Newton’s first law is the following: In the absence of an external net force, an object that is at rest will remain at rest and and object that is in motion will remain in motion.</p>
+<p>This can be also stated as follows: Consider a single object. We can write</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F} = m \vec{a} = m \frac{d\, \vec{v}}{d\,t}
+\]</div>
+<p>Then, if the net force is zero,</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F} = 0. 
+\]</div>
+<p>As an immediate consequence</p>
+<div class="math notranslate nohighlight">
+\[
+m \frac{d\, \vec{v}}{d\,t} = 0. 
+\]</div>
+<p>This means that the velocity remains constant in time: An object as rest will remain at rest and an object in motion will remain in motion.</p>
+</div>
+<div class="section" id="newton-s-second-law">
+<h4>Newton’s second law:<a class="headerlink" href="#newton-s-second-law" title="Permalink to this headline">¶</a></h4>
+<p>This is the famous <span class="math notranslate nohighlight">\(\vec{F}= m\vec{a}\)</span> law. We can write this as</p>
+<div class="math notranslate nohighlight">
+\[
+\vec{F} = m \vec{a} = \frac{d\, \vec{p}}{d\,t} m \vec{a} = m \frac{d\, \vec{v}}{d\,t}
+\]</div>
+</div>
+<div class="section" id="newton-s-third-law">
+<h4>Newton’s third law:<a class="headerlink" href="#newton-s-third-law" title="Permalink to this headline">¶</a></h4>
+<p>The third law is the law of equal magnitude and opposite direction: Any force between two objects is equal in magnitude and opposite in direction.</p>
+<p>This is has practical consequences for simulations: When forces between any two particles are computed, we need to do it only once. For example, if we have particles A and B, then the force exerted by A on B is of equal magnitude as the force exerted by B on A but of opposite directions. Thus, using Newton’s third law helps to cut the computational cost quite significantly.</p>
+</div>
+</div>
+<div class="section" id="equations-of-motion">
+<h3>Equations of motion<a class="headerlink" href="#equations-of-motion" title="Permalink to this headline">¶</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-3fc96fde-2762-4e04-8380-16b045a99726">
+<span class="eqno">()<a class="headerlink" href="#equation-3fc96fde-2762-4e04-8380-16b045a99726" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+m_i \frac{d^2 \vec{q}(t)}{d\,t^2} 
+= - \nabla_i U(\vec{q}) 
+= - \frac{\partial \, U(\vec{q})}{\partial \vec{q_i}} 
+\label{eq:newton}
+\end{equation}\]</div>
+</div>
+<div class="section" id="energy-conservation">
+<h3>Energy conservation<a class="headerlink" href="#energy-conservation" title="Permalink to this headline">¶</a></h3>
+<p>Conservation laws are fundamental properties of nature. In the case of MD, it is very important to notice that in its basic form MD has constant energy. In terms of <em>thermodynamic ensembles</em> this corresponds to the <em>microcanonical ensemble</em>. If <span class="math notranslate nohighlight">\(E\)</span> is the total energy of the system, <span class="math notranslate nohighlight">\(T\)</span> the kinetic energy and <span class="math notranslate nohighlight">\(V\)</span> the potential energy, we have</p>
+<div class="math notranslate nohighlight">
+\[
+E=T+V = \mathrm{constant}
+\]</div>
+<p>Since energy is conserved, it cannot change over time. Why is that the case? Let’s think what a classical MD simulation is: Assume that we have <span class="math notranslate nohighlight">\(N\)</span> particles (let’s assume them to be free and identical for simplicity). When the system is initialized, the particles are put in the simulation box. That is, we assign <em>initial coordinates</em> for each of the particles. If the system is an <em>ideal gas</em>, then there are no interactions of any kind between the particles. This means that the at after the coordinate assignment the <em>total energy</em> of the system is zero. It is zero because there are <em>no interactions</em> (meaning <span class="math notranslate nohighlight">\(V=0\)</span>) and we have <em>not assigned velocities</em> to the particles. This situation would correspond to <em>zero temperature</em> and, obviously, none of the particles can move anywhere no matter how long one waits.</p>
+<p>Let’s impose a <em>finite temperature</em>. Since temperature means kinetic energy (<span class="math notranslate nohighlight">\(T\)</span>, we simply assign <em>initial velocities</em> to the particles. How do we do that? From thermodynamics and statistical mechanics we know that <em>in thermal equilibrium</em> particle velocities follow a particular distribution, the <em>Maxwell distribution</em>. So let’s assume that we can now assign a velocity (or rather, a momentum) to each of the particles using a Maxwell distribution at temperature <span class="math notranslate nohighlight">\(T\)</span>.</p>
+<p>Now that we have the initial velocities (or momenta), the kinetic energy is then given as</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+T = \sum_{i=1}^{N} \frac{1}{2} m_i v_i^2 
+= \sum_{i=1}^{N} \frac{p_i^2}{2m_i}
+= N \underbrace{\frac{3}{2} k_\mathrm{B} T}_{\mathrm{from\\equipartition\\ theorem}}.
+\end{split}\]</div>
+<p>This is also the total energy the system has at the beginning, that is, <span class="math notranslate nohighlight">\(E = T\)</span>, where <span class="math notranslate nohighlight">\(E\)</span> is the total energy (remember that we have an ideal gas with no interactions). Since the system is isolated from the rest of the world, this energy can not change in time. Thus, at any later time the <em>total energy</em>, which in this case is equal to the kinetic energy, remains constant. Thus, the total energy of the system is conserved.</p>
+<p>Let’s make the system more realistic and assume that the particles have pairwise interactions described a potential energy term <span class="math notranslate nohighlight">\(U(\vec{q}_i, \vec{q}_j)\)</span>. Then, at the beginning, we must also compute the potential energy. Since it is pairwise and depends on the positions (<span class="math notranslate nohighlight">\(q_i\)</span>) only, it can be written as</p>
+<div class="math notranslate nohighlight">
+\[
+V = \sum_{i=1}^{N-1} \sum_{j=i+1}^N U(\vec{q}_i, \vec{q}_j
+\]</div>
+<p>What are the consequences of this to the total energy <span class="math notranslate nohighlight">\(E\)</span>? Is in the case of ideal gas, the <em>total energy</em> (<span class="math notranslate nohighlight">\(E\)</span>) must remain constant over time. Since particles interact and move, the distribution between the kinetic and potential energy may change with the restriction that the total energy <em>must remain constant</em>.</p>
+<p>In a simulation, we solve the equations of motion numerically and this brings in some practical problems. For example, the integration method has to be selected carefully such that it does not break the above conservation. There are also other issues but we will discuss them later when we set up simulations.</p>
+<p>Notice there are small fluctuations. In general, such fluctuations should be a few percent only and there can not be any systematic drift.</p>
+<!--
+and the potential energy needs to be truncated for distance shorter than some cutoff radius.
+-->
+<div class="section" id="but-experimental-system-are-at-constant-temperature-not-constant-energy">
+<h4>But experimental system are at constant temperature, not constant energy<a class="headerlink" href="#but-experimental-system-are-at-constant-temperature-not-constant-energy" title="Permalink to this headline">¶</a></h4>
+<p>That is indeed the case. To be able to simulate constant temperature, that is, the <em>canonical ensemble</em>, we need to introduce a mechanism how to keep the temperature constant. That is done by a <em>thermostat</em>.</p>
+</div>
+</div>
+<div class="section" id="integration-of-the-equations-of-motion">
+<h3>Integration of the equations of motion<a class="headerlink" href="#integration-of-the-equations-of-motion" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="boundary-conditions">
+<h3>Boundary conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h3>
+<p>Impractical to contain system with a real boundary
+Enhances finite-size effects
+Artificial influence of boundary on system properties</p>
+<p>Instead surround with replicas of simulated system
+“Periodic Boundary Conditions” (PBC)</p>
+<p>Problems:</p>
+<p>Correlations
+new artificial correlations
+suppressed long-range correlations</p>
+<p>Other geometries possible
+any space-filling unit cell
+hexagonal in 2D
+truncated octahedron in 3D
+rhombic dodecahedron in 3D
+surface of a (hyper)sphere
+variable aspect ratio useful for solids
+relieves artificial stresses</p>
+</div>
+<div class="section" id="minimum-image-convention">
+<h3>Minimum image convention<a class="headerlink" href="#minimum-image-convention" title="Permalink to this headline">¶</a></h3>
+<p>Minimum image convention</p>
+<p>Consider only nearest image of a given particle when looking for collision partners</p>
+</div>
+<div class="section" id="initialization">
+<h3>Initialization<a class="headerlink" href="#initialization" title="Permalink to this headline">¶</a></h3>
+<p>The system needs to be set up before the actual simulation can start. Assuming that a force field has been chosen, one needs to set up the simulation system. 1) This means assembling the system in a simulation box and 2) choosing the boundary conditions. The first part involves assigning initial coordinates for the atom and molecules. There are several possibilities for doing that. What is the most appropriate method depends on the system. For example: To create a system resembling a liquid or a gas, random generation of coordinates may be a good choice whereas for a solid-state system one may want to choose a lattice. For protein simulations, the most convenient choice may be to download a PDB file from the PDB database (PDB files have molecular coordinates). Such data may come, for example, from X-ray diffraction or NMR. Similarly, one may generate the homology models based on experimental data and use the initial coordinates from one/some of the homology model(s). Finally, a very common choice is to use coordinates data from a previous simulation.</p>
+</div>
+<div class="section" id="energy-minimization-vs-equilibration-vs-production-simulation">
+<h3>Energy minimization vs equilibration vs production simulation<a class="headerlink" href="#energy-minimization-vs-equilibration-vs-production-simulation" title="Permalink to this headline">¶</a></h3>
+<p>There is an often overlooked major difference between integration of the equations of motion and energy minimization: Integration is the propagation of the equations of motion in time with a time step given in terms of real time. Thus, it involves updates of the particles’ positions and velocities. Energy minimization using <a class="reference external" href="https://en.wikipedia.org/wiki/Method_of_steepest_descent">steepest descents</a> or the <a class="reference external" href="https://en.wikipedia.org/wiki/Conjugate_gradient_method">conjugate gradient</a> method is a mathematical (deterministic) optimization process that involves minimization of the potential energy, that is, only positions are needed. Second, even though ones gives a number of steps for the optimization process, the number of steps does not correspond to physical time but only gives an upper limit for the number of steps to be taken in case the process doesn’t converge earlier. We will not discuss these methods in detail here, but it is important to understand that optimization using these methods does not involve time or velocities, it is simply minimization of the potential energy. This is a general feature of these methods are not specific to Gromacs or any other simulation/modeling package.</p>
+<p><strong>Further considerations:</strong></p>
+<ol class="simple">
+<li><p>If one has to assemble a biomolecular system consisting of several different molecules, it is usually a good idea to start from the largest molecules first. For example, take the protein and put in the simulation box. After that, solvate the system with water molecules and add the ions (if needed) last.</p></li>
+<li><p>If one continues one’s own previous simulation of the same system, then one can jump directly to the production phase and the time is continued from the end of the previous simulations. Most software provide mechanisms for that. For house-written programs that is an essential feature to have.</p></li>
+<li><p>It is generally a good idea to use a previous simulation as a starting point since it has been already run for (possibly) a long time. It may still be a good idea to go through an equilibration phase and double-check that the system is indeed in equilibrium.</p></li>
+</ol>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 docutils">
+<div class="card-body docutils">
+<div class="figure align-left" id="init">
+<a class="reference internal image-reference" href="../../_images/molecular-simulation-initialization.svg"><img alt="../../_images/molecular-simulation-initialization.svg" src="../../_images/molecular-simulation-initialization.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text">Energy minimization, pre-equilibration (or relaxation), equilibration, production</span><a class="headerlink" href="#init" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="initial-velocities">
+<h4>Initial velocities<a class="headerlink" href="#initial-velocities" title="Permalink to this headline">¶</a></h4>
+<p>Random direction
+randomize each component independently
+randomize direction by choosing point on spherical surface</p>
+<p>Magnitude consistent with desired temperature.  Choices:</p>
+<p>Maxwell-Boltzmann:
+Uniform over (-1/2,+1/2), then scale so that
+Same for y, z components</p>
+<p>Be sure to shift so center-of-mass momentum is zero</p>
+</div>
+</div>
+<div class="section" id="integration-finite-differences">
+<h3>Integration: finite differences<a class="headerlink" href="#integration-finite-differences" title="Permalink to this headline">¶</a></h3>
+<p>Criteria:
+it should be simple; easy to write and to debug
+it should be stable; energy conservation
+it should be efficient; how fast it can advance the system
+it should be reliable; can it handle temperatures, pressures, densities
+special properties; does it vectorize, etc.</p>
+<p>Other factors:
+Almost all of the CPU time goes into computing the forces
+Memory consideration are not a major issue nowadays. However, one should beware of cache misses (what is a cache miss?)
+it should be efficient; how fast it can advance the system
+Energy conservation is important. The (constant) energy surface becomes a little bit rough is energy is not conserved. Rule of thumb (Ceperley): allow 0.01kT fluctuation in the total energy.
+Other symmetries, such as momentum conservation may be important</p>
+<p>Unnecessary for Monte Carlo simulations (of course)</p>
+</div>
+<div class="section" id="cut-off-radius">
+<h3>Cut-off radius<a class="headerlink" href="#cut-off-radius" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="thermodynamic-ensembles">
+<h3>Thermodynamic ensembles<a class="headerlink" href="#thermodynamic-ensembles" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="thermostats">
+<h3>Thermostats<a class="headerlink" href="#thermostats" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="berendsen-thermostat">
+<h4>Berendsen thermostat<a class="headerlink" href="#berendsen-thermostat" title="Permalink to this headline">¶</a></h4>
+<p>Target temperature <span class="math notranslate nohighlight">\(T_0\)</span></p>
+<div class="amsmath math notranslate nohighlight" id="equation-b94e8678-30da-48ce-935b-cb0b36744e66">
+<span class="eqno">()<a class="headerlink" href="#equation-b94e8678-30da-48ce-935b-cb0b36744e66" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\frac{dT(t)}{dt} = \frac{1}{\tau} \left[ T_o - T(t) \right]
+\label{eq:Berendsen}
+\end{equation}\]</div>
+<p>where the parameter <span class="math notranslate nohighlight">\(\tau\)</span> describes the coupling to the heat bath. It is sometimes called the <em>rise time</em> and in a typical simulation is around 2 ps.</p>
+<p><strong>Advantages:</strong> Very fast to compute and simple.</p>
+<p><strong>Problems:</strong> The Berendsen thermostat does not yield the correct Boltzmann distribution. Thus, it should not be used in production simulations. It is, however, useful when setting up simulations.</p>
+</div>
+<div class="section" id="nose-hoover-thermostat">
+<h4>Nosé-Hoover thermostat<a class="headerlink" href="#nose-hoover-thermostat" title="Permalink to this headline">¶</a></h4>
+<p>The Nosé-Hoover method introduces a new internal variable <span class="math notranslate nohighlight">\(s\)</span> and an associated fictitious mass <span class="math notranslate nohighlight">\(Q\)</span></p>
+</div>
+<div class="section" id="v-rescale-thermostat">
+<h4>v-rescale thermostat<a class="headerlink" href="#v-rescale-thermostat" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="andersen-thermostat">
+<h4>Andersen thermostat<a class="headerlink" href="#andersen-thermostat" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="lowe-andersen-thermostat">
+<h4>Lowe-Andersen thermostat<a class="headerlink" href="#lowe-andersen-thermostat" title="Permalink to this headline">¶</a></h4>
+</div>
+</div>
+<div class="section" id="barostats">
+<h3>Barostats<a class="headerlink" href="#barostats" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="basic-concepts-hamiltonian">
+<h2>Basic concepts: Hamiltonian<a class="headerlink" href="#basic-concepts-hamiltonian" title="Permalink to this headline">¶</a></h2>
+<p>Typically, the system is described by a model <em>Hamiltonian</em> that depends on the degrees of freedom the system has. The Hamiltonian is a function expresses the total energy of an isolated system as a function of coordinates (<span class="math notranslate nohighlight">\(\vec{q}\)</span>) and  momenta (<span class="math notranslate nohighlight">\(\vec{p}\)</span>) of the particles,</p>
+<div class="amsmath math notranslate nohighlight" id="equation-978564c0-78a6-44db-93f8-01f6ce9d2658">
+<span class="eqno">()<a class="headerlink" href="#equation-978564c0-78a6-44db-93f8-01f6ce9d2658" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+\mathcal{H} \equiv \mathcal{H}(\vec{q}, \vec{p}) = T(\vec{p}) + V(\vec{q}),
+\end{equation}\]</div>
+<p>where <span class="math notranslate nohighlight">\(T\)</span> is the kinetic energy and <span class="math notranslate nohighlight">\(V\)</span> is the potential energy.</p>
+<!--
+\begin{equation}
+\mathcal{H} = T + V
+\end{equation}
+-->
+</div>
+<div class="section" id="basic-concepts-statistical-mechanics">
+<h2>Basic concepts: Statistical mechanics<a class="headerlink" href="#basic-concepts-statistical-mechanics" title="Permalink to this headline">¶</a></h2>
+<blockquote class="epigraph">
+<div><p>The object of statistical mechanics is to provide a molecular theory or interpretation of equilibrium properties of macroscopic systems.</p>
+<p class="attribution">—T.L. Hill</p>
+</div></blockquote>
+<p>It answers the question “why?” in thermodynamics.</p>
+<div class="section" id="phase-space">
+<h3>Phase space<a class="headerlink" href="#phase-space" title="Permalink to this headline">¶</a></h3>
+<p>Let’s restrict the discussion here to classical (non-quantum) systems. The state of a system is defined by the positions (<span class="math notranslate nohighlight">\(\vec{q}\)</span>) and momenta (<span class="math notranslate nohighlight">\(\vec{p}\)</span>) of all of the constituent. Since (in 3-dimensional space) each particle has three position coordinates and three corresponding momenta, each particle has six degrees of freedom. Thus, if a system has a total of <span class="math notranslate nohighlight">\(N\)</span> particles, the system has <span class="math notranslate nohighlight">\(6N\)</span> degrees of freedom.</p>
+<p>With the above, we can define <em>phase space</em> and a <em>phase point</em> in that space.</p>
+<p>The  Hamiltonian depends on the degrees of freedom the system has, i.e.,</p>
+<p>The set of states constitutes the phase space available for the system.</p>
+<p>Any observable quantity is a function of the states of the system. For the accessible states, there is a distribution function.</p>
+<p>Any observable quantity is a function of the states of the system. For the accessible states, there is a distribution function. Now, a quantity A is given as an expectation value by</p>
+<div class="math notranslate nohighlight">
+\[
+\langle A \rangle = \frac{1}{Z} 
+\int 
+A(\vec{q}, \vec{p}) 
+f( \mathcal{H}(\vec{q}, \vec{p})) \,
+d\vec{q}^N \, d\vec{p}^N
+\]</div>
+<p>is called the ensemble average, where Z, the partition function, is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+Z = \int f( \mathcal{H}(\vec{q}, \vec{p})) \,
+d\vec{q}^N \, d\vec{p}^N
+\]</div>
+<p>Interpretation of the ensemble average: It is the average over all possible states of the system. However, this is not how we usually make measurements. Typically, we perform measurements over some interval of time and then compute the average over these measurements.
+This procedure is typical for both simulation and experiments and it is called time averaging.</p>
+<p>The time average is defined as</p>
+<div class="math notranslate nohighlight">
+\[
+\langle A \rangle_\mathrm{time} = \bar{A} = \frac{1}{t-t_0} \int_t_0^t A(t')\, dt'
+\]</div>
+<p>Are the time average and the ensemble average the same?</p>
+<p>To be able to proceed, we invoke the ergodic hypothesis and hence assume that we can replace the ensemble average by the time average.</p>
+<p>Is this a valid assumption? Does it always hold?</p>
+<p>The ergodic hypothesis does not always hold. Sometimes it is a practical problem and sometimes ergodicity breaking is a fundamental property of the system.</p>
+<p>What about simulations:</p>
+<p>Time averaging: Molecular dynamics approach; study the evolution of the system</p>
+<p>Ensemble averaging: Monte Carlo approach; sample the phase space by using different initial conditions.</p>
+<p>Problems:
+Glasses
+Systems with metastable states
+Harmonic solids
+Integrable systems</p>
+</div>
+</div>
+<div class="section" id="force-fields">
+<h2>Force fields<a class="headerlink" href="#force-fields" title="Permalink to this headline">¶</a></h2>
+<blockquote class="epigraph">
+<div><p>If in some cataclysm all scientiﬁc knowledge were to be destroyed and only one sentence passed onto the next generation of creatures,what statement would contain the most information in the fewest words? I believe it is the atomic hypothesis that all things are made of atoms–little particles that move around in perpetual motion,attracting each other when they area little distance apart,but repelling upon being squeezed into one another. In that one sentence,you will see there is an enormous amount of information about the world, of just a little imagination and thinking is applied.</p>
+<p class="attribution">—Richard Feynman in Feynman Lectures in Physics</p>
+</div></blockquote>
+<div class="section" id="molecular-interactions-bonded-and-non-bonded">
+<h3>Molecular interactions: Bonded and non-bonded<a class="headerlink" href="#molecular-interactions-bonded-and-non-bonded" title="Permalink to this headline">¶</a></h3>
+<div class="amsmath math notranslate nohighlight" id="equation-c900bb15-8232-4130-9ce5-79782c61c5b5">
+<span class="eqno">()<a class="headerlink" href="#equation-c900bb15-8232-4130-9ce5-79782c61c5b5" title="Permalink to this equation">¶</a></span>\[\begin{equation} 
+\frac{d \vec{p}}{dt}
+= -\nabla  U(\vec{r})
+\end{equation}\]</div>
+<div class="math notranslate nohighlight">
+\[
+\frac{d\mathcal{H}}{dt}=0
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+U_\mathrm{LJ} (r_{ij})= 
+4 \epsilon
+\left[
+\left(
+\frac{\sigma}{r_{ij}}
+\right)^{12}
+-
+\left(
+\frac{\sigma}{r_{ij}}
+\right)^{6}
+\right]
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+U_\mathrm{LJ} (r_{ij})= 
+\left(
+\frac{A}{r_{ij}}
+\right)^{12}
+-
+\left(
+\frac{B}{r_{ij}}
+\right)^{6}
+\]</div>
+</div>
+<div class="section" id="interactions-between-unlike-atoms-lorentz-berthelot-rules">
+<h3>Interactions between unlike atoms: Lorentz-Berthelot rules<a class="headerlink" href="#interactions-between-unlike-atoms-lorentz-berthelot-rules" title="Permalink to this headline">¶</a></h3>
+<div class="math notranslate nohighlight">
+\[
+\sigma_{ij} = \frac{\sigma_i + \sigma_j}{2}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_{ij} = \sqrt{\epsilon_i \epsilon_j}
+\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-7d2111bd-4449-46c1-b328-de70e18d4182">
+<span class="eqno">()<a class="headerlink" href="#equation-7d2111bd-4449-46c1-b328-de70e18d4182" title="Permalink to this equation">¶</a></span>\[\begin{equation} 
+V = \sum_{i} U_1(\vec{r}_i) + 
+    \sum_{i} \sum_{j &gt; i} U_2(\vec{r}_i,\vec{r}_j) + 
+    \sum_{i} \sum_{j &gt; i} \sum_{k &gt; j &gt; i} 
+         U_3(\vec{r}_i,\vec{r}_j,\vec{r}_k) + \mathrm{higher\,\,order\,\, terms}. 
+\end{equation}\]</div>
+<div class="amsmath math notranslate nohighlight" id="equation-d7f646ce-0e11-437f-b9d3-c96fe3ec5716">
+<span class="eqno">()<a class="headerlink" href="#equation-d7f646ce-0e11-437f-b9d3-c96fe3ec5716" title="Permalink to this equation">¶</a></span>\[\begin{eqnarray} 
+\label{eq:forcefield}
+V &amp; = &amp; \sum_{\mathrm{bonds}} 
+    \frac{k_i^\mathrm{b}}{2}(l_i - l_i^{\mathrm{ref}})^2 +
+    \sum_{\mathrm{angles}}\frac{k_i^\mathrm{a}}{2}
+         (\theta_i - \theta_i^{\mathrm{ref}})^2 +
+    \sum_{\mathrm{torsions}}\frac{V_T}{2}
+         (1 + \cos(n\omega - \gamma)) + \\ \nonumber 
+  &amp; &amp;  \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} 
+      \left( 4\epsilon_{ij}
+          \left[ 
+             \left( \frac{\sigma_{ij}}{r_{ij}}\right)^{12} - 
+             \left( \frac{\sigma_{ij}}{r_{ij}}\right)^6 
+          \right] + 
+          \frac{q_i q_j}{4\pi \epsilon_0 r_{ij}}
+      \right)  . 
+\end{eqnarray}\]</div>
+</div>
+</div>
+<div class="section" id="boundary-conditions-open-closed-and-periodic">
+<h2>Boundary conditions: Open, closed and periodic<a class="headerlink" href="#boundary-conditions-open-closed-and-periodic" title="Permalink to this headline">¶</a></h2>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 docutils">
+<div class="card-body docutils">
+<div class="figure align-left" id="heart">
+<a class="reference internal image-reference" href="../../_images/boundary-conditions-demonstrated.svg"><img alt="../../_images/boundary-conditions-demonstrated.svg" src="../../_images/boundary-conditions-demonstrated.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text">The most common boundary conditions. Left: Open boundary. The particles a free to move anywhere in space without limitations. Middle: Particles in a box with walls. Here, hard walls are assumed meaning the particles undergo elastic collisions and are reflected back from the boundary. Right: Periodic boundaries. In this case there is no physical wall, but since the system is periodic (not open), the particles have to be wrapped back into the box when they cross the  border.</span><a class="headerlink" href="#heart" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 docutils">
+<div class="card-body docutils">
+<div class="figure align-left" id="id15">
+<a class="reference internal image-reference" href="../../_images/pbc.svg"><img alt="../../_images/pbc.svg" src="../../_images/pbc.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text">General MD workflow.</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="md-workflow">
+<h2>MD workflow<a class="headerlink" href="#md-workflow" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="energy-minimization">
+<h3>Energy minimization<a class="headerlink" href="#energy-minimization" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="pre-equilibration">
+<h3>Pre-equilibration<a class="headerlink" href="#pre-equilibration" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="equilibration">
+<h3>Equilibration<a class="headerlink" href="#equilibration" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="production-run">
+<h3>Production run<a class="headerlink" href="#production-run" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="trajectory-data-analysis">
+<h3>Trajectory / data analysis<a class="headerlink" href="#trajectory-data-analysis" title="Permalink to this headline">¶</a></h3>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 docutils">
+<div class="card-body docutils">
+<div class="figure align-left" id="id16">
+<a class="reference internal image-reference" href="../../_images/molecular-simulation-workflow.svg"><img alt="../../_images/molecular-simulation-workflow.svg" src="../../_images/molecular-simulation-workflow.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text"><em>General MD workflow independent of software. The different colors and blocks indicate the structure: First, one must define the components, that is, the atoms and molecules and their interactions. If we only individual atoms, then the topology, or connectedness is simple: there is none and the interactions between the atoms are <em>non-bonded</em>. In molecules, the atoms composing a molecule are connected and we must describe the their connectedness. This is involves numbering the atoms in a systematic way and providing information about how they are connected. This gives rise to <em>bonded</em> interactions. The force field, that is, the description of all interactions and parameters, and topology define the molecules. When a system is composed, one also needs to provide the initial coordinates.</em></span><a class="headerlink" href="#id16" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="atomic-and-molar-masses">
+<h2>Atomic and molar masses<a class="headerlink" href="#atomic-and-molar-masses" title="Permalink to this headline">¶</a></h2>
+<p>When we set up MD simulations, we need to have estimates, for example, for the size of the simulation box, the number of molecules and the types of molecules. This may be sometimes difficult, but it is easy to get a reasonable estimate and for that atomic and molar masses are needed. As reminder, let’s review the concept of mole and its relation to the mass of a an atom:</p>
+<div class="sphinx-bs fluid docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text"><strong>Chemical notation</strong></p>
+</div>
+<div class="card-body docutils">
+<p class="card-text"><span class="math notranslate nohighlight">\(^{12}\)</span>C = 1 mole of <span class="math notranslate nohighlight">\(^{12}\)</span>C</p>
+<p class="card-text">Using the old (pre-2019) definition, the atomic mass of <span class="math notranslate nohighlight">\(^{12}\)</span>C is 12 amu. Hence
+[mass in amu] = 12. That is, one mole of <span class="math notranslate nohighlight">\(^{12}\)</span>C has the atomic mass of 12.
+To get the mass of a <span class="math notranslate nohighlight">\(^{12}\)</span>C atom, we have to divide by Avogadro’s number:</p>
+<div class="math notranslate nohighlight">
+\[
+ m_\mathrm{^{12}\mathrm{C}} = \frac{12} {6.0221 \times 10^{23}}\, \mathrm{g} \approx 
+ 1.993 \times 10^{-23} \, \mathrm{g} =  1.993 \times 10^{-26} \, \mathrm{kg} 
+ \]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<P></p>
+<div class="section" id="historical-notes">
+<h3>Historical notes:<a class="headerlink" href="#historical-notes" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Avogadro_constant">Avogadro’s number</a> is named after <a class="reference external" href="https://en.wikipedia.org/wiki/Amedeo_Avogadro">Amadeo Avogadro</a>, an Italian scientist (who started out as a lawyer). Avogadro’s number was originally proposed by <a class="reference external" href="https://en.wikipedia.org/wiki/Jean_Baptiste_Perrin">Jean Perrin</a> who was also the first to determine it and was awarded the <a class="reference external" href="https://www.nobelprize.org/prizes/physics/1926/perrin/biographical/">Nobel Prize in Physics in 1926</a>. Avogadro studied gases and proposed that under given thermodynamic conditions, the volume is proportional to the constituents of that gas <em>independent</em> of the precise nature of that gas. In earlier German literature, Avogadro’s number has the name <a class="reference external" href="https://en.wikipedia.org/wiki/Loschmidt_constant">Loschmidt number</a>.</p>
+<p>The first standard was the mass of the hydrogen atom (<a class="reference external" href="https://en.wikipedia.org/wiki/Stanislao_Cannizzaro">Stanislao Cannizzarro</a>). The problem with this was the lightness of hydrogen which lead to large experimental errors (Perrin also used the hydrogen mass standard). In 1903, the German Chemical Society (Deutsche Chemische Gesellschaft) set the <span class="math notranslate nohighlight">\(^{16}\)</span>O scale.</p>
+</div>
+<div class="section" id="how-to-estimate-the-number-of-molecules-and-box-size">
+<h3>How to estimate the number of molecules and box size<a class="headerlink" href="#how-to-estimate-the-number-of-molecules-and-box-size" title="Permalink to this headline">¶</a></h3>
+<p>The mole (mol) is defined as the amount of substance that contains Avogadro’s number (<span class="math notranslate nohighlight">\(N_A\)</span>) of constitutive particles (<span class="math notranslate nohighlight">\(N_A \approx 6.0221 \times 10^{23}\,\mathrm{mol}^{-1}\)</span>). The constitutive particles may be molecules or atoms. Importantly, <span class="math notranslate nohighlight">\(N_A\)</span> makes no reference to the their precise nature. The mole is one of the seven SI base units. The older, pre-2019, definition of mole is that it is the amount of chemical substance (atoms, molecules) contained in 12 grams of <span class="math notranslate nohighlight">\(^{12}\)</span>C. The molar mass is defined as mass (typically grams) divided by the amount of substance (in moles). It is thus given in units of g/mol. With this, the unified atomic mass unit can be defined as</p>
+<div class="math notranslate nohighlight">
+\[
+1\,\mathrm{u} = 
+\frac{\mathrm{molar\,mass\,constant}}{\mathrm{Avogadro's\, constant}} =
+\frac{M_\mathrm{u}}{N_\mathrm{A}} \approx 
+\frac{1\,\mathrm{g/mol}}{6.022\times 10^{23}\,\mathrm{mol}^{-1}} =
+1.661 \times 10^{-24}\,\mathrm{g} =
+1\,\mathrm{Dalton} = 1\,\mathrm{Da},
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(M_\mathrm{u}\)</span>  is the molar mass constant. In the above, we gave the unified atomic mass in grams since that is the common notation although kilogram would be the more appropriate unit as it is one of the base SI units. In addition, it is good to keep in mind that the atomic radii are about 1 Å while the nuclear radius is about <span class="math notranslate nohighlight">\(10^{-5}\)</span> Å.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Additional information: SI Units</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">The seven SI base units:</p>
+<table class="table" id="si-units">
+<caption><span class="caption-text">SI units and the defining constants</span><a class="headerlink" href="#si-units" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">quantity</p></th>
+<th class="head"><p class="card-text">name</p></th>
+<th class="head"><p class="card-text">symbol</p></th>
+<th class="head"><p class="card-text">defining constant</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text">time</p></td>
+<td><p class="card-text">second</p></td>
+<td><p class="card-text">s</p></td>
+<td><p class="card-text">hyperfine transition frequency of cesium</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">length</p></td>
+<td><p class="card-text">meter</p></td>
+<td><p class="card-text">m</p></td>
+<td><p class="card-text">speed of light</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">mass</p></td>
+<td><p class="card-text">kilogram</p></td>
+<td><p class="card-text">kg</p></td>
+<td><p class="card-text">Planck’s constant</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">temperature</p></td>
+<td><p class="card-text">kelvin</p></td>
+<td><p class="card-text">K</p></td>
+<td><p class="card-text">Boltzmann’s constant</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">amount of substance</p></td>
+<td><p class="card-text">mole</p></td>
+<td><p class="card-text">mol</p></td>
+<td><p class="card-text">Avogadro’s constant</p></td>
+</tr>
+<tr class="row-odd"><td><p class="card-text">electric current</p></td>
+<td><p class="card-text">ampere</p></td>
+<td><p class="card-text">A</p></td>
+<td><p class="card-text">elementary charge</p></td>
+</tr>
+<tr class="row-even"><td><p class="card-text">luminous intensity</p></td>
+<td><p class="card-text">candela</p></td>
+<td><p class="card-text">cd</p></td>
+<td><p class="card-text">luminous efficacy of 540 THz radiation</p></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p class="card-text">More information: <a class="reference external" href="https://en.wikipedia.org/wiki/International_System_of_Units">International System of Units (SI)</a></p></li>
+</ul>
+</div>
+</details><div class="section" id="example-estimate-for-the-number-of-water-molecules-and-the-size-of-the-simulation-box">
+<h4>Example: Estimate for the number of water molecules and the size of the simulation box<a class="headerlink" href="#example-estimate-for-the-number-of-water-molecules-and-the-size-of-the-simulation-box" title="Permalink to this headline">¶</a></h4>
+<p>The above formulas can now be used to estimate the number of water molecules and the size for the simulation box.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Step 1:</strong> Determine the weight of the molecule in grams. For that, its mass in unified atomic mass is needed together with Avogadro’s constant:</p>
+<div class="math notranslate nohighlight">
+\[
+m_\mathrm{molecule} =
+\frac{
+ \mathrm{mass\,in\,u}
+}
+ {N_\mathrm{A}}\, \mathrm{g} 
+=
+\frac{
+ \mathrm{mass\,in\,u}
+} 
+{(6.0221 \times 10^{23})}
+\, \mathrm{g} 
+\]</div>
+<p class="card-text"><strong>Step 2:</strong> We need to have some approximate density (<span class="math notranslate nohighlight">\(\rho\)</span>) and number of molecules (<span class="math notranslate nohighlight">\(N_\mathrm{molecule\)</span>}). Since the simulation box is in nanometers, we should convert this to grams/nanometers: <span class="math notranslate nohighlight">\(1\,\mathrm{g/cm^3} = 10^{-21}\,\mathrm{g/nm^3}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{density\,in\,grams/nm^3} =
+\frac
+{\mathrm{mass\,in\,grams}}
+{\mathrm{volume\,in\, nm^3}}
+= \frac
+{N_\mathrm{molecule} \times m_\mathrm{molecule}}
+{\mathrm{volume\,in\, nm^3}}
+\]</div>
+<p class="card-text"><strong>Step 3:</strong> Solve for volume and assume that the simulation box is cubic</p>
+<div class="math notranslate nohighlight">
+\[
+{\mathrm{volume\,in\, nm^3}}
+= \frac
+{N_\mathrm{molecule} \times m_\mathrm{molecule}}
+{\mathrm{density\,in\,grams/nm^3}}
+=
+\frac
+{N_\mathrm{molecule} \times m_\mathrm{molecule}}
+{\rho \times 10^{-21}}
+%}
+\,
+\mathrm{nm}^3
+\]</div>
+<p class="card-text">This gives the very useful formula for the simulation box size:</p>
+<div class="math notranslate nohighlight">
+\[
+L = \sqrt[3]{\frac{N_\mathrm{molecule} \times m_\mathrm{molecule}}
+{\rho \times 10^{-21}}}.
+\]</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>Task: Estimate the simulation box size for a given number of water molecules:</strong></p>
+<p>Use the above to estimate the (cubic) box size that is needed for 3,000 water molecules. Try to solve this first on your own before seeing the solution.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>Solution:</strong><div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text"><strong>Step 1:</strong> The unified atomic mass of water (using table values for the unified atomic masses of hydrogen (1.008 u) and oxygen (15.9994 u)) is</p>
+<div class="math notranslate nohighlight">
+\[
+(15.994 + 2 \times 1.008) \, \mathrm{u} 
+= 
+18.0154 \, \mathrm{u}
+\]</div>
+<p class="card-text">With this the molar mass is</p>
+<div class="math notranslate nohighlight">
+\[
+M(\mathrm{H_2O}) = (15.994 + 2 \times 1.008) \, \mathrm{g/mol} 
+= 
+18.0154 \, \mathrm{g/mol}
+\]</div>
+<p class="card-text">To get the weight of a water molecule in grams, we have to divide by Avogadro’s constant:</p>
+<div class="math notranslate nohighlight">
+\[
+m_\mathrm{H_2O} = 18.0154 /(6.0221 \times 10^{23})\, \mathrm{g} \approx 2.9915 \times 10^{-23} \, \mathrm{g}
+\]</div>
+<p class="card-text"><strong>Step 2:</strong> The density of water is approximately <span class="math notranslate nohighlight">\(1\,\mathrm{g/cm^3}\)</span>. We have 3,000 water molecules.</p>
+<p class="card-text"><strong>Step 3:</strong> Use the formula</p>
+<div class="math notranslate nohighlight">
+\[
+L=\sqrt[3]{
+\frac
+{N_\mathrm{H_2O} \times m_\mathrm{H_2O}}
+{\rho \times 10^{-21}}
+}
+\,
+\mathrm{nm}
+\]</div>
+<p class="card-text">Substitution gives</p>
+<div class="math notranslate nohighlight">
+\[
+\underline{
+\underline{
+L=\sqrt[3]{
+\frac{
+3000 \times 2.9915 \times 10^{-23}
+}
+{
+10^{-21}
+}
+} \,\mathrm{nm}
+=\sqrt[3]{3000 \times  0.029915} \,\mathrm{nm}
+\approx
+4.48 \, \mathrm{nm}
+}}
+\]</div>
+</div>
+</details><p><strong>Gromacs notes: Number of water molecules and box size</strong></p>
+<ol class="simple">
+<li><p>The Gromacs unit system uses grams and nanometers so the above can be applied directly.</p></li>
+<li><p>If you have no table available, Gromacs provides unified atomic masses in the file</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$GMXDATA/top/atommass.dat
+</pre></div>
+</div>
+<p>and toward the end of the file there is an entry for water with the following values for oxygen and hydrogen (of course you can check these from elsewhere as well):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">SOL</span> <span class="n">OW</span>  <span class="mf">15.9994</span>
+<span class="n">SOL</span> <span class="n">HW</span>   <span class="mf">1.008</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="bibtex-bibliography-class/week03/moldy-1-with-old-stuff-0"><dl class="citation">
+<dt class="bibtex label" id="alder1957"><span class="brackets">1</span><span class="fn-backref">(<a href="#id5">1</a>,<a href="#id14">2</a>)</span></dt>
+<dd><p>B. J. Alder and T. E. Wainwright. Phase transition for a hard sphere system. <em>The Journal of Chemical Physics</em>, 27(5):1208, 1957. <a class="reference external" href="https://doi.org/10.1063/1.1743957">doi:10.1063/1.1743957</a>.</p>
+</dd>
+<dt class="bibtex label" id="fritz2011"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Dominik Fritz, Konstantin Koschke, Vagelis A. Harmandaris, Nico F. A. van der Vegt, and Kurt Kremer. Multiscale modeling of soft matter: scaling of dynamics. <em>Physical Chemistry Chemical Physics</em>, 13(22):10412, 2011. <a class="reference external" href="https://doi.org/10.1039/c1cp20247b">doi:10.1039/c1cp20247b</a>.</p>
+</dd>
+<dt class="bibtex label" id="gibson1960"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
+<dd><p>J. B. Gibson, A. N. Goland, M. Milgram, and G. H. Vineyard. Dynamics of radiation damage. <em>Physical Review</em>, 120(4):1229–1253, nov 1960. <a class="reference external" href="https://doi.org/10.1103/physrev.120.1229">doi:10.1103/physrev.120.1229</a>.</p>
+</dd>
+<dt class="bibtex label" id="lifson1968"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
+<dd><p>S. Lifson and A. Warshel. Consistent force field for calculations of conformations, vibrational spectra, and enthalpies of cycloalkane andn-alkane molecules. <em>The Journal of Chemical Physics</em>, 49(11):5116–5129, dec 1968. <a class="reference external" href="https://doi.org/10.1063/1.1670007">doi:10.1063/1.1670007</a>.</p>
+</dd>
+<dt class="bibtex label" id="marrink2013"><span class="brackets">5</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
+<dd><p>Siewert J. Marrink and D. Peter Tieleman. Perspective on the Martini model. <em>Chemical Society Reviews</em>, 42(16):6801, 2013. <a class="reference external" href="https://doi.org/10.1039/c3cs60093a">doi:10.1039/c3cs60093a</a>.</p>
+</dd>
+<dt class="bibtex label" id="metropolis1953"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
+<dd><p>Nicholas Metropolis, Arianna W. Rosenbluth, Marshall N. Rosenbluth, Augusta H. Teller, and Edward Teller. Equation of state calculations by fast computing machines. <em>The Journal of Chemical Physics</em>, 21(6):1087, 1953. <a class="reference external" href="https://doi.org/10.1063/1.1699114">doi:10.1063/1.1699114</a>.</p>
+</dd>
+<dt class="bibtex label" id="murtola2009d"><span class="brackets"><a class="fn-backref" href="#id1">7</a></span></dt>
+<dd><p>Teemu Murtola, Alex Bunker, Ilpo Vattulainen, Markus Deserno, and Mikko Karttunen. Multiscale modeling of emergent materials: biological and soft matter. <em>Physical Chemistry Chemical Physics</em>, 11(12):1869, 2009. <a class="reference external" href="https://doi.org/10.1039/b818051b">doi:10.1039/b818051b</a>.</p>
+</dd>
+<dt class="bibtex label" id="provatas2007using"><span class="brackets"><a class="fn-backref" href="#id11">8</a></span></dt>
+<dd><p>N. Provatas, J. Dantzig, B. Athreya, P. Chan, P. Stefanovic, N. Goldenfeld, and K. Elder. Using the phase-field crystal method in the multi-scale modeling of microstructure evolution. <em>JOM Journal of the Minerals, Metals and Materials Society</em>, 59(7):83–90, July 2007. <a class="reference external" href="https://doi.org/10.1007/s11837-007-0095-3">doi:10.1007/s11837-007-0095-3</a>.</p>
+</dd>
+<dt class="bibtex label" id="steinbach2009"><span class="brackets"><a class="fn-backref" href="#id10">9</a></span></dt>
+<dd><p>Ingo Steinbach. Phase-field models in materials science. <em>Modelling and Simulation in Materials Science and Engineering</em>, 17(7):073001, jul 2009. <a class="reference external" href="https://doi.org/10.1088/0965-0393/17/7/073001">doi:10.1088/0965-0393/17/7/073001</a>.</p>
+</dd>
+<dt class="bibtex label" id="warshel1972"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
+<dd><p>A. Warshel and M. Karplus. Calculation of ground and excited state potential surfaces of conjugated molecules. i. formulation and parametrization. <em>Journal of the American Chemical Society</em>, 94(16):5612–5625, aug 1972. <a class="reference external" href="https://doi.org/10.1021/ja00771a014">doi:10.1021/ja00771a014</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Mikko Karttunen<br/>
+        
+          <div class="extra_footer">
+            <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
