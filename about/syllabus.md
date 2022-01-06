@@ -52,9 +52,9 @@ As a practical outcome, the students will learn the need for different operating
 
 ## Hands-on approach
 
-This course uses a hands-on approach: You will write scripts and short programs, analyze data and learn methods. 
+- This course uses a hands-on approach: You will write scripts and short programs, analyze data and learn methods. 
 
-Python will be used for most analyses. No prior knowledge of Python or other programming is expected. 
+- Python will be used for most analyses. No prior knowledge of Python or other programming is expected. 
 
 <!--
 ## Examples
