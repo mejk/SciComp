@@ -1,0 +1,4 @@
+jupyter-book
+matplotlib
+numpy
+sphinxcontrib-bibtex<2.0.0

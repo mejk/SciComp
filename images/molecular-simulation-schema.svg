@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1280"
+   height="720"
+   viewBox="0 0 338.66667 190.5"
+   version="1.1"
+   id="svg865"
+   inkscape:version="1.0.1 (1.0.1+r74)"
+   sodipodi:docname="molecular-simulation-schema.svg">
+  <defs
+     id="defs859">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1628">
+      <stop
+         style="stop-color:#ebfaf6;stop-opacity:1"
+         offset="0"
+         id="stop1624" />
+      <stop
+         style="stop-color:#ff3500;stop-opacity:1"
+         offset="1"
+         id="stop1626" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1472">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1"
+         offset="0"
+         id="stop1468" />
+      <stop
+         style="stop-color:#eef100;stop-opacity:1"
+         offset="1"
+         id="stop1470" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient1438">
+      <stop
+         style="stop-color:#ebfaf6;stop-opacity:1"
+         offset="0"
+         id="stop1434" />
+      <stop
+         style="stop-color:#8afbff;stop-opacity:1"
+         offset="1"
+         id="stop1436" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1438"
+       id="radialGradient1442"
+       cx="158.55497"
+       cy="100.57594"
+       fx="158.55497"
+       fy="100.57594"
+       r="45.239298"
+       gradientTransform="matrix(1,0,0,0.72111115,13.849174,33.884907)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1472"
+       id="radialGradient1474"
+       cx="61.811947"
+       cy="56.082829"
+       fx="61.811947"
+       fy="56.082829"
+       r="24.460956"
+       gradientTransform="matrix(2.0119036,-0.01311903,0.00652044,0.9999589,-62.913417,0.8132179)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1472"
+       id="radialGradient1474-3"
+       cx="61.811947"
+       cy="56.082829"
+       fx="61.811947"
+       fy="56.082829"
+       r="24.460957"
+       gradientTransform="matrix(2.0119036,-0.01311903,0.00652044,0.99995891,102.83743,14.398775)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1628"
+       id="radialGradient1442-2"
+       cx="141.12502"
+       cy="97.549461"
+       fx="141.12502"
+       fy="97.549461"
+       r="45.2393"
+       gradientTransform="matrix(1.855561,0,0,1.7518301,-201.48648,-70.219042)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1472"
+       id="radialGradient1474-6"
+       cx="61.811947"
+       cy="56.082829"
+       fx="61.811947"
+       fy="56.082829"
+       r="24.460957"
+       gradientTransform="matrix(2.0119036,-0.01311903,0.00652044,0.99995891,31.592288,-24.715972)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.44"
+     inkscape:cx="400"
+     inkscape:cy="560"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1421"
+     inkscape:window-height="1054"
+     inkscape:window-x="50"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata862">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:url(#radialGradient1442-2);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.789813;stroke-dasharray:0.789813, 0.789813;stroke-opacity:0.665064;stop-color:#000000"
+       id="rect1428-9"
+       width="105.91938"
+       height="130.61606"
+       x="9.1228199"
+       y="27.173193"
+       ry="10.284241" />
+    <rect
+       style="fill:url(#radialGradient1442);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.371999;stroke-dasharray:0.371999, 0.371999;stroke-opacity:0.665064;stop-color:#000000"
+       id="rect1428"
+       width="57.082134"
+       height="53.765881"
+       x="127.35085"
+       y="73.97477"
+       ry="4.2333331" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
+       x="139.52156"
+       y="94.656357"
+       id="text1432"><tspan
+         sodipodi:role="line"
+         id="tspan1430"
+         x="139.52156"
+         y="94.656357"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583">Molecular </tspan><tspan
+         sodipodi:role="line"
+         x="139.52156"
+         y="103.47581"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1446">simulation </tspan><tspan
+         sodipodi:role="line"
+         x="139.52156"
+         y="112.29526"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1444">model</tspan></text>
+    <circle
+       style="fill:url(#radialGradient1474);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.371999;stroke-dasharray:0.371999, 0.371999;stroke-opacity:0.665064;stop-color:#000000"
+       id="path1466"
+       cx="61.811905"
+       cy="56.082294"
+       r="24.275" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
+       x="45.406345"
+       y="58.373909"
+       id="text1432-3"><tspan
+         sodipodi:role="line"
+         x="45.406345"
+         y="58.373909"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1444-5">force field</tspan></text>
+    <circle
+       style="fill:url(#radialGradient1474-3);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.371999;stroke-dasharray:0.371999, 0.371999;stroke-opacity:0.665064;stop-color:#000000"
+       id="path1466-2"
+       cx="227.56274"
+       cy="69.667847"
+       r="24.275" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
+       x="211.63211"
+       y="69.641022"
+       id="text1432-3-9"><tspan
+         sodipodi:role="line"
+         x="211.63211"
+         y="69.641022"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1444-5-1">boundary </tspan><tspan
+         sodipodi:role="line"
+         x="211.63211"
+         y="78.460464"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1535">conditions</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
+       x="16.200239"
+       y="143.64388"
+       id="text1432-36"><tspan
+         sodipodi:role="line"
+         x="16.200239"
+         y="143.64388"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1444-2">simulation </tspan><tspan
+         sodipodi:role="line"
+         x="16.200239"
+         y="152.46332"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1590">software</tspan></text>
+    <circle
+       style="fill:url(#radialGradient1474-6);fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.371999;stroke-dasharray:0.371999, 0.371999;stroke-opacity:0.665064;stop-color:#000000"
+       id="path1466-7"
+       cx="156.31761"
+       cy="30.553106"
+       r="24.275" />
+    <text
+       xml:space="preserve"
+       style="font-size:7.05556px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
+       x="140.64026"
+       y="26.91815"
+       id="text1432-3-92"><tspan
+         sodipodi:role="line"
+         x="140.64026"
+         y="26.91815"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1444-5-0">atoms  &amp;</tspan><tspan
+         sodipodi:role="line"
+         x="140.64026"
+         y="35.737598"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:7.05556px;font-family:lato;-inkscape-font-specification:'lato Bold';stroke-width:0.264583"
+         id="tspan1622">molecules</tspan></text>
+  </g>
+</svg>
