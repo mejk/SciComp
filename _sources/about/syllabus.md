@@ -17,21 +17,24 @@
 </small>
 
 
-```{important}
-- The formalities, schedule, assignments etc. are available at [OWL](https://owl.uwo.ca)
-- This site is updated continuously. New material is being added as we progress and typos (sigh!) will be corrected.
-- When reading the files, please notice that there `tabs` and `dropdowns` that have more information and/or, code snippets or/and operating system specific installation instructions.
-- These pages also support [hypothes.is](https://hypothes.is/) annotations (the little arrow at the top right hand corner). Using hypothes.is allows you annote the text, make notes etc. The annotations and notes can be private, public or visible to a group (the course in this case; let me know if you want to join the group). This is entirely optional so try it out and see if you like it. The service requires registration but it is free.
-```
 
 ## Target audience
 
 - Graduate students
 
-## Course material 
+## Course material & assessment
 
-- The lecture material is distributed via this web site and assignments are available at OWL.
-- The course material is divided into modules that focus on specific topic. 
+- The formalities, schedule, assignments etc. are available at [OWL](https://owl.uwo.ca)
+- Lecture material is distributed via this web site.
+- Assignments are available at OWL.
+- Assessment criteria are listed at OWL.
+- The course material is divided into modules each focusing on a specific topic. 
+
+### Special notes about lecture material
+
+- This site is updated continuously. New material is being added as we progress and typos (sigh!) will be corrected.
+- When reading the files, please notice that there `tabs` and `dropdowns` that have more information and/or, code snippets or/and operating system specific installation instructions.
+- These pages also support [hypothes.is](https://hypothes.is/) annotations (the little arrow at the top right hand corner). Using hypothes.is allows you annote the text, make notes etc. The annotations and notes can be private, public or visible to a group (the course in this case; let me know if you want to join the group). This is entirely optional so try it out and see if you like it. The service requires registration but it is free.
 
 ## Learning outcomes
 
@@ -54,7 +57,6 @@ As a practical outcome, the students will learn the need for different operating
 ## Hands-on approach
 
 - This course uses a hands-on approach: You will write scripts and short programs, analyze data and learn methods. 
-
 - Python will be used for most analyses. No prior knowledge of Python or other programming is expected. 
 
 <!--
@@ -78,6 +80,7 @@ This is a hands-on course and requires programming. This means that you *must* h
 Some tasks can be CPU (or even GPU) intensive. To avoid overheating, thermal shutdown or, in the worst case, damage to your computer, always ensure that the ventilation openings are not covered. This is of utmost importance and the responsibility is solely yours.
 
 ```
+
 
 ## Software
 
