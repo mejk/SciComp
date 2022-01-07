@@ -83,7 +83,7 @@ Some tasks can be CPU (or even GPU) intensive. To avoid overheating, thermal shu
 
 Primary software that will be used (we will work through the installation procedures during the course):
 
-- For plotting, data analysis, and machine learning: Python and Jupyter Lab / Notebooks;
+- For plotting, data analysis, and machine learning: Python and Jupyter Lab / Notebook.
 - C/C++ compiler
 - Possibly some others as well.
 
