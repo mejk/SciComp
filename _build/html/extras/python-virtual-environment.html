@@ -1,0 +1,518 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9. Python virtual environments &#8212; SciComp9502B</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/python-virtual-environment.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="8. Brief introduction to Python" href="../class/week02/python-intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../about/syllabus.html">
+   Scientific Computing - SciComp9502B
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Practical matters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week01/week01_summary.html">
+   1. Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week01/intro-to-modeling.html">
+   2. Introduction to computational modeling &amp; methods in chemistry/physics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to HPC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week01/hpc-intro.html">
+   3. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week01/simulation-general.html">
+   4. General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Operating systems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/Linux-basics.html">
+   5. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
+   6. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding-notes-general.html">
+   7. On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/python-intro.html">
+   8. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   9. Python virtual environments
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/extras/python-virtual-environment.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-practical-example">
+   9.1. Installation &amp; practical example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-on-python-virtual-environments">
+   9.2. More on Python virtual environments
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Python virtual environments</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#installation-practical-example">
+   9.1. Installation &amp; practical example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-on-python-virtual-environments">
+   9.2. More on Python virtual environments
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="python-virtual-environments">
+<h1><span class="section-number">9. </span>Python virtual environments<a class="headerlink" href="#python-virtual-environments" title="Permalink to this headline">¶</a></h1>
+<p>There is a vast number of python packages both distributed with the basic installation and contributed by the users and various projects. When packages are updated or/and changed, compatibility may break. That is not a problem between packages that belong to the main distribution but some of the contributed ones, including ones that may be your own ones, may also need to be modified to be compatible with the new distribution. The solution to this is the so-called <em>virtual environment.</em></p>
+<p>The idea of a <em>virtual environment</em> is to provide a sandbox - an isolated environment - for a project. This allows the project to have its own dependencies without interfering with the other projects. Here is a practical example from the context of molecular simualtions (this was the case in Nov 2020 but may have changed since then): The widely used molecular simulations analysis package <a class="reference external" href="https://www.mdanalysis.org/">MDAnalysis</a> requires a specific version of the plotting package <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>. The latest Matplotlib version (=the the latest at the time of writing this) leads to some unexpected errors. Using <em>virtual environments</em> helps to circumvent the problem since creating an environment specific for MDAnalysis allows it to have its own version of Matplotlib.</p>
+<p>In the example above, we’d simply created a separate <em>virtual environment</em>. This could be extended to any other situations. For example, let’s assume that we two projects, <code class="docutils literal notranslate"><span class="pre">ProjectA</span></code> and <code class="docutils literal notranslate"><span class="pre">ProjectB</span></code>. Let’s further assume that they have different and possibly conflicting dependencies. We simply need to create separete <em>virtual environments</em> for both <code class="docutils literal notranslate"><span class="pre">ProjectA</span></code> and <code class="docutils literal notranslate"><span class="pre">ProjectB</span></code>, and are  good to go.</p>
+<p>There are no limits to the number of environments.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using virtual environments is <em>highly</em> recommended. Using them eliminates lots of potential errors and problems with package updates.</p>
+</div>
+<div class="section" id="installation-practical-example">
+<h2><span class="section-number">9.1. </span>Installation &amp; practical example<a class="headerlink" href="#installation-practical-example" title="Permalink to this headline">¶</a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="ecb0f906-81fc-4669-8043-77591109aa80" name="595b5a85-05ef-42c5-9543-e980c818c6a1" type="radio">
+</input><label class="tabbed-label" for="ecb0f906-81fc-4669-8043-77591109aa80">
+Using Anaconda command line</label><div class="tabbed-content docutils">
+<p>Here’s how to create virtual environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code> using the command line terminal. This works in Linux, WSL/WSL2 and Mac. Mac and Windows 10 have also the Anaconda GUI but using command line is quicker. Note that <code class="docutils literal notranslate"><span class="pre">conda</span></code> stores the information about environments in <code class="docutils literal notranslate"><span class="pre">${HOME}/anaconda3/envs/</span></code>. In practise that means that environments can activated and deactivated very conveniently (this is different from <code class="docutils literal notranslate"><span class="pre">pip</span></code>).</p>
+<p><strong>1. Check the version and existing environments:</strong></p>
+<ul>
+<li><p>Check the version of <code class="docutils literal notranslate"><span class="pre">conda</span></code> (command line):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="o">-</span><span class="n">V</span>
+</pre></div>
+</div>
+</li>
+<li><p>Check if <code class="docutils literal notranslate"><span class="pre">conda</span></code> needs to be updated:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</pre></div>
+</div>
+</li>
+<li><p>List  all of your existing <code class="docutils literal notranslate"><span class="pre">conda</span></code> environments:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</li>
+<li><p>If you want to see the list of packages installed in your current virtual environment:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="nb">list</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>2. Set up a virtual environment with <code class="docutils literal notranslate"><span class="pre">conda</span></code>:</strong></p>
+<ul>
+<li><p>Create a new virtual environment. To use your current version of Python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">my_new_environment</span>
+</pre></div>
+</div>
+</li>
+<li><p>Alternatively, if you want to use some specific version of Python, instead use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">my_new_environment</span> <span class="n">python</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>and replace <code class="docutils literal notranslate"><span class="pre">x.y</span></code> by the version number accordingly</p>
+</li>
+<li><p>Activate the new virtual environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span>  <span class="n">my_new_environment</span>
+</pre></div>
+</div>
+<p>After this, the name of your new environment will appear in front of the prompt on your terminal.</p>
+</li>
+<li><p>Install the packages that you want for the environment called <code class="docutils literal notranslate"><span class="pre">my_new_environment</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">my_new_environment</span> <span class="o">&lt;</span><span class="n">package</span> <span class="n">name</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>Note: the option <code class="docutils literal notranslate"><span class="pre">-n</span></code> specifies the name of the environment. That allows for easy installation of
+packages into any environment. Leaving <code class="docutils literal notranslate"><span class="pre">-n</span></code> out installs in the current environment.</p>
+</li>
+<li><p>Deactivate the virtual environment</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+<p>After this, the text <code class="docutils literal notranslate"><span class="pre">base</span></code> will appear in front of the command prompt on your terminal.</p>
+</li>
+</ul>
+<p><strong>If you want to remove your virtual environment:</strong></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">env</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span>  <span class="n">my_new_environment</span>
+</pre></div>
+</div>
+</div>
+<input id="5cb3a2aa-689e-4115-a1d4-b9481a0e958a" name="595b5a85-05ef-42c5-9543-e980c818c6a1" type="radio">
+</input><label class="tabbed-label" for="5cb3a2aa-689e-4115-a1d4-b9481a0e958a">
+Using the Anaconda GUI</label><div class="tabbed-content docutils">
+<ul class="simple">
+<li><p>Open the Anaconda Navigator</p></li>
+<li><p>Click on the tab named ‘Environments’</p></li>
+<li><p>Click on <code class="docutils literal notranslate"><span class="pre">Create</span></code> at the bottom of the Navigator menu</p></li>
+</ul>
+</div>
+<input id="edad80ed-15d1-4ceb-b119-c3c22b0f54e6" name="595b5a85-05ef-42c5-9543-e980c818c6a1" type="radio">
+</input><label class="tabbed-label" for="edad80ed-15d1-4ceb-b119-c3c22b0f54e6">
+Virtual environments with pip</label><div class="tabbed-content docutils">
+<p><code class="docutils literal notranslate"><span class="pre">pip</span></code> works a bit differently, but using it is equally easy. First, install the package <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> using</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">virtualenv</span>
+</pre></div>
+</div>
+<p>This gives <code class="docutils literal notranslate"><span class="pre">venv</span></code> for settinhg up virtual environments.</p>
+<p><strong>Create a virtual environment:</strong></p>
+<p>There is one important thing to notice here and this is where <code class="docutils literal notranslate"><span class="pre">pip</span></code> is different from <code class="docutils literal notranslate"><span class="pre">conda</span></code>. Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> creates
+a virtual environment and its directories at the location where you currently are. In the example below, the creation of the new environment that is called <code class="docutils literal notranslate"><span class="pre">my_new_env</span></code> means that a directory called <code class="docutils literal notranslate"><span class="pre">my_new_env</span></code> is created <em>at the current location</em>. This is less convenient than with <code class="docutils literal notranslate"><span class="pre">conda</span></code>. You can activate a virtul environment from any location but with <code class="docutils literal notranslate"><span class="pre">pip</span></code>, you need to know where it is located.</p>
+<ul>
+<li><p>The command to create a new virtual environment (we call it here <code class="docutils literal notranslate"><span class="pre">my_new_env</span></code>):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">venv</span> <span class="n">my_new_env</span>
+</pre></div>
+</div>
+</li>
+<li><p>After its creation, the environment must be activated by the command <code class="docutils literal notranslate"><span class="pre">source</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="n">my_new_env</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">activate</span>
+</pre></div>
+</div>
+</li>
+<li><p>To check that the virtual environment is indeed activated, type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">python</span>
+</pre></div>
+</div>
+</li>
+<li><p>Deactivation is easier: Independent of your location, simply type</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">deactivate</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="more-on-python-virtual-environments">
+<h2><span class="section-number">9.2. </span>More on Python virtual environments<a class="headerlink" href="#more-on-python-virtual-environments" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">Python Virtual Environments: A Primer</a></p></li>
+<li><p><a class="reference external" href="https://towardsdatascience.com/virtual-environments-104c62d48c54">A Guide to Python’s Virtual Environments</a></p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./extras"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../class/week02/python-intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Brief introduction to Python</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

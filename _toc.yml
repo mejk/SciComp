@@ -1,11 +1,98 @@
-- file: about/syllabus
-  numbered: true
-  expand_sections: false
+#- file: about/syllabus
+#  numbered: true
+#  expand_sections: false
+#
+format: jb-book
+root: about/syllabus
+#
+#numbered: true
+#
+parts:
+  - caption: "MODULE: Practical matters"
+    numbered: true
+    chapters:
+    - file: class/week01/week01_summary.md
+    - file: class/week01/intro-to-modeling
+
+  - caption: "MODULE: Intro to HPC"
+    numbered: true
+    chapters:
+    - file: class/week01/hpc-intro
+    - file: class/week01/simulation-general
+
+  - caption: "MODULE: Operating systems"
+    numbered: true
+    chapters:
+    - file: class/week02/Linux-basics
+    - file: class/week02/linux-basic-commands-2
+
+  - caption: "MODULE: Python & programming"
+    numbered: true
+    chapters:
+    - file: extras/coding-notes-general
+    - file: class/week02/python-intro
+    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Random numbers"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Molecular dynamics"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Monte Carlo"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Finete elements"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Parallel programming"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Finite differences"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Machine learning"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+
+#  - caption: "MODULE: Optimization"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
 
 # - divider: true
 
-- part: Lectures
-  chapters:
+#- part: Lectures
+# chapters:
 #  numbered: true
 #    - file: class/week01/week01_summary.md
 #      numbered: true
@@ -20,160 +107,57 @@
 #      title: "Linux, Python and visualization"
 #      numbered: true
 #      sections:
-     - file: class/week02/Linux-basics
-     - file: class/week02/linux-basic-commands-2
-     - file: class/week02/python-intro
-     - file: class/week01/hpc-intro
-     - file: class/week03/random_numbers
-#      
-#        - file: class/week02/videos
-#        - file: class/week02/homework
-#        - file: class/week02/readings
-#    - file: class/week03/week03_summary
-#
-#
-#    - file: class/week03/week03_summary
-#      numbered: true
-#      title: "Week 3: First look into molecular dynamics"
-#      sections:
-#        - file: class/week03/vmd
-#        - file: class/week03/moldy-1
-#        - file: class/week03/moldy-2
-#        - file: class/week03/gromacs-intro
-#        - file: class/week03/gromacs-installation
-#    - file: class/week04/week04_summary
-#
-#    - file: class/week04/week04_summary
-#      numbered: true
-#      title: "Week 4: Simulation practicals"
-#      sections:
-#       - file: class/week04/gromacs-installation
-#       - file: class/week04/gromacs-water
-#       - file: class/week04/lysozome-tutorial       
-#
-#
-#    - file: class/week05/week05_summary.md
-#      numbered: true
-#      title: "Week 5: Analysis: Equilibrium and structure"
-#      sections:
-#        - file: class/week05/dft-notes
-#        # - file: class/week04/videos
-#        # - file: class/week04/homework
-#        #- file: class/week04/lecture
-#        # - file: class/week04/test
-#        # - file: class/week04/lab
-#    # - file: class/week05/week05_summary
-#
-#    - file: class/week06/week06_summary.md
-#      numbered: true
-#      title: "Week 6: Interactions and force fields"
-##      expand_sections: false
+# - file: class/week02/Linux-basics
+# - file: class/week02/linux-basic-commands-2
+# - file: class/week02/python-intro
+# - file: class/week01/hpc-intro
+# - file: class/week03/random_numbers
+#- part: More material
+#  chapters:
+#    - file: extras/coding-notes-general
+##    - file: class/week01/week01_summary.md
+##      title: Installations
+##      expand_sections: true
 ##      sections:
-##        - file: class/week06/simulation-general
-
-#    - file: class/week07/week07_summary.md
-#      numbered: true
-#      title: "Week 7: More analysis methods"
-##      expand_sections: false
-##      sections:
-##        - file: class/week07/simulation-general
-
-#    - file: class/week08/week08_summary.md
-#      numbered: true
-#      title: "Week 8: Multiscale modeling"
-##      expand_sections: false
-##      sections:
-##        - file: class/week08/simulation-general
+##        - file: extras/python-virtual-environment
+##        - file: extras/vmd-selection
 #
-#    - file: class/week09/week09_summary.md
-#      numbered: true
-#      title: "Week 9: Modeling cells"
-##      expand_sections: false
-##      sections:
-##        - file: class/week01/simulation-general
-#
-#    - file: class/week10/week10_summary.md
-#      numbered: true
-#      title: "Week 10: Quantum level"
-# #     expand_sections: false
-# #     sections:
-# #       - file: class/week10/simulation-general
-#
-#    - file: class/week11/week11_summary.md
-#      numbered: true
-#      title: "Machine learning"
- #     expand_sections: false
- #     sections:
- #       - file: class/week21/simulation-general
-#
-#    - file: class/week12/week12_summary.md
-#      numbered: true
-#      title: "Machine learning"
-# #     expand_sections: false
-# #     sections:
-# #       - file: class/week13/simulation-general
-#
-#    - file: class/week13/week13_summary.md
-#      numbered: true
-#      title: "Week 13: Summary"
-##     expand_sections: false
-##     sections:
-##       - file: class/week13/simulation-general
-##        - file: class/week01/intro-to-modeling
-##        - file: class/week01/hpc-intro
-
-#- part: LABS
+#- part: Installation instructions
 #  chapters:
-#   - file: class/labs/lab_1
-#   - file: class/labs/lab_2_part_1
-#   - file: class/labs/lab_2_part_2
-
-- part: More material
-  chapters:
-    - file: extras/coding-notes-general
-#    - file: class/week01/week01_summary.md
-#      title: Installations
-#      expand_sections: true
-#      sections:
-#        - file: extras/python-virtual-environment
-#        - file: extras/vmd-selection
-
-- part: Installation instructions
-  chapters:
-   - file: extras/install-wsl
-   - file: class/week02/python-installation
-   - file: extras/python-virtual-environment
-#   - file: extras/vmd-install
-
-#- part: Python extras
-#  chapters:
-#    - file: extras/python-virtual-environment
-
-#- part: VMD extras
-#  chapters:
-#    - file: extras/vmd-plugins
-##    - file: extras/vmd-selection
-
-- part: How-tos
-  chapters:
-    - file: class/week02/jupyter-intro
-    - file: extras/vi-editor
-    - file: extras/editing-ascii
-    - file: extras/helpful-software
-- part: More on computers / help
-  chapters:
-    - url: https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md
-      title: ssh keys, aliases and connecting using ssh keys  
-    - url: https://github.com/mejk/computer-stuff
-      title: Random notes on computers, installation, dual boot, vnc, etc.
-#      title: Lab Stuff
-
-#- part: Gallery
-#  chapters:
-#    - file: gallery/gallery
-##       title: Exam stuff
+#   - file: extras/install-wsl
+#   - file: class/week02/python-installation
+#   - file: extras/python-virtual-environment
+##   - file: extras/vmd-install#
 #
-#- part: Course Feedback
+##- part: Python extras
+##  chapters:
+##    - file: extras/python-virtual-environment
+#
+##- part: VMD extras
+##  chapters:
+##    - file: extras/vmd-plugins
+###    - file: extras/vmd-selection
+#
+#- part: How-tos
 #  chapters:
-#    - file: about/feedback
-#      title: Anonymous Feedback Form
+#    - file: class/week02/jupyter-intro
+#    - file: extras/vi-editor
+#    - file: extras/editing-ascii
+#    - file: extras/helpful-software
+#- part: More on computers / help
+#  chapters:
+#    - url: https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md
+#      title: ssh keys, aliases and connecting using ssh keys  
+#    - url: https://github.com/mejk/computer-stuff
+#      title: Random notes on computers, installation, dual boot, vnc, etc.
+##      title: Lab Stuff
+#
+##- part: Gallery
+##  chapters:
+##    - file: gallery/gallery
+###       title: Exam stuff
+##
+##- part: Course Feedback
+##  chapters:
+##    - file: about/feedback
+##      title: Anonymous Feedback Form

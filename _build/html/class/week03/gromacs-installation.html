@@ -1,0 +1,1097 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gromacs installation &#8212; SciComp9502B</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week03/gromacs-installation.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9502B
+  </a>
+ </li>
+</ul>
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week03/gromacs-installation.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#official-gromacs-documentation">
+   Official Gromacs documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-process">
+   The process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparations">
+   Preparations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-that-your-system-is-up-to-date">
+   Check that your system is up-to-date
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-c-c-compilers-and-cmake">
+   Install C/C++ compilers and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cmake
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-dependencies-and-tools-for-gromacs">
+   Install dependencies and tools for Gromacs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-the-necessary-directories">
+   Create the necessary directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-gromacs">
+   Download Gromacs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-the-authenticity-of-the-files">
+     Check the authenticity of the files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unpack-uncompress-and-create-a-build-directory">
+   Unpack, uncompress and create a build directory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-gromacs">
+   Building Gromacs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-tests">
+   Regression tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-installation">
+   Final installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#let-the-system-know-where-gromacs-is">
+   Let the system know where Gromacs is
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Gromacs installation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#official-gromacs-documentation">
+   Official Gromacs documentation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-process">
+   The process
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preparations">
+   Preparations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-that-your-system-is-up-to-date">
+   Check that your system is up-to-date
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-c-c-compilers-and-cmake">
+   Install C/C++ compilers and
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     cmake
+    </span>
+   </code>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#install-dependencies-and-tools-for-gromacs">
+   Install dependencies and tools for Gromacs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-the-necessary-directories">
+   Create the necessary directories
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#download-gromacs">
+   Download Gromacs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#check-the-authenticity-of-the-files">
+     Check the authenticity of the files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#unpack-uncompress-and-create-a-build-directory">
+   Unpack, uncompress and create a build directory
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#building-gromacs">
+   Building Gromacs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regression-tests">
+   Regression tests
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#final-installation">
+   Final installation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#let-the-system-know-where-gromacs-is">
+   Let the system know where Gromacs is
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="gromacs-installation">
+<h1>Gromacs installation<a class="headerlink" href="#gromacs-installation" title="Permalink to this headline">¶</a></h1>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="bg-light reference internal image-reference" href="../../_images/gromacs-logo.png"><img alt="Gromacs" class="bg-light align-right" src="../../_images/gromacs-logo.png" style="width: 250px;" /></a>
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To learn the idea how to build and compile software, and troubleshoot should problems arise</p></li>
+<li><p class="card-text">To understand the idea of software dependencies</p></li>
+<li><p class="card-text">To understand how to use shell/environment variables.</p></li>
+<li><p class="card-text">To install Gromacs</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> Gromacs, gcc, g++, Makefile, cmake, building software, environment variable, dot files</p>
+<p class="card-text"><strong>Important:</strong> The compilation and testing processes are CPU intensive. It is <em>very</em> important to ensure that you have not blocked the ventilation. Blocking them may cause overheating and, in the worst case, damage.</p>
+<p class="card-text"><strong>Notes:</strong> The procedure below has been tested on</p>
+<ul class="simple">
+<li><p class="card-text">Three different Linux installations using Ubuntu 20.04 LTS with gcc9</p></li>
+<li><p class="card-text">In WSL/WSL2 (Ubuntu 20.04 LTS with gcc9) under Windows 10</p></li>
+<li><p class="card-text">iMac (Catalina, 10.15.7), 3.6 GHz i7 with <code class="docutils literal notranslate"><span class="pre">gcc</span></code> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> version 8 compilers. The Mac default <code class="docutils literal notranslate"><span class="pre">clang</span></code> 11 compiler produced errors.</p></li>
+<li><p class="card-text">Using NVIDIA GPU (CUDA 11.2)</p></li>
+<li><p class="card-text">Instructions for Linux &amp; WSL/WSL2 and Mac are given in separate tabs when there are differences. Also steps for NVIDIA GPUs are indicated when different from the standard Linux installation.</p></li>
+</ul>
+<!--
+**Associated material:** Cheat sheet of the most common Linux commands.
+-->
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>The instructions below provide a step-by-step guide. The procedure has been tested on several computers using WSL in Windows 10 as well various flavors of Linux. It is also very easy to adjust the installation process to any version of Gromacs or to have multiple versions present if needed.</p>
+<p>We install <a class="reference external" href="https://manual.gromacs.org/documentation/2020.4/download.html">Gromacs 2020.4</a>.</p>
+<div class="section" id="official-gromacs-documentation">
+<h2>Official Gromacs documentation<a class="headerlink" href="#official-gromacs-documentation" title="Permalink to this headline">¶</a></h2>
+<hr>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.gromacs.org/">Gromacs Home Page</a></p></li>
+<li><p>Gromacs <a class="reference external" href="https://manual.gromacs.org/documentation/">downloads</a></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.5281/zenodo.4054996">Manual for Gromacs 2020.4</a></p></li>
+</ul>
+</div>
+<div class="section" id="the-process">
+<h2>The process<a class="headerlink" href="#the-process" title="Permalink to this headline">¶</a></h2>
+<p>The different steps of the process are summarized in the figure</p>
+<div class="figure align-left" id="id1">
+<a class="bg-light reference internal image-reference" href="../../_images/gromacs-installation-process.svg"><img alt="Gromacs" class="bg-light" src="../../_images/gromacs-installation-process.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text"><em>Summary of the Gromacs installation process. The steps where most errors tend to occur and indicated in red color.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="preparations">
+<h2>Preparations<a class="headerlink" href="#preparations" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Gromacs doesn’t require much disk space and it runs with very modest memory requirements. That is, for the purposes of this course, any reasonably modern PC/Mac is going to work.</p>
+<p>Before we start, we need to answer the following questions:</p>
+<ol class="simple">
+<li><p>Where to download Gromacs</p></li>
+<li><p>Where to install Gromacs</p></li>
+<li><p>Does the system have an NVIDIA GPU</p>
+<ul class="simple">
+<li><p>Modern Macs use AMD GPUs so the answer is no</p></li>
+<li><p>WSL/WSL2: GPUs are not accessible. This is going to change in WSL2,
+but it is not currently part of WSL2 (it is available in the WSL2 insider edition).</p></li>
+<li><p>Linux computers with NVIDIA GPUs perform very well</p>
+<ul>
+<li><p>To use an NVIDIA GPU for computing, CUDA drivers need to be installed. The command to
+check if that has already been done is <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>. If the command is not present,
+then CUDA drivers have not been installed.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>We will create a directory for the course where we will both download and install Gromacs. Below, we will go through the process step-by-step.</p>
+</div>
+<div class="section" id="check-that-your-system-is-up-to-date">
+<h2>Check that your system is up-to-date<a class="headerlink" href="#check-that-your-system-is-up-to-date" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Before we start the installation procedure: Let’s check that the system is up-to-date.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="ff2fadc2-fe9d-448d-95df-67871851da56" name="744cf139-d016-434b-bb04-8ffbd387639b" type="radio">
+</input><label class="tabbed-label" for="ff2fadc2-fe9d-448d-95df-67871851da56">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<p>Open a  terminal in Linux and execute</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">update</span>
+<span class="n">sudo</span> <span class="n">apt</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+</div>
+<input id="2f6e97c0-243e-42a7-b96f-aed299c5c65d" name="744cf139-d016-434b-bb04-8ffbd387639b" type="radio">
+</input><label class="tabbed-label" for="2f6e97c0-243e-42a7-b96f-aed299c5c65d">
+Mac:</label><div class="tabbed-content docutils">
+<p>Open a terminal and update using your package manager. For example</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">update</span>
+<span class="n">brew</span> <span class="n">upgrade</span>
+</pre></div>
+</div>
+<p>in the case of Homebrew.</p>
+</div>
+</div>
+</div>
+<div class="section" id="install-c-c-compilers-and-cmake">
+<h2>Install C/C++ compilers and <code class="docutils literal notranslate"><span class="pre">cmake</span></code><a class="headerlink" href="#install-c-c-compilers-and-cmake" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>It is highly recommended to read the Gromacs installation guide. That will give you a better idea of the procedure we follow below.</p>
+<p>As the first requirement, we need C/C++ compilers and <code class="docutils literal notranslate"><span class="pre">cmake</span></code>. The C and C__ compilers <code class="docutils literal notranslate"><span class="pre">gcc</span></code> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> are the canonical compilers and they are automatically installed in standard Linux systems (but need to be separately installed in the case of WSL). The tool <code class="docutils literal notranslate"><span class="pre">cmake</span></code> doesn’t come as a part of any standard installation so it needs to installed separately.  Let’s check if they are already installed. This can be done with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gcc</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">g</span><span class="o">++</span> <span class="o">--</span><span class="n">version</span>
+<span class="n">cmake</span> <span class="o">--</span><span class="n">version</span>
+</pre></div>
+</div>
+<p>If you are using <code class="docutils literal notranslate"><span class="pre">clang</span></code> or the Intel C/C++-compiler,
+replace <code class="docutils literal notranslate"><span class="pre">gcc</span></code> by <code class="docutils literal notranslate"><span class="pre">clang</span></code> or <code class="docutils literal notranslate"><span class="pre">icc</span></code>. However, <code class="docutils literal notranslate"><span class="pre">gcc</span></code> is strongly recommended and we will not cover issues related to <code class="docutils literal notranslate"><span class="pre">icc</span></code> and <code class="docutils literal notranslate"><span class="pre">clang</span></code>.</p>
+<p>If no compilers were found, then let’s install the default versions</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="a50f5dfe-a61b-4141-b7c3-74c527fef05e" name="929b244b-a8f3-4ba9-b963-57874ac63ffd" type="radio">
+</input><label class="tabbed-label" for="a50f5dfe-a61b-4141-b7c3-74c527fef05e">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">gcc</span> <span class="n">g</span><span class="o">++</span> <span class="n">cmake</span>
+</pre></div>
+</div>
+</div>
+<input id="d1ffe405-f828-460c-8061-de5505fe7f18" name="929b244b-a8f3-4ba9-b963-57874ac63ffd" type="radio">
+</input><label class="tabbed-label" for="d1ffe405-f828-460c-8061-de5505fe7f18">
+Mac:</label><div class="tabbed-content docutils">
+<p>The compilers <code class="docutils literal notranslate"><span class="pre">gcc</span></code> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> come with Xcode so you should have them; if for some reason you don’t have Xcode installed, do it now. It is a required component. Note that the default C/C++-compilers on Mac are, however, <code class="docutils literal notranslate"><span class="pre">clang</span></code> and <code class="docutils literal notranslate"><span class="pre">clang++</span></code>. The <code class="docutils literal notranslate"><span class="pre">cmake</span></code> tool needs to be separately installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">cmake</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now that the compilers are installed, check the versions you have using the above commands. Check also where they were installed by using the <code class="docutils literal notranslate"><span class="pre">which</span></code> command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">which</span> <span class="n">gcc</span>
+<span class="n">which</span> <span class="n">g</span><span class="o">++</span>
+<span class="n">which</span> <span class="n">cmake</span>
+</pre></div>
+</div>
+<p>Now that we have <code class="docutils literal notranslate"><span class="pre">cmake</span></code> and a compilers, we can add some tools.</p>
+</div>
+<div class="section" id="install-dependencies-and-tools-for-gromacs">
+<h2>Install dependencies and tools for Gromacs<a class="headerlink" href="#install-dependencies-and-tools-for-gromacs" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>The modern versions of Gromacs come with most of the dependencies already built in (distributed with the package). If you install older versions (pre-20XX series), there are more dependencies that need to be installed separately, see the documentation for the corresponding version of Gromacs.</p>
+<p>Let’s install the dependencies. These are not absolutely necessary but they are very helpful. Let’s start with <code class="docutils literal notranslate"><span class="pre">zlib</span></code> and <code class="docutils literal notranslate"><span class="pre">grace</span></code>. The program <code class="docutils literal notranslate"><span class="pre">grace</span></code> is for plotting; Gromacs’ analysis routines provide ready-to-plot files in the <code class="docutils literal notranslate"><span class="pre">.xvg</span></code> format which is the native format for <code class="docutils literal notranslate"><span class="pre">grace</span></code>. Installation:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="b7ab1abf-e5ab-4dcf-b86e-495ef5598d05" name="71f46300-badc-470f-b68a-eef7b2a9f076" type="radio">
+</input><label class="tabbed-label" for="b7ab1abf-e5ab-4dcf-b86e-495ef5598d05">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">zlib1g</span> <span class="n">grace</span> 
+</pre></div>
+</div>
+</div>
+<input id="f8778ad9-9bd8-4328-aacf-38b1e30bfd35" name="71f46300-badc-470f-b68a-eef7b2a9f076" type="radio">
+</input><label class="tabbed-label" for="f8778ad9-9bd8-4328-aacf-38b1e30bfd35">
+Mac:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">grace</span> <span class="n">zlib</span>
+</pre></div>
+</div>
+<p>If the rare problem <em>“Could Not Resolve HEAD to a Revision”</em>, the following seems to help:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git -C $(brew --repository homebrew/core) checkout master
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, let’s install ImageMagick, doxygen and TexLive (provides (pdflatex)). These are not required by Gromacs but in case you wish to install Gromacs documentation (you should), they are needed. This can take some time since the LaTeX packages are quite large:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="8e356128-76ee-45f5-bc92-8f056dcb414e" name="02f07899-ab96-4491-9d27-4245368ea84f" type="radio">
+</input><label class="tabbed-label" for="8e356128-76ee-45f5-bc92-8f056dcb414e">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span> <span class="n">install</span> <span class="n">imagemagick</span> <span class="n">doxygen</span> <span class="n">texlive</span><span class="o">-</span><span class="n">latex</span><span class="o">-</span><span class="n">base</span> <span class="n">texlive</span><span class="o">-</span><span class="n">fonts</span><span class="o">-</span><span class="n">recommended</span> <span class="n">texlive</span><span class="o">-</span><span class="n">fonts</span><span class="o">-</span><span class="n">extra</span> <span class="n">texlive</span><span class="o">-</span><span class="n">latex</span><span class="o">-</span><span class="n">extra</span>
+</pre></div>
+</div>
+</div>
+<input id="a3abcb84-717c-45d7-9fd0-60a5e46b7b5f" name="02f07899-ab96-4491-9d27-4245368ea84f" type="radio">
+</input><label class="tabbed-label" for="a3abcb84-717c-45d7-9fd0-60a5e46b7b5f">
+Mac:</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">imagemagick</span> <span class="n">doxygen</span>
+</pre></div>
+</div>
+<p>If you want any of the extra packages check the from Homebrew. You may already have them if you have LaTeX installed.</p>
+</div>
+</div>
+</div>
+<div class="section" id="create-the-necessary-directories">
+<h2>Create the necessary directories<a class="headerlink" href="#create-the-necessary-directories" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Now it is time to create the directories. To do that, open a terminal window. In the following, we will create separate locations for downloading the Gromacs source file and for the final installation. While this organization is not absolutely necessary, it is helpful since if we have to reinstall for any reason, it will then be very easy use the downloaded source file(s) again. The actual installation will be done in a local directory and we will create a separate directory for that. That directory is where the executables and other Gromacs files  will be put.</p>
+<p>Let’s ensure that we are in the home directory. We then either</p>
+<ul class="simple">
+<li><p>move inside the main directory for the course called <code class="docutils literal notranslate"><span class="pre">CHEM3300G</span></code> that we created in Lab1, but if you don’t have it, just</p></li>
+<li><p>create the main directory for the course called <code class="docutils literal notranslate"><span class="pre">CHEM3300G</span></code> and under that directories <code class="docutils literal notranslate"><span class="pre">gromacs</span></code> where we will download the files and a second directory called <code class="docutils literal notranslate"><span class="pre">gmx</span></code> where will install the software. Execute the following commands:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
+</pre></div>
+</div>
+<p>If you didn’t follow the instructions in Lab1 or skipped directly here, then create the new directory by</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">CHEM3300G</span>
+</pre></div>
+</div>
+<p>Now, move into the new directory and create a couple of more directories in there:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">CHEM3300G</span>
+<span class="n">mkdir</span> <span class="n">gromacs</span>
+<span class="n">mkdir</span> <span class="n">gmx</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download-gromacs">
+<h2>Download Gromacs<a class="headerlink" href="#download-gromacs" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>We install the version 2020.4 version.</p>
+<p>If you followed the instructions above, you should now be in the directory <code class="docutils literal notranslate"><span class="pre">CHEM3300G</span></code> (check with <code class="docutils literal notranslate"><span class="pre">pwd</span></code>; if you are not in <code class="docutils literal notranslate"><span class="pre">CHEM3300G</span></code> then you have to move there). Move to the download directory (the directory called <code class="docutils literal notranslate"><span class="pre">gromacs</span></code> that we just created) and download Gromacs and the Regression tests (these are needed for checking that the installation works properly).</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="4c9b479e-7cb0-41e7-90fc-a53763a14c17" name="fe388a9d-4889-4290-8a39-43ce02a21ec2" type="radio">
+</input><label class="tabbed-label" for="4c9b479e-7cb0-41e7-90fc-a53763a14c17">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<p>Move on to retrieve the files, you have all the tools. Mac users, check the other tab.</p>
+</div>
+<input id="a315249f-239a-47df-9258-d85498c11115" name="fe388a9d-4889-4290-8a39-43ce02a21ec2" type="radio">
+</input><label class="tabbed-label" for="a315249f-239a-47df-9258-d85498c11115">
+Mac:</label><div class="tabbed-content docutils">
+<p>The tool <code class="docutils literal notranslate"><span class="pre">wget</span></code> is not readily available but has  to be installed separately if it isn’t already installed:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">wget</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">gromacs</span>
+<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">gromacs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">gromacs</span><span class="o">/</span><span class="n">gromacs</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">gerrit</span><span class="o">.</span><span class="n">gromacs</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">regressiontests</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+<div class="section" id="check-the-authenticity-of-the-files">
+<h3>Check the authenticity of the files<a class="headerlink" href="#check-the-authenticity-of-the-files" title="Permalink to this headline">¶</a></h3>
+<p>One should check the authenticity (= the digital fingerprint) of the downloaded files.</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="f6e1b3f3-264d-435a-a1bd-bde225b9ed06" name="38ac07b7-8515-4696-a4f1-d645f356b5b2" type="radio">
+</input><label class="tabbed-label" for="f6e1b3f3-264d-435a-a1bd-bde225b9ed06">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<p>The digital fingerprint is checked using the command <code class="docutils literal notranslate"><span class="pre">md5sum</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">md5sum</span> <span class="n">gromacs</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">md5sum</span> <span class="n">regressiontests</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+<input id="9f310e08-62b2-472c-ad1b-08f2e2b8d862" name="38ac07b7-8515-4696-a4f1-d645f356b5b2" type="radio">
+</input><label class="tabbed-label" for="9f310e08-62b2-472c-ad1b-08f2e2b8d862">
+Mac:</label><div class="tabbed-content docutils">
+<p>One must install the package <code class="docutils literal notranslate"><span class="pre">md5sha1sum</span></code>. That gives the command <code class="docutils literal notranslate"><span class="pre">md5</span></code> for checking the digital fingerprint.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">md5sha1sum</span>
+<span class="n">md5</span> <span class="n">gromacs</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">md5</span> <span class="n">regressiontests</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The checksum values should match the following:</p>
+<ul class="simple">
+<li><p>Gromacs 2020.4 md5sum: aead694ec7d1222cbc40011c88047c3d</p></li>
+<li><p>Regression tests’ md5sum: 5965bd26a96f1b5916af0484aa1594e2</p></li>
+</ul>
+<p>If not, you need to re-download.</p>
+</div>
+</div>
+<div class="section" id="unpack-uncompress-and-create-a-build-directory">
+<h2>Unpack, uncompress and create a build directory<a class="headerlink" href="#unpack-uncompress-and-create-a-build-directory" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>The next step is to uncompress and unpack the files and to create a <em>build directory</em>. The <em>build directory</em> is where the software is built: It is a temporary directory for setting up various things for the actual installation.</p>
+<p>Let’s ensure that we are still in the correct location. Use</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pwd</span>
+</pre></div>
+</div>
+<p>to check the location. Should be <code class="docutils literal notranslate"><span class="pre">CHEM3300G/gromacs</span></code>. If not, then move there.</p>
+<p>In the next step we unpack the Gromacs package that contains the source code. Note that you can omit the letter <code class="docutils literal notranslate"><span class="pre">v</span></code> in the <code class="docutils literal notranslate"><span class="pre">tar</span></code> command below: The option <code class="docutils literal notranslate"><span class="pre">v</span></code> produces verbose output and shows what is being produced (use it if you want to see what is going on).</p>
+<p>After unpacking, check that a new directory called <code class="docutils literal notranslate"><span class="pre">gromacs-2020.4</span></code> has been created.
+We then move in the new directory, and create a build directory in there and move into the build directory:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="n">xzfv</span> <span class="n">gromacs</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">tar</span> <span class="n">xzf</span> <span class="n">regressiontests</span><span class="o">-</span><span class="mf">2020.4</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+<span class="n">cd</span> <span class="n">gromacs</span><span class="o">-</span><span class="mf">2020.4</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="building-gromacs">
+<h2>Building Gromacs<a class="headerlink" href="#building-gromacs" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>It is very important that you are located inside the build directory. We just moved there in the previous step so you should be in the right place.</p>
+<p>The steps for building gromacs have two parts:</p>
+<ol class="simple">
+<li><p>Building the software with <code class="docutils literal notranslate"><span class="pre">cmake</span></code> and</p></li>
+<li><p>compilation with <code class="docutils literal notranslate"><span class="pre">make</span></code>.</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">cmake</span></code> is a general tool for <em>building software</em>. When software is being built, the process checks, among other things, that all the dependencies (=software, libraries etc. that the new software to be installed depends on) are present and sets the paths (=directories) for the actual installation. We can pass arguments such as the installation directory to <code class="docutils literal notranslate"><span class="pre">cmake</span></code> and that is what we will do below; the default installation directory defined in the software’s source files is in the system, but we want to have a local installation instead. We can define that in when we run <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.</p>
+<p>We are now ready to execute the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command. But let’s make the process easier by using the <em>environment variable</em> that tells our home directory. You can see all of your <em>environment variables</em> by giving the command <code class="docutils literal notranslate"><span class="pre">printenv</span></code>. The <em>environment variable</em> contains the home directory is called <code class="docutils literal notranslate"><span class="pre">$HOME</span></code>; shell variables start with the dollar sign.</p>
+<p>Execute the command</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo $HOME
+</pre></div>
+</div>
+<p>to list your home directory.</p>
+<p>We are now ready to build:</p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="eafb588f-9fcf-4a55-baf2-a8bbaa467baf" name="a7545fdf-65a4-4f8e-818f-d082f1bd58f4" type="radio">
+</input><label class="tabbed-label" for="eafb588f-9fcf-4a55-baf2-a8bbaa467baf">
+Linux &amp; WSL/WSL2</label><div class="tabbed-content docutils">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_INSTALL_PREFIX=${HOME}/CHEM3300G/gmx -DREGRESSIONTEST_PATH=${HOME}/CHEM3300G/gromacs/regressiontests-2020.4
+</pre></div>
+</div>
+<p><strong>Important:</strong> The above should be copied as is on a single line.</p>
+</div>
+<input id="54c10398-ce94-4b4d-bb9c-875476cc6bee" name="a7545fdf-65a4-4f8e-818f-d082f1bd58f4" type="radio">
+</input><label class="tabbed-label" for="54c10398-ce94-4b4d-bb9c-875476cc6bee">
+Mac:</label><div class="tabbed-content docutils">
+<p>Let’s install <code class="docutils literal notranslate"><span class="pre">fftw</span></code> separately (+ at the same time a couple of other extras):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">fftw</span> <span class="n">sphinx</span> <span class="n">pygments</span> 
+</pre></div>
+</div>
+<p>Then, let’s turn FFTW building off (we have it now from the previous line) and force the <code class="docutils literal notranslate"><span class="pre">gcc</span></code>/<code class="docutils literal notranslate"><span class="pre">g++</span></code> compilers. Temporary variables are used for <code class="docutils literal notranslate"><span class="pre">gcc</span></code> and <code class="docutils literal notranslate"><span class="pre">g++</span></code> since Macs don’t have a well-defined universal location for the compilers.</p>
+<!--
+FIXED: in some Mac systems gcc/G++ are put in /usr/bin/. Need variables for that. Fixed
+
+older macs use bash -> zsh doesn't work -> .bash_profile
+-->
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>temp_gcc=`which gcc`
+temp_g++=`which g++`
+
+cmake .. -DCMAKE_C_COMPILER=${temp_gcc}   -DCMAKE_CXX_COMPILER=${temp_g++} -DGMX_BUILD_OWN_FFTW=OFF -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_INSTALL_PREFIX=${HOME}/CHEM3300G/gmx -DREGRESSIONTEST_PATH=${HOME}/CHEM3300G/gromacs/regressiontests-2020.4
+</pre></div>
+</div>
+</div>
+<input id="58644422-0495-446d-ba82-6c9e6039a71a" name="a7545fdf-65a4-4f8e-818f-d082f1bd58f4" type="radio">
+</input><label class="tabbed-label" for="58644422-0495-446d-ba82-6c9e6039a71a">
+Linux with NVIDIA GPU:</label><div class="tabbed-content docutils">
+<p>In this case you must check which precise version of CUDA is present (command: <code class="docutils literal notranslate"><span class="pre">nvidia-smi</span></code>) and the path to it. Here, the version is 11.2</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake .. -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_INSTALL_PREFIX=${HOME}/CHEM3300G/gmx \
+         -DREGRESSIONTEST_PATH=${HOME}/CHEM3300G/gromacs/regressiontests-2020.4 \
+         -DCMAKE_C_COMPILER=gcc -DCMAKE_CXX_COMPILER=g++ \
+         -DGMX_BUILD_OWN_FFTW=ON -DGMX_GPU=ON -DGMX_USE_OPENCL=off \
+         -DGMX_CUDA_TARGET_COMPUTE=75 \
+         -DCUDA_TOOLKIT_ROOT_DIR=/usr/local/cuda-11.2  \
+         -DGMX_SHARED_LIBS=ON -DGMX_DOUBLE=off -DGMX_DEFAULT_SUFFIX=ON
+</pre></div>
+</div>
+</div>
+</div>
+<p>There should be no errors.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">If building failed: General instructions</p>
+<ol class="simple">
+<li><p>Scroll up the screen and find the error messages. They tell what went wrong. Most likely, a library or package was missing. That is easy to fix by installing those packages or libraries.</p></li>
+<li><p>If the build failed or it had to be interrupted, the build directory must be cleaned before re-building. In other words, the build directory must be totally empty for the new build. Check the contents and if the directory is not empty, clean the directory using the <code class="docutils literal notranslate"><span class="pre">command</span> <span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">*</span></code>.</p></li>
+</ol>
+<p>After that, run <code class="docutils literal notranslate"><span class="pre">cmake</span></code> again.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">*</span></code> is a very powerful and potentially dangerous command as it <em>deletes everything</em> in the current directory.</p>
+<p>It does the following: <code class="docutils literal notranslate"><span class="pre">rm</span></code> removes. The option <code class="docutils literal notranslate"><span class="pre">-r</span></code> instructs <code class="docutils literal notranslate"><span class="pre">rm</span></code> to remove everything <em>recursively</em> under the current directory. The argument star is a so-called <em>wildcard</em> character and means ‘everything’. So the command removes all files and directories under the current directory. We could remove them one-by-one, of course, but that would be very time consuming. Here we use <code class="docutils literal notranslate"><span class="pre">rm</span></code> since for the build to be successful, it has to be done in an empty directory.</p>
+</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">If building failed on Mac:</p>
+<p>Here are a few points:</p>
+<ol class="simple">
+<li><p>In addition to what is said under the general problems (=that you must clean the build directory), here are a few issues that have come up with Macs.</p></li>
+<li><p>The error messages that appear often during building were related to <code class="docutils literal notranslate"><span class="pre">fftw</span></code>. The easy solution to that was to have <code class="docutils literal notranslate"><span class="pre">-DGMX_BUILD_OWN_FTTW=OFF</span></code> and install <code class="docutils literal notranslate"><span class="pre">fftw</span></code> using <code class="docutils literal notranslate"><span class="pre">brew</span></code>.</p></li>
+<li><p>In my case, the default compiler (<code class="docutils literal notranslate"><span class="pre">clang</span></code> version 11) on MacOS Catalina didn’t build Gromacs properly. It seems that the issues are related to Xcode. The solution that worked was to force the building and compilation processes to use the <code class="docutils literal notranslate"><span class="pre">gcc</span></code> compiler. This can be done using the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> directives as shown below.</p></li>
+</ol>
+<p><strong>Here’s what worked:</strong></p>
+<ul class="simple">
+<li><p>As discussed above, install <code class="docutils literal notranslate"><span class="pre">fftw</span></code> and let’s add some other packages that were missing (but not critical).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">brew</span> <span class="n">install</span> <span class="n">fftw</span> <span class="n">sphinx</span> <span class="n">pygments</span> 
+</pre></div>
+</div>
+<p>Then, let’s turn FFTW building off (we have it now) and force the <code class="docutils literal notranslate"><span class="pre">gcc</span></code>/<code class="docutils literal notranslate"><span class="pre">g++</span></code> compilers:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake .. -DCMAKE_C_COMPILER=/usr/local/bin/gcc   -DCMAKE_CXX_COMPILER=/usr/local/bin/g++ -DGMX_BUILD_OWN_FFTW=OFF -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_INSTALL_PREFIX=${HOME}/CHEM3300G/gmx -DREGRESSIONTEST_PATH=${HOME}/CHEM3300G/gromacs/regressiontests-2020.4
+</pre></div>
+</div>
+<!--
+```
+cmake .. -DCMAKE_CXX_FLAGS=-stdlib-libc++ -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_INSTALL_PREFIX=${HOME}/CHEM3300G/gmx -DREGRESSIONTEST_PATH=${HOME}/CHEM3300G/gromacs/regressiontests-2020.4
+```
+If the compilation worked with `clang`, then that is perfectly good.
+-->
+<p>The <code class="docutils literal notranslate"><span class="pre">gcc</span></code> compiler version was 8.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code class="docutils literal notranslate"><span class="pre">rm</span> <span class="pre">-r</span> <span class="pre">*</span></code> is a very powerful and potentially dangerous command as it <em>deletes everything</em> in the current directory.</p>
+<p>It does the following: <code class="docutils literal notranslate"><span class="pre">rm</span></code> removes. The option <code class="docutils literal notranslate"><span class="pre">-r</span></code> instructs <code class="docutils literal notranslate"><span class="pre">rm</span></code> to remove everything <em>recursively</em> under the current directory. The argument star is a so-called <em>wildcard</em> character and means ‘everything’. So the command removes all files and directories under the current directory. We could remove them one-by-one, of course, but that would be very time consuming. Here we use <code class="docutils literal notranslate"><span class="pre">rm</span></code> since for the build to be successful, it has to be done in an empty directory.</p>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The process below is intensive and takes computing resources. It is very important to ensure that you have not blocked the ventilation as that may cause overheating and even damage.</p>
+</div>
+<p>We are now read to build Gromacs. That is an intensive process but we can make it faster by using all the cores we have available. Note that on a PC/Mac, one physical CPU typically has two cores. Below, we will get the number of cores, assign it to a variable and then run <code class="docutils literal notranslate"><span class="pre">make</span></code></p>
+<div class="tabbed-set docutils">
+<input checked="checked" id="0bf42e80-29c2-41ee-bc30-0ee00fa48c14" name="2746098f-5574-466f-a44c-60397828b81d" type="radio">
+</input><label class="tabbed-label" for="0bf42e80-29c2-41ee-bc30-0ee00fa48c14">
+Linux &amp; WSL/WSL2 only: </label><div class="tabbed-content docutils">
+<p>The command to get the number of cores is <code class="docutils literal notranslate"><span class="pre">nproc</span></code> and we assign it a temporary variable.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TEMP=`nproc`
+echo $TEMP
+make -j${TEMP}
+</pre></div>
+</div>
+</div>
+<input id="9f11ab90-3e3a-4c32-9937-aa85d140089a" name="2746098f-5574-466f-a44c-60397828b81d" type="radio">
+</input><label class="tabbed-label" for="9f11ab90-3e3a-4c32-9937-aa85d140089a">
+Mac:</label><div class="tabbed-content docutils">
+<p>The commands are  different from Linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sysctl</span> <span class="o">-</span><span class="n">n</span> <span class="n">hw</span><span class="o">.</span><span class="n">physicalcpu</span>
+<span class="n">sysctl</span> <span class="o">-</span><span class="n">n</span> <span class="n">hw</span><span class="o">.</span><span class="n">ncpu</span>
+</pre></div>
+</div>
+<p>The former gives the  number of physical CPUs and the latter the number of cores, the number of cores is what we need:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>TEMP=`sysctl -n hw.ncpu`
+echo $TEMP
+make -j${TEMP}
+</pre></div>
+</div>
+</div>
+</div>
+<p>This process can take a bit of time. If you want to know how long the process takes, just put the command <code class="docutils literal notranslate"><span class="pre">time</span></code> before <code class="docutils literal notranslate"><span class="pre">make</span></code> in the above. Here are some timings:</p>
+<ul class="simple">
+<li><p>9<span class="math notranslate nohighlight">\(^\mathrm{th}\)</span> generation 2.6 GHz i7 (6 cores with option <code class="docutils literal notranslate"><span class="pre">-j12</span></code>, gcc9 compiler): 5 minutes</p></li>
+<li><p>7 years old 2.6 GHz i7 (2 cores with option <code class="docutils literal notranslate"><span class="pre">-j4</span></code>, gcc9 compiler): 20 minutes</p></li>
+<li><p>7 years old 1.3 GHz i7 (2 cores with option <code class="docutils literal notranslate"><span class="pre">-j4</span></code>, gcc9 compiler): 68 minutes</p></li>
+<li><p>On 3.6 GHz i7 iMac (4 cores with option <code class="docutils literal notranslate"><span class="pre">-j8</span></code>, gcc8 compiler): 4 minutes</p></li>
+</ul>
+<div class="dropdown admonition">
+<p class="admonition-title">If compilation failed: Click this for instructions</p>
+<p>In the case something went wrong: Look for the error messages. They are they key to solving the problem. Warning messages, on the other hand, are usually not critical.</p>
+<p>If you had to stop the process for some reason ([that can be done with <code class="docutils literal notranslate"><span class="pre">ctrl</span> <span class="pre">+c</span></code> for example if you need to do something else with the computer and simply cannot wait for this process to finish): When restarting the procedure, first ensure that you are in the build directory and then execute <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code>, and only after that the above <code class="docutils literal notranslate"><span class="pre">make</span></code> command. You can also clean the build directory, re-build and re-make.</p>
+<p>There are many possible reasons for errors. For example, it may be that your compiler is not compatible, you may be missing dependencies or libraries, maybe the new version of Gromacs has some problems or maybe you made a mistake in using the <code class="docutils literal notranslate"><span class="pre">make</span></code> command above (for example giving too large a number after the option <code class="docutils literal notranslate"><span class="pre">-j</span></code>). The task is to figure out why compilation failed. To do that, scroll back in the terminal window to see what was the first error message (<em>error</em>, not <em>warning</em>; there is a big difference). There are some more and less rigorous ways of finding the cause(s) of the error(s). If the source is not obvious (like a missing library or dependency), the most pragmatic is simply to copy the essential parts of the first error message and use google. In the above case, I had accidentally typed <code class="docutils literal notranslate"><span class="pre">-j6</span></code> instead of <code class="docutils literal notranslate"><span class="pre">-j4</span></code>. How did I found out the reason? I rechecked the command I had given, then I followed the advice above and cleaned the directory using <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">clean</span></code> and I re-ran the command with the proper <code class="docutils literal notranslate"><span class="pre">-j4</span></code> (using just <code class="docutils literal notranslate"><span class="pre">make</span></code> instead of <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">-j4</span></code> would have been the safest way).</p>
+</div>
+</div>
+<div class="section" id="regression-tests">
+<h2>Regression tests<a class="headerlink" href="#regression-tests" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>Next, we will run the checks as provided by regression tests that were downloaded above. Note that this can take time since the tests are first built and then executed. All tests should be passed (=no error messages at the end). Notice also that some tests take longer than others.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>make check  -j${TEMP}
+</pre></div>
+</div>
+<p>You can again time this very easily by putting the command <code class="docutils literal notranslate"><span class="pre">time</span></code> in front of <code class="docutils literal notranslate"><span class="pre">make</span></code></p>
+<ul class="simple">
+<li><p>7 years old 2.6 GHz i7 (2 cores with option <code class="docutils literal notranslate"><span class="pre">-j14</span></code>, gcc9 compiler): 26 minutes</p></li>
+<li><p>9<span class="math notranslate nohighlight">\(^\mathrm{th}\)</span> generation 2.6 GHz i7 (6 cores with option <code class="docutils literal notranslate"><span class="pre">-j12</span></code>, gcc9 compiler): Total time: 5 minutes</p></li>
+<li><p>7 years old 1.3 GHz i7 (2 cores with option <code class="docutils literal notranslate"><span class="pre">-j4</span></code>, gcc9 compiler): 38 minutes</p></li>
+<li><p>On 3.6 GHz i7 iMac (4 cores with option <code class="docutils literal notranslate"><span class="pre">-j8</span></code>, gcc8 compiler):  7 minutes</p></li>
+</ul>
+<p><strong>Important:</strong> These tasks are CPU intensive: Ensure that you are not blocking the vents of your computer.</p>
+</div>
+<div class="section" id="final-installation">
+<h2>Final installation<a class="headerlink" href="#final-installation" title="Permalink to this headline">¶</a></h2>
+<hr>
+<p>It is time to install. This puts the files in the installation directory we defined above. Simply execute</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>This is very quick, takes about 10 seconds.</p>
+</div>
+<div class="section" id="let-the-system-know-where-gromacs-is">
+<h2>Let the system know where Gromacs is<a class="headerlink" href="#let-the-system-know-where-gromacs-is" title="Permalink to this headline">¶</a></h2>
+<p>Installation is now complete, but we are not done yet. To be able to use the software, we have to make sure that the system knows about it.</p>
+<!--
+For that we have to `source` it by running
+
+
+```
+source ${HOME}/CHEM3300G/gmx/bin/GMXRC
+```
+
+We can check the *environment variables* to see if `GMX` and `GROMACS` are there (use `printenv` to see all of the *environment variables*).
+
+
+Just to be 100% sure, let’s check that your installation is seen by the system by running the commands below. The first one shows where the Gromacs executable (`gmx`) it is located and the second one shows you the Gromacs version and some technical details,
+
+```
+which gmx
+gmx –version
+```
+
+There is one more issue to notice: The command:
+```
+source ${HOME}/CHEM3300G/gmx/bin/GMXRC
+```	
+works only during the *current session* and you have to re-run it every time you open a new terminal; try it out, open a new terminal and see if it can find `gmx` by using `which gmx`. 
+
+
+You have three choices and they are all fine, choose to your liking:
+
+
+
+1. Choose to re-run the command every time when you run a gromacs session. 
+2. You put the `source` command in your `.profile` file. This means that it is automatically executed every time you open a new session. That way Gromacs is available without running `source` every time. To do this, you simply have to edit the file `.profile` in your home directory and add the line
+```
+source ${HOME}/CHEM3300G/gmx/bin/GMXRC
+```		
+at the end of it. Important: you must edit the file with an ASCII editor such as `vi`, `emacs`, `nano` or `pico`. *Do not edit `.profile` or any of the system files with Word or such as it can potentially prevent you from using your system*.
+3. You can write an alias and put it your `.profile` file. This is quite handy if you have several versions of Gromacs available. For example, put
+```
+alias gmx2020.4=’source ${HOME}/CHEM3300G/gmx/bin/GMXRC’
+```
+
+-->
+<div class="tabbed-set docutils">
+<input checked="checked" id="345afd1e-1079-4172-a5ee-a176b54093d2" name="751dca38-9e72-447b-8581-474e87a6b592" type="radio">
+</input><label class="tabbed-label" for="345afd1e-1079-4172-a5ee-a176b54093d2">
+Linux &amp; WSL/WSL2:</label><div class="tabbed-content docutils">
+<p>Copy the line</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>source ${HOME}/CHEM3300G/gmx/bin/GMXRC
+</pre></div>
+</div>
+<p>at the end of your <code class="docutils literal notranslate"><span class="pre">.profile</span></code> file. This enables the command <code class="docutils literal notranslate"><span class="pre">gmx</span></code> and puts Gromacs available in your $PATH variable. The file <code class="docutils literal notranslate"><span class="pre">.profile</span></code> is one of the hidden files in your home directory. You can edit it using, for example, <code class="docutils literal notranslate"><span class="pre">vi</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>vi ${HOME}/.profile
+</pre></div>
+</div>
+<p>and just copy the line above as the last line in there.</p>
+</div>
+<input id="7c607cfb-8c17-4a39-8cb9-97366654fa44" name="751dca38-9e72-447b-8581-474e87a6b592" type="radio">
+</input><label class="tabbed-label" for="7c607cfb-8c17-4a39-8cb9-97366654fa44">
+Mac:</label><div class="tabbed-content docutils">
+<p>Since Mac uses <code class="docutils literal notranslate"><span class="pre">zsh</span></code> instead of <code class="docutils literal notranslate"><span class="pre">bash</span></code>, there are some differences. First, let’s make sure that the autocompletion systems is enabled (strictly speaking, that is not necessary but it is convenient and reduces some error/warning messages). Execute</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">autoload</span> <span class="o">-</span><span class="n">Uz</span> <span class="n">compinit</span>
+<span class="n">compinit</span>
+</pre></div>
+</div>
+<p>In addition, in the hidden dot files are different in <code class="docutils literal notranslate"><span class="pre">zsh</span></code>. There is no file called <code class="docutils literal notranslate"><span class="pre">.profile</span></code> as there is in Linux. Instead, we can use a file called <code class="docutils literal notranslate"><span class="pre">.zshenv</span></code>. Let’s first check if the file exists</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>test -f ${HOME}/.zshenv &amp;&amp; echo &quot;Exists&quot; || echo &quot;Does NOT exist&quot;
+</pre></div>
+</div>
+<p><strong>If it exist</strong>, then add</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>source ${HOME}/CHEM3300G/gmx/bin/GMXRC
+</pre></div>
+</div>
+<p>at the end of it.</p>
+<p><strong>If it doesn’t exist</strong>, let’s create it and then simply copy the line above in it and save:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>vi ${HOME}/.zshenv
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we are done and have Gromacs and all the tools it provides installed, tested and available. Let’s double check: Simply open a new terminal and in Linux &amp; WSL/WSL2 execute the command <code class="docutils literal notranslate"><span class="pre">printenv</span></code> or in Mac the command <code class="docutils literal notranslate"><span class="pre">env</span></code> and look for the lines that begin with <code class="docutils literal notranslate"><span class="pre">GMX</span></code>. They are the lines that are related to Gromacs. To double-check, give the commands</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>which gmx
+gmx –version
+</pre></div>
+</div>
+<p>These show where the Gromacs executable is and which version of Gromacs is installed.</p>
+<!--
+
+````{admonition} The installation process in a condensed form
+:class: dropdown
+
+
+Below is the installation process in a nutshell. Use this shortcut only of you know exactly what you are doing. This also assumes that all of Gromacs' dependencies are present.
+
+```
+cd
+mkdir CHEM3300G
+cd CHEM3300G
+mkdir gromacs
+mkdir gmx
+cd gromacs
+wget http://ftp.gromacs.org/pub/gromacs/gromacs-2020.4.tar.gz
+wget http://gerrit.gromacs.org/download/regressiontests-2020.4.tar.gz
+cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=OFF -DCMAKE_INSTALL_PREFIX=${HOME}/CHEM3300G/gmx
+TEMP=`nproc`
+echo $TEMP
+make -j${TEMP}
+make -j${TEMP} check
+make install
+```
+
+
+````
+
+-->
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week03"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
