@@ -1,7 +1,7 @@
 ![](../images/logo-scicomp.svg)
 
 
-# Scientific Computing - SciComp9505B
+# Scientific Computing - SciComp9502B
 
 <hr>
 
@@ -30,32 +30,32 @@
 
 ## Course material 
 
-- Will be distributed through this web site and OWL.
-- During the first two weeks we familiarize ourselves with some basic basic background and terminology, and install the necessary software. 
+- The lecture material is distributed via this web site and assignments are available at OWL.
+- The course material is divided into modules that focus on specific topic. 
 
 ## Learning outcomes
 
 After successful completion of this course, the student should have the skills and knowledge to
 
+- Understand the practical and theoretical challenges related to scientific computing
+- Understand the basic aspects of high-performance computing
 - Understand the foundations of the main methods and approaches in scientific computing 
 - Possess hands-on practical skills of data analysis, visualization and error tracing.
-- Understand the basics aspects of high-performance computing
 - Be able to assess, interpret and understand the correctness of code
-- Understand the practical and theoretical challenges related to scientific computing
 - Perform hands-on data analysis and use different visualization methods
 - Be able to assess reliability and errors in simulations
-- Have an understanding of the current developments in the field, in particular machine learning.
+- Have an understanding of the current developments in the field.
 
 One the main aims is that the students will gain  a good overview of different methods and approaches in computational modeling, and the ability choose a proper method for the problem at hand.
 
-As practical outcome, the students will learn the need for different operating systems and command interfaces, and how to do practical operations using the command line interface, installation of software, compilation of source codes and how to resolve problems when they arise.
+As a practical outcome, the students will learn the need for different operating systems and command interfaces, and how to do practical operations using the command line interface, installation of software, compilation of source codes and how to resolve problems when they arise.
 
 
 ## Hands-on approach
 
-This course uses a hands-on approach: You will write scripts and short programs, analyze data and learn methods. 
+- This course uses a hands-on approach: You will write scripts and short programs, analyze data and learn methods. 
 
-Python will be used for most analyses. No prior knowledge of Python or other programming is expected. 
+- Python will be used for most analyses. No prior knowledge of Python or other programming is expected. 
 
 <!--
 ## Examples
@@ -67,13 +67,23 @@ Unsure what kind of systems we will discuss? Take a look at these visualizations
 
 -->
 
-## Important
+## Computers
 
-This is a hands-on course and requires programming. This means that you *must* have a computer and the ability to install software on it. Any reasonably modern (past 7 years or so) laptop/desktop with Windows 10, Linux or OSX is ok. Detailed instructions will be provided during the lectures / labs. The methods have been tested using both older (7-10 old laptops) and newer computers.
+This is a hands-on course and requires programming. This means that you *must* have a computer and the ability to install software on it. Any reasonably modern (past 7 years or so) laptop/desktop with Windows 10, Linux or MacOS should be ok. Detailed instructions will be provided during the lectures / labs. The methods have been tested using both older (7-10 old laptops) and newer computers.
+
+- The examples and tasks have been tested on Linux, Windows and Intel-based Macs using both older and newer computers. 
+- Due to no access to Apple M1-based systems, none of the examples have been tested on them.
+
+```{important}
+Some tasks can be CPU (or even GPU) intensive. To avoid overheating, thermal shutdown or, in the worst case, damage to your computer, always ensure that the ventilation openings are not covered. This is of utmost importance and the responsibility is solely yours.
+
+```
+
+## Software
 
 Primary software that will be used (we will work through the installation procedures during the course):
 
-- For plotting, data analysis, and machine learning: Python and Jupyter notebooks;
+- For plotting, data analysis, and machine learning: Python and Jupyter Lab / Notebook.
 - C/C++ compiler
 - Possibly some others as well.
 

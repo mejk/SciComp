@@ -5,9 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Brief introduction to Python &#8212; SciComp9502B</title>
+    <title>8. Brief introduction to Python &#8212; SciComp9502B</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,25 +20,21 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -50,10 +47,17 @@
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -63,25 +67,19 @@
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/python-intro.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="4. Background on computers, computing and High Performance Computing" href="../week01/hpc-intro.html" />
-    <link rel="prev" title="2. Linux: Some basic &amp; useful commands" href="linux-basic-commands-2.html" />
-
+    <link rel="next" title="9. Python virtual environments" href="../../extras/python-virtual-environment.html" />
+    <link rel="prev" title="7. On computation and codes" href="../../extras/coding-notes-general.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week02/python-intro.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="Brief introduction to Python" />
-<meta property="og:description" content="Brief introduction to Python  Python  Jupyter  Learning goals:  To learn the basics of python.  To learn how to use Jupyter Lab/Notebook.  Keywords: Python, Jup" />
-<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -90,147 +88,105 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9505B
+   Scientific Computing - SciComp9502B
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
+<p class="caption">
  <span class="caption-text">
-  Lectures
+  MODULE: Practical matters
  </span>
 </p>
-<ul class="current nav sidenav_l1">
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/week01_summary.html">
+   1. Week 1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/intro-to-modeling.html">
+   2. Introduction to computational modeling &amp; methods in chemistry/physics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to HPC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   3. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/simulation-general.html">
+   4. General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Operating systems
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Linux-basics.html">
-   1. Linux - the basics
+   5. Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="linux-basic-commands-2.html">
-   2. Linux: Some basic &amp; useful commands
+   6. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   7. On computation and codes
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   4. Background on computers, computing and High Performance Computing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   5. Random numbers
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  More material
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/coding-notes-general.html">
-   1. On computation and codes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Installation instructions
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/install-wsl.html">
-   1. Installation of tools: WSL2/Linux etc.
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python-installation.html">
-   2. Installation of Python and Jupyter
+   8. Brief introduction to Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../extras/python-virtual-environment.html">
-   3. Python virtual environments
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  How-tos
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="jupyter-intro.html">
-   1. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/vi-editor.html">
-   2. The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     vi
-    </span>
-   </code>
-   editor
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/editing-ascii.html">
-   3. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/helpful-software.html">
-   4. Helpful software
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  More on computers / help
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
-   ssh keys, aliases and connecting using ssh keys
-   <i class="fas fa-external-link-alt">
-   </i>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/mejk/computer-stuff">
-   Random notes on computers, installation, dual boot, vnc, etc.
-   <i class="fas fa-external-link-alt">
-   </i>
+   9. Python virtual environments
   </a>
  </li>
 </ul>
 
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -246,21 +202,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -274,20 +230,20 @@
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
@@ -309,56 +265,56 @@
     </div>
 </div>
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python-what-is-it-good-for">
-   3.1. Python, what is it good for?
+   8.1. Python, what is it good for?
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#python-vs-other-languages">
-     3.1.1. Python vs other languages
+     8.1.1. Python vs other languages
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#python-basics-the-necessary-prerequisites">
-   3.2. Python basics – the necessary prerequisites
+   8.2. Python basics – the necessary prerequisites
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-use-the-rest-of-this-section">
-   3.3. How to use the rest of this section
+   8.3. How to use the rest of this section
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#install-python-virtual-environment">
-     3.3.1. Install Python virtual environment
+     8.3.1. Install Python virtual environment
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#getting-help">
-     3.3.2. Getting help
+     8.3.2. Getting help
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variables-and-data-types">
-     3.3.3. Variables and data types
+     8.3.3. Variables and data types
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#keywords-variable-names-and-first-touch-of-import">
-     3.3.4. Keywords, variable names and first touch of
+     8.3.4. Keywords, variable names and first touch of
      <code class="docutils literal notranslate">
       <span class="pre">
        import
@@ -368,37 +324,37 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#integers-floats">
-     3.3.5. Integers &amp; floats
+     8.3.5. Integers &amp; floats
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#strings-and-slicing-operator">
-     3.3.6. Strings and slicing operator
+     8.3.6. Strings and slicing operator
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#lists">
-     3.3.7. Lists
+     8.3.7. Lists
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#tuples-ordered-immutable-lists-of-elements">
-     3.3.8. Tuples - ordered immutable lists of elements
+     8.3.8. Tuples - ordered immutable lists of elements
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#dictionaries">
-     3.3.9. Dictionaries
+     8.3.9. Dictionaries
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#combined-variables">
-     3.3.10. Combined variables
+     8.3.10. Combined variables
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#checking-who-s-who-type-len-id">
-       3.3.10.1. Checking who’s who:
+       8.3.10.1. Checking who’s who:
        <code class="docutils literal notranslate">
         <span class="pre">
          type
@@ -422,12 +378,12 @@
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#type-conversion">
-     3.3.11. Type conversion
+     8.3.11. Type conversion
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#operators">
-       3.3.11.1. Operators
+       8.3.11.1. Operators
       </a>
      </li>
     </ul>
@@ -436,32 +392,32 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#import-modules">
-   3.4. Import modules
+   8.4. Import modules
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plotting-in-python">
-   3.5. Plotting in python
+   8.5. Plotting in python
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variation-to-the-theme-plots-xkcd-style">
-     3.5.1. Variation to the theme: plots xkcd style
+     8.5.1. Variation to the theme: plots xkcd style
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#plotting-with-data-from-the-disk">
-     3.5.2. Plotting with data from the disk
+     8.5.2. Plotting with data from the disk
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#a-very-brief-intro-to-loops-and-conditionals">
-     3.5.3. A very brief intro to loops and conditionals
+     8.5.3. A very brief intro to loops and conditionals
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#for-loop">
-       3.5.3.1.
+       8.5.3.1.
        <code class="docutils literal notranslate">
         <span class="pre">
          for
@@ -472,7 +428,7 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#while-loops-and-breaking-stopping-a-loop">
-       3.5.3.2.
+       8.5.3.2.
        <code class="docutils literal notranslate">
         <span class="pre">
          while
@@ -483,7 +439,7 @@
      </li>
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#if-elif-else-statement">
-       3.5.3.3.
+       8.5.3.3.
        <code class="docutils literal notranslate">
         <span class="pre">
          if
@@ -510,22 +466,234 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-was-not-covered">
-   3.6. What was not covered
+   8.6. What was not covered
   </a>
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Brief introduction to Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-what-is-it-good-for">
+   8.1. Python, what is it good for?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python-vs-other-languages">
+     8.1.1. Python vs other languages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#python-basics-the-necessary-prerequisites">
+   8.2. Python basics – the necessary prerequisites
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-the-rest-of-this-section">
+   8.3. How to use the rest of this section
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#install-python-virtual-environment">
+     8.3.1. Install Python virtual environment
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#getting-help">
+     8.3.2. Getting help
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variables-and-data-types">
+     8.3.3. Variables and data types
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#keywords-variable-names-and-first-touch-of-import">
+     8.3.4. Keywords, variable names and first touch of
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       import
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#integers-floats">
+     8.3.5. Integers &amp; floats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#strings-and-slicing-operator">
+     8.3.6. Strings and slicing operator
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lists">
+     8.3.7. Lists
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuples-ordered-immutable-lists-of-elements">
+     8.3.8. Tuples - ordered immutable lists of elements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     8.3.9. Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combined-variables">
+     8.3.10. Combined variables
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#checking-who-s-who-type-len-id">
+       8.3.10.1. Checking who’s who:
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         type
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         len
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         id
+        </span>
+       </code>
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#type-conversion">
+     8.3.11. Type conversion
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operators">
+       8.3.11.1. Operators
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#import-modules">
+   8.4. Import modules
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-in-python">
+   8.5. Plotting in python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#variation-to-the-theme-plots-xkcd-style">
+     8.5.1. Variation to the theme: plots xkcd style
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plotting-with-data-from-the-disk">
+     8.5.2. Plotting with data from the disk
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-very-brief-intro-to-loops-and-conditionals">
+     8.5.3. A very brief intro to loops and conditionals
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#for-loop">
+       8.5.3.1.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         for
+        </span>
+       </code>
+       loop
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#while-loops-and-breaking-stopping-a-loop">
+       8.5.3.2.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         while
+        </span>
+       </code>
+       loops and breaking/stopping a loop
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#if-elif-else-statement">
+       8.5.3.3.
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         if
+        </span>
+       </code>
+       -
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         elif
+        </span>
+       </code>
+       -
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         else
+        </span>
+       </code>
+       statement
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-was-not-covered">
+   8.6. What was not covered
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="brief-introduction-to-python">
-<h1><span class="section-number">3. </span>Brief introduction to Python<a class="headerlink" href="#brief-introduction-to-python" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="brief-introduction-to-python">
+<h1><span class="section-number">8. </span>Brief introduction to Python<a class="headerlink" href="#brief-introduction-to-python" title="Permalink to this headline">¶</a></h1>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-12 p-2 docutils">
@@ -567,7 +735,7 @@
 </div>
 </div>
 <div class="section" id="python-what-is-it-good-for">
-<h2><span class="section-number">3.1. </span>Python, what is it good for?<a class="headerlink" href="#python-what-is-it-good-for" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.1. </span>Python, what is it good for?<a class="headerlink" href="#python-what-is-it-good-for" title="Permalink to this headline">¶</a></h2>
 <div class="bg-light text-info border border-info">
 <small>
 <blockquote class="epigraph">
@@ -577,7 +745,7 @@
 <p></small></div></p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
-Seinfeld: War, What Is It Good For? (Clip)<div class="summary-down docutils">
+Seinfeld: War, What Is It Good For? (Clip) <div class="summary-down docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="summary-up docutils">
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -636,7 +804,7 @@ However, there are efficient libraries and the possibility use tools such as <a 
 </small>
 </div><P></p>
 <div class="section" id="python-vs-other-languages">
-<h3><span class="section-number">3.1.1. </span>Python vs other languages<a class="headerlink" href="#python-vs-other-languages" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.1.1. </span>Python vs other languages<a class="headerlink" href="#python-vs-other-languages" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="http://wiki.python.org/moin/LanguageComparisons">Language comparisons</a></p></li>
 <li><p><a class="reference external" href="http://pythonconquerstheuniverse.wordpress.com/2009/10/03/python-java-a-side-by-side-comparison/">More language comparisons</a></p></li>
@@ -644,7 +812,7 @@ However, there are efficient libraries and the possibility use tools such as <a 
 </div>
 </div>
 <div class="section" id="python-basics-the-necessary-prerequisites">
-<h2><span class="section-number">3.2. </span>Python basics – the necessary prerequisites<a class="headerlink" href="#python-basics-the-necessary-prerequisites" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.2. </span>Python basics – the necessary prerequisites<a class="headerlink" href="#python-basics-the-necessary-prerequisites" title="Permalink to this headline">¶</a></h2>
 <p>Let’s get into Python. As mentioned above, it is very easy to start using it. We have to, however, understand a few basic things. The aim here is not programming in a broad sense but rather to use python for various simple tasks. Topic such as <a class="reference external" href="https://en.wikipedia.org/wiki/Object-oriented_programming"><em>object oriented programming</em></a> will not be covered, the emphasis is put on simple data analysis an providing code snippets that can be re-used, for example, in analyses of experimental and computational data, in producing high quality plots for manuscripts, theses, talks and posters, and in using modules and packages for tasks such as <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_model">Markov analysis</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a>. This part gives a very brief introduction and jump start to python. That is done in practise in mind: This section shows some plotting techniques for data generated inside python as well as for data that is read from a file/files. A few of the most important modules are briefly introduced: <a class="reference external" href="https://matplotlib.org/">matplotlib</a> and <a class="reference external" href="https://seaborn.pydata.org/">Seaborn</a> for plotting, <a class="reference external" href="https://numpy.org/">numpy</a> for handling array data and <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_model">pandas</a> for statistical analyses. More will introduced as we progress. One important point is that python is a very versatile language and the number built-in and contributed modules is enormous. It is impossible to know all, or even a reasonable fraction, of them. Instead, it is very important to know how to search for information <em>and</em> how to use it. It is also very important to keep the following advice in mind:</p>
 <div class="bg-light text-info border border-info">
 <small>
@@ -661,16 +829,16 @@ However, there are efficient libraries and the possibility use tools such as <a 
 </ul>
 </div>
 <div class="section" id="how-to-use-the-rest-of-this-section">
-<h2><span class="section-number">3.3. </span>How to use the rest of this section<a class="headerlink" href="#how-to-use-the-rest-of-this-section" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.3. </span>How to use the rest of this section<a class="headerlink" href="#how-to-use-the-rest-of-this-section" title="Permalink to this headline">¶</a></h2>
 <p>The best way to learn is to try out the code snippets. That can be done in Jupyter notebook (that is the assumption here) or using <code class="docutils literal notranslate"><span class="pre">spyder</span></code> or such, or even plain <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">terminal</span></code>. When using <a class="reference external" href="https://jupyter.org/">Jupyter Lab</a>, one should be aware that once a kernel has been executed, the definitions become available throughout the notebook and that is sometimes a bit deceiving for tracking dependencies. In such a case, interrupting and re-running the kernel should clarify the situation.</p>
 <p>Some execution cells have pieces that are commented out. In some cases that is done to avoid long outputs, but it is very good to try them out.</p>
 <p>Since we have already installed and open Jupyter Lab, let’s do that again. Open Jupyter Lab from your program menu or command line depending which operating system or/and installation method you used. The code snippets below are to be executed in Jupyter Lab.</p>
 <div class="section" id="install-python-virtual-environment">
-<h3><span class="section-number">3.3.1. </span>Install Python virtual environment<a class="headerlink" href="#install-python-virtual-environment" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.1. </span>Install Python virtual environment<a class="headerlink" href="#install-python-virtual-environment" title="Permalink to this headline">¶</a></h3>
 <p>It is a very good idea to use Python virtual environments. See the topic in the panel on the left hand side.</p>
 </div>
 <div class="section" id="getting-help">
-<h3><span class="section-number">3.3.2. </span>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.2. </span>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">¶</a></h3>
 <p>At this point you should have Jupyter Lab open and a notebook running in it. Remember to give the notebook a name and save it regularly.</p>
 <p>Below is an easy way to get help. We will elaborate on it later.</p>
 <div class="cell tag_hide-output docutils container">
@@ -707,33 +875,33 @@ or summary contain a given string such as &quot;spam&quot;, type &quot;modules s
 <span class="g g-Whitespace">      </span><span class="mi">5</span> 
 <span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">help</span><span class="p">()</span>
 
-<span class="nn">/usr/lib/python3.8/_sitebuiltins.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwds)</span>
+<span class="nn">~/anaconda3/lib/python3.8/_sitebuiltins.py</span> in <span class="ni">__call__</span><span class="nt">(self, *args, **kwds)</span>
 <span class="g g-Whitespace">    </span><span class="mi">101</span>     <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
 <span class="g g-Whitespace">    </span><span class="mi">102</span>         <span class="kn">import</span> <span class="nn">pydoc</span>
 <span class="ne">--&gt; </span><span class="mi">103</span>         <span class="k">return</span> <span class="n">pydoc</span><span class="o">.</span><span class="n">help</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
-<span class="nn">/usr/lib/python3.8/pydoc.py</span> in <span class="ni">__call__</span><span class="nt">(self, request)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1916</span>         <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1917</span>             <span class="bp">self</span><span class="o">.</span><span class="n">intro</span><span class="p">()</span>
-<span class="ne">-&gt; </span><span class="mi">1918</span>             <span class="bp">self</span><span class="o">.</span><span class="n">interact</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1919</span>             <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1920</span><span class="s1"> You are now leaving help and returning to the Python interpreter.</span>
+<span class="nn">~/anaconda3/lib/python3.8/pydoc.py</span> in <span class="ni">__call__</span><span class="nt">(self, request)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1909</span>         <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1910</span>             <span class="bp">self</span><span class="o">.</span><span class="n">intro</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1911</span>             <span class="bp">self</span><span class="o">.</span><span class="n">interact</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1912</span>             <span class="bp">self</span><span class="o">.</span><span class="n">output</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&#39;&#39;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1913</span><span class="s1"> You are now leaving help and returning to the Python interpreter.</span>
 
-<span class="nn">/usr/lib/python3.8/pydoc.py</span> in <span class="ni">interact</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1928</span><span class="s1">         while True:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1929</span><span class="s1">             try:</span>
-<span class="ne">-&gt; </span><span class="mi">1930</span><span class="s1">                 request = self.getline(&#39;help&gt; &#39;)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1931</span><span class="s1">                 if not request: break</span>
-<span class="g g-Whitespace">   </span><span class="mi">1932</span><span class="s1">             except (KeyboardInterrupt, EOFError):</span>
+<span class="nn">~/anaconda3/lib/python3.8/pydoc.py</span> in <span class="ni">interact</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1921</span><span class="s1">         while True:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1922</span><span class="s1">             try:</span>
+<span class="ne">-&gt; </span><span class="mi">1923</span><span class="s1">                 request = self.getline(&#39;help&gt; &#39;)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1924</span><span class="s1">                 if not request: break</span>
+<span class="g g-Whitespace">   </span><span class="mi">1925</span><span class="s1">             except (KeyboardInterrupt, EOFError):</span>
 
-<span class="nn">/usr/lib/python3.8/pydoc.py</span> in <span class="ni">getline</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1948</span><span class="s1">         &quot;&quot;&quot;Read one line, using input() when appropriate.&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1949</span><span class="s1">         if self.input is sys.stdin:</span>
-<span class="ne">-&gt; </span><span class="mi">1950</span><span class="s1">             return input(prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1951</span><span class="s1">         else:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1952</span><span class="s1">             self.output.write(prompt)</span>
+<span class="nn">~/anaconda3/lib/python3.8/pydoc.py</span> in <span class="ni">getline</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1941</span><span class="s1">         &quot;&quot;&quot;Read one line, using input() when appropriate.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1942</span><span class="s1">         if self.input is sys.stdin:</span>
+<span class="ne">-&gt; </span><span class="mi">1943</span><span class="s1">             return input(prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1944</span><span class="s1">         else:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1945</span><span class="s1">             self.output.write(prompt)</span>
 
-<span class="nn">/opt/VENV/JBook/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="nn">~/.local/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
 <span class="g g-Whitespace">    </span><span class="mi">852</span><span class="s1">         &quot;&quot;&quot;</span>
 <span class="g g-Whitespace">    </span><span class="mi">853</span><span class="s1">         if not self._allow_stdin:</span>
 <span class="ne">--&gt; </span><span class="mi">854</span><span class="s1">             raise StdinNotImplementedError(</span>
@@ -747,7 +915,7 @@ or summary contain a given string such as &quot;spam&quot;, type &quot;modules s
 </div>
 </div>
 <div class="section" id="variables-and-data-types">
-<h3><span class="section-number">3.3.3. </span>Variables and data types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.3. </span>Variables and data types<a class="headerlink" href="#variables-and-data-types" title="Permalink to this headline">¶</a></h3>
 <p>Below, we will discuss the basics of variables in Python. The intention is not to cover all aspects, but enough to get going and to be able to use the concepts efficiently. Note:  a good way to name your variables is to use <em>descriptive variable names</em>. There are some restrictions on variable naming and those restrictions will be discussed below.</p>
 <p>Unlike the usual programming languages such as <a class="reference external" href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/C%2B%2B">C++</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Fortran">Fortran</a>, Python is <em>dynamically typed</em>. In <em>statically typed</em> languages such as C/C++ and Fortran, the types variables must be known and fixed and cannot be changed. In <em>dynamically typed</em> languages such as Python and <a class="reference external" href="https://en.wikipedia.org/wiki/JavaScript">javascript</a> that is not the case. This means that in addition to the value, the type of a variable may be changed. The second notable difference to languages such as C/C++ is that in Python one not have does declare variables. The type and value of a variable are assigned when the variable used the first time. This is best illustrated by an example (the variable names are arbitrary, the part that indicates the variable type is used for clarity):</p>
 <div class="cell docutils container">
@@ -868,7 +1036,7 @@ barley
 <p>There is one important issue that should be mentioned here: Data types are divided into <em>mutable</em> and <em>immutable</em>. The content of a <em>mutable</em> variable can be changed. Dictionary and list are <em>mutable data types</em>.  String, integer, float and tuple are <em>immutable data types</em>. The key to understanding the difference is to understand that <em>everything</em> in Python is an object. We will discuss this issue with examples when we progress.</p>
 </div>
 <div class="section" id="keywords-variable-names-and-first-touch-of-import">
-<h3><span class="section-number">3.3.4. </span>Keywords, variable names and first touch of <code class="docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#keywords-variable-names-and-first-touch-of-import" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.4. </span>Keywords, variable names and first touch of <code class="docutils literal notranslate"><span class="pre">import</span></code><a class="headerlink" href="#keywords-variable-names-and-first-touch-of-import" title="Permalink to this headline">¶</a></h3>
 <p>Python is very flexible with variable names but there are some restrictions. Here is a brief summary:</p>
 <ul class="simple">
 <li><p>allowed: variable names can be of arbitrary length</p></li>
@@ -923,7 +1091,7 @@ Is coffee a Python keyword? False
 </div>
 </div>
 <div class="section" id="integers-floats">
-<h3><span class="section-number">3.3.5. </span>Integers &amp; floats<a class="headerlink" href="#integers-floats" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.5. </span>Integers &amp; floats<a class="headerlink" href="#integers-floats" title="Permalink to this headline">¶</a></h3>
 <p>Integers are the simplest data type. Let’s assign some integers (when the decimal point is not given, the type is defined as an integer), change the value of one of them and then perform a simple division:</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -976,7 +1144,7 @@ Is coffee a Python keyword? False
 <p>Here we have printed out the <em>value</em> and <em>type</em>. Adding and integer to an integer yields an integer but adding a float to an integer yields a float. As discussed above, Python is <em>dynamically typed</em> and this is an example of <em>type reassignment</em>. This is not possible in C, C++ or Fortran; with those programming languages you may or may not get an error message during compilation (depending on your compiler).</p>
 </div>
 <div class="section" id="strings-and-slicing-operator">
-<h3><span class="section-number">3.3.6. </span>Strings and slicing operator<a class="headerlink" href="#strings-and-slicing-operator" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.6. </span>Strings and slicing operator<a class="headerlink" href="#strings-and-slicing-operator" title="Permalink to this headline">¶</a></h3>
 <p>Strings are, as the name suggests, strings of characters. In Python, they defined by single quotes (double quotes work). Note that if a number is within a string Python sees it as a character (text) and <em>not</em> as a number. Recall the string variable we used above:</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -1137,7 +1305,7 @@ aFmei  rnhbn
 </div>
 </div>
 <div class="section" id="lists">
-<h3><span class="section-number">3.3.7. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.7. </span>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h3>
 <p>Unlike strings, lists are <em>mutable</em> and we can change their <em>elements</em>, and we can append more elements. This is best demonstrated by examples. Let’s first generate a list and print out the values of its elements. Lists are defined using square brackets:</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -1176,7 +1344,7 @@ b after appending to it: [1.0, 2, 15, 11]
 <!-- Try slicing with the variable `listinlist`.
 --></div>
 <div class="section" id="tuples-ordered-immutable-lists-of-elements">
-<h3><span class="section-number">3.3.8. </span>Tuples - ordered immutable lists of elements<a class="headerlink" href="#tuples-ordered-immutable-lists-of-elements" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.8. </span>Tuples - ordered immutable lists of elements<a class="headerlink" href="#tuples-ordered-immutable-lists-of-elements" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Tuple">Tuples</a> are sometimes confusing, probably because they seem similar to lists. The term has its origin in mathematics (set theory) and  it can be defined as an <em>ordered set of elements</em>. N-tuple is an ordered list of <em>N</em> elements. If you are a database person, ‘record’ is roughly the same.  Tuples in python are <em>immutable</em>, their elements cannot be changed once they have been created unlike was the case with lists. This is a useful feature in certain situations.  Here are some practical points concerning tuples:</p>
 <ul class="simple">
 <li><p>Indexing starts from zero (the same as with lists)</p></li>
@@ -1225,7 +1393,7 @@ mardi
 </div>
 </div>
 <div class="section" id="dictionaries">
-<h3><span class="section-number">3.3.9. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.9. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
 <p>This may sound like an odd variable, but it is very useful. Dictionaries are <em>key-value pairs</em>. The most obvious examples are a dictionary and a phone book, but this data type is very useful for many purposes. Curly brackets are used when defining a dictionary. Below, we use the dot notation to call the function <code class="docutils literal notranslate"><span class="pre">keys()</span></code> to list all the keys of a dictionary.</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -1248,7 +1416,7 @@ dict_keys([&#39;Monday&#39;, &#39;Tuesday&#39;, &#39;Wednesday&#39;])
 </div>
 </div>
 <div class="section" id="combined-variables">
-<h3><span class="section-number">3.3.10. </span>Combined variables<a class="headerlink" href="#combined-variables" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.10. </span>Combined variables<a class="headerlink" href="#combined-variables" title="Permalink to this headline">¶</a></h3>
 <p>It is also possible to define <em>combined</em> variables. This is very useful in many applications. Let’s illustrate this with an example. Remember that curly braces, angular brackets and normal brackets have very specific meanings as discussed above.</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -1302,25 +1470,25 @@ dict_values([[&#39;Toosie slide&#39;, &#39;Hotline Bling&#39;], [&#39;Sorry&#39;
 </summary><div class="summary-content card-body docutils">
 <p class="card-text"><strong>Note:</strong> Videos may contain material that some people may find offensive. Watch at your own discretion. YouTube is also a bot unpredictable in what it allows so you may or may not be able to watch the videos.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="7d7daf30-31c1-4679-aa0f-95c4edc36f68" name="78fd165a-7ea2-4f63-90ae-c315b7c7e9bd" type="radio">
-</input><label class="tabbed-label" for="7d7daf30-31c1-4679-aa0f-95c4edc36f68">
-Justin Bieber:</label><div class="tabbed-content docutils">
+<input checked="checked" id="196917ac-2ca5-4f80-b818-bd01f3d5b636" name="e958e8a0-617b-4c36-8efc-853ced554f4c" type="radio">
+</input><label class="tabbed-label" for="196917ac-2ca5-4f80-b818-bd01f3d5b636">
+Justin Bieber: </label><div class="tabbed-content docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xQOO2xGQ1Pc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<input id="11fa629f-eeef-42bf-888d-c48b436fe8f0" name="78fd165a-7ea2-4f63-90ae-c315b7c7e9bd" type="radio">
-</input><label class="tabbed-label" for="11fa629f-eeef-42bf-888d-c48b436fe8f0">
-La Femme:</label><div class="tabbed-content docutils">
+<input id="b21d956b-f6a0-439c-86d5-169c7aa9de83" name="e958e8a0-617b-4c36-8efc-853ced554f4c" type="radio">
+</input><label class="tabbed-label" for="b21d956b-f6a0-439c-86d5-169c7aa9de83">
+La Femme: </label><div class="tabbed-content docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iMDwrnLrdgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<input id="6094cd64-064d-4079-9f93-2854038a9fc8" name="78fd165a-7ea2-4f63-90ae-c315b7c7e9bd" type="radio">
-</input><label class="tabbed-label" for="6094cd64-064d-4079-9f93-2854038a9fc8">
+<input id="4d184cb0-1ad0-483c-9ec9-44e4f7fa6db7" name="e958e8a0-617b-4c36-8efc-853ced554f4c" type="radio">
+</input><label class="tabbed-label" for="4d184cb0-1ad0-483c-9ec9-44e4f7fa6db7">
 Drake:</label><div class="tabbed-content docutils">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xWggTb45brM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </div>
 </div>
 </details><div class="section" id="checking-who-s-who-type-len-id">
-<h4><span class="section-number">3.3.10.1. </span>Checking who’s who: <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code><a class="headerlink" href="#checking-who-s-who-type-len-id" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.10.1. </span>Checking who’s who: <code class="docutils literal notranslate"><span class="pre">type</span></code>, <code class="docutils literal notranslate"><span class="pre">len</span></code>, <code class="docutils literal notranslate"><span class="pre">id</span></code><a class="headerlink" href="#checking-who-s-who-type-len-id" title="Permalink to this headline">¶</a></h4>
 <p>Here is a list of some commands that are helpful in inspecting variables. We have already used some of them above</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -1345,7 +1513,7 @@ Drake:</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="type-conversion">
-<h3><span class="section-number">3.3.11. </span>Type conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.3.11. </span>Type conversion<a class="headerlink" href="#type-conversion" title="Permalink to this headline">¶</a></h3>
 <p>Like in C/C++ and Fortran, python has type conversion functions. Some of them are different from their C/C++ and Fortran counterparts. Try them out.</p>
 <table>
 <tr> 
@@ -1398,7 +1566,7 @@ Drake:</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="operators">
-<h4><span class="section-number">3.3.11.1. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.3.11.1. </span>Operators<a class="headerlink" href="#operators" title="Permalink to this headline">¶</a></h4>
 <p>Basic Python does not include many mathematical operators or functions. More or less all functions have to called in by importing a module or modules and we will discuss that in a moment. The arithmetic operators that are included in basic Python are the usual ones and the order of execution follows the common rules:</p>
 <table>
 <tr>
@@ -1467,7 +1635,7 @@ Drake:</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="import-modules">
-<h2><span class="section-number">3.4. </span>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.4. </span>Import modules<a class="headerlink" href="#import-modules" title="Permalink to this headline">¶</a></h2>
 <p>Above, we used <code class="docutils literal notranslate"><span class="pre">import</span></code> to load a <em>module</em>, and we then used <em>the dot</em> notation to access a <em>function</em> from it. This is what we did:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>  <span class="kn">import</span> <span class="nn">keyword</span>                <span class="c1"># import keyword module</span>
   <span class="nb">print</span> <span class="p">(</span><span class="n">keyword</span><span class="o">.</span><span class="n">kwlist</span><span class="p">)</span>        <span class="c1"># Print out the list of reserved keywords.</span>
@@ -1497,7 +1665,7 @@ Drake:</label><div class="tabbed-content docutils">
 <div class="card-body docutils">
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../../_images/python-import.svg"><img alt="Python_import" src="../../_images/python-import.svg" width="100%" /></a>
-<p class="caption"><span class="caption-number">Fig. 3.1 </span><span class="caption-text">Basic terminology related to importing modules in python. Numpy is library that provides lots of efficient array/matrix operations and numerical operations and it is used extensively in lots of applications. Aliasing using <code class="docutils literal notranslate"><span class="pre">as</span></code>; technically speaking this is not true aliasing but rather binding (in this case <code class="docutils literal notranslate"><span class="pre">np</span></code>) to the namespace (in this case <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)) but that is beyond the point here.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">Basic terminology related to importing modules in python. Numpy is library that provides lots of efficient array/matrix operations and numerical operations and it is used extensively in lots of applications. Aliasing using <code class="docutils literal notranslate"><span class="pre">as</span></code>; technically speaking this is not true aliasing but rather binding (in this case <code class="docutils literal notranslate"><span class="pre">np</span></code>) to the namespace (in this case <code class="docutils literal notranslate"><span class="pre">numpy</span></code>)) but that is beyond the point here.</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -1528,7 +1696,7 @@ random.randint = randint(a, b) method of random.Random instance
 </div>
 </div>
 <div class="section" id="plotting-in-python">
-<h2><span class="section-number">3.5. </span>Plotting in python<a class="headerlink" href="#plotting-in-python" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.5. </span>Plotting in python<a class="headerlink" href="#plotting-in-python" title="Permalink to this headline">¶</a></h2>
 <p>It’s time to do some plotting. The example below is organized as follows:</p>
 <ul class="simple">
 <li><p>generate simple data and for plotting</p></li>
@@ -1722,7 +1890,7 @@ random.randint = randint(a, b) method of random.Random instance
 </div>
 </div>
 <div class="section" id="variation-to-the-theme-plots-xkcd-style">
-<h3><span class="section-number">3.5.1. </span>Variation to the theme: plots xkcd style<a class="headerlink" href="#variation-to-the-theme-plots-xkcd-style" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.5.1. </span>Variation to the theme: plots xkcd style<a class="headerlink" href="#variation-to-the-theme-plots-xkcd-style" title="Permalink to this headline">¶</a></h3>
 <p>Not that this is useful, but it is fun: One can eve plot using the <a class="reference external" href="https://xkcd.com/">XKCD comics</a> style. To make the plots look more authentic, install the humor sans font (not required, though) from the terminal window using the command <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">-y</span> <span class="pre">fonts-humor-sans</span></code></p>
 <p>Let’s plot the same plot as above.</p>
 <div class="cell tag_hide-output docutils container">
@@ -1774,7 +1942,7 @@ RDKit is the package for doing that, it is extremely powerful. We won't discuss 
 </ul>
 </div>
 <div class="section" id="plotting-with-data-from-the-disk">
-<h3><span class="section-number">3.5.2. </span>Plotting with data from the disk<a class="headerlink" href="#plotting-with-data-from-the-disk" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.5.2. </span>Plotting with data from the disk<a class="headerlink" href="#plotting-with-data-from-the-disk" title="Permalink to this headline">¶</a></h3>
 <p>The following shows one way of reading data from a file that has data in columns separated by spaces. Seaborn is again used for pretty plots. This also demonstrates numpy and pandas, two very useful modules. This is not very elegant but aim is to demonstrate plotting using data stored in a file, how to use a <em>for loop</em> and how one can get some quick statistics.</p>
 <p>We will use two approaches: 1) Direct reading and plotting, and 2) reading the data, converting it to <a class="reference external" href="https://pandas.pydata.org/"><em>pandas dataframe</em></a> and then plotting. The second part is shown since <em>pandas dataframe</em> is a very useful (and very commonly used) way of handling data. There are many other ways to plot by calling Seaborn directly, using <em>scatter</em> etc.</p>
 <p><strong>Data:</strong> It is assumed that data is in <code class="docutils literal notranslate"><span class="pre">$HOME/test_plot/test_data.dat</span></code></p>
@@ -1937,9 +2105,9 @@ max         1.200000       2.100000
 </div>
 </div>
 <div class="section" id="a-very-brief-intro-to-loops-and-conditionals">
-<h3><span class="section-number">3.5.3. </span>A very brief intro to loops and conditionals<a class="headerlink" href="#a-very-brief-intro-to-loops-and-conditionals" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">8.5.3. </span>A very brief intro to loops and conditionals<a class="headerlink" href="#a-very-brief-intro-to-loops-and-conditionals" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="for-loop">
-<h4><span class="section-number">3.5.3.1. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.5.3.1. </span><code class="docutils literal notranslate"><span class="pre">for</span></code> loop<a class="headerlink" href="#for-loop" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.python.org/moin/ForLoop">For loops in python</a></p></li>
 </ul>
@@ -2012,7 +2180,7 @@ Music: Ferme les yeux et imagine toi, Soprano ft. Blacko<div class="summary-down
 </div>
 </details></div>
 <div class="section" id="while-loops-and-breaking-stopping-a-loop">
-<h4><span class="section-number">3.5.3.2. </span><code class="docutils literal notranslate"><span class="pre">while</span></code> loops and breaking/stopping a loop<a class="headerlink" href="#while-loops-and-breaking-stopping-a-loop" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.5.3.2. </span><code class="docutils literal notranslate"><span class="pre">while</span></code> loops and breaking/stopping a loop<a class="headerlink" href="#while-loops-and-breaking-stopping-a-loop" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://wiki.python.org/moin/WhileLoop">While loops in python</a>
 The <code class="docutils literal notranslate"><span class="pre">while</span></code> loops is used for executing a loop <em>while</em> some (logical) condition is true. Here is also the simples <code class="docutils literal notranslate"><span class="pre">if</span></code> statement.</p></li>
@@ -2038,7 +2206,7 @@ The <code class="docutils literal notranslate"><span class="pre">while</span></c
 </div>
 </div>
 <div class="section" id="if-elif-else-statement">
-<h4><span class="section-number">3.5.3.3. </span><code class="docutils literal notranslate"><span class="pre">if</span></code> - <code class="docutils literal notranslate"><span class="pre">elif</span></code> - <code class="docutils literal notranslate"><span class="pre">else</span></code> statement<a class="headerlink" href="#if-elif-else-statement" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">8.5.3.3. </span><code class="docutils literal notranslate"><span class="pre">if</span></code> - <code class="docutils literal notranslate"><span class="pre">elif</span></code> - <code class="docutils literal notranslate"><span class="pre">else</span></code> statement<a class="headerlink" href="#if-elif-else-statement" title="Permalink to this headline">¶</a></h4>
 <p>This is used to test a condition. Note that it is critical to have proper indentation.</p>
 <div class="cell tag_hide-output docutils container">
 <div class="cell_input docutils container">
@@ -2075,7 +2243,7 @@ Condition 3: 1 58
 </div>
 </div>
 <div class="section" id="what-was-not-covered">
-<h2><span class="section-number">3.6. </span>What was not covered<a class="headerlink" href="#what-was-not-covered" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">8.6. </span>What was not covered<a class="headerlink" href="#what-was-not-covered" title="Permalink to this headline">¶</a></h2>
 <p>The above covers the basics and provides a starting point for being able to produce and analyze data. The main thing that was not covered is object oriented programming. For those who are interested, here is some further reading:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://realpython.com/python3-object-oriented-programming/">Object-Oriented Programming (OOP) in Python 3</a></p></li>
@@ -2105,42 +2273,48 @@ Condition 3: 1 58
 
               </div>
               
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../../extras/coding-notes-general.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">7. </span>On computation and codes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../../extras/python-virtual-environment.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>Python virtual environments</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
         </div>
     </div>
+    <footer class="footer">
+  <p>
     
+      By Mikko Karttunen<br/>
     
-    <div class='prev-next-bottom'>
-        
-    <a class='left-prev' id="prev-link" href="linux-basic-commands-2.html" title="previous page"><span class="section-number">2. </span>Linux: Some basic &amp; useful commands</a>
-    <a class='right-next' id="next-link" href="../week01/hpc-intro.html" title="next page"><span class="section-number">4. </span>Background on computers, computing and High Performance Computing</a>
-
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Mikko Karttunen<br/>
-        
-          <div class="extra_footer">
-            <div>
+      <div class="extra_footer">
+        <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
     All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 </div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>

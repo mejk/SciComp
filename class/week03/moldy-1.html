@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>First look into particle simulations &#8212; SciComp9502B</title>
     
-  <link rel="stylesheet" href="../../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -19,25 +20,21 @@
 
     
       
-  <link rel="stylesheet"
-    href="../../_static/vendor/open-sans_all/1.44.1/index.css">
-  <link rel="stylesheet"
-    href="../../_static/vendor/lato_latin-ext/1.44.1/index.css">
 
     
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.3da636dd464baa7582d2.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
@@ -50,10 +47,122 @@
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
@@ -63,23 +172,17 @@
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week03/moldy-1.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
 
-
-<!-- Opengraph tags -->
-<meta property="og:url"         content="https://mejk.github.io/CHEM3300G/class/week03/moldy-1.html" />
-<meta property="og:type"        content="article" />
-<meta property="og:title"       content="First look into particle simulations" />
-<meta property="og:description" content="First look into particle simulations  Learning goals:  To learn the basic terms and terminology of particle simulations  To have a basic understanding of molecu" />
-<meta property="og:image"       content="https://mejk.github.io/CHEM3300G/_static/logo-scicomp.svg" />
-
-<meta name="twitter:card" content="summary" />
-
-
+    <!-- Google Analytics -->
+    
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
     
 
     <div class="container-xl">
@@ -88,147 +191,31 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-<a class="navbar-brand text-wrap" href="../../index.html">
-  
-  <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
-  
-  
-  <h1 class="site-logo" id="site-title">SciComp9502B</h1>
-  
-</a>
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      
+    </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form>
-<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="nav sidenav_l1">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9505B
+   Scientific Computing - SciComp9502B
   </a>
  </li>
 </ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Lectures
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   1. Linux - the basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   2. Linux: Some basic &amp; useful commands
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   3. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   4. Background on computers, computing and High Performance Computing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="random_numbers.html">
-   5. Random numbers
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  More material
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/coding-notes-general.html">
-   1. On computation and codes
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  Installation instructions
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/install-wsl.html">
-   1. Installation of tools: WSL2/Linux etc.
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   2. Installation of Python and Jupyter
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/python-virtual-environment.html">
-   3. Python virtual environments
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  How-tos
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   1. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/vi-editor.html">
-   2. The
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     vi
-    </span>
-   </code>
-   editor
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/editing-ascii.html">
-   3. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/helpful-software.html">
-   4. Helpful software
-  </a>
- </li>
-</ul>
-<p class="caption collapsible-parent">
- <span class="caption-text">
-  More on computers / help
- </span>
-</p>
-<ul class="nav sidenav_l1">
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md">
-   ssh keys, aliases and connecting using ssh keys
-   <i class="fas fa-external-link-alt">
-   </i>
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference external" href="https://github.com/mejk/computer-stuff">
-   Random notes on computers, installation, dual boot, vnc, etc.
-   <i class="fas fa-external-link-alt">
-   </i>
-  </a>
- </li>
-</ul>
-
+    </div>
 </nav> <!-- To handle the deprecated key -->
 
 <div class="navbar_extra_footer">
@@ -244,21 +231,21 @@
           
 <main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
     
-    <div class="row topbar fixed-top container-xl">
-    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
-    </div>
-    <div class="col pl-2 topbar-main">
-        
-        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-            <i class="fas fa-bars"></i>
-            <i class="fas fa-arrow-left"></i>
-            <i class="fas fa-arrow-up"></i>
-        </button>
-        
-        
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
 <div class="dropdown-buttons-trigger">
     <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
             class="fas fa-download"></i></button>
@@ -272,31 +259,31 @@
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
     </div>
 </div>
 
-        <!-- Source interaction buttons -->
+            <!-- Source interaction buttons -->
 
+            <!-- Full screen (wrap in <a> to have style consistency -->
 
-        <!-- Full screen (wrap in <a> to have style consistency -->
-        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-                title="Fullscreen mode"><i
-                    class="fas fa-expand"></i></button></a>
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
 
-        <!-- Launch buttons -->
+            <!-- Launch buttons -->
 
-    </div>
-
-    <!-- Table of contents -->
-    <div class="d-none d-md-block col-md-2 bd-toc show">
-        
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
         </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#particle-vs-continuum-simulations">
    Particle vs continuum simulations
@@ -341,16 +328,76 @@
  </li>
 </ul>
 
-        </nav>
-        
+            </nav>
+        </div>
     </div>
 </div>
     <div id="main-content" class="row">
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
-        
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>First look into particle simulations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#particle-vs-continuum-simulations">
+   Particle vs continuum simulations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulation-methods-for-particle-systems">
+   Simulation methods for particle systems
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#monte-carlo">
+     Monte Carlo
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classical-molecular-dynamics">
+     Classical Molecular Dynamics
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-the-output-of-a-particle-simulation">
+     What is the output of a particle simulation?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#system-sizes">
+     System sizes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
               <div>
                 
-  <div class="section" id="first-look-into-particle-simulations">
+  <div class="tex2jax_ignore mathjax_ignore section" id="first-look-into-particle-simulations">
 <h1>First look into particle simulations<a class="headerlink" href="#first-look-into-particle-simulations" title="Permalink to this headline">¶</a></h1>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
@@ -383,20 +430,20 @@
 <blockquote>
 <b>Atom:</b> From the Greek word atomos, which means "uncuttable".
 </blockquote>
-<p>These discrete entities may also be <em>coarse-grained atoms</em> (sometimes also called <em>superatoms</em>). The concept of a coarse-grained atom can be thought of as follows: Assume that there is some method that allows us to average over some chosen physical properties of a group of atoms, for example a group of atoms in a polymer, and combine them to a single larger entity. That new entity is then a <em>coarse-grained</em> atom. At first sight such a procedure may sound like that may sound like heresy or nonsense, but there are some well-justified and rigorous methods for such procedures. Such methods will not be discusses here but in case interested, see for example references<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#murtola2009d" id="id1">[7]</a><a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#fritz2011" id="id2">[2]</a>. An example of such an approach is the so-called MARTINI force field<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#marrink2013" id="id3">[5]</a> in which four ‘atomistic’ atoms are a coarse-grained into one larger unit.</p>
-<div class="figure align-left" id="id12">
+<p>These discrete entities may also be <em>coarse-grained atoms</em> (sometimes also called <em>superatoms</em>). The concept of a coarse-grained atom can be thought of as follows: Assume that there is some method that allows us to average over some chosen physical properties of a group of atoms, for example a group of atoms in a polymer, and combine them to a single larger entity. That new entity is then a <em>coarse-grained</em> atom. At first sight such a procedure may sound like that may sound like heresy or nonsense, but there are some well-justified and rigorous methods for such procedures. Such methods will not be discusses here but in case interested, see for example references<a href="#id1"><span class="problematic" id="id2">:cite:`Murtola2009d,Fritz2011`</span></a>. An example of such an approach is the so-called MARTINI force field<a href="#id3"><span class="problematic" id="id4">:cite:`Marrink2013`</span></a> in which four ‘atomistic’ atoms are a coarse-grained into one larger unit.</p>
+<div class="figure align-left" id="id19">
 <a class="bg-light reference internal image-reference" href="../../_images/water-coarse-grain.svg"><img alt="coarse-grained atoms" class="bg-light" src="../../_images/water-coarse-grain.svg" width="450px" /></a>
-<p class="caption"><span class="caption-text"><em>Examples of coarse graining. Left: A single water molecule with its hydrogens and oxygens coarse grained to a single new coarse-grained water. Right: Four water molecules coarse-grained to a single coarse-grained water molecule. This approach is used in the very popular MARTINI model<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#marrink2013" id="id4">[5]</a>. Note that the size of a water molecule is about 2.8  Å.</em></span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>Examples of coarse graining. Left: A single water molecule with its hydrogens and oxygens coarse grained to a single new coarse-grained water. Right: Four water molecules coarse-grained to a single coarse-grained water molecule. This approach is used in the very popular MARTINI model<a href="#id5"><span class="problematic" id="id6">:cite:`Marrink2013`</span></a>. Note that the size of a water molecule is about 2.8  Å.</em></span><a class="headerlink" href="#id19" title="Permalink to this image">¶</a></p>
 </div>
 <p>Simulations of even large non-atomistic entities such as planets are in the category of particle simulations since they are <em>discrete entities</em>. In such simulations, the internal structure of planets or celestial bodies is not included in the simulated properties. This is similar in  spirit to not taking electrons into account in atomic-level molecular dynamics simulations.  Other examples that may not be so obvious at first sight are entities such as lattice defects in solid state systems. Defects can be treated as discrete entities and they have properties such as size and they interact over distances. Here, we use ‘atomistic’ atoms and the term <em>atomistic</em> is used for describing systems at the atomic scale of Ångströms and nanometers.</p>
-<div class="figure align-left" id="id13">
+<div class="figure align-left" id="id20">
 <a class="bg-light reference internal image-reference" href="../../_images/lattice-hexagonal.svg"><img alt="continuum modeling" class="bg-light" src="../../_images/lattice-hexagonal.svg" width="700px" /></a>
-<p class="caption"><span class="caption-text"><em>Two examples of a lattice. Left: A hexagonal lattice with one lattice site highlighted in red. The nearest neighbors (6) of the site are marked in blue. Middle: A square lattice. The nearest neighbors (4) of a selected site (red) are marked in blue. When simulating continuum models, the partial differential equations are solved using finite difference methods on a lattice. Thus, the space is not continuous like in a particle simulation (right).</em></span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>Two examples of a lattice. Left: A hexagonal lattice with one lattice site highlighted in red. The nearest neighbors (6) of the site are marked in blue. Middle: A square lattice. The nearest neighbors (4) of a selected site (red) are marked in blue. When simulating continuum models, the partial differential equations are solved using finite difference methods on a lattice. Thus, the space is not continuous like in a particle simulation (right).</em></span><a class="headerlink" href="#id20" title="Permalink to this image">¶</a></p>
 </div>
 <p>In contrast to <em>particle simulations</em>, in <em>continuum modeling</em> one often uses a fixed underlying <em>lattice</em> or grid in which one solves <em>finite difference</em> equations. In such simulations the material (say, a liquid, gas or a solid) is described by a <em>continuous field</em> instead of an atom. This means that, unlike in an atomistic simulations, the material no longer has internal structure but it is described by a field or several fields. The field(s) is (are)  placed on a discrete grid and the evolution of the field(s) is (are) solved on a computer; the corresponding equations of motion are solved on a lattice or using finite element methods (FEM). Such approaches are commonly used in the fields of materials research and reaction-diffusion systems.</p>
-<div class="figure align-left" id="id14">
+<div class="figure align-left" id="id21">
 <a class="bg-light reference internal image-reference" href="../../_images/rayleigh-benard-cell.png"><img alt="continuum modeling" class="bg-light" src="../../_images/rayleigh-benard-cell.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-text"><em>Example of continuum modeling. Assume a situation in which fluid is placed between two plates. The lower plate is kept at a higher temperature than the upper one (left). As the warmer and lighter fluid raises to the top, the top layer cools and becomes denser and heavier. This can lead to rotation of water as indicated by the arrows: the heavier fluid drops and lighter rises. The picture on the right shows a top view of such a situation using continuum modeling (<em>phase-field model</em>). Model this type of a system would require too many particles and hence one has to use continuum models. In this case, the equations of motion (partial differential equations) were solved on a square lattice. This type of physical situation occurs, for example in oceans and is called Rayleigh-Benard convection.</em></span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>Example of continuum modeling. Assume a situation in which fluid is placed between two plates. The lower plate is kept at a higher temperature than the upper one (left). As the warmer and lighter fluid raises to the top, the top layer cools and becomes denser and heavier. This can lead to rotation of water as indicated by the arrows: the heavier fluid drops and lighter rises. The picture on the right shows a top view of such a situation using continuum modeling (<em>phase-field model</em>). Model this type of a system would require too many particles and hence one has to use continuum models. In this case, the equations of motion (partial differential equations) were solved on a square lattice. This type of physical situation occurs, for example in oceans and is called Rayleigh-Benard convection.</em></span><a class="headerlink" href="#id21" title="Permalink to this image">¶</a></p>
 </div>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -422,9 +469,9 @@ It is also noteworthy that *electronic structure calculations* do not belong to 
 <p>The MC method does <em>not</em> solve any equations of motion, instead it is a <em>stochastic optimization</em> method using an energy function: No time integration is involved but one uses random numbers for optimizing selected properties. In the case molecular systems, one typically optimizes (minimizes) the potential energy. This also means that, in its basic form, MC cannot measure any dynamical properties (there are variants like the kinetic Monte Carlo but even that doesn’t have time integration). Instead, MC uses <a class="reference external" href="https://en.wikipedia.org/wiki/Ensemble_average_(statistical_mechanics)"><em>ensemble averaging</em></a> to compute the system’s properties.</p>
 <p>The basic idea of MC simulation is that it uses <a class="reference external" href="https://en.wikipedia.org/wiki/Pseudorandom_number_generator"><em>pseudo-random numbers</em></a> to overcome local energy barriers to reach the minimum energy state. Random numbers are used to give the system a small probability to move in the direction that is energetically unfavorable. That is, in a crude sense the system ‘gambles’ to find the global minimum state; the name Monte Carlo comes from the <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_Casino">Monte Carlo Casino</a> in the city of <a class="reference external" href="https://en.wikipedia.org/wiki/Monaco">Monaco</a> in Southern France.
 In terms of an atomistic system, only the positions of the atoms are used and there are no velocities. Since the particles have mutual interactions described by a potential energy, minimization of potential energy yields the equilibrium configuration of the system.  The part that sometimes causes confusion is that in MC, term <em>Monte Carlo steps</em> is used. The term indicates the number of so-called <em>Monte Carlo sweeps</em> and it is sometimes falsely equated to the <em>time steps</em> in MD simulations. In MD, there is a real time step (typically in terms of femtoseconds) but the MC step does not correspond to any physical time.</p>
-<div class="figure align-left" id="id15">
+<div class="figure align-left" id="id22">
 <a class="bg-light reference internal image-reference" href="../../_images/energy-minimum.svg"><img alt="energy-minimum" class="bg-light" src="../../_images/energy-minimum.svg" width="650px" /></a>
-<p class="caption"><span class="caption-text"><em>The concept behind the <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo method</a>. Consider that a system’s state is described the green sphere and the that the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_landscape">energy landscape</a> is given by the dashed line. Deterministic optimization finds the closest minimum as indicated by the arrow in the left hand side figure. Once the minimum has been reached, the system stays there. Monte Carlo is a stochastic optimization method. It uses random numbers to enable the system to move uphill in the energetically unfavorable direction as indicated by the arrow in the right hand side figure. Once the system crosses the saddle point, it can find the global minimum.</em></span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><em>The concept behind the <a class="reference external" href="https://en.wikipedia.org/wiki/Monte_Carlo_method">Monte Carlo method</a>. Consider that a system’s state is described the green sphere and the that the <a class="reference external" href="https://en.wikipedia.org/wiki/Energy_landscape">energy landscape</a> is given by the dashed line. Deterministic optimization finds the closest minimum as indicated by the arrow in the left hand side figure. Once the minimum has been reached, the system stays there. Monte Carlo is a stochastic optimization method. It uses random numbers to enable the system to move uphill in the energetically unfavorable direction as indicated by the arrow in the right hand side figure. Once the system crosses the saddle point, it can find the global minimum.</em></span><a class="headerlink" href="#id22" title="Permalink to this image">¶</a></p>
 </div>
 <p>Technically, a Monte Carlo simulation is the evaluation of statistical mechanical <em>configuration integral</em> and we will discuss this point later and it generates <em>representative samples</em> of the system.The key ingredients are the application of a <em>probability distribution</em> and the use of random numbers. In the case of physical systems, the equilibrium state has a unique distribution: the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_distribution"><em>Boltzmann distribution</em></a>.</p>
 <p>Although it may not be clear from the above, one of the great advantages of the MC method is its flexibility. In terms of atoms or particles, it can be used to simulate classical and quantum mechanical systems. It can also be applied to systems of very different nature such as optimizing train scheduling for railway networks and to numerically solve complex mathematical integrals that have no analytical solution.</p>
@@ -444,7 +491,7 @@ We can define classical Molecular Dynamics the following way:</p>
 <li><p>The evolution of the system in the <a class="reference external" href="https://en.wikipedia.org/wiki/Phase_space"><em>phase space</em></a> is determined by solving Newton’s equations of motion for all the particles that comprise the system.</p></li>
 <li><p>In the absence of external forces and fields, the system must evolve toward <em>equilibrium</em>, that is, the state of minimum free energy. <em>Statistical mechanics</em> tells us that equilibrium described by a unique distribution, the <a class="reference external" href="https://en.wikipedia.org/wiki/Boltzmann_distribution"><em>Boltzmann distribution</em></a>.</p></li>
 </ol>
-<p>The first published article using classical MD simulations titled “<em>Phase Transition for a Hard Sphere System</em>” was published by Alder and Wainwright in 1957<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#alder1957" id="id5">[1]</a>. They simulated systems of 32 hard particles and also shorter simulations with 108 particles.  As already discussed, the first MC simulations were performed a few years before in 1952 by Metropolis et al.<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#metropolis1953" id="id6">[2]</a>. Other landmarks include the paper of Gibson et al., <em>“Dynamics of Radiation Damage”</em> which is the first time for using continuous potentials in an MD simulation the same spirit as we do today<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#gibson1960" id="id7">[3]</a>. Another interesting point is the number of time steps taken in their simulation. They had 500 atoms and reported a total 219 steps which took over 3.5 hours. Keep this number in mind for the time when we set up our own simulations. Another landmark in MD simulations is the emergence of force fields and the first QM/MM simulations which can be traced to the articles of Warshel, Karplus and Lifson in the late 1960’s and early 1970s<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#lifson1968" id="id8">[4]</a><a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#warshel1972" id="id9">[10]</a>.</p>
+<p>The first published article using classical MD simulations titled “<em>Phase Transition for a Hard Sphere System</em>” was published by Alder and Wainwright in 1957<a href="#id7"><span class="problematic" id="id8">:cite:`Alder1957`</span></a>. They simulated systems of 32 hard particles and also shorter simulations with 108 particles.  As already discussed, the first MC simulations were performed a few years before in 1952 by Metropolis et al.<a href="#id9"><span class="problematic" id="id10">:cite:`Metropolis1953`</span></a>. Other landmarks include the paper of Gibson et al., <em>“Dynamics of Radiation Damage”</em> which is the first time for using continuous potentials in an MD simulation the same spirit as we do today<a href="#id11"><span class="problematic" id="id12">:cite:`Gibson1960`</span></a>. Another interesting point is the number of time steps taken in their simulation. They had 500 atoms and reported a total 219 steps which took over 3.5 hours. Keep this number in mind for the time when we set up our own simulations. Another landmark in MD simulations is the emergence of force fields and the first QM/MM simulations which can be traced to the articles of Warshel, Karplus and Lifson in the late 1960’s and early 1970s<a href="#id13"><span class="problematic" id="id14">:cite:`Lifson1968,Warshel1972`</span></a>.</p>
 </div>
 <div class="section" id="what-is-the-output-of-a-particle-simulation">
 <h3>What is the output of a particle simulation?<a class="headerlink" href="#what-is-the-output-of-a-particle-simulation" title="Permalink to this headline">¶</a></h3>
@@ -502,7 +549,7 @@ We can define classical Molecular Dynamics the following way:</p>
 <div class="section" id="system-sizes">
 <h3>System sizes<a class="headerlink" href="#system-sizes" title="Permalink to this headline">¶</a></h3>
 <p>Let’s start with atoms. The size of an atom is in the scale of Ångströms (10<span class="math notranslate nohighlight">\(^{-10}\)</span> m). Thus, it is quite easy to see that describing anything in <em>macroscopic</em> length scales is simply impossible; just make a simple estimate of how many water molecules would it take to fill a endoscopic container of size 10 nm<span class="math notranslate nohighlight">\(\times\)</span>10 nm<span class="math notranslate nohighlight">\(\times\)</span>10 nm! For reference, if you look at the example <code class="docutils literal notranslate"><span class="pre">.gro</span></code> file from the <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> above, the last line gives the dimensions of the <em>simulation box</em> in nanometers: the box length is 1.86206 nanometers. When using the more or less correct density of water, the box can fit a maximum of about 216 water molecules. Since each water has (using the SPC model) three atoms, the total number of atoms is 648.</p>
-<p>One advantage of continuum simulations using fields is that it is possible to describe systems in much larger length scales since one is not limited to atoms. What one loses is the atomic specificity and its consequences. There are approaches that allow continuum methods to be more material specific but such a techniques are outside the scope of this course. For those interested, such methods include phase-field<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#steinbach2009" id="id10">[9]</a> and phase-field crystal methods<a class="bibtex reference internal" href="moldy-1-with-old-stuff.html#provatas2007using" id="id11">[8]</a>.</p>
+<p>One advantage of continuum simulations using fields is that it is possible to describe systems in much larger length scales since one is not limited to atoms. What one loses is the atomic specificity and its consequences. There are approaches that allow continuum methods to be more material specific but such a techniques are outside the scope of this course. For those interested, such methods include phase-field<a href="#id15"><span class="problematic" id="id16">:cite:`Steinbach2009`</span></a> and phase-field crystal methods<a href="#id17"><span class="problematic" id="id18">:cite:`Provatas2007Using`</span></a>.</p>
 </div>
 </div>
 <div class="section" id="summary">
@@ -511,39 +558,6 @@ We can define classical Molecular Dynamics the following way:</p>
 </div>
 <div class="section" id="bibliography">
 <h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
-<p id="bibtex-bibliography-class/week03/moldy-1-0"><dl class="citation">
-<dt class="bibtex label" id="alder1957"><span class="brackets"><a class="fn-backref" href="#id5">1</a></span></dt>
-<dd><p>B. J. Alder and T. E. Wainwright. Phase transition for a hard sphere system. <em>The Journal of Chemical Physics</em>, 27(5):1208, 1957. <a class="reference external" href="https://doi.org/10.1063/1.1743957">doi:10.1063/1.1743957</a>.</p>
-</dd>
-<dt class="bibtex label" id="fritz2011"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
-<dd><p>Dominik Fritz, Konstantin Koschke, Vagelis A. Harmandaris, Nico F. A. van der Vegt, and Kurt Kremer. Multiscale modeling of soft matter: scaling of dynamics. <em>Physical Chemistry Chemical Physics</em>, 13(22):10412, 2011. <a class="reference external" href="https://doi.org/10.1039/c1cp20247b">doi:10.1039/c1cp20247b</a>.</p>
-</dd>
-<dt class="bibtex label" id="gibson1960"><span class="brackets"><a class="fn-backref" href="#id7">3</a></span></dt>
-<dd><p>J. B. Gibson, A. N. Goland, M. Milgram, and G. H. Vineyard. Dynamics of radiation damage. <em>Physical Review</em>, 120(4):1229–1253, nov 1960. <a class="reference external" href="https://doi.org/10.1103/physrev.120.1229">doi:10.1103/physrev.120.1229</a>.</p>
-</dd>
-<dt class="bibtex label" id="lifson1968"><span class="brackets"><a class="fn-backref" href="#id8">4</a></span></dt>
-<dd><p>S. Lifson and A. Warshel. Consistent force field for calculations of conformations, vibrational spectra, and enthalpies of cycloalkane andn-alkane molecules. <em>The Journal of Chemical Physics</em>, 49(11):5116–5129, dec 1968. <a class="reference external" href="https://doi.org/10.1063/1.1670007">doi:10.1063/1.1670007</a>.</p>
-</dd>
-<dt class="bibtex label" id="marrink2013"><span class="brackets">5</span><span class="fn-backref">(<a href="#id3">1</a>,<a href="#id4">2</a>)</span></dt>
-<dd><p>Siewert J. Marrink and D. Peter Tieleman. Perspective on the Martini model. <em>Chemical Society Reviews</em>, 42(16):6801, 2013. <a class="reference external" href="https://doi.org/10.1039/c3cs60093a">doi:10.1039/c3cs60093a</a>.</p>
-</dd>
-<dt class="bibtex label" id="metropolis1953"><span class="brackets"><a class="fn-backref" href="#id6">2</a></span></dt>
-<dd><p>Nicholas Metropolis, Arianna W. Rosenbluth, Marshall N. Rosenbluth, Augusta H. Teller, and Edward Teller. Equation of state calculations by fast computing machines. <em>The Journal of Chemical Physics</em>, 21(6):1087, 1953. <a class="reference external" href="https://doi.org/10.1063/1.1699114">doi:10.1063/1.1699114</a>.</p>
-</dd>
-<dt class="bibtex label" id="murtola2009d"><span class="brackets"><a class="fn-backref" href="#id1">7</a></span></dt>
-<dd><p>Teemu Murtola, Alex Bunker, Ilpo Vattulainen, Markus Deserno, and Mikko Karttunen. Multiscale modeling of emergent materials: biological and soft matter. <em>Physical Chemistry Chemical Physics</em>, 11(12):1869, 2009. <a class="reference external" href="https://doi.org/10.1039/b818051b">doi:10.1039/b818051b</a>.</p>
-</dd>
-<dt class="bibtex label" id="provatas2007using"><span class="brackets"><a class="fn-backref" href="#id11">8</a></span></dt>
-<dd><p>N. Provatas, J. Dantzig, B. Athreya, P. Chan, P. Stefanovic, N. Goldenfeld, and K. Elder. Using the phase-field crystal method in the multi-scale modeling of microstructure evolution. <em>JOM Journal of the Minerals, Metals and Materials Society</em>, 59(7):83–90, July 2007. <a class="reference external" href="https://doi.org/10.1007/s11837-007-0095-3">doi:10.1007/s11837-007-0095-3</a>.</p>
-</dd>
-<dt class="bibtex label" id="steinbach2009"><span class="brackets"><a class="fn-backref" href="#id10">9</a></span></dt>
-<dd><p>Ingo Steinbach. Phase-field models in materials science. <em>Modelling and Simulation in Materials Science and Engineering</em>, 17(7):073001, jul 2009. <a class="reference external" href="https://doi.org/10.1088/0965-0393/17/7/073001">doi:10.1088/0965-0393/17/7/073001</a>.</p>
-</dd>
-<dt class="bibtex label" id="warshel1972"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
-<dd><p>A. Warshel and M. Karplus. Calculation of ground and excited state potential surfaces of conjugated molecules. i. formulation and parametrization. <em>Journal of the American Chemical Society</em>, 94(16):5612–5625, aug 1972. <a class="reference external" href="https://doi.org/10.1021/ja00771a014">doi:10.1021/ja00771a014</a>.</p>
-</dd>
-</dl>
-</p>
 </div>
 </div>
 
@@ -569,40 +583,34 @@ We can define classical Molecular Dynamics the following way:</p>
 
               </div>
               
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
         </div>
     </div>
+    <footer class="footer">
+  <p>
     
+      By Mikko Karttunen<br/>
     
-    <div class='prev-next-bottom'>
-        
-
-    </div>
-    <footer class="footer mt-5 mt-md-0">
-    <div class="container">
-      <p>
-        
-          By Mikko Karttunen<br/>
-        
-          <div class="extra_footer">
-            <div>
+      <div class="extra_footer">
+        <div>
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
     All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
 </div>
 
-          </div>
-      </p>
-    </div>
-  </footer>
+      </div>
+  </p>
+</footer>
 </main>
 
 
       </div>
     </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-    
-  <script src="../../_static/js/index.3da636dd464baa7582d2.js"></script>
-
-
-    
   </body>
 </html>
