@@ -31,6 +31,7 @@
 ## Course material 
 
 - The lecture material is distributed via this web site and assignments are available at OWL.
+- The course material is divided into modules that focus on specific topic. 
 
 ## Learning outcomes
 
@@ -68,10 +69,15 @@ Unsure what kind of systems we will discuss? Take a look at these visualizations
 
 ## Computers
 
-This is a hands-on course and requires programming. This means that you *must* have a computer and the ability to install software on it. Any reasonably modern (past 7 years or so) laptop/desktop with Windows 10, Linux or OSX is ok. Detailed instructions will be provided during the lectures / labs. The methods have been tested using both older (7-10 old laptops) and newer computers.
+This is a hands-on course and requires programming. This means that you *must* have a computer and the ability to install software on it. Any reasonably modern (past 7 years or so) laptop/desktop with Windows 10, Linux or MacOS should be ok. Detailed instructions will be provided during the lectures / labs. The methods have been tested using both older (7-10 old laptops) and newer computers.
 
-- The examples and tasks have been tested on Linux, Windows and Intel-based Macs. 
+- The examples and tasks have been tested on Linux, Windows and Intel-based Macs using both older and newer computers. 
 - Due to no access to Apple M1-based systems, none of the examples have been tested on them.
+
+```{important}
+Some tasks can be CPU (or even GPU) intensive. To avoid overheating, thermal shutdown or, in the worst case, damage to your computer, always ensure that the ventilation openings are not covered. This is of utmost importance and the responsibility is solely yours.
+
+```
 
 ## Software
 
