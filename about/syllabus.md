@@ -20,7 +20,7 @@
 
 ## Target audience
 
-- Graduate students
+- Advanced undergraduate and graduate students
 
 ## Course material & assessment
 

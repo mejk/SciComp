@@ -40,11 +40,11 @@ parts:
 #    - file: class/week02/python-intro
 #    - file: extras/python-virtual-environment
 
-#  - caption: "MODULE: Molecular dynamics"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
+  - caption: "MODULE: Molecular dynamics"
+    numbered: true
+    chapters:
+    - file: class/moldy/particle_simulations_intro
+    - file: class/moldy/moldy_1
 #    - file: extras/python-virtual-environment
 
 #  - caption: "MODULE: Monte Carlo"
