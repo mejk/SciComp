@@ -5,49 +5,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>15. Python virtual environments &#8212; SciComp9502B</title>
+    <title>6. Python virtual environments &#8212; SciComp9502B</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/extra.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -56,95 +56,61 @@
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/python-virtual-environment.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="14. Brief introduction to Python" href="../class/week02/python-intro.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/python-virtual-environment.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="7. Jupyter Notebook / Jupyter Lab" href="jupyter-intro.html" />
+    <link rel="prev" title="5. Installation of Python and Jupyter" href="python-installation.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -164,26 +130,26 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/logo-scicomp.svg" class="logo" alt="logo">
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">SciComp9502B</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
+  <a class="reference internal" href="../../about/syllabus.html">
    Scientific Computing - SciComp9502B
   </a>
  </li>
@@ -193,9 +159,9 @@
   MODULE: Practical matters
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/week01_summary.html">
+  <a class="reference internal" href="../week01/week01_summary.html">
    1. Module: Installation of necessary software
   </a>
  </li>
@@ -205,23 +171,38 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-installation.html">
-   3. Installation of Python and Jupyter
+  <a class="reference internal" href="Linux-basics.html">
+   3. Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-virtual-environment.html">
-   4. Python virtual environments
+  <a class="reference internal" href="linux-basic-commands-2.html">
+   4. Linux: Some basic &amp; useful commands
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/jupyter-intro.html">
-   5. Jupyter Notebook / Jupyter Lab
+  <a class="reference internal" href="python-installation.html">
+   5. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   6. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-intro.html">
+   7. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="editing-ascii.html">
+   8. Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="vi-editor.html">
-   6. The
+   9. The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -231,47 +212,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="editing-ascii.html">
-   7. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
   <a class="reference internal" href="helpful-software.html">
-   8. Helpful software
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Intro to HPC
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/hpc-intro.html">
-   9. Background on computers, computing and High Performance Computing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/simulation-general.html">
-   10. General aspects of modeling and computer simulations
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Operating systems
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/Linux-basics.html">
-   11. Linux - the basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
-   12. Linux: Some basic &amp; useful commands
+   10. Helpful software
   </a>
  </li>
 </ul>
@@ -280,20 +222,15 @@
   MODULE: Python &amp; programming
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="coding-notes-general.html">
-   13. On computation and codes
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   11. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-intro.html">
-   14. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   15. Python virtual environments
+  <a class="reference internal" href="python-intro.html">
+   12. Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -337,7 +274,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/extras/python-virtual-environment.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/week02/python-virtual-environment.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -369,12 +306,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation-practical-example">
-   15.1. Installation &amp; practical example
+   6.1. Installation &amp; practical example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-on-python-virtual-environments">
-   15.2. More on Python virtual environments
+   6.2. More on Python virtual environments
   </a>
  </li>
 </ul>
@@ -399,12 +336,12 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation-practical-example">
-   15.1. Installation &amp; practical example
+   6.1. Installation &amp; practical example
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-on-python-virtual-environments">
-   15.2. More on Python virtual environments
+   6.2. More on Python virtual environments
   </a>
  </li>
 </ul>
@@ -417,9 +354,9 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="python-virtual-environments">
-<h1><span class="section-number">15. </span>Python virtual environments<a class="headerlink" href="#python-virtual-environments" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Python virtual environments<a class="headerlink" href="#python-virtual-environments" title="Permalink to this headline">¶</a></h1>
 <p>There is a vast number of python packages both distributed with the basic installation and contributed by the users and various projects. When packages are updated or/and changed, compatibility may break. That is not a problem between packages that belong to the main distribution but some of the contributed ones, including ones that may be your own ones, may also need to be modified to be compatible with the new distribution. The solution to this is the so-called <em>virtual environment.</em></p>
-<p>The idea of a <em>virtual environment</em> is to provide a sandbox - an isolated environment - for a project. This allows the project to have its own dependencies without interfering with the other projects. Here is a practical example from the context of molecular simualtions (this was the case in Nov 2020 but may have changed since then): The widely used molecular simulations analysis package <a class="reference external" href="https://www.mdanalysis.org/">MDAnalysis</a> requires a specific version of the plotting package <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>. The latest Matplotlib version (=the the latest at the time of writing this) leads to some unexpected errors. Using <em>virtual environments</em> helps to circumvent the problem since creating an environment specific for MDAnalysis allows it to have its own version of Matplotlib.</p>
+<p>The idea of a <em>virtual environment</em> is to provide a sandbox - an isolated environment - for a project. This allows the project to have its own dependencies without interfering with other projects. Here is a practical example from the context of molecular simualtions and data analysis (this was the case in Nov 2020 but may have changed since then): The widely used molecular simulations analysis package <a class="reference external" href="https://www.mdanalysis.org/">MDAnalysis</a> requires a specific version of the very popular plotting package <a class="reference external" href="https://matplotlib.org/">Matplotlib</a>. The latest Matplotlib version (=the the latest at the time of writing this) leads to some unexpected errors. Using <em>virtual environments</em> helps to circumvent the problem since creating an environment specific for MDAnalysis allows it to have its own version of Matplotlib. This type of isses are quite common and using virtual environments helps to avoid problems - tracking such problems can sometimes be quite difficult.</p>
 <p>In the example above, we’d simply created a separate <em>virtual environment</em>. This could be extended to any other situations. For example, let’s assume that we two projects, <code class="docutils literal notranslate"><span class="pre">ProjectA</span></code> and <code class="docutils literal notranslate"><span class="pre">ProjectB</span></code>. Let’s further assume that they have different and possibly conflicting dependencies. We simply need to create separete <em>virtual environments</em> for both <code class="docutils literal notranslate"><span class="pre">ProjectA</span></code> and <code class="docutils literal notranslate"><span class="pre">ProjectB</span></code>, and are  good to go.</p>
 <p>There are no limits to the number of environments.</p>
 <div class="admonition note">
@@ -427,10 +364,10 @@
 <p>Using virtual environments is <em>highly</em> recommended. Using them eliminates lots of potential errors and problems with package updates.</p>
 </div>
 <div class="section" id="installation-practical-example">
-<h2><span class="section-number">15.1. </span>Installation &amp; practical example<a class="headerlink" href="#installation-practical-example" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Installation &amp; practical example<a class="headerlink" href="#installation-practical-example" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="2842180c-7e2b-4601-b7b9-4eea62e95dc8" name="77edf7ca-1280-4b7d-94f5-f027312b0fbf" type="radio">
-</input><label class="tabbed-label" for="2842180c-7e2b-4601-b7b9-4eea62e95dc8">
+<input checked="checked" id="80f6234f-309a-4e55-bb44-7532da816359" name="88e1e92d-9550-4500-8297-b5654e0960b6" type="radio">
+</input><label class="tabbed-label" for="80f6234f-309a-4e55-bb44-7532da816359">
 Using Anaconda command line</label><div class="tabbed-content docutils">
 <p>Here’s how to create virtual environments with <code class="docutils literal notranslate"><span class="pre">conda</span></code> using the command line terminal. This works in Linux, WSL/WSL2 and Mac. Mac and Windows 10 have also the Anaconda GUI but using command line is quicker. Note that <code class="docutils literal notranslate"><span class="pre">conda</span></code> stores the information about environments in <code class="docutils literal notranslate"><span class="pre">${HOME}/anaconda3/envs/</span></code>. In practise that means that environments can activated and deactivated very conveniently (this is different from <code class="docutils literal notranslate"><span class="pre">pip</span></code>).</p>
 <p><strong>1. Check the version and existing environments:</strong></p>
@@ -494,8 +431,8 @@ packages into any environment. Leaving <code class="docutils literal notranslate
 </pre></div>
 </div>
 </div>
-<input id="a1ad0938-fd4a-47b7-8fb1-334ed4a81464" name="77edf7ca-1280-4b7d-94f5-f027312b0fbf" type="radio">
-</input><label class="tabbed-label" for="a1ad0938-fd4a-47b7-8fb1-334ed4a81464">
+<input id="d91bd4ff-ac92-4261-91e7-14651501760e" name="88e1e92d-9550-4500-8297-b5654e0960b6" type="radio">
+</input><label class="tabbed-label" for="d91bd4ff-ac92-4261-91e7-14651501760e">
 Using the Anaconda GUI</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Open the Anaconda Navigator</p></li>
@@ -503,8 +440,8 @@ Using the Anaconda GUI</label><div class="tabbed-content docutils">
 <li><p>Click on <code class="docutils literal notranslate"><span class="pre">Create</span></code> at the bottom of the Navigator menu</p></li>
 </ul>
 </div>
-<input id="a752c655-177d-4028-b41c-32d616a3ea11" name="77edf7ca-1280-4b7d-94f5-f027312b0fbf" type="radio">
-</input><label class="tabbed-label" for="a752c655-177d-4028-b41c-32d616a3ea11">
+<input id="f5b6cd40-9e52-4f0f-b8fd-b87f3b96767a" name="88e1e92d-9550-4500-8297-b5654e0960b6" type="radio">
+</input><label class="tabbed-label" for="f5b6cd40-9e52-4f0f-b8fd-b87f3b96767a">
 Virtual environments with pip</label><div class="tabbed-content docutils">
 <p><code class="docutils literal notranslate"><span class="pre">pip</span></code> works a bit differently, but using it is equally easy. First, install the package <code class="docutils literal notranslate"><span class="pre">virtualenv</span></code> using</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">virtualenv</span>
@@ -540,7 +477,7 @@ a virtual environment and its directories at the location where you currently ar
 </div>
 </div>
 <div class="section" id="more-on-python-virtual-environments">
-<h2><span class="section-number">15.2. </span>More on Python virtual environments<a class="headerlink" href="#more-on-python-virtual-environments" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>More on Python virtual environments<a class="headerlink" href="#more-on-python-virtual-environments" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><a class="reference external" href="https://realpython.com/python-virtual-environments-a-primer/">Python Virtual Environments: A Primer</a></p></li>
 <li><p><a class="reference external" href="https://towardsdatascience.com/virtual-environments-104c62d48c54">A Guide to Python’s Virtual Environments</a></p></li>
@@ -561,7 +498,7 @@ a virtual environment and its directories at the location where you currently ar
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./extras"
+            path: "./class/week02"
         },
         predefinedOutput: true
     }
@@ -573,12 +510,19 @@ a virtual environment and its directories at the location where you currently ar
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../class/week02/python-intro.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="python-installation.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">14. </span>Brief introduction to Python</p>
+            <p class="prev-next-title"><span class="section-number">5. </span>Installation of Python and Jupyter</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="jupyter-intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Jupyter Notebook / Jupyter Lab</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
@@ -604,7 +548,7 @@ a virtual environment and its directories at the location where you currently ar
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

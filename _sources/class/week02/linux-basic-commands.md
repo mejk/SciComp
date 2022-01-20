@@ -28,6 +28,12 @@ This section lists some of the most important and useful commands with examples.
 Additionally, some notes regarding the difference between Linux (bash shell) and OSX (zsh) are provided.
 <p></p>
 
+```{warning}
+**Important:** When there is a warning sign, take it *very* seriously as there are a few commands that are dangerous!  
+```
+If there are commands or concepts you don't understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.
+
+
 
 ## How to get help
 <hr>

@@ -14,7 +14,7 @@ In this module, we will install most of the necessary software and familiarize o
 1. Don't block the ventilation openings of you computer.
 ```
 
-## Software installations include (done during labs and classes):
+## Software installations include                               :
 
 <!--
 We will do this during the labs, please don't do any installations beforehand.
@@ -25,7 +25,7 @@ We will do this during the labs, please don't do any installations beforehand.
   Most of the examples are with Homebrew.
   - For windows users: Windows subsystem for Linux WSL/ WSL2, virtual machine for Linux or dual 
   boot Windows-Linux. We will discuss these options.
-  - Linux users: Nothing to do at this step.
+  - Linux users: Nothing to do at this step, just check that the system is up-to-date and read the instructions/material
 
 **For everyone to install:**
 
@@ -33,11 +33,11 @@ We will do this during the labs, please don't do any installations beforehand.
 We will do this during the labs, please don't do any installations beforehand.
 -->
 
-  - Python either using pip or Anaconda. The latter is used but the former is also ok.
+  - Python either using `pip` or Anaconda. The latter is recommended and easier to use, but the former is also ok.
     * Installing virtual environment is also highly recommended.
   - Jupyter Notebook / Lab.
-  - C/C++ compilers and some other necessary software (needed for installing Gromacs later)
-  - Plain text (ASCII) editor.
+  - C/C++ compilers and some other necessary software.
+  - Plain text (ASCII) editor. Foe example, `vi`, emacs or such. Instructions for`vi` are provided in this module.
   
 
 <!--

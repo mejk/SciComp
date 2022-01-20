@@ -67,7 +67,7 @@
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week01/week01_summary.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="2. Introduction to computational modeling &amp; methods in chemistry/physics" href="intro-to-modeling.html" />
+    <link rel="next" title="2. Installation of tools: WSL2/Linux etc." href="../../extras/install-wsl.html" />
     <link rel="prev" title="Scientific Computing - SciComp9502B" href="../../about/syllabus.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -124,8 +124,44 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="intro-to-modeling.html">
-   2. Introduction to computational modeling &amp; methods in chemistry/physics
+  <a class="reference internal" href="../../extras/install-wsl.html">
+   2. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   3. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-virtual-environment.html">
+   4. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   5. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   6. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   7. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   8. Helpful software
   </a>
  </li>
 </ul>
@@ -137,12 +173,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="hpc-intro.html">
-   3. Background on computers, computing and High Performance Computing
+   9. Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="simulation-general.html">
-   4. General aspects of modeling and computer simulations
+   10. General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
@@ -154,12 +190,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../week02/Linux-basics.html">
-   5. Linux - the basics
+   11. Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   6. Linux: Some basic &amp; useful commands
+   12. Linux: Some basic &amp; useful commands
   </a>
  </li>
 </ul>
@@ -171,34 +207,17 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../extras/coding-notes-general.html">
-   7. On computation and codes
+   13. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../week02/python-intro.html">
-   8. Brief introduction to Python
+   14. Brief introduction to Python
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../../extras/python-virtual-environment.html">
-   9. Python virtual environments
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Molecular dynamics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../moldy/particle_simulations_intro.html">
-   10. First look into particle simulations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../moldy/moldy_1.html">
-   11. What is Molecular Dynamics (MD)
+   15. Python virtual environments
   </a>
  </li>
 </ul>
@@ -273,8 +292,8 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-installations-include-done-during-labs-and-classes">
-   1.1. Software installations include (done during labs and classes):
+  <a class="reference internal nav-link" href="#software-installations-include">
+   1.1. Software installations include                               :
   </a>
  </li>
 </ul>
@@ -298,8 +317,8 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#software-installations-include-done-during-labs-and-classes">
-   1.1. Software installations include (done during labs and classes):
+  <a class="reference internal nav-link" href="#software-installations-include">
+   1.1. Software installations include                               :
   </a>
  </li>
 </ul>
@@ -327,8 +346,8 @@
 <li><p>Don’t block the ventilation openings of you computer.</p></li>
 </ol>
 </div>
-<div class="section" id="software-installations-include-done-during-labs-and-classes">
-<h2><span class="section-number">1.1. </span>Software installations include (done during labs and classes):<a class="headerlink" href="#software-installations-include-done-during-labs-and-classes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="software-installations-include">
+<h2><span class="section-number">1.1. </span>Software installations include                               :<a class="headerlink" href="#software-installations-include" title="Permalink to this headline">¶</a></h2>
 <!--
 We will do this during the labs, please don't do any installations beforehand.
 -->
@@ -338,21 +357,21 @@ We will do this during the labs, please don't do any installations beforehand.
 Most of the examples are with Homebrew.</p></li>
 <li><p>For windows users: Windows subsystem for Linux WSL/ WSL2, virtual machine for Linux or dual
 boot Windows-Linux. We will discuss these options.</p></li>
-<li><p>Linux users: Nothing to do at this step.</p></li>
+<li><p>Linux users: Nothing to do at this step, just check that the system is up-to-date and read the instructions/material</p></li>
 </ul>
 <p><strong>For everyone to install:</strong></p>
 <!--
 We will do this during the labs, please don't do any installations beforehand.
 -->
 <ul class="simple">
-<li><p>Python either using pip or Anaconda. The latter is used but the former is also ok.</p>
+<li><p>Python either using <code class="docutils literal notranslate"><span class="pre">pip</span></code> or Anaconda. The latter is recommended and easier to use, but the former is also ok.</p>
 <ul>
 <li><p>Installing virtual environment is also highly recommended.</p></li>
 </ul>
 </li>
 <li><p>Jupyter Notebook / Lab.</p></li>
-<li><p>C/C++ compilers and some other necessary software (needed for installing Gromacs later)</p></li>
-<li><p>Plain text (ASCII) editor.</p></li>
+<li><p>C/C++ compilers and some other necessary software.</p></li>
+<li><p>Plain text (ASCII) editor. Foe example, <code class="docutils literal notranslate"><span class="pre">vi</span></code>, emacs or such. Instructions for<code class="docutils literal notranslate"><span class="pre">vi</span></code> are provided in this module.</p></li>
 </ul>
 <!--
 ## When will we install software?
@@ -395,10 +414,10 @@ The above installations will be done mostly during the first lab on Monday of We
             <p class="prev-next-title">Scientific Computing - SciComp9502B</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="intro-to-modeling.html" title="next page">
+    <a class='right-next' id="next-link" href="../../extras/install-wsl.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Introduction to computational modeling &amp; methods in chemistry/physics</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Installation of tools: WSL2/Linux etc.</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

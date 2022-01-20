@@ -5,49 +5,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>8. The vi editor &#8212; SciComp9502B</title>
+    <title>9. The vi editor &#8212; SciComp9502B</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/extra.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -56,33 +56,68 @@
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/vi-editor.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="9. Helpful software" href="helpful-software.html" />
-    <link rel="prev" title="7. Editing ASCII files" href="editing-ascii.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/vi-editor.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10. Helpful software" href="helpful-software.html" />
+    <link rel="prev" title="8. Editing ASCII files" href="editing-ascii.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -102,26 +137,26 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/logo-scicomp.svg" class="logo" alt="logo">
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">SciComp9502B</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
+  <a class="reference internal" href="../../about/syllabus.html">
    Scientific Computing - SciComp9502B
   </a>
  </li>
@@ -133,43 +168,48 @@
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/week01_summary.html">
+  <a class="reference internal" href="../week01/week01_summary.html">
    1. Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/install-wsl.html">
+  <a class="reference internal" href="install-wsl.html">
    2. Installation of tools: WSL2/Linux etc.
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
-   3. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="Linux-basics.html">
+   3. Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-installation.html">
-   4. Installation of Python and Jupyter
+  <a class="reference internal" href="linux-basic-commands-2.html">
+   4. Linux: Some basic &amp; useful commands
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-virtual-environment.html">
-   5. Python virtual environments
+  <a class="reference internal" href="python-installation.html">
+   5. Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/jupyter-intro.html">
-   6. Jupyter Notebook / Jupyter Lab
+  <a class="reference internal" href="python-virtual-environment.html">
+   6. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-intro.html">
+   7. Jupyter Notebook / Jupyter Lab
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="editing-ascii.html">
-   7. Editing ASCII files
+   8. Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   8. The
+   9. The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -180,36 +220,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="helpful-software.html">
-   9. Helpful software
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Intro to HPC
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/hpc-intro.html">
-   10. Background on computers, computing and High Performance Computing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/simulation-general.html">
-   11. General aspects of modeling and computer simulations
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Operating systems
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/Linux-basics.html">
-   12. Linux - the basics
+   10. Helpful software
   </a>
  </li>
 </ul>
@@ -220,18 +231,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="coding-notes-general.html">
-   13. On computation and codes
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   11. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-intro.html">
-   14. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python-virtual-environment.html">
-   15. Python virtual environments
+  <a class="reference internal" href="python-intro.html">
+   12. Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -275,7 +281,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/extras/vi-editor.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/week02/vi-editor.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -307,7 +313,7 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-vi">
-   8.1. Why
+   9.1. Why
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -317,12 +323,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#switching-between-the-modes">
-   8.2. Switching between the modes
+   9.2. Switching between the modes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#starting-vi">
-   8.3. Starting
+   9.3. Starting
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -332,7 +338,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-command-summary">
-   8.4.
+   9.4.
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -343,7 +349,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-cursor-movements">
-   8.5.
+   9.5.
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -354,7 +360,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-in-readonly-mode">
-   8.6.
+   9.6.
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -365,7 +371,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vim-the-basic-vi-improved">
-   8.7.
+   9.7.
    <code class="docutils literal notranslate">
     <span class="pre">
      vim
@@ -402,7 +408,7 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#why-vi">
-   8.1. Why
+   9.1. Why
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -412,12 +418,12 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#switching-between-the-modes">
-   8.2. Switching between the modes
+   9.2. Switching between the modes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#starting-vi">
-   8.3. Starting
+   9.3. Starting
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -427,7 +433,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-command-summary">
-   8.4.
+   9.4.
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -438,7 +444,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-cursor-movements">
-   8.5.
+   9.5.
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -449,7 +455,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vi-in-readonly-mode">
-   8.6.
+   9.6.
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -460,7 +466,7 @@
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#vim-the-basic-vi-improved">
-   8.7.
+   9.7.
    <code class="docutils literal notranslate">
     <span class="pre">
      vim
@@ -485,7 +491,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="the-vi-editor">
-<h1><span class="section-number">8. </span>The <code class="docutils literal notranslate"><span class="pre">vi</span></code> editor<a class="headerlink" href="#the-vi-editor" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">9. </span>The <code class="docutils literal notranslate"><span class="pre">vi</span></code> editor<a class="headerlink" href="#the-vi-editor" title="Permalink to this headline">¶</a></h1>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-12 p-2 docutils">
@@ -508,11 +514,11 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">vi</span></code> editor is the basic <a class="reference external" href="https://en.wikipedia.org/wiki/ASCII">ASCII</a> text editor that comes with essentially all Linux/Unix systems. It works on the command line without GUI. It is very lightweight.</p>
 <p><code class="docutils literal notranslate"><span class="pre">vi</span></code> differs from most editors (with or without GUI) in that it has two modes: 1) <em>command mode</em> and 2) <em>editing or insert mode</em>. As the names suggest, these modes serve for different purposes. In the <em>command mode</em>, one can enter commands such as <code class="docutils literal notranslate"><span class="pre">copy</span></code>, <code class="docutils literal notranslate"><span class="pre">paste</span></code>, <code class="docutils literal notranslate"><span class="pre">save</span></code>, <code class="docutils literal notranslate"><span class="pre">quit</span></code> and so on. Editing text is not possible in the command mode. For editing text, one has to enter the <em>editing or insert mode</em>. That mode is exclusively for editing text and for saving the file, one has to switch to <em>command mode</em>. Understanding the two modes is the key to using the <code class="docutils literal notranslate"><span class="pre">vi</span></code> editor.</p>
 <div class="section" id="why-vi">
-<h2><span class="section-number">8.1. </span>Why <code class="docutils literal notranslate"><span class="pre">vi</span></code><a class="headerlink" href="#why-vi" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.1. </span>Why <code class="docutils literal notranslate"><span class="pre">vi</span></code><a class="headerlink" href="#why-vi" title="Permalink to this headline">¶</a></h2>
 <p>First, since it ships with all Linux/Unix systems, it is always there without any additional installations. Second, is also extremely lightweight. Those two factors are very important if something goes wrong with the systems and some of the system files need to be edited; in such case no GUI based editors (even if they are ASCII editors) may be impossible to use.  Although switching between the modes may sound cumbersome, it is very easy to get used to that and <code class="docutils literal notranslate"><span class="pre">vi</span></code> is a favorite of many.</p>
 </div>
 <div class="section" id="switching-between-the-modes">
-<h2><span class="section-number">8.2. </span>Switching between the modes<a class="headerlink" href="#switching-between-the-modes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.2. </span>Switching between the modes<a class="headerlink" href="#switching-between-the-modes" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>When <code class="docutils literal notranslate"><span class="pre">vi</span></code> is started, it is always in the command mode.</p></li>
 <li><p>Commands are <em>case sensitive</em></p></li>
@@ -521,38 +527,38 @@
 </ul>
 </div>
 <div class="section" id="starting-vi">
-<h2><span class="section-number">8.3. </span>Starting <code class="docutils literal notranslate"><span class="pre">vi</span></code><a class="headerlink" href="#starting-vi" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.3. </span>Starting <code class="docutils literal notranslate"><span class="pre">vi</span></code><a class="headerlink" href="#starting-vi" title="Permalink to this headline">¶</a></h2>
 <p>To open a file or to create a new file, simply type</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="n">filename</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">filename.txt</span></code> exists it will be simply opened. If it doesn’t exist, it will be created.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="125efc85-b318-409f-b406-762fa7dbc18c" name="142db38d-70df-43f4-a22e-119da7c27a59" type="radio">
-</input><label class="tabbed-label" for="125efc85-b318-409f-b406-762fa7dbc18c">
+<input checked="checked" id="dd2b7587-d916-4dd1-8707-ea749dfe8fb0" name="04c394db-8e5f-4424-b03f-7b3c8f4def46" type="radio">
+</input><label class="tabbed-label" for="dd2b7587-d916-4dd1-8707-ea749dfe8fb0">
 Starting vi</label><div class="tabbed-content docutils">
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/vi-insert-mode.png"><img alt="vi" src="../_images/vi-insert-mode.png" style="width: 650px;" /></a>
+<a class="reference internal image-reference" href="../../_images/vi-insert-mode2.png"><img alt="vi" src="../../_images/vi-insert-mode2.png" style="width: 650px;" /></a>
 </div>
 </div>
-<input id="f4c6a8a7-da45-4cd6-8da7-d5d0c008fdbe" name="142db38d-70df-43f4-a22e-119da7c27a59" type="radio">
-</input><label class="tabbed-label" for="f4c6a8a7-da45-4cd6-8da7-d5d0c008fdbe">
+<input id="c999c20c-3d2c-4cd4-9484-870967dc38a1" name="04c394db-8e5f-4424-b03f-7b3c8f4def46" type="radio">
+</input><label class="tabbed-label" for="c999c20c-3d2c-4cd4-9484-870967dc38a1">
 Searching in vi</label><div class="tabbed-content docutils">
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/vi-insert-search.png"><img alt="vi search" src="../_images/vi-insert-search.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/vi-insert-search2.png"><img alt="vi search" src="../../_images/vi-insert-search2.png" style="width: 600px;" /></a>
 </div>
 </div>
-<input id="d45245b1-7dee-4ef2-95b6-75d41633aee2" name="142db38d-70df-43f4-a22e-119da7c27a59" type="radio">
-</input><label class="tabbed-label" for="d45245b1-7dee-4ef2-95b6-75d41633aee2">
+<input id="eeefb8bc-412b-4215-a946-dcd4cf23646c" name="04c394db-8e5f-4424-b03f-7b3c8f4def46" type="radio">
+</input><label class="tabbed-label" for="eeefb8bc-412b-4215-a946-dcd4cf23646c">
 Saving in vi</label><div class="tabbed-content docutils">
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/vi-save.png"><img alt="vi save" src="../_images/vi-save.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../../_images/vi-save2.png"><img alt="vi save" src="../../_images/vi-save2.png" style="width: 600px;" /></a>
 </div>
 </div>
 </div>
 </div>
 <div class="section" id="vi-command-summary">
-<h2><span class="section-number">8.4. </span><code class="docutils literal notranslate"><span class="pre">vi</span></code> command summary<a class="headerlink" href="#vi-command-summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.4. </span><code class="docutils literal notranslate"><span class="pre">vi</span></code> command summary<a class="headerlink" href="#vi-command-summary" title="Permalink to this headline">¶</a></h2>
 <p>Below is a summary of some of the most common commands. Open a test file and try them.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -742,7 +748,7 @@ Saving in vi</label><div class="tabbed-content docutils">
 </table>
 </div>
 <div class="section" id="vi-cursor-movements">
-<h2><span class="section-number">8.5. </span><code class="docutils literal notranslate"><span class="pre">vi</span></code> cursor movements:<a class="headerlink" href="#vi-cursor-movements" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.5. </span><code class="docutils literal notranslate"><span class="pre">vi</span></code> cursor movements:<a class="headerlink" href="#vi-cursor-movements" title="Permalink to this headline">¶</a></h2>
 <p>Instead of using the arrows, the cursors (in <em>command mode</em>) can be moved using the following keys:</p>
 <table class="colwidths-auto table">
 <thead>
@@ -767,14 +773,14 @@ Saving in vi</label><div class="tabbed-content docutils">
 </table>
 </div>
 <div class="section" id="vi-in-readonly-mode">
-<h2><span class="section-number">8.6. </span><code class="docutils literal notranslate"><span class="pre">vi</span></code> in readonly-mode<a class="headerlink" href="#vi-in-readonly-mode" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.6. </span><code class="docutils literal notranslate"><span class="pre">vi</span></code> in readonly-mode<a class="headerlink" href="#vi-in-readonly-mode" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">vi</span></code> can also be used in readonly-mode. The search and movement functions work as listed above, but editing and saving is not possible in the readonly mode. Here’s how:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">vi</span> <span class="o">-</span><span class="n">R</span> <span class="n">filename</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="vim-the-basic-vi-improved">
-<h2><span class="section-number">8.7. </span><code class="docutils literal notranslate"><span class="pre">vim</span></code> the basic <code class="docutils literal notranslate"><span class="pre">vi</span></code> improved<a class="headerlink" href="#vim-the-basic-vi-improved" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">9.7. </span><code class="docutils literal notranslate"><span class="pre">vim</span></code> the basic <code class="docutils literal notranslate"><span class="pre">vi</span></code> improved<a class="headerlink" href="#vim-the-basic-vi-improved" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">vim</span></code> is an improved <code class="docutils literal notranslate"><span class="pre">vi</span></code> and a very popular ASCII text editor - <code class="docutils literal notranslate"><span class="pre">vi</span></code> and <code class="docutils literal notranslate"><span class="pre">vim</span></code> are arguably the most popular text editor in Linux/Unix. <code class="docutils literal notranslate"><span class="pre">vim</span></code> adds several features to the basic <code class="docutils literal notranslate"><span class="pre">vim</span></code> and all of the above commands work also in <code class="docutils literal notranslate"><span class="pre">vim</span></code>. It comes (just like the basic <code class="docutils literal notranslate"><span class="pre">vi</span></code>) with most (if not all) current Linux/Unix systems as well as Mac.</p>
 <p><code class="docutils literal notranslate"><span class="pre">vim</span></code> stands for <em>Vi IMproved</em>. It adds features to the basic <code class="docutils literal notranslate"><span class="pre">vi</span></code> and is highly customizable. It also has many plugins including <code class="docutils literal notranslate"><span class="pre">git</span></code> integration and a scripting language. <code class="docutils literal notranslate"><span class="pre">vim</span></code> is available for essentially all operating systems including iOS and Android.</p>
 </div>
@@ -793,7 +799,7 @@ Saving in vi</label><div class="tabbed-content docutils">
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./extras"
+            path: "./class/week02"
         },
         predefinedOutput: true
     }
@@ -809,13 +815,13 @@ Saving in vi</label><div class="tabbed-content docutils">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">7. </span>Editing ASCII files</p>
+            <p class="prev-next-title"><span class="section-number">8. </span>Editing ASCII files</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="helpful-software.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">9. </span>Helpful software</p>
+        <p class="prev-next-title"><span class="section-number">10. </span>Helpful software</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -843,7 +849,7 @@ Saving in vi</label><div class="tabbed-content docutils">
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

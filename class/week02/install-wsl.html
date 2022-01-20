@@ -5,49 +5,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Installation of tools: WSL2/Linux etc. &#8212; SciComp9502B</title>
+    <title>2. Installation of tools: WSL2/Linux etc. &#8212; SciComp9502B</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/extra.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script src="../_static/togglebutton.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/save_state.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -56,24 +56,19 @@
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/install-wsl.html" />
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/install-wsl.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3. Linux - the basics" href="Linux-basics.html" />
+    <link rel="prev" title="1. Module: Installation of necessary software" href="../week01/week01_summary.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -93,26 +88,26 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+    <a class="navbar-brand text-wrap" href="../../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../_static/logo-scicomp.svg" class="logo" alt="logo">
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">SciComp9502B</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../about/syllabus.html">
+  <a class="reference internal" href="../../about/syllabus.html">
    Scientific Computing - SciComp9502B
   </a>
  </li>
@@ -122,49 +117,49 @@
   MODULE: Practical matters
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/week01_summary.html">
+  <a class="reference internal" href="../week01/week01_summary.html">
    1. Module: Installation of necessary software
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/install-wsl.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    2. Installation of tools: WSL2/Linux etc.
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/Linux-basics.html">
+  <a class="reference internal" href="Linux-basics.html">
    3. Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
+  <a class="reference internal" href="linux-basic-commands-2.html">
    4. Linux: Some basic &amp; useful commands
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-installation.html">
+  <a class="reference internal" href="python-installation.html">
    5. Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-virtual-environment.html">
+  <a class="reference internal" href="python-virtual-environment.html">
    6. Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/jupyter-intro.html">
+  <a class="reference internal" href="jupyter-intro.html">
    7. Jupyter Notebook / Jupyter Lab
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/editing-ascii.html">
+  <a class="reference internal" href="editing-ascii.html">
    8. Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/vi-editor.html">
+  <a class="reference internal" href="vi-editor.html">
    9. The
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -175,7 +170,7 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/helpful-software.html">
+  <a class="reference internal" href="helpful-software.html">
    10. Helpful software
   </a>
  </li>
@@ -187,12 +182,12 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="coding-notes-general.html">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
    11. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/python-intro.html">
+  <a class="reference internal" href="python-intro.html">
    12. Brief introduction to Python
   </a>
  </li>
@@ -237,7 +232,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/extras/install-wsl.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/week02/install-wsl.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -269,39 +264,29 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation-of-basic-tools">
-   Installation of basic tools
+   2.1. Installation of basic tools
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-information">
-     Additional information
+     2.1.1. Additional information
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-1-terminal-wsl-wsl2-xcode-and-such">
-   Task 1: Terminal, WSL/WSL2, Xcode and such
+   2.2. Task 1: Terminal, WSL/WSL2, Xcode and such
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-2-package-manager">
-   Task 2: Package manager
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-3-install-python-and-jupyter-lab">
-   Task 3: Install Python and Jupyter Lab
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-4-try-the-command-line-terminal">
-   Task 4: Try the command line terminal
+   2.3. Task 2: Package manager
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#optional-create-work-directory-for-the-course">
-   Optional: Create work directory for the course
+   2.4. Optional: Create work directory for the course
   </a>
  </li>
 </ul>
@@ -326,39 +311,29 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#installation-of-basic-tools">
-   Installation of basic tools
+   2.1. Installation of basic tools
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#additional-information">
-     Additional information
+     2.1.1. Additional information
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-1-terminal-wsl-wsl2-xcode-and-such">
-   Task 1: Terminal, WSL/WSL2, Xcode and such
+   2.2. Task 1: Terminal, WSL/WSL2, Xcode and such
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#task-2-package-manager">
-   Task 2: Package manager
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-3-install-python-and-jupyter-lab">
-   Task 3: Install Python and Jupyter Lab
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#task-4-try-the-command-line-terminal">
-   Task 4: Try the command line terminal
+   2.3. Task 2: Package manager
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#optional-create-work-directory-for-the-course">
-   Optional: Create work directory for the course
+   2.4. Optional: Create work directory for the course
   </a>
  </li>
 </ul>
@@ -371,7 +346,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="installation-of-tools-wsl2-linux-etc">
-<h1>Installation of tools: WSL2/Linux etc.<a class="headerlink" href="#installation-of-tools-wsl2-linux-etc" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">2. </span>Installation of tools: WSL2/Linux etc.<a class="headerlink" href="#installation-of-tools-wsl2-linux-etc" title="Permalink to this headline">¶</a></h1>
 <ul class="simple">
 <li><p>We need to set up command line terminal. It will be used extensively throughout the course.</p></li>
 <li><p>All of command line terminal options are either Linux or Linux-like (technically the OSX one is based on Free BSD but that doesn’t make any practical difference here).</p></li>
@@ -379,7 +354,7 @@
 <li><p>Note that operating systems are continuously updated and you should always check the latest information regarding the current version of yours.</p></li>
 </ul>
 <div class="section" id="installation-of-basic-tools">
-<h2>Installation of basic tools<a class="headerlink" href="#installation-of-basic-tools" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.1. </span>Installation of basic tools<a class="headerlink" href="#installation-of-basic-tools" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
 <li><p>Set up command line terminal either by installing full Linux, WSL/WSL2 in Windows or Linux in a virtual machine. A decision needs to be made and we discuss these options below.</p></li>
 <li><p>Learn the basics of command line and the main differences between Linux, Windows and/or Mac.</p></li>
@@ -390,23 +365,24 @@
 </ul>
 </li>
 </ol>
-<p>The figure shows a summary of the options depending on your current OS. For Windows users the recommended choice is WSL2 (WSL2 has some advantages over WSL, but WSL works as well). Dual boot Windows 10/Linux is a good choice but requires more work and care. Virtual machine is a safe choice but requires a lot of memory. Mac users already have a command line terminal. It can be found in</p>
+<p>The figure shows a summary of the options depending on your current OS. For Windows users the recommended choice is WSL2 (WSL2 has some advantages over WSL, but WSL works as well). Dual boot Windows 10/Linux is a good choice but requires more work and care. Virtual machine is a safe choice but requires a lot of memory.</p>
+<p>Mac users already have a command line terminal. It can be found in</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Finder</span> <span class="o">-&gt;</span> <span class="n">Applications</span> <span class="o">-&gt;</span> <span class="n">Utilities</span> <span class="o">-&gt;</span> <span class="n">Terminal</span>
 </pre></div>
 </div>
 <p>That same location has also <code class="docutils literal notranslate"><span class="pre">XQuartz</span></code> that will be needed to run GUI based applications.</p>
 <div class="figure align-left" id="id1">
-<a class="reference internal image-reference" href="../_images/linux-decision.svg"><img alt="Linux vs others" src="../_images/linux-decision.svg" width="700px" /></a>
-<p class="caption"><span class="caption-text"><em>The three main operating systems and the main options.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="../../_images/linux-decision1.svg"><img alt="Linux vs others" src="../../_images/linux-decision1.svg" width="700px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text"><em>The three main operating systems and the main options.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you are happy with the recommended choices, the move on the next section and installation. If you want more information, just click the <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> below to read more.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>When you install any software <em>the responsibility is entirely yours</em>. It is important to you back up your data and essential files. Doing that ensures that in the case something goes wrong, you will be able to recover your previous work and software. While it is rare that something goes wrong, one should take the necessary precautions. And remember to do virus checks.</p>
+<p>When you install any software <em>the responsibility is entirely yours</em>. It is impertative to back up your data and essential files. Doing that ensures that in the case something goes wrong, you will be able to recover your previous work and software. While it is rare that something goes wrong, it can and does happen, and one should take the necessary precautions. And always remember to do virus checks.</p>
 <p>Recovering a crippled computer may be very hard or impossible.</p>
 </div>
 <div class="section" id="additional-information">
-<h3>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.1. </span>Additional information<a class="headerlink" href="#additional-information" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">dropdowns</span></code> provide more information for those interested and are not required reading.</p>
 <details class="sphinx-bs dropdown card mb-3">
 <summary class="summary-title card-header">
@@ -446,11 +422,11 @@
 </li>
 </ul>
 <p class="card-text"><strong>GPU computing:</strong></p>
-<p class="card-text">Many popular software packages such as Tensorflow for machine learning and Gromacs, NAMD and Amber for molecular simulations can use GPUs for simulations. GPUs provide a significant speedup compared to running the simulations on CPUs. Depending on your computer, you may be able to use GPUs. If not, don’t worry, all the simulations have been tested with an older CPU-only laptop to ensure that the simulations will complete within reasonable time.</p>
+<p class="card-text">Many popular software packages such as <code class="docutils literal notranslate"><span class="pre">Tensorflow</span></code> for machine learning and Gromacs, NAMD and Amber for molecular simulations can use GPUs for simulations. GPUs provide a significant speedup compared to running the simulations on CPUs. Depending on your computer, you may be able to use GPUs. If not, don’t worry, all the simulations have been tested with an older CPU-only laptop to ensure that the simulations will complete within reasonable time.</p>
 <ul class="simple">
 <li><p class="card-text">Linux: If you have NVIDIA GPUs, you will be able to use the for simulations provided you install / have installed the CUDA drivers. If you have AMD GPUs, things are different. The concerns are the same as for MacOS below</p></li>
 <li><p class="card-text">WSL/WSL2: No access to GPUs. This features is, however, coming to WSL2 but it is not available at this time (Dec 2020).</p></li>
-<li><p class="card-text">MacOS: Apple uses AMD GPUs. They are not compatible with NVIDIAs CUDA but use OpenCL instead.</p></li>
+<li><p class="card-text">MacOS (Intel-based): Apple uses AMD GPUs. They are not compatible with NVIDIAs CUDA but use OpenCL instead.</p></li>
 <li><p class="card-text">Virtual machine: No access to the GPU(s).</p></li>
 </ul>
 <p class="card-text"><strong>Important: The responsibility is yours.</strong> When you install any software the responsibility is entirely yours.
@@ -477,19 +453,19 @@ It is important to you back up your data and essential files. Doing that ensures
 </li>
 <li><p class="card-text"><a class="reference external" href="https://ubuntu.com/download/flavours">The official Ubuntu flavours</a>.</p>
 <ul>
-<li><p class="card-text">For those coming from Windows or Mac, Ubuntu Budgie may be the most familiar looking. Simply take a look at their respective pages and see what pleases you visually.</p></li>
+<li><p class="card-text">Simply take a look at their respective pages (at Ubuntu) and see what pleases you visually.</p></li>
 </ul>
 </li>
-<li><p class="card-text"><a class="reference external" href="https://elementary.io/">Elementary OS 5.1 Hera</a></p>
+<li><p class="card-text"><a class="reference external" href="https://elementary.io/">Elementary OS 5.1 Hera</a> or the latest (winter 2022) Elemehtarty OS 6.1 Jólnir.</p>
 <ul>
 <li><p class="card-text">Uses Ubuntu/Debian package management.</p></li>
-<li><p class="card-text">Beautiful Mac-like user interface design</p></li>
+<li><p class="card-text">Beautiful  user interface design</p></li>
 </ul>
 </li>
 <li><p class="card-text"><a class="reference external" href="https://linuxmint.com/download.php">Linux Mint 20 Ulyana:</a></p>
 <ul>
 <li><p class="card-text">Uses Ubuntu/Debian package management.</p></li>
-<li><p class="card-text">Beautiful Windows-like design</p></li>
+<li><p class="card-text">Beautiful design</p></li>
 </ul>
 </li>
 </ul>
@@ -535,9 +511,9 @@ It is important to you back up your data and essential files. Doing that ensures
 <p class="card-text"><strong>Which version/distribution of Linux should I install?</strong></p>
 <p class="card-text">There are a lot of great Linux distributions to choose from.</p>
 <p class="card-text"><strong>Recommendation regarding distribution:</strong> The instructions in this document are for Ubuntu-based distributions to keep things simple. If you have not used Linux before, then the easiest way is use one of the Ubuntu based ones. There are many other excellent distributions and you can typically try them without installing by simply making a Live USB (see the other <code class="docutils literal notranslate"><span class="pre">dropdown</span></code>).</p>
-<p class="card-text"><strong>Recommendation regarding Ubuntu version:</strong> It is strongly recommended to install an LTS (Long Term Support) version. At this time (fall 2020), the latest LTS version is 20.04 LTS. The instructions below have been tested with this particular version (as well as to some degree using 18.04 LTS). Why LTS and not the absolute latest? Ubuntu releases come in 6 month cycles (April and October), but the LTS versions are released every two years. Importantly, the LTS versions are supported and maintained for <em>five</em> years. In other words it is a stable solution without the need to upgrade.</p>
+<p class="card-text"><strong>Recommendation regarding Ubuntu version:</strong> It is strongly recommended to install an LTS (Long Term Support) version. At this time (winter 2022), the latest LTS version is 20.04 LTS. The instructions below have been tested with this particular version (as well as to some degree using 18.04 LTS). Why LTS and not the absolute latest? Ubuntu releases come in 6 month cycles (April and October), but the LTS versions are released every two years. Importantly, the LTS versions are supported and maintained for <em>five</em> years. In other words it is a stable solution without the need to upgrade.</p>
 <p class="card-text"><strong>Recommendation regarding Ubuntu flavor:</strong> There are a lot of excellent choices and ultimately it depends what you like / what seems visually the most appealing to you.</p>
-<p class="card-text"><strong>Which distribution/version/flavor you use?</strong> Right now, our student office computers run the default Ubuntu, my 2007 iMac runs Ubuntu Budgie and my laptop runs KDE Neon. All of the computers run LTS versions of Ubuntu (mostly 18.04 LTS and 20.04 LTS). I have used Linux since 1993 and tried many distributions including Slackware, Redhat/Fedora, SuSe, Gentoo, Arc, Elementary OS and so on.</p>
+<p class="card-text"><strong>Which distribution/version/flavor you use?</strong> Right now, our student office computers run the default Ubuntu, my 2007 iMac runs Ubuntu flavor Xubuntu and my laptop runs KDE Neon. All of the computers run LTS versions of Ubuntu (mostly 18.04 LTS and 20.04 LTS). I have used Linux since 1993 and tried many distributions including Slackware, Redhat/Fedora, SuSe, Gentoo, Arc, Elementary OS and so on - although the above talks about Ubuntu, the other diustributions are equally good choices.</p>
 <p class="card-text"><strong>More information:</strong></p>
 <ul class="simple">
 <li><p class="card-text"><a class="reference external" href="https://itsfoss.com/best-linux-beginners/">From It’s FOSS: Best Linux Distributions That are Most Suitable for Beginners</a></p></li>
@@ -549,24 +525,24 @@ It is important to you back up your data and essential files. Doing that ensures
 </div>
 </div>
 <div class="section" id="task-1-terminal-wsl-wsl2-xcode-and-such">
-<h2>Task 1: Terminal, WSL/WSL2, Xcode and such<a class="headerlink" href="#task-1-terminal-wsl-wsl2-xcode-and-such" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.2. </span>Task 1: Terminal, WSL/WSL2, Xcode and such<a class="headerlink" href="#task-1-terminal-wsl-wsl2-xcode-and-such" title="Permalink to this headline">¶</a></h2>
 <p>Based on your current operating system: Choose one of the tab options that is the most suitable for you. What we are going to do is the following independent of the operating system.</p>
 <!--
 Proceed through Tasks 1-3 in this order. As for Tasks 4-5, you can change their mutual order (but must be after Tasks 1-3).
 -->
 <div class="tabbed-set docutils">
-<input checked="checked" id="e714eb37-1c89-4ed4-847b-a1f53cb3956f" name="e5a106e5-2088-405d-9e6d-8641c928e129" type="radio">
-</input><label class="tabbed-label" for="e714eb37-1c89-4ed4-847b-a1f53cb3956f">
+<input checked="checked" id="4e7ad14c-b967-46cc-966b-3daa5e84b627" name="241ba2b6-595b-4520-b7a2-2c4824ea414a" type="radio">
+</input><label class="tabbed-label" for="4e7ad14c-b967-46cc-966b-3daa5e84b627">
 Linux</label><div class="tabbed-content docutils">
 <p>Update your system if necessary. Go to the next step.</p>
 </div>
-<input id="b421f837-b1e2-44c1-bf44-51e00b548d31" name="e5a106e5-2088-405d-9e6d-8641c928e129" type="radio">
-</input><label class="tabbed-label" for="b421f837-b1e2-44c1-bf44-51e00b548d31">
+<input id="81a54fa8-9587-4045-a65d-b04550e1adcb" name="241ba2b6-595b-4520-b7a2-2c4824ea414a" type="radio">
+</input><label class="tabbed-label" for="81a54fa8-9587-4045-a65d-b04550e1adcb">
 Windows 10: Install WSL/WSL2</label><div class="tabbed-content docutils">
-<p>WSL/WSL2 is needed for command line terminal. It gives Linux distribution <em>without</em> GUI. It is possible to also use GUI with some extra software as will be indicated.</p>
+<p>WSL/WSL2 is needed for command line terminal. It gives Linux distribution <em>without</em> GUI. It is possible to also use GUI with some extra software as will be indicated. This also works on Windows 11.</p>
 <p>Here is the procedure:</p>
 <ul class="simple">
-<li><p>First: Check the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Detailed instructions from Microsoft</a></p>
+<li><p>First: Check the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Detailed up-to-date instructions from Microsoft</a></p>
 <ul>
 <li><p><strong>Note:</strong> If you are not in the <em>Windows Insiders</em> program (if you don’t know what it is, then you aren’t), you must follow the <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10#manual-installation-steps"><em>Manual Installation steps</em></a></p></li>
 <li><p>The installation  took about 20 minutes on an old 1.3 GHz laptop.</p></li>
@@ -662,8 +638,8 @@ These instructions are from <a class="reference external" href="https://stackove
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/501562652?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </div>
 </details></div>
-<input id="4a96a53d-76f7-4208-a64c-f2d8fd3c16c7" name="e5a106e5-2088-405d-9e6d-8641c928e129" type="radio">
-</input><label class="tabbed-label" for="4a96a53d-76f7-4208-a64c-f2d8fd3c16c7">
+<input id="eaa27e32-8af1-45ea-b47d-58033838bb91" name="241ba2b6-595b-4520-b7a2-2c4824ea414a" type="radio">
+</input><label class="tabbed-label" for="eaa27e32-8af1-45ea-b47d-58033838bb91">
 MacOS</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Check which version of MacOS you have (under <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">this</span> <span class="pre">Mac</span></code>).</p>
@@ -685,20 +661,20 @@ MacOS</label><div class="tabbed-content docutils">
 </div>
 </div>
 <div class="section" id="task-2-package-manager">
-<h2>Task 2: Package manager<a class="headerlink" href="#task-2-package-manager" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Task 2: Package manager<a class="headerlink" href="#task-2-package-manager" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b7579507-2760-4cfc-9622-d4c57f930ead" name="bd7bc069-af30-4737-9479-e86c6e820990" type="radio">
-</input><label class="tabbed-label" for="b7579507-2760-4cfc-9622-d4c57f930ead">
+<input checked="checked" id="ad7b7dfa-9747-40f3-b7c2-45e4bbcd6b2c" name="a141b8f9-4152-4b8d-8ba2-9f31c36d2760" type="radio">
+</input><label class="tabbed-label" for="ad7b7dfa-9747-40f3-b7c2-45e4bbcd6b2c">
 Linux</label><div class="tabbed-content docutils">
 <p>You already have a package manager, so there is nothing to do.</p>
 </div>
-<input id="977e849b-80bf-4180-ad60-b8a0b2185241" name="bd7bc069-af30-4737-9479-e86c6e820990" type="radio">
-</input><label class="tabbed-label" for="977e849b-80bf-4180-ad60-b8a0b2185241">
+<input id="f1d9bd71-afe4-45ae-b5b9-be36c3b9f6f6" name="a141b8f9-4152-4b8d-8ba2-9f31c36d2760" type="radio">
+</input><label class="tabbed-label" for="f1d9bd71-afe4-45ae-b5b9-be36c3b9f6f6">
 WSL/WSL2</label><div class="tabbed-content docutils">
 <p>When WSL/WSL2 was installed, you got a package manager. There is nothing to do at this step.</p>
 </div>
-<input id="e1645925-389c-4fb0-86d2-2124d7521209" name="bd7bc069-af30-4737-9479-e86c6e820990" type="radio">
-</input><label class="tabbed-label" for="e1645925-389c-4fb0-86d2-2124d7521209">
+<input id="e52f74ac-a582-4cc1-b7c8-763e71b83f49" name="a141b8f9-4152-4b8d-8ba2-9f31c36d2760" type="radio">
+</input><label class="tabbed-label" for="e52f74ac-a582-4cc1-b7c8-763e71b83f49">
 MacOS</label><div class="tabbed-content docutils">
 <p>The next task is to install a package manager such as  <a class="reference external" href="https://www.macports.org/">MacPorts</a> or <a class="reference external" href="https://brew.sh/">Homebrew</a>. Here, we use <a class="reference external" href="https://brew.sh/">Homebrew</a> but MacPorts works well too. However, the instructions on these pages are for Homebrew only.</p>
 <p>See the installation and operating instructions at the <a class="reference external" href="https://brew.sh/">Homebrew</a> web site. Here is a copy from the web site.</p>
@@ -716,28 +692,34 @@ MacOS</label><div class="tabbed-content docutils">
 <p>Now you are ready install software using Homebrew. For how to do it and further instructions, see  <a class="reference external" href="https://brew.sh/">Homebrew</a> web site.</p>
 </div>
 </div>
-</div>
-<div class="section" id="task-3-install-python-and-jupyter-lab">
-<h2>Task 3: Install Python and Jupyter Lab<a class="headerlink" href="#task-3-install-python-and-jupyter-lab" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>See the panel on the left hand side</p></li>
-</ul>
-</div>
-<div class="section" id="task-4-try-the-command-line-terminal">
-<h2>Task 4: Try the command line terminal<a class="headerlink" href="#task-4-try-the-command-line-terminal" title="Permalink to this headline">¶</a></h2>
-<p>Now it is time to try to command line terminal. Go to</p>
-<ul class="simple">
-<li><p><a class="reference internal" href="linux-basic-commands-2.html"><span class="doc std std-doc">Basic Linux commands</span></a></p></li>
-</ul>
-<p>go through the page and work through the commands there.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Important:</strong> When there is a warning sign, take it <em>very</em> seriously as there are a few commands that are dangerous!</p>
-</div>
-<p>If there are commands or concepts you don’t understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.</p>
+<!-- 
+## Task 3: Install Python and Jupyter Lab
+
+   - See the panel on the left hand side
+-->
+<!--
+
+## Task: Try the command line terminal
+
+Now it is time to try to learn more about Linux and the command line terminal. Go to
+sections
+
+
+-  [Linux basics](./Linux-basics)
+-  [Basic Linux commands](./linux-basic-commands-2)
+
+The second part contains a lot of practical matters, work through the commands there. 
+
+```{warning}
+**Important:** When there is a warning sign, take it *very* seriously as there are a few commands that are dangerous!  
+```
+
+If there are commands or concepts you don't understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.
+
+-->
 </div>
 <div class="section" id="optional-create-work-directory-for-the-course">
-<h2>Optional: Create work directory for the course<a class="headerlink" href="#optional-create-work-directory-for-the-course" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">2.4. </span>Optional: Create work directory for the course<a class="headerlink" href="#optional-create-work-directory-for-the-course" title="Permalink to this headline">¶</a></h2>
 <p>Independent of your operating system:</p>
 <ul>
 <li><p>Open a terminal window and type</p>
@@ -778,7 +760,7 @@ MacOS</label><div class="tabbed-content docutils">
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./extras"
+            path: "./class/week02"
         },
         predefinedOutput: true
     }
@@ -789,7 +771,21 @@ MacOS</label><div class="tabbed-content docutils">
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../week01/week01_summary.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Module: Installation of necessary software</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Linux-basics.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Linux - the basics</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
@@ -814,7 +810,7 @@ MacOS</label><div class="tabbed-content docutils">
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

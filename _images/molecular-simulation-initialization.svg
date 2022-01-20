@@ -13,7 +13,7 @@
    viewBox="0 0 338.66667 190.5"
    version="1.1"
    id="svg865"
-   inkscape:version="1.0.1 (1.0.1+r74)"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
    sodipodi:docname="molecular-simulation-initialization.svg">
   <defs
      id="defs859">
@@ -1204,9 +1204,9 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.76"
      inkscape:cx="715.64482"
-     inkscape:cy="338.91976"
+     inkscape:cy="233.6566"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="g16344-2"
      inkscape:document-rotation="0"
      showgrid="false"
      units="px"
@@ -2182,6 +2182,19 @@
              y="82.98893"
              style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:lato;-inkscape-font-specification:'lato Medium';stroke-width:0.264583"
              id="tspan1590-6-6-6">initial velocities</tspan></text>
+        <text
+           xml:space="preserve"
+           style="font-size:6.35px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
+           x="192.38013"
+           y="82.389854"
+           id="text1432-36-4-3-5-3"><tspan
+             sodipodi:role="line"
+             x="192.38013"
+             y="82.389854"
+             style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:lato;-inkscape-font-specification:'lato Medium';stroke-width:0.264583"
+             id="tspan1590-6-6-6-6">time <tspan
+   style="font-style:italic;font-variant:normal;font-weight:500;font-stretch:normal;font-family:lato;-inkscape-font-specification:'lato Medium Italic'"
+   id="tspan4063">t=0</tspan> for the production phase</tspan></text>
       </g>
       <text
          xml:space="preserve"
@@ -2318,11 +2331,11 @@
          xml:space="preserve"
          style="font-size:5.64444px;line-height:1.25;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
          x="36.611725"
-         y="258.42053"
+         y="259.47888"
          id="text1432-36-6-5"><tspan
            sodipodi:role="line"
            x="36.611725"
-           y="258.42053"
+           y="259.47888"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:lato;-inkscape-font-specification:lato;stroke-width:0.264583"
            id="tspan1741-6">Maxwell-Boltzmann distribution</tspan></text>
       <text

@@ -13,7 +13,7 @@
    viewBox="0 0 338.66667 190.5"
    version="1.1"
    id="svg865"
-   inkscape:version="1.0.1 (1.0.1+r74)"
+   inkscape:version="1.0.2 (1.0.2+r75+1)"
    sodipodi:docname="molecular-simulation-workflow.svg">
   <defs
      id="defs859">
@@ -749,7 +749,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="0.76"
      inkscape:cx="662.19286"
-     inkscape:cy="375.45251"
+     inkscape:cy="373.47883"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -1016,7 +1016,7 @@
          x="7.4074016"
          y="46.134075"
          style="font-style:normal;font-variant:normal;font-weight:500;font-stretch:normal;font-size:6.35px;font-family:lato;-inkscape-font-specification:'lato Medium';stroke-width:0.264583"
-         id="tspan2005">topolologies </tspan><tspan
+         id="tspan2005">topologies </tspan><tspan
          sodipodi:role="line"
          x="7.4074016"
          y="54.071575"

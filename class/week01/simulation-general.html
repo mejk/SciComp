@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. General aspects of modeling and computer simulations &#8212; SciComp9502B</title>
+    <title>11. General aspects of modeling and computer simulations &#8212; SciComp9502B</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -71,18 +71,11 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week01/simulation-general.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5. Linux - the basics" href="../week02/Linux-basics.html" />
-    <link rel="prev" title="3. Background on computers, computing and High Performance Computing" href="hpc-intro.html" />
+    <link rel="next" title="12. Linux - the basics" href="../week02/Linux-basics.html" />
+    <link rel="prev" title="10. Background on computers, computing and High Performance Computing" href="hpc-intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -128,52 +121,110 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE
+  MODULE: Practical matters
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="week01_summary.html">
-   1. Week 1
+   1. Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="intro-to-modeling.html">
-   2. Introduction to computational modeling &amp; methods in chemistry/physics
+  <a class="reference internal" href="../week02/install-wsl.html">
+   2. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   3. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   4. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-virtual-environment.html">
+   5. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   6. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/vi-editor.html">
+   7. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/editing-ascii.html">
+   8. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/helpful-software.html">
+   9. Helpful software
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE Intro to HPC
+  MODULE: Intro to HPC
  </span>
 </p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="hpc-intro.html">
-   3. Background on computers, computing and High Performance Computing
+   10. Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   4. General aspects of modeling and computer simulations
+   11. General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE Operating systems
+  MODULE: Operating systems
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../week02/Linux-basics.html">
-   5. Linux - the basics
+   12. Linux - the basics
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   13. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   6. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../week02/python-intro.html">
+   14. Brief introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/python-virtual-environment.html">
+   15. Python virtual environments
   </a>
  </li>
 </ul>
@@ -269,49 +320,49 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-approach">
-   4.1. General approach
+   11.1. General approach
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-modeling-water">
-   4.2. Example: Modeling water
+   11.2. Example: Modeling water
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   4.3. Summary
+   11.3. Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#additional-information-for-those-interested-water-models">
-   4.4. Additional information for those interested: Water models
+   11.4. Additional information for those interested: Water models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#historical">
-     4.4.1. Historical:
+     11.4.1. Historical:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quantum-mechanical">
-     4.4.2. Quantum mechanical:
+     11.4.2. Quantum mechanical:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classical-md-level">
-     4.4.3. Classical MD level:
+     11.4.3. Classical MD level:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#coarse-grained">
-     4.4.4. Coarse-grained:
+     11.4.4. Coarse-grained:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   4.5. References
+   11.5. References
   </a>
  </li>
 </ul>
@@ -336,49 +387,49 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#general-approach">
-   4.1. General approach
+   11.1. General approach
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-modeling-water">
-   4.2. Example: Modeling water
+   11.2. Example: Modeling water
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#summary">
-   4.3. Summary
+   11.3. Summary
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#additional-information-for-those-interested-water-models">
-   4.4. Additional information for those interested: Water models
+   11.4. Additional information for those interested: Water models
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#historical">
-     4.4.1. Historical:
+     11.4.1. Historical:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#quantum-mechanical">
-     4.4.2. Quantum mechanical:
+     11.4.2. Quantum mechanical:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#classical-md-level">
-     4.4.3. Classical MD level:
+     11.4.3. Classical MD level:
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#coarse-grained">
-     4.4.4. Coarse-grained:
+     11.4.4. Coarse-grained:
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#references">
-   4.5. References
+   11.5. References
   </a>
  </li>
 </ul>
@@ -393,7 +444,7 @@
   <div class="cell tag_remove-input docutils container">
 </div>
 <div class="tex2jax_ignore mathjax_ignore section" id="general-aspects-of-modeling-and-computer-simulations">
-<h1><span class="section-number">4. </span>General aspects of modeling and computer simulations<a class="headerlink" href="#general-aspects-of-modeling-and-computer-simulations" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>General aspects of modeling and computer simulations<a class="headerlink" href="#general-aspects-of-modeling-and-computer-simulations" title="Permalink to this headline">¶</a></h1>
 <div class="cell tag_remove-input docutils container">
 <div class="cell_output docutils container">
 <p>-Last updated on Thursday, January 06 2022 at 22:57</p>
@@ -435,8 +486,8 @@ Music: Laurie Anderson, Big Science<div class="summary-down docutils">
 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vTHiN6Qwdgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 </details><div class="section" id="general-approach">
-<h2><span class="section-number">4.1. </span>General approach<a class="headerlink" href="#general-approach" title="Permalink to this headline">¶</a></h2>
-<p>Before setting up our own simulations, let’s discuss a few general and important aspects that relate to all computer simulations and modeling. <a class="reference internal" href="#modeling-schema"><span class="std std-numref">Fig. 4.1</span></a> shows the general idea.</p>
+<h2><span class="section-number">11.1. </span>General approach<a class="headerlink" href="#general-approach" title="Permalink to this headline">¶</a></h2>
+<p>Before setting up our own simulations, let’s discuss a few general and important aspects that relate to all computer simulations and modeling. <a class="reference internal" href="#modeling-schema"><span class="std std-numref">Fig. 11.1</span></a> shows the general idea.</p>
 <!--
 <table class="lblue">
     <tr>
@@ -458,7 +509,7 @@ Music: Laurie Anderson, Big Science<div class="summary-down docutils">
 <div class="card-body docutils">
 <div class="figure align-left" id="modeling-schema">
 <a class="reference internal image-reference" href="../../_images/modeling-schema.svg"><img alt="../../_images/modeling-schema.svg" src="../../_images/modeling-schema.svg" width="800px" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text"><em>Some general aspects about modeling and computer simulations. Building a model and setting up simulations is a complex process and each stage needs to be considered carefully and validated extensively.  Mistake at any level can render the whole process wrong with heaps of meaningless data. That happens more frequently that one would expect; that the software doesn’t crash doesn’t imply anything about the correctness of the results. The figure is based on <a href="#id1"><span class="problematic" id="id2">:cite:`Eastwood:88yh`</span></a></em></span><a class="headerlink" href="#modeling-schema" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11.1 </span><span class="caption-text"><em>Some general aspects about modeling and computer simulations. Building a model and setting up simulations is a complex process and each stage needs to be considered carefully and validated extensively.  Mistake at any level can render the whole process wrong with heaps of meaningless data. That happens more frequently that one would expect; that the software doesn’t crash doesn’t imply anything about the correctness of the results. The figure is based on <a href="#id1"><span class="problematic" id="id2">:cite:`Eastwood:88yh`</span></a></em></span><a class="headerlink" href="#modeling-schema" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </div>
@@ -467,8 +518,8 @@ Music: Laurie Anderson, Big Science<div class="summary-down docutils">
 </div>
 </div>
 <div class="section" id="example-modeling-water">
-<h2><span class="section-number">4.2. </span>Example: Modeling water<a class="headerlink" href="#example-modeling-water" title="Permalink to this headline">¶</a></h2>
-<p>Let’s consider the items in <a class="reference internal" href="#modeling-schema"><span class="std std-numref">Fig. 4.1</span></a> using an example. The procedure and considerations below are, by necessity, simplified but they should be ebough to give an idea the type of considerations one has to take. Some of the choices and decisions are also coupled.</p>
+<h2><span class="section-number">11.2. </span>Example: Modeling water<a class="headerlink" href="#example-modeling-water" title="Permalink to this headline">¶</a></h2>
+<p>Let’s consider the items in <a class="reference internal" href="#modeling-schema"><span class="std std-numref">Fig. 11.1</span></a> using an example. The procedure and considerations below are, by necessity, simplified but they should be ebough to give an idea the type of considerations one has to take. Some of the choices and decisions are also coupled.</p>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-9 p-0 m-0 docutils">
@@ -627,22 +678,22 @@ four-coordinated.</p>
 <p><strong>Additional questions:</strong> What kind of resources are available? How long will the simulations take, that is, how large systems and for how long time can be simulated. Is that enough? How about data storage abd backup, is there enough? Do we need long term data storage?</p>
 </div>
 <div class="section" id="summary">
-<h2><span class="section-number">4.3. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
 <p>In the above, there are several terms and concepts that are new. We will encounter them when we set up and perform simulations. The aim here has been to give a rough idea of the process of modeling works: Simply downloading a well-known software package and using the default parameters and inputs is not acceptable. The software will run, but there is no guarantee that the results will be correct if one doesn’t understand the inputs and outputs. In addtion, the results will not be relevant (even if correct) if one doesn’t have a good research question. Reproducing data is not research. The software is not to blame for any of those matters, it does what the user tells it do. The user is the source of most errors; even if/when there is a bug/are bugs (and there are always are some), it is the user’s responsibility to test and ensure the validity of results. If bugs are found in a published software, one should notify the developers with precise information including test results.</p>
 </div>
 <div class="section" id="additional-information-for-those-interested-water-models">
-<h2><span class="section-number">4.4. </span>Additional information for those interested: Water models<a class="headerlink" href="#additional-information-for-those-interested-water-models" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>Additional information for those interested: Water models<a class="headerlink" href="#additional-information-for-those-interested-water-models" title="Permalink to this headline">¶</a></h2>
 <p>To put the example above to further perspective and to give an idea how complex water the simple looking humble water molecule is, below are lists of water models at different levels of description. None of the lists are by no means exhaustive and its purpose is simply to give an idea of the complexity of the problem - textbooks tend to give a simplified view. Water, as simple as it is, remains to be very difficult to model correctly. Some recent reviews are provided for example by <a href="#id17"><span class="problematic" id="id18">:cite:`Ghoufi2018,Palmer2018,Brini2017,Onufriev2017,PetterssonHenchmanNilsson2016`</span></a></p>
 <div class="section" id="historical">
-<h3><span class="section-number">4.4.1. </span>Historical:<a class="headerlink" href="#historical" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.1. </span>Historical:<a class="headerlink" href="#historical" title="Permalink to this headline">¶</a></h3>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen">W.C. Röntgen</a> - the same person who discovered x-rays (and was the recipient of the <a class="reference external" href="https://www.nobelprize.org/prizes/physics/1901/rontgen/facts/">1901 Nobel Prize in Physics</a>), developed a two species model (1897). The water molecules were classified into fluid-like and ice-like. <a class="reference external" href="https://en.wikipedia.org/wiki/J._D._Bernal">J.D. Bernal</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Ralph_H._Fowler">R.H. Fowler</a> developed a model with tetrahedral geometry (1933). This is the model that forms the basis of current understanding. <a class="reference external" href="https://en.wikipedia.org/wiki/Linus_Pauling">Linux Pauling’s</a> (<a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1954/pauling/facts/">Nobel Prize in Chemistry 1954</a> and <a class="reference external" href="https://www.nobelprize.org/prizes/peace/1962/pauling/facts/">Nobel Prize in Peace 1962</a>)) model established clathrate structure (1935) and the model of <a class="reference external" href="https://en.wikipedia.org/wiki/John_Pople">John Pople</a> (<a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/summary/">Nobel Prize in Chemistry 1998</a>) showed hydrogen bond bending (1951).</p>
 </div>
 <div class="section" id="quantum-mechanical">
-<h3><span class="section-number">4.4.2. </span>Quantum mechanical:<a class="headerlink" href="#quantum-mechanical" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.2. </span>Quantum mechanical:<a class="headerlink" href="#quantum-mechanical" title="Permalink to this headline">¶</a></h3>
 <p>All the approaches have their own models. Importantly, however, van der Waals interactions are <em>not</em> part of the standard quantum mechanical approach and they have to be added separately. As a side note the van der Waals interactions are named after <a class="reference external" href="https://en.wikipedia.org/wiki/Johannes_Diderik_van_der_Waals">J.D. van der Waals</a>, the recipient of the <a class="reference external" href="https://www.nobelprize.org/prizes/physics/1910/waals/biographical/">1910 Nobel Prize in Physics</a>.</p>
 </div>
 <div class="section" id="classical-md-level">
-<h3><span class="section-number">4.4.3. </span>Classical MD level:<a class="headerlink" href="#classical-md-level" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.3. </span>Classical MD level:<a class="headerlink" href="#classical-md-level" title="Permalink to this headline">¶</a></h3>
 <p>There are two main families of water models:</p>
 <ul class="simple">
 <li><p>TIP = Transferrable Intermolecular Potential</p></li>
@@ -652,13 +703,13 @@ four-coordinated.</p>
 <p>We will use some of these models during this course.</p>
 </div>
 <div class="section" id="coarse-grained">
-<h3><span class="section-number">4.4.4. </span>Coarse-grained:<a class="headerlink" href="#coarse-grained" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.4.4. </span>Coarse-grained:<a class="headerlink" href="#coarse-grained" title="Permalink to this headline">¶</a></h3>
 <p>There are also models that descrive water in a larger scale. The idea is that one so-called coarse-grained molecule somehow approximates a bundle of 3 or 4 actual water molecules. Here are some:
 MARTINI, MARTINI polarized, ELBA, SIRAH, DPD, Mercedes-Benz, BMW, mW.</p>
 </div>
 </div>
 <div class="section" id="references">
-<h2><span class="section-number">4.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.5. </span>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -691,13 +742,13 @@ MARTINI, MARTINI polarized, ELBA, SIRAH, DPD, Mercedes-Benz, BMW, mW.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Background on computers, computing and High Performance Computing</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>Background on computers, computing and High Performance Computing</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../week02/Linux-basics.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Linux - the basics</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Linux - the basics</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

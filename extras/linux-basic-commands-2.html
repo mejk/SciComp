@@ -5,49 +5,49 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>4. Linux: Some basic &amp; useful commands &#8212; SciComp9502B</title>
+    <title>Linux: Some basic &amp; useful commands &#8212; SciComp9502B</title>
     
-  <link href="../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
-    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
   <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
     
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script src="../../_static/togglebutton.js"></script>
-    <script src="../../_static/clipboard.min.js"></script>
-    <script src="../../_static/copybutton.js"></script>
-    <script src="../../_static/save_state.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
@@ -56,33 +56,17 @@
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/linux-basic-commands-2.html" />
-    <link rel="index" title="Index" href="../../genindex.html" />
-    <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="5. Installation of Python and Jupyter" href="python-installation.html" />
-    <link rel="prev" title="3. Linux - the basics" href="Linux-basics.html" />
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/linux-basic-commands-2.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -102,26 +86,26 @@
 <div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
     
         <div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../../index.html">
+    <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
         
       
       
-      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      <img src="../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">SciComp9502B</h1>
       
     </a>
-</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../about/syllabus.html">
+  <a class="reference internal" href="../about/syllabus.html">
    Scientific Computing - SciComp9502B
   </a>
  </li>
@@ -131,49 +115,49 @@
   MODULE: Practical matters
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
+  <a class="reference internal" href="../class/week01/week01_summary.html">
    1. Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="install-wsl.html">
+  <a class="reference internal" href="../class/week02/install-wsl.html">
    2. Installation of tools: WSL2/Linux etc.
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Linux-basics.html">
+  <a class="reference internal" href="../class/week02/Linux-basics.html">
    3. Linux - the basics
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
    4. Linux: Some basic &amp; useful commands
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="python-installation.html">
+  <a class="reference internal" href="../class/week02/python-installation.html">
    5. Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="python-virtual-environment.html">
+  <a class="reference internal" href="../class/week02/python-virtual-environment.html">
    6. Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="jupyter-intro.html">
+  <a class="reference internal" href="../class/week02/jupyter-intro.html">
    7. Jupyter Notebook / Jupyter Lab
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="editing-ascii.html">
+  <a class="reference internal" href="../class/week02/editing-ascii.html">
    8. Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="vi-editor.html">
+  <a class="reference internal" href="../class/week02/vi-editor.html">
    9. The
    <code class="docutils literal notranslate">
     <span class="pre">
@@ -184,25 +168,8 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="helpful-software.html">
+  <a class="reference internal" href="../class/week02/helpful-software.html">
    10. Helpful software
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Python &amp; programming
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/coding-notes-general.html">
-   11. On computation and codes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python-intro.html">
-   12. Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -246,7 +213,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/class/week02/linux-basic-commands-2.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/extras/linux-basic-commands-2.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -278,99 +245,94 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-get-help">
-   4.1. How to get help
+   How to get help
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#who-am-i-and-who-is-in-the-system">
-   4.2. Who am I and who is in the system?
+   Who am I and who is in the system?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-the-name-of-my-system-and-related">
-   4.3. What is the name of my system and related
+   What is the name of my system and related
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-directory-operations">
-   4.4. File / directory operations
+   File / directory operations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#some-special-conventions-related-to-files-and-directories">
-     4.4.1. Some special conventions related to files and directories
+     Some special conventions related to files and directories
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#home-directory-and-work-directory-current-directory">
-     4.4.2. Home directory and work directory / current directory
+     Home directory and work directory / current directory
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-the-files-and-directories">
-     4.4.3. Show the files and directories
+     Show the files and directories
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wildcards">
-   4.5. Wildcards
+   Wildcards
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moving-between-directories">
-   4.6. Moving between directories
+   Moving between directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-and-deleting-files-and-directories">
-   4.7. Creating and deleting files and directories
+   Creating and deleting files and directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#copying-renaming-and-moving-files-and-directories">
-   4.8. Copying, renaming and moving files and directories
+   Copying, renaming and moving files and directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-in-your-files-seeing-file-contents">
-   4.9. What is in your files - seeing file contents
+   What is in your files - seeing file contents
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#find-files-and-directories">
-   4.10. Find files and directories
+   Find files and directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#compare-files-extract-information">
-   4.11. Compare files, extract information
+   Compare files, extract information
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linking-files">
-   4.12. Linking files
+   Linking files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processes-view-stop-modify">
-   4.13. Processes: View, stop, modify
+   Processes: View, stop, modify
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-permissions-and-ownership">
-   4.14. File permissions and ownership
+   File permissions and ownership
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#environment">
-   4.15. Environment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optional-create-work-directory-for-the-course">
-   4.16. Optional: Create work directory for the course
+   Environment
   </a>
  </li>
 </ul>
@@ -395,99 +357,94 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#how-to-get-help">
-   4.1. How to get help
+   How to get help
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#who-am-i-and-who-is-in-the-system">
-   4.2. Who am I and who is in the system?
+   Who am I and who is in the system?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-the-name-of-my-system-and-related">
-   4.3. What is the name of my system and related
+   What is the name of my system and related
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-directory-operations">
-   4.4. File / directory operations
+   File / directory operations
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#some-special-conventions-related-to-files-and-directories">
-     4.4.1. Some special conventions related to files and directories
+     Some special conventions related to files and directories
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#home-directory-and-work-directory-current-directory">
-     4.4.2. Home directory and work directory / current directory
+     Home directory and work directory / current directory
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#show-the-files-and-directories">
-     4.4.3. Show the files and directories
+     Show the files and directories
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#wildcards">
-   4.5. Wildcards
+   Wildcards
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#moving-between-directories">
-   4.6. Moving between directories
+   Moving between directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#creating-and-deleting-files-and-directories">
-   4.7. Creating and deleting files and directories
+   Creating and deleting files and directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#copying-renaming-and-moving-files-and-directories">
-   4.8. Copying, renaming and moving files and directories
+   Copying, renaming and moving files and directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-in-your-files-seeing-file-contents">
-   4.9. What is in your files - seeing file contents
+   What is in your files - seeing file contents
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#find-files-and-directories">
-   4.10. Find files and directories
+   Find files and directories
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#compare-files-extract-information">
-   4.11. Compare files, extract information
+   Compare files, extract information
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#linking-files">
-   4.12. Linking files
+   Linking files
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#processes-view-stop-modify">
-   4.13. Processes: View, stop, modify
+   Processes: View, stop, modify
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#file-permissions-and-ownership">
-   4.14. File permissions and ownership
+   File permissions and ownership
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#environment">
-   4.15. Environment
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#optional-create-work-directory-for-the-course">
-   4.16. Optional: Create work directory for the course
+   Environment
   </a>
  </li>
 </ul>
@@ -500,7 +457,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="linux-some-basic-useful-commands">
-<h1><span class="section-number">4. </span>Linux: Some basic &amp; useful commands<a class="headerlink" href="#linux-some-basic-useful-commands" title="Permalink to this headline">¶</a></h1>
+<h1>Linux: Some basic &amp; useful commands<a class="headerlink" href="#linux-some-basic-useful-commands" title="Permalink to this headline">¶</a></h1>
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-12 p-2 docutils">
@@ -532,13 +489,8 @@
 <p></p>
 <p>Additionally, some notes regarding the difference between Linux (bash shell) and OSX (zsh) are provided.</p>
 <p></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><strong>Important:</strong> When there is a warning sign, take it <em>very</em> seriously as there are a few commands that are dangerous!</p>
-</div>
-<p>If there are commands or concepts you don’t understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.</p>
 <div class="section" id="how-to-get-help">
-<h2><span class="section-number">4.1. </span>How to get help<a class="headerlink" href="#how-to-get-help" title="Permalink to this headline">¶</a></h2>
+<h2>How to get help<a class="headerlink" href="#how-to-get-help" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>As the very first thing, let’s list a couple of methods how to get help using the command line</p>
 <p><code class="docutils literal notranslate"><span class="pre">man</span></code>: <b style="color:#1371a9;">Get help on any command.</b></p>
@@ -558,7 +510,7 @@ You know what you want to do but cannot remember the command.
 <p>As you can see, the list is very comprehensive.</p>
 </div>
 <div class="section" id="who-am-i-and-who-is-in-the-system">
-<h2><span class="section-number">4.2. </span>Who am I and who is in the system?<a class="headerlink" href="#who-am-i-and-who-is-in-the-system" title="Permalink to this headline">¶</a></h2>
+<h2>Who am I and who is in the system?<a class="headerlink" href="#who-am-i-and-who-is-in-the-system" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">whoami</span></code>:
 <b style="color:#1371a9;">
@@ -605,7 +557,7 @@ Who is logged in the system and the sessions they have
 </div>
 </div>
 <div class="section" id="what-is-the-name-of-my-system-and-related">
-<h2><span class="section-number">4.3. </span>What is the name of my system and related<a class="headerlink" href="#what-is-the-name-of-my-system-and-related" title="Permalink to this headline">¶</a></h2>
+<h2>What is the name of my system and related<a class="headerlink" href="#what-is-the-name-of-my-system-and-related" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Below are some of the useful system information commands. There are several more for various purposes, but here only some the more common ones are listed.</p>
 <p><code class="docutils literal notranslate"><span class="pre">hostname</span></code>:
@@ -707,11 +659,11 @@ Codename:       focal
 </div>
 </div>
 <div class="section" id="file-directory-operations">
-<h2><span class="section-number">4.4. </span>File / directory operations<a class="headerlink" href="#file-directory-operations" title="Permalink to this headline">¶</a></h2>
+<h2>File / directory operations<a class="headerlink" href="#file-directory-operations" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>This section focuses on various file operations, such as how to how to see the current work directory, how to list, create, copy and delete files and directories and how to move between directories. The concepts of file permissions and ownership are also discussed.</p>
 <div class="section" id="some-special-conventions-related-to-files-and-directories">
-<h3><span class="section-number">4.4.1. </span>Some special conventions related to files and directories<a class="headerlink" href="#some-special-conventions-related-to-files-and-directories" title="Permalink to this headline">¶</a></h3>
+<h3>Some special conventions related to files and directories<a class="headerlink" href="#some-special-conventions-related-to-files-and-directories" title="Permalink to this headline">¶</a></h3>
 <hr>
 <ul class="simple">
 <li><p>Single dot (.) refers to the current directory</p></li>
@@ -722,7 +674,7 @@ Codename:       focal
 </ul>
 </div>
 <div class="section" id="home-directory-and-work-directory-current-directory">
-<h3><span class="section-number">4.4.2. </span>Home directory and work directory / current directory<a class="headerlink" href="#home-directory-and-work-directory-current-directory" title="Permalink to this headline">¶</a></h3>
+<h3>Home directory and work directory / current directory<a class="headerlink" href="#home-directory-and-work-directory-current-directory" title="Permalink to this headline">¶</a></h3>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">pwd</span></code>: <b style="color:#1371a9;">Show where I am.</b></p>
 <p>The command <code class="docutils literal notranslate"><span class="pre">pwd</span></code> prints the current directory on screen (also called <em>work directory</em> - pwd = print work directory). There are not man options for <code class="docutils literal notranslate"><span class="pre">pwd</span></code> (check using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">pwd</span></code>). The <code class="docutils literal notranslate"><span class="pre">pwd</span></code> command shows the full path.</p>
@@ -734,7 +686,7 @@ Codename:       focal
 <p>This means that the user <code class="docutils literal notranslate"><span class="pre">sam</span></code> is currently in his/her home directory.</p>
 </div>
 <div class="section" id="show-the-files-and-directories">
-<h3><span class="section-number">4.4.3. </span>Show the files and directories<a class="headerlink" href="#show-the-files-and-directories" title="Permalink to this headline">¶</a></h3>
+<h3>Show the files and directories<a class="headerlink" href="#show-the-files-and-directories" title="Permalink to this headline">¶</a></h3>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">ls</span></code>: <b style="color:#1371a9;">Show the files and directories, that is, the contents of current directory</b></p>
 <p>The command <code class="docutils literal notranslate"><span class="pre">ls</span></code> has a lot of useful options as one can see by using <code class="docutils literal notranslate"><span class="pre">man</span> <span class="pre">ls</span></code>. Here are some (the option <code class="docutils literal notranslate"><span class="pre">-l</span></code> is used in connection with most of them since it is very useful to see the file/directory details):</p>
@@ -764,8 +716,8 @@ Codename:       focal
 
 -->
 <div class="figure align-default" id="heart">
-<a class="reference internal image-reference" href="../../_images/dot-directories.svg"><img alt="../../_images/dot-directories.svg" src="../../_images/dot-directories.svg" width="750px" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.1 </span><span class="caption-text">When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user’s, group’s and other’s. <code class="docutils literal notranslate"><span class="pre">r</span></code>=right to read,<code class="docutils literal notranslate"><span class="pre">x</span></code>=right to execute, <code class="docutils literal notranslate"><span class="pre">w</span></code>=right to write, <code class="docutils literal notranslate"><span class="pre">-</span></code>=no right’s given. Dash in the first column means file while <code class="docutils literal notranslate"><span class="pre">d</span></code> stands for directory.</span><a class="headerlink" href="#heart" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="extras/img/dot-directories.svg"><img alt="extras/img/dot-directories.svg" src="extras/img/dot-directories.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text">When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user’s, group’s and other’s. <code class="docutils literal notranslate"><span class="pre">r</span></code>=right to read,<code class="docutils literal notranslate"><span class="pre">x</span></code>=right to execute, <code class="docutils literal notranslate"><span class="pre">w</span></code>=right to write, <code class="docutils literal notranslate"><span class="pre">-</span></code>=no right’s given. Dash in the first column means file while <code class="docutils literal notranslate"><span class="pre">d</span></code> stands for directory.</span><a class="headerlink" href="#heart" title="Permalink to this image">¶</a></p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">tree</span></code>: <b style="color:#1371a9;">Show the directory structure.</b></p>
 <div class="int"> 
@@ -814,7 +766,7 @@ The command `tree` may already be in your system. To check if that is the case, 
 </div>
 </div>
 <div class="section" id="wildcards">
-<h2><span class="section-number">4.5. </span>Wildcards<a class="headerlink" href="#wildcards" title="Permalink to this headline">¶</a></h2>
+<h2>Wildcards<a class="headerlink" href="#wildcards" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Below is a list of common wildcards. They are very useful when searching, listing copying and so on. These should not be mixed up with the conventions listed above. There is a distinction between wildcards and regular expressions, but we are not going to discuss the latter here.</p>
 <ul class="simple">
@@ -825,7 +777,7 @@ The command `tree` may already be in your system. To check if that is the case, 
 </ul>
 </div>
 <div class="section" id="moving-between-directories">
-<h2><span class="section-number">4.6. </span>Moving between directories<a class="headerlink" href="#moving-between-directories" title="Permalink to this headline">¶</a></h2>
+<h2>Moving between directories<a class="headerlink" href="#moving-between-directories" title="Permalink to this headline">¶</a></h2>
 <hr>
 Now that we know how to see where we are, and list the files and directories, let's look at how to move between directories.
 <p><code class="docutils literal notranslate"><span class="pre">cd</span></code>: <b style="color:#1371a9;">Change directory.</b></p>
@@ -872,7 +824,7 @@ Simply using</p>
 </div>
 </div>
 <div class="section" id="creating-and-deleting-files-and-directories">
-<h2><span class="section-number">4.7. </span>Creating and deleting files and directories<a class="headerlink" href="#creating-and-deleting-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<h2>Creating and deleting files and directories<a class="headerlink" href="#creating-and-deleting-files-and-directories" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>Now that we know how to see where we are and list the files and directories, let’s look at how to create and delete files and directories.</p>
 <p><code class="docutils literal notranslate"><span class="pre">touch</span></code>: <b style="color:#1371a9;">Create an empty file.</b></p>
@@ -920,7 +872,7 @@ To create a new empty directory, called my_test_directory, try:</p>
 </div>
 </div>
 <div class="section" id="copying-renaming-and-moving-files-and-directories">
-<h2><span class="section-number">4.8. </span>Copying, renaming and moving files and directories<a class="headerlink" href="#copying-renaming-and-moving-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<h2>Copying, renaming and moving files and directories<a class="headerlink" href="#copying-renaming-and-moving-files-and-directories" title="Permalink to this headline">¶</a></h2>
 <hr>
 Now that we know how to see where we are and list the files and directories, let's look at how to create and delete files and directories.
 <p><code class="docutils literal notranslate"><span class="pre">cp</span></code>: <b style="color:#1371a9;">Copy files or/and directories.</b></p>
@@ -959,7 +911,7 @@ Now that we know how to see where we are and list the files and directories, let
 </div>
 </div>
 <div class="section" id="what-is-in-your-files-seeing-file-contents">
-<h2><span class="section-number">4.9. </span>What is in your files - seeing file contents<a class="headerlink" href="#what-is-in-your-files-seeing-file-contents" title="Permalink to this headline">¶</a></h2>
+<h2>What is in your files - seeing file contents<a class="headerlink" href="#what-is-in-your-files-seeing-file-contents" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p>At this time we don’t have files with content but since we will needs these commands shortly, let’s list them briefly and elaborate when we have files with content.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cat</span></code>: <b style="color:#1371a9;">Concatenate files and print on screen (or standard output to be more precise).</b></p>
@@ -969,7 +921,7 @@ Now that we know how to see where we are and list the files and directories, let
 <p><code class="docutils literal notranslate"><span class="pre">less</span></code>: <b style="color:#1371a9;">Opposite of more.</b></p>
 </div>
 <div class="section" id="find-files-and-directories">
-<h2><span class="section-number">4.10. </span>Find files and directories<a class="headerlink" href="#find-files-and-directories" title="Permalink to this headline">¶</a></h2>
+<h2>Find files and directories<a class="headerlink" href="#find-files-and-directories" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">find</span></code>: <b style="color:#1371a9;">Find files and directories.</b></p>
 <p>The <code class="docutils literal notranslate"><span class="pre">find</span></code> command is <em>very</em> powerful and it has lots of options and different ways to use them. It also finds files and directories very fast. Here, the basic usage with some options are provided. This is how the command works:</p>
@@ -999,7 +951,7 @@ Now that we know how to see where we are and list the files and directories, let
 -->
 </div>
 <div class="section" id="compare-files-extract-information">
-<h2><span class="section-number">4.11. </span>Compare files, extract information<a class="headerlink" href="#compare-files-extract-information" title="Permalink to this headline">¶</a></h2>
+<h2>Compare files, extract information<a class="headerlink" href="#compare-files-extract-information" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">diff</span></code>:
 <b style="color:#1371a9;">
 Compare the contents of files
@@ -1022,7 +974,7 @@ Extract lines with a given pattern from output
 </div>
 </div>
 <div class="section" id="linking-files">
-<h2><span class="section-number">4.12. </span>Linking files<a class="headerlink" href="#linking-files" title="Permalink to this headline">¶</a></h2>
+<h2>Linking files<a class="headerlink" href="#linking-files" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ln</span></code>: <b style="color:#1371a9;">Link two files.</b></p>
 <p>The most common option is <code class="docutils literal notranslate"><span class="pre">-s</span></code> that makes  a symbolic or soft link.</p>
 <p><strong>Example:</strong> Link the file new.txt to the file target.txt. This means, for example, that if you delete <code class="docutils literal notranslate"><span class="pre">link.txt</span></code> the file that has the actual content (<code class="docutils literal notranslate"><span class="pre">target.txt</span></code>) remains intact or if you edit <code class="docutils literal notranslate"><span class="pre">link.txt</span></code>, the changes will be put in <code class="docutils literal notranslate"><span class="pre">target.txt</span></code> (similarly, if you directly edit <code class="docutils literal notranslate"><span class="pre">target.txt</span></code>, the changes appear immediately in <code class="docutils literal notranslate"><span class="pre">link.txt</span></code>). This is a very handy command.</p>
@@ -1031,7 +983,7 @@ Extract lines with a given pattern from output
 </div>
 </div>
 <div class="section" id="processes-view-stop-modify">
-<h2><span class="section-number">4.13. </span>Processes: View, stop, modify<a class="headerlink" href="#processes-view-stop-modify" title="Permalink to this headline">¶</a></h2>
+<h2>Processes: View, stop, modify<a class="headerlink" href="#processes-view-stop-modify" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">ps</span></code>: <b style="color:#1371a9;">Change the execution priority.</b></p>
 <p>This is a very useful command. Here are some examples</p>
 <p>Show <em>all</em> processes:</p>
@@ -1061,7 +1013,7 @@ Extract lines with a given pattern from output
 <p>Priority <code class="docutils literal notranslate"><span class="pre">-20</span></code> is the highest and <code class="docutils literal notranslate"><span class="pre">+19</span></code> the lowest priority. This is important since, when you run your simulations, you should set the priority of the simulation as <code class="docutils literal notranslate"><span class="pre">+19</span></code>. When you do that, the simulation has the lowest priority meaning that you can also use the computer do something else when needed but when you are not using it for other tasks, your simulation will take full resources.</p>
 </div>
 <div class="section" id="file-permissions-and-ownership">
-<h2><span class="section-number">4.14. </span>File permissions and ownership<a class="headerlink" href="#file-permissions-and-ownership" title="Permalink to this headline">¶</a></h2>
+<h2>File permissions and ownership<a class="headerlink" href="#file-permissions-and-ownership" title="Permalink to this headline">¶</a></h2>
 <hr>
 <p><code class="docutils literal notranslate"><span class="pre">chmod</span></code>: <b style="color:#1371a9;">Change the access rights.</b></p>
 <p>This is a very useful command.</p>
@@ -1073,8 +1025,8 @@ Click for a figure showing file details, access rights &amp; ownership<div class
 <svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="summary-content card-body docutils">
 <div class="figure align-default" id="directories">
-<a class="reference internal image-reference" href="../../_images/dot-directories.svg"><img alt="../../_images/dot-directories.svg" src="../../_images/dot-directories.svg" width="750px" /></a>
-<p class="caption"><span class="caption-number">Fig. 4.2 </span><span class="caption-text">When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user’s, group’s and other’s. <code class="docutils literal notranslate"><span class="pre">r</span></code>=right to read,<code class="docutils literal notranslate"><span class="pre">x</span></code>=right to execute, <code class="docutils literal notranslate"><span class="pre">w</span></code>=right to write, <code class="docutils literal notranslate"><span class="pre">-</span></code>=no right’s given. Dash in the first column means file while <code class="docutils literal notranslate"><span class="pre">d</span></code> stands for directory.</span><a class="headerlink" href="#directories" title="Permalink to this image">¶</a></p>
+<a class="reference internal image-reference" href="extras/img/dot-directories.svg"><img alt="extras/img/dot-directories.svg" src="extras/img/dot-directories.svg" width="750px" /></a>
+<p class="caption"><span class="caption-text">When getting the long listing with the file and other details, this is how it could look like. The dot directories are also shown. The access rights come in three groups, those of the user’s, group’s and other’s. <code class="docutils literal notranslate"><span class="pre">r</span></code>=right to read,<code class="docutils literal notranslate"><span class="pre">x</span></code>=right to execute, <code class="docutils literal notranslate"><span class="pre">w</span></code>=right to write, <code class="docutils literal notranslate"><span class="pre">-</span></code>=no right’s given. Dash in the first column means file while <code class="docutils literal notranslate"><span class="pre">d</span></code> stands for directory.</span><a class="headerlink" href="#directories" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 </details><p><code class="docutils literal notranslate"><span class="pre">chown</span></code>: <b style="color:#1371a9;">Change ownership.</b></p>
@@ -1084,32 +1036,12 @@ Click for a figure showing file details, access rights &amp; ownership<div class
 </div>
 </div>
 <div class="section" id="environment">
-<h2><span class="section-number">4.15. </span>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
+<h2>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">printenv</span></code>: <b style="color:#1371a9;">Show the environment variables</b></p>
 <p><strong>Example:</strong> See all the environment variables that have the text <code class="docutils literal notranslate"><span class="pre">PATH</span></code> in them (capitalization matters):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">printenv</span> <span class="o">|</span>  <span class="n">grep</span> <span class="n">PATH</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="optional-create-work-directory-for-the-course">
-<h2><span class="section-number">4.16. </span>Optional: Create work directory for the course<a class="headerlink" href="#optional-create-work-directory-for-the-course" title="Permalink to this headline">¶</a></h2>
-<p>Independent of your operating system:</p>
-<ul>
-<li><p>Open a terminal window and type</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span>
-</pre></div>
-</div>
-</li>
-</ul>
-<p>This changes the directory to your <code class="docutils literal notranslate"><span class="pre">home</span> <span class="pre">directory</span></code> (we will go through Linux commands separately, right now we just want to create a work directory for the course material).</p>
-<ul>
-<li><p>Then, give the command</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">SciComp9502B</span>  
-</pre></div>
-</div>
-</li>
-</ul>
-<p>This directory can be used for course related data, scrips and programs.</p>
 <!--
 `sort`: <b style="color:#1371a9;">As the name says, sorts.</b>
 
@@ -1139,7 +1071,7 @@ Click for a figure showing file details, access rights &amp; ownership<div class
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./class/week02"
+            path: "./extras"
         },
         predefinedOutput: true
     }
@@ -1150,21 +1082,7 @@ Click for a figure showing file details, access rights &amp; ownership<div class
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Linux-basics.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">3. </span>Linux - the basics</p>
-        </div>
-    </a>
-    <a class='right-next' id="next-link" href="python-installation.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">5. </span>Installation of Python and Jupyter</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
-    </a>
+<div class='prev-next-area'>
 </div>
             
         </div>
@@ -1189,7 +1107,7 @@ Click for a figure showing file details, access rights &amp; ownership<div class
       </div>
     </div>
   
-  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
   </body>
 </html>

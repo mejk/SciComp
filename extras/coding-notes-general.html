@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. On computation and codes &#8212; SciComp9502B</title>
+    <title>11. On computation and codes &#8212; SciComp9502B</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -71,11 +71,25 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/coding-notes-general.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Brief introduction to Python" href="../class/week02/python-intro.html" />
-    <link rel="prev" title="6. Linux: Some basic &amp; useful commands" href="../class/week02/linux-basic-commands-2.html" />
+    <link rel="next" title="12. Brief introduction to Python" href="../class/week02/python-intro.html" />
+    <link rel="prev" title="10. Linux - the basics" href="../class/week02/Linux-basics.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -127,29 +141,53 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week01/week01_summary.html">
-   1. Week 1
+   1. Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/intro-to-modeling.html">
-   2. Introduction to computational modeling &amp; methods in chemistry/physics
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Intro to HPC
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/hpc-intro.html">
-   3. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../class/week02/install-wsl.html">
+   2. Installation of tools: WSL2/Linux etc.
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/simulation-general.html">
-   4. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
+   3. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/python-installation.html">
+   4. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/python-virtual-environment.html">
+   5. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/jupyter-intro.html">
+   6. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/editing-ascii.html">
+   7. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/vi-editor.html">
+   8. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/helpful-software.html">
+   9. Helpful software
   </a>
  </li>
 </ul>
@@ -161,12 +199,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week02/Linux-basics.html">
-   5. Linux - the basics
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
-   6. Linux: Some basic &amp; useful commands
+   10. Linux - the basics
   </a>
  </li>
 </ul>
@@ -178,17 +211,12 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   7. On computation and codes
+   11. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week02/python-intro.html">
-   8. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python-virtual-environment.html">
-   9. Python virtual environments
+   12. Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -264,22 +292,22 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#well-written-programs-desirable-properties">
-   7.1. Well-written programs: Desirable properties
+   11.1. Well-written programs: Desirable properties
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#programming-languages">
-   7.2. Programming languages
+   11.2. Programming languages
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-few-notes-on-coding-and-related-matters">
-   7.3. A few notes on coding and related matters
+   11.3. A few notes on coding and related matters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-few-additional-details-for-efficient-programming">
-   7.4. A few additional details for efficient programming
+   11.4. A few additional details for efficient programming
   </a>
  </li>
 </ul>
@@ -304,22 +332,22 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#well-written-programs-desirable-properties">
-   7.1. Well-written programs: Desirable properties
+   11.1. Well-written programs: Desirable properties
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#programming-languages">
-   7.2. Programming languages
+   11.2. Programming languages
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-few-notes-on-coding-and-related-matters">
-   7.3. A few notes on coding and related matters
+   11.3. A few notes on coding and related matters
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-few-additional-details-for-efficient-programming">
-   7.4. A few additional details for efficient programming
+   11.4. A few additional details for efficient programming
   </a>
  </li>
 </ul>
@@ -332,7 +360,7 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="on-computation-and-codes">
-<h1><span class="section-number">7. </span>On computation and codes<a class="headerlink" href="#on-computation-and-codes" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">11. </span>On computation and codes<a class="headerlink" href="#on-computation-and-codes" title="Permalink to this headline">¶</a></h1>
 <div class="bg-light text-info border border-info">
 <small>
 <blockquote class="epigraph">
@@ -345,7 +373,7 @@ by definition, not smart enough to debug it.</p>
 </div><p></p>
 <p>Before we start discussing modelling and implementing the different algorithms and methods, let us briefly list a few general issues on design, programming, computing and codes. The remarks below do not depend on the programming language.</p>
 <div class="section" id="well-written-programs-desirable-properties">
-<h2><span class="section-number">7.1. </span>Well-written programs: Desirable properties<a class="headerlink" href="#well-written-programs-desirable-properties" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Well-written programs: Desirable properties<a class="headerlink" href="#well-written-programs-desirable-properties" title="Permalink to this headline">¶</a></h2>
 <p>Independent of the chosen programming language, there are several matters that should be considered. It is impossible to write an exhaustive checklist, but the purpose of the short lists below is to bring some of the important issues to the reader’s attention. In all programming, one should be careful and pay attention to detail, and remember debug, debug, and debug.</p>
 <ul class="simple">
 <li><p><strong>Portability:</strong> Codes should be written in such a way that they are portable, i.e., they must work correctly on different computer architectures</p></li>
@@ -355,7 +383,7 @@ by definition, not smart enough to debug it.</p>
 </ul>
 </div>
 <div class="section" id="programming-languages">
-<h2><span class="section-number">7.2. </span>Programming languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Programming languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h2>
 <div class="bg-light text-info border border-info">
 <small>
 <blockquote class="epigraph">
@@ -368,7 +396,7 @@ complain about and the ones nobody uses.</p>
 <p>There are many, many programming languages. There is no ultimate language, but one has to choose the language based on pragmatic arguments. However, Python has become a very popular language for a great number of tasks as well as scientific computing, and C/C++ has become the most common general purpose language. For web-based solutions, javascript is extremely common.</p>
 </div>
 <div class="section" id="a-few-notes-on-coding-and-related-matters">
-<h2><span class="section-number">7.3. </span>A few notes on coding and related matters<a class="headerlink" href="#a-few-notes-on-coding-and-related-matters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>A few notes on coding and related matters<a class="headerlink" href="#a-few-notes-on-coding-and-related-matters" title="Permalink to this headline">¶</a></h2>
 <p>Perhaps to most important piece of advice is the following quote:</p>
 <div class="bg-light text-info border border-info">
 <small>
@@ -407,7 +435,7 @@ complain about and the ones nobody uses.</p>
 <p></small></div><p></p></p>
 </div>
 <div class="section" id="a-few-additional-details-for-efficient-programming">
-<h2><span class="section-number">7.4. </span>A few additional details for efficient programming<a class="headerlink" href="#a-few-additional-details-for-efficient-programming" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>A few additional details for efficient programming<a class="headerlink" href="#a-few-additional-details-for-efficient-programming" title="Permalink to this headline">¶</a></h2>
 <p>In addition to the above design issues, here are a few often overlooked practical issues</p>
 <p><strong>Summations:</strong> One can minimize roundoff errors if summations are performed in the order of increasing magnitude (add smaller numbers first).</p>
 <p><strong>Avoid mixing of types:</strong> Do not add floating point numbers and integers. Instead,  use a type conversion (functions such as <code class="docutils literal notranslate"><span class="pre">REAL</span></code> in Fortran) when performing such an operation. <code class="docutils literal notranslate"><span class="pre">REAL(i)</span></code> converts an integer <em>i</em> into a floating point number and it can then be used in operations with other floating point numbers. Although Python does not have type declarations, this issue still matters: For example, consider the difference between 1/2 and 1.0/2.0.</p>
@@ -440,17 +468,17 @@ complain about and the ones nobody uses.</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="../class/week02/linux-basic-commands-2.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../class/week02/Linux-basics.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Linux: Some basic &amp; useful commands</p>
+            <p class="prev-next-title"><span class="section-number">10. </span>Linux - the basics</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../class/week02/python-intro.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Brief introduction to Python</p>
+        <p class="prev-next-title"><span class="section-number">12. </span>Brief introduction to Python</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
