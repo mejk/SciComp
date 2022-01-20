@@ -12,26 +12,41 @@ parts:
     numbered: true
     chapters:
     - file: class/week01/week01_summary.md
-    - file: class/week01/intro-to-modeling
+    - file: class/week02/install-wsl
+    - file: class/week02/Linux-basics    
+    - file: class/week02/linux-basic-commands-2    
+    - file: class/week02/python-installation    
+    - file: class/week02/python-virtual-environment
+    - file: class/week02/jupyter-intro
+    - file: class/week02/editing-ascii    
+    - file: class/week02/vi-editor
+    - file: class/week02/helpful-software
+#    - file: class/week01/intro-to-modeling
 
-  - caption: "MODULE: Intro to HPC"
-    numbered: true
-    chapters:
-    - file: class/week01/hpc-intro
-    - file: class/week01/simulation-general
+#################################
+#  - caption: "MODULE: Intro to HPC"
+#    numbered: true
+#    chapters:
+#    - file: class/week01/hpc-intro
+#    - file: class/week01/simulation-general
+#################################
 
-  - caption: "MODULE: Operating systems"
-    numbered: true
-    chapters:
-    - file: class/week02/Linux-basics
-    - file: class/week02/linux-basic-commands-2
+###############################################
+#  - caption: "MODULE: Operating systems"
+#    numbered: true
+#    chapters:
+#    - file: class/week02/Linux-basics
+#    - file: class/week02/linux-basic-commands-2
+################################################
 
-  - caption: "MODULE: Python & programming"
-    numbered: true
-    chapters:
-    - file: extras/coding-notes-general
-    - file: class/week02/python-intro
-    - file: extras/python-virtual-environment
+#############################################3
+#  - caption: "MODULE: Python & programming"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+#    - file: class/week02/python-intro
+#    - file: extras/python-virtual-environment
+##########################################
 
 #  - caption: "MODULE: Random numbers"
 #    numbered: true
@@ -39,125 +54,125 @@ parts:
 #    - file: extras/coding-notes-general
 #    - file: class/week02/python-intro
 #    - file: extras/python-virtual-environment
-
-  - caption: "MODULE: Molecular dynamics"
-    numbered: true
-    chapters:
-    - file: class/moldy/particle_simulations_intro
-    - file: class/moldy/moldy_1
-#    - file: extras/python-virtual-environment
-
-#  - caption: "MODULE: Monte Carlo"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-
-#  - caption: "MODULE: Finete elements"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-
-#  - caption: "MODULE: Parallel programming"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-
-#  - caption: "MODULE: Finite differences"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-
-#  - caption: "MODULE: Machine learning"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-
-#  - caption: "MODULE: Optimization"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-
-# - divider: true
-
-#- part: Lectures
-# chapters:
-#  numbered: true
-#    - file: class/week01/week01_summary.md
-#      numbered: true
-#      title: "Week 1: Basic concepts"
-#      expand_sections: false
-#      sections:
-#        - file: class/week01/simulation-general
-#        - file: class/week01/intro-to-modeling
-#        - file: class/week01/hpc-intro
 #
-#    - file: class/week02/week02_summary
-#      title: "Linux, Python and visualization"
-#      numbered: true
-#      sections:
-# - file: class/week02/Linux-basics
-# - file: class/week02/linux-basic-commands-2
-# - file: class/week02/python-intro
-# - file: class/week01/hpc-intro
-# - file: class/week03/random_numbers
-#- part: More material
-#  chapters:
-#    - file: extras/coding-notes-general
-##    - file: class/week01/week01_summary.md
-##      title: Installations
-##      expand_sections: true
-##      sections:
-##        - file: extras/python-virtual-environment
-##        - file: extras/vmd-selection
-#
-#- part: Installation instructions
-#  chapters:
-#   - file: extras/install-wsl
-#   - file: class/week02/python-installation
-#   - file: extras/python-virtual-environment
-##   - file: extras/vmd-install#
-#
-##- part: Python extras
-##  chapters:
+#  - caption: "MODULE: Molecular dynamics"
+#    numbered: true
+#    chapters:
+#    - file: class/moldy/particle_simulations_intro
+#    - file: class/moldy/moldy_1
 ##    - file: extras/python-virtual-environment
 #
-##- part: VMD extras
-##  chapters:
-##    - file: extras/vmd-plugins
-###    - file: extras/vmd-selection
+##  - caption: "MODULE: Monte Carlo"
+##    numbered: true
+##    chapters:
+##    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
+##    - file: extras/python-virtual-environment
 #
-#- part: How-tos
-#  chapters:
-#    - file: class/week02/jupyter-intro
-#    - file: extras/vi-editor
-#    - file: extras/editing-ascii
-#    - file: extras/helpful-software
-#- part: More on computers / help
-#  chapters:
-#    - url: https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md
-#      title: ssh keys, aliases and connecting using ssh keys  
-#    - url: https://github.com/mejk/computer-stuff
-#      title: Random notes on computers, installation, dual boot, vnc, etc.
-##      title: Lab Stuff
+##  - caption: "MODULE: Finete elements"
+##    numbered: true
+##    chapters:
+##    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
+##    - file: extras/python-virtual-environment
 #
-##- part: Gallery
-##  chapters:
-##    - file: gallery/gallery
-###       title: Exam stuff
+##  - caption: "MODULE: Parallel programming"
+##    numbered: true
+##    chapters:
+##    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
+##    - file: extras/python-virtual-environment
+#
+##  - caption: "MODULE: Finite differences"
+##    numbered: true
+##    chapters:
+##    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
+##    - file: extras/python-virtual-environment
+#
+##  - caption: "MODULE: Machine learning"
+##    numbered: true
+##    chapters:
+##    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
+##    - file: extras/python-virtual-environment
+# 
+##   - caption: "MODULE: Optimization"
+##     numbered: true
+##    chapters:
+##    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
+##    - file: extras/python-virtual-environment
+#
+## - divider: true
+#
+##- part: Lectures
+## chapters:
+##  numbered: true
+##    - file: class/week01/week01_summary.md
+##      numbered: true
+##      title: "Week 1: Basic concepts"
+##      expand_sections: false
+##      sections:
+##        - file: class/week01/simulation-general
+##        - file: class/week01/intro-to-modeling
+##        - file: class/week01/hpc-intro
 ##
-##- part: Course Feedback
+##    - file: class/week02/week02_summary
+##      title: "Linux, Python and visualization"
+##      numbered: true
+##      sections:
+## - file: class/week02/Linux-basics
+## - file: class/week02/linux-basic-commands-2
+## - file: class/week02/python-intro
+## - file: class/week01/hpc-intro
+## - file: class/week03/random_numbers
+##- part: More material
 ##  chapters:
-##    - file: about/feedback
-##      title: Anonymous Feedback Form
+##    - file: extras/coding-notes-general
+###    - file: class/week01/week01_summary.md
+###      title: Installations
+###      expand_sections: true
+###      sections:
+###        - file: extras/python-virtual-environment
+###        - file: extras/vmd-selection
+##
+##- part: Installation instructions
+##  chapters:
+##   - file: extras/install-wsl
+##   - file: class/week02/python-installation
+##   - file: extras/python-virtual-environment
+###   - file: extras/vmd-install#
+##
+###- part: Python extras
+###  chapters:
+###    - file: extras/python-virtual-environment
+##
+###- part: VMD extras
+###  chapters:
+###    - file: extras/vmd-plugins
+####    - file: extras/vmd-selection
+##
+##- part: How-tos
+##  chapters:
+##    - file: class/week02/jupyter-intro
+##    - file: extras/vi-editor
+##    - file: extras/editing-ascii
+##    - file: extras/helpful-software
+##- part: More on computers / help
+##  chapters:
+##    - url: https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md
+##      title: ssh keys, aliases and connecting using ssh keys  
+##    - url: https://github.com/mejk/computer-stuff
+##      title: Random notes on computers, installation, dual boot, vnc, etc.
+###      title: Lab Stuff
+##
+###- part: Gallery
+###  chapters:
+###    - file: gallery/gallery
+####       title: Exam stuff
+###
+###- part: Course Feedback
+###  chapters:
+###    - file: about/feedback
+###      title: Anonymous Feedback Form

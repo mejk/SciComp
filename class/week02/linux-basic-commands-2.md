@@ -30,6 +30,12 @@ This section lists some of the most important and useful commands with examples.
 Additionally, some notes regarding the difference between Linux (bash shell) and OSX (zsh) are provided.
 <p></p>
 
+```{warning}
+**Important:** When there is a warning sign, take it *very* seriously as there are a few commands that are dangerous!  
+```
+If there are commands or concepts you don't understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.
+
+
 
 ## How to get help
 <hr>
@@ -749,6 +755,25 @@ sudo chown sam:users text.txt
 ```
 printenv |  grep PATH
 ```
+
+## Optional: Create work directory for the course
+
+Independent of your operating system:
+
+- Open a terminal window and type
+
+   ```
+   cd
+   ```
+
+This changes the directory to your `home directory` (we will go through Linux commands separately, right now we just want to create a work directory for the course material).
+
+- Then, give the command
+
+   ```
+   mkdir SciComp9502B  
+   ```
+This directory can be used for course related data, scrips and programs.
 
 <!--
 `sort`: <b style="color:#1371a9;">As the name says, sorts.</b>

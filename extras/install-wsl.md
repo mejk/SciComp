@@ -2,6 +2,8 @@
 
 - We need to set up command line terminal. It will be used extensively throughout the course.
 - All of command line terminal options are either Linux or Linux-like (technically the OSX one is based on Free BSD but that doesn't make any practical difference here).
+- If you already have a Linux computer, there's nothing to do but it is highly recommended to read through the material as it provides perspective to other operating systems.
+- Note that operating systems are continuously updated and you should always check the latest information regarding the current version of yours.
 
 
 ## Installation of basic tools
@@ -18,7 +20,7 @@ Finder -> Applications -> Utilities -> Terminal
 ```
 That same location has also `XQuartz` that will be needed to run GUI based applications.
 
-```{figure} ../week01/img/linux-decision.svg
+```{figure} ../class/week01/img/linux-decision.svg
 :alt: Linux vs others
 :width: 700px
 :align: left
@@ -321,13 +323,16 @@ Now you are ready install software using Homebrew. For how to do it and further 
 Now it is time to try to command line terminal. Go to
 
 
--  [Basic Linux commands](../class/week02/linux-basic-commands-2)
+-  [Basic Linux commands](./linux-basic-commands-2)
 
 go through the page and work through the commands there. 
 
+```{warning}
 **Important:** When there is a warning sign, take it *very* seriously as there are a few commands that are dangerous!  
+```
 
-If there are commands or concepts you don't understand, please ask during the next class.
+
+If there are commands or concepts you don't understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.
 
 
 ## Optional: Create work directory for the course

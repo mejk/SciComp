@@ -71,13 +71,6 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/install-wsl.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -132,46 +125,58 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week01/week01_summary.html">
-   1. Week 1
+   1. Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/intro-to-modeling.html">
-   2. Introduction to computational modeling &amp; methods in chemistry/physics
+  <a class="reference internal" href="../class/week02/install-wsl.html">
+   2. Installation of tools: WSL2/Linux etc.
   </a>
  </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Intro to HPC
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/hpc-intro.html">
-   3. Background on computers, computing and High Performance Computing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/week01/simulation-general.html">
-   4. General aspects of modeling and computer simulations
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Operating systems
- </span>
-</p>
-<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week02/Linux-basics.html">
-   5. Linux - the basics
+   3. Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week02/linux-basic-commands-2.html">
-   6. Linux: Some basic &amp; useful commands
+   4. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/python-installation.html">
+   5. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/python-virtual-environment.html">
+   6. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/jupyter-intro.html">
+   7. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/editing-ascii.html">
+   8. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/vi-editor.html">
+   9. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/week02/helpful-software.html">
+   10. Helpful software
   </a>
  </li>
 </ul>
@@ -183,34 +188,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="coding-notes-general.html">
-   7. On computation and codes
+   11. On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../class/week02/python-intro.html">
-   8. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="python-virtual-environment.html">
-   9. Python virtual environments
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Molecular dynamics
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/moldy/particle_simulations_intro.html">
-   10. First look into particle simulations
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../class/moldy/moldy_1.html">
-   11. What is Molecular Dynamics (MD)
+   12. Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -392,6 +375,8 @@
 <ul class="simple">
 <li><p>We need to set up command line terminal. It will be used extensively throughout the course.</p></li>
 <li><p>All of command line terminal options are either Linux or Linux-like (technically the OSX one is based on Free BSD but that doesn’t make any practical difference here).</p></li>
+<li><p>If you already have a Linux computer, there’s nothing to do but it is highly recommended to read through the material as it provides perspective to other operating systems.</p></li>
+<li><p>Note that operating systems are continuously updated and you should always check the latest information regarding the current version of yours.</p></li>
 </ul>
 <div class="section" id="installation-of-basic-tools">
 <h2>Installation of basic tools<a class="headerlink" href="#installation-of-basic-tools" title="Permalink to this headline">¶</a></h2>
@@ -411,7 +396,7 @@
 </div>
 <p>That same location has also <code class="docutils literal notranslate"><span class="pre">XQuartz</span></code> that will be needed to run GUI based applications.</p>
 <div class="figure align-left" id="id1">
-<a class="reference internal image-reference" href="extras/../week01/img/linux-decision.svg"><img alt="Linux vs others" src="extras/../week01/img/linux-decision.svg" width="700px" /></a>
+<a class="reference internal image-reference" href="../_images/linux-decision.svg"><img alt="Linux vs others" src="../_images/linux-decision.svg" width="700px" /></a>
 <p class="caption"><span class="caption-text"><em>The three main operating systems and the main options.</em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>If you are happy with the recommended choices, the move on the next section and installation. If you want more information, just click the <code class="docutils literal notranslate"><span class="pre">dropdown</span></code> below to read more.</p>
@@ -570,13 +555,13 @@ It is important to you back up your data and essential files. Doing that ensures
 Proceed through Tasks 1-3 in this order. As for Tasks 4-5, you can change their mutual order (but must be after Tasks 1-3).
 -->
 <div class="tabbed-set docutils">
-<input checked="checked" id="8577c6b5-c4e2-4764-9c1a-f390b78a54a2" name="2b941bbc-484c-4670-b6c4-16cd69105eb3" type="radio">
-</input><label class="tabbed-label" for="8577c6b5-c4e2-4764-9c1a-f390b78a54a2">
+<input checked="checked" id="e714eb37-1c89-4ed4-847b-a1f53cb3956f" name="e5a106e5-2088-405d-9e6d-8641c928e129" type="radio">
+</input><label class="tabbed-label" for="e714eb37-1c89-4ed4-847b-a1f53cb3956f">
 Linux</label><div class="tabbed-content docutils">
 <p>Update your system if necessary. Go to the next step.</p>
 </div>
-<input id="1a03fc06-eefb-414f-8876-82a5303d18ea" name="2b941bbc-484c-4670-b6c4-16cd69105eb3" type="radio">
-</input><label class="tabbed-label" for="1a03fc06-eefb-414f-8876-82a5303d18ea">
+<input id="b421f837-b1e2-44c1-bf44-51e00b548d31" name="e5a106e5-2088-405d-9e6d-8641c928e129" type="radio">
+</input><label class="tabbed-label" for="b421f837-b1e2-44c1-bf44-51e00b548d31">
 Windows 10: Install WSL/WSL2</label><div class="tabbed-content docutils">
 <p>WSL/WSL2 is needed for command line terminal. It gives Linux distribution <em>without</em> GUI. It is possible to also use GUI with some extra software as will be indicated.</p>
 <p>Here is the procedure:</p>
@@ -677,8 +662,8 @@ These instructions are from <a class="reference external" href="https://stackove
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/501562652?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </div>
 </details></div>
-<input id="a7bb221f-8f05-49a2-a3f2-5438b656900b" name="2b941bbc-484c-4670-b6c4-16cd69105eb3" type="radio">
-</input><label class="tabbed-label" for="a7bb221f-8f05-49a2-a3f2-5438b656900b">
+<input id="4a96a53d-76f7-4208-a64c-f2d8fd3c16c7" name="e5a106e5-2088-405d-9e6d-8641c928e129" type="radio">
+</input><label class="tabbed-label" for="4a96a53d-76f7-4208-a64c-f2d8fd3c16c7">
 MacOS</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Check which version of MacOS you have (under <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">this</span> <span class="pre">Mac</span></code>).</p>
@@ -702,18 +687,18 @@ MacOS</label><div class="tabbed-content docutils">
 <div class="section" id="task-2-package-manager">
 <h2>Task 2: Package manager<a class="headerlink" href="#task-2-package-manager" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d56f54f2-f5e5-4f03-b12f-6ad7fa3f4efd" name="6ff44a11-1682-4fa7-a76e-d19cbc2034c3" type="radio">
-</input><label class="tabbed-label" for="d56f54f2-f5e5-4f03-b12f-6ad7fa3f4efd">
+<input checked="checked" id="b7579507-2760-4cfc-9622-d4c57f930ead" name="bd7bc069-af30-4737-9479-e86c6e820990" type="radio">
+</input><label class="tabbed-label" for="b7579507-2760-4cfc-9622-d4c57f930ead">
 Linux</label><div class="tabbed-content docutils">
 <p>You already have a package manager, so there is nothing to do.</p>
 </div>
-<input id="9eaaa3be-ae53-4bec-85cc-7bc955f3dca6" name="6ff44a11-1682-4fa7-a76e-d19cbc2034c3" type="radio">
-</input><label class="tabbed-label" for="9eaaa3be-ae53-4bec-85cc-7bc955f3dca6">
+<input id="977e849b-80bf-4180-ad60-b8a0b2185241" name="bd7bc069-af30-4737-9479-e86c6e820990" type="radio">
+</input><label class="tabbed-label" for="977e849b-80bf-4180-ad60-b8a0b2185241">
 WSL/WSL2</label><div class="tabbed-content docutils">
 <p>When WSL/WSL2 was installed, you got a package manager. There is nothing to do at this step.</p>
 </div>
-<input id="80f25481-23f9-4ea8-b499-d3b58fbfff2f" name="6ff44a11-1682-4fa7-a76e-d19cbc2034c3" type="radio">
-</input><label class="tabbed-label" for="80f25481-23f9-4ea8-b499-d3b58fbfff2f">
+<input id="e1645925-389c-4fb0-86d2-2124d7521209" name="bd7bc069-af30-4737-9479-e86c6e820990" type="radio">
+</input><label class="tabbed-label" for="e1645925-389c-4fb0-86d2-2124d7521209">
 MacOS</label><div class="tabbed-content docutils">
 <p>The next task is to install a package manager such as  <a class="reference external" href="https://www.macports.org/">MacPorts</a> or <a class="reference external" href="https://brew.sh/">Homebrew</a>. Here, we use <a class="reference external" href="https://brew.sh/">Homebrew</a> but MacPorts works well too. However, the instructions on these pages are for Homebrew only.</p>
 <p>See the installation and operating instructions at the <a class="reference external" href="https://brew.sh/">Homebrew</a> web site. Here is a copy from the web site.</p>
@@ -742,11 +727,14 @@ MacOS</label><div class="tabbed-content docutils">
 <h2>Task 4: Try the command line terminal<a class="headerlink" href="#task-4-try-the-command-line-terminal" title="Permalink to this headline">¶</a></h2>
 <p>Now it is time to try to command line terminal. Go to</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="../class/week02/linux-basic-commands-2.html"><span class="doc std std-doc">Basic Linux commands</span></a></p></li>
+<li><p><a class="reference internal" href="linux-basic-commands-2.html"><span class="doc std std-doc">Basic Linux commands</span></a></p></li>
 </ul>
 <p>go through the page and work through the commands there.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p><strong>Important:</strong> When there is a warning sign, take it <em>very</em> seriously as there are a few commands that are dangerous!</p>
-<p>If there are commands or concepts you don’t understand, please ask during the next class.</p>
+</div>
+<p>If there are commands or concepts you don’t understand, please ask during the next class or/and used commenting tool given at the top right hand corner of the page.</p>
 </div>
 <div class="section" id="optional-create-work-directory-for-the-course">
 <h2>Optional: Create work directory for the course<a class="headerlink" href="#optional-create-work-directory-for-the-course" title="Permalink to this headline">¶</a></h2>
