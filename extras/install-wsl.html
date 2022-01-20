@@ -64,6 +64,20 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/extras/install-wsl.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -180,6 +194,23 @@
  <li class="toctree-l1">
   <a class="reference internal" href="python-virtual-environment.html">
    9. Python virtual environments
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Molecular dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/moldy/particle_simulations_intro.html">
+   10. First look into particle simulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../class/moldy/moldy_1.html">
+   11. What is Molecular Dynamics (MD)
   </a>
  </li>
 </ul>
@@ -539,13 +570,13 @@ It is important to you back up your data and essential files. Doing that ensures
 Proceed through Tasks 1-3 in this order. As for Tasks 4-5, you can change their mutual order (but must be after Tasks 1-3).
 -->
 <div class="tabbed-set docutils">
-<input checked="checked" id="6d616c05-1a43-4bf5-adb0-87c3dbc6dc8d" name="63bfcb42-ab46-457d-bdf8-8ef4a744e8fe" type="radio">
-</input><label class="tabbed-label" for="6d616c05-1a43-4bf5-adb0-87c3dbc6dc8d">
+<input checked="checked" id="8577c6b5-c4e2-4764-9c1a-f390b78a54a2" name="2b941bbc-484c-4670-b6c4-16cd69105eb3" type="radio">
+</input><label class="tabbed-label" for="8577c6b5-c4e2-4764-9c1a-f390b78a54a2">
 Linux</label><div class="tabbed-content docutils">
 <p>Update your system if necessary. Go to the next step.</p>
 </div>
-<input id="f13d6849-c582-4fee-be3d-c8c198b45093" name="63bfcb42-ab46-457d-bdf8-8ef4a744e8fe" type="radio">
-</input><label class="tabbed-label" for="f13d6849-c582-4fee-be3d-c8c198b45093">
+<input id="1a03fc06-eefb-414f-8876-82a5303d18ea" name="2b941bbc-484c-4670-b6c4-16cd69105eb3" type="radio">
+</input><label class="tabbed-label" for="1a03fc06-eefb-414f-8876-82a5303d18ea">
 Windows 10: Install WSL/WSL2</label><div class="tabbed-content docutils">
 <p>WSL/WSL2 is needed for command line terminal. It gives Linux distribution <em>without</em> GUI. It is possible to also use GUI with some extra software as will be indicated.</p>
 <p>Here is the procedure:</p>
@@ -646,8 +677,8 @@ These instructions are from <a class="reference external" href="https://stackove
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/501562652?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 </div>
 </details></div>
-<input id="b942cb1c-eb99-45f2-9bea-ea730fce68a1" name="63bfcb42-ab46-457d-bdf8-8ef4a744e8fe" type="radio">
-</input><label class="tabbed-label" for="b942cb1c-eb99-45f2-9bea-ea730fce68a1">
+<input id="a7bb221f-8f05-49a2-a3f2-5438b656900b" name="2b941bbc-484c-4670-b6c4-16cd69105eb3" type="radio">
+</input><label class="tabbed-label" for="a7bb221f-8f05-49a2-a3f2-5438b656900b">
 MacOS</label><div class="tabbed-content docutils">
 <ul class="simple">
 <li><p>Check which version of MacOS you have (under <code class="docutils literal notranslate"><span class="pre">About</span> <span class="pre">this</span> <span class="pre">Mac</span></code>).</p>
@@ -671,18 +702,18 @@ MacOS</label><div class="tabbed-content docutils">
 <div class="section" id="task-2-package-manager">
 <h2>Task 2: Package manager<a class="headerlink" href="#task-2-package-manager" title="Permalink to this headline">¶</a></h2>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f38e95d4-fa23-47f5-97d2-b842e3fd8f42" name="f7c5a9d7-ab71-40ce-9dcd-277c509eadbb" type="radio">
-</input><label class="tabbed-label" for="f38e95d4-fa23-47f5-97d2-b842e3fd8f42">
+<input checked="checked" id="d56f54f2-f5e5-4f03-b12f-6ad7fa3f4efd" name="6ff44a11-1682-4fa7-a76e-d19cbc2034c3" type="radio">
+</input><label class="tabbed-label" for="d56f54f2-f5e5-4f03-b12f-6ad7fa3f4efd">
 Linux</label><div class="tabbed-content docutils">
 <p>You already have a package manager, so there is nothing to do.</p>
 </div>
-<input id="2ebf77d4-3e09-416a-809b-fe74bba904c0" name="f7c5a9d7-ab71-40ce-9dcd-277c509eadbb" type="radio">
-</input><label class="tabbed-label" for="2ebf77d4-3e09-416a-809b-fe74bba904c0">
+<input id="9eaaa3be-ae53-4bec-85cc-7bc955f3dca6" name="6ff44a11-1682-4fa7-a76e-d19cbc2034c3" type="radio">
+</input><label class="tabbed-label" for="9eaaa3be-ae53-4bec-85cc-7bc955f3dca6">
 WSL/WSL2</label><div class="tabbed-content docutils">
 <p>When WSL/WSL2 was installed, you got a package manager. There is nothing to do at this step.</p>
 </div>
-<input id="a2937608-0890-4f0a-ace4-7ac9c012369c" name="f7c5a9d7-ab71-40ce-9dcd-277c509eadbb" type="radio">
-</input><label class="tabbed-label" for="a2937608-0890-4f0a-ace4-7ac9c012369c">
+<input id="80f25481-23f9-4ea8-b499-d3b58fbfff2f" name="6ff44a11-1682-4fa7-a76e-d19cbc2034c3" type="radio">
+</input><label class="tabbed-label" for="80f25481-23f9-4ea8-b499-d3b58fbfff2f">
 MacOS</label><div class="tabbed-content docutils">
 <p>The next task is to install a package manager such as  <a class="reference external" href="https://www.macports.org/">MacPorts</a> or <a class="reference external" href="https://brew.sh/">Homebrew</a>. Here, we use <a class="reference external" href="https://brew.sh/">Homebrew</a> but MacPorts works well too. However, the instructions on these pages are for Homebrew only.</p>
 <p>See the installation and operating instructions at the <a class="reference external" href="https://brew.sh/">Homebrew</a> web site. Here is a copy from the web site.</p>
