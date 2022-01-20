@@ -1,5 +1,25 @@
 # First look into particle simulations
 
+This module focuses on  particle simulations usingf the molecular dynamics (MD) method. The aim is to learn the what particle simulations and MD are and what can be done with them. MD is mainly used in physics, chemistry, chemical engineering and pharmaceutical research. It is, however, a versatile method and has found use in many other fields as well. 
+As this is an introduction to particle simulations, the aim is not to provide  complete description, but rather a be practical in the sense that basic concepts and terminology are introduced. 
+
+<!--
+This information will be needed and elaborated later and this knowledge will help in setting up simulations and in data analysis. 
+-->
+
+In addition to learning about MD and particle simulations, this module brings in the concept of visualization of data and particle simulations are ideal for demonstrating the importance and stregths of visualization time-dependent behaviour of a system.  
+
+This module also introduces the concepts of different time and length scales. These concepts are general,  restricted to particle simulations or any specific field, and they will be used in other modules as well. Particle simulations offer a very natural framework for discussing the different scales as they emerge from the physical properties the systems and are thus very intuitive. 
+
+<!-- to install Gromacs, the software that we will use for our simulations and to install VMD (Visual Molecular Dynamics). 
+-->
+
+<!-- 
+We start the explorations of molecular systems with VMD as visualization is one of the key components. Importantly, VMD is not only for visualization, it also provides a framework for data analysis and it can be used for both simulational and experimental data.
+
+-->
+
+
 ````{panels}
 :column: col-lg-12 p-2
 
@@ -11,10 +31,14 @@
 ```
 
 **Learning goals:** 
-- To learn the basic terms and terminology of particle simulations
-- To have a basic understanding of molecular topologies 
-- To understand the difference between particle and continuum models
-- To understand the concept of force field
+- To learn the basics of particle simulations and how to perform them using the  molecular dynamics (MD) method.
+- To learn the basic terms and terminology of particle and other simulations.
+- To understand the difference between particle and continuum models.
+- To understand the importance and utility of visualizing time-dependent data.
+- To understand the importance of identifying the relevant time and length scales in a given problem.
+<!-- - To understand the concepts of continuum simulations vs discretized space. -->
+<!--- To have a basic understanding of molecular topologies -->
+<!-- - To understand the concept of force field -->
 
 **Keywords:** Particle simulations, molecular dynamics, Monte Carlo, continuum simulations, molecular topology, force field, interactions
 
@@ -22,7 +46,6 @@
 
 ````
 
-It is finally the time to discuss some of the basic concepts of particle simulations. As this is the first description, it  does not aim to be complete, but rather practical in the sense that basic concepts and terminology are introduced. This information will be needed and elaborated later and this knowledge will help in setting up simulations and in data analysis. 
 
 <hr>
 

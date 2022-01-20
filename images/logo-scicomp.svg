@@ -15,10 +15,7 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.2 (1.0.2+r75+1)"
-   sodipodi:docname="logo-scicomp.svg"
-   inkscape:export-filename="/home/mkarttu/Tresors/JupyterBook/CHEM3300G/images/logo-scicomp.png"
-   inkscape:export-xdpi="300"
-   inkscape:export-ydpi="300">
+   sodipodi:docname="logo-scicomp.svg">
   <defs
      id="defs2">
     <linearGradient
@@ -746,21 +743,21 @@
        id="linearGradient4717"
        x1="-19.175402"
        y1="125.32575"
-       x2="317.64597"
-       y2="125.59995"
+       x2="282.82242"
+       y2="123.4923"
        gradientUnits="userSpaceOnUse" />
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
-       id="filter5581"
-       x="-0.024923905"
-       width="1.0498478"
-       y="-0.15980914"
-       height="1.3196183">
+       id="filter5235"
+       x="-0.032086782"
+       width="1.0641736"
+       y="-0.20573667"
+       height="1.4114733">
       <feGaussianBlur
          inkscape:collect="always"
-         stdDeviation="3.0083726"
-         id="feGaussianBlur5583" />
+         stdDeviation="3.8729482"
+         id="feGaussianBlur5237" />
     </filter>
   </defs>
   <sodipodi:namedview
@@ -771,15 +768,15 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.41"
-     inkscape:cx="245.87168"
+     inkscape:cx="459.47671"
      inkscape:cy="291.49325"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1-3"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1838"
+     inkscape:window-width="1343"
      inkscape:window-height="856"
-     inkscape:window-x="67"
+     inkscape:window-x="562"
      inkscape:window-y="63"
      inkscape:window-maximized="0"
      fit-margin-top="0"
@@ -6170,7 +6167,7 @@ hSFWQnQ4wrE4lcjM/weQ0Qi3BkAfZgAAAABJRU5ErkJggg==
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.02349px;font-family:'Courier New';-inkscape-font-specification:'Courier New';stroke-width:0.188968"
            id="tspan4707" /></text>
       <rect
-         style="fill:url(#linearGradient4717);fill-opacity:1;stroke:none;stroke-width:0.787549;stop-color:#000000;filter:url(#filter5581);opacity:0.34421662"
+         style="fill:url(#linearGradient4717);fill-opacity:1;stroke:none;stroke-width:0.787549;filter:url(#filter5235);stop-color:#000000"
          id="rect4709"
          width="289.68552"
          height="45.179482"

@@ -19,7 +19,7 @@ One the main aims this week is to understand the basic protocol and concepts of 
 :align: right
 ```
 
-**Learning goals:** 
+**Learning goals:**
 - To learn the basic MD workflow
 - To understand the concept of boundary conditions
 - To understand the process of initialization in MD simulations

@@ -64,13 +64,6 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/moldy/particle_simulations_intro.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -394,19 +387,36 @@
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="first-look-into-particle-simulations">
 <h1><span class="section-number">10. </span>First look into particle simulations<a class="headerlink" href="#first-look-into-particle-simulations" title="Permalink to this headline">¶</a></h1>
+<p>This module focuses on  particle simulations usingf the molecular dynamics (MD) method. The aim is to learn the what particle simulations and MD are and what can be done with them. MD is mainly used in physics, chemistry, chemical engineering and pharmaceutical research. It is, however, a versatile method and has found use in many other fields as well.
+As this is an introduction to particle simulations, the aim is not to provide  complete description, but rather a be practical in the sense that basic concepts and terminology are introduced.</p>
+<!--
+This information will be needed and elaborated later and this knowledge will help in setting up simulations and in data analysis. 
+-->
+<p>In addition to learning about MD and particle simulations, this module brings in the concept of visualization of data and particle simulations are ideal for demonstrating the importance and stregths of visualization time-dependent behaviour of a system.</p>
+<p>This module also introduces the concepts of different time and length scales. These concepts are general,  restricted to particle simulations or any specific field, and they will be used in other modules as well. Particle simulations offer a very natural framework for discussing the different scales as they emerge from the physical properties the systems and are thus very intuitive.</p>
+<!-- to install Gromacs, the software that we will use for our simulations and to install VMD (Visual Molecular Dynamics). 
+-->
+<!-- 
+We start the explorations of molecular systems with VMD as visualization is one of the key components. Importantly, VMD is not only for visualization, it also provides a framework for data analysis and it can be used for both simulational and experimental data.
+
+-->
 <div class="sphinx-bs container pb-4 docutils">
 <div class="row docutils">
 <div class="d-flex col-lg-12 p-2 docutils">
 <div class="card w-100 shadow docutils">
 <div class="card-body docutils">
-<a class="bg-primary reference internal image-reference" href="class/moldy/../../gallery/dmpc-headgroup.png"><img alt="VMD" class="bg-primary align-right" src="class/moldy/../../gallery/dmpc-headgroup.png" style="width: 250px;" /></a>
+<a class="bg-primary reference internal image-reference" href="../../_images/dmpc-headgroup.png"><img alt="VMD" class="bg-primary align-right" src="../../_images/dmpc-headgroup.png" style="width: 250px;" /></a>
 <p class="card-text"><strong>Learning goals:</strong></p>
 <ul class="simple">
-<li><p class="card-text">To learn the basic terms and terminology of particle simulations</p></li>
-<li><p class="card-text">To have a basic understanding of molecular topologies</p></li>
-<li><p class="card-text">To understand the difference between particle and continuum models</p></li>
-<li><p class="card-text">To understand the concept of force field</p></li>
+<li><p class="card-text">To learn the basics of particle simulations and how to perform them using the  molecular dynamics (MD) method.</p></li>
+<li><p class="card-text">To learn the basic terms and terminology of particle and other simulations.</p></li>
+<li><p class="card-text">To understand the difference between particle and continuum models.</p></li>
+<li><p class="card-text">To understand the importance and utility of visualizing time-dependent data.</p></li>
+<li><p class="card-text">To understand the importance of identifying the relevant time and length scales in a given problem.</p></li>
 </ul>
+<!-- - To understand the concepts of continuum simulations vs discretized space. -->
+<!--- To have a basic understanding of molecular topologies -->
+<!-- - To understand the concept of force field -->
 <p class="card-text"><strong>Keywords:</strong> Particle simulations, molecular dynamics, Monte Carlo, continuum simulations, molecular topology, force field, interactions</p>
 <p class="card-text"><strong>Note:</strong> The links are provided for additional information for those interested, not as required reading.</p>
 </div>
@@ -414,7 +424,6 @@
 </div>
 </div>
 </div>
-<p>It is finally the time to discuss some of the basic concepts of particle simulations. As this is the first description, it  does not aim to be complete, but rather practical in the sense that basic concepts and terminology are introduced. This information will be needed and elaborated later and this knowledge will help in setting up simulations and in data analysis.</p>
 <hr>
 <div class="section" id="particle-vs-continuum-simulations">
 <h2><span class="section-number">10.1. </span>Particle vs continuum simulations<a class="headerlink" href="#particle-vs-continuum-simulations" title="Permalink to this headline">¶</a></h2>
