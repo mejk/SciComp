@@ -1,0 +1,1214 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visualization &#8212; SciComp9502B</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/week02/notes-collection.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9502B
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Practical matters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/week01_summary.html">
+   1. Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="install-wsl.html">
+   2. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Linux-basics.html">
+   3. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="linux-basic-commands-2.html">
+   4. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-installation.html">
+   5. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-virtual-environment.html">
+   6. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="jupyter-intro.html">
+   7. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="editing-ascii.html">
+   8. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vi-editor.html">
+   9. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="helpful-software.html">
+   10. Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="command-line-skill-check.html">
+   11. Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="coding-notes-general.html">
+   12. On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="python-intro.html">
+   13. Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/intro-to-modeling.html">
+   14. Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   15. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/simulation-general.html">
+   16. General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   17. Random numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="diffusion-in-brief.html">
+   18. Brief history of diffusion
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Molecular dynamics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../moldy/particle_simulations_intro.html">
+   29. First look into particle simulations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../moldy/moldy_1.html">
+   30. What is Molecular Dynamics (MD)
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Monte Carlo
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../extras/coding-notes-general.html">
+   31. On computation and codes
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/week02/notes-collection.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/week02/notes-collection.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Visualization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-van-der-waals-interaction-between-atom-i-and-j-is-most-commonly-modelled-by-the-lennard-jones-potential-begin-equation-label-eq-lj-u-mathrm-lj-r-ij-4-varepsilon-left-left-frac-sigma-r-ij-right-12">
+   The van der Waals interaction between atom
+   <span class="math notranslate nohighlight">
+    \(i\)
+   </span>
+   and
+   <span class="math notranslate nohighlight">
+    \(j\)
+   </span>
+   is most commonly modelled by the Lennard-Jones potential
+\begin{equation}
+\label{eq:LJ}
+U_\mathrm{LJ}(r_{ij}) = 4 \varepsilon
+\left[
+\left(
+\frac{\sigma}{r_{ij}}
+\right)^{12}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phase-field-models">
+   Phase field models
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#density-functional-theory-dft">
+   Density Functional Theory (DFT)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#born-oppenheimer-approximation">
+     Born-Oppenheimer approximation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#born-oppenheimer-molecular-dynamics">
+       Born-Oppenheimer molecular dynamics
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relation-to-classical-molecular-dynamics">
+       Relation to classical molecular dynamics
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relation-to-other-fields">
+       Relation to other fields
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-detailed-view-of-the-bo-approximation">
+       More detailed view of the BO approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kohn-sham-equations">
+     Kohn-Sham Equations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#density-functional-theory-in-practice">
+     Density Functional Theory in Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Visualization</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Visualization
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-van-der-waals-interaction-between-atom-i-and-j-is-most-commonly-modelled-by-the-lennard-jones-potential-begin-equation-label-eq-lj-u-mathrm-lj-r-ij-4-varepsilon-left-left-frac-sigma-r-ij-right-12">
+   The van der Waals interaction between atom
+   <span class="math notranslate nohighlight">
+    \(i\)
+   </span>
+   and
+   <span class="math notranslate nohighlight">
+    \(j\)
+   </span>
+   is most commonly modelled by the Lennard-Jones potential
+\begin{equation}
+\label{eq:LJ}
+U_\mathrm{LJ}(r_{ij}) = 4 \varepsilon
+\left[
+\left(
+\frac{\sigma}{r_{ij}}
+\right)^{12}
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#phase-field-models">
+   Phase field models
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#density-functional-theory-dft">
+   Density Functional Theory (DFT)
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#born-oppenheimer-approximation">
+     Born-Oppenheimer approximation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#born-oppenheimer-molecular-dynamics">
+       Born-Oppenheimer molecular dynamics
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relation-to-classical-molecular-dynamics">
+       Relation to classical molecular dynamics
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relation-to-other-fields">
+       Relation to other fields
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#more-detailed-view-of-the-bo-approximation">
+       More detailed view of the BO approximation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kohn-sham-equations">
+     Kohn-Sham Equations
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#density-functional-theory-in-practice">
+     Density Functional Theory in Practice
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="visualization">
+<h1>Visualization<a class="headerlink" href="#visualization" title="Permalink to this headline">¶</a></h1>
+<p>\begin{equation}
+\vec{F}<em>{i}=m</em>{i}\ddot{\vec{r}}_{i}
+\end{equation}</p>
+<p>\left{ \begin{array}{ll}
+\dot{\vec{r}}<em>{i}=\frac{\vec{p}</em>{i}}{m_{i}} \
+\dot{\vec{p}}<em>{i}=\vec{F}</em>{i} \end{array} \right. ,
+\end{equation}
+where the forces are given as
+\begin{equation}
+\vec{F}<em>{i}=-\frac{\partial{U}(\vec{r}</em>{i})}{\partial\vec{r}_{i}},
+\end{equation}
+where <span class="math notranslate nohighlight">\(m_{i}\)</span> stands for the mass of the particle and <span class="math notranslate nohighlight">\(\dot{\vec{r}}_{i}\)</span> denotes the derivative of <span class="math notranslate nohighlight">\(\vec{r}_{i}\)</span> with respect to time <span class="math notranslate nohighlight">\(t\)</span>.</p>
+<p>\subsection{Verlet algorithm}
+The Verlet algorithm [40] is obtained by addition of Taylor expansions about <span class="math notranslate nohighlight">\(\vec{r}(t)\)</span> in two different time directions.
+It reads as follows
+\begin{equation}
+\vec{r}<em>{i}(t+\Delta{t})=2\vec{r}</em>{i}(t)-\vec{r}<em>{i}(t-\Delta{t})+\frac{1}{m}\vec{F}</em>{i}(t)(\Delta{t})^2.
+\end{equation}
+The Verlet algorithm uses the position and force at time <span class="math notranslate nohighlight">\(t\)</span> and the position at time <span class="math notranslate nohighlight">\((t-\Delta{t})\)</span> to calculate the new position at time <span class="math notranslate nohighlight">\((t+\Delta{t})\)</span>. So at <span class="math notranslate nohighlight">\(t=0\)</span> the position at time <span class="math notranslate nohighlight">\((-\Delta{t})\)</span> is needed. This problem is usually solved by using a Taylor expansion about <span class="math notranslate nohighlight">\(\vec{r}(t)\)</span>.
+The velocity, which does not appear explicitly in the Verlet algorithm, can be obtained from the finite difference formula
+\begin{equation}
+\vec{v}<em>{i}(t)=\frac{\vec{r}</em>{i}(t+\Delta{t})-\vec{r}_{i}(t-\Delta{t})}{2\Delta{t}}
+\end{equation}
+In this algorithm the velocity term is always a step behind the position term.</p>
+<p>\subsection{Leapfrog algorithm}
+The leapfrog algorithm [42] is a modification of the Verlet algorithm. Eliminating the velocity from this algorithm shows that it is algebraically equal to the Verlet algorithm.
+It reads as
+\begin{eqnarray}
+\vec{v}<em>{i}\left(t+\frac{\Delta{t}}{2}\right) &amp;=&amp; \vec{v}</em>{i}\left(t-\frac{\Delta{t}}{2}\right)+\frac{1}{m_{i}}\vec{F}<em>{i}(t)\Delta{t} \nonumber\
+\vec{r}</em>{i}(t+\Delta{t}) &amp;=&amp; \vec{r}<em>{i}(t)+\vec{v}</em>{i}\left(t+\frac{\Delta{t}}{2}\right)\Delta{t} \nonumber\
+\end{eqnarray}
+The leapfrog algorithm uses the position and the force at time <span class="math notranslate nohighlight">\(t\)</span> and velocity at half a time step <span class="math notranslate nohighlight">\(\left(t-\frac{\Delta{t}}{2}\right)\)</span> to update the positions and velocities. The velocity leaps over the coordinate to give the next half-step value of the velocity, which is then used to calculate the new positions. That is where the name of this algorithm comes from.
+The velocity at a full time step is obtained as follows
+\begin{equation}
+\vec{v}<em>{i}=\frac{\vec{v}</em>{i}\left(t+\frac{\Delta{t}}{2}\right)+\vec{v}_{i}\left(t-\frac{\Delta{t}}{2}\right)}{2}.
+\end{equation}
+The advantage of programming the equation in the form of the leapfrog algorithm is that the velocity appears explicitly. But it would be desirable to obtain the velocity at the same time step as the position directly from the algorithm without further calculations.</p>
+</div>
+<div class="section" id="the-van-der-waals-interaction-between-atom-i-and-j-is-most-commonly-modelled-by-the-lennard-jones-potential-begin-equation-label-eq-lj-u-mathrm-lj-r-ij-4-varepsilon-left-left-frac-sigma-r-ij-right-12">
+<h1>The van der Waals interaction between atom <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> is most commonly modelled by the Lennard-Jones potential
+\begin{equation}
+\label{eq:LJ}
+U_\mathrm{LJ}(r_{ij}) = 4 \varepsilon
+\left[
+\left(
+\frac{\sigma}{r_{ij}}
+\right)^{12}<a class="headerlink" href="#the-van-der-waals-interaction-between-atom-i-and-j-is-most-commonly-modelled-by-the-lennard-jones-potential-begin-equation-label-eq-lj-u-mathrm-lj-r-ij-4-varepsilon-left-left-frac-sigma-r-ij-right-12" title="Permalink to this headline">¶</a></h1>
+<p>\left(
+\frac{\sigma}{r_{ij}}
+\right)^6,
+\right]
+\end{equation}
+where <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the value of the potential at its minimum and <span class="math notranslate nohighlight">\(\sigma\)</span> is the atomic diameter.
+The repulsive <span class="math notranslate nohighlight">\(r^{-12}\)</span> part in the Lennard-Jones potential cannot be derived from first principles and
+in principle any rapidly diverging term for <span class="math notranslate nohighlight">\(r \rightarrow 0\)</span> is possible. The above form is the most commonly
+used one.  The origin of the <span class="math notranslate nohighlight">\(r^{-12}\)</span> is in the Pauli exclusion principle, i.e., it has a quantum mechanical origin.</p>
+<p>In polymer modelling, it is often necessary to modify the Lennard-Jones potential in such a
+away that both good and bad solvent conditions can be be modelled. Good solvent conditions
+can be modelled by the purely repulsive so-called truncated and shifted Lennard-Jones potential,</p>
+<p>\begin{equation}
+\label{eq:lennardjones}
+U_{\rm LJ-ts} (r_{ij}) = \left{
+\begin{array}{ll}
+4,\epsilon \left[ \left(\frac{\sigma}{r_{ij}}\right)^{12}
+- \left(\frac{\sigma}{r_{ij}}\right)^{6} + \frac{1}{4}
+\right]
+&amp; ,, r_{ij} \leq r_c \
+0  &amp; ,, r_{ij} &gt; r_c
+\end{array}
+\right .
+\end{equation}</p>
+<p>The electrostatic interaction between two charged atoms <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(j\)</span> is represented by Coulomb’s law
+\begin{equation}
+\label{ }
+U(r_{ij}) =  \frac{q_i q_j}{4 \pi \varepsilon r_{ij}}
+\end{equation}
+where <span class="math notranslate nohighlight">\(q_i\)</span> are the charges and <span class="math notranslate nohighlight">\(\varepsilon\)</span> is the dielectric constant</p>
+<p>\subsection{Reaction field method}</p>
+<p>The next improvement is to consider the far field using a mean-field approximation.
+The basic idea is to treat all electrostatic
+interactions explicitly within the cutoff distance <span class="math notranslate nohighlight">\(r_{\text{cut}}\)</span>.
+For larger distance, the system is described by a mean-field approximation,
+typically based on the Poisson-Boltzmann equation. This approach is based on
+Onsager’s reaction-field idea dating back to 1936~\cite{Onsager_L_36}.
+In the reaction-field approximation,
+the continuum
+part is described by a dielectric constant  <span class="math notranslate nohighlight">\(\epsilon\)</span>,
+and one has to treat the boundary between the explicit and
+continuum descriptions with some care. This is particularly so
+in inhomogeneous systems and systems having surfaces. That is easier
+to understand if one
+considers the following example: the dielectric
+constant of water is about 78 whereas in the lipid bilayer
+core it is about 2-5~\cite{Koehorst:04vg}. This change occurs over a very short distance,
+and in practice there is a dielectric discontinuity at the water-bilayer
+interface.</p>
+<p>For
+<span class="math notranslate nohighlight">\(r&gt;r_{\text{cut}}\)</span>
+the system is treated on a mean-field level and is thus completely
+described by its dielectric constant
+<span class="math notranslate nohighlight">\(\epsilon\)</span>. The
+potential is
+\begin{equation}
+\mathcal{V}(r)=\frac{q_i q_j}{4\pi\epsilon_0 r}
+\left[ 1 + \frac{\epsilon -1}{2\epsilon+1}
+\left(\frac{r}{r_{\text{cut}}}\right)^3 \right] \
+- \frac{q_i q_j}{4\pi\epsilon_0 r_{\text{cut}}}
+\frac{3\epsilon}{2 \epsilon+1}
+\quad\text{for}\quad r\le r_{\text{cut}};.
+\label{eqReactionField}
+\end{equation}
+The second term makes the potential vanish at <span class="math notranslate nohighlight">\(r=r_{\text{cut}}\)</span>.</p>
+<p>The total electrostatic energy of N particles and its periodic images can be represented as the following sum
+\begin{equation}
+\label{ }
+U = \frac{1}{2} \sum_{\vec{n}} \left[
+\sum_{i=1}^N
+\sum_{i=1}^N q_i q_j | \vec{r}_{ij} + \vec{n}|^{-1}
+\right]
+\end{equation}
+where <span class="math notranslate nohighlight">\(q_i\)</span>, <span class="math notranslate nohighlight">\(q_j\)</span> are the charges including the electric constants and factors.  <span class="math notranslate nohighlight">\(\vec{n} = N_xL,n_yL,n_zL)\)</span>
+is the box vector, where <span class="math notranslate nohighlight">\(L\)</span> is the box length and <span class="math notranslate nohighlight">\(n_x\)</span>, <span class="math notranslate nohighlight">\(n_y\)</span> and <span class="math notranslate nohighlight">\(n_z\)</span> are integers.
+In the sum above, the case where <span class="math notranslate nohighlight">\(i=j \)</span>for   needs to be excluded.
+This sum is only conditionally convergent.</p>
+<p>The idea of the Ewald sum is to screen each charge of the neighboring charges
+by a radial Gaussian charge distribution of equal magnitude than the original charge, but of opposite sign</p>
+<p>\begin{equation}
+\label{ }
+\rho_i(\vec{r}) = q_i \kappa^3 \exp \left(</p>
+<ul class="simple">
+<li><p>\frac{\kappa^2 r^2}{\pi^{3/2}}
+\right)
+\end{equation}</p></li>
+</ul>
+<p>Here, <span class="math notranslate nohighlight">\(q_i\)</span> and<span class="math notranslate nohighlight">\( q_j\)</span> are the two charges, <span class="math notranslate nohighlight">\(\alpha\)</span> is Ewald parameter, <span class="math notranslate nohighlight">\({\bf k}\)</span> is the reciprocal
+lattice vector. <span class="math notranslate nohighlight">\(V =L_x \times L_y \times L_z\)</span> is the volume of the system. The system was periodic
+in the x-y -plane and we chose <span class="math notranslate nohighlight">\(L_x =L_y\)</span>. The last term in Eq.~(\ref{eq:2dewald}) is the correction
+term that accounts for the non-periodicity in z-direction. It depends on the geometry used for the
+Ewald summation (<span class="math notranslate nohighlight">\(P\)</span>) and the total dipole moment (<span class="math notranslate nohighlight">\({\bf M}\)</span>) of the system.</p>
+<p>\subsection{Routes to coarse graining}</p>
+<p>The methods that have been developed to achieve
+coarse grained descriptions of physical systems in general – and
+soft materials in particular – can be roughly divided into five
+categories:</p>
+<p>\begin{enumerate}
+\item Phenomenological methods such as dissipative particle dynamics or Ginzburg–Landau type approaches
+\item Analytical approaches based on the operator projection formalism
+\item Construction of
+coarse grained potentials by matching structure or forces between the two tiers of
+resolution</p>
+<p>\item The analysis of the occurrence rates of different processes
+\item Techniques such as self-organizing maps to coarse grain molecular representations
+\end{enumerate}</p>
+<p>\textbf{
+Some approaches for selecting the coarse-grained degrees of freedom have already been proposed. Some of these methods are based on the analysis of a single structure, either using  rigidity \cite{gohlke06} or topology \cite{arkhipov06:capsids} to define the interacting units. Another class of methods uses dynamic information from the detailed model, either in the form of normal modes \cite{zhang08} or representing the detailed model as a complex network \cite{gfeller08}. Here, we discuss a somewhat different approach based on analysis of the conformations produced by the simulation.
+}</p>
+<p>\subsection{Henderson theorem – relation to density functional theory \label{sec:henderson}}</p>
+<p>The Henderson theorem, powerful as it is, is remarkably simple to
+prove.  Let us summarize here the essence of the argument.
+Uniqueness of the potential follows as a beautiful application of
+the Gibbs-Bogoliubov inequality
+(also referred to as
+Gibbs-Bogoliubov-Feynman or Feynman-Kleinert variational principle~\cite{feynman:86xx}
+depending on the context).
+For two systems with Hamiltonians
+<span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span> the following inequality holds for their free
+energies:
+\begin{equation}
+F_1 \le F_2 + \langle H_2-H_1\rangle_1 \ , \label{eq:GibbsBogoliubov}
+\end{equation}
+where <span class="math notranslate nohighlight">\(\langle\cdots\rangle_1\)</span> denotes the (canonical) average
+appropriate for <span class="math notranslate nohighlight">\(H_1\)</span>.
+The
+key point is that equality holds \emph{if and only if} <span class="math notranslate nohighlight">\(H_1-H_2\)</span> is
+independent of all degrees of freedom, which implies that the pair
+potentials can differ only by a constant.  Consider now two systems
+which are identical in all respects except that the pair potential in
+one is <span class="math notranslate nohighlight">\(u_1\)</span> and the pair potential in the other is <span class="math notranslate nohighlight">\(u_2\)</span>. The
+corresponding two particle distributions are <span class="math notranslate nohighlight">\(g_1\)</span> and <span class="math notranslate nohighlight">\(g_2\)</span>. The
+uniqueness theorem asserts that if <span class="math notranslate nohighlight">\(g_1\equiv g_2\)</span> then <span class="math notranslate nohighlight">\(u_1-u_2\)</span> is a
+constant. Now, if <span class="math notranslate nohighlight">\(u_1\)</span> and <span class="math notranslate nohighlight">\(u_2\)</span> differ by more than just a constant,
+the same holds for <span class="math notranslate nohighlight">\(H_1\)</span> and <span class="math notranslate nohighlight">\(H_2\)</span>, and thus equality in
+Eq.~(\ref{eq:GibbsBogoliubov}) cannot hold, i.e., we have <span class="math notranslate nohighlight">\(F_1 &lt; F_2 +
+\langle H_2-H_1\rangle_1\)</span>, or more explicitly
+\begin{equation}
+f_1&lt;f_2+\frac{1}{2}n\int {\rm d}^3r;\big[u_2(r)-u_1(r)\big],g_1(r) \ . \label{eq:inequality1}
+\end{equation}
+where the <span class="math notranslate nohighlight">\(f_i\)</span> are the free energies per particle and <span class="math notranslate nohighlight">\(n\)</span> is the
+average particle density.  The clue is that the above argument can be
+repeated with system 1 and 2 interchanged, which leads to
+\begin{equation}
+f_2&lt;f_1+\frac{1}{2}n\int {\rm d}^3r;\big[u_1(r)-u_2(r)\big],g_2(r) \ . \label{eq:inequality2}
+\end{equation}
+If we now use the fact that <span class="math notranslate nohighlight">\(g_1\equiv g_2\)</span> and add the inequalities
+(\ref{eq:inequality1}) and (\ref{eq:inequality2}), we obtain the
+contradiction <span class="math notranslate nohighlight">\(0&lt;0\)</span>. This proves that the initial assumption that
+<span class="math notranslate nohighlight">\(u_1\)</span> and <span class="math notranslate nohighlight">\(u_2\)</span> differ by more than a constant must be wrong.</p>
+<p>\textbf{
+Uniqueness of the pair potential is thus an almost trivial matter.
+The same does not hold, however, for its \emph{existence}.  Much
+more work needs to be done in order to find out, whether the search
+for a pair potential that reproduces a desired <span class="math notranslate nohighlight">\(g(r)\)</span> is a quest worth
+beginning.  Luckily, the answer is in the affirmative, as Chayes \textit{et al.}
+have proven in their important papers from 1984 \cite{chayes84a,chayes84b}.
+The rigorous proof for the existence  \cite{chayes84a,chayes84b} is rather lengthy and will not be reproduced here. Basically, if the given RDF is a two-particle reduction of any admissible <span class="math notranslate nohighlight">\(N\)</span>-particle probability distribution, there always exists a pair potential that reproduces it \cite{chayes84b}. Admissible in this case refers to certain finiteness conditions. In addition, the above theorem holds even if the Hamiltonian of the system contains a fixed <span class="math notranslate nohighlight">\(N\)</span>-particle interaction term <span class="math notranslate nohighlight">\(W(x_1,\ldots,x_N)\)</span> (satisfying certain conditions): any such <span class="math notranslate nohighlight">\(W\)</span> can be augmented by a pair potential such that the system reproduces the given RDF.
+}</p>
+</div>
+<div class="section" id="phase-field-models">
+<h1>Phase field models<a class="headerlink" href="#phase-field-models" title="Permalink to this headline">¶</a></h1>
+<p>The above description does not include time dependence.
+How time dependence can be added is to use linear response
+theory and assume relaxational dynamics, i.e., the system
+is dissipative and it is driven to equilibrium, see
+Fig.~\ref{fig:doublewell}. The resulting models are often
+described as models A, B, C and so on depending on their
+symmetry properties, dimensionality of the order parameter
+and conservation laws~\cite{hohenberg77a}.</p>
+<p>Being the simplest, model A serves as an example. It is
+a non-conserved system and the equation of motion can
+be given as</p>
+<p>\begin{equation}
+\frac{\partial \Psi(\vec{x},t)}{\partial t} = - \Gamma
+\frac{\delta {\cal F}[\Psi(\vec{x},t)]}{\delta \Psi(\vec{x},t)}</p>
+<ul class="simple">
+<li><p>\eta(\vec{x},t),
+\label{eq:modelA}
+\end{equation}</p></li>
+</ul>
+<p>where we have included thermal fluctuations as Gaussian
+random noise with the first and second moments defined as</p>
+<p>\begin{equation}
+\langle \eta(\vec{x},t) \rangle = 0
+\end{equation}</p>
+<p>and</p>
+<p>\begin{equation}
+\langle \eta(\vec{x},t)  \eta(\vec{x}’,t’)
+\rangle = 2 \Gamma k_\mathrm{B} T\delta(\vec{x}-\vec{x}’) \delta(t-t’).
+\end{equation}</p>
+<p>The angular brackets denote an average and <span class="math notranslate nohighlight">\(\Gamma\)</span> is
+a kinetic coefficient describing the relaxation rate.
+An example of the evolution of a system described by model A
+is given in Fig.~\ref{fig:modelA}.</p>
+<p>Other models can be obtained by including conservation
+laws, e.g., the dynamical equation of motion for a conserved
+order parameter is given by model B,</p>
+<p>\begin{equation}
+\frac{\partial \Psi(\vec{x},t)}{\partial t} = \Gamma \nabla \left[
+\frac{\delta {\cal F}[\Psi(\vec{x},t)]}{\delta \Psi(\vec{x},t)}</p>
+<ul class="simple">
+<li><p>\eta(\vec{x},t) \right].
+\label{eq:modelB}
+\end{equation}</p></li>
+</ul>
+<p>This can be derived using the continuity equation.</p>
+<p>The system may have several order parameters that are
+coupled, thus leading to more complicated free energies
+and equations of motion, see  Ala-Nissila et al.
+\cite{softsimu:tapio} and references therein.</p>
+<p>It is rather surprising that this type of approach has,
+thus far, had only limited attention in soft matter and
+biological modeling. There are a few notable exceptions,
+though. Shore et al. \cite{shore96:a,shore97:a} coupled
+a phase-field model to Navier–Stokes equation including
+viscoelasticity to melt fracture in polymer extrusion
+experiments. The details of that model are beyond this
+review but it suffices to note that the study of Shore
+et al. is a good example of the power of the phase-field
+approach as it provides physical insight into, in this case
+instabilities, both fundamentally and industrially
+important problems.</p>
+<p>Other examples of the use of field theoretical models in
+soft matter include the OCTA software package which in
+one of its parts uses self-consistent field theory from
+the Nagoya group \cite{doi02:a,doi03:a}. Self-consistent
+field theory has been used in the theoretical description
+of polymers for a long time. A very recent example of the
+developments in that field is the elegant study of tetrablock
+copolymers by Drolet and Fredrickson~\cite{drolet99:a}.</p>
+<p>Another major effort to build modeling software around
+field-theoretical ideas is the MESODYN project of the
+Leiden group \cite{maurits98,fraaije:1997}. They use the
+Ginzburg–Landau approach and density functional theory
+to build a systematic and computationally tractable system
+for polymer melts. A detailed description is again beyond
+this review, but with their approach it is possible to
+study phase separation even in three dimensional systems.
+This approach is closely related to model B of critical
+dynamics \cite{hohenberg77a} as discussed above.</p>
+<p>\section{Methodological issues in molecular simulations
+\label{sec:methodological_issues}}</p>
+<p>One of the intriguing issues in science is indeed that there
+is the artistic side, too. The art of doing science. In the
+field of molecular simulations and computational sciences, this
+is largely related to the inventions and new ideas of seeing things
+done in an accurate but efficient manner. This brings us to the
+methodological side of doing molecular simulations. In this Section,
+we consider a few aspects related to both atomistic and coarse-grained
+descriptions of molecular systems that illustrate the importance
+of developing the methodology.</p>
+<p>We discuss three highly important
+methodological issues whose role for the reliability and
+accuracy of molecular simulations is particularly significant.<br />
+First, especially for molecular dynamics simulations of
+biologically relevant soft matter systems on atomic level,
+the treatment of long-range electrostatic interactions is
+a major issue. If this is not handled with care, the
+interpretation of simulation results may be very problematic due
+to the underlying artifacts caused by the mistreatment of
+electrostatics. Second, as all stochastic simulation methods are
+based on the use of noise produced by so-called pseudorandom
+number generators, the quality of pseudorandom number sequences
+is of prominent importance in all cases where they are
+employed to generate the dynamics for the systems under study.
+Since pseudorandom number generators produce deterministic
+rather than unpredictable sequences of numbers, the ``randomness’’
+of pseudorandom numbers is a very subtle issue and should never
+be taken for granted. Finally, third, we discuss an old issue
+that has been thought to be overcome several years ago:
+the artifacts due to integration schemes that yield the
+dynamics for systems governed by Newton’s equations of
+motion. In contrast to classical MD, where this issue is
+well under control, in stochastic simulation techniques
+such as dissipative particle dynamics the case is more
+subtle. Here we discuss most recent developments in this
+field and show how the problems can be overcome in an
+efficient and reliable fashion.</p>
+<p>19## Force fields in classical molecular dynamics</p>
+<p>The {\it force field} is the heart of molecular
+computer simulations. It describes the internal energy
+of the system at any moment of time, and obviously
+consists of a number of terms, each of which describes
+some physical process. Generally speaking, for a system
+of <span class="math notranslate nohighlight">\(N\)</span> particles whose coordinates are given by <span class="math notranslate nohighlight">\(\{\vec{r}_i\} \)</span>,
+one can write down the force field as follows:</p>
+<p>\begin{equation}
+V = \sum_{i} v_1(\vec{r}<em>i) +
+\sum</em>{i} \sum_{j &gt; i} v_2(\vec{r}<em>i,\vec{r}<em>j) +
+\sum</em>{i} \sum</em>{j &gt; i} \sum_{k &gt; j &gt; i}
+v_3(\vec{r}_i,\vec{r}_j,\vec{r}_k) + \cdots .
+\end{equation}</p>
+<p>The potential energy of the system is therefore divided into
+terms describing one-body, two-body, and three-body interactions,
+and other higher-order interactions that have not been listed
+here. The one-body interaction (<span class="math notranslate nohighlight">\(v_1\)</span>) can be as simple as the
+action of a uniform electric field on a single atom. Two-body
+interactions (<span class="math notranslate nohighlight">\(v_2\)</span>) are obviously those between two
+interacting particles, and are usually divided into bonded
+and non-bonded interactions. Bonded two-body interactions
+such as bond stretching are usually those between particles
+that are bonded by a covalent bond, while non-bonded
+interactions such as Coulombic interactions are between
+those atoms that are not bonded, such as atoms in different
+molecules. Higher order interactions such as three- (<span class="math notranslate nohighlight">\(v_3\)</span>)
+and four-body interactions include bond bending, torsional
+interactions, etc.</p>
+<p>In practice, a simple force field typically used for biologically</p>
+<p>relevant molecules can look like the following:</p>
+<p>\begin{eqnarray}
+\label{eq:forcefield}
+V &amp; = &amp; \sum_{\mathrm{bonds}}
+\frac{k_i^\mathrm{b}}{2}(l_i - l_i^{\mathrm{ref}})^2 +
+\sum_{\mathrm{angles}}\frac{k_i^\mathrm{a}}{2}
+(\theta_i - \theta_i^{\mathrm{ref}})^2 +
+\sum_{\mathrm{torsions}}\frac{V_T}{2}
+(1 + \cos(n\omega - \gamma)) + \ \nonumber
+&amp; &amp;  \sum_{i=1}^{N-1} \sum_{j=i+1}^{N}
+\left( 4\epsilon_{ij}
+\left[
+\left( \frac{\sigma_{ij}}{r_{ij}}\right)^{12} -
+\left( \frac{\sigma_{ij}}{r_{ij}}\right)^6
+\right] +
+\frac{q_i q_j}{4\pi \epsilon_0 r_{ij}}
+\right)  .
+\end{eqnarray}</p>
+<p>Here the first term on the right-hand side describes the
+interaction due to bond stretching for a pair of bonded particles,
+whose reference distance is chosen to be <span class="math notranslate nohighlight">\(l_i^\mathrm{ref}\)</span>.
+The interaction in the present case is harmonic, thus it is
+best justified for small fluctuations. As a remark, note that
+<span class="math notranslate nohighlight">\(l_i^\mathrm{ref}\)</span> is not the equilibrium distance because
+that depends on thermodynamic conditions as well as the
+composition of the system. Rather, <span class="math notranslate nohighlight">\(l_i^\mathrm{ref}\)</span> should
+be regarded as the distance that two particles will adapt to
+in the absence of any other interactions in a system. The
+second term in Eq.~(\ref{eq:forcefield}) is the (harmonic)
+bending interaction for three consecutive particles
+(A,–,B,–,C) in the same chain-like piece of a molecule,
+the reference value of the valence angle being
+<span class="math notranslate nohighlight">\(\theta_i^\mathrm{ref}\)</span>. The torsional interaction
+presented third is a four-body term, while a short-range
+Lennard-Jones 6,–,12 potential is often used to describe
+the steep repulsion due to the Pauli-exclusion principle
+as well as van der Waals interactions due to dispersion
+forces. Finally, there is an electrostatic term for long-range
+Coulombic interactions for a pair of charged particles
+whose distance from each other is <span class="math notranslate nohighlight">\(r_{ij}\)</span>.</p>
+<p>For clarity, let us emphasize here that, to define a force
+field, one must specify not only the set of potential energy
+functions in a force field but also the force-field parameters
+(as well as other practical details such as cutoff distances
+used in truncating long-range interactions) used in the
+calculations. If one of the parameters is changed, then
+the force field is also changed.</p>
+<ul class="simple">
+<li><p>1973: Pomeau et al: Square lattice → not symmetric enough</p></li>
+<li><p>1983: Pomeau et al: for Lattice Gas Automata to Lattice Boltzmann</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">IFrame</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">FileLink</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display_pdf</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">display_markdown</span>
+
+<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span>
+<span class="c1">#import os</span>
+
+
+
+<span class="c1">#report_path = &quot;/home/mkarttu/jp-2020-07546k_Proof_hi_backup.pdf&quot;</span>
+<span class="c1">#rel_report_path = os.path.relpath(report_path)</span>
+
+<span class="c1">#display(IFrame(&#39;https://yle.fi/aihe/tekstitv?P=201&#39;, &#39;100%&#39;, &#39;600px&#39;))</span>
+<span class="c1">#display(IFrame(&#39;/home/mkarttu/jp-2020-07546k_Proof_hi_backup.pdf&#39;, &#39;100%&#39;, &#39;600px&#39;))</span>
+<span class="c1">#IFrame(rel_report_path, width=900, height=650)</span>
+<span class="c1">#display(IFrame(&#39;jp-2020-07546k_Proof_hi_backup.pdf&#39;, width=1000, height=650))</span>
+<span class="c1">#local_file = FileLink(&quot;diffusion.md&quot;)</span>
+<span class="c1">#display_markdown(local_file)</span>
+<span class="c1">#display_markdown(&quot;./diffusion.md&quot;)</span>
+<span class="c1">#display_pdf(&#39;jp-2020-07546k_Proof_hi_backup.pdf&#39;)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="density-functional-theory-dft">
+<h1>Density Functional Theory (DFT)<a class="headerlink" href="#density-functional-theory-dft" title="Permalink to this headline">¶</a></h1>
+<p>Understanding of many-body interacting system of electrons and nuclei re-
+quires electronic structure methods such as Density Functional Theory for the
+description of electronic and structural properties of systems. This chapter
+introduces the many-body particle Hamiltonian of a system of interacting elec-
+trons and nuclei and reviews the essential definitions and formulations that
+yield the single particle Kohn-Sham equations.</p>
+<p>The question of how to describe a system of many-body interacting electrons
+traces back to decades ago [38, 37]. The difficulty is not because the related
+equations of motions are not known, but in how to solve them. The non-
+relativistic Hamiltonian of a system of interacting electrons and nuclei can be
+written as</p>
+<p>The obstacle is how to solve the time-independent Schrödinger equation
+for a system of N + Nn interacting particles in which the number of electrons
+and nuclei is of the order of Avogadro’s number ∼ 1023:
+[Hˆ
+n + Hˆ
+el]Ψ({r}, {R}) = EΨ({r}, {R}). (3.2)
+where E is the eigenvalue and Ψ({r}, {R}) is the eigenfunction of the coupled
+electronic-nuclear system which is a function of all electronic ({r} = r1, r2, … ,
+rN ) and nuclear ({R} = R1, R2, … , RNn
+) variables. E gives the total energy
+of the system and Ψ({r}, {R}) yields the electron distribution.
+One way out of this dilemma is to simplify the Hamiltonian</p>
+<div class="section" id="born-oppenheimer-approximation">
+<h2>Born-Oppenheimer approximation<a class="headerlink" href="#born-oppenheimer-approximation" title="Permalink to this headline">¶</a></h2>
+<p>The Born-Oppenheimer (BO) approximation uses the fact that electrons are much lighter than the nuclei (protons and neutrons).
+The mass of an electron is <span class="math notranslate nohighlight">\(m_e \approx 9.1094 \times 10^{-31}\)</span> kg, while proton weighs <span class="math notranslate nohighlight">\(m_p \approx 1.6726 \times 10^{-27}\)</span> kg and neutron <span class="math notranslate nohighlight">\(m_n \approx 1.6749 \times 10^{-27}\)</span> kg. Thus, the difference between <span class="math notranslate nohighlight">\(m_e\)</span> and <span class="math notranslate nohighlight">\(m_p\)</span> is about four orders of magnitude. This very large difference in masses means that electrons move much faster than the nuclei and if the nuclei moved / are displaced, the electrons respond my adjusting almost instantaneously. For the same reason, the opposite is not true: the nuclei are not influenced by the motion of the electrons and they can be seen as remaining fixed from the electrons’ perspective. This allows the separation of motions to electronic and nuclear, that is, they are treated as independent of each other. This is called the <em>Born-Oppenheimer approximation</em>. It was originally proposed by <a class="reference external" href="https://en.wikipedia.org/wiki/Max_Born">Max Born</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/J._Robert_Oppenheimer">J. Robert Oppenheimer</a> in their article titled <em>Zur Quantentheorie der Molekeln</em> in 1927.</p>
+<div class="section" id="born-oppenheimer-molecular-dynamics">
+<h3>Born-Oppenheimer molecular dynamics<a class="headerlink" href="#born-oppenheimer-molecular-dynamics" title="Permalink to this headline">¶</a></h3>
+<p>First the positions of the nuclei are assumed to be fixed and the Schr�dinger equation is solved under this assumption, resulting the energy states of the electrons. Then the Schr�dinger equation is solved for the nuclear motion by using the electronic ground states are used as the potential energy.</p>
+</div>
+<div class="section" id="relation-to-classical-molecular-dynamics">
+<h3>Relation to classical molecular dynamics<a class="headerlink" href="#relation-to-classical-molecular-dynamics" title="Permalink to this headline">¶</a></h3>
+<p>When developing a force field for the classical representation of atoms the Born-Oppenheimer approximation to the potential energy with respect to the nuclei can be seen as the function representing the potential and the electrons as implicit variables of the potential. By treating the atoms in a classical way, computation time is saved and larger systems can be simulated for a longer time span. So in classical MD a coarse-grained model of an atom is used, where the nucleus and the electrons are combined in one particle.</p>
+<p>This is also the basis of classical molecular dynamics.</p>
+</div>
+<div class="section" id="relation-to-other-fields">
+<h3>Relation to other fields<a class="headerlink" href="#relation-to-other-fields" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Spectroscopy</p></li>
+</ul>
+</div>
+<div class="section" id="more-detailed-view-of-the-bo-approximation">
+<h3>More detailed view of the BO approximation<a class="headerlink" href="#more-detailed-view-of-the-bo-approximation" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="kohn-sham-equations">
+<h2>Kohn-Sham Equations<a class="headerlink" href="#kohn-sham-equations" title="Permalink to this headline">¶</a></h2>
+<p>The electronic Schrödinger equation within the Born-Oppenheimer approximation, eq. 3.3 is not exactly solvable because of electron-electron interactions.
+Several quantum chemistry approaches have been proposed in order to solve it.
+Methods include Hartree [73], Hartee-Fock [74], configuration interaction [75]
+method, variational Monte Carlo [76, 77], etc. which are based on optimizing
+many-body wave-functions. These methods severely suffer from the dimen-
+sionality bottleneck as the computational cost grows as ∼ N4−6 with system
+size N. Furthermore, exchange and electron correlations are not considered in
+the Hartree method. Electron correlations are not included in Hartree-Fock
+method, however, the exchange effects are included in terms of a single Slater
+determinant to account for the Pauli exclusion principle. All these approaches
+aim to predict and explain experimental measurements and, therefore, one
+needs to calculate the expectation values of observables. For this the know-
+ledge of the full wave-function is not mandatory [68, 69, 70, 71].
+DFT is based on the original works of Hohenberg and Kohn [38, 37] in
+which they indicate that all the information of the correlated many-body
+system can be described as a functional of the ground state density. The
+Hohenberg-Kohn theorems [38, 37] for a system of N interacting fermions are
+the following:</p>
+<ol class="simple">
+<li><p>There is a one-to-one correspondence between the ground state density
+n0(r) and external potential Vext(r) applied to a system of interacting
+fermions.</p></li>
+<li><p>The energy of a system of interacting particles is a universal functional
+of its density n(r), E[n(r)], and the exact ground state energy of thesystem is the global minimum of this energy functional.</p></li>
+</ol>
+</div>
+<div class="section" id="density-functional-theory-in-practice">
+<h2>Density Functional Theory in Practice<a class="headerlink" href="#density-functional-theory-in-practice" title="Permalink to this headline">¶</a></h2>
+<table class="lblue" style="float: right" width="680">
+  <tr>
+    <td>
+       <img src="./img/kohn-sham-sc.svg" width="680px" />     
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Some common computer simulation methods and typical their time scales. Rough idea of systems sizes in terms of atoms and lengths is given when appropriate. The typical time steps in classical molecular dynamics and coarse-grained MD are also shown.
+     </td>
+   </tr>
+</table>  
+<p>3.6.1 Norm-conserving pseudopotential
+There is another term in the KS Hamiltonian which includes the electron-
+nuclear Coulomb interactions and this is Vext(r). Electron-nuclear Coulomb
+interactions are singular near the nuclear core. However, core electrons are
+localized around each atom and they have a weak interaction with the core
+electrons of other atoms. Therefore, the external potential generated by the
+core electrons behave like a nucleus core. One can replace the external po-
+tential of the original all electron problem, including those of nucleus and the
+core electrons by a smooth non-singular potential known as pseudopotential
+which only acts on the valence electrons. Then, the Kohn-Sham calculations
+become limited to valence electrons</p>
+<p>Once core electrons are removed, pseudo wave-functions are nodeless in the
+core region (no zero in the core region) and outside that region the pseudopo-
+tential and pseudo wave-functions are the same as the all-electron ones. An
+empirical or a semi-empirical pseudopotential is based on fitting the effective
+potential or its ionic components to empirical data and is not transferable to
+different chemical environments. Norm conserving pseudopotential is a set
+of ab initio pseudopotential that are not fitted to experimental data and are
+transferable. Such a pseudopotential is constructed to satisfy the following
+conditions [69]:</p>
+<ol class="simple">
+<li><p>The eigenvalues resulting from the pseudopotential are identical to the
+all-electron eigenvalues.</p></li>
+<li><p>Outside a cut-off region the pseudopotential is equal to the all-electron
+potential.</p></li>
+<li><p>Outside the cut-off region the pseudo wave-function is the same as the
+all-electron one. At the cut-off the logarithmic derivatives of pseudo
+wave-function and the all electron one is the same.</p></li>
+<li><p>Inside the cut-off region the charge from pseudopotential calculations
+and all-electron calculations coincide.
+The cut-off region controls the accuracy of the pseudopotential. The pseudo-
+potential is more transferable if the cut-off is smaller [69].
+By removing the core electrons a considerable part of total energy is dis-
+regarded and hence only differences in total energy due to the valence charge
+readjustment are meaningful in pseudopotential calculations [68, 69, 88].</p></li>
+</ol>
+<p>Basis sets
+By choosing the appropriate exchange-correlation functional and pseudopoten-
+tial, HKS is defined and one can solve the Kohn-Sham equations numerically.
+For this purpose one needs to use a set of basis functions in order to represent
+the single-particle wave-functions. The basis functions are chosen depending
+on several factors, e.g. ease of implementation, computational cost, precision
+and geometry of the system [88]. In general the basis sets are either local-
+ized in k space, like the plane-wave basis, or localized in real space. In this
+work [48, 49], we employed Gaussian basis sets. Accordingly, we restrict our
+discussion to Gaussian basis sets.
+Gaussian functions are localized in Fourier space and real space. Gaussian
+orbitals either can be given in polar coordinates or Cartesian coordinates as</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m_ele</span> <span class="o">=</span> <span class="mf">9.1094</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">31</span><span class="p">)</span>
+<span class="n">m_pro</span> <span class="o">=</span> <span class="mf">1.6726</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">27</span><span class="p">)</span>
+<span class="n">m_neu</span> <span class="o">=</span> <span class="mf">1.6749</span><span class="o">*</span><span class="mi">10</span><span class="o">**</span><span class="p">(</span><span class="o">-</span><span class="mi">27</span><span class="p">)</span>
+<span class="n">ratio</span> <span class="o">=</span> <span class="n">m_ele</span><span class="o">/</span><span class="n">m_pro</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.000544625134521105
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/week02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

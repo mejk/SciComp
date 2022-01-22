@@ -5,7 +5,7 @@
 
 <hr>
 
-
+<div class="bg-light text-info border border-info">
 <small>
 
 ```{epigraph}
@@ -13,9 +13,8 @@
 
 -- [Janet Reno](https://en.wikipedia.org/wiki/Janet_Reno) 
 ```
-
 </small>
-
+</div><p></p>
 
 
 ## Target audience

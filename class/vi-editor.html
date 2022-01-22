@@ -71,6 +71,27 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/vi-editor.html" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -134,33 +155,38 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="week02/Linux-basics.html">
+   3. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="week02/linux-basic-commands-2.html">
-   3. Linux: Some basic &amp; useful commands
+   4. Linux: Some basic &amp; useful commands
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week02/python-installation.html">
-   4. Installation of Python and Jupyter
+   5. Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week02/python-virtual-environment.html">
-   5. Python virtual environments
+   6. Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week02/jupyter-intro.html">
-   6. Jupyter Notebook / Jupyter Lab
+   7. Jupyter Notebook / Jupyter Lab
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week02/editing-ascii.html">
-   7. Editing ASCII files
+   8. Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week02/vi-editor.html">
-   8. The
+   9. The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -171,7 +197,34 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week02/helpful-software.html">
-   9. Helpful software
+   10. Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week02/command-line-skill-check.html">
+   11. Test your skills: Command line
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week01/intro-to-modeling.html">
+   12. Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="week02/coding-notes-general.html">
+   13. On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="week02/python-intro.html">
+   14. Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -183,46 +236,12 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="week01/hpc-intro.html">
-   10. Background on computers, computing and High Performance Computing
+   15. Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="week01/simulation-general.html">
-   11. General aspects of modeling and computer simulations
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Operating systems
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="week02/Linux-basics.html">
-   12. Linux - the basics
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
-  MODULE: Python &amp; programming
- </span>
-</p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../extras/coding-notes-general.html">
-   13. On computation and codes
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="week02/python-intro.html">
-   14. Brief introduction to Python
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../extras/python-virtual-environment.html">
-   15. Python virtual environments
+   16. General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
@@ -511,25 +530,25 @@
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">filename.txt</span></code> exists it will be simply opened. If it doesn’t exist, it will be created.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="984f3924-dc6f-47bc-a596-34764f67b0b2" name="c610739c-79aa-4134-954b-c2007f1e67a5" type="radio">
-</input><label class="tabbed-label" for="984f3924-dc6f-47bc-a596-34764f67b0b2">
+<input checked="checked" id="4cab5d2a-5c6e-46da-a6fa-81e96875299b" name="1932dccf-0f18-41d7-a5bc-8ddfc99f6fed" type="radio">
+</input><label class="tabbed-label" for="4cab5d2a-5c6e-46da-a6fa-81e96875299b">
 Starting vi</label><div class="tabbed-content docutils">
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/vi-insert-mode1.png"><img alt="vi" src="../_images/vi-insert-mode1.png" style="width: 650px;" /></a>
+<a class="reference internal image-reference" href="../_images/vi-insert-mode.png"><img alt="vi" src="../_images/vi-insert-mode.png" style="width: 650px;" /></a>
 </div>
 </div>
-<input id="59dc8348-7396-44e2-a460-8facf85f49ec" name="c610739c-79aa-4134-954b-c2007f1e67a5" type="radio">
-</input><label class="tabbed-label" for="59dc8348-7396-44e2-a460-8facf85f49ec">
+<input id="e2f92c86-0162-4d93-a039-8de13bdf655c" name="1932dccf-0f18-41d7-a5bc-8ddfc99f6fed" type="radio">
+</input><label class="tabbed-label" for="e2f92c86-0162-4d93-a039-8de13bdf655c">
 Searching in vi</label><div class="tabbed-content docutils">
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/vi-insert-search1.png"><img alt="vi search" src="../_images/vi-insert-search1.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/vi-insert-search.png"><img alt="vi search" src="../_images/vi-insert-search.png" style="width: 600px;" /></a>
 </div>
 </div>
-<input id="aba266b2-a64c-47b2-99dd-5a54bce620ba" name="c610739c-79aa-4134-954b-c2007f1e67a5" type="radio">
-</input><label class="tabbed-label" for="aba266b2-a64c-47b2-99dd-5a54bce620ba">
+<input id="8f520b83-f114-4f64-b887-44acc2d231a8" name="1932dccf-0f18-41d7-a5bc-8ddfc99f6fed" type="radio">
+</input><label class="tabbed-label" for="8f520b83-f114-4f64-b887-44acc2d231a8">
 Saving in vi</label><div class="tabbed-content docutils">
 <div class="figure align-center">
-<a class="reference internal image-reference" href="../_images/vi-save1.png"><img alt="vi save" src="../_images/vi-save1.png" style="width: 600px;" /></a>
+<a class="reference internal image-reference" href="../_images/vi-save.png"><img alt="vi save" src="../_images/vi-save.png" style="width: 600px;" /></a>
 </div>
 </div>
 </div>
