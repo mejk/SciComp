@@ -61,3 +61,16 @@ Help:
 ----
 
 https://datascientistforai.github.io/DataScienceStudy/publish/gh-pages.html
+
+###
+
+eval "$(ssh-agent -s)"
+
+Then, add your private key to ssh-agent with:
+
+ssh-add ~/.ssh/id_rsa
+
+
+Finally, test your authentication with:
+
+ssh -T git@github.com

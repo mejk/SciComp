@@ -123,9 +123,9 @@
 # 
 # LCG generators are defined by
 # 
-# \begin{equation}
+# $$
 # x_{i+1} = (ax_i + c )\, \mathrm{mod} \, m
-# \end{equation}
+# $$
 #         
 # The above is a recurrence relation and numbers $\{x_i \}$ form a set of pseudo-random numbers. Notice also the above equation is defines line with a modulo operation added. The modulo operation means that the result is wrapped if it exceeds the limit set by $m$ since the modulo operation returns the remainder of $(ax_i + c)/m$. LCG generator is said to be of full period if the period is exactly $m$. 
 # 
@@ -139,15 +139,15 @@
 # 
 # In addition, one needs a seed ($x_0$) to start the random number generator. The seed has to be supplied when the RNG is called the first time. Using the above parameters, the following notation is typically used for LCGs: 
 # 
-# \begin{equation}
+# $$
 # \mathrm{LCG}(a,c,m)
-# \end{equation}
+# $$
 # 
-# It has been well established that LCGs are very sensitive to the choice of $a$, $c$, and $m$. Generators with $c=0$ are called multiplicative congruential generators (MCG). Sometimes generators with $c \> 0$ are called mixed. For MCG's $0 < s < m$. It has been shown \cite{xx} that MCGs  are never full period. For MCGs, typical notation is thus 
+# It has been well established that LCGs are very sensitive to the choice of $a$, $c$, and $m$. Generators with $c=0$ are called multiplicative congruential generators (MCG). Sometimes generators with $c \> 0$ are called mixed. For MCG's $0 < s < m$. It has been shown that MCGs  are never full period. For MCGs, typical notation is thus 
 # 
-# \begin{equation}
+# $$
 # \mathrm{LCG}(a,m).
-# \end{equation}
+# $$
 # 
 # Note on choosing $a$, $c$, and $m$: First of all, using a larger value for $m$ (for a 32-bit computer one typically has $m=2^{32}$) gives a long period as it goes through all accessible numbers. That is not enough, but $a$ and $c$ have to be chose carefully as well. That is somewhat of an art and there are tables listing 'safe' numbers $a$, $c$, and $m$. 
 # 
@@ -193,7 +193,7 @@
 # $$
 # \begin{array}{| l| l | l | l | l | l | l | l | l | l | l |} \hline
 #       x_0 & x_1 & x_2 & x_3 & x_4 & x_5 & x_6 & x_7 & x_8 & x_9 & x_{10}    \\ \hline
-#       0     &  1     & 1    &  2     &  3    & 5     & 8      & 13   &  32   & 34  & 55 \\  \hline
+#       0     &  1     & 1    &  2     &  3    & 5     & 8      & 13   &  21   & 34  & 55 \\  \hline
 # \end{array}
 # $$
 # 
@@ -260,10 +260,12 @@
 # $$
 # and
 # 
-# \begin{eqnarray}
+# $$
+# \begin{array}{ll}
 # g_1 & = & \sqrt{-2 \ln (r_1) \cos ( 2 \pi r_2)} \\
 # g_2 & = &  \sqrt{-2 \ln (r_1) \sin ( 2 \pi r_2)}
-# \end{eqnarray}
+# \end{array}
+# $$
 # 
 # Algorithmically this method is fine, there is no wasted effort in terms of misses or something like that. But in terms of computational efficiency, it leaves much to be hoped for. It requires computation of the functions such a square root, $\log$, $\sin$ and $\cos$. Calculating all of these, and especially the last three ones, is excruciatingly slow compared to the simple arithmetic operations - it would be nice to have a more efficient routine. 
 # 
