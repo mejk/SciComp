@@ -659,9 +659,10 @@ random number between 1 and 20.</p>
 <h3><span class="section-number">17.4.1. </span>Linear Congruential Generator (LCG)<a class="headerlink" href="#linear-congruential-generator-lcg" title="Permalink to this headline">¶</a></h3>
 <p>Linear Congruential Generator are the one of the oldest and most common types of pseudo-random number generator. They are very easy to implement, they are fast, and use minimal amount of memory. They are also very portable, but the downside is that they do not produce high-quality random numbers.  Thus, when randomness is critical, LCGs should not be used. Such applications include calculation of critical exponents in continuous phase transitions and cryptography.</p>
 <p>LCG generators are defined by</p>
-<p>\begin{equation}
-x_{i+1} = (ax_i + c ), \mathrm{mod} , m
-\end{equation}</p>
+<div class="math notranslate nohighlight">
+\[
+x_{i+1} = (ax_i + c )\, \mathrm{mod} \, m
+\]</div>
 <p>The above is a recurrence relation and numbers <span class="math notranslate nohighlight">\(\{x_i \}\)</span> form a set of pseudo-random numbers. Notice also the above equation is defines line with a modulo operation added. The modulo operation means that the result is wrapped if it exceeds the limit set by <span class="math notranslate nohighlight">\(m\)</span> since the modulo operation returns the remainder of <span class="math notranslate nohighlight">\((ax_i + c)/m\)</span>. LCG generator is said to be of full period if the period is exactly <span class="math notranslate nohighlight">\(m\)</span>.</p>
 <p>The parameters are defined as follows</p>
 <ul class="simple">
@@ -670,13 +671,15 @@ x_{i+1} = (ax_i + c ), \mathrm{mod} , m
 <li><p><span class="math notranslate nohighlight">\(m\)</span>: period. The operation is even faster if <span class="math notranslate nohighlight">\(m\)</span> is chosen to be a power of 2.</p></li>
 </ul>
 <p>In addition, one needs a seed (<span class="math notranslate nohighlight">\(x_0\)</span>) to start the random number generator. The seed has to be supplied when the RNG is called the first time. Using the above parameters, the following notation is typically used for LCGs:</p>
-<p>\begin{equation}
+<div class="math notranslate nohighlight">
+\[
 \mathrm{LCG}(a,c,m)
-\end{equation}</p>
-<p>It has been well established that LCGs are very sensitive to the choice of <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(m\)</span>. Generators with <span class="math notranslate nohighlight">\(c=0\)</span> are called multiplicative congruential generators (MCG). Sometimes generators with <span class="math notranslate nohighlight">\(c \&gt; 0\)</span> are called mixed. For MCG’s <span class="math notranslate nohighlight">\(0 &lt; s &lt; m\)</span>. It has been shown \cite{xx} that MCGs  are never full period. For MCGs, typical notation is thus</p>
-<p>\begin{equation}
+\]</div>
+<p>It has been well established that LCGs are very sensitive to the choice of <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(m\)</span>. Generators with <span class="math notranslate nohighlight">\(c=0\)</span> are called multiplicative congruential generators (MCG). Sometimes generators with <span class="math notranslate nohighlight">\(c \&gt; 0\)</span> are called mixed. For MCG’s <span class="math notranslate nohighlight">\(0 &lt; s &lt; m\)</span>. It has been shown that MCGs  are never full period. For MCGs, typical notation is thus</p>
+<div class="math notranslate nohighlight">
+\[
 \mathrm{LCG}(a,m).
-\end{equation}</p>
+\]</div>
 <p>Note on choosing <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(m\)</span>: First of all, using a larger value for <span class="math notranslate nohighlight">\(m\)</span> (for a 32-bit computer one typically has <span class="math notranslate nohighlight">\(m=2^{32}\)</span>) gives a long period as it goes through all accessible numbers. That is not enough, but <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(c\)</span> have to be chose carefully as well. That is somewhat of an art and there are tables listing ‘safe’ numbers <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(c\)</span>, and <span class="math notranslate nohighlight">\(m\)</span>.</p>
 <p>LCGs have also the widely known property that the rightmost digits contain correlations.</p>
 </div>
@@ -708,7 +711,7 @@ x_n =  \left\{
 \[\begin{split}
 \begin{array}{| l| l | l | l | l | l | l | l | l | l | l |} \hline
       x_0 &amp; x_1 &amp; x_2 &amp; x_3 &amp; x_4 &amp; x_5 &amp; x_6 &amp; x_7 &amp; x_8 &amp; x_9 &amp; x_{10}    \\ \hline
-      0     &amp;  1     &amp; 1    &amp;  2     &amp;  3    &amp; 5     &amp; 8      &amp; 13   &amp;  32   &amp; 34  &amp; 55 \\  \hline
+      0     &amp;  1     &amp; 1    &amp;  2     &amp;  3    &amp; 5     &amp; 8      &amp; 13   &amp;  21   &amp; 34  &amp; 55 \\  \hline
 \end{array}
 \end{split}\]</div>
 <p>As such, this method for random number generation does not have particularly good properties. LCGs are typically preferred over them. The Fibonacci generator can be improved, however.</p>
@@ -763,10 +766,13 @@ f(x,y)= \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2} \frac{1}{\sqrt {2 \pi}} e^{-\
 g(r, \phi) = f(x,y) r = \frac{1}{2 \pi} e^{- \frac{1}{2}r^2}
 \]</div>
 <p>and</p>
-<p>\begin{eqnarray}
-g_1 &amp; = &amp; \sqrt{-2 \ln (r_1) \cos ( 2 \pi r_2)} \
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{array}{ll}
+g_1 &amp; = &amp; \sqrt{-2 \ln (r_1) \cos ( 2 \pi r_2)} \\
 g_2 &amp; = &amp;  \sqrt{-2 \ln (r_1) \sin ( 2 \pi r_2)}
-\end{eqnarray}</p>
+\end{array}
+\end{split}\]</div>
 <p>Algorithmically this method is fine, there is no wasted effort in terms of misses or something like that. But in terms of computational efficiency, it leaves much to be hoped for. It requires computation of the functions such a square root, <span class="math notranslate nohighlight">\(\log\)</span>, <span class="math notranslate nohighlight">\(\sin\)</span> and <span class="math notranslate nohighlight">\(\cos\)</span>. Calculating all of these, and especially the last three ones, is excruciatingly slow compared to the simple arithmetic operations - it would be nice to have a more efficient routine.</p>
 </div>
 <div class="section" id="how-to-test-random-number-generators">
@@ -12294,8 +12300,8 @@ FILE
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 260 ms, sys: 112 µs, total: 260 ms
-Wall time: 260 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 268 ms, sys: 0 ns, total: 268 ms
+Wall time: 267 ms
 </pre></div>
 </div>
 </div>
@@ -12311,8 +12317,8 @@ Wall time: 260 ms
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 9.64 ms, sys: 445 µs, total: 10.1 ms
-Wall time: 10 ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 9.24 ms, sys: 0 ns, total: 9.24 ms
+Wall time: 9.1 ms
 </pre></div>
 </div>
 </div>
