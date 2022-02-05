@@ -21,15 +21,27 @@ parts:
     - file: class/week02/editing-ascii    
     - file: class/week02/vi-editor
     - file: class/week02/helpful-software
-#    - file: class/week01/intro-to-modeling
+    - file: class/week02/command-line-skill-check    
+
+
+#############################################3
+  - caption: "MODULE: Python & programming"
+    numbered: true
+    chapters:
+    - file: class/week02/coding-notes-general
+    - file: class/week02/python-intro
+##########################################
 
 #################################
-#  - caption: "MODULE: Intro to HPC"
-#    numbered: true
-#    chapters:
-#    - file: class/week01/hpc-intro
-#    - file: class/week01/simulation-general
+  - caption: "MODULE: Intro to Scientific computing & HPC"
+    numbered: true
+    chapters:
+    - file: class/week01/intro-to-modeling    
+    - file: class/week01/hpc-intro
+    - file: class/week01/simulation-general
 #################################
+
+
 
 ###############################################
 #  - caption: "MODULE: Operating systems"
@@ -39,71 +51,96 @@ parts:
 #    - file: class/week02/linux-basic-commands-2
 ################################################
 
-#############################################3
-#  - caption: "MODULE: Python & programming"
-#    numbered: true
-#    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-##########################################
 
-#  - caption: "MODULE: Random numbers"
+################################################3
+  - caption: "MODULE: Random numbers"
+    numbered: true
+    chapters:
+    - file: class/week03/random_numbers
+#    - file: class/week02/diffusion-in-brief
+#    - file: extras/python-virtual-environment
+###################################################
+
+#################################
+#  - caption: "MODULE: Errors in Scientific Computing"
 #    numbered: true
 #    chapters:
-#    - file: extras/coding-notes-general
-#    - file: class/week02/python-intro
-#    - file: extras/python-virtual-environment
-#
+#    - file: class/ErrorsModule/Errors_summary
+#    - file: class/ErrorsModule/Error_sources
+#    - file: class/ErrorsModule/TaylorExample
+#    - file: class/ErrorsModule/FinitePrecision
+#    - file: class/ErrorsModule/HornersAlgorithm
+#    - file: class/ErrorsModule/RoundoffAmplification
+#    - file: class/ErrorsModule/BackwardForwardConditioning   
+#    - file: class/week01/intro-to-modeling    
+#    - file: class/week01/hpc-intro
+#    - file: class/week01/simulation-general
+#################################
+
+
+
+##################################################
 #  - caption: "MODULE: Molecular dynamics"
 #    numbered: true
 #    chapters:
 #    - file: class/moldy/particle_simulations_intro
 #    - file: class/moldy/moldy_1
+#################################################
+
+##################################################
+#  - caption: "MODULE: Monte Carlo"
+#    numbered: true
+#    chapters:
+#    - file: extras/coding-notes-general
+##    - file: class/week02/python-intro
 ##    - file: extras/python-virtual-environment
-#
-##  - caption: "MODULE: Monte Carlo"
+####################################################
+
+##################################################
+##  - caption: "MODULE: Finite elements"
 ##    numbered: true
 ##    chapters:
 ##    - file: extras/coding-notes-general
 ##    - file: class/week02/python-intro
 ##    - file: extras/python-virtual-environment
-#
-##  - caption: "MODULE: Finete elements"
-##    numbered: true
-##    chapters:
-##    - file: extras/coding-notes-general
-##    - file: class/week02/python-intro
-##    - file: extras/python-virtual-environment
-#
+#################################################
+
+##################################################3
 ##  - caption: "MODULE: Parallel programming"
 ##    numbered: true
 ##    chapters:
 ##    - file: extras/coding-notes-general
 ##    - file: class/week02/python-intro
 ##    - file: extras/python-virtual-environment
-#
+#####################################################
+
+###################################################
 ##  - caption: "MODULE: Finite differences"
 ##    numbered: true
 ##    chapters:
 ##    - file: extras/coding-notes-general
 ##    - file: class/week02/python-intro
 ##    - file: extras/python-virtual-environment
-#
+####################################################3
+
+####################################################3
 ##  - caption: "MODULE: Machine learning"
 ##    numbered: true
 ##    chapters:
 ##    - file: extras/coding-notes-general
 ##    - file: class/week02/python-intro
 ##    - file: extras/python-virtual-environment
-# 
+########################################################3
+
+###############################################3
 ##   - caption: "MODULE: Optimization"
 ##     numbered: true
 ##    chapters:
 ##    - file: extras/coding-notes-general
 ##    - file: class/week02/python-intro
 ##    - file: extras/python-virtual-environment
-#
+###################################################
+
 ## - divider: true
 #
 ##- part: Lectures
@@ -159,13 +196,19 @@ parts:
 ##    - file: extras/vi-editor
 ##    - file: extras/editing-ascii
 ##    - file: extras/helpful-software
-##- part: More on computers / help
-##  chapters:
+
+#############################################
+#parts:
+  - caption: "More on computers / helps"
+    numbered: true
+    chapters:
 ##    - url: https://github.com/mejk/computer-stuff/blob/master/ssh-keys.md
 ##      title: ssh keys, aliases and connecting using ssh keys  
-##    - url: https://github.com/mejk/computer-stuff
-##      title: Random notes on computers, installation, dual boot, vnc, etc.
+    - url: https://github.com/mejk/computer-stuff
+      title: Random notes on computers, installation, dual boot, vnc, etc.
 ###      title: Lab Stuff
+################################################
+
 ##
 ###- part: Gallery
 ###  chapters:

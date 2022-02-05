@@ -1,0 +1,64 @@
+Tokens:
+=======
+
+exp: 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
+exp: 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
+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
+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
+
+GitHub
+======
+
+Git operates using two stages: staging and commit
+
+- Staging
+- Commit
+
+Clone
+
+ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+ Install jupyter book
+
+Building a Jupyter book:
+========================
+
+Assumes that one is inside the main project directory
+
+jupyter-book build ./
+
+
+Staging:
+========
+
+Add everything in the directory
+--------------------------------
+
+git add .
+
+Commit the additions:
+---------------------
+
+git commit -m “message”
+
+Check the status:
+-----------------
+
+git status
+
+
+Push the changes in  github:
+---------------------------
+
+git push origin main   
+
+
+Use ghp-import to push to gh-pages (the actual web site):
+---------------------------------------------------------
+
+ghp-import -n -p -f _build/html
+
+
+Help:
+----
+
+https://datascientistforai.github.io/DataScienceStudy/publish/gh-pages.html

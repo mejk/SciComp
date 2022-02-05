@@ -71,6 +71,8 @@ md(f"-Last updated on {now}")
 # 
 # ```{dropdown} The Lost 1984 Video: young Steve Jobs introduces the Macintosh
 # <iframe width="560" height="315" src="https://www.youtube.com/embed/2B-XwPjn9YY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# - This video has (sometimes) problems with embedding but the direct link to YouTube works.
+# 
 # ```
 # 
 # ```{dropdown} Microsoft Windows 3 and NT, 1991
@@ -150,7 +152,7 @@ md(f"-Last updated on {now}")
 #    :name: hpc-cluster
 #    :align: left
 #    
-#    *Basic organization of a typical HPC [computing cluster](https://en.wikipedia.org/wiki/Computer_cluster). The end user accesses the cluster through login nodes only, the individual computing clusters are not directly accessible. For connecting to login nodes, the user uses `ssh` and `scp` for transferring data from and to personal computer. To enhance security (and also convenience of connecting), [ssh keys](https://jumpcloud.com/blog/what-are-ssh-keys) are typically used - one should use ssh keys for any remote connections if possible. The computing nodes have their own CPU, memory and storage, possibly also GPU(s). Computing within a node is always faster since otherwise data has to be transferred between the nodes and that causes [latency](https://en.wikipedia.org/wiki/Latency_(engineering)#Computer_hardware_and_operating_system_latency). Computing jobs must be started using a scheduler, [SLURM(https://en.wikipedia.org/wiki/Slurm_Workload_Manager) is a commonly used one. Data storage is shared. HPC systems typically have different levels of storage for different types (work vs long term storage) data.*
+#    *Basic organization of a typical HPC [computing cluster](https://en.wikipedia.org/wiki/Computer_cluster). The end user accesses the cluster through login nodes only, the individual computing clusters are not directly accessible. For connecting to login nodes, the user uses `ssh` and `scp` for transferring data from and to personal computer. To enhance security (and also convenience of connecting), [ssh keys](https://jumpcloud.com/blog/what-are-ssh-keys) are typically used - one should use ssh keys for any remote connections if possible. The computing nodes have their own CPU, memory and storage, possibly also GPU(s). Computing within a node is always faster since otherwise data has to be transferred between the nodes and that causes [latency](https://en.wikipedia.org/wiki/Latency_(engineering)#Computer_hardware_and_operating_system_latency). Computing jobs must be started using a scheduler, [SLURM](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) is a commonly used one. Data storage is shared. HPC systems typically have different levels of storage for different types (work vs long term storage) data.*
 # ```
 # 
 # 
@@ -181,7 +183,7 @@ md(f"-Last updated on {now}")
 # <div class="int">
 #     
 #     
-# **GPUs and computational chemistry:** Software such as [Gromacs](https://en.wikipedia.org/wiki/GROMACS), [NAMD](https://en.wikipedia.org/wiki/NAMD), [Amber](https://ambermd.org/), [BigDFT](https://en.wikipedia.org/wiki/BigDFT), [CP2K](https://en.wikipedia.org/wiki/CP2K), [HOOMD-Blue](http://glotzerlab.engin.umich.edu/hoomd-blue/), [LAMMPS](https://en.wikipedia.org/wiki/LAMMPS),  and so on all have GPU acceleration. 
+# **GPUs and software:** Software such as [Gromacs](https://en.wikipedia.org/wiki/GROMACS), [NAMD](https://en.wikipedia.org/wiki/NAMD), [Amber](https://ambermd.org/), [BigDFT](https://en.wikipedia.org/wiki/BigDFT), [CP2K](https://en.wikipedia.org/wiki/CP2K), [HOOMD-Blue](http://glotzerlab.engin.umich.edu/hoomd-blue/), [LAMMPS](https://en.wikipedia.org/wiki/LAMMPS), and so on all have GPU acceleration, as do machine learning software such as [Tensorflow](https://www.tensorflow.org/), image processing software such as [Blender](https://www.blender.org/) and Adobe's software, and the list keeps growing very rapidly. 
 # 
 # **GPUs on a personal computer:** It is naturally possible to use the GPU a personal computer or a laptop to run even rather demanding simulations. The basic requirement is a discrete GPU. If one wants to use CUDA acceleration, NVIDIA card is required. OpenCL runs on both NVIDIA and AMD cards. As for efficincy and support, CUDA is currently by far the most used one and this includes software such as Gromacs, NAMD, Amber, Tensorflow etc. 
 # 

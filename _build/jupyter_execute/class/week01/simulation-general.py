@@ -26,9 +26,8 @@ md(f"-Last updated on {now}")
 # 
 # **Learning goals:** 
 # 
-# - To have an overview of the process involved in modeling and simulation
-# - To have an idea that even simple systems such as water or/and display rich physics and chemistry
-# - To have an idea how modeling even simple systems can be a very challenging and interdisciplinary problem
+# - To have an overview of the *process* involved in modeling and simulation. This is illustrated by a concrete example. Please notice that although the example is taken from a particular field, the process itself doesn't depend on the application field.
+# - To understand how modeling even simple systems can be a very challenging and interdisciplinary problem.
 # 
 # **Keywords:** physical phenomena, algorithm, code, model, analysis, debugging, comparison to experiments, visualization
 # 
@@ -50,14 +49,15 @@ md(f"-Last updated on {now}")
 # </small>    
 # 
 # ```{dropdown} Music: Laurie Anderson, Big Science
-# <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vTHiN6Qwdgs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+# 
+# <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vTHiN6Qwdgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 # 
 # ```
 # 
 
 # ## General approach
 # 
-# Before setting up our own simulations, let's discuss a few general and important aspects that relate to all computer simulations and modeling. {numref}`modeling-schema` shows the general idea. 
+# Let's discuss a few general and important aspects that relate to all computer simulations and modeling. {numref}`modeling-schema` shows the general idea - this is independent of the application field. 
 
 # <!--
 # <table class="lblue">
@@ -88,7 +88,7 @@ md(f"-Last updated on {now}")
 # ## Example: Modeling water
 # 
 # 
-# Let's consider the items in {numref}`modeling-schema` using an example. The procedure and considerations below are, by necessity, simplified but they should be ebough to give an idea the type of considerations one has to take. Some of the choices and decisions are also coupled.
+# Let's consider the items in {numref}`modeling-schema` using a concrete example. The procedure and considerations below are, by necessity, simplified but should give an idea the type of considerations one has to take. Some of the choices and decisions are also coupled.
 # 
 # 
 # ````{panels}
@@ -204,10 +204,10 @@ md(f"-Last updated on {now}")
 # ````{panels}
 # :card: shadow-none, border-0
 # :column: col-9 p-0 m-0
-# **Analyze data and interpret:** This is where the interesting part starts - provided we have confidence in our simulations. 
+# **Analyze data and interpret:** This is where the interesting part starts - provided we have confidence in our simulations. Do we need to write software to analyze the data or do appropriate tools exist? If the former, there are also practical questions such as how to read in the data; the data files may be massive and they may use some specific format(s), or they may be compressed.
 # 
 # **Here,** we can analyze hydrogen bonding in bulk water and in the solvation shell of a small hydrophobic group in a molecule. It is not all
-# four-coordinated.
+# four-coordinated. Some of the analysis software needed to be written.
 # 
 # ```{figure} img/water-bonds.png
 #    :width: 100%

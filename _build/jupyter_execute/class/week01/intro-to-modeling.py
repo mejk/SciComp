@@ -24,7 +24,7 @@ updated = datetime.now()
 now = updated.strftime("%A, %B %d %Y at %H:%M" )
 
 
-# # Introduction to computational modeling & methods in chemistry/physics
+# # Introduction to scientific computing & computational modeling
 
 # In[2]:
 
@@ -32,7 +32,6 @@ now = updated.strftime("%A, %B %d %Y at %H:%M" )
 md(f"-Last updated on {now}")
 
 
-# 
 # ````{panels}
 # :column: col-lg-12 p-2
 # 
@@ -44,22 +43,21 @@ md(f"-Last updated on {now}")
 # ```
 # 
 # **Learning goals:** 
-# - To have a basic idea of computational modeling and computational chemistry.
-# - To get some historical background.
+# - To have a basic idea of what scientfic computing and computational modeling are.
+# - To get some historical background on computing.
 # - To understand the relation between experiments, theory and computation.
 # - To understand the need for different models and their relations. Several methods and models that will be discussed later in the course will be mentioned. The aim is to make the students acquainted to the terminology and make them comfortable in using the terms and termonology a litte-by-little over the course. 
 # 
-# **Note:** The links are provided for those who wish to have some additional reading. 
-# 
-# **Keywords:** Computational chemistry, scientific computing, multiscale modeling, high performance computing, history of computing 
+# **Keywords:** scientific computing, multiscale modeling, high performance computing, history of computing 
 # <!--
 # **Associated material:**
 # -->
 # 
+# **Note:** To be more concrete, some of the examples are drawn from physics, chemistry and chemical engineering. The discussion is quite general and doesn't assume background in them. 
+# 
 # ````
 # 
 # <hr>
-# 
 
 # ## Computing and computers
 # 
@@ -67,17 +65,18 @@ md(f"-Last updated on {now}")
 # **More:**
 # - Video: [Computer Pioneers: Pioneer Computers Part 1](https://www.youtube.com/watch?v=qundvme1Tik) by Computer History Museum
 # - Video: [Computer Pioneers: Pioneer Computers Part 2](https://www.youtube.com/watch?v=wsirYCAocZk) by Computer History Museum
-# 
 
 # ## Background
 # 
-# Computational chemistry and physics are relatively young fields  - easy to understand since the first digital (in contrast to mechanical) computers were developed in the late 1930's. The first programmable computer, the [Z1](https://en.wikipedia.org/wiki/Z1_(computer)), was developed by [Konrad Zuse](https://en.wikipedia.org/wiki/Konrad_Zuse) in Germany in the late 1930's. The early developments in programmable digital computers were largely driven by military applications in 1940's and 1950's. 
+# <!-- Computational chemistry and physics are relatively young fields -->  
+# Scientific computing and computational modeling are relatively young fields -
+# this is easy to understand since the first digital (in contrast to mechanical) computers were developed in the late 1930's. The first programmable computer, the [Z1](https://en.wikipedia.org/wiki/Z1_(computer)), was developed by [Konrad Zuse](https://en.wikipedia.org/wiki/Konrad_Zuse) in Germany in the late 1930's. The early developments in programmable digital computers were largely driven by military applications in 1940's and 1950's. 
 # 
 # The earliest computers were not reliable or stable, or were built more as calculators for a single purpose. ENIAC (Electronic Numerical Integrator and Computer) that was built in 1946 is often said to be the first real computer. Transistors did not exist at that time and [ENIAC](https://en.wikipedia.org/wiki/ENIAC) (in Philadelphia) had 17,480 vacuum tubes. Its original purpose was to determine trajectories for ballistic missiles, but due to the war ending it was used to study nuclear reactions. Nuclear warhead and storage related simulations are still one of the main uses of the largest supercomputers. One additional notable aspect of ENIAC is that, unlike modern computers, it was not able to store programs. 
 # 
-# ENIAC was followed by [MANIAC I](https://en.wikipedia.org/wiki/MANIAC_I) (Mathematical Analyzer Numerical Integrator And Computer Model I at Los Alamos) and it was used in the landmark paper "Equations of State Calculations by Fast Computing Machines"{cite}`Metropolis1953` by Metropolis et al. that introuced the Metropolis Monte Carlo method, one of the most used and important algorithms even today. MANIAC was also used in the development of the hydrogen bomb. Generalization of the Metropolis Monte Carlo method is known as the Markov Chain Monte Carlo and it is important in fields such as optimization and machine learning. On pure chemistry side, the earliest computational papers appeared in the 1960's and the term computational chemistry was (probably; hard to trace) first used in 1970's.
+# ENIAC was followed by [MANIAC I](https://en.wikipedia.org/wiki/MANIAC_I) (Mathematical Analyzer Numerical Integrator And Computer Model I at Los Alamos) and it was used in the landmark paper *"Equations of State Calculations by Fast Computing Machines"*{cite}`Metropolis1953` by Metropolis et al. that introuced the Metropolis Monte Carlo method, one of the most used and important algorithms even today. MANIAC was also used in the development of the hydrogen bomb. Generalization of the Metropolis Monte Carlo method is known as the [Markov Chain Monte Carlo](https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo) and it is important in fields such as optimization and machine learning. On pure chemistry side, the earliest computational papers appeared in the 1960's and the term computational chemistry was (probably; hard to trace) first used in 1970's.
 # 
-# Independent if one talks about physics, chemistry or some other field, the development can be divided roughly in the theoretical developments in the field, developments of numerical methods and algorithms, and hardware. The development of numerical methods cannot be over-emphasized as it is critical to be able to model and simulate larger systems and for longer times. This will become clear as we discuss various methods and how they scale in terms of the number of degrees of freedom.
+# Historically, scientific computing and computational modeling have their roots in physics and chemistry, but independent if one talks about physics, chemistry or some other field, the development can be divided roughly in the theoretical developments in the field, developments of numerical methods and algorithms, and hardware. The development of numerical methods cannot be over-emphasized as it is critical to be able to model and simulate larger systems and for longer times. This will become clear as we discuss various methods and how they scale in terms of the number of degrees of freedom.
 # 
 # Currently, computational approaches such as hybrid methods that combine quantum mechanical and classical molecular dynamics and coarse-grained methods have gained a lot of popularity. Methods that combine different time and/or length scales can in general be called *[multiscale methods](https://en.wikipedia.org/wiki/Multiscale_modeling)* and this will be discussed in more detail later. In addition, methods that go under the term *[machine learning](https://en.wikipedia.org/wiki/Machine_learning)* are perhaps the most rapidly growing family of methods and they are applied in almost all imaginable fields from medicine to digital humanities and computational chemistry. Machine learning is not a simulation method as such, but rather a class of methods that allows classification (clustering), analyses and model building using large data sets. Machine learning methods rely heavily on statistics, linear algebra and stochastic methods such as [Markov processes](https://en.wikipedia.org/wiki/Markov_chain). We will discuss such methods later.
 # 
@@ -109,7 +108,7 @@ md(f"-Last updated on {now}")
 # width: 700px
 # name: compsci
 # ---
-# Computational modeling in chemistry, physics and engineering require deep background knowledge from a number of fields.
+# In addition to programming and numerical methods, computational modeling and scientfic computing require deep background knowledge from a number of fields.
 # ```
 # 
 # <!--
@@ -124,13 +123,13 @@ md(f"-Last updated on {now}")
 # - [Metropolis, Monte Carlo and the MANIAC](http://www-star.st-and.ac.uk/~kw25/teaching/mcrt/MC_history_4.pdf)
 # - [Computing and the Manhattan Project](https://www.atomicheritage.org/history/computing-and-manhattan-project)
 # - [A Trilogy on Errors in the History of Computing](https://ieeexplore.ieee.org/document/4392895)
+# <!--
 # - [The Development of Computational Chemistry in Germany](http://www.quantum-chemistry-history.com/Pey_ff_Dat/CompGerm/Pey_ff_CompGerm.htm)
 # - [The Development of Computational Chemistry in the United Kingdom](http://www.chilton-computing.org.uk/acl/applications/qc/p001.htm)
 # - [Computational Chemistry in the 1950s](http://curation.cs.manchester.ac.uk/computer50/www.computer50.org/mark1/Huw-Pritchard/history.html)
-# 
-# 
+# -->
 
-# ##  What is computational chemistry?
+# ##  Example: Computational chemistry
 # 
 # It is difficult to define what exactly computational chemistry is or is not. Wikipedia defines quite broadly (and one could say adeqately) as follows:
 # 
@@ -169,36 +168,18 @@ md(f"-Last updated on {now}")
 # - Machine learning methods, Bayesian techniques, Markov models, deep learning
 # - Free energy calculations
 # 
-# ... and the list goes on. This (by necessity incomplete) list aims to convey the idea that the field is very broad with no clear boundries. 
+# ... and the list goes on. This (by necessity incomplete) list aims to convey the idea that the field is very broad with no clear boundries.
 
-# Don't miss these short videos:
+# See also the short interview of one of the pioneers of computational chemistry / physics / chemical engineering:
 # 
-# <!-- 
-# https://www.youtube.com/watch?v=bvo7JhEMvj0
 # 
-# :container: + shadow
-# title: bg-primary text-white font-weight-bold
-# :open:
 # 
-# -->
-# 
-# ```{tabbed} Computational Chemistrym Past Present and Future
-# 
-# <div class="container youtube">
-# <iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/bvo7JhEMvj0" frameborder="0" allow="accelerometer; autoplay="0"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-# </div>
-# 
-# ```
-# 
-# ```{tabbed} Beauty in Science: Biophysicist Klaus Schulten & his Computational Microscope
+# **Beauty in Science: Biophysicist Klaus Schulten & his Computational Microscope**
 # 
 # <div class="container youtube">
 # <iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/iqcG4P-lTa0" frameborder="0" allow="accelerometer; autoplay="0"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 # </div>
-# 
-# ```
 
-# 
 # ## Nobel Prizes to Computational Chemistry: 1998 and 2013
 # 
 # To date, the Nobel Prize is Chemistry has been awarded twice to computational chemists - thus far no Nobel Prizes have been granted directly to computational physics. The first computational chemistry Nobel was [1998](https://www.nobelprize.org/prizes/chemistry/1998/summary/), when 
@@ -212,7 +193,7 @@ md(f"-Last updated on {now}")
 # &nbsp; &nbsp; -<a href="https://www.nobelprize.org/uploads/2018/06/press-22.pdf">Pressmeddelande, Kungliga Vetenskapsakademien</a>
 # </blockquote>    
 #  
-# Like Kohn, Martin Karplus was born in Vienna, Austria and moved to the USA to escape the nazis. He did his PhD in chemistry at Caltech with the two-time Nobel Laureate Linus Pauling. He is the originator of the [CHARMM](https://www.charmm.org/) molecular simulation package. Karplus was at Université de Strasbourg and Harvard at the time of the Prize. Arieh Warshel was postdoc (1970) with Karplus' at Harvard in Chemical Physics. He went to the Weizmann Institute in Isreal for a faculty job but moved later to the University of Southern California after [Weizmann didn't grant him tenure](https://www.ynetnews.com/articles/0,7340,L-4438751,00.html). [Michael Levitt](https://en.wikipedia.org/wiki/Michael_Levitt) was born in Pretoria, South Africa and he did his PhD in Biophysics at Cambridge. At the time of the Prize he was at Stanford where he is a professor of Structural Biology. As a side note on tenure and Nobel Prizes, Nobel winners that were not given tenure include at least [Tom Sargent](https://en.wikipedia.org/wiki/Thomas_J._Sargent) (Economics 2011; University of Pennsylvania didn't give tenure), [Lars Onsager](https://en.wikipedia.org/wiki/Lars_Onsager) (Chemistry 1968; dismissed/let go by both John's Hopkins and Brown universities).
+# Like Kohn, Martin Karplus was born in Vienna, Austria and moved to the USA to escape the nazis. He did his PhD in chemistry at Caltech with the two-time Nobel Laureate [Linus Pauling](https://en.wikipedia.org/wiki/Linus_Pauling). He is the originator of the [CHARMM](https://www.charmm.org/) molecular simulation package. Karplus was at Université de Strasbourg and Harvard at the time of the Prize. Arieh Warshel was postdoc (1970) with Karplus' at Harvard in Chemical Physics. He went to the Weizmann Institute in Isreal for a faculty job but moved later to the University of Southern California after [Weizmann didn't grant him tenure](https://www.ynetnews.com/articles/0,7340,L-4438751,00.html). [Michael Levitt](https://en.wikipedia.org/wiki/Michael_Levitt) was born in Pretoria, South Africa and he did his PhD in Biophysics at Cambridge. At the time of the Prize he was at Stanford where he is a professor of Structural Biology. As a side note on tenure and Nobel Prizes, Nobel winners that were not given tenure include at least [Tom Sargent](https://en.wikipedia.org/wiki/Thomas_J._Sargent) (Economics 2011; University of Pennsylvania didn't give tenure), [Lars Onsager](https://en.wikipedia.org/wiki/Lars_Onsager) (Chemistry 1968; dismissed/let go by both John's Hopkins and Brown universities).
 #  
 # <!-- 
 # ````{margin}
@@ -316,11 +297,14 @@ md(f"-Last updated on {now}")
 # - The APS [Aneesur Rahman Prize for Computational Physics](https://www.aps.org/programs/honors/prizes/rahman.cfm)
 # - [ACS Award for Computers in  Chemical and Pharmaceutical Research](https://www.acscomp.org/awards/acs-award-for-computers-in-chemical-and-pharmaceutical-research)
 # 
-# The reason for listing all these is simply to indicate how diverse the field is. 
+# The reason for listing all these is simply to indicate how diverse the field is.
 
 # ## A few examples
 # 
-# Before going any further, let's take a look some examples from simulations to get a more concrete view of what simulations can do. Further examples will be provided as we progress. These are taken from our own simulations to avoid any copyright issues. Use the blue arrow to see more movies. All of the simulations and visualizations shown in the examples were made with the tools we use in this course.
+# Before going any further, let's take a look some examples from simulations to get a more concrete view of what simulations can do. Further examples will be provided as we progress. These are taken from our own simulations to avoid any copyright issues. Use the blue arrow to see more movies.
+# <!--
+# All of the simulations and visualizations shown in the examples were made with the tools we use in this course.
+# -->
 
 # In[3]:
 
@@ -344,7 +328,7 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # ### Experiments and *in silico* modeling
 # 
 # 
-# **Computational microscope.** The term *computational microscope* was probably introduced first by Walker and Mezey in 1995 in their article "A new computational microscope for molecules: High resolution MEDLA images of taxol and HIV-1 protease, using additive electron density fragmentation principles and fuzzy set methods"{cite}`Walker1995`. This combined imagining and density functional theory (DFT) calculations. The term was then re-introduced in the context of MD simulations by Lee et al. in their 2009 article "Discovery Through the Computational Microscope"{cite}`Lee2009`. The analogy is a very good one: molecular simulations can mimic behvior of systems in the atomic scale and they allow one to see, analyze and track the atoms. Lee et al. conclude their article by saying{cite}`Lee2009`
+# **Computational microscope.** The term *computational microscope* was probably introduced first by Walker and Mezey in 1995 in their article "A new computational microscope for molecules: High resolution MEDLA images of taxol and HIV-1 protease, using additive electron density fragmentation principles and fuzzy set methods"{cite}`Walker1995`. This combined imagining and [density functional theory (DFT)](https://en.wikipedia.org/wiki/Density_functional_theory) calculations. The term was then re-introduced in the context of MD simulations by Lee et al. in their 2009 article "Discovery Through the Computational Microscope"{cite}`Lee2009`. The analogy is a very good one: molecular simulations can mimic behvior of systems in the atomic scale and they allow one to see, analyze and track the atoms. Lee et al. conclude their article by saying{cite}`Lee2009`
 # 
 # <blockquote><em>
 # Overall, simulations can cast light on the basic architectural principles of molecules that explain fundamental cellular mechanics and might eventually direct the design of proteins with desired mechanical properties. Most importantly, beyond the understanding gained regarding the molecular mechanisms of force-bearing proteins, these examples serve to demonstrate that incessant advancements of MD methodology bring about discoveries stemming from simulation rather than from experiment. Molecular modeling, while useful as a means to complement many experimental methodologies, is rapidly becoming a tool for making accurate predictions and, thereby, discoveries that stand on their own. In other words, it is becoming a computational microscope.    
@@ -358,7 +342,7 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # -->
 # 
 # 
-# ### Simulations: The 3rd paradigm of research
+# ## Modeling & simulations: The 3rd paradigm of research
 # 
 # ```{image} img/heart-simplified.svg
 # :width: 300px
@@ -408,23 +392,20 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # 
 # - [Deep Data Dives Discover Natural Laws](https://cacm.acm.org/magazines/2009/11/48443-deep-data-dives-discover-natural-laws/fulltext)
 # - [Vision 2020: Computational Needs of the Chemical Industry](https://www.ncbi.nlm.nih.gov/books/NBK44988/)
-# 
 
 # ## Good practices
 # 
+# The list below repeats some of the matters discussed earlier, but it is well worth going through them again.
 # 
 # 
 # * Keep notes, that is have a lab book. That saves a lot of time and reduces the number of errors. Document the procedures and commands (and they can sometimes be somewhat tricky and finding them quickly without proper notes may be difficult or/and lead to errors. Lab book will help you to avoid mistakes and help you to speed up your work tremendously. One good way is to use something like a github document. That is easy to maintain and it is available from any computer. Other reasonable ways: Google docs, OneDrive, Dropbox, etc. 
 # 
-# * Always remember to back up you critical files! 
-# 
+# * Always remember to back up you critical files! There are great tools for doing that including GitHub, Zenodo and such.
 # * When running simulations, ensure that you will not fill your computer (estimate the amount of data that will be generated and is needed for analysis).
 # * Check for viruses
 # * Always, always, always visualize
 # * Always, always, always verify your simulations & system setup against known results from theory, other simulations and experiments.
-# * Let the computer do the work!
-# 
-# 
+# * Let the computer do the work! Use [shell scripts](https://en.wikipedia.org/wiki/Shell_script), python, and so on to let the computer to do the repetitive work.
 
 # ## Dangers
 # 
@@ -439,18 +420,38 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 #     </em>
 #     </blockquote>
 #     
-# Not that long ago all simulations were based on house-written programs. Such programs had obvious limitations: They were not available to others, the codes were not maintained for longer periods of time, they were often difficult to use for all but the person who wrote code. It was also difficult to improve their performance due to very limited number (often one) developers. Modern codes such as Gromacs, NAMD, LAMMPS and such in the field of molecular simulations, are well maintained, have long-term stability, extensive error checking due to large number of users and they offer excellent performance that is impossible reach for any individual developer or even a small group. They are also very easy to use.     
+# Not that long ago all simulations were based on house-written programs. Such programs had obvious limitations: They were not available to others, the codes were not maintained for longer periods of time, they were often difficult to use for all but the person who wrote code. It was also difficult to improve their performance due to very limited number (often one) developers. Modern codes are well maintained, have long-term stability, extensive error checking due to large number of users and they offer excellent performance that is impossible reach for any individual developer or even a small group. They are also very easy to use.     
 # 
-# Similarly to experiments, it is easy train a person to use the software and even produce data using the built in analysis methods. That is, however, a precarious path. It is absolutey imperative to have a very strong background in the application field and its underlying theories and methods to be able to produce something meaningful. One should never use a software package as a black box!
+# Similarly to experiments, it is easy train a person to use the software and even produce data using the built-in analysis methods. That is, however, a precarious path. It is absolutely imperative to have a very strong background in the application field and its underlying theories and methods to be able to produce something meaningful. One should never use a software package as a black box!
+# 
+# **More on the topic:**
+# 
+# - [Rampant software errors may undermine scientific results](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4629271/)
+# - [Three ways researchers can avoid common programming bugs](https://www.natureindex.com/news-blog/three-ways-researchers-science-can-avoid-common-programming-bugs-errors)
+# - [Computational science: ...Error](https://www.nature.com/news/2010/101013/full/467775a.html)
+# - [A Scientist's Nightmare: Software Problem Leads to Five Retractions](https://www.semanticscholar.org/paper/A-Scientist%27s-Nightmare%3A-Software-Problem-Leads-to-Miller/dcbf02005884bf79d80315b250b8d70b7a021a21)
+# - [Scientists Make Mistakes. I Made a Big One.](https://elemental.medium.com/when-science-needs-self-correcting-a130eacb4235)
 
+# <!-- 
 # ## The need for different models
 # 
 # 
-# Just like with experiments, there is no single correct choice for a method. Choosing the most appropriate method for the task at hand depends on various issues. First and foremost, what is the phenomenon/phenomena that is being studied. For example, if one is interested in the behavior of electrons, then quantum mechanical methods are the obvious candidates. This immediately brings in additional questions such as are we interested in band structure, chemical reactions, excited states or something else. Such questions are very important since they again narrow down the choice of methods. For example, if one is studied excited states, the usual methods from density functional theory are not enough. On the other hand, if one is interested in formation of micelles or diffusion of molecules, quantum mechanical methods are useless and the more reasonable choices would be classical MD or coarse-grained MD. Why? Collective phenomena such aggregate formation doesn't  depends directly on quantum mechanical properties (although some of them are implicitly integrated in the higher level models such as classical MD). One may also be interested in static or dynamic phenomena. In the former case, optimization methods may be method of choice whereas in the latter case one needs an equation of motion that is integrated in time. 
+# Just like with experiments, there is no single correct choice for a computational method. Choosing the most appropriate method for the task at hand depends on various issues. First and foremost, what is the phenomenon/phenomena that is being studied. For example, if one is interested in the behavior of electrons, then quantum mechanical methods are the obvious candidates. This immediately brings in additional questions such as are we interested in band structure, chemical reactions, excited states or something else. Such questions are very important since they again narrow down the choice of methods. For example, if one is studied excited states, the usual methods from density functional theory are not enough. On the other hand, if one is interested in formation of micelles or diffusion of molecules, quantum mechanical methods are useless and the more reasonable choices would be classical MD or coarse-grained MD. Why? Collective phenomena such aggregate formation doesn't  depends directly on quantum mechanical properties (although some of them are implicitly integrated in the higher level models such as classical MD). One may also be interested in static or dynamic phenomena. In the former case, optimization methods may be method of choice whereas in the latter case one needs an equation of motion that is integrated in time. 
 # 
-# ### Terminology: Scales
+# -->
 # 
-# The figure aboves show different methods and typical time scales associated with them. It is common to use the following terminology when talking about them. It is also important to notice that the scales given below are somewhat arbitrary, depend on the field and there is some overlap: 
+# 
+# ```{figure} img/1280-scales-fs.svg
+# :width: 700px
+# :name: scales1
+# :align: left
+# *Some common computer simulation methods and typical their time scales. Rough idea of systems sizes in terms of atoms and lengths is given when appropriate. The typical time steps in classical molecular dynamics and coarse-grained MD are also shown.*
+# ```
+# 
+# ## Terminology: Scales
+# 
+# 
+# The figure aboves show different methods and typical time scales associated with them. It is common to use the following terminology when talking about them. It is also important to notice that the physical time and length scales given below are somewhat arbitrary and depend on the field and there is some overlap: 
 # 
 # **Macroscale:** Roughly speaking, denotes time and length scales observable by plain eye.
 # 
@@ -490,23 +491,17 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # </table>
 # -->
 # 
-# ```{figure} img/1280-scales-fs.svg
-# :width: 700px
-# :name: scales1
-# :align: left
-# *Some common computer simulation methods and typical their time scales. Rough idea of systems sizes in terms of atoms and lengths is given when appropriate. The typical time steps in classical molecular dynamics and coarse-grained MD are also shown.*
-# ```
 # 
 #  
 # ### Hybrid models
 # 
-# {numref}`scales1` lists some common models. It is important to notice that it is possible to combine, or hybridize them. The most common hybridization is perhaps the QM/MM methods, that is, combination of a quantum mechanical  method with a method from the classical MD level; the acronym MM stands for molecular mechanics and it is often used synonymously with classical MD. The principle is simple: In QM/MM, a small part of the system is treated using quantum mechanics and the rest with classical (Newtonian) mechanics. Although the idea is simple, there are many complications and limitations.
+# {numref}`scales1` lists some common models. It is important to notice that it is possible to combine, or hybridize them. The most common hybridization is perhaps the QM/MM methods, that is, combination of a quantum mechanical  method with a method from the classical MD level; the acronym MM stands for molecular mechanics and it is often used synonymously with classical MD although strictly speaking that is not the case. The principle is simple: In QM/MM, a small part of the system is treated using quantum mechanics and the rest with classical (Newtonian) mechanics. Although the idea is simple, there are many complications and limitations.
 # 
-# Similarly to QM/MM, it is possible combine classical MD and coarse-grained MD. Another fairly common combination is lattice-Boltzmann (LB) and molecular dynamics. There, the difficulties are different since the lattice-Boltzmann method uses a grid to solve fluid motion using densities (=no explicit particles), but classical MD brings in particles. This means that the two must coupled in consistent way. Often that means using composite particles instead of 'normal' atoms.
+# Similarly to QM/MM, it is possible combine classical MD and coarse-grained MD. Another fairly common combination is [lattice-Boltzmann](https://en.wikipedia.org/wiki/Lattice_Boltzmann_methods) (LB) and molecular dynamics. There, the difficulties are different since the lattice-Boltzmann method uses a grid to solve fluid motion using densities (=no explicit particles), but classical MD brings in particles. This means that the two must coupled in consistent way. Often that means using composite particles instead of 'normal' atoms.
 # 
 # ### Implicit vs explicit water
 # 
-# When simulating biomolecular systems as well as many others, water is present. Water is vary challenging for simulations since in practise most of the simulation times goes in simulation water as it is the most abundant component in any given system. This is quite easy to understand: In addition to the molecules of interest, say, proteins, lipids or polymers, for example, the simulation box needs to be filled with water at the *correct density* and to reach proper *solvation*, enough water is needed. It is not uncommon that over 90% of the simulation time goes to simulation water. 
+# When simulating biomolecular systems as well as many others, water is present. Water is very challenging for simulations since in practise most of the simulation times goes in simulation water as it is the most abundant component in any given system. This is quite easy to understand: In addition to the molecules of interest, say, proteins, lipids or polymers, for example, the simulation box needs to be filled with water at the *correct density* and to reach proper *solvation*, enough water is needed. It is not uncommon that over 90% of the simulation time goes to simulating water. 
 # 
 # While keeping water in is naturally the most correct choice, methods have been developed to include water only implicitly - such models are called implicit solvent models. There are several strategies for doing but the *Generalized Born model* is probably the most commonly used one.
 # 
@@ -587,7 +582,6 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # - PLUM: Works with a special version of Gromacs
 # - ELBA: Works with LAMMPS
 # - SIRAH: Works with Gromacs and Amber
-# 
 
 # ### Beyond particles: Different representations and methods
 # 
@@ -625,17 +619,16 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 
 # ## Why do we need so many methods?
 # 
-# Why do we need some many methods? There are various reasons, so let's take a look at some. First, let's look at the number of atoms/components.
+# The above examples and discussion are mostly from computational chemistry / physics / chemical engineering. Even when restricted to those fields and just simulations, the number of methods is very large - and we haven't even talked about algorithms and data analysis yet! Why do we need some many methods? There are various reasons, so let's take a look at some. First, let's look at the number of atoms/components - after all, in the context of computational chemistry / physics / chemical engineering they are fundamental units. Analogously, in other problems one has to identify the basic units and behaviours to be modelled and analyzed.
 # 
-# A typical classical MD simulation has 10,000-100,000 atoms. The atoms are treated as entities interacting via pair potentials and electrons (or nuclei) are not taken into account separately. Without considering technical details, let's naively assume that that there is some relatively straightforward way of treating electrons and nuclei. A system of 10,000 atoms would then contain many more entities. If the system has only hydrogens, then the total number of particles would be 20,000. Let's consider carbon-12. It has 6 protons, 6 neutrons and 6 electrons: Each atom has 18 smaller entities. This would make the 10,000 atom system to a 180,000 atom system. How about gold? It has 79 protons, 118 neutrons and 79 electrons. This means that each Au atom has 276 smaller entities and a system of 10,000 atoms would then consist of 2,760,000 particles. Here are some issues that one needs to consider. 
+# A typical classical MD simulation has 10,000-100,000 atoms. The atoms are treated as entities interacting via pair potentials, and electrons (or nuclei) are not taken into account separately. Without considering technical details, let's naively assume that that there is some relatively straightforward way of treating electrons and nuclei. A system of 10,000 atoms would then contain many more entities. If the system has only hydrogens, then the total number of particles would be 20,000. Let's consider carbon-12. It has 6 protons, 6 neutrons and 6 electrons: Each atom has 18 smaller entities. This would make the 10,000 atom system to a 180,000 atom system. How about gold? It has 79 protons, 118 neutrons and 79 electrons. This means that each Au atom has 276 smaller entities and a system of 10,000 atoms would then consist of 2,760,000 particles. The number alone is overwhelming and the methods to treat them make it an even tougher problem. Here are some issues that one needs to consider. 
 # 
-# - Classical treatment: Newton's equation of motion, positions and velocities 
-# - Quantum mechanics: Schrödinger equation, wavefunction
+# - Classical treatment: [Newton's equation of motion](https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion), positions and velocities 
+# - Quantum mechanics: [Schrödinger equation](https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation), [wavefunction](https://en.wikipedia.org/wiki/Wave_function)
 # - Discrepancy in velocities: The fastest motion determines time step.
 #   - Consider this: In hydrogen, electrons (1s) move at about 0.7% speed of light!
 #   - In classical MD, the time step is typically 1-2 fs (or $1-2 \times 10^{-15}$ s)
 #   - In coarse-grained MD, the time step depends on the level of description: In the popular MARTINI model the time step is usually 10-40 fs, in dissipative particle dynamics about 10 ps.
-# 
 
 # ## Programming languages
 # 
@@ -643,13 +636,13 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # 
 # **Which programming language should I use/learn?** Depends on the needs, the level of knowledge and application(s). For example, Python is a general purpose language that can be used for many purposes and it is particularly useful for analyzing and visualzing data indpendent if the data is from simulations, experiments or some database. Python is very quick to learn and it has amazing amount of libraries and routines for almost any imaginable task, and the community is large and very supportive. Python is an interpreted language. Python is a language that has become a must learn independent of field and application, and it is particularly important in machine learning. We will also use Python.
 # 
-# C and C++ have a different nature than Python. They have to be compiled and they have a much more rigidily defined structure. C/C++ codes are great for writing high-performance simulation codes and, for example in the field of molecular simulations, Gromacs, LAMMPS and NAMD are written in C/C++. Earlier versions of LAMMPS were written in Fortran, but there was a transition to C++. Learning C/C++ is more useful for writing general purpose codes than Fortran. As for syntax, C/C++ and Python have lots of similarities.
+# C and C++ have a different nature than Python. They have to be compiled and they have a much more rigidily defined structure. C/C++ codes are great for writing high-performance simulation codes and, for example in the field of molecular simulations, Gromacs, LAMMPS and NAMD are written in C/C++. As for syntax, C/C++ and Python have lots of similarities.
 # 
 # Fortran is an older programming language and it was originally designed to be very efficient for numerical calculations. The name Fortran comes from *For*mula *Tran*slation. Although there has been a shift to C/C++, many HPC codes such as CP2K, Orca and Gaussian are written in Fortran.
 # 
 # Graphics processing units (GPU) are used increasingly in high performance computing. They use languages such as CUDA for NVIDIA GPUs, HIP for AMD GPUs and OpenCL that is GPU agnostic. In high performance computing CUDA is the dominant one while HIP is starting to gain ground. Syntactically, they have a very high resemblance to C/C++.
 # 
-# As for computers - and as will be discussed shortly - the Linux operating system is the dominant in the world of higher performance computing. Linux will also be used here. As for programming per se, it can be done in any of the common environments, that is, Windows, Mac OSX and Linux. 
+# As for computers,  the Linux operating system is the dominant in the world of higher performance computing. As for programming, it can be done in any of the common environments, that is, Windows, Mac OSX and Linux, or even Android or Chrome.
 
 # ## Bibliography
 # 
@@ -657,8 +650,6 @@ display(IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?to
 # :filter: docname in docnames
 # :style: plain
 # ```
-
-#  
 
 # <!--
 # ## Summary

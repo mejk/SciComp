@@ -1,13 +1,13 @@
 # First look into particle simulations
 
-This module focuses on  particle simulations usingf the molecular dynamics (MD) method. The aim is to learn the what particle simulations and MD are and what can be done with them. MD is mainly used in physics, chemistry, chemical engineering and pharmaceutical research. It is, however, a versatile method and has found use in many other fields as well. 
-As this is an introduction to particle simulations, the aim is not to provide  complete description, but rather a be practical in the sense that basic concepts and terminology are introduced. 
+This module focuses on  particle simulations using the molecular dynamics (MD) method. The aim is to learn the what particle simulations and MD are, and what can be done with them. MD is mainly used in physics, chemistry, chemical engineering and pharmaceutical research. It is, however, a versatile method and has found use in many other fields as well. 
+As this is an introduction to particle simulations, the aim is not to provide  complete description, but rather to be practical in the sense that basic concepts and terminology are introduced. 
 
 <!--
 This information will be needed and elaborated later and this knowledge will help in setting up simulations and in data analysis. 
 -->
 
-In addition to learning about MD and particle simulations, this module brings in the concept of visualization of data and particle simulations are ideal for demonstrating the importance and stregths of visualization time-dependent behaviour of a system.  
+In addition to learning about MD and particle simulations, this module brings in the concept of visualization of data and particle simulations are ideal for demonstrating the importance and strengths of visualization time-dependent behaviour of a system.  
 
 This module also introduces the concepts of different time and length scales. These concepts are general,  restricted to particle simulations or any specific field, and they will be used in other modules as well. Particle simulations offer a very natural framework for discussing the different scales as they emerge from the physical properties the systems and are thus very intuitive. 
 
@@ -79,36 +79,38 @@ These discrete entities may also be *coarse-grained atoms* (sometimes also calle
 Simulations of even large non-atomistic entities such as planets are in the category of particle simulations since they are *discrete entities*. In such simulations, the internal structure of planets or celestial bodies is not included in the simulated properties. This is similar in  spirit to not taking electrons into account in atomic-level molecular dynamics simulations.  Other examples that may not be so obvious at first sight are entities such as lattice defects in solid state systems. Defects can be treated as discrete entities and they have properties such as size and they interact over distances. Here, we use 'atomistic' atoms and the term *atomistic* is used for describing systems at the atomic scale of Ångströms and nanometers.
 
 ````{figure} ../../images/lattice-hexagonal.svg
-:alt: continuum modeling
 :class: bg-light
 :width: 700px
 :align: left
 
-*Two examples of a lattice. Left: A hexagonal lattice with one lattice site highlighted in red. The nearest neighbors (6) of the site are marked in blue. Middle: A square lattice. The nearest neighbors (4) of a selected site (red) are marked in blue. When simulating continuum models, the partial differential equations are solved using finite difference methods on a lattice. Thus, the space is not continuous like in a particle simulation (right).*
+*Two examples of a lattice. Left: A hexagonal lattice with one lattice site highlighted in red. The nearest neighbours (6) of the site are marked in blue. Middle: A square lattice. The nearest neighbours (4) of a selected site (red) are marked in blue. When simulating continuum models, the partial differential equations are solved using finite difference methods on a lattice. Thus, the space is not continuous like in a particle simulation (right).*
 ````
 
-In contrast to *particle simulations*, in *continuum modeling* one often uses a fixed underlying *lattice* or grid in which one solves *finite difference* equations. In such simulations the material (say, a liquid, gas or a solid) is described by a *continuous field* instead of an atom. This means that, unlike in an atomistic simulations, the material no longer has internal structure but it is described by a field or several fields. The field(s) is (are)  placed on a discrete grid and the evolution of the field(s) is (are) solved on a computer; the corresponding equations of motion are solved on a lattice or using finite element methods (FEM). Such approaches are commonly used in the fields of materials research and reaction-diffusion systems.
+In contrast to *particle simulations*, in *continuum modelling* one often uses a fixed underlying *lattice* or grid in which one solves *finite difference* equations. In such simulations the material (say, a liquid, gas or a solid) is described by a *continuous field* instead of an atom. This means that, unlike in an atomistic simulations, the material no longer has internal structure but it is described by a field or several fields. The field(s) is (are)  placed on a discrete grid and the evolution of the field(s) is (are) solved on a computer; the corresponding equations of motion are solved on a lattice or using finite element methods (FEM). Such approaches are commonly used in the fields of materials research and reaction-diffusion systems.
 
 
-````{figure} ../../images/rayleigh-benard-cell.png
-:alt: continuum modeling
-:class: bg-light
+
+````{figure} ../../images/rayleigh-benard-cell.svg
 :width: 450px
 :align: left
 
-*Example of continuum modeling. Assume a situation in which fluid is placed between two plates. The lower plate is kept at a higher temperature than the upper one (left). As the warmer and lighter fluid raises to the top, the top layer cools and becomes denser and heavier. This can lead to rotation of water as indicated by the arrows: the heavier fluid drops and lighter rises. The picture on the right shows a top view of such a situation using continuum modeling (*phase-field model*). Model this type of a system would require too many particles and hence one has to use continuum models. In this case, the equations of motion (partial differential equations) were solved on a square lattice. This type of physical situation occurs, for example in oceans and is called Rayleigh-Benard convection.*
+Example of continuum modelling. Assume a situation in which fluid is placed between two plates. The lower plate is kept at a higher temperature than the upper one (left). As the warmer and lighter fluid raises to the top, the top layer cools and becomes denser and heavier. This can lead to rotation of water as indicated by the arrows: the heavier fluid drops and lighter rises. The picture on the right shows a top view of such a situation using continuum modelling (*phase-field model*). Model this type of a system would require too many particles and hence one has to use continuum models. In this case, the equations of motion (partial differential equations) were solved on a square lattice. This type of physical situation occurs, for example in oceans and is called Rayleigh-Benard convection.
+
 ````
 
-````{dropdown} **Movie a simulation of a reaction-diffusion system using a field**
+The movie below shows the time evolution of a reaction-diffusion system of two reacting and diffusing chemical species.
 
-A movie showing an example of *continuum modeling*. The model (the so-called Gray-Scott model) describes chemical reactions between two species. The reaction starts from the lower left hand corner and as the time progresses, the whole system is covered leading to a stripy patters; this pattern describes one density of one of the chemical components, the other component has a complementary pattern. After the stripes have formed, one can observe slower evolution of the pattern. That is called *coarsening*. In this case, the partial differential equations describing the system were solved on a square lattice in two dimensions.
+
+```{dropdown} **Movie a simulation of a reaction-diffusion system using a field**
 
 <div style="padding:102.78% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/501235656?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <p><a href="https://vimeo.com/501235656">Gray-Scott model</a> from <a href="https://vimeo.com/softsimu">mikko karttunen</a>.</p>
 
+A movie showing an example of *continuum modelling*. The model (the so-called Gray-Scott model) describes chemical reactions between two species. The reaction starts from the lower left hand corner and as the time progresses, the whole system is covered leading to a stripy patters; this pattern describes one density of one of the chemical components, the other component has a complementary pattern. After the stripes have formed, one can observe slower evolution of the pattern. That is called *coarsening*. In this case, the partial differential equations describing the system were solved on a square lattice in two dimensions.
+
+```
 
 
-````
 
 <!--
 It is also noteworthy that *electronic structure calculations* do not belong to the category of particle simulations either as the positions of the nuclei are fixed and the electronic structure is determined by a *minimization process*. Minimization is very different from an actual simulation as will be discussed later.
@@ -125,7 +127,7 @@ In this course the focus is on the molecular dynamics method, but for completene
 
 The MC method does *not* solve any equations of motion, instead it is a *stochastic optimization* method using an energy function: No time integration is involved but one uses random numbers for optimizing selected properties. In the case molecular systems, one typically optimizes (minimizes) the potential energy. This also means that, in its basic form, MC cannot measure any dynamical properties (there are variants like the kinetic Monte Carlo but even that doesn't have time integration). Instead, MC uses [*ensemble averaging*](https://en.wikipedia.org/wiki/Ensemble_average_(statistical_mechanics)) to compute the system's properties. 
 
-The basic idea of MC simulation is that it uses [*pseudo-random numbers*](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) to overcome local energy barriers to reach the minimum energy state. Random numbers are used to give the system a small probability to move in the direction that is energetically unfavorable. That is, in a crude sense the system 'gambles' to find the global minimum state; the name Monte Carlo comes from the [Monte Carlo Casino](https://en.wikipedia.org/wiki/Monte_Carlo_Casino) in the city of [Monaco](https://en.wikipedia.org/wiki/Monaco) in Southern France.
+The basic idea of MC simulation is that it uses [*pseudo-random numbers*](https://en.wikipedia.org/wiki/Pseudorandom_number_generator) to overcome local energy barriers to reach the minimum energy state. Random numbers are used to give the system a small probability to move in the direction that is energetically unfavourable. That is, in a crude sense the system 'gambles' to find the global minimum state; the name Monte Carlo comes from the [Monte Carlo Casino](https://en.wikipedia.org/wiki/Monte_Carlo_Casino) in the city of [Monaco](https://en.wikipedia.org/wiki/Monaco) in Southern France.
 In terms of an atomistic system, only the positions of the atoms are used and there are no velocities. Since the particles have mutual interactions described by a potential energy, minimization of potential energy yields the equilibrium configuration of the system.  The part that sometimes causes confusion is that in MC, term *Monte Carlo steps* is used. The term indicates the number of so-called *Monte Carlo sweeps* and it is sometimes falsely equated to the *time steps* in MD simulations. In MD, there is a real time step (typically in terms of femtoseconds) but the MC step does not correspond to any physical time.
 
 
@@ -135,7 +137,7 @@ In terms of an atomistic system, only the positions of the atoms are used and th
 :width: 650px
 :align: left
 
-*The concept behind the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method). Consider that a system's state is described the green sphere and the that the [energy landscape](https://en.wikipedia.org/wiki/Energy_landscape) is given by the dashed line. Deterministic optimization finds the closest minimum as indicated by the arrow in the left hand side figure. Once the minimum has been reached, the system stays there. Monte Carlo is a stochastic optimization method. It uses random numbers to enable the system to move uphill in the energetically unfavorable direction as indicated by the arrow in the right hand side figure. Once the system crosses the saddle point, it can find the global minimum.*
+*The concept behind the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method). Consider that a system's state is described the green sphere and the that the [energy landscape](https://en.wikipedia.org/wiki/Energy_landscape) is given by the dashed line. Deterministic optimization finds the closest minimum as indicated by the arrow in the left hand side figure. Once the minimum has been reached, the system stays there. Monte Carlo is a stochastic optimization method. It uses random numbers to enable the system to move uphill in the energetically unfavourable direction as indicated by the arrow in the right hand side figure. Once the system crosses the saddle point, it can find the global minimum.*
 
 ````
 
@@ -231,7 +233,7 @@ One advantage of continuum simulations using fields is that it is possible to de
 
 ## Summary
 
-This section introduced a number of concepts related particle modeling. In the next sections, we will make these concepts more quantitative and put them into practise when we set up and analyze simulations and simulation data.
+This section introduced a number of concepts related particle modelling. In the next sections, we will make these concepts more quantitative and put them into practise when we set up and analyze simulations and simulation data.
 
 ## Bibliography
 

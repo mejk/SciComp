@@ -53,4 +53,7 @@ sphinx:
 
 parse:
   myst_extended_syntax: true
- 
+
+# In _config.yml
+bibtex_bibfiles:
+    - references.bib
