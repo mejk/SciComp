@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>19. Sources of Errors in Scientific Computing &#8212; SciComp9502B</title>
+    <title>Numerical Integration &#8212; SciComp9502B</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -71,11 +71,25 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/Error_sources.html" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/Int.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="21. Truncation Error in Taylor’s series" href="TaylorExample.html" />
-    <link rel="prev" title="18. Numerical Analysis" href="Errors_summary.html" />
+    <link rel="next" title="Higher Order Integration Schemes" href="HigherOrderInt.html" />
+    <link rel="prev" title="Errors in Numerical Differentiation" href="NumDiffInt_Errors.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -237,52 +251,57 @@
    17. Random numbers
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/diffusion-in-brief.html">
+   18. Diffusion - a brief introduction
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Errors_summary.html">
-   18. Numerical Analysis
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   19. Sources of Errors in Scientific Computing
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   19. Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="TaylorExample.html">
-   21. Truncation Error in Taylor’s series
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   20. Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="FinitePrecision.html">
-   22. Finite Precision
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   22. Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="HornersAlgorithm.html">
-   23. Example: Evaluating polynomials
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   23. Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="RoundoffAmplification.html">
-   24. Roundoff Error Amplification
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   24. Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="BackwardForwardConditioning.html">
-   25. Forward and Backwards Errors
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   25. Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   26. Forward and Backwards Errors
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Interpolation
+  Part 2 - Interpolation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -319,32 +338,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Numerical Differentiation &amp; Integration
+  Part 3 - Numerical Differentiation &amp; Integration
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+  <a class="reference internal" href="NumDiffInt.html">
    Numerical Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+  <a class="reference internal" href="NumDiffInt_Errors.html">
    Errors in Numerical Differentiation
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/Int.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Numerical Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+  <a class="reference internal" href="HigherOrderInt.html">
    Higher Order Integration Schemes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+  <a class="reference internal" href="GaussianInt.html">
    Gaussian Integration
   </a>
  </li>
@@ -401,7 +420,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/class/ErrorsModule/Error_sources.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/NDiffInt/Int.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -431,14 +450,14 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   19. Sources of Errors in Scientific Computing
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#composite-integration">
+   Composite Integration
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quantifying-error">
-   20. Quantifying Error
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stability">
+   Stability
   </a>
  </li>
 </ul>
@@ -451,7 +470,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sources of Errors in Scientific Computing</h1>
+                <h1>Numerical Integration</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -461,14 +480,14 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   19. Sources of Errors in Scientific Computing
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#composite-integration">
+   Composite Integration
   </a>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quantifying-error">
-   20. Quantifying Error
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#stability">
+   Stability
   </a>
  </li>
 </ul>
@@ -480,28 +499,132 @@
             
               <div>
                 
-  <div class="section" id="sources-of-errors-in-scientific-computing">
-<h1><span class="section-number">19. </span>Sources of Errors in Scientific Computing<a class="headerlink" href="#sources-of-errors-in-scientific-computing" title="Permalink to this headline">¶</a></h1>
-<p>Errors can come from a number of sources and it is helpful to catergorize these sources first:</p>
-<ol class="simple">
-<li><p><strong>Blunders</strong>.  This includes <em>syntax errors</em> and <em>logic errors</em> in your code.  The first are relatively easy to find, especially if you use a compiled language such as C/C++ and learn how to read the error messages from the compiler/interpreter.  The second are much harder to find but are problably most likely when your code gives results that don’t seem to make sense.</p></li>
-<li><p><strong>Data errors from measurements</strong>.  The old saying “garbage in = garbage out” is relevent here.  This is can be a significant problem in data sciences.  It includes “over-fitting” where the misguided researcher fits not just the signal in a measurement but also the noise.  Another example we will examine in more detail in the section on interpolation is the “Runge Phenomenon”.  This is an error that arises from using polynomial interpolation on equally spaced data points that can cause huge errors near the boundaries of the fitted domain.  It is also something that is common in extrapolation which is rarely succesful just fitting data without an underlying model that you have strong reason to believe is valid outside the fitted domain.</p></li>
-<li><p><strong>Truncation or discretization errors</strong>.  We will discuss this in more detail later in this chapter.  These arise from the fact that our models and algorithms usually only try to approximate the solution.</p></li>
-<li><p><strong>Finite precision arithmetic</strong>.  These stem from the fact that we cannot represent all possible real numbers on a computer.  This leads to issues of over/underflow and roundoff errors which we will explore in more detail in this chapter.</p></li>
-<li><p><strong>Attempting to solve the wrong problem</strong>.  This is much more common that you would think.  An example is trying to predict whether or not it will rain in a certain location 60 days from now (i.e. yes or no).  This is a poorly conditioned problem.  However, if you change the problem slightly and ask for the probability that it will rain in a certain location 60 days from now, this new problem is now solvable within reasonably well-defined error bounds.</p></li>
-</ol>
-<p>The first of these sources of errors are the sort of thing that is usually addressed in a computer science course and we will not spend much time here discussing it.  However, when you sit down to do the excercises this is likely to be the primarly source of errors that will consume your time.  Good coding practise and ensuring you understand the algorithm you are trying to implement before trying to code it up are the best way to avoid spending too much time on blunders.</p>
-<p>While we will return to data errors later in the course when we discuss interoplation and regression, they are not the main focus of a numerical analysis course.  A good understanding of probability and statistics will help you in knowing how significant these sorts of errors may be in the problem you are trying to solve.</p>
-<p>The last three sources of error will be something we will cover in detail in this course and by completion you should be adept at avoiding them.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="numerical-integration">
+<span id="page-topic1"></span><h1>Numerical Integration<a class="headerlink" href="#numerical-integration" title="Permalink to this headline">¶</a></h1>
+<p>Numerical integration has a long history.  Older literature refers to this as numerical “quadrature”.  Numerical differentiation is primarily used for cases where we have discrete data corresponding to measurements of our underlying function. While numerical integration is used in similar circumstances, it is also often a necessity even when we have a relatively simple analytic form for the underlying function due to the lack of an analytic form for most anti-derivatives.  For example, <span class="math notranslate nohighlight">\(f(x) = e^{-x^2}\)</span> can be easily differentiated (<span class="math notranslate nohighlight">\(f'(x)=2x e^{-x^2}\)</span>) but lacks an analytic antiderivative.  Statistics textbooks still typically contain tables related to the antiderivative of this function that are obtained by numerical integration.</p>
+<p>We will start our analysis in a similar manner to our discussion of numerical differentiation and discuss integration of data at equally spaced points.  However, after deriving low order formulas in this manner we will move onto other methods of deriving higher order formulas.  As before,  we replace <span class="math notranslate nohighlight">\(f(x)\)</span> with its interpolatory function (Lagrange or splines) and take the derivative of that.  i.e.</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = p(x) + \epsilon(x), \]</div>
+<p>where <span class="math notranslate nohighlight">\(p(x)\)</span> is our interpolation and <span class="math notranslate nohighlight">\(\epsilon(x)\)</span> is the error in the interpolation.  Integrating this gives</p>
+<div class="math notranslate nohighlight">
+\[ \int_a^b f(x) dx= \int_a^b p(x) dx + \int_a^b \epsilon(x) dx.\]</div>
+<p>Applying this to Lagrange interpolation we get</p>
+<p>with</p>
+<div class="math notranslate nohighlight">
+\[
+a_k=\int_a^b L_k(x) dx,
+\]</div>
+<p>and error</p>
+<div class="math notranslate nohighlight">
+\[
+E =  \int_a^b  \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0}^n (x-x_j) dx.
+\]</div>
+<p><strong>Example: Trapezoidal Rule.</strong>  Here we use a linear interpolation between the endpoints so <span class="math notranslate nohighlight">\(x_0=a\)</span> and <span class="math notranslate nohighlight">\(x_1=b\)</span>.  Integration of the Lagrange polynomials for this case gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+a_0 &amp;= \int_a^b L_0(x) dx,\\
+&amp;= \int_a^b \frac{x-x_1}{x_0-x_1} dx,\\
+&amp;= \frac{b-a}{2}.
+\end{align}
+\end{split}\]</div>
+<p>A very similar integration for <span class="math notranslate nohighlight">\(L_1(x)\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[
+a_1 =\int_a^b L_0(x) dx = \frac{b-a}{2}.
+\]</div>
+<p>Putting this into Eq. <code class="xref eq docutils literal notranslate"><span class="pre">LagrangeInt</span></code> yields</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(x) dx \approx \frac{b-a}{2}\left(f(a)+f(b)\right).
+\]</div>
+<p>This is called the <em>trapezoidal</em> rule as the shape under the line we are integration over is a trapezoid.  To find the error,</p>
+<div class="math notranslate nohighlight">
+\[
+E =  \int_{x_0}^{x_1}  \frac{f''(\xi)}{2}(x-x_0)(x-x_1) dx.
+\]</div>
+<p>The difficulty here is that <span class="math notranslate nohighlight">\(\xi\)</span> depends on <span class="math notranslate nohighlight">\(x\)</span> in an unknown manner.  Noting that <span class="math notranslate nohighlight">\((x-x_0)(x-x_1) \leq 0\)</span> on <span class="math notranslate nohighlight">\([x_0,x_1]\)</span> we can make use of</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+<strong>The Weighted Mean Value Theorem</strong>  <div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">If <span class="math notranslate nohighlight">\(f(x)\)</span> is continuously and <span class="math notranslate nohighlight">\(g(x)\)</span> is an integrable function that does not change sign on <span class="math notranslate nohighlight">\([a,b]\)</span>, then there exists <span class="math notranslate nohighlight">\(\eta \in (a,b)\)</span> such that</p>
+<div class="math notranslate nohighlight">
+\[
+\int_a^b f(x)g(x) dx = f(\eta)\int_a^b g(x)dx.
+\]</div>
 </div>
-<div class="section" id="quantifying-error">
-<h1><span class="section-number">20. </span>Quantifying Error<a class="headerlink" href="#quantifying-error" title="Permalink to this headline">¶</a></h1>
-<p>To quantify error we need to first define what we mean.
-If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation to <span class="math notranslate nohighlight">\(p\)</span>, then:</p>
-<p>-the <em>absolute</em> error is <span class="math notranslate nohighlight">\(|p-p^*|\)</span>,</p>
-<p>-the <em>relative</em> error is <span class="math notranslate nohighlight">\(\frac{|p-p^*|}{|p|}\)</span>,</p>
-<p>-and the number of <em>significant digits</em> is <span class="math notranslate nohighlight">\(t\)</span> if <span class="math notranslate nohighlight">\(t\)</span> is the largest positive integer with <span class="math notranslate nohighlight">\(\frac{|p-p^*|}{|p|} \leq 5 \times 10^{-t}\)</span>.</p>
-<p>The advantage of the relative error is that it is scale invariant.  For example, if you measure the length of a pencil with a ruler to be <span class="math notranslate nohighlight">\(16\)</span> cm with an absolute error of <span class="math notranslate nohighlight">\(0.5\)</span> mm.  This absolute error depends on the unit of measurment.  If you measure in nm, then it is huge.  If you measure in parsecs, it is miniscule.  However, the relative error is <span class="math notranslate nohighlight">\(0.003\)</span> independent of the units of measurement.  Note that the formula above actually says the realtive error is <span class="math notranslate nohighlight">\(0.003125\)</span>, but we typically only quote errors to one significant digit.</p>
+</details><p>to conclude that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+E &amp;= \frac{f''(\eta)}{2} \int_{x_0}^{x_1} (x-x_0)(x-x_1) dx,\\
+&amp;= - \frac{(x_1-x_0)^3}{12} f''(\eta),\\
+&amp;= - \frac{(b-a)^3}{12} f''(\eta),
+\end{align}
+\end{split}\]</div>
+<p>for some (unknown) <span class="math notranslate nohighlight">\(\eta\in (a,b)\)</span>.</p>
+<p>Often quadrature formulas are characterized by the <em>degree of accuracy</em>.  This is defined as the largest integer <span class="math notranslate nohighlight">\(m\)</span> for which the formula is exact for all polynomials of degree <span class="math notranslate nohighlight">\(\leq m\)</span>.  We see here that the trapezoidal rule has degree of accuracy of 1 as it is exact for all polynomials of degree <span class="math notranslate nohighlight">\(\leq 1\)</span> (as the error term involves the second derivative).</p>
+<p>To improve upon the trapezoidal rule (i.e. reduce the error) we could use more points and a higher degree polynomial.  However, we actually have another option which we will consider first.  In particular, we can break up the interval and apply the trapezoidal rule on each interval.  We will illustrate this next.</p>
+<div class="section" id="composite-integration">
+<h2>Composite Integration<a class="headerlink" href="#composite-integration" title="Permalink to this headline">¶</a></h2>
+<p>Let’s assume that we are given data at equally spaced points <span class="math notranslate nohighlight">\(x_j=a+jh\)</span> on the interval <span class="math notranslate nohighlight">\([a,b]\)</span>, for <span class="math notranslate nohighlight">\(j=0,\cdots,n\)</span> so <span class="math notranslate nohighlight">\(h=(b-a)/n\)</span>.  We break up the integral into <span class="math notranslate nohighlight">\(n\)</span> separate intevals over each segment <span class="math notranslate nohighlight">\((x_j,x_{j+1})\)</span> and apply the trapezoidal rule to each segment:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\int_a^b f(x) dx &amp;= \int_{x^0}^{x_1} f(x) dx + \int_{x^1}^{x_2} f(x) dx + \cdots +\int_{x^{n-1}}^{x_n} f(x) dx,\\
+&amp;= \sum_{j=0}^{n-1} \int_{x_j}^{x_{j+1}} f(x) dx,\\
+&amp;= \sum_{j=0}^{n-1} \frac{h}{2}(f(x_j)+f(x_{j+1})) - \frac{h^3}{12} \sum_{j=0}^{n-1} f''(\xi_j).
+\end{align}
+\end{split}\]</div>
+<p>Note that the unknown <span class="math notranslate nohighlight">\(\xi_j\)</span>’s are each in a differnt subinterval <span class="math notranslate nohighlight">\((x_j,x_{j+1})\)</span>. In additon, any given <span class="math notranslate nohighlight">\(f(x_i)\)</span> appears in two terms in the first sum, except for the endpoints.  We can the rearrange the terms to get</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\int_a^b f(x) dx 
+&amp;= \frac{h}{2}(f(a) + 2 \sum_{j=1}^{n-1} f(x_j)+f(b)) - \frac{(nh)h^2}{12} \frac{\sum_{j=0}^{n-1} f''(\xi_j)}{n}.
+\end{align}
+\]</div>
+<p>The sum in the error term is the mean value of <span class="math notranslate nohighlight">\(n\)</span> values of <span class="math notranslate nohighlight">\(f''(x)\)</span> at different values in <span class="math notranslate nohighlight">\((a,b)\)</span>.  It is not too hard to argue that, if <span class="math notranslate nohighlight">\(f''(x)\)</span> is continuous on <span class="math notranslate nohighlight">\([a,b]\)</span>, that this mean value is realized at some <span class="math notranslate nohighlight">\(x=\eta\)</span>.  As such, we can write this as</p>
+<div class="math notranslate nohighlight">
+\[
+\begin{align}
+\int_a^b f(x) dx 
+&amp;= \frac{h}{2}\left(f(a) + 2 \sum_{j=1}^{n-1} f(x_j)+f(b)\right) - (b-a)\frac{h^2}{12} f''(\eta),
+\end{align}
+\]</div>
+<p>where we also used the fact that <span class="math notranslate nohighlight">\(nh=(b-a)\)</span>.</p>
+</div>
+<div class="section" id="stability">
+<h2>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h2>
+<p>We discovered that numerical differentiation using finite differences was numerically unstable for small <span class="math notranslate nohighlight">\(h\)</span>.  We now examine the stability of numerical integration, and in particular, the composite trapezoidal rule.   As in <a class="reference internal" href="NumDiffInt_Errors.html"><span class="doc std std-doc">that discussion</span></a>, we will let <span class="math notranslate nohighlight">\(\mathcal{fl}(.)\)</span> denote the finite precision arithmetic on the computer, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{fl}(f(x))=f(x) + e_r(x)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(e_r\)</span> is the roundoff error. The error in evaluation of the composite trapezoidal run is then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+E(h) &amp;= \left| \int_a^b f(x) dx - \mathcal{fl}\left( \frac{h}{2}\left(f(a) + 2 \sum_{j=1}^{n-1} f(x_j)+f(b)\right)  \right) \right|,\\
+&amp;= \left| \frac{h}{2}\left(e_r(a) + 2 \sum_{j=1}^{n-1} e_r(x_j)+e_r(b)\right)  - (b-a)\frac{h^2}{12} f''(\eta) \right|,\\
+\end{align}
+\end{split}\]</div>
+<p>Again, roundoff errors are unlikely to be correlated and, in particular, are as likely to be positive as negative.  We do expect it to be bounded so let’s assume <span class="math notranslate nohighlight">\(|e_r(x)|&lt;\beta\)</span>. Putting this together, along with use of the triangle inequality gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+E(h) &amp;\leq (b-a)\frac{h^2}{12}\left| f''(\eta) \right| + \frac{h}{2}\left( \beta + 2 (n-1) \beta + \beta \right),\\
+&amp;= (b-a)\frac{h^2}{12}\left| f''(\eta) \right| + nh \beta,\\
+&amp;= (b-a)\frac{h^2}{12}\left| f''(\eta) \right| + (b-a)\beta.
+\end{align}
+\end{split}\]</div>
+<p>Examining this result, we see that as <span class="math notranslate nohighlight">\(h\rightarrow 0\)</span> the truncation error (first term) goes to zero while the second term remains constant (in contrast to differentiation where the roundoff error became bigger).  We conclude that numerical integration is stable as <span class="math notranslate nohighlight">\(h\rightarrow 0\)</span>.</p>
+<p>Again, similar arguments can be applied to numerical integration of noisy data (data with stochastic noise).  In this case, numerical integration can be applied directly without any presmoothing operation (in fact, you should <em>not</em> apply a presmoothing operation).</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -517,7 +640,7 @@ If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./class/ErrorsModule"
+            path: "./class/NDiffInt"
         },
         predefinedOutput: true
     }
@@ -529,17 +652,17 @@ If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Errors_summary.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="NumDiffInt_Errors.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">18. </span>Numerical Analysis</p>
+            <p class="prev-next-title">Errors in Numerical Differentiation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="TaylorExample.html" title="next page">
+    <a class='right-next' id="next-link" href="HigherOrderInt.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">21. </span>Truncation Error in Taylor’s series</p>
+        <p class="prev-next-title">Higher Order Integration Schemes</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

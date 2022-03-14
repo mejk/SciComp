@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>19. Sources of Errors in Scientific Computing &#8212; SciComp9502B</title>
+    <title>Interpolation &#8212; SciComp9502B</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -71,11 +71,25 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/Error_sources.html" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/InterpFit/InterpFit_summary.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="21. Truncation Error in Taylor’s series" href="TaylorExample.html" />
-    <link rel="prev" title="18. Numerical Analysis" href="Errors_summary.html" />
+    <link rel="next" title="Lagrange Form of the Interpolation Polynomial" href="LagrangeForm.html" />
+    <link rel="prev" title="26. Forward and Backwards Errors" href="../ErrorsModule/BackwardForwardConditioning.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -237,89 +251,94 @@
    17. Random numbers
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/diffusion-in-brief.html">
+   18. Diffusion - a brief introduction
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Errors_summary.html">
-   18. Numerical Analysis
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   19. Sources of Errors in Scientific Computing
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   19. Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="TaylorExample.html">
-   21. Truncation Error in Taylor’s series
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   20. Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="FinitePrecision.html">
-   22. Finite Precision
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   22. Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="HornersAlgorithm.html">
-   23. Example: Evaluating polynomials
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   23. Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="RoundoffAmplification.html">
-   24. Roundoff Error Amplification
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   24. Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="BackwardForwardConditioning.html">
-   25. Forward and Backwards Errors
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   25. Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   26. Forward and Backwards Errors
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Interpolation
+  Part 2 - Interpolation
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../InterpFit/InterpFit_summary.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Interpolation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../InterpFit/LagrangeForm.html">
+  <a class="reference internal" href="LagrangeForm.html">
    Lagrange Form of the Interpolation Polynomial
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../InterpFit/BarycentricInterp.html">
+  <a class="reference internal" href="BarycentricInterp.html">
    Barycentric Lagrange Interpolation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../InterpFit/InterpErrors.html">
+  <a class="reference internal" href="InterpErrors.html">
    Interpolation Errors
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../InterpFit/Chebyshev.html">
+  <a class="reference internal" href="Chebyshev.html">
    Chebyshev Interpolation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../InterpFit/Splines.html">
+  <a class="reference internal" href="Splines.html">
    Splines
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Numerical Differentiation &amp; Integration
+  Part 3 - Numerical Differentiation &amp; Integration
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -401,7 +420,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/class/ErrorsModule/Error_sources.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/InterpFit/InterpFit_summary.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -431,14 +450,9 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   19. Sources of Errors in Scientific Computing
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quantifying-error">
-   20. Quantifying Error
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polynomial-interpolation-problem">
+   Polynomial Interpolation Problem
   </a>
  </li>
 </ul>
@@ -451,7 +465,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sources of Errors in Scientific Computing</h1>
+                <h1>Interpolation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -461,14 +475,9 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   19. Sources of Errors in Scientific Computing
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#quantifying-error">
-   20. Quantifying Error
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#polynomial-interpolation-problem">
+   Polynomial Interpolation Problem
   </a>
  </li>
 </ul>
@@ -480,28 +489,29 @@
             
               <div>
                 
-  <div class="section" id="sources-of-errors-in-scientific-computing">
-<h1><span class="section-number">19. </span>Sources of Errors in Scientific Computing<a class="headerlink" href="#sources-of-errors-in-scientific-computing" title="Permalink to this headline">¶</a></h1>
-<p>Errors can come from a number of sources and it is helpful to catergorize these sources first:</p>
-<ol class="simple">
-<li><p><strong>Blunders</strong>.  This includes <em>syntax errors</em> and <em>logic errors</em> in your code.  The first are relatively easy to find, especially if you use a compiled language such as C/C++ and learn how to read the error messages from the compiler/interpreter.  The second are much harder to find but are problably most likely when your code gives results that don’t seem to make sense.</p></li>
-<li><p><strong>Data errors from measurements</strong>.  The old saying “garbage in = garbage out” is relevent here.  This is can be a significant problem in data sciences.  It includes “over-fitting” where the misguided researcher fits not just the signal in a measurement but also the noise.  Another example we will examine in more detail in the section on interpolation is the “Runge Phenomenon”.  This is an error that arises from using polynomial interpolation on equally spaced data points that can cause huge errors near the boundaries of the fitted domain.  It is also something that is common in extrapolation which is rarely succesful just fitting data without an underlying model that you have strong reason to believe is valid outside the fitted domain.</p></li>
-<li><p><strong>Truncation or discretization errors</strong>.  We will discuss this in more detail later in this chapter.  These arise from the fact that our models and algorithms usually only try to approximate the solution.</p></li>
-<li><p><strong>Finite precision arithmetic</strong>.  These stem from the fact that we cannot represent all possible real numbers on a computer.  This leads to issues of over/underflow and roundoff errors which we will explore in more detail in this chapter.</p></li>
-<li><p><strong>Attempting to solve the wrong problem</strong>.  This is much more common that you would think.  An example is trying to predict whether or not it will rain in a certain location 60 days from now (i.e. yes or no).  This is a poorly conditioned problem.  However, if you change the problem slightly and ask for the probability that it will rain in a certain location 60 days from now, this new problem is now solvable within reasonably well-defined error bounds.</p></li>
-</ol>
-<p>The first of these sources of errors are the sort of thing that is usually addressed in a computer science course and we will not spend much time here discussing it.  However, when you sit down to do the excercises this is likely to be the primarly source of errors that will consume your time.  Good coding practise and ensuring you understand the algorithm you are trying to implement before trying to code it up are the best way to avoid spending too much time on blunders.</p>
-<p>While we will return to data errors later in the course when we discuss interoplation and regression, they are not the main focus of a numerical analysis course.  A good understanding of probability and statistics will help you in knowing how significant these sorts of errors may be in the problem you are trying to solve.</p>
-<p>The last three sources of error will be something we will cover in detail in this course and by completion you should be adept at avoiding them.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="interpolation">
+<span id="page-topic1"></span><h1>Interpolation<a class="headerlink" href="#interpolation" title="Permalink to this headline">¶</a></h1>
+<p>Interpolation can be used to solve two types of problems.  In the first we are given a discrete set of data points (perhaps from an experiment or other measurement) and we want to know what would result if a measurement was done at some intermediate point.  This is illustrated below:</p>
+<p><img alt="interpolation problem A" src="../../_images/InterpProbA.svg" /></p>
+<p>The assumption here is that there exists some reasonably well-behaved underlying function that our measurements are effectively evaluating at the discrete set of points.  The need for interpolation is so fundamental that solutions to this problem date to antiquity and it is thought it was routinely done by the ancient Greeks and Persians.  It was described in the early Chinese mathematical text <em>The Nine Chapters on the Mathematical Art</em> and in the <em>Almagest</em> by Ptolemy in the 2nd century AD.</p>
+<p>There is, however, a second problem where we may know the underlying function quite well and be able to evaluate it relatively easily at any point.  However, even in that case it may be useful to replace this function with an interpolating function.  One example where this is often done is when we have a function <span class="math notranslate nohighlight">\(f(x)\)</span> that we know analytically but that does not have an analytic form for its antiderivative.  If we can replace this function, say by its Taylor series about a suitable point, then it is fairly straightforward to analytically integrate the Taylor series (as it is a polynomial).  This process is call analytic substitition.  In order for this to be useful, the interpolating function needs to be “close” to the original <span class="math notranslate nohighlight">\(f(x)\)</span> as illustrated below:</p>
+<p><img alt="interpolation problem B" src="../../_images/InterpProbB.svg" /></p>
+<p>by “close” we mean that our interpolating function stays with a tube of diameter <span class="math notranslate nohighlight">\(\epsilon\)</span> of our original function <span class="math notranslate nohighlight">\(f(x)\)</span>.
+In both cases, we are effectively replacing our underlying function with what is usually a weighted sum of a set of basis functions and we want this new function to be close to the original.</p>
+<p>In interpolation we assume that either the data points we are given have no, or negible, (measurement) errors or that we can generate such points by evaluating the underlying function exactly at such a discrete set of points.  As a result, we insure that our interpolating function at least agrees exactly with our underlying function at the given discrete set of points.  In curve fitting we generally assume that there are some errors in our data points and as a result we can relax the constraint that we get exact agreement with these data points usually in favor of getting a “fitted function” that is motivated by a model of the situtation in question or is fairly straightforward to interpret and/or evaluate.
+We will first examine interpolation.</p>
+<p>The first question to ask is: What set of basis functions should we use?  Here we will use polynomials although other functions such as trigonometric functions are also common (Fourier Transform).  The fact that every continuous function on a closed interval <span class="math notranslate nohighlight">\([a,b]\)</span> can be approximated by a polynomial function (within a tube of diameter <span class="math notranslate nohighlight">\(\epsilon\)</span> as in the figure above) was not actually proven until 1885 when the result was established by Karl Weierstrass.  We can frame this as:</p>
+<div class="section" id="polynomial-interpolation-problem">
+<h2>Polynomial Interpolation Problem<a class="headerlink" href="#polynomial-interpolation-problem" title="Permalink to this headline">¶</a></h2>
+<p>Given data values <span class="math notranslate nohighlight">\((x_0,f(x_0)), (x_1,f(x_1)), (x_2,f(x_2)),..., (x_n,f(x_n))\)</span> find a polynomial <span class="math notranslate nohighlight">\(p(x)\)</span> of appropriate degress (<span class="math notranslate nohighlight">\(\leq n\)</span>), such that</p>
+<div class="math notranslate nohighlight">
+\[ p(x_i)=f(x_i), \qquad\qquad i=0,1,2,...,n.\]</div>
+<p>There are a couple of practical things to note:</p>
+<ul class="simple">
+<li><p>there are actually <span class="math notranslate nohighlight">\(n+1\)</span> data points here,</p></li>
+<li><p>we are numbering the points from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(n\)</span>.  While this is probably the most common numbering scheme, not all texts and software libraries use the same scheme (some may have <span class="math notranslate nohighlight">\(n-1\)</span> points numbered from <span class="math notranslate nohighlight">\(1\)</span> to <span class="math notranslate nohighlight">\(n\)</span>, or <span class="math notranslate nohighlight">\(n\)</span> points numbered <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(n-1\)</span>, or some other variant).  While it is straightforward to convert between these different schemes, it is imperitive that you know which is being used or you will likely make an error when using or computing the interpolation.</p></li>
+</ul>
 </div>
-<div class="section" id="quantifying-error">
-<h1><span class="section-number">20. </span>Quantifying Error<a class="headerlink" href="#quantifying-error" title="Permalink to this headline">¶</a></h1>
-<p>To quantify error we need to first define what we mean.
-If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation to <span class="math notranslate nohighlight">\(p\)</span>, then:</p>
-<p>-the <em>absolute</em> error is <span class="math notranslate nohighlight">\(|p-p^*|\)</span>,</p>
-<p>-the <em>relative</em> error is <span class="math notranslate nohighlight">\(\frac{|p-p^*|}{|p|}\)</span>,</p>
-<p>-and the number of <em>significant digits</em> is <span class="math notranslate nohighlight">\(t\)</span> if <span class="math notranslate nohighlight">\(t\)</span> is the largest positive integer with <span class="math notranslate nohighlight">\(\frac{|p-p^*|}{|p|} \leq 5 \times 10^{-t}\)</span>.</p>
-<p>The advantage of the relative error is that it is scale invariant.  For example, if you measure the length of a pencil with a ruler to be <span class="math notranslate nohighlight">\(16\)</span> cm with an absolute error of <span class="math notranslate nohighlight">\(0.5\)</span> mm.  This absolute error depends on the unit of measurment.  If you measure in nm, then it is huge.  If you measure in parsecs, it is miniscule.  However, the relative error is <span class="math notranslate nohighlight">\(0.003\)</span> independent of the units of measurement.  Note that the formula above actually says the realtive error is <span class="math notranslate nohighlight">\(0.003125\)</span>, but we typically only quote errors to one significant digit.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -517,7 +527,7 @@ If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./class/ErrorsModule"
+            path: "./class/InterpFit"
         },
         predefinedOutput: true
     }
@@ -529,17 +539,17 @@ If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Errors_summary.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../ErrorsModule/BackwardForwardConditioning.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">18. </span>Numerical Analysis</p>
+            <p class="prev-next-title"><span class="section-number">26. </span>Forward and Backwards Errors</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="TaylorExample.html" title="next page">
+    <a class='right-next' id="next-link" href="LagrangeForm.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">21. </span>Truncation Error in Taylor’s series</p>
+        <p class="prev-next-title">Lagrange Form of the Interpolation Polynomial</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

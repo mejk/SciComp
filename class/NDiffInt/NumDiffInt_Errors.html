@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>21. Truncation Error in Taylor’s series &#8212; SciComp9502B</title>
+    <title>Errors in Numerical Differentiation &#8212; SciComp9502B</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -99,18 +99,11 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/TaylorExample.html" />
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/NumDiffInt_Errors.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="22. Finite Precision" href="FinitePrecision.html" />
-    <link rel="prev" title="19. Sources of Errors in Scientific Computing" href="Error_sources.html" />
+    <link rel="next" title="Numerical Integration" href="Int.html" />
+    <link rel="prev" title="Numerical Differentiation" href="NumDiffInt.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -272,52 +265,57 @@
    17. Random numbers
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/diffusion-in-brief.html">
+   18. Diffusion - a brief introduction
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Errors_summary.html">
-   18. Numerical Analysis
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   19. Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Error_sources.html">
-   19. Sources of Errors in Scientific Computing
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   21. Truncation Error in Taylor’s series
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   20. Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="FinitePrecision.html">
-   22. Finite Precision
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   22. Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="HornersAlgorithm.html">
-   23. Example: Evaluating polynomials
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   23. Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="RoundoffAmplification.html">
-   24. Roundoff Error Amplification
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   24. Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="BackwardForwardConditioning.html">
-   25. Forward and Backwards Errors
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   25. Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   26. Forward and Backwards Errors
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Interpolation
+  Part 2 - Interpolation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -354,32 +352,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Numerical Differentiation &amp; Integration
+  Part 3 - Numerical Differentiation &amp; Integration
  </span>
 </p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+  <a class="reference internal" href="NumDiffInt.html">
    Numerical Differentiation
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Errors in Numerical Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/Int.html">
+  <a class="reference internal" href="Int.html">
    Numerical Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+  <a class="reference internal" href="HigherOrderInt.html">
    Higher Order Integration Schemes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+  <a class="reference internal" href="GaussianInt.html">
    Gaussian Integration
   </a>
  </li>
@@ -436,7 +434,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/class/ErrorsModule/TaylorExample.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/NDiffInt/NumDiffInt_Errors.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -461,7 +459,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/ErrorsModule/TaylorExample.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/NDiffInt/NumDiffInt_Errors.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -487,13 +485,8 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taylor-s-theorem">
-   21.1. Taylor’s Theorem
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   21.2. Example
+  <a class="reference internal nav-link" href="#stability">
+   Stability
   </a>
  </li>
 </ul>
@@ -506,7 +499,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Truncation Error in Taylor’s series</h1>
+                <h1>Errors in Numerical Differentiation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -517,13 +510,8 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#taylor-s-theorem">
-   21.1. Taylor’s Theorem
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#example">
-   21.2. Example
+  <a class="reference internal nav-link" href="#stability">
+   Stability
   </a>
  </li>
 </ul>
@@ -535,61 +523,154 @@
             
               <div>
                 
-  <div class="section" id="truncation-error-in-taylor-s-series">
-<h1><span class="section-number">21. </span>Truncation Error in Taylor’s series<a class="headerlink" href="#truncation-error-in-taylor-s-series" title="Permalink to this headline">¶</a></h1>
-<p>Most algorithms in Numerical Analysis suffer from some form of truncation error.  Often this truncation error comes about from some series solution to the problem of interest that we <em>truncate</em> at some finite order in order to solve.  To illustrate the concept of a <em>truncation</em> error, let’s look at an example for Taylor’s series.  It is helpful to recall Taylor’s theorem from first year calculus:</p>
-<div class="section" id="taylor-s-theorem">
-<h2><span class="section-number">21.1. </span>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this headline">¶</a></h2>
-<p>Suppose we have a function <span class="math notranslate nohighlight">\(f\in C^n[a,b]\)</span>  (i.e. <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable), that <span class="math notranslate nohighlight">\(f^{(n+1)}\)</span> exists on <span class="math notranslate nohighlight">\([a,b]\)</span> and <span class="math notranslate nohighlight">\(x_0\in [a,b]\)</span>.  Then for <span class="math notranslate nohighlight">\(x\in [a,b]\)</span> we have</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="errors-in-numerical-differentiation">
+<span id="page-topic1"></span><h1>Errors in Numerical Differentiation<a class="headerlink" href="#errors-in-numerical-differentiation" title="Permalink to this headline">¶</a></h1>
+<p>In order for the finite difference formulas derived in the previous section to be useful, we need to have some idea of the errors involved in using these formulas.  As mentioned, we are replacing <span class="math notranslate nohighlight">\(f(x)\)</span> with its polynomial interpolant <span class="math notranslate nohighlight">\(p_n(x)\)</span> and then taking the derivatives, so that</p>
 <div class="math notranslate nohighlight">
-\[f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2+ ... + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n  + R_n(x,x_0),\]</div>
-<p>provided <span class="math notranslate nohighlight">\(R_n\rightarrow 0\)</span> as <span class="math notranslate nohighlight">\(n\rightarrow \infty\)</span>, where the <em>truncation error</em> (from truncating the series at the <span class="math notranslate nohighlight">\(n\)</span>’th term is</p>
+\[ f'(x) = p_n'(x) + \epsilon'(x),\qquad f''(x) = p_n''(x) + \epsilon''(x).\]</div>
+<p>We need to <span class="math notranslate nohighlight">\(\epsilon'(x)\)</span> and \epsilon’’(x) to determine the errors in the formulas we derived.</p>
+<p>First recall <a class="reference internal" href="../InterpFit/InterpErrors.html"><span class="doc std std-doc">the polynomial interpolation error</span></a> is</p>
+<p>Taking the derivative of this using the product rule yields</p>
+<p>where the second term arises from the fact that <span class="math notranslate nohighlight">\(\xi\)</span> may depend on <span class="math notranslate nohighlight">\(x\)</span>.  Evaluating this at one of the gridpoints, say <span class="math notranslate nohighlight">\(x_i\)</span>, simplifies the expression considerably as all but one of the terms contain the factor <span class="math notranslate nohighlight">\((x_i-x_i)\)</span>,</p>
+<p>We can now use this expression for the errors in our first derivative finite difference formulas.  Before we do, let’s derive the error formula for the second derivatives.</p>
+<p>Taking the derivative <code class="xref eq docutils literal notranslate"><span class="pre">errprime</span></code> yields</p>
 <div class="math notranslate nohighlight">
-\[R_n(x,x_0) = \frac{f^{(n+1)}(\xi)}{(n+1)!}(x-x_0)^{n+1},\]</div>
-<p>for some <span class="math notranslate nohighlight">\(\xi \in [x_0,x]\)</span>.</p>
-<p>Note that</p>
-<ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(R_n\)</span> could be positive or negative so the absolute error, <span class="math notranslate nohighlight">\(|R_n|\)</span> is usually what one would quote for the error.</p></li>
-<li><p>we do not usually know what <span class="math notranslate nohighlight">\(\xi\)</span> is, other than it is in <span class="math notranslate nohighlight">\((x_0,x)\)</span>.  However, if we can guess <span class="math notranslate nohighlight">\(max|f^{(n+1)}(x)|\)</span> on <span class="math notranslate nohighlight">\([a,b]\)</span> then we can bound the absolute error.</p></li>
-</ul>
-</div>
-<div class="section" id="example">
-<h2><span class="section-number">21.2. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
-<p>Let’s construct the Taylor series and bound the truncation error for the function <span class="math notranslate nohighlight">\(f(x)=1/(1+x)\)</span> about <span class="math notranslate nohighlight">\(x_0=0\)</span>.  First note that <span class="math notranslate nohighlight">\(f^{(n)}(x)=\frac{(-1)^n}{(1+x)^{n+1}}\)</span>.  So, using Taylor’s theorem, we see that</p>
+\[\begin{split}
+\begin{align} \epsilon''(x) = &amp; \frac{f^{n+1}(\xi)}{(n+1)!}\left[ \sum_{k=0}^n \sum_{m=0, m\neq k}^n \prod_{j=0,j\neq k,m}^n (x-x_j)\right]\\
+&amp; + \frac{f^{n+2}(\xi)\xi''+f^{n+3}(\xi)\xi'}{(n+1)!}\prod_{j=0}^n (x-x_j) \\
+&amp;+ \frac{f^{n+2}(\xi)\xi'}{(n+1)!}\left[\sum_{k=0}^n \prod_{j=0,j\neq k}^n (x-x_j)\right],\end{align}\end{split}\]</div>
+<p>Evaluating this at one of the gridpoints, say <span class="math notranslate nohighlight">\(x_i\)</span>, simplifies the expression to,</p>
+<p>This is a bit messier than the error for the first derivative <code class="xref eq docutils literal notranslate"><span class="pre">pprimeerr</span></code>.  In most cases one can argue that the second term is small compared to the first as it contains one additional factor of the difference of grid points and one expects <span class="math notranslate nohighlight">\(\xi'\)</span> to be small.</p>
+<p><strong>Example: Error in the two point formulas</strong>  In the previous section, for two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> we derived the forward/backwards difference formulae and we would now like to know the error in using these formulae.  Using <code class="xref eq docutils literal notranslate"><span class="pre">pprimeerr</span></code> with <span class="math notranslate nohighlight">\(n=1\)</span> we straightforwardly get</p>
 <div class="math notranslate nohighlight">
-\[\frac{1}{1+x} = 1 - x + x^2 - x^3 + ... + (-1)^n x^n + R_n,\]</div>
-<p>and in this case the truncation error is</p>
+\[ \epsilon'(x_0) = \frac{f''(\xi)}{2}(-h),\quad \text{and}\quad  \epsilon'(x_1) = \frac{f''(\xi)}{2}(h),\]</div>
+<p>noting that <span class="math notranslate nohighlight">\(\xi\)</span> is not likely to be the same number in the two cases.  So, in summary, we now have</p>
+<p><strong>Example: Error in the three point formulae</strong>  In the previous section, for three points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> <span class="math notranslate nohighlight">\(x_0\)</span> we derived finite difference formulae for first and second derivatives and we would now like to know the error in using these formulae.  Using <code class="xref eq docutils literal notranslate"><span class="pre">pprimeerr</span></code> with <span class="math notranslate nohighlight">\(n=2\)</span> we straightforwardly get the result for the first derivatives:</p>
 <div class="math notranslate nohighlight">
-\[ R_n(x,0) = \frac{(-1)^{n+1}x^{n+1}}{(1+\xi)^{n+2}}.\]</div>
-<p>To bound the truncation (absolute) error, we need to consider a few points:</p>
-<ul class="simple">
-<li><p>We need an interval over which we are considering the Taylor series.  In this case the series only converges for <span class="math notranslate nohighlight">\(|x|&lt;1\)</span> so let’s assume <span class="math notranslate nohighlight">\(x \in [0,1)\)</span> (i.e. the <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> in Taylor’s theorem will be taken to be <span class="math notranslate nohighlight">\(a=0\)</span> and <span class="math notranslate nohighlight">\(b=1\)</span>).</p></li>
-<li><p>It is ok if the bound in <span class="math notranslate nohighlight">\(|R_n|\)</span> depends on <span class="math notranslate nohighlight">\(x\)</span> as we will certainly know what <span class="math notranslate nohighlight">\(x\)</span> is.  However, the only thing we know about <span class="math notranslate nohighlight">\(\xi\)</span> is that it must be in the interval <span class="math notranslate nohighlight">\([0,x)\)</span>.  So to bound the error, we first must bound the deriviative <span class="math notranslate nohighlight">\(|f^{(n+1)}(x)|=|\frac{(-1)^(n+1)}{(1+x)^{n+1}}|=\frac{1}{(1+x)^{n+1}}\)</span>.  To get an idea of how to do this, a plot is always a good place to start.</p></li>
-</ul>
+\[\begin{split}
+\begin{equation}
+\left[{\begin{array}{c}
+f'(x_0) \\
+f'(x_1) \\
+f'(x_2)
+\end{array}} \right] =
+\left[{\begin{array}{c}
+\frac{-3f(x_0)+4f(x_1)-f(x_2)}{2h} \\
+\frac{f(x_2)-f(x_0)}{2h} \\
+\frac{3f(x_2)-4f(x_1)+f(x_0)}{2h}
+\end{array}} \right] +
+\left[{\begin{array}{c}
+  \frac{h^2}{3}f^{(3)}(\xi) \\
+  -\frac{h^2}{6}f^{(3)}(\xi) \\\
+  \frac{h^2}{3}f^{(3)}(\xi) \\
+\end{array}} \right].
+\end{equation}
+\end{split}\]</div>
+<p>First note that the errors here are <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> compared to <code class="xref eq docutils literal notranslate"><span class="pre">twopoint</span></code> for the two-point formulae which are <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span>.  So, assuming <span class="math notranslate nohighlight">\(h\)</span> is small, these do indeed have a higher order accuracy.  Further, the error in the <em>central</em> difference formula is <em>half</em> that of the backward/forward differences.  As a result, the central difference formula is the one most widely used.</p>
+<p>We now turn to the second derivative errors.  At <span class="math notranslate nohighlight">\(x_0\)</span> <code class="xref eq docutils literal notranslate"><span class="pre">ppperr</span></code> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\epsilon''(x_0) &amp;= 2\frac{f^{(3)}(\xi)}{3!}\left[(x_0-x_1)+(x_0-x_2)\right]+\frac{f^{(4)}(\xi)\xi'}{3!}(x_0-x_1)(x_0-x_2)\\
+&amp;= -f^{(3)}(\xi) h + \frac{f^{(4)}(\xi)\xi'}{3}h^2.
+\end{align}
+\end{split}\]</div>
+<p>At <span class="math notranslate nohighlight">\(x_1\)</span> we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\epsilon''(x_1) &amp;= 2\frac{f^{(3)}(\xi)}{3!}\left[(x_1-x_0)+(x_1-x_2)\right]+\frac{f^{(4)}(\xi)\xi'}{3!}(x_1-x_0)(x_1-x_2)\\
+&amp;= -\frac{f^{(4)}(\xi)\xi'}{6} h^2.
+\end{align}
+\end{split}\]</div>
+<p>These, together with the result at <span class="math notranslate nohighlight">\(x_2\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{equation}
+\left[{\begin{array}{c}
+f''(x_0) \\
+f''(x_1) \\
+f''(x_2)
+\end{array}} \right] =
+\left[{\begin{array}{c}
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} \\
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} \\
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2}
+\end{array}} \right] +
+\left[{\begin{array}{c}
+  -h f^{(3)}(\xi) \\
+  -\frac{h^2}{6}f^{(4)}(\xi)\xi' \\\
+  h f^{(3)}(\xi) \\
+\end{array}} \right],
+\end{equation}
+\end{split}\]</div>
+<p>where we have dropped the higher order error terms.  Note that even through the approximation formula is the same for all 3 points, the error in this formula is much worse at the endpoints (<span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span> versus <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span>).  In homework you will see that you can also derive the central difference formula using a Taylor series expansion (including errors) about <span class="math notranslate nohighlight">\(x_1\)</span> and then using the mean value theorem to combine the errors at the points <span class="math notranslate nohighlight">\(x_1\pm h\)</span> at a new, also unknown, point <span class="math notranslate nohighlight">\(\eta\)</span> to get</p>
+<div class="math notranslate nohighlight">
+\[ f''(x_1) \approx \frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} -\frac{h^2}{12}f^{(4)}(\eta). \]</div>
+<div class="section" id="stability">
+<h2>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h2>
+<p>The central difference formula we derived</p>
+<div class="math notranslate nohighlight">
+\[
+f'(x_1)=\frac{f(x_2)-f(x_0)}{2h}-\frac{h^2}{6}f^{(3)}(\xi),
+\]</div>
+<p>involves two things we warned about when we talked about <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html"><span class="doc std std-doc">roundoff errors</span></a>.  Namely, subtraction of two similar numbers, the <span class="math notranslate nohighlight">\(f(x_2)-f(x_0)\)</span>, and division by a small number <span class="math notranslate nohighlight">\(h\)</span>.  As a result, attempting to obtain the “exact” value of <span class="math notranslate nohighlight">\(f'(x_1)\)</span> by taking ever smaller <span class="math notranslate nohighlight">\(h\)</span> is <strong>not</strong> a numerically stable operation as we will now demonstrate.</p>
+<p>As in our discussion of <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html"><span class="doc std std-doc">roundoff errors</span></a> let <span class="math notranslate nohighlight">\(\mathcal{fl}(.)\)</span> denote the finite precision arithmetic on the computer, i.e.</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{fl}(f(x))=f(x) + e_r(x)
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(e_r\)</span> is the roundoff error.  The error in evaluation of the central difference formula on a computer is then</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+E(h) &amp;= \left|f'(x_1)-\mathcal{fl}\left(\frac{f(x_2)-f(x_0)}{2h} \right)\right|, \\
+&amp;= \left|-\frac{h^2}{6}f^{(3)}(\xi) + \frac{e_r(x_2)-e_r(x_0)}{2h}\right|,
+\end{align}
+\end{split}\]</div>
+<p>where the second term comes from the fact that we cannot evaluate the central difference exactly using finite precision arithemetic.  The roundoff errors here are unlikely to be correlated and, in particular, are as likely to be positive as negative.  We do expect it to be bounded so let’s assume <span class="math notranslate nohighlight">\(|e_r(x)|&lt;\beta\)</span>.  Putting this together, along with use of the triangle inequality gives</p>
+<div class="math notranslate nohighlight">
+\[
+E(h) \leq \frac{\beta}{h} + \frac{h^2}{6}|f^{(3)}(\xi)|.
+\]</div>
+<p>Note that while the truncation error (the second term) decreases as <span class="math notranslate nohighlight">\(h\)</span> gets smaller, the roundoff error <em>increases</em> as <span class="math notranslate nohighlight">\(h\)</span> gets smaller.  As a result, there is actually an <em>optimal</em> <span class="math notranslate nohighlight">\(h\)</span> to minimize the error.  To find this we take the derivative of <span class="math notranslate nohighlight">\(E(h)\)</span> and set it to zero to get</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dE}{dh}\approx -\frac{\beta}{h^2}+\frac{h}{3}|f^{(3)}(\xi)| = 0.
+\]</div>
+<p>Solving this for the optimal <span class="math notranslate nohighlight">\(h_{op}\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[
+h_{op}=  \sqrt[3]{\frac{3 \beta}{|f^{(3)}(\xi)|}}.
+\]</div>
+<p>If <span class="math notranslate nohighlight">\(f(x)\sim 1\)</span> we would expect the roundoff to be of order of the machine epsilon <span class="math notranslate nohighlight">\(\epsilon_r\)</span>.  For <span class="math notranslate nohighlight">\(f(x)\)</span> not of order unity, we would expect <span class="math notranslate nohighlight">\(\beta \approx \epsilon_r |f(x)|\)</span>. So around a given <span class="math notranslate nohighlight">\(x\)</span> we expect roughly</p>
+<p><strong>Example</strong> Suppose we use the central difference formula to evaluate the derivative of <span class="math notranslate nohighlight">\(f(x)=e^x\)</span>.  What is the error and what is the optimal <span class="math notranslate nohighlight">\(h_{op}\)</span>?</p>
+<p>First note that we can work out the analytic derivative (<span class="math notranslate nohighlight">\(f'(x)=e^x\)</span>) and the third derivative here (<span class="math notranslate nohighlight">\(f^{(3)}(x)=e^x\)</span>).  In this case, <code class="xref eq docutils literal notranslate"><span class="pre">hop</span></code> then gives,</p>
+<div class="math notranslate nohighlight">
+\[
+h_{op}=6.7\times 10^{-6}.
+\]</div>
+<p>We can test this assertion with a short python script:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">x</span><span class="p">)</span><span class="o">**</span><span class="mi">4</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\xi$&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$1/(1+\xi)^{n+2}$&#39;</span><span class="p">)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">)</span>
+<span class="n">h</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="o">-</span><span class="n">x</span><span class="p">)</span>
+<span class="n">err</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.</span><span class="o">+</span><span class="n">h</span><span class="p">)</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">h</span><span class="p">))</span><span class="o">/</span><span class="p">(</span><span class="mf">2.</span><span class="o">*</span><span class="n">h</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">loglog</span><span class="p">(</span><span class="n">h</span><span class="p">,</span><span class="n">err</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$h$&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;absolute error&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/TaylorExample_2_0.png" src="../../_images/TaylorExample_2_0.png" />
+<img alt="../../_images/NumDiffInt_Errors_1_0.png" src="../../_images/NumDiffInt_Errors_1_0.png" />
 </div>
 </div>
-<p>From the plot it is clear that <span class="math notranslate nohighlight">\(\frac{1}{(1+x)^{n+1}}\)</span> is a monotonically decreasing function on the interval <span class="math notranslate nohighlight">\([0,1]\)</span> and that its maximum
-is at its leftmost endpoint, <span class="math notranslate nohighlight">\(x=1\)</span> where it takes the value 1 independent of <span class="math notranslate nohighlight">\(n\)</span>.
-Plugging this into the bound on the absolute error gives</p>
-<div class="math notranslate nohighlight">
-\[ |R_n| \leq x^{n+1}.\]</div>
+<p>Indeed, we do see the minimum in the error plot is around our calculated <span class="math notranslate nohighlight">\(h_{op}\)</span>.  Interestingly, the error using <span class="math notranslate nohighlight">\(h=10^{-12}\)</span> is comparable to the error using <span class="math notranslate nohighlight">\(h=10^{-2}\)</span>.  Also, the part of the curve dominated by roundoff errors (<span class="math notranslate nohighlight">\(h&lt;h_{op}\)</span>) is quite noisy.  This is simply a refection of the somewhat unpreditable nature or roundoff errors.  Importantly, our arguments correctly predict the trends here.  In practise, though, one should keep in mind that roundoff errors may fluctuate an order or magnitude around these trends.</p>
+<p>Note that similar problems arise when attempting to apply numerical differentiation to noisy data (data with stochastic noise).  A similar construction, with the errors being from stochastic noise rather than roundoff, limits how small <span class="math notranslate nohighlight">\(h\)</span> can be before the results for the derivative become less accurate.  In this case, a presmoothing operation to reduce the noise amplitude should be applied before attempting to construct a finite difference for the derivative.</p>
 </div>
 </div>
 
@@ -606,7 +687,7 @@ Plugging this into the bound on the absolute error gives</p>
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./class/ErrorsModule"
+            path: "./class/NDiffInt"
         },
         predefinedOutput: true
     }
@@ -618,17 +699,17 @@ Plugging this into the bound on the absolute error gives</p>
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Error_sources.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="NumDiffInt.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">19. </span>Sources of Errors in Scientific Computing</p>
+            <p class="prev-next-title">Numerical Differentiation</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="FinitePrecision.html" title="next page">
+    <a class='right-next' id="next-link" href="Int.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">22. </span>Finite Precision</p>
+        <p class="prev-next-title">Numerical Integration</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

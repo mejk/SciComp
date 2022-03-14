@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24. Roundoff Error Amplification &#8212; SciComp9502B</title>
+    <title>Numerical Differentiation &#8212; SciComp9502B</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -92,18 +92,11 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/RoundoffAmplification.html" />
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/NumDiffInt.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="25. Forward and Backwards Errors" href="BackwardForwardConditioning.html" />
-    <link rel="prev" title="23. Example: Evaluating polynomials" href="HornersAlgorithm.html" />
+    <link rel="next" title="Errors in Numerical Differentiation" href="NumDiffInt_Errors.html" />
+    <link rel="prev" title="Splines" href="../InterpFit/Splines.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -265,52 +258,57 @@
    17. Random numbers
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/diffusion-in-brief.html">
+   18. Diffusion - a brief introduction
+  </a>
+ </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
 </p>
-<ul class="current nav bd-sidenav">
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="Errors_summary.html">
-   18. Numerical Analysis
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   19. Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="Error_sources.html">
-   19. Sources of Errors in Scientific Computing
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   20. Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="TaylorExample.html">
-   21. Truncation Error in Taylor’s series
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   22. Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="FinitePrecision.html">
-   22. Finite Precision
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   23. Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="HornersAlgorithm.html">
-   23. Example: Evaluating polynomials
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   24. Roundoff Error Amplification
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   24. Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="BackwardForwardConditioning.html">
-   25. Forward and Backwards Errors
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   25. Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   26. Forward and Backwards Errors
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Interpolation
+  Part 2 - Interpolation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -347,32 +345,32 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Numerical Differentiation &amp; Integration
+  Part 3 - Numerical Differentiation &amp; Integration
  </span>
 </p>
-<ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Numerical Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+  <a class="reference internal" href="NumDiffInt_Errors.html">
    Errors in Numerical Differentiation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/Int.html">
+  <a class="reference internal" href="Int.html">
    Numerical Integration
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+  <a class="reference internal" href="HigherOrderInt.html">
    Higher Order Integration Schemes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+  <a class="reference internal" href="GaussianInt.html">
    Gaussian Integration
   </a>
  </li>
@@ -429,7 +427,7 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/class/ErrorsModule/RoundoffAmplification.md"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/class/NDiffInt/NumDiffInt.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -461,7 +459,7 @@
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Roundoff Error Amplification</h1>
+                <h1>Numerical Differentiation</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -472,62 +470,138 @@
             
               <div>
                 
-  <div class="section" id="roundoff-error-amplification">
-<h1><span class="section-number">24. </span>Roundoff Error Amplification<a class="headerlink" href="#roundoff-error-amplification" title="Permalink to this headline">¶</a></h1>
-<p>In addition to accumulation with each floating point operation, roundoff errors can be magnified by</p>
-<ol class="simple">
-<li><p>Multiplication by a large number or division by a small number.</p></li>
-<li><p>Adding numbers of very different magnitude.</p></li>
-<li><p>Subtractive cancellation (subtraction of numbers of similar magnitude).</p></li>
-</ol>
-<p>If we can possibly do something to avoid these magnification events or mitigate their effects it is usually worthwhile.  The issue with how multiplication by a large number or division by a small number can turn a small error into a large one should be fairly clear.  To illustrate the other ideas, we will look at a number of examples.</p>
-<p><em>Example 1.  Adding numbers of very different magnitude.</em></p>
-<p>Suppose you want to do a simulation of ocean waves.  Before you start, you have a couple of very basic decisions to make: (1) what units should you use and (2) where to place the origin (the zero).  Possible units could be miles, feet, kilometers, meters, or millimeters.  Hopefully you have enough science background to realize you should avoid miles and feet (NASA’s <a class="reference external" href="https://en.wikipedia.org/wiki/Mars_Climate_Orbiter">Mars climate orbiter</a> is a clear example of why to avoid imperial units).  The remaining choices may seem to be arbitrary.  However, let’s assume you plan on storing the height of the ocean surface using 32-bit floating point numbers.  Conceptually, suppose you decide it makes sense for these “heights” to always be positive so the origin should be at the bottom of the ocean, which at its deepest point is about 11 km below sea level.  If you decide to use units of meters, then most of your numbers of ocean height will then be around 11 000 m.  Suppose, in your simulation, wind starts a wave of initial height 1 mm (you have to start somewhere) which is easily measured in reality.  However, 1 mm = 0.001 m and if your code then has to execute <span class="math notranslate nohighlight">\( 11 000.000 + 0.001\)</span> you will get back <span class="math notranslate nohighlight">\(11 000.00\)</span> (i.e. there will be no change) because there are only about 6 digits of precision with 32-bit floating point numbers and this calculation would require at least 8 to be peformed without roundoff.  If instead, you accepted both positive and negative heights for your ocean surface and measured the ocean surface height from sea level, then most of your heights will be around 0 m.  A  change of 1 mm is now easily accomodated without being affected by roundoff errors as <span class="math notranslate nohighlight">\(0.000+0.001\)</span> will now give <span class="math notranslate nohighlight">\(0.001\)</span> with no loss in precision from roundoff at the seventh digit.  Here, you will note I have chosen the unit meters rather than mm or km.  Why is this the better choice?  In this case, waves are typically of the order of meters so this choice makes our heights of order 1 in magnitude.  As indicated, the real world measurements would typically have a resolution of 1 mm = 0.001 m so mm would not be a terrible choice here either.  However, km would not be a good choice as our heights would then be of order 0.001 and our resolution would be 0.000001.  Typing numbers in your code with a bunch of zeros or requiring explicitly filled in exponents is introducing a lot of opertunities for typos that may be very difficult to debug later.  In summary, pick units and an origin so that floating point numbers are, on average, of order one as much as possible.  This reduces both possibilities of roundoff errors and typos that might be hard to find.</p>
-<p><em>Example 2.  Adding numbers of very different magnitude.</em></p>
-<p>Suppose you want to sum the series</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="numerical-differentiation">
+<span id="page-topic1"></span><h1>Numerical Differentiation<a class="headerlink" href="#numerical-differentiation" title="Permalink to this headline">¶</a></h1>
+<p>Suppose we can either evaluate <span class="math notranslate nohighlight">\(f(x)\)</span> for any <span class="math notranslate nohighlight">\(x\)</span>, or are provided with <span class="math notranslate nohighlight">\(f(x)\)</span> as some set of points <span class="math notranslate nohighlight">\(\{x_i\}_{i=0}^n\)</span>, but do not know <span class="math notranslate nohighlight">\(f'(x)\)</span>.  How do we compute an estimate of <span class="math notranslate nohighlight">\(f'(x)\)</span>, or <span class="math notranslate nohighlight">\(f''(x)\)</span>(or higher derivatives, though we will restrict ourselves to the first two derivatives here)?  As always, it is useful to make use of something we already know how to do, namely interpolation.  We replace <span class="math notranslate nohighlight">\(f(x)\)</span> with its interpolatory function (Lagrange or splines) and take the derivative of that.  i.e.</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=1}^\infty \frac{1}{n^2}\]</div>
-<p>to as high an accuracy as possible.  The exact answer here is <span class="math notranslate nohighlight">\(\pi^2/6 \approx 1.64493\)</span>.  Again, let’s assume we are storing intermediate results of our sum using 32-bit floating point arithmetic so again have only 6 decimal digits or precision.  Obviously you cannot sum an infinite number of terms so you decide to cut it off at 1 million terms, i.e. evaluate</p>
+\[ f(x) = p(x) + \epsilon(x), \]</div>
+<p>where <span class="math notranslate nohighlight">\(p(x)\)</span> is our interpolation and <span class="math notranslate nohighlight">\(\epsilon(x)\)</span> is the error in the interpolation.  Taking the derivative gives</p>
 <div class="math notranslate nohighlight">
-\[\sum_{n=1}^{10^6} \frac{1}{n^2}.\]</div>
-<p>The conventional way to evaluate this would be in order (so <span class="math notranslate nohighlight">\(1+1/2^2+1/3^2+...+1/(10^6)^2\)</span>).  If you do this you will get the result <span class="math notranslate nohighlight">\(1.64393\)</span>, so an absolute error of <span class="math notranslate nohighlight">\(0.001\)</span>.  This is much less than the roundoff error in a single computation so you might think there is nothing you can do about this.   However, if you evaluate the sum in <em>reverse</em> order (i.e. <span class="math notranslate nohighlight">\(1/(10^6)^2 + ...+ 1/3^3 + 1/2^2 +1\)</span>) you will get an answer close to the machine epsilon from the “exact” answer of <span class="math notranslate nohighlight">\(1.64493\)</span>.  Why does this occur?  It turns out that if you sum the terms in order, roundoff errors mean that every term past <span class="math notranslate nohighlight">\(n=1000\)</span> will end up contributing nothing to the sum.  This is again because the term we want to add, <span class="math notranslate nohighlight">\(1/1000^2 = 0.000001\)</span>, is being added to a number <span class="math notranslate nohighlight">\(1.64393\)</span> and the difference in magnitude of these numbers cannot be accomodated with the 6 digits of decimal precision we have with 32-bit floats.  However, when we sum the terms in reverse we only ever add terms of similar magnitude and this gives the very small later terms a chance to add together to build a larger number as we get to the point where we are adding the larger terms.</p>
-<p><em>Example 3. Subtractive cancellation.</em></p>
-<p>Subtractive cancellation is the converse problem to adding numbers of very different magnitude.  For example, suppose in Example 1 above we  had decided to use the bottom of the ocean as our origin so that our ocean height numbers were typically around 11 000.  Now we are were interested in computing the slope of the ocean surface at neighboring points where the actual difference in height is zero.  However, perhaps due to previous roundoff errors, one measurement is 11 000.02 m and the other is 10999.99 m.  The difference between these two values is 0.03 m = 3cm, much bigger than our desired resolution of mm, and even large if we assumed a resolution of 1 cm.  The solution in this case is again to use a sensible origin such as the average sea level so that the roundoff errors will be of the order of <span class="math notranslate nohighlight">\(10^{-6} m\)</span> so that any differences due to roundoff will be below our 1 mm resolution.</p>
-<p><em>Example 4. Division by a small number and Subtractive cancellation.</em></p>
-<p>Suppose you want to compute</p>
+\[ f'(x) = p'(x) + \epsilon'(x),\qquad f''(x) = p''(x) + \epsilon''(x)\]</div>
+<p>Our estimate for the derivative <span class="math notranslate nohighlight">\(f'(x) \approx p'(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon'(x)\)</span> is the error in this estimate.  Similarly <span class="math notranslate nohighlight">\(f''(x) \approx p''(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon''(x)\)</span> is the error in that estimate.</p>
+<p>In the Lagrange form for the interpolating polynomial, writen in <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">barycentric form</span></a></p>
+<p>To simplify the notation, we have dropped the <span class="math notranslate nohighlight">\(n\)</span> from <span class="math notranslate nohighlight">\(L_i^n(x)\)</span> as the appropriate <span class="math notranslate nohighlight">\(n\)</span> should be clear from most contexts.  We can see from <code class="xref eq docutils literal notranslate"><span class="pre">pnformula</span></code> that</p>
 <div class="math notranslate nohighlight">
-\[f(x) = \frac{1-\cos x}{\sin x}.\]</div>
-<p>and we will assume <span class="math notranslate nohighlight">\(x\in [0,2\pi]\)</span>.  When <span class="math notranslate nohighlight">\(x\)</span> is small this formula suffers from two issues that can magnify roundoff errors: division by a small number (<span class="math notranslate nohighlight">\(\sin x \approx 0\)</span> when <span class="math notranslate nohighlight">\(x\)</span> is small) and subtractive cancellation (<span class="math notranslate nohighlight">\(\cos x \approx 1\)</span> when <span class="math notranslate nohighlight">\(x\)</span> is small).  A simple mathematical transformation that often allows you to eliminate subtractive cancellation is to multiply by the sum of the two terms in question in both a numerator and denominator of a fraction (so effectively multipying by one) and then rearranging the terms to eliminate the subtraction:</p>
+\[ p_n'(x) =  \sum_{i=0}^n L_i'(x) f(x_i), \qquad p_n''(x) =  \sum_{i=0}^n L_i''(x) f(x_i)\]</div>
+<p>and</p>
+<p>So to work out the derivative estimates we need to compute <span class="math notranslate nohighlight">\(L_i'(x)\)</span> and <span class="math notranslate nohighlight">\(L_i''(x)\)</span> for all <span class="math notranslate nohighlight">\(i\)</span> (note that these still depend on <span class="math notranslate nohighlight">\(n\)</span>, but <span class="math notranslate nohighlight">\(n\)</span> is the same for all <span class="math notranslate nohighlight">\(L_i\)</span> in a given application).</p>
+<p>In almost all cases, we are looking for the derivative at a node point, say <span class="math notranslate nohighlight">\(x_j\)</span>.  To ensure various terms remain differentiable, it is helpful to multiply both sides by <span class="math notranslate nohighlight">\(x-x_j\)</span> and rearrange Eq. <code class="xref eq docutils literal notranslate"><span class="pre">Lieqn</span></code> to get</p>
+<p>where both sides are now differentiable at <span class="math notranslate nohighlight">\(x_j\)</span>.  Defining</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}\begin{align}
-f(x) &amp; = \frac{1-\cos x}{\sin x} \times \frac{1+\cos x}{1+\cos x}&amp;\\
-&amp; = \frac{1-\cos^2 x}{(1+\cos x)\sin x}&amp;\\
-&amp; = \frac{\sin x}{1+\cos x},
-\end{align}\end{split}\]</div>
-<p>where we have used the trig identity <span class="math notranslate nohighlight">\(1-\cos^2 x = \sin^2 x\)</span> to get the final result.  The resulting formula is mathematically equivalent to the original but no longer has either the division by a small number of the subtractive cancellation near <span class="math notranslate nohighlight">\(x=0\)</span>.  However, this formula <em>will</em> have issues near <span class="math notranslate nohighlight">\(x=\pi\)</span> as <span class="math notranslate nohighlight">\(\cos x \approx -1\)</span> near <span class="math notranslate nohighlight">\(x=\pi\)</span> which will again lead to subtractive cancellation and division by the resulting small number.  To solve both these issues one should first test <span class="math notranslate nohighlight">\(x\)</span> to decide if it is closer to <span class="math notranslate nohighlight">\(0\)</span> or <span class="math notranslate nohighlight">\(\pi\)</span> and then pick either the modified formula (when <span class="math notranslate nohighlight">\(x\)</span> is closer to zero) or the original (when <span class="math notranslate nohighlight">\(x\)</span> is closer to <span class="math notranslate nohighlight">\(\pi\)</span>).</p>
-<p><em>Example 5. Subtractive cancellation.</em></p>
-<p>Recall that the roots of <span class="math notranslate nohighlight">\(ax^2 + bx + c=0\)</span> are</p>
+\[q_j(x)\equiv \sum_{k=0}^n w_k \frac{x-x_j}{x-x_k},\]</div>
+<p>we can rewrite <code class="xref eq docutils literal notranslate"><span class="pre">Lisetup</span></code> as</p>
+<div class="math notranslate nohighlight">
+\[ L_i(x)q_j(x) = w_i\frac{x-x_j}{x-x_i},  \]</div>
+<p>then take the first and second derivative to get</p>
+<p>From the definition of <span class="math notranslate nohighlight">\(q_j(x)\)</span> one can also work out</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-x_1 &amp;= \frac{-b + \sqrt{b^2-4ac}}{2a},&amp;\\
-x_2 &amp;= \frac{-b - \sqrt{b^2-4ac}}{2a}.
+q_j'(x) &amp;=  \sum_{k\neq j}^n w_k \frac{1}{x-x_k}-\sum_{k\neq j}^n w_k \frac{x-x_j}{(x-x_k)^2},\\
+q_j''(x) &amp;= -2\sum_{k\neq j}^n w_k \frac{1}{(x-x_k)^2} + 2\sum_{k\neq j}^n w_k \frac{x-x_j}{(x-x_k)^3}.
 \end{align}
 \end{split}\]</div>
-<p>Note that if <span class="math notranslate nohighlight">\(b^2 \gg 4ac\)</span> then <span class="math notranslate nohighlight">\(\sqrt{b^2-4ac} \approx |b|\)</span> so</p>
-<ul class="simple">
-<li><p>if <span class="math notranslate nohighlight">\(b&gt;0\)</span> then <span class="math notranslate nohighlight">\(x_1\)</span> involves subtraction of similar numbers (<span class="math notranslate nohighlight">\(x_2\)</span> is fine though),</p></li>
-<li><p>if <span class="math notranslate nohighlight">\(b&lt;0\)</span> then <span class="math notranslate nohighlight">\(x_2\)</span> involves subtraction of similar numbers (<span class="math notranslate nohighlight">\(x_1\)</span> is fine though).</p></li>
-</ul>
-<p>If we again apply the trick of multiplying by a fraction where denominator and numberator are both the sum of the terms in question we get for the <span class="math notranslate nohighlight">\(b&gt;0\)</span> case where we need to rewrite <span class="math notranslate nohighlight">\(x_1\)</span>:</p>
+<p>For <span class="math notranslate nohighlight">\(x_i \neq x_j\)</span>, evaluating these at <span class="math notranslate nohighlight">\(x=x_j\)</span> we see that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
-x_1 &amp;= \frac{-b + \sqrt{b^2-4ac}}{2a} \frac{-b - \sqrt{b^2-4ac}}{-b - \sqrt{b^2-4ac}},&amp;\\
-&amp;= \frac{-2c}{b + \sqrt{b^2-4ac}}.
+q_j(x_j) &amp;= w_j,\\
+q_j'(x_j) &amp;= \sum_{k\neq j}^n w_k \frac{1}{x_j-x_k},\\
+q_j''(x_j) &amp;= -2\sum_{k\neq j}^n w_k \frac{1}{(x_j-x_k)^2}.
 \end{align}
 \end{split}\]</div>
-<p>where a small amount of algebra is used to similify the final expression which no longer has the problem of subtracting similar numbers.  Note that you should only use this formula for <span class="math notranslate nohighlight">\(x_1\)</span> when <span class="math notranslate nohighlight">\(b&gt;0\)</span>.  When <span class="math notranslate nohighlight">\(b&lt;0\)</span> you should use the original formula for <span class="math notranslate nohighlight">\(x_1\)</span> and apply a similar transformation for <span class="math notranslate nohighlight">\(x_2\)</span> instead.</p>
+<p>This, along with knowing that <span class="math notranslate nohighlight">\(L_i(x_j)=0\)</span>, in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">Liderivsetup</span></code> gives for <span class="math notranslate nohighlight">\(x_i \neq x_j\)</span>,</p>
+<p>The <span class="math notranslate nohighlight">\(x_i=x_j\)</span> case is more simply obtained from noting that if you interpolate <span class="math notranslate nohighlight">\(g(x)\equiv 1\)</span>, which can be done exactly (as its derivatives are all zero, the polynomial interpolation error formula says the error is zero), you get <span class="math notranslate nohighlight">\(1=\sum_k L_k(x)\)</span>.  As a result, by taking derivatives of this expression we get <span class="math notranslate nohighlight">\(0=\sum_k L_k^{(m)}(x)\)</span> for each differentiation order <span class="math notranslate nohighlight">\(m\)</span>.  Hence,</p>
+<p>These <span class="math notranslate nohighlight">\(L_i^{(m)}(x_j)\)</span> derivatives can be thought of as entries <span class="math notranslate nohighlight">\(D_{ji}^{(m)}\)</span> in <em>differentiation</em> matrices <span class="math notranslate nohighlight">\(\mathbf{D}^{(m)}\)</span>.  If we write our known function values <span class="math notranslate nohighlight">\(f(x_i)\)</span> in a column vector <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> then  <span class="math notranslate nohighlight">\(\mathbf{D}^{(m)} F\)</span> provides a column vector of derivatives at the interpolating nodes <span class="math notranslate nohighlight">\(x_i\)</span>.  Let’s illustrate this with a few examples.</p>
+<p><strong>Example: Two point formulas.</strong>  Suppose we have two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0)\)</span> and <span class="math notranslate nohighlight">\(f(x_1)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= -1/h\)</span> and <span class="math notranslate nohighlight">\(w_1=1/h\)</span>.  Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> then gives</p>
+<div class="math notranslate nohighlight">
+\[ D_{10}'=L_0'(x_1) = -\frac{1}{h},\quad \text{and}\quad D_{01}'=L_1'(x_0)=\frac{1}{h}.  \]</div>
+<p>Using these in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> gives</p>
+<div class="math notranslate nohighlight">
+\[ D_{00}'=L_0'(x_0) = -\frac{1}{h},\quad \text{and}\quad D_{11}'=L_1'(x_1)=\frac{1}{h}. \]</div>
+<p>Using this as the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
+<p>When used for <span class="math notranslate nohighlight">\(x_0\)</span> (upper element) this is typically called the <em>forward</em> difference formula and when used at <span class="math notranslate nohighlight">\(x_1\)</span> (lower element) this is called a <em>backward</em> difference.  Not surprisingly as this is based on linear interpolation, the approximation to the derivative is the same at both points here and were we to work out approximations for the second (or higher) derivatives, using just these two points, they would be zero.</p>
+<p><strong>Example: Three point formulas.</strong>  Suppose we have three equally spaced points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0),\,f(x_1)\)</span> and <span class="math notranslate nohighlight">\(f(x_2)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= 1/2h^2,\,w_1=-1/h^2\)</span> and <span class="math notranslate nohighlight">\(w_2=1/2h^2\)</span>.  Using  Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> and <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> to fill the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\left[{\begin{array}{c}
+f'(x_0) \\
+f'(x_1) \\
+f'(x_2) 
+\end{array}} \right] \approx
+\mathbf{D}'\mathbf{F} &amp;=
+\left[{\begin{array}{ccc}
+  L_0'(x_0) &amp;  L_1'(x_0) &amp; L_2'(x_0)\\
+  L_0'(x_1) &amp;  L_1'(x_1) &amp; L_2'(x_1)\\
+  L_0'(x_2) &amp;  L_1'(x_2) &amp; L_2'(x_2)
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{ccc}
+  -\frac{3}{2h} &amp; \frac{4}{2h}  &amp; -\frac{1}{2h}\\
+  -\frac{1}{2h} &amp; 0  &amp; \frac{1}{2h}\\
+  \frac{1}{2h}&amp; -\frac{4}{2h}  &amp; \frac{3}{2h}
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{c}
+\frac{-3f(x_0)+4f(x_1)-f(x_2)}{2h} \\
+\frac{f(x_2)-f(x_0)}{2h} \\
+\frac{3f(x_2)-4f(x_1)+f(x_0)}{2h}
+\end{array}} \right].
+\end{align}
+\end{split}\]</div>
+<p>The formula for <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> are, presumably, higher order (than <code class="xref eq docutils literal notranslate"><span class="pre">forbackD</span></code>) forward/backward differences and the formula for <span class="math notranslate nohighlight">\(x_1\)</span> is the <em>central</em> difference formula.</p>
+<p>With three points, we can also work out approximations for the second derivative.  First, as we have already worked out all the <span class="math notranslate nohighlight">\(L_i'(x_j)\)</span>, we note that using the formulas for the first derivatives, the second derivative formula in <code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> for <span class="math notranslate nohighlight">\(i\neq j\)</span> can be rewritten as</p>
+<p>where for the second line we have make use of <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> for the first derivative sum.  Making use of this for the off-diagonal elements and then using <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> for the second derivatives on the diagonal we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\left[{\begin{array}{c}
+f''(x_0) \\
+f''(x_1) \\
+f''(x_2) 
+\end{array}} \right] \approx
+\mathbf{D}''\mathbf{F} &amp;=
+\left[{\begin{array}{ccc}
+  L_0''(x_0) &amp;  L_1''(x_0) &amp; L_2''(x_0)\\
+  L_0''(x_1) &amp;  L_1''(x_1) &amp; L_2''(x_1)\\
+  L_0''(x_2) &amp;  L_1''(x_2) &amp; L_2''(x_2)
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{ccc}
+  \frac{1}{h^2} &amp; -\frac{2}{h^2}  &amp; \frac{1}{h^2}\\
+  \frac{1}{h^2} &amp; -\frac{2}{h^2}  &amp; \frac{1}{h^2}\\
+  \frac{1}{h^2} &amp; -\frac{2}{h^2}  &amp; \frac{1}{h^2}
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{c}
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} \\
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} \\
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2}
+\end{array}} \right].
+\end{align}
+\end{split}\]</div>
+<p>Not surprisingly as this is based on a single quadratic interpolation, the approximation to the second derivative is the same at all points here and were we to work out approximations for the higher derivatives based on just three points they would all be zero.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -543,7 +617,7 @@ x_1 &amp;= \frac{-b + \sqrt{b^2-4ac}}{2a} \frac{-b - \sqrt{b^2-4ac}}{-b - \sqrt{
         },
         kernelOptions: {
             kernelName: "python3",
-            path: "./class/ErrorsModule"
+            path: "./class/NDiffInt"
         },
         predefinedOutput: true
     }
@@ -555,17 +629,17 @@ x_1 &amp;= \frac{-b + \sqrt{b^2-4ac}}{2a} \frac{-b - \sqrt{b^2-4ac}}{-b - \sqrt{
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="HornersAlgorithm.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="../InterpFit/Splines.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">23. </span>Example: Evaluating polynomials</p>
+            <p class="prev-next-title">Splines</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="BackwardForwardConditioning.html" title="next page">
+    <a class='right-next' id="next-link" href="NumDiffInt_Errors.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">25. </span>Forward and Backwards Errors</p>
+        <p class="prev-next-title">Errors in Numerical Differentiation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
