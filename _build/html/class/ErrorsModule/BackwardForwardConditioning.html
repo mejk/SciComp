@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>24. Forward and Backwards Errors &#8212; SciComp9502B</title>
+    <title>25. Forward and Backwards Errors &#8212; SciComp9502B</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -67,8 +67,8 @@
     <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/BackwardForwardConditioning.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="25. Random numbers" href="../week03/random_numbers.html" />
-    <link rel="prev" title="23. Roundoff Error Amplification" href="RoundoffAmplification.html" />
+    <link rel="next" title="Interpolation" href="../InterpFit/InterpFit_summary.html" />
+    <link rel="prev" title="24. Roundoff Error Amplification" href="RoundoffAmplification.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -221,65 +221,124 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Errors in Scientific Computing
- </span>
-</p>
-<ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="Errors_summary.html">
-   17. Numerical Analysis
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="Error_sources.html">
-   18. Sources of Errors in Scientific Computing
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="TaylorExample.html">
-   20. Truncation Error in Taylor’s series
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="FinitePrecision.html">
-   21. Finite Precision
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="HornersAlgorithm.html">
-   22. Example: Evaluating polynomials
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="RoundoffAmplification.html">
-   23. Roundoff Error Amplification
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   24. Forward and Backwards Errors
-  </a>
- </li>
-</ul>
-<p class="caption">
- <span class="caption-text">
   MODULE: Random numbers
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../week03/random_numbers.html">
-   25. Random numbers
+   17. Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="Errors_summary.html">
+   18. Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/diffusion-in-brief.html">
-   26. Diffusion - a brief introduction
+  <a class="reference internal" href="Error_sources.html">
+   19. Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../extras/python-virtual-environment.html">
-   27. Python virtual environments
+  <a class="reference internal" href="TaylorExample.html">
+   21. Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="FinitePrecision.html">
+   22. Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HornersAlgorithm.html">
+   23. Example: Evaluating polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="RoundoffAmplification.html">
+   24. Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   25. Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Chebyshev.html">
+   Chebyshev Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+   Gaussian Integration
   </a>
  </li>
 </ul>
@@ -367,17 +426,17 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-a-poorly-conditioned-problem">
-   24.1. Example: A poorly conditioned problem
+   25.1. Example: A poorly conditioned problem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-conditioning-for-linear-systems">
-   24.2. Example: Conditioning for linear systems
+   25.2. Example: Conditioning for linear systems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stability">
-   24.3. Stability
+   25.3. Stability
   </a>
  </li>
 </ul>
@@ -402,17 +461,17 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-a-poorly-conditioned-problem">
-   24.1. Example: A poorly conditioned problem
+   25.1. Example: A poorly conditioned problem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example-conditioning-for-linear-systems">
-   24.2. Example: Conditioning for linear systems
+   25.2. Example: Conditioning for linear systems
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stability">
-   24.3. Stability
+   25.3. Stability
   </a>
  </li>
 </ul>
@@ -425,12 +484,12 @@
               <div>
                 
   <div class="section" id="forward-and-backwards-errors">
-<h1><span class="section-number">24. </span>Forward and Backwards Errors<a class="headerlink" href="#forward-and-backwards-errors" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">25. </span>Forward and Backwards Errors<a class="headerlink" href="#forward-and-backwards-errors" title="Permalink to this headline">¶</a></h1>
 <p>You might assume that scientific computing consists of the process:</p>
 <p>Problem formulated mathematically <span class="math notranslate nohighlight">\(\Rightarrow\)</span> algorithm <span class="math notranslate nohighlight">\(\Rightarrow\)</span> solution.</p>
 <p>Implicit in this is the assumption that all mathematically formulated problems have meaningful solutions.  You might be surprised to learn that this is not actually the case.</p>
 <div class="section" id="example-a-poorly-conditioned-problem">
-<h2><span class="section-number">24.1. </span>Example: A poorly conditioned problem<a class="headerlink" href="#example-a-poorly-conditioned-problem" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.1. </span>Example: A poorly conditioned problem<a class="headerlink" href="#example-a-poorly-conditioned-problem" title="Permalink to this headline">¶</a></h2>
 <p>Consider the initial value problem</p>
 <div class="math notranslate nohighlight">
 \[ \frac{dx}{dt}-x=e^{-2t}, \qquad x(0)=-\frac{1}{3}.\]</div>
@@ -454,7 +513,7 @@
 <p>The condition number here grows with time.  What this means is that if we refine our question to something like: What is <span class="math notranslate nohighlight">\(x(T)\)</span> for <span class="math notranslate nohighlight">\(T=0.5\)</span>?  The condition number for this more precise problem is <span class="math notranslate nohighlight">\(\mathcal{C}=e^{0.5}\approx 1.64\)</span> which makes this a reasonable question to ask (i.e. is reasonably well-conditioned).  However, if you ask the question: What is <span class="math notranslate nohighlight">\(x(T)\)</span> for <span class="math notranslate nohighlight">\(T=25\)</span>? then the condition number is <span class="math notranslate nohighlight">\(\mathcal{C}=e^{25} \approx 7\times 10^{10}\)</span> which is a very poorly conditioned problem, meaning it is not really a question you can give a meaningful answer to.</p>
 </div>
 <div class="section" id="example-conditioning-for-linear-systems">
-<h2><span class="section-number">24.2. </span>Example: Conditioning for linear systems<a class="headerlink" href="#example-conditioning-for-linear-systems" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.2. </span>Example: Conditioning for linear systems<a class="headerlink" href="#example-conditioning-for-linear-systems" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you want to solve the problem</p>
 <div class="math notranslate nohighlight">
 \[\mathbf{A}\mathbf{x}=\mathbf{b}.\]</div>
@@ -477,7 +536,7 @@
 <p>One thing you may have already realized is that we would not normally be able to compute the forward error for our problem (because we do not know the exact solution).  However, the backward error <em>is</em> easily computed.  As a result, we can often compute the backward error and then, using an estimate of an upper bound for the condition number, estimate a bound for our forward error.</p>
 </div>
 <div class="section" id="stability">
-<h2><span class="section-number">24.3. </span>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">25.3. </span>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we are given a well-conditioned problem, then a <strong>stable algorithm</strong> is one that preserves this property (i.e. small changes in the problem data formulation <em>and</em> application of our algorithm result in small changes to our approximate solution).  Conversely, an <strong>unstable algorithm</strong> is one where, given a well-conditioned problem, small errors in the problem data and application of the algorithm gives large changes in the approximate solution.  Typically, a stable algorithm is one that gives us a numerically exact solution to a problem that is nearby (in the backward error sense) to our original problem.</p>
 <p>When you encounter what appears to a large condition number (it is usually fairly obvious is small changes to input result in huge changes to output), it is very important to undersand whether the issue is due to poor conditioning of the underlying problem or application of an unstable algortihm.  Applying a stable algorithm to a poorly conditioned problem will give very similar results to applying an unstable algorithm to a well conditioned problem.  The solution is <em>very</em> different for these two cases.  In the case where the underlying problem is poorly conditioned you are <em>asking the wrong question</em> and need to think hard about what the right question would be.  If the problem is well conditioned but the algorithm is unstable there may be algorithmic parameter that could be adjusted (such as making a step size smaller) or perhaps a completely different algorithm is needed.</p>
 <p>In algorithms that involve a large number of repeated steps, such as integrating a differential equation forward in time, it is clear that the absolute error will inevitably grow with time as errors accumulate.  As a rule of thumb, if the input error is <span class="math notranslate nohighlight">\(\epsilon\)</span> and after <span class="math notranslate nohighlight">\(n\)</span> steps the error is <span class="math notranslate nohighlight">\(E_n\)</span> then</p>
@@ -517,13 +576,13 @@
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">23. </span>Roundoff Error Amplification</p>
+            <p class="prev-next-title"><span class="section-number">24. </span>Roundoff Error Amplification</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../week03/random_numbers.html" title="next page">
+    <a class='right-next' id="next-link" href="../InterpFit/InterpFit_summary.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">25. </span>Random numbers</p>
+        <p class="prev-next-title">Interpolation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

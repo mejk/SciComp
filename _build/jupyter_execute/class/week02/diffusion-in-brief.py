@@ -119,10 +119,12 @@ md(f"-Last updated on {now}")
 # 
 # Using $\Delta \equiv \nabla^2$, the above can be given as
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # \frac{ \partial n(\vec{x},t)}{ \partial t } = D \Delta  n(\vec{x},t).
 # \label{eq:diffusion}\tag{1}
-# \end{equation}
+# %\end{equation}
+# $$
 # 
 # The diffusion equation given in Eq. (\ref{eq:diffusion}) is a _parabolic PDE_ describing a time-dependent process. It is an initial-value problem. 
 # 
@@ -166,11 +168,13 @@ md(f"-Last updated on {now}")
 # 
 # We start by considering a one-dimensional system of length $L$ using homnogeneous Dirichlet boundary conditions. The goal is the solve the diffusion equation for the concentration $n(x,t)$. The solution requires both spatial boundary conditions and temporal initial conditions. The problem is determined as
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # \frac{ \partial n(x,t)}{ \partial t } = D \Delta  n(x,t) \mathrm{\,\,\,with\,\,\,}
 # t>0 \mathrm{\,\,\,and\,\,\,}  0 \le x \le L
 # \label{eq:1ddiff}\tag{1ddiff}
-# \end{equation}
+# %\end{equation}
+# $$
 # 
 # with the initial concentration ($t=0$) given as
 # 
@@ -224,10 +228,12 @@ md(f"-Last updated on {now}")
 # 
 # <u>1. __Case__ </u> $\lambda > 0$: Define $\lambda = \mu^2$. Then, we search for a solution to
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # X'' + \mu^2 X = 0.
 # \label{eq:lge0}\tag{a}
-# \end{equation}
+# %\end{equation}
+# $$
 # 
 # The general solution is 
 # 
@@ -262,18 +268,21 @@ md(f"-Last updated on {now}")
 # 
 # With the above, the set of eigenvalues for $\lambda > 0$ is given as
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # \lambda_n = \left(\frac{n  \pi }{L} \right)^2 \mathrm{\,\,} n=1, 2, 3, ...
 # \label{eq:lgn}\tag{aa}
-# \end{equation}
+# %\end{equation}
+# $$
 # 
 # and the corresponding eigenfunctions are
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # X_n = \sin \left( \frac{n \pi x}{L}\right)
 # \label{eq:lgsol}\tag{aaa}
-# \end{equation}
-#   
+# %\end{equation}
+# $$  
 #   
 # <u>2. __Case__ </u>  $\lambda < 0$: We use the same strategy as above an define $\lambda = - \mu^2$ and look for a general solution to 
 # 
@@ -294,7 +303,7 @@ md(f"-Last updated on {now}")
 # 
 # To find $A$ and $B$, we apply the boundary conditions:
 #  - $x=0$: 
-#     $$
+#    $$
 #    X(0) = A \cosh (0) + B \underbrace{\sinh (0)}_{=0} = 0 \Rightarrow A=0.
 #    $$
 #    
@@ -325,7 +334,7 @@ md(f"-Last updated on {now}")
 # As above, we apply the boundary conditions:
 #  - For both $x=0$ and $L=0$: 
 # 
-#   $$
+#    $$
 #    X(0) = X(L) = 0.
 #    $$
 # 
@@ -345,10 +354,12 @@ md(f"-Last updated on {now}")
 # 
 # The solution is
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # T_n \propto e^{-n^2 \pi^2  D  t / L^2}.
 # \label{eq:lgt}\tag{t}
-# \end{equation}
+# %\end{equation}
+# $$
 # 
 # __Full solution: Apply the initial condition__:
 # 
@@ -388,11 +399,12 @@ md(f"-Last updated on {now}")
 # 
 # But this is a Fourier sine series for an odd function of period of $2L$. Using the properties of the Fourier sine series, the coefficients $b_n$ are given as
 # 
-# \begin{equation}
+# $$
+# %\begin{equation}
 # b_n = \frac{2}{L} \int_0^L \, f(x) \,\sin \frac{n \pi x}{L} \,dx.
 # \label{eq:bn}\tag{bn}
-# \end{equation}
-# 
+# %\end{equation}
+# $$
 # 
 # Now we have the full solution: It is given by Eq. (\ref{eq:nsol}) with the coefficient defined by Eq. (\ref{eq:bn}) 
 

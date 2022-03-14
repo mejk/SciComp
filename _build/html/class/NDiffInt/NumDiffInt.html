@@ -1,0 +1,673 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerical Differentiation &#8212; SciComp9502B</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/NumDiffInt.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Errors in Numerical Differentiation" href="NumDiffInt_Errors.html" />
+    <link rel="prev" title="Splines" href="../InterpFit/Splines.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing - SciComp9502B
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Practical matters
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/week01_summary.html">
+   1. Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/install-wsl.html">
+   2. Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/Linux-basics.html">
+   3. Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
+   4. Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-installation.html">
+   5. Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-virtual-environment.html">
+   6. Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/jupyter-intro.html">
+   7. Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/editing-ascii.html">
+   8. Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/vi-editor.html">
+   9. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/helpful-software.html">
+   10. Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/command-line-skill-check.html">
+   11. Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/coding-notes-general.html">
+   12. On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/python-intro.html">
+   13. Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/intro-to-modeling.html">
+   14. Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/hpc-intro.html">
+   15. Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week01/simulation-general.html">
+   16. General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week03/random_numbers.html">
+   17. Random numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../week02/diffusion-in-brief.html">
+   18. Diffusion - a brief introduction
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   19. Numerical Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   20. Sources of Errors in Scientific Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   22. Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   23. Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   24. Example: Evaluating polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   25. Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   26. Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Part 2 - Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Chebyshev.html">
+   Chebyshev Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Part 3 - Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="GaussianInt.html">
+   Gaussian Integration
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  More on computers / helps
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/NDiffInt/NumDiffInt.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Numerical Differentiation</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="numerical-differentiation">
+<span id="page-topic1"></span><h1>Numerical Differentiation<a class="headerlink" href="#numerical-differentiation" title="Permalink to this headline">¶</a></h1>
+<p>Suppose we can either evaluate <span class="math notranslate nohighlight">\(f(x)\)</span> for any <span class="math notranslate nohighlight">\(x\)</span>, or are provided with <span class="math notranslate nohighlight">\(f(x)\)</span> as some set of points <span class="math notranslate nohighlight">\(\{x_i\}_{i=0}^n\)</span>, but do not know <span class="math notranslate nohighlight">\(f'(x)\)</span>.  How do we compute an estimate of <span class="math notranslate nohighlight">\(f'(x)\)</span>, or <span class="math notranslate nohighlight">\(f''(x)\)</span>(or higher derivatives, though we will restrict ourselves to the first two derivatives here)?  As always, it is useful to make use of something we already know how to do, namely interpolation.  We replace <span class="math notranslate nohighlight">\(f(x)\)</span> with its interpolatory function (Lagrange or splines) and take the derivative of that.  i.e.</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = p(x) + \epsilon(x), \]</div>
+<p>where <span class="math notranslate nohighlight">\(p(x)\)</span> is our interpolation and <span class="math notranslate nohighlight">\(\epsilon(x)\)</span> is the error in the interpolation.  Taking the derivative gives</p>
+<div class="math notranslate nohighlight">
+\[ f'(x) = p'(x) + \epsilon'(x),\qquad f''(x) = p''(x) + \epsilon''(x)\]</div>
+<p>Our estimate for the derivative <span class="math notranslate nohighlight">\(f'(x) \approx p'(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon'(x)\)</span> is the error in this estimate.  Similarly <span class="math notranslate nohighlight">\(f''(x) \approx p''(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon''(x)\)</span> is the error in that estimate.</p>
+<p>In the Lagrange form for the interpolating polynomial, writen in <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">barycentric form</span></a></p>
+<p>To simplify the notation, we have dropped the <span class="math notranslate nohighlight">\(n\)</span> from <span class="math notranslate nohighlight">\(L_i^n(x)\)</span> as the appropriate <span class="math notranslate nohighlight">\(n\)</span> should be clear from most contexts.  We can see from <code class="xref eq docutils literal notranslate"><span class="pre">pnformula</span></code> that</p>
+<div class="math notranslate nohighlight">
+\[ p_n'(x) =  \sum_{i=0}^n L_i'(x) f(x_i), \qquad p_n''(x) =  \sum_{i=0}^n L_i''(x) f(x_i)\]</div>
+<p>and</p>
+<p>So to work out the derivative estimates we need to compute <span class="math notranslate nohighlight">\(L_i'(x)\)</span> and <span class="math notranslate nohighlight">\(L_i''(x)\)</span> for all <span class="math notranslate nohighlight">\(i\)</span> (note that these still depend on <span class="math notranslate nohighlight">\(n\)</span>, but <span class="math notranslate nohighlight">\(n\)</span> is the same for all <span class="math notranslate nohighlight">\(L_i\)</span> in a given application).</p>
+<p>In almost all cases, we are looking for the derivative at a node point, say <span class="math notranslate nohighlight">\(x_j\)</span>.  To ensure various terms remain differentiable, it is helpful to multiply both sides by <span class="math notranslate nohighlight">\(x-x_j\)</span> and rearrange Eq. <code class="xref eq docutils literal notranslate"><span class="pre">Lieqn</span></code> to get</p>
+<p>where both sides are now differentiable at <span class="math notranslate nohighlight">\(x_j\)</span>.  Defining</p>
+<div class="math notranslate nohighlight">
+\[q_j(x)\equiv \sum_{k=0}^n w_k \frac{x-x_j}{x-x_k},\]</div>
+<p>we can rewrite <code class="xref eq docutils literal notranslate"><span class="pre">Lisetup</span></code> as</p>
+<div class="math notranslate nohighlight">
+\[ L_i(x)q_j(x) = w_i\frac{x-x_j}{x-x_i},  \]</div>
+<p>then take the first and second derivative to get</p>
+<p>From the definition of <span class="math notranslate nohighlight">\(q_j(x)\)</span> one can also work out</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+q_j'(x) &amp;=  \sum_{k\neq j}^n w_k \frac{1}{x-x_k}-\sum_{k\neq j}^n w_k \frac{x-x_j}{(x-x_k)^2},\\
+q_j''(x) &amp;= -2\sum_{k\neq j}^n w_k \frac{1}{(x-x_k)^2} + 2\sum_{k\neq j}^n w_k \frac{x-x_j}{(x-x_k)^3}.
+\end{align}
+\end{split}\]</div>
+<p>For <span class="math notranslate nohighlight">\(x_i \neq x_j\)</span>, evaluating these at <span class="math notranslate nohighlight">\(x=x_j\)</span> we see that</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+q_j(x_j) &amp;= w_j,\\
+q_j'(x_j) &amp;= \sum_{k\neq j}^n w_k \frac{1}{x_j-x_k},\\
+q_j''(x_j) &amp;= -2\sum_{k\neq j}^n w_k \frac{1}{(x_j-x_k)^2}.
+\end{align}
+\end{split}\]</div>
+<p>This, along with knowing that <span class="math notranslate nohighlight">\(L_i(x_j)=0\)</span>, in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">Liderivsetup</span></code> gives for <span class="math notranslate nohighlight">\(x_i \neq x_j\)</span>,</p>
+<p>The <span class="math notranslate nohighlight">\(x_i=x_j\)</span> case is more simply obtained from noting that if you interpolate <span class="math notranslate nohighlight">\(g(x)\equiv 1\)</span>, which can be done exactly (as its derivatives are all zero, the polynomial interpolation error formula says the error is zero), you get <span class="math notranslate nohighlight">\(1=\sum_k L_k(x)\)</span>.  As a result, by taking derivatives of this expression we get <span class="math notranslate nohighlight">\(0=\sum_k L_k^{(m)}(x)\)</span> for each differentiation order <span class="math notranslate nohighlight">\(m\)</span>.  Hence,</p>
+<p>These <span class="math notranslate nohighlight">\(L_i^{(m)}(x_j)\)</span> derivatives can be thought of as entries <span class="math notranslate nohighlight">\(D_{ji}^{(m)}\)</span> in <em>differentiation</em> matrices <span class="math notranslate nohighlight">\(\mathbf{D}^{(m)}\)</span>.  If we write our known function values <span class="math notranslate nohighlight">\(f(x_i)\)</span> in a column vector <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> then  <span class="math notranslate nohighlight">\(\mathbf{D}^{(m)} F\)</span> provides a column vector of derivatives at the interpolating nodes <span class="math notranslate nohighlight">\(x_i\)</span>.  Let’s illustrate this with a few examples.</p>
+<p><strong>Example: Two point formulas.</strong>  Suppose we have two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0)\)</span> and <span class="math notranslate nohighlight">\(f(x_1)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= -1/h\)</span> and <span class="math notranslate nohighlight">\(w_1=1/h\)</span>.  Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> then gives</p>
+<div class="math notranslate nohighlight">
+\[ D_{10}'=L_0'(x_1) = -\frac{1}{h},\quad \text{and}\quad D_{01}'=L_1'(x_0)=\frac{1}{h}.  \]</div>
+<p>Using these in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> gives</p>
+<div class="math notranslate nohighlight">
+\[ D_{00}'=L_0'(x_0) = -\frac{1}{h},\quad \text{and}\quad D_{11}'=L_1'(x_1)=\frac{1}{h}. \]</div>
+<p>Using this as the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
+<p>When used for <span class="math notranslate nohighlight">\(x_0\)</span> (upper element) this is typically called the <em>forward</em> difference formula and when used at <span class="math notranslate nohighlight">\(x_1\)</span> (lower element) this is called a <em>backward</em> difference.  Not surprisingly as this is based on linear interpolation, the approximation to the derivative is the same at both points here and were we to work out approximations for the second (or higher) derivatives, using just these two points, they would be zero.</p>
+<p><strong>Example: Three point formulas.</strong>  Suppose we have three equally spaced points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0),\,f(x_1)\)</span> and <span class="math notranslate nohighlight">\(f(x_2)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= 1/2h^2,\,w_1=-1/h^2\)</span> and <span class="math notranslate nohighlight">\(w_2=1/2h^2\)</span>.  Using  Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> and <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> to fill the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\left[{\begin{array}{c}
+f'(x_0) \\
+f'(x_1) \\
+f'(x_2) 
+\end{array}} \right] \approx
+\mathbf{D}'\mathbf{F} &amp;=
+\left[{\begin{array}{ccc}
+  L_0'(x_0) &amp;  L_1'(x_0) &amp; L_2'(x_0)\\
+  L_0'(x_1) &amp;  L_1'(x_1) &amp; L_2'(x_1)\\
+  L_0'(x_2) &amp;  L_1'(x_2) &amp; L_2'(x_2)
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{ccc}
+  -\frac{3}{2h} &amp; \frac{4}{2h}  &amp; -\frac{1}{2h}\\
+  -\frac{1}{2h} &amp; 0  &amp; \frac{1}{2h}\\
+  \frac{1}{2h}&amp; -\frac{4}{2h}  &amp; \frac{3}{2h}
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{c}
+\frac{-3f(x_0)+4f(x_1)-f(x_2)}{2h} \\
+\frac{f(x_2)-f(x_0)}{2h} \\
+\frac{3f(x_2)-4f(x_1)+f(x_0)}{2h}
+\end{array}} \right].
+\end{align}
+\end{split}\]</div>
+<p>The formula for <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> are, presumably, higher order (than <code class="xref eq docutils literal notranslate"><span class="pre">forbackD</span></code>) forward/backward differences and the formula for <span class="math notranslate nohighlight">\(x_1\)</span> is the <em>central</em> difference formula.</p>
+<p>With three points, we can also work out approximations for the second derivative.  First, as we have already worked out all the <span class="math notranslate nohighlight">\(L_i'(x_j)\)</span>, we note that using the formulas for the first derivatives, the second derivative formula in <code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> for <span class="math notranslate nohighlight">\(i\neq j\)</span> can be rewritten as</p>
+<p>where for the second line we have make use of <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> for the first derivative sum.  Making use of this for the off-diagonal elements and then using <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> for the second derivatives on the diagonal we get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{align}
+\left[{\begin{array}{c}
+f''(x_0) \\
+f''(x_1) \\
+f''(x_2) 
+\end{array}} \right] \approx
+\mathbf{D}''\mathbf{F} &amp;=
+\left[{\begin{array}{ccc}
+  L_0''(x_0) &amp;  L_1''(x_0) &amp; L_2''(x_0)\\
+  L_0''(x_1) &amp;  L_1''(x_1) &amp; L_2''(x_1)\\
+  L_0''(x_2) &amp;  L_1''(x_2) &amp; L_2''(x_2)
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{ccc}
+  \frac{1}{h^2} &amp; -\frac{2}{h^2}  &amp; \frac{1}{h^2}\\
+  \frac{1}{h^2} &amp; -\frac{2}{h^2}  &amp; \frac{1}{h^2}\\
+  \frac{1}{h^2} &amp; -\frac{2}{h^2}  &amp; \frac{1}{h^2}
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+f(x_2)
+\end{array}} \right] \\
+&amp;=
+\left[{\begin{array}{c}
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} \\
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} \\
+\frac{f(x_0)-2f(x_1)+f(x_2)}{h^2}
+\end{array}} \right].
+\end{align}
+\end{split}\]</div>
+<p>Not surprisingly as this is based on a single quadratic interpolation, the approximation to the second derivative is the same at all points here and were we to work out approximations for the higher derivatives based on just three points they would all be zero.</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/NDiffInt"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../InterpFit/Splines.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Splines</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="NumDiffInt_Errors.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Errors in Numerical Differentiation</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

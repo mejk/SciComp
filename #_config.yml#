@@ -1,0 +1,59 @@
+# Book settings
+title: SciComp
+author: Mikko Karttunen
+logo: images/logo-scicomp.svg
+copyright: "Mikko Karttunen"
+exclude_patterns: ["LICENSE.md", "README.md"]
+
+show_sidebar: true
+collapse_inactive_chapters: true
+collapse_inactive_sections: true
+
+latex:
+  latex_documents:
+    targetname: book.tex
+html:
+  home_page_in_navbar : true
+  use_repository_button: false
+#  use_issues_button: true
+#  use_edit_page_button: true
+  navbar_number_sections : false
+  baseurl : "https://mejk.github.io/CHEM3300G/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  # google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
+  comments:
+    hypothesis: true
+#    utterances: 
+#      repo: "firasm/jupyterbook_course_template"
+  extra_footer : |
+      <div>
+      <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+          All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+      </div>
+
+launch_buttons:
+  notebook_interface : "jupyterlab"
+  binderhub_url      : "https://mybinder.org"
+  thebe              : true
+
+repository: 
+  url          : https://github.com/firasm/jupyterbook_course_template
+  path_to_book : ""
+  branch       : master
+
+sphinx:
+  config:
+    html_show_copyright: false
+    html_extra_path: ['files']
+    autosectionlabel_maxdepth: 1
+    toctree: hidden
+
+#sphinx:
+#  extra_extensions:
+#    - sphinx_proof
+
+parse:
+  myst_extended_syntax: true
+
+# In _config.yml
+bibtex_bibfiles:
+    - references.bib

@@ -78,11 +78,15 @@ What this does mean, however, is that we have the potential to lose at least 1 b
 
 While a good knowledge of binary numbers is crucial for designing hardware, it is not the goal here.  Here we want to understand how roundoff can be avoided or at least minimized.  Strategies for this are independent of the actual base used so we will illustrate our examples with an imaginary decimal computer with $k$ digits in the mantissa.  This separates the concept of avoiding roundoff errors from the vagaries on binary numbers.
 
+<!--
+
 ```{image} ./img/styleatthetime.jpg
 :alt: the Style at the time
 :width: 200px
 :align: right
 ```
+
+-->
 
 Our first example of the accumulation of roundoff effors comes from the [Vancouver stock exchange](https://en.wikipedia.org/wiki/Vancouver_Stock_Exchange) (now defunct, this wasn't its only problem).  In 1982 the exchange instituted a new index initialized to a value of 1000.000 (having 7 digits was part of the index's definition and is what is usually quoted for stock exchange indices.  At that time 32-bit floating point numbers were the "state-of-the-art" at the time and as we noted above these only have about 7 decimal digits.).  Note that the index is just the total value of the companies that trade on the exchange.  To provide continuous updates for the index you could recalcuate the index by adding up all the stock values for all companies at fixed intervals, or you could just add the net change of a given stock after each trade.  Mathematically both should give the same value, but the second should generally be much faster to compute as it only involves one stock.  For an individual operation the difference between a chop and a round is very small.  However, these computations in question were done in floating point using a chop (this predated the current IEEE standard) and were done about 3000 times each day.  Note that the chop operation biases results down.  The accumulated truncations resulted in an erroneous drop of around 25 points per month until it was noticed and corrected almost two years later .  This resulted in a Friday close of 524.811 being corrected to 1098.892 on Monday morning, a change of over 50% !.
 

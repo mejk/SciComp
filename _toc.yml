@@ -62,21 +62,43 @@ parts:
 ###################################################
 
 #################################
-#  - caption: "MODULE: Errors in Scientific Computing"
-#    numbered: true
-#    chapters:
-#    - file: class/ErrorsModule/Errors_summary
-#    - file: class/ErrorsModule/Error_sources
-#    - file: class/ErrorsModule/TaylorExample
-#    - file: class/ErrorsModule/FinitePrecision
-#    - file: class/ErrorsModule/HornersAlgorithm
-#    - file: class/ErrorsModule/RoundoffAmplification
-#    - file: class/ErrorsModule/BackwardForwardConditioning   
+  - caption: "MODULE: Errors in Scientific Computing"
+    numbered: true
+    chapters:
+    - file: class/ErrorsModule/Errors_summary
+    - file: class/ErrorsModule/Error_sources
+    - file: class/ErrorsModule/TaylorExample
+    - file: class/ErrorsModule/FinitePrecision
+    - file: class/ErrorsModule/HornersAlgorithm
+    - file: class/ErrorsModule/RoundoffAmplification
+    - file: class/ErrorsModule/BackwardForwardConditioning   
 #    - file: class/week01/intro-to-modeling    
 #    - file: class/week01/hpc-intro
 #    - file: class/week01/simulation-general
 #################################
 
+##########################################################
+####### Interpolation
+
+  - caption: "MODULE: Interpolation"
+    chapters:
+    - file: class/InterpFit/InterpFit_summary
+    - file: class/InterpFit/LagrangeForm
+    - file: class/InterpFit/BarycentricInterp
+    - file: class/InterpFit/InterpErrors
+    - file: class/InterpFit/Chebyshev
+    - file: class/InterpFit/Splines
+
+##########################################################
+#######  Numerical Differentiation & Integration
+
+  - caption: "MODULE: Numerical Differentiation & Integration"
+    chapters:
+    - file: class/NDiffInt/NumDiffInt
+    - file: class/NDiffInt/NumDiffInt_Errors
+    - file: class/NDiffInt/Int
+    - file: class/NDiffInt/HigherOrderInt
+    - file: class/NDiffInt/GaussianInt
 
 
 ##################################################
