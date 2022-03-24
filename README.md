@@ -16,7 +16,7 @@ Just clone the site (as you see below, this is CC licensed). It is expected that
 
 ## Updates and contributions
 
-- This material is updated continously and new modules are added.
+- This material is updated continuously and new modules are added.
 - If you wish to contribute, just contact us! Contributions are very welcome. The one requirement is that all the material is original or Creative Commons licensed.
 - If you find typos or errors, let us know.
 
@@ -29,7 +29,7 @@ The material has been tested under Linux, MacOS and Windows 10.
 
 ### Dependencies
 
-Install the depenencies first, The material uses 
+Install the dependencies first, The material uses 
 
 - Python. You also need
   - Scipy, numpy, seaborn, matplotlib, and some others. Anaconda installation takes care of all the dependencies.
@@ -63,16 +63,16 @@ Install the depenencies first, The material uses
 ## Important!!!
 
 - Use at your own risk. We take no responsibility or liability of any kind. 
-- The various installations have all been tested and tried, but if you choose to follow the notes, the risk is entirly yours. Please be aware that computer software and operating systems develop rapidly: Pay attention to the version numbers.
+- The various installations have all been tested and tried, but if you choose to follow the notes, the risk is entirely yours. Please be aware that computer software and operating systems develop rapidly: Pay attention to the version numbers.
 
 ## Copyright 
 
 By Mikko Karttunen and Colin Denniston.  All content on this site (unless otherwise specified) is licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
 
-We do wish that if you use the material, please include an acknowledgment. 
+We do wish that if you use the material, please include an acknowledgement. 
 
 
-## Acknowledgments
+## Acknowledgements
 
 
 - The [Jupyter Project](https://jupyter.org/)
