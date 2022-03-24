@@ -67,9 +67,8 @@ Install the dependencies first, The material uses
 
 ## Copyright 
 
-By Mikko Karttunen and Colin Denniston.  All content on this site (unless otherwise specified) is licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
-We do wish that if you use the material, please include an acknowledgement. 
+- By Mikko Karttunen and Colin Denniston.  All content on this site (unless otherwise specified) is licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+- We do wish that if you use the material, please include an acknowledgement. 
 
 
 ## Acknowledgements
