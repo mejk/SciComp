@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JupyterBook Course Template &#8212; Scientific Computing</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/README-orig.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="about/syllabus.html">
+   Scientific Computing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Prerequisites and installations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PreReq/software_1.html">
+   Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/LinuxBasics/Linux-basics.html">
+   Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PythonBasics/python-virtual-environment.html">
+   Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/OtherSoftware/editing-ascii.html">
+   Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/OtherSoftware/vi-editor.html">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/OtherSoftware/helpful-software.html">
+   Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PythonBasics/coding-notes-general.html">
+   On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/PythonBasics/python-intro.html">
+   Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/RandomNumbers/random_numbers.html">
+   Random numbers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/Errors_summary.html">
+   Numerical Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/Error_sources.html">
+   Sources of Errors in Scientific Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/TaylorExample.html">
+   Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/FinitePrecision.html">
+   Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/HornersAlgorithm.html">
+   Horner’s algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/RoundoffAmplification.html">
+   Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/ErrorsModule/BackwardForwardConditioning.html">
+   Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/InterpFit/Chebyshev.html">
+   Chebyshev Polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/NDiffInt/NumDiffInt.html">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/NDiffInt/NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/NDiffInt/Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/NDiffInt/HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="class/NDiffInt/GaussianInt.html">
+   Gaussian Integration
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More on computers / helps
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/README-orig.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   JupyterBook Course Template
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-website">
+     Course Website
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage">
+     Usage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visit-this-template-repository-with-the-gh-account-you-want-to-use-and-click-use-this-template">
+       1. Visit this template repository with the GH account you want to use and click “Use this template”.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fill-in-the-info-for-the-new-repository-make-sure-it-s-a-public-repository-and-you-include-all-branches-this-will-make-sure-the-gh-pages-branch-is-deployed">
+       2. Fill in the info for the new repository, make sure it’s a public repository and you include all branches (this will make sure the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         gh-pages
+        </span>
+       </code>
+       branch is deployed).
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wait-for-the-gh-action-to-complete-and-then-visit-your-deployed-website-here-https-firasm-github-io-jupyterbook-course-template-that-s-it">
+       3. Wait for the GH Action to complete, and then visit your deployed website here: https://firasm.github.io/jupyterbook_course_template. That’s it!
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#features">
+     Features
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-the-template-for-your-course">
+     Edit the template for your course
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribution">
+     Attribution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scicomp9502b">
+   SciComp9502B
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>JupyterBook Course Template</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   JupyterBook Course Template
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#course-website">
+     Course Website
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#usage">
+     Usage
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#visit-this-template-repository-with-the-gh-account-you-want-to-use-and-click-use-this-template">
+       1. Visit this template repository with the GH account you want to use and click “Use this template”.
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fill-in-the-info-for-the-new-repository-make-sure-it-s-a-public-repository-and-you-include-all-branches-this-will-make-sure-the-gh-pages-branch-is-deployed">
+       2. Fill in the info for the new repository, make sure it’s a public repository and you include all branches (this will make sure the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         gh-pages
+        </span>
+       </code>
+       branch is deployed).
+      </a>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#wait-for-the-gh-action-to-complete-and-then-visit-your-deployed-website-here-https-firasm-github-io-jupyterbook-course-template-that-s-it">
+       3. Wait for the GH Action to complete, and then visit your deployed website here: https://firasm.github.io/jupyterbook_course_template. That’s it!
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#features">
+     Features
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#edit-the-template-for-your-course">
+     Edit the template for your course
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#attribution">
+     Attribution
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scicomp9502b">
+   SciComp9502B
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="jupyterbook-course-template">
+<h1>JupyterBook Course Template<a class="headerlink" href="#jupyterbook-course-template" title="Permalink to this headline">¶</a></h1>
+<p>This is a template repository that makes it drop-dead simple for anyone to create a JupyterBook course website and deploy it using GH Pages.
+No configuration is necessary, there are just three steps.</p>
+<div class="section" id="course-website">
+<h2>Course Website<a class="headerlink" href="#course-website" title="Permalink to this headline">¶</a></h2>
+<p>To access the rendered version of this JupyterBook, visit <a class="reference external" href="https://firasm.github.io/jupyterbook_course_template">https://firasm.github.io/jupyterbook_course_template</a>.</p>
+<p>Each time there is a commit to master, the website will re-deploy.
+Currently it takes about 70s for the website to update.</p>
+</div>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="visit-this-template-repository-with-the-gh-account-you-want-to-use-and-click-use-this-template">
+<h3>1. Visit this <a class="reference external" href="https://github.com/firasm/jupyterbook_course_template">template repository</a> with the GH account you want to use and click “Use this template”.<a class="headerlink" href="#visit-this-template-repository-with-the-gh-account-you-want-to-use-and-click-use-this-template" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="https://github.com/firasm/bits/blob/master/jb-step1.png" /></p>
+</div>
+<div class="section" id="fill-in-the-info-for-the-new-repository-make-sure-it-s-a-public-repository-and-you-include-all-branches-this-will-make-sure-the-gh-pages-branch-is-deployed">
+<h3>2. Fill in the info for the new repository, make sure it’s a public repository and you include all branches (this will make sure the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch is deployed).<a class="headerlink" href="#fill-in-the-info-for-the-new-repository-make-sure-it-s-a-public-repository-and-you-include-all-branches-this-will-make-sure-the-gh-pages-branch-is-deployed" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="https://github.com/firasm/bits/blob/master/jb-step2.png" /></p>
+</div>
+<div class="section" id="wait-for-the-gh-action-to-complete-and-then-visit-your-deployed-website-here-https-firasm-github-io-jupyterbook-course-template-that-s-it">
+<h3>3. Wait for the GH Action to complete, and then visit your deployed website here: <a class="reference external" href="https://firasm.github.io/jupyterbook_course_template">https://firasm.github.io/jupyterbook_course_template</a>. That’s it!<a class="headerlink" href="#wait-for-the-gh-action-to-complete-and-then-visit-your-deployed-website-here-https-firasm-github-io-jupyterbook-course-template-that-s-it" title="Permalink to this headline">¶</a></h3>
+<p><img alt="" src="https://github.com/firasm/bits/blob/master/jb-step3.png" /></p>
+</div>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Support for executing code in a browser using <a class="reference external" href="https://thebe.readthedocs.io/en/latest/">thebe</a> and <a class="reference external" href="https://mybinder.org">mybinderorg</a>!</p></li>
+<li><p>Structured book with markdown file stubs aligning with a course structure for a 13 week course. Fully versioned using GitHub, automatically deployed using GH Actions to either GH or your own server. Can also be extended with a testing framework for extra peace of mind.</p></li>
+<li><p><a class="reference external" href="https://firasm.github.io/jupyterbook_course_template/class/topic1.html">Examples of how to use IFrames</a> to embed web content, &#64;phet_sims, &#64;sli.do polls, videos, and other content.</p></li>
+<li><p>Powerful built-in annotation and commenting features with <a class="reference external" href="http://hypothes.is">hypothes.is</a> and <a class="reference external" href="http://utteranc.es">utteranc.es</a>. Annotate your syllabus, course readings, and any other content.</p></li>
+<li><p>Add persistent checkboxes so students can track their progress through notebooks, exercises and readings.</p></li>
+<li><p>Allow students to download pages of the site in PDF, link to the source code on your repo, or open in a mybinder notebook.</p></li>
+<li><p>The JupyterBook can be embedded into Canvas using the Redirect tool so students never have to leave their LMS.</p></li>
+</ol>
+</div>
+<div class="section" id="edit-the-template-for-your-course">
+<h2>Edit the template for your course<a class="headerlink" href="#edit-the-template-for-your-course" title="Permalink to this headline">¶</a></h2>
+<p>There are a few things you need to do to adapt this template for your course.
+I might miss a few things, so this list is a work in progress:</p>
+<ol class="simple">
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<ul class="simple">
+<li><p>[ ] Set title of the book (Physics 111)</p></li>
+<li><p>[ ] Update author (Firas Moosvi)</p></li>
+<li><p>[ ] Update logo image (images/logo.png)</p></li>
+<li><p>[ ] Add Google Analytics ID (Optional)</p></li>
+<li><p>[ ] Enable/Disable <a class="reference external" href="http://Hypothes.is">Hypothes.is</a> (remove the line to remove the <a class="reference external" href="http://hypothes.is">hypothes.is</a> integration)</p></li>
+<li><p>[ ] Configure <a class="reference external" href="http://Utteranc.es">Utteranc.es</a> repository (Choose one of Hypothesis or <a class="reference external" href="http://Utteranc.es">Utteranc.es</a>)</p></li>
+<li><p>[ ] Adjust <code class="docutils literal notranslate"><span class="pre">extra_footer</span></code> to control License of course materials</p></li>
+</ul>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file:</p>
+<ul class="simple">
+<li><p>[ ] Arrange the table of contents to add/remove files</p></li>
+</ul>
+</li>
+<li><p>In the <code class="docutils literal notranslate"><span class="pre">about</span></code> and <code class="docutils literal notranslate"><span class="pre">class</span></code> folders:</p>
+<ul class="simple">
+<li><p>[ ] Edit the .md and .ipynb files with your course content</p></li>
+</ul>
+</li>
+</ol>
+</div>
+<div class="section" id="attribution">
+<h2>Attribution<a class="headerlink" href="#attribution" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Thanks to <a class="reference external" href="https://github.com/TomasBeuzen">Tomas Beuzen</a> for his GH Actions workflow that deploys JupyterBooks using GH pages.</p></li>
+<li><p>Thanks the entire <a class="reference external" href="https://jupyter.org/about">Jupyter Project</a></p></li>
+<li><p>Finally, a big thanks to the <a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors">JupyterBook community</a> for my incessant issues, questions, and PR requests on documentation changes.</p></li>
+</ul>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="scicomp9502b">
+<h1>SciComp9502B<a class="headerlink" href="#scicomp9502b" title="Permalink to this headline">¶</a></h1>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mejk/SciComp",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen and Colin Denniston<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
