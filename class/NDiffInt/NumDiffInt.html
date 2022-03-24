@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Numerical Differentiation &#8212; SciComp9502B</title>
+    <title>Numerical Differentiation &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,12 +22,13 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -36,63 +37,27 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/NumDiffInt.html" />
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/NDiffInt/NumDiffInt.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Errors in Numerical Differentiation" href="NumDiffInt_Errors.html" />
@@ -125,7 +90,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -136,59 +101,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -198,73 +184,68 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/diffusion-in-brief.html">
-   18. Diffusion - a brief introduction
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -272,43 +253,43 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
-   19. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Error_sources.html">
-   20. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
-   22. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
-   23. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
-   24. Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
-   25. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
-   26. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 2 - Interpolation
+  MODULE: Interpolation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -334,7 +315,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../InterpFit/Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1">
@@ -343,9 +324,9 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 3 - Numerical Differentiation &amp; Integration
+  MODULE: Numerical Differentiation &amp; Integration
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -375,7 +356,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -452,6 +433,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-two-point-formulas">
+   Example: Two point formulas.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-three-point-formulas">
+   Example: Three point formulas.
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -464,6 +463,24 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-two-point-formulas">
+   Example: Two point formulas.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-three-point-formulas">
+   Example: Three point formulas.
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -471,28 +488,39 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="numerical-differentiation">
-<span id="page-topic1"></span><h1>Numerical Differentiation<a class="headerlink" href="#numerical-differentiation" title="Permalink to this headline">¶</a></h1>
-<p>Suppose we can either evaluate <span class="math notranslate nohighlight">\(f(x)\)</span> for any <span class="math notranslate nohighlight">\(x\)</span>, or are provided with <span class="math notranslate nohighlight">\(f(x)\)</span> as some set of points <span class="math notranslate nohighlight">\(\{x_i\}_{i=0}^n\)</span>, but do not know <span class="math notranslate nohighlight">\(f'(x)\)</span>.  How do we compute an estimate of <span class="math notranslate nohighlight">\(f'(x)\)</span>, or <span class="math notranslate nohighlight">\(f''(x)\)</span>(or higher derivatives, though we will restrict ourselves to the first two derivatives here)?  As always, it is useful to make use of something we already know how to do, namely interpolation.  We replace <span class="math notranslate nohighlight">\(f(x)\)</span> with its interpolatory function (Lagrange or splines) and take the derivative of that.  i.e.</p>
+<h1>Numerical Differentiation<a class="headerlink" href="#numerical-differentiation" title="Permalink to this headline">¶</a></h1>
+<p>Suppose we can either evaluate <span class="math notranslate nohighlight">\(f(x)\)</span> for any <span class="math notranslate nohighlight">\(x\)</span>, or are provided with <span class="math notranslate nohighlight">\(f(x)\)</span> as some set of points <span class="math notranslate nohighlight">\(\{x_i\}_{i=0}^n\)</span>, but do not know <span class="math notranslate nohighlight">\(f'(x)\)</span>.  How do we compute an estimate of <span class="math notranslate nohighlight">\(f'(x)\)</span>, or <span class="math notranslate nohighlight">\(f''(x)\)</span> (or higher derivatives, though we will restrict ourselves to the first two derivatives here)?  As always, it is useful to make use of something we already know how to do, namely interpolation.  We replace <span class="math notranslate nohighlight">\(f(x)\)</span> with its interpolatory function (Lagrange or splines) and take the derivative of that, i.e.,</p>
 <div class="math notranslate nohighlight">
 \[ f(x) = p(x) + \epsilon(x), \]</div>
 <p>where <span class="math notranslate nohighlight">\(p(x)\)</span> is our interpolation and <span class="math notranslate nohighlight">\(\epsilon(x)\)</span> is the error in the interpolation.  Taking the derivative gives</p>
 <div class="math notranslate nohighlight">
 \[ f'(x) = p'(x) + \epsilon'(x),\qquad f''(x) = p''(x) + \epsilon''(x)\]</div>
 <p>Our estimate for the derivative <span class="math notranslate nohighlight">\(f'(x) \approx p'(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon'(x)\)</span> is the error in this estimate.  Similarly <span class="math notranslate nohighlight">\(f''(x) \approx p''(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon''(x)\)</span> is the error in that estimate.</p>
-<p>In the Lagrange form for the interpolating polynomial, writen in <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">barycentric form</span></a></p>
-<p>To simplify the notation, we have dropped the <span class="math notranslate nohighlight">\(n\)</span> from <span class="math notranslate nohighlight">\(L_i^n(x)\)</span> as the appropriate <span class="math notranslate nohighlight">\(n\)</span> should be clear from most contexts.  We can see from <code class="xref eq docutils literal notranslate"><span class="pre">pnformula</span></code> that</p>
+<p>In the Lagrange form for the interpolating polynomial, written in <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">barycentric form</span></a></p>
+<div class="math notranslate nohighlight" id="equation-pnformula">
+<span class="eqno">(16)<a class="headerlink" href="#equation-pnformula" title="Permalink to this equation">¶</a></span>\[p_n(x) = \sum_{i=0}^n L_i(x) f(x_i) = \frac{\sum_{i=0}^n \frac{w_i}{x-x_i} f(x_i)}{\sum_{i=0}^n \frac{w_i}{x-x_i}}. \]</div>
+<p>To simplify the notation, we have dropped the <span class="math notranslate nohighlight">\(n\)</span> from <span class="math notranslate nohighlight">\(L_i^n(x)\)</span> as the appropriate <span class="math notranslate nohighlight">\(n\)</span> should be clear from most contexts.  We can see from <a class="reference internal" href="#equation-pnformula">(16)</a> that</p>
 <div class="math notranslate nohighlight">
 \[ p_n'(x) =  \sum_{i=0}^n L_i'(x) f(x_i), \qquad p_n''(x) =  \sum_{i=0}^n L_i''(x) f(x_i)\]</div>
 <p>and</p>
+<div class="math notranslate nohighlight" id="equation-lieqn">
+<span class="eqno">(17)<a class="headerlink" href="#equation-lieqn" title="Permalink to this equation">¶</a></span>\[L_i(x) =  \frac{\frac{w_i}{x-x_i}}{\sum_{k=0}^n \frac{w_k}{x-x_k}}.\]</div>
 <p>So to work out the derivative estimates we need to compute <span class="math notranslate nohighlight">\(L_i'(x)\)</span> and <span class="math notranslate nohighlight">\(L_i''(x)\)</span> for all <span class="math notranslate nohighlight">\(i\)</span> (note that these still depend on <span class="math notranslate nohighlight">\(n\)</span>, but <span class="math notranslate nohighlight">\(n\)</span> is the same for all <span class="math notranslate nohighlight">\(L_i\)</span> in a given application).</p>
-<p>In almost all cases, we are looking for the derivative at a node point, say <span class="math notranslate nohighlight">\(x_j\)</span>.  To ensure various terms remain differentiable, it is helpful to multiply both sides by <span class="math notranslate nohighlight">\(x-x_j\)</span> and rearrange Eq. <code class="xref eq docutils literal notranslate"><span class="pre">Lieqn</span></code> to get</p>
+<p>In almost all cases, we are looking for the derivative at a node point, say <span class="math notranslate nohighlight">\(x_j\)</span>.  To ensure various terms remain differentiable, it is helpful to multiply both sides by <span class="math notranslate nohighlight">\(x-x_j\)</span> and rearrange Eq. <a class="reference internal" href="#equation-lieqn">(17)</a> to get</p>
+<div class="math notranslate nohighlight" id="equation-lisetup">
+<span class="eqno">(18)<a class="headerlink" href="#equation-lisetup" title="Permalink to this equation">¶</a></span>\[L_i(x)\sum_{k=0}^n w_k \frac{x-x_j}{x-x_k} = w_i\frac{x-x_j}{x-x_i},\]</div>
 <p>where both sides are now differentiable at <span class="math notranslate nohighlight">\(x_j\)</span>.  Defining</p>
 <div class="math notranslate nohighlight">
 \[q_j(x)\equiv \sum_{k=0}^n w_k \frac{x-x_j}{x-x_k},\]</div>
-<p>we can rewrite <code class="xref eq docutils literal notranslate"><span class="pre">Lisetup</span></code> as</p>
+<p>we can rewrite <a class="reference internal" href="#equation-lisetup">(18)</a> as</p>
 <div class="math notranslate nohighlight">
 \[ L_i(x)q_j(x) = w_i\frac{x-x_j}{x-x_i},  \]</div>
 <p>then take the first and second derivative to get</p>
+<div class="math notranslate nohighlight" id="equation-liderivsetup">
+<span class="eqno">(19)<a class="headerlink" href="#equation-liderivsetup" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+L_i'(x)q_j(x)+L_i(x)q_j'(x)&amp;=w_i \left[\frac{1}{x-x_i}-\frac{x-x_j}{(x-x_i)^2}\right],\\
+L_i''(x)q_j(x)+2L_i'(x)q_j'(x)+L_i(x)q_j''(x) &amp;= w_i \left[-2\frac{1}{(x-x_i)^2}+2\frac{x-x_j}{(x-x_i)^3}\right].
+\end{align}\end{split}\]</div>
 <p>From the definition of <span class="math notranslate nohighlight">\(q_j(x)\)</span> one can also work out</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -510,18 +538,53 @@ q_j'(x_j) &amp;= \sum_{k\neq j}^n w_k \frac{1}{x_j-x_k},\\
 q_j''(x_j) &amp;= -2\sum_{k\neq j}^n w_k \frac{1}{(x_j-x_k)^2}.
 \end{align}
 \end{split}\]</div>
-<p>This, along with knowing that <span class="math notranslate nohighlight">\(L_i(x_j)=0\)</span>, in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">Liderivsetup</span></code> gives for <span class="math notranslate nohighlight">\(x_i \neq x_j\)</span>,</p>
+<p>This, along with knowing that <span class="math notranslate nohighlight">\(L_i(x_j)=0\)</span>, in Eq.<a class="reference internal" href="#equation-liderivsetup">(19)</a> gives for <span class="math notranslate nohighlight">\(x_i \neq x_j\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-dlij">
+<span class="eqno">(20)<a class="headerlink" href="#equation-dlij" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+L_i'(x_j)&amp;=\frac{w_i/w_j}{x_j-x_i},\\
+L_i''(x_j)&amp;=-2\frac{w_i/w_j}{x_j-x_i}\left[\sum_{k\neq j}\frac{w_k/w_j}{x_j-x_k}+\frac{1}{x_j-x_i} \right].
+\end{align}\end{split}\]</div>
 <p>The <span class="math notranslate nohighlight">\(x_i=x_j\)</span> case is more simply obtained from noting that if you interpolate <span class="math notranslate nohighlight">\(g(x)\equiv 1\)</span>, which can be done exactly (as its derivatives are all zero, the polynomial interpolation error formula says the error is zero), you get <span class="math notranslate nohighlight">\(1=\sum_k L_k(x)\)</span>.  As a result, by taking derivatives of this expression we get <span class="math notranslate nohighlight">\(0=\sum_k L_k^{(m)}(x)\)</span> for each differentiation order <span class="math notranslate nohighlight">\(m\)</span>.  Hence,</p>
+<div class="math notranslate nohighlight" id="equation-dlii">
+<span class="eqno">(21)<a class="headerlink" href="#equation-dlii" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+L_i'(x_i) &amp;= -\sum_{k\neq i} L_k'(x_i),\\
+L_i''(x_i) &amp;= -\sum_{k\neq i} L_k''(x_i).
+\end{align}\end{split}\]</div>
 <p>These <span class="math notranslate nohighlight">\(L_i^{(m)}(x_j)\)</span> derivatives can be thought of as entries <span class="math notranslate nohighlight">\(D_{ji}^{(m)}\)</span> in <em>differentiation</em> matrices <span class="math notranslate nohighlight">\(\mathbf{D}^{(m)}\)</span>.  If we write our known function values <span class="math notranslate nohighlight">\(f(x_i)\)</span> in a column vector <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> then  <span class="math notranslate nohighlight">\(\mathbf{D}^{(m)} F\)</span> provides a column vector of derivatives at the interpolating nodes <span class="math notranslate nohighlight">\(x_i\)</span>.  Let’s illustrate this with a few examples.</p>
-<p><strong>Example: Two point formulas.</strong>  Suppose we have two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0)\)</span> and <span class="math notranslate nohighlight">\(f(x_1)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= -1/h\)</span> and <span class="math notranslate nohighlight">\(w_1=1/h\)</span>.  Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> then gives</p>
+<div class="section" id="example-two-point-formulas">
+<h2>Example: Two point formulas.<a class="headerlink" href="#example-two-point-formulas" title="Permalink to this headline">¶</a></h2>
+<p>Suppose we have two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0)\)</span> and <span class="math notranslate nohighlight">\(f(x_1)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= -1/h\)</span> and <span class="math notranslate nohighlight">\(w_1=1/h\)</span>.  Eq.<a class="reference internal" href="#equation-dlij">(20)</a> then gives</p>
 <div class="math notranslate nohighlight">
 \[ D_{10}'=L_0'(x_1) = -\frac{1}{h},\quad \text{and}\quad D_{01}'=L_1'(x_0)=\frac{1}{h}.  \]</div>
-<p>Using these in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> gives</p>
+<p>Using these in Eq.<a class="reference internal" href="#equation-dlii">(21)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[ D_{00}'=L_0'(x_0) = -\frac{1}{h},\quad \text{and}\quad D_{11}'=L_1'(x_1)=\frac{1}{h}. \]</div>
 <p>Using this as the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
+<div class="math notranslate nohighlight" id="equation-forbackd">
+<span class="eqno">(22)<a class="headerlink" href="#equation-forbackd" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+\left[{\begin{array}{c}
+f'(x_0) \\
+f'(x_1) \\
+\end{array}} \right] \approx
+\mathbf{D}'\mathbf{F} =
+\left[{\begin{array}{cc}
+  -\frac{1}{h} &amp;  \frac{1}{h}\\
+  -\frac{1}{h} &amp;  \frac{1}{h}\\
+\end{array}} \right]
+\left[{\begin{array}{c}
+f(x_0) \\
+f(x_1) \\
+\end{array}} \right] =
+\left[{\begin{array}{c}
+\frac{f(x_1)-f(x_0)}{h} \\
+\frac{f(x_1)-f(x_0)}{h} \\
+\end{array}} \right].
+\end{align}\end{split}\]</div>
 <p>When used for <span class="math notranslate nohighlight">\(x_0\)</span> (upper element) this is typically called the <em>forward</em> difference formula and when used at <span class="math notranslate nohighlight">\(x_1\)</span> (lower element) this is called a <em>backward</em> difference.  Not surprisingly as this is based on linear interpolation, the approximation to the derivative is the same at both points here and were we to work out approximations for the second (or higher) derivatives, using just these two points, they would be zero.</p>
-<p><strong>Example: Three point formulas.</strong>  Suppose we have three equally spaced points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0),\,f(x_1)\)</span> and <span class="math notranslate nohighlight">\(f(x_2)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= 1/2h^2,\,w_1=-1/h^2\)</span> and <span class="math notranslate nohighlight">\(w_2=1/2h^2\)</span>.  Using  Eq.<code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> and <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> to fill the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
+</div>
+<div class="section" id="example-three-point-formulas">
+<h2>Example: Three point formulas.<a class="headerlink" href="#example-three-point-formulas" title="Permalink to this headline">¶</a></h2>
+<p>Suppose we have three equally spaced points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> along with the function values at those points <span class="math notranslate nohighlight">\(f(x_0),\,f(x_1)\)</span> and <span class="math notranslate nohighlight">\(f(x_2)\)</span>.   The <a class="reference internal" href="../InterpFit/BarycentricInterp.html"><span class="doc std std-doc">formula for the weights</span></a> gives  <span class="math notranslate nohighlight">\(w_0= 1/2h^2,\,w_1=-1/h^2\)</span> and <span class="math notranslate nohighlight">\(w_2=1/2h^2\)</span>.  Using  Eq.<a class="reference internal" href="#equation-dlij">(20)</a> and <a class="reference internal" href="#equation-dlii">(21)</a> to fill the entries of <span class="math notranslate nohighlight">\(\mathbf{D}'\)</span> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -560,9 +623,14 @@ f(x_2)
 \end{array}} \right].
 \end{align}
 \end{split}\]</div>
-<p>The formula for <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> are, presumably, higher order (than <code class="xref eq docutils literal notranslate"><span class="pre">forbackD</span></code>) forward/backward differences and the formula for <span class="math notranslate nohighlight">\(x_1\)</span> is the <em>central</em> difference formula.</p>
-<p>With three points, we can also work out approximations for the second derivative.  First, as we have already worked out all the <span class="math notranslate nohighlight">\(L_i'(x_j)\)</span>, we note that using the formulas for the first derivatives, the second derivative formula in <code class="xref eq docutils literal notranslate"><span class="pre">DLij</span></code> for <span class="math notranslate nohighlight">\(i\neq j\)</span> can be rewritten as</p>
-<p>where for the second line we have make use of <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> for the first derivative sum.  Making use of this for the off-diagonal elements and then using <code class="xref eq docutils literal notranslate"><span class="pre">DLii</span></code> for the second derivatives on the diagonal we get</p>
+<p>The formula for <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1\)</span> are, presumably, higher order (than <a class="reference internal" href="#equation-forbackd">(22)</a>) forward/backward differences and the formula for <span class="math notranslate nohighlight">\(x_1\)</span> is the <em>central</em> difference formula.</p>
+<p>With three points, we can also work out approximations for the second derivative.  First, as we have already worked out all the <span class="math notranslate nohighlight">\(L_i'(x_j)\)</span>, we note that using the formulas for the first derivatives, the second derivative formula in <a class="reference internal" href="#equation-dlij">(20)</a> for <span class="math notranslate nohighlight">\(i\neq j\)</span> can be rewritten as</p>
+<div class="math notranslate nohighlight" id="equation-dl2fromdl1">
+<span class="eqno">(23)<a class="headerlink" href="#equation-dl2fromdl1" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+L_i''(x_j)&amp;=-2L_i'(x_j)\left[\sum_{k\neq j}L_k'(x_j)+\frac{1}{x_j-x_i}\right],\\
+&amp;= 2L_i'(x_j)\left[L_j'(x_j)-\frac{1}{x_j-x_i}\right] ,
+\end{align}\end{split}\]</div>
+<p>where for the second line we have make use of <a class="reference internal" href="#equation-dlii">(21)</a> for the first derivative sum.  Making use of this for the off-diagonal elements and then using <a class="reference internal" href="#equation-dlii">(21)</a> for the second derivatives on the diagonal we get</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -603,12 +671,13 @@ f(x_2)
 \end{split}\]</div>
 <p>Not surprisingly as this is based on a single quadratic interpolation, the approximation to the second derivative is the same at all points here and were we to work out approximations for the higher derivatives based on just three points they would all be zero.</p>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -650,7 +719,7 @@ f(x_2)
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>

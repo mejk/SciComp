@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaussian Integration &#8212; SciComp9502B</title>
+    <title>Gaussian Integration &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,12 +22,13 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -36,42 +37,27 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/GaussianInt.html" />
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/NDiffInt/GaussianInt.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="prev" title="Higher Order Integration Schemes" href="HigherOrderInt.html" />
@@ -103,7 +89,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -114,59 +100,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -176,73 +183,68 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/diffusion-in-brief.html">
-   18. Diffusion - a brief introduction
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -250,43 +252,43 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
-   19. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Error_sources.html">
-   20. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
-   22. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
-   23. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
-   24. Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
-   25. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
-   26. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 2 - Interpolation
+  MODULE: Interpolation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -312,7 +314,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../InterpFit/Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1">
@@ -321,9 +323,9 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 3 - Numerical Differentiation &amp; Integration
+  MODULE: Numerical Differentiation &amp; Integration
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -353,7 +355,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -430,7 +432,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/NDiffInt/GaussianInt.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mejk/SciComp_template/master?urlpath=lab/tree/class/NDiffInt/GaussianInt.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -468,13 +470,13 @@
             
               <div>
                 
-  <div class="section" id="gaussian-integration">
+  <div class="tex2jax_ignore mathjax_ignore section" id="gaussian-integration">
 <h1>Gaussian Integration<a class="headerlink" href="#gaussian-integration" title="Permalink to this headline">¶</a></h1>
 <p>So far, we have focussed on integration schemes where the function is sampled at regular intervals.  These are very useful for data that comes to us in this form, but if we wish to integrate a known function as accurately as possible it is better to take advantage of the freedom we have to choose our nodes, just as we did for interpolation where selecting Chebyshev points was optimal.</p>
 <p>Consider that quadrature formulas are typically of the form</p>
 <div class="math notranslate nohighlight">
 \[
-\int_a^b f(x) dx = \sum_{i=0}^{n-1} c_i f(x_i) + error,
+\int_a^b f(x) dx = \sum_{i=0}^{n-1} c_i f(x_i) + \mathrm{error},
 \]</div>
 <p>which has <span class="math notranslate nohighlight">\(2n\)</span> parameters (note for this section we are stopping the sum at <span class="math notranslate nohighlight">\(n-1\)</span> rather than <span class="math notranslate nohighlight">\(n\)</span> as this is conventional for Gaussian quadrature formulas).  The idea of Gaussian integration is that with these <span class="math notranslate nohighlight">\(2n\)</span> parameters it should be possible to chose them to ensure that we can integrate all polynomials of degree less than or equal to <span class="math notranslate nohighlight">\(2n-1\)</span> <em>exactly</em>.</p>
 <p>Before we do this, it is useful to first transform to a standard interval, namely <span class="math notranslate nohighlight">\(y\)</span> in <span class="math notranslate nohighlight">\([-1,1]\)</span>, from the original <span class="math notranslate nohighlight">\(x\)</span> in <span class="math notranslate nohighlight">\([a,b]\)</span>.  Similar to what we did with the Chebyshev interpolation, we use the change of variables</p>
@@ -487,20 +489,27 @@
 <div class="math notranslate nohighlight">
 \[\int_a^b f(x) dx \approx \frac{b-a}{2}\sum_{i=0}^{n-1} c_i f\left(\frac{b-a}{2}y_i+\frac{b+a}{2}\right).\]</div>
 <p>So, we will focus on integration over <span class="math notranslate nohighlight">\([-1,1]\)</span> below.</p>
-<p><strong>Theorem</strong> Suppose <span class="math notranslate nohighlight">\(\{x_0,x_1,\cdots,x_{n-1}\}\)</span> are the roots of the <span class="math notranslate nohighlight">\(n\)</span>th Legendre polynomial <span class="math notranslate nohighlight">\(P_n(x)\)</span> and</p>
+<div class="proof theorem admonition" id="theorem-0">
+<p class="admonition-title"><span class="caption-number">Theorem 4 </span></p>
+<div class="theorem-content section" id="proof-content">
+<p>Suppose <span class="math notranslate nohighlight">\(\{x_0,x_1,\cdots,x_{n-1}\}\)</span> are the roots of the <span class="math notranslate nohighlight">\(n\)</span>th Legendre polynomial <span class="math notranslate nohighlight">\(P_n(x)\)</span> and</p>
 <div class="math notranslate nohighlight">
 \[ c_i=\int_{-1}^1 L_i^{n-1}(x) dx,\quad i=0,1,\cdots,n-1\]</div>
 <p>where <span class="math notranslate nohighlight">\(L_i^{n-1}(x)\)</span> is the Lagrange polynomial (from interpolation).  Then if <span class="math notranslate nohighlight">\(p(x)\)</span> is any polynomial of degree less than or equal to <span class="math notranslate nohighlight">\(2n-1\)</span>, then</p>
 <div class="math notranslate nohighlight">
 \[ \int_{-1}^1 p(x) dx = \sum_{i=0}^{n-1} c_i p(x_i),\]</div>
 <p>exactly.</p>
-<p><strong>Proof:</strong>  First look at the case where the degree of <span class="math notranslate nohighlight">\(p(x)\)</span> is less than <span class="math notranslate nohighlight">\(n\)</span>.  Then</p>
+</div>
+</div><div class="proof admonition" id="proof">
+<p>Proof. First look at the case where the degree of <span class="math notranslate nohighlight">\(p(x)\)</span> is less than <span class="math notranslate nohighlight">\(n\)</span>.  Then</p>
 <div class="math notranslate nohighlight">
 \[ p(x) = \sum_{i=0}^{n-1} L_i^n(x) p(x_i) \]</div>
 <p>is an exact interpolation of <span class="math notranslate nohighlight">\(p(x)\)</span> (the <a class="reference internal" href="../InterpFit/InterpErrors.html"><span class="doc std std-doc">interpolation error</span></a> involves <span class="math notranslate nohighlight">\(\frac{d^n p(x)}{dx^n}\)</span> which is zero for a polynomial of degree less than <span class="math notranslate nohighlight">\(n\)</span>).  Hence,</p>
 <div class="math notranslate nohighlight">
 \[\int_{-1}^1 p(x)dx = \int_{-1}^1 \sum_{i=0}^{n-1} L_i^n(x) p(x_i) = \sum_{i=0}^{n-1} c_i p(x_i),\]</div>
-<p>as claimed in the theorem.  Now suppose that the degree of <span class="math notranslate nohighlight">\(p(x)\)</span> is at least <span class="math notranslate nohighlight">\(n\)</span> but less than or equal to <span class="math notranslate nohighlight">\(2n-1\)</span>.  Then we can write</p>
+<p>as claimed in the theorem.</p>
+</div>
+<p>Now suppose that the degree of <span class="math notranslate nohighlight">\(p(x)\)</span> is at least <span class="math notranslate nohighlight">\(n\)</span> but less than or equal to <span class="math notranslate nohighlight">\(2n-1\)</span>.  Then we can write</p>
 <div class="math notranslate nohighlight">
 \[p(x) = q(x)P_n(x) + r(x),\]</div>
 <p>where <span class="math notranslate nohighlight">\(P_n(x)\)</span> is the <span class="math notranslate nohighlight">\(n\)</span>th Legendre polynomial (which has degree <span class="math notranslate nohighlight">\(n\)</span>) and <span class="math notranslate nohighlight">\(q(x)\)</span> and <span class="math notranslate nohighlight">\(r(x)\)</span> are polynomials of degree less than <span class="math notranslate nohighlight">\(n\)</span>.  (To construct <span class="math notranslate nohighlight">\(q(x)\)</span> you pick its coefficients so that <span class="math notranslate nohighlight">\(q(x)P_n(x)\)</span> has coefficients that match coefficients of <span class="math notranslate nohighlight">\(p(x)\)</span> for terms <span class="math notranslate nohighlight">\(x^{2n-1}\)</span> to <span class="math notranslate nohighlight">\(x^n\)</span>.  <span class="math notranslate nohighlight">\(r(x)\)</span> is then whatever is left over).  Now,</p>
@@ -633,7 +642,7 @@ n=7 result =  (0.4976611363409025, None)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -668,7 +677,7 @@ n=7 result =  (0.4976611363409025, None)
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>

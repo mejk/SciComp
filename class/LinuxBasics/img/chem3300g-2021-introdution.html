@@ -1,0 +1,641 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chem 3300G - Computer Methods in Chemistry &#8212; Scientific Computing</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script src="../../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/LinuxBasics/img/chem3300g-2021-introdution.html" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../about/syllabus.html">
+   Scientific Computing
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Prerequisites and installations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PreReq/software_1.html">
+   Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Linux-basics.html">
+   Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../OtherSoftware/vi-editor.html">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../OtherSoftware/helpful-software.html">
+   Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PythonBasics/coding-notes-general.html">
+   On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../PythonBasics/python-intro.html">
+   Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../RandomNumbers/random_numbers.html">
+   Random numbers
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/Errors_summary.html">
+   Numerical Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/Error_sources.html">
+   Sources of Errors in Scientific Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/TaylorExample.html">
+   Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/FinitePrecision.html">
+   Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/HornersAlgorithm.html">
+   Horner’s algorithm
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/RoundoffAmplification.html">
+   Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../ErrorsModule/BackwardForwardConditioning.html">
+   Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../InterpFit/Chebyshev.html">
+   Chebyshev Polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NDiffInt/NumDiffInt.html">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NDiffInt/NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NDiffInt/Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NDiffInt/HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../NDiffInt/GaussianInt.html">
+   Gaussian Integration
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  More on computers / helps
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/class/LinuxBasics/img/chem3300g-2021-introdution.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mejk/SciComp_template/master?urlpath=lab/tree/class/LinuxBasics/img/chem3300g-2021-introdution.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-computational-chemistry">
+   What is computational chemistry?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-computer-methods-in-chemistry">
+   What are computer methods in chemistry?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brief-outline-of-the-course">
+   Brief outline of the course
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-hires-computational-chemists">
+   Who hires computational chemists?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-information">
+     More information:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Chem 3300G - Computer Methods in Chemistry</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-computational-chemistry">
+   What is computational chemistry?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-are-computer-methods-in-chemistry">
+   What are computer methods in chemistry?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#brief-outline-of-the-course">
+   Brief outline of the course
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#who-hires-computational-chemists">
+   Who hires computational chemists?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-information">
+     More information:
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="chem-3300g-computer-methods-in-chemistry">
+<h1>Chem 3300G - Computer Methods in Chemistry<a class="headerlink" href="#chem-3300g-computer-methods-in-chemistry" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-is-computational-chemistry">
+<h2>What is computational chemistry?<a class="headerlink" href="#what-is-computational-chemistry" title="Permalink to this headline">¶</a></h2>
+<p>Wikipedia’s definition (I think it is very good):</p>
+<blockquote>
+<div><p>“Computational chemistry is a branch of chemistry that uses computer simulation to assist in solving chemical problems. It uses methods of theoretical chemistry, incorporated into efficient computer programs, to calculate the structures and properties of molecules and solids. It is necessary because, apart from relatively recent results concerning the hydrogen molecular ion (dihydrogen cation, see references therein for more details), the quantum many-body problem cannot be solved analytically, much less in closed form. While computational results normally complement the information obtained by chemical experiments, it can in some cases predict hitherto unobserved chemical phenomena. It is widely used in the design of new drugs and materials. “</p>
+</div></blockquote>
+</div>
+<div class="section" id="what-are-computer-methods-in-chemistry">
+<h2>What are computer methods in chemistry?<a class="headerlink" href="#what-are-computer-methods-in-chemistry" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="brief-outline-of-the-course">
+<h2>Brief outline of the course<a class="headerlink" href="#brief-outline-of-the-course" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="who-hires-computational-chemists">
+<h2>Who hires computational chemists?<a class="headerlink" href="#who-hires-computational-chemists" title="Permalink to this headline">¶</a></h2>
+<p>Rather: who doesn’t!</p>
+<ul class="simple">
+<li><p>Academia (duh!)</p></li>
+<li><p>Chemical industry</p></li>
+<li><p>Pharmaceutical industry</p></li>
+<li><p>Computer industry</p></li>
+<li><p>Semiconductor industry</p></li>
+<li><p>Electronics industry</p></li>
+<li><p>Paper industry</p></li>
+<li><p>Banks</p></li>
+<li><p>Insurance companies</p></li>
+<li><p>…</p></li>
+</ul>
+<div class="section" id="more-information">
+<h3>More information:<a class="headerlink" href="#more-information" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.acs.org/content/acs/en/careers/college-to-career/chemistry-careers/computational-chemistry.html">An overview of Computational Chemistry by the American Chemical Society</a></p></li>
+<li><p><a class="reference external" href="https://zonca.dev/2014/06/career-as-a-computational-scientist.html">Thoughts on a career as a computational scientist by Andrea Zonca</a></p></li>
+<li><p><a class="reference external" href="http://www.ccl.net/cca/documents/dyoung/topics-orig/compchem.html">Introduction to Computational Chemistry by David Young. Old but still relevant.</a></p></li>
+<li><p><a class="reference external" href="https://www.computecanada.ca/about/partners/women-in-high-performance-computing-whpc/">Women in High Performance Computing (WHPC)</a></p></li>
+<li><p><a class="reference external" href="https://www.computecanada.ca/home">Cpmpute Canada</a></p></li>
+<li><p><a class="reference external" href="https://aip.scitation.org/doi/10.1063/1.5052551">Perspective: Computational chemistry software and its advancement as illustrated through three grand challenge cases for molecular science</a>. Open access article.</p>
+<ul>
+<li><p>Great article by some leading researchers</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://paper.li/compchemdaily#/">Computational Chemistry Daily by Jan H. Jensen</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "mejk/SciComp_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/LinuxBasics/img"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen and Colin Denniston<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

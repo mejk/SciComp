@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Errors in Numerical Differentiation &#8212; SciComp9502B</title>
+    <title>Errors in Numerical Differentiation &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,12 +22,13 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -36,70 +37,27 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/NDiffInt/NumDiffInt_Errors.html" />
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/NDiffInt/NumDiffInt_Errors.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Numerical Integration" href="Int.html" />
@@ -132,7 +90,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -143,59 +101,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -205,73 +184,68 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/diffusion-in-brief.html">
-   18. Diffusion - a brief introduction
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -279,43 +253,43 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
-   19. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Error_sources.html">
-   20. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
-   22. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
-   23. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
-   24. Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
-   25. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
-   26. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 2 - Interpolation
+  MODULE: Interpolation
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -341,7 +315,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../InterpFit/Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1">
@@ -350,9 +324,9 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 3 - Numerical Differentiation &amp; Integration
+  MODULE: Numerical Differentiation &amp; Integration
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -382,7 +356,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -459,7 +433,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/NDiffInt/NumDiffInt_Errors.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mejk/SciComp_template/master?urlpath=lab/tree/class/NDiffInt/NumDiffInt_Errors.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -485,9 +459,26 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-error-in-the-two-point-formulas">
+   Example: Error in the two point formulas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-error-in-the-three-point-formulae">
+   Example: Error in the three point formulae
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stability">
    Stability
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -510,9 +501,26 @@
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-error-in-the-two-point-formulas">
+   Example: Error in the two point formulas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-error-in-the-three-point-formulae">
+   Example: Error in the three point formulae
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#stability">
    Stability
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#example">
+     Example
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -524,28 +532,55 @@
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="errors-in-numerical-differentiation">
-<span id="page-topic1"></span><h1>Errors in Numerical Differentiation<a class="headerlink" href="#errors-in-numerical-differentiation" title="Permalink to this headline">¶</a></h1>
+<h1>Errors in Numerical Differentiation<a class="headerlink" href="#errors-in-numerical-differentiation" title="Permalink to this headline">¶</a></h1>
 <p>In order for the finite difference formulas derived in the previous section to be useful, we need to have some idea of the errors involved in using these formulas.  As mentioned, we are replacing <span class="math notranslate nohighlight">\(f(x)\)</span> with its polynomial interpolant <span class="math notranslate nohighlight">\(p_n(x)\)</span> and then taking the derivatives, so that</p>
 <div class="math notranslate nohighlight">
 \[ f'(x) = p_n'(x) + \epsilon'(x),\qquad f''(x) = p_n''(x) + \epsilon''(x).\]</div>
-<p>We need to <span class="math notranslate nohighlight">\(\epsilon'(x)\)</span> and \epsilon’’(x) to determine the errors in the formulas we derived.</p>
+<p>We need to <span class="math notranslate nohighlight">\(\epsilon'(x)\)</span> and <span class="math notranslate nohighlight">\(\epsilon''(x)\)</span> to determine the errors in the formulas we derived.</p>
 <p>First recall <a class="reference internal" href="../InterpFit/InterpErrors.html"><span class="doc std std-doc">the polynomial interpolation error</span></a> is</p>
+<div class="math notranslate nohighlight" id="equation-inter-err-a">
+<span class="eqno">(24)<a class="headerlink" href="#equation-inter-err-a" title="Permalink to this equation">¶</a></span>\[\epsilon(x)= f(x)-p_n(x) = \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0}^n (x-x_j).\]</div>
 <p>Taking the derivative of this using the product rule yields</p>
+<div class="math notranslate nohighlight" id="equation-errprime">
+<span class="eqno">(25)<a class="headerlink" href="#equation-errprime" title="Permalink to this equation">¶</a></span>\[\epsilon'(x) = \frac{f^{n+1}(\xi)}{(n+1)!}\left[\sum_{k=0}^n \prod_{j=0,j\neq k}^n (x-x_j)\right] + \frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0}^n (x-x_j), \]</div>
 <p>where the second term arises from the fact that <span class="math notranslate nohighlight">\(\xi\)</span> may depend on <span class="math notranslate nohighlight">\(x\)</span>.  Evaluating this at one of the gridpoints, say <span class="math notranslate nohighlight">\(x_i\)</span>, simplifies the expression considerably as all but one of the terms contain the factor <span class="math notranslate nohighlight">\((x_i-x_i)\)</span>,</p>
+<div class="math notranslate nohighlight" id="equation-pprimeerr">
+<span class="eqno">(26)<a class="headerlink" href="#equation-pprimeerr" title="Permalink to this equation">¶</a></span>\[\epsilon'(x_i) = \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j). \]</div>
 <p>We can now use this expression for the errors in our first derivative finite difference formulas.  Before we do, let’s derive the error formula for the second derivatives.</p>
-<p>Taking the derivative <code class="xref eq docutils literal notranslate"><span class="pre">errprime</span></code> yields</p>
+<p>Taking the derivative Equation <a class="reference internal" href="#equation-errprime">(25)</a> yields</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align} \epsilon''(x) = &amp; \frac{f^{n+1}(\xi)}{(n+1)!}\left[ \sum_{k=0}^n \sum_{m=0, m\neq k}^n \prod_{j=0,j\neq k,m}^n (x-x_j)\right]\\
 &amp; + \frac{f^{n+2}(\xi)\xi''+f^{n+3}(\xi)\xi'}{(n+1)!}\prod_{j=0}^n (x-x_j) \\
 &amp;+ \frac{f^{n+2}(\xi)\xi'}{(n+1)!}\left[\sum_{k=0}^n \prod_{j=0,j\neq k}^n (x-x_j)\right],\end{align}\end{split}\]</div>
 <p>Evaluating this at one of the gridpoints, say <span class="math notranslate nohighlight">\(x_i\)</span>, simplifies the expression to,</p>
-<p>This is a bit messier than the error for the first derivative <code class="xref eq docutils literal notranslate"><span class="pre">pprimeerr</span></code>.  In most cases one can argue that the second term is small compared to the first as it contains one additional factor of the difference of grid points and one expects <span class="math notranslate nohighlight">\(\xi'\)</span> to be small.</p>
-<p><strong>Example: Error in the two point formulas</strong>  In the previous section, for two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> we derived the forward/backwards difference formulae and we would now like to know the error in using these formulae.  Using <code class="xref eq docutils literal notranslate"><span class="pre">pprimeerr</span></code> with <span class="math notranslate nohighlight">\(n=1\)</span> we straightforwardly get</p>
+<div class="math notranslate nohighlight" id="equation-ppperr">
+<span class="eqno">(27)<a class="headerlink" href="#equation-ppperr" title="Permalink to this equation">¶</a></span>\[\begin{split}\epsilon''(x_i) &amp;=\frac{f^{n+1}(\xi)}{(n+1)!}\left[\sum_{m=0,m\neq i}^n \prod_{j=0, j\neq i,m} (x_i-x_j) + \sum_{k=0,k\neq i}^n \prod_{j=0, j\neq i,k} (x_i-x_j) \right] +\frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j),\\
+&amp;=\frac{2f^{n+1}(\xi)}{(n+1)!}\left[\sum_{k=0,k\neq i}^n \prod_{j=0, j\neq i,k} (x_i-x_j) \right] +\frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j).\end{split}\]</div>
+<p>This is a bit messier than the error for the first derivative Equation <a class="reference internal" href="#equation-pprimeerr">(26)</a>.  In most cases one can argue that the second term is small compared to the first as it contains one additional factor of the difference of grid points and one expects <span class="math notranslate nohighlight">\(\xi'\)</span> to be small.</p>
+<div class="section" id="example-error-in-the-two-point-formulas">
+<h2>Example: Error in the two point formulas<a class="headerlink" href="#example-error-in-the-two-point-formulas" title="Permalink to this headline">¶</a></h2>
+<p>In the previous section, for two points <span class="math notranslate nohighlight">\(x_0\)</span> and <span class="math notranslate nohighlight">\(x_1=x_0+h\)</span> we derived the forward/backwards difference formulae and we would now like to know the error in using these formulae.  Using Equation <a class="reference internal" href="#equation-pprimeerr">(26)</a> with <span class="math notranslate nohighlight">\(n=1\)</span> we straightforwardly get</p>
 <div class="math notranslate nohighlight">
 \[ \epsilon'(x_0) = \frac{f''(\xi)}{2}(-h),\quad \text{and}\quad  \epsilon'(x_1) = \frac{f''(\xi)}{2}(h),\]</div>
 <p>noting that <span class="math notranslate nohighlight">\(\xi\)</span> is not likely to be the same number in the two cases.  So, in summary, we now have</p>
-<p><strong>Example: Error in the three point formulae</strong>  In the previous section, for three points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> <span class="math notranslate nohighlight">\(x_0\)</span> we derived finite difference formulae for first and second derivatives and we would now like to know the error in using these formulae.  Using <code class="xref eq docutils literal notranslate"><span class="pre">pprimeerr</span></code> with <span class="math notranslate nohighlight">\(n=2\)</span> we straightforwardly get the result for the first derivatives:</p>
+<div class="math notranslate nohighlight" id="equation-twopoint">
+<span class="eqno">(28)<a class="headerlink" href="#equation-twopoint" title="Permalink to this equation">¶</a></span>\[\begin{split}\left[{\begin{array}{c}
+f'(x_0) \\
+f'(x_1) \\
+\end{array}} \right] =
+\left[{\begin{array}{c}
+\frac{f(x_1)-f(x_0)}{h} \\
+\frac{f(x_1)-f(x_0)}{h} \\
+\end{array}} \right] +
+\left[{\begin{array}{c}
+  -\frac{h}{2}f''(\xi) \\
+   \frac{h}{2}f''(\xi) \\
+\end{array}} \right].\end{split}\]</div>
+</div>
+<div class="section" id="example-error-in-the-three-point-formulae">
+<h2>Example: Error in the three point formulae<a class="headerlink" href="#example-error-in-the-three-point-formulae" title="Permalink to this headline">¶</a></h2>
+<p>In the previous section, for three points <span class="math notranslate nohighlight">\(x_0,\,x_1=x_0+h,\)</span> and <span class="math notranslate nohighlight">\(x_2=x_0+2h,\)</span> <span class="math notranslate nohighlight">\(x_0\)</span> we derived finite difference formulae for first and second derivatives and we would now like to know the error in using these formulae.  Using Equation <a class="reference internal" href="#equation-pprimeerr">(26)</a> with <span class="math notranslate nohighlight">\(n=2\)</span> we straightforwardly get the result for the first derivatives:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{equation}
@@ -566,8 +601,8 @@ f'(x_2)
 \end{array}} \right].
 \end{equation}
 \end{split}\]</div>
-<p>First note that the errors here are <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> compared to <code class="xref eq docutils literal notranslate"><span class="pre">twopoint</span></code> for the two-point formulae which are <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span>.  So, assuming <span class="math notranslate nohighlight">\(h\)</span> is small, these do indeed have a higher order accuracy.  Further, the error in the <em>central</em> difference formula is <em>half</em> that of the backward/forward differences.  As a result, the central difference formula is the one most widely used.</p>
-<p>We now turn to the second derivative errors.  At <span class="math notranslate nohighlight">\(x_0\)</span> <code class="xref eq docutils literal notranslate"><span class="pre">ppperr</span></code> gives</p>
+<p>First note that the errors here are <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span> compared to Equation <a class="reference internal" href="#equation-twopoint">(28)</a> for the two-point formulae which are <span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span>.  So, assuming <span class="math notranslate nohighlight">\(h\)</span> is small, these do indeed have a higher order accuracy.  Further, the error in the <em>central</em> difference formula is <em>half</em> that of the backward/forward differences.  As a result, the central difference formula is the one most widely used.</p>
+<p>We now turn to the second derivative errors.  At <span class="math notranslate nohighlight">\(x_0\)</span> Equation <a class="reference internal" href="#equation-ppperr">(27)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -607,6 +642,7 @@ f''(x_2)
 <p>where we have dropped the higher order error terms.  Note that even through the approximation formula is the same for all 3 points, the error in this formula is much worse at the endpoints (<span class="math notranslate nohighlight">\(\mathcal{O}(h)\)</span> versus <span class="math notranslate nohighlight">\(\mathcal{O}(h^2)\)</span>).  In homework you will see that you can also derive the central difference formula using a Taylor series expansion (including errors) about <span class="math notranslate nohighlight">\(x_1\)</span> and then using the mean value theorem to combine the errors at the points <span class="math notranslate nohighlight">\(x_1\pm h\)</span> at a new, also unknown, point <span class="math notranslate nohighlight">\(\eta\)</span> to get</p>
 <div class="math notranslate nohighlight">
 \[ f''(x_1) \approx \frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} -\frac{h^2}{12}f^{(4)}(\eta). \]</div>
+</div>
 <div class="section" id="stability">
 <h2>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h2>
 <p>The central difference formula we derived</p>
@@ -644,8 +680,12 @@ E(h) \leq \frac{\beta}{h} + \frac{h^2}{6}|f^{(3)}(\xi)|.
 h_{op}=  \sqrt[3]{\frac{3 \beta}{|f^{(3)}(\xi)|}}.
 \]</div>
 <p>If <span class="math notranslate nohighlight">\(f(x)\sim 1\)</span> we would expect the roundoff to be of order of the machine epsilon <span class="math notranslate nohighlight">\(\epsilon_r\)</span>.  For <span class="math notranslate nohighlight">\(f(x)\)</span> not of order unity, we would expect <span class="math notranslate nohighlight">\(\beta \approx \epsilon_r |f(x)|\)</span>. So around a given <span class="math notranslate nohighlight">\(x\)</span> we expect roughly</p>
-<p><strong>Example</strong> Suppose we use the central difference formula to evaluate the derivative of <span class="math notranslate nohighlight">\(f(x)=e^x\)</span>.  What is the error and what is the optimal <span class="math notranslate nohighlight">\(h_{op}\)</span>?</p>
-<p>First note that we can work out the analytic derivative (<span class="math notranslate nohighlight">\(f'(x)=e^x\)</span>) and the third derivative here (<span class="math notranslate nohighlight">\(f^{(3)}(x)=e^x\)</span>).  In this case, <code class="xref eq docutils literal notranslate"><span class="pre">hop</span></code> then gives,</p>
+<div class="math notranslate nohighlight" id="equation-hop">
+<span class="eqno">(29)<a class="headerlink" href="#equation-hop" title="Permalink to this equation">¶</a></span>\[h_{op}\approx  \sqrt[3]{\frac{3 \epsilon_r |f(x)|}{|f^{(3)}(x)|}}.\]</div>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Suppose we use the central difference formula to evaluate the derivative of <span class="math notranslate nohighlight">\(f(x)=e^x\)</span>.  What is the error and what is the optimal <span class="math notranslate nohighlight">\(h_{op}\)</span>?</p>
+<p>First note that we can work out the analytic derivative (<span class="math notranslate nohighlight">\(f'(x)=e^x\)</span>) and the third derivative here (<span class="math notranslate nohighlight">\(f^{(3)}(x)=e^x\)</span>).  In this case, <a class="reference internal" href="#equation-hop">(29)</a> then gives,</p>
 <div class="math notranslate nohighlight">
 \[
 h_{op}=6.7\times 10^{-6}.
@@ -673,12 +713,13 @@ h_{op}=6.7\times 10^{-6}.
 <p>Note that similar problems arise when attempting to apply numerical differentiation to noisy data (data with stochastic noise).  A similar construction, with the errors being from stochastic noise rather than roundoff, limits how small <span class="math notranslate nohighlight">\(h\)</span> can be before the results for the derivative become less accurate.  In this case, a presmoothing operation to reduce the noise amplitude should be applied before attempting to construct a finite difference for the derivative.</p>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -720,7 +761,7 @@ h_{op}=6.7\times 10^{-6}.
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>

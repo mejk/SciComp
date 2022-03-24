@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Splines &#8212; SciComp9502B</title>
+    <title>Splines &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -22,12 +22,13 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -36,74 +37,31 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/InterpFit/Splines.html" />
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/InterpFit/Splines.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Numerical Differentiation" href="../NDiffInt/NumDiffInt.html" />
-    <link rel="prev" title="Chebyshev Interpolation" href="Chebyshev.html" />
+    <link rel="prev" title="Chebyshev Polynomials" href="Chebyshev.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -132,7 +90,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -143,59 +101,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -205,73 +184,68 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/diffusion-in-brief.html">
-   18. Diffusion - a brief introduction
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -279,43 +253,43 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
-   19. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Error_sources.html">
-   20. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
-   22. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
-   23. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
-   24. Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
-   25. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
-   26. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 2 - Interpolation
+  MODULE: Interpolation
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -341,7 +315,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -350,9 +324,9 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Part 3 - Numerical Differentiation &amp; Integration
+  MODULE: Numerical Differentiation &amp; Integration
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -382,7 +356,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -459,7 +433,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/InterpFit/Splines.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mejk/SciComp_template/master?urlpath=lab/tree/class/InterpFit/Splines.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -484,24 +458,17 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Splines
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
+   Cubic interpolatory splines
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
-     Cubic interpolatory splines
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
-     Errors in Cubic Interpolatory Splines
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
+   Errors in Cubic Interpolatory Splines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-splines">
    Using Splines
   </a>
@@ -526,24 +493,17 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Splines
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
+   Cubic interpolatory splines
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
-     Cubic interpolatory splines
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
-     Errors in Cubic Interpolatory Splines
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
+   Errors in Cubic Interpolatory Splines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-splines">
    Using Splines
   </a>
@@ -557,10 +517,10 @@
             
               <div>
                 
-  <div class="section" id="splines">
+  <div class="tex2jax_ignore mathjax_ignore section" id="splines">
 <h1>Splines<a class="headerlink" href="#splines" title="Permalink to this headline">¶</a></h1>
 <p>It should be clear at this point that if we want to approximate a function with an interpolating polynomial then selecting the nodes as something like Chebyshev points is essential.  However, data from many sources comes to us at node intervals that we do not control.  Most often, this is at regularly spaced intervals.  How should we interpolate between such data?  In most cases, the answer to this is that you should use splines.  Interpolation using splines is a generalization of “connecting the dots”.  The most simple form, a linear interpolating spline, involves just connecting the data points with straight lines to find intermediate values.  This is illustrated below using a set of uniformly spaced points with the underlying function <span class="math notranslate nohighlight">\(f(x)=e^{-x^2}\)</span>.</p>
-<img src="./img/linspline.svg" width="400">
+<a class="reference internal image-reference" href="../../_images/linspline.svg"><img alt="../../_images/linspline.svg" src="../../_images/linspline.svg" width="400" /></a>
 <p>This is also a common technique for interpolating between values in a table.  An obvious question is: Is this the best we can do with using different polynomials between each set of points (i.e. a function defined <em>piecewise</em>)?  Aside from the issue of absolute errors in the interpolation (i.e. <span class="math notranslate nohighlight">\(|f(x)-s_i(x)|\)</span> where <span class="math notranslate nohighlight">\(s_i(x)\)</span> is the polynomial defined on the interval between points <span class="math notranslate nohighlight">\(i\)</span> and <span class="math notranslate nohighlight">\(i+1\)</span>), a linear interpolatory spline is not differentiable at the node points, typically called <strong>knots</strong> when discussing splines, which could be problematic for many applications.  The kinks are also visually unappealing in the plot.  It turns out that it is not that difficult to construct an interpolating spline that is continuous in both first and second derivatives at the knots by using piecewise cubic polynomial functions.</p>
 <div class="section" id="cubic-interpolatory-splines">
 <h2>Cubic interpolatory splines<a class="headerlink" href="#cubic-interpolatory-splines" title="Permalink to this headline">¶</a></h2>
@@ -568,7 +528,7 @@
 <div class="math notranslate nohighlight">
 \[S(x) = S_j(x)\qquad \text{if}\quad x_j \leq x \leq x_{j+1}.\]</div>
 <p>This is illustrated below:</p>
-<img src="./img/cubicspline.svg" width="400">
+<a class="reference internal image-reference" href="../../_images/cubicspline.svg"><img alt="../../_images/cubicspline.svg" src="../../_images/cubicspline.svg" width="400" /></a>
 <p>We want <span class="math notranslate nohighlight">\(S(x)\)</span> to not only be a continuous interpolation function, but continuously differentiable at least two times.  This imposes the following four conditions at each interior node:</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\(S_j(x_j)=f(x_j),\)</span></p></li>
@@ -577,21 +537,31 @@
 <li><p><span class="math notranslate nohighlight">\(S_j''(x_{j+1})=S_{j+1}''(x_{j+1}).\)</span></p></li>
 </ol>
 <p>Each of the <span class="math notranslate nohighlight">\(S_j(x)\)</span> is a cubic polynomial which we will write in the form</p>
+<div class="math notranslate nohighlight" id="equation-splinepiece">
+<span class="eqno">(8)<a class="headerlink" href="#equation-splinepiece" title="Permalink to this equation">¶</a></span>\[S_j(x) = a_j+b_j(x-x_j)+c_j(x-x_j)^2+d_j(x-x_j)^3.\]</div>
 <p>Each of the <span class="math notranslate nohighlight">\(n-1\)</span> different <span class="math notranslate nohighlight">\(S_j\)</span> requires four parameters so we will need <span class="math notranslate nohighlight">\(4(n-1)\)</span> conditions to determine them.  As the last two conditions above only apply to the interior points, we are short two conditions overall.  These are filled in with two boundary conditions.  There are a number of possibilities for the boundary conditions.  A few common choices are</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(S''(x_0)=0\)</span> and <span class="math notranslate nohighlight">\(S''(x_n)=0.\)</span>  This choice is called a <em>natural</em> cubic interpolatory spline.</p></li>
 <li><p><span class="math notranslate nohighlight">\(S'(0) = A\)</span> and <span class="math notranslate nohighlight">\(S'(x_n)=B\)</span> with <span class="math notranslate nohighlight">\(A\)</span> and <span class="math notranslate nohighlight">\(B\)</span> specified.  This choice is called a <em>clamped</em> cubic interpolatory spline.</p></li>
 <li><p><span class="math notranslate nohighlight">\(S_0'''(x_{1})=S_1'''(x_{1})\)</span> and <span class="math notranslate nohighlight">\(S_{n-2}'''(x_{n-1})=S_{n-1}'''(x_{n-1})\)</span>.  This choice is called <em>not-a-knot</em> as it, together with the continuity of the lower derivatives already required at <span class="math notranslate nohighlight">\(x_1\)</span> and <span class="math notranslate nohighlight">\(x_{n-1}\)</span>, forces <span class="math notranslate nohighlight">\(S_0(x)\equiv S_1(x)\)</span> and <span class="math notranslate nohighlight">\(S_{n-2}(x)\equiv S_{n-1}(x)\)</span>.</p></li>
 </ul>
-<p>Constructing the interpolatory spline requires using the above conditions to find the parameters in <code class="xref eq docutils literal notranslate"><span class="pre">splinepiece</span></code> for all <span class="math notranslate nohighlight">\(j\)</span>.</p>
-<p>Condition 1 can be immediately exploited to find <span class="math notranslate nohighlight">\(a_j\)</span> by noting that evaluating <code class="xref eq docutils literal notranslate"><span class="pre">splinepiece</span></code> at <span class="math notranslate nohighlight">\(x_j\)</span> gives <span class="math notranslate nohighlight">\(S_j(x_j)=a_j\)</span> and combining this with the first condition gives</p>
-<blockquote>
-<div></div></blockquote>
+<p>Constructing the interpolatory spline requires using the above conditions to find the parameters in Equation <a class="reference internal" href="#equation-splinepiece">(8)</a> for all <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<p>Condition 1 can be immediately exploited to find <span class="math notranslate nohighlight">\(a_j\)</span> by noting that evaluating Equation <a class="reference internal" href="#equation-splinepiece">(8)</a> at <span class="math notranslate nohighlight">\(x_j\)</span> gives <span class="math notranslate nohighlight">\(S_j(x_j)=a_j\)</span> and combining this with the first condition gives</p>
+<div class="math notranslate nohighlight" id="equation-ajsolution">
+<span class="eqno">(9)<a class="headerlink" href="#equation-ajsolution" title="Permalink to this equation">¶</a></span>\[a_j=f(x_j),\qquad\qquad j=0,1,...,n-1.\]</div>
 <p>We now evaluate <span class="math notranslate nohighlight">\(S_j\)</span> and <span class="math notranslate nohighlight">\(S_{j+1}\)</span> at <span class="math notranslate nohighlight">\(x_{j+1}\)</span> and set them equal, as required by condition 2, to get</p>
+<div class="math notranslate nohighlight" id="equation-a-eqn">
+<span class="eqno">(10)<a class="headerlink" href="#equation-a-eqn" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+a_{j+1} &amp;= S_{j+1}(x_{j+1}) \\
+&amp;= S_j(x_{j+1}) \\
+&amp;= a_j + b_j(x_{j+1}-x_j) + c_j (x_{j+1}-x_j)^2 + d_j(x_{j+1}-x_j)^3\\
+&amp;= a_j + b_j h_j + c_j h_j^2 + d_j h_j^3,\\
+&amp; \mathrm{and} \qquad\qquad j=0,...,n-2,
+\end{align}\end{split}\]</div>
 <p>where to simplify the notation going forward, we define</p>
 <div class="math notranslate nohighlight">
 \[ h_j = (x_{j+1}-x_j). \]</div>
-<p>We have not yet applied condition 1 and 2 to <span class="math notranslate nohighlight">\(S_{n-1}(x_{n+1})\)</span>.  However, if we define a “dummy” polynomial <span class="math notranslate nohighlight">\(S_n\)</span> with <span class="math notranslate nohighlight">\(a_n=f(x_n)\)</span> then <code class="xref eq docutils literal notranslate"><span class="pre">a_eqn</span></code> can be extended to <span class="math notranslate nohighlight">\(j=n-1\)</span>.</p>
+<p>We have not yet applied condition 1 and 2 to <span class="math notranslate nohighlight">\(S_{n-1}(x_{n+1})\)</span>.  However, if we define a “dummy” polynomial <span class="math notranslate nohighlight">\(S_n\)</span> with <span class="math notranslate nohighlight">\(a_n=f(x_n)\)</span> then <a class="reference internal" href="#equation-a-eqn">(10)</a> can be extended to <span class="math notranslate nohighlight">\(j=n-1\)</span>.</p>
 <p>Before making use of the conditions on the derivatives of <span class="math notranslate nohighlight">\(S(x)\)</span> note that</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -602,19 +572,35 @@ S''_j(x) &amp;= 2 c_j + 6 d_j(x-x_j).
 \end{split}\]</div>
 <p>As as this implies that <span class="math notranslate nohighlight">\(S_{0}'(x)=b_0\)</span> it should be clear that a <em>clamped</em> spline boundary condition explicitly determines <span class="math notranslate nohighlight">\(b_0\)</span> as the (given) derivative at <span class="math notranslate nohighlight">\(x_0\)</span>.  Similarly, a <em>natural</em> spline boundary condition explicity determines <span class="math notranslate nohighlight">\(c_0=0\)</span>.</p>
 <p>Continuity of the derivative, condition 3, then implies</p>
+<div class="math notranslate nohighlight" id="equation-b-eqn">
+<span class="eqno">(11)<a class="headerlink" href="#equation-b-eqn" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+b_{j+1} &amp;= S_{j+1}'(x_{j+1}) \\
+&amp; = S_j'(x_{j+1}) \\
+&amp; = b_j + 2 c_j (x_{j+1}-x_j) + 3d_j(x_{j+1}-x_j)^2\\
+&amp;= b_j + 2c_j h_j + 3d_j h_j^2, \\
+&amp;  \qquad\qquad  \qquad\qquad \qquad\qquad j=0,...,n-2.
+\end{align}\end{split}\]</div>
 <p>To extend this equation to <span class="math notranslate nohighlight">\(j=n-1\)</span> we must make use of a boundary condition at <span class="math notranslate nohighlight">\(x_{j+1}\)</span>.  If we are constructing a <em>clamped</em> spline this would determine the derivative, and hence <span class="math notranslate nohighlight">\(b_{n}\)</span> for the “dummy” polynomial <span class="math notranslate nohighlight">\(S_n\)</span> if we extend this equation to <span class="math notranslate nohighlight">\(j=n-1\)</span>.  A <em>natural</em> spline instead just extends this equation to <span class="math notranslate nohighlight">\(j=n-1\)</span> by allowing it to effectively determine the derivative <span class="math notranslate nohighlight">\(S_j'(x_{j+1})\)</span> once we have determined the other parameters on the right hand side.</p>
 <p>Similarly, continuity of the second derivative, condition 4, then implies</p>
+<div class="math notranslate nohighlight" id="equation-c-eqn">
+<span class="eqno">(12)<a class="headerlink" href="#equation-c-eqn" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+   c_{j+1} &amp;= S_{j+1}''(x_{j+1}) \\
+   &amp;= S_j''(x_{j+1}) \\
+   &amp; = 2 c_j + 6d_j(x_{j+1}-x_j)\\
+   &amp;= 2c_j + 3d_j h_j, \\
+   &amp;   \qquad\qquad \qquad\qquad \qquad\qquad  \mathrm{and\,\,} j=0,...,n-2.
+\end{align}\end{split}\]</div>
 <p>We can again extend this equation to <span class="math notranslate nohighlight">\(j=n-1\)</span> for a <em>natural</em> spline by replacing <span class="math notranslate nohighlight">\(c_{j+1}\)</span> with zero (the second derivative at <span class="math notranslate nohighlight">\(x_{j+1}\)</span>).  The extension for the other boundary conditions are slightly more complicated, but not much.  You will construct these in the problems.</p>
-<p>Equations <code class="xref eq docutils literal notranslate"><span class="pre">a_eqn</span></code>, <code class="xref eq docutils literal notranslate"><span class="pre">b_eqn</span></code>, and <code class="xref eq docutils literal notranslate"><span class="pre">c_eqn</span></code> form a coupled linear set of equations for the parameters <span class="math notranslate nohighlight">\(b_j\)</span>, <span class="math notranslate nohighlight">\(c_j\)</span>, and <span class="math notranslate nohighlight">\(d_j\)</span> given that we know <span class="math notranslate nohighlight">\(a_j\)</span> (from <code class="xref eq docutils literal notranslate"><span class="pre">ajsolution</span></code>) and <span class="math notranslate nohighlight">\(h_j\)</span>.  We can simplify these equations further by eliminating <span class="math notranslate nohighlight">\(b_j\)</span> and <span class="math notranslate nohighlight">\(d_j\)</span> to get a set of equations for the <span class="math notranslate nohighlight">\(c_j\)</span> alone (and then once these are known they can be used to deterime the other parameters).  We first eliminate the <span class="math notranslate nohighlight">\(d_j\)</span> by rearranging <code class="xref eq docutils literal notranslate"><span class="pre">c_eqn</span></code>,</p>
-<blockquote>
-<div></div></blockquote>
-<p>Substituting this into <code class="xref eq docutils literal notranslate"><span class="pre">a_eqn</span></code> then gives</p>
+<p>Equations <a class="reference internal" href="#equation-a-eqn">(10)</a>, <a class="reference internal" href="#equation-b-eqn">(11)</a>, and <a class="reference internal" href="#equation-c-eqn">(12)</a> form a coupled linear set of equations for the parameters <span class="math notranslate nohighlight">\(b_j\)</span>, <span class="math notranslate nohighlight">\(c_j\)</span>, and <span class="math notranslate nohighlight">\(d_j\)</span> given that we know <span class="math notranslate nohighlight">\(a_j\)</span> (from <a class="reference internal" href="#equation-ajsolution">(9)</a>) and <span class="math notranslate nohighlight">\(h_j\)</span>.  We can simplify these equations further by eliminating <span class="math notranslate nohighlight">\(b_j\)</span> and <span class="math notranslate nohighlight">\(d_j\)</span> to get a set of equations for the <span class="math notranslate nohighlight">\(c_j\)</span> alone (and then once these are known they can be used to deterime the other parameters).  We first eliminate the <span class="math notranslate nohighlight">\(d_j\)</span> by rearranging Equation <a class="reference internal" href="#equation-c-eqn">(12)</a>,</p>
+<div class="math notranslate nohighlight" id="equation-djsolution">
+<span class="eqno">(13)<a class="headerlink" href="#equation-djsolution" title="Permalink to this equation">¶</a></span>\[d_j = \frac{1}{3h_j}(c_{j+1}-c_j).\]</div>
+<p>Substituting this into <a class="reference internal" href="#equation-a-eqn">(10)</a> then gives</p>
 <div class="math notranslate nohighlight">
 \[a_{j+1}=a_j + b_j h_j + \frac{h_j^2}{3}(2c_j+c_{j+1}),\]</div>
 <p>which can be solved to give the <span class="math notranslate nohighlight">\(b_j\)</span> in terms of the <span class="math notranslate nohighlight">\(c_j\)</span> to get</p>
-<blockquote>
-<div></div></blockquote>
-<p>Substituting <code class="xref eq docutils literal notranslate"><span class="pre">bjsolution</span></code> and <code class="xref eq docutils literal notranslate"><span class="pre">djsolution</span></code> into <code class="xref eq docutils literal notranslate"><span class="pre">b_eqn</span></code> gives</p>
+<div class="math notranslate nohighlight" id="equation-bjsolution">
+<span class="eqno">(14)<a class="headerlink" href="#equation-bjsolution" title="Permalink to this equation">¶</a></span>\[b_j=\frac{1}{h_j}(a_{j+1}-a_j)-\frac{h_j}{3}(2c_j+c_{j+1}).\]</div>
+<p>Substituting <a class="reference internal" href="#equation-bjsolution">(14)</a> and <a class="reference internal" href="#equation-djsolution">(13)</a> into <a class="reference internal" href="#equation-b-eqn">(11)</a> gives</p>
 <div class="math notranslate nohighlight">
 \[ h_{j+1} c_{j+2} +2(h_{j+1} + h_j) c_{j+1}+h_j c_j = \frac{3}{h_{j+1}}(a_{j+2}-a_{j+1})-\frac{3}{h_j}(a_{j+1}-a_j),\qquad j=0,1,...n-2\]</div>
 <p>This is a set of equations (for different <span class="math notranslate nohighlight">\(j\)</span>) and it is more useful to center it around <span class="math notranslate nohighlight">\(c_j\)</span> than <span class="math notranslate nohighlight">\(c_{j+1}\)</span>. i.e. use the equation for <span class="math notranslate nohighlight">\(j\rightarrow j-1\)</span></p>
@@ -623,12 +609,40 @@ S''_j(x) &amp;= 2 c_j + 6 d_j(x-x_j).
 \[ h_j c_{j+1} +2(h_j + h_{j-1}) c_j+h_{j-1} c_{j-1} = \frac{3}{h_j}(a_{j+1}-a_j)-\frac{3}{h_{j-1}}(a_j-a_{j-1}), \qquad j=1,2,...n-1\]</div>
 </div></blockquote>
 <p>and using a boundary condition for <span class="math notranslate nohighlight">\(j=0\)</span>.  We can rewrite these equation and the boundary contions into a matrix equation as</p>
+<div class="math notranslate nohighlight" id="equation-cjsolution">
+<span class="eqno">(15)<a class="headerlink" href="#equation-cjsolution" title="Permalink to this equation">¶</a></span>\[\begin{split}\begin{align}
+  \left[ {\begin{array}{cccccc}
+    1 &amp; 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0\\
+    h_0 &amp; 2(h_0+h_1) &amp; h_1 &amp; 0 &amp;\cdots &amp; 0\\
+    0 &amp; h_1 &amp; 2(h_1+h_2) &amp; h_2 &amp; 0 &amp;\vdots \\
+    \vdots &amp; \ddots &amp; \ddots &amp; \ddots &amp; \ddots &amp; 0\\
+    0 &amp; \cdots &amp; 0 &amp; h_{n-1} &amp; 2(h_{n-1}+h_{n-2}) &amp; h_{n-2}\\
+    0 &amp; \cdots &amp; 0 &amp; 0 &amp; h_{n-2} &amp; 2(h_{n-2}+h_{n-1})\\
+  \end{array} } \right]
+  \left[ {\begin{array}{c}
+  c_0 \\
+  c_1 \\
+  c_2 \\
+  \vdots \\
+  c_{n-2} \\
+  c_{n-1} \\
+  \end{array}} \right] =\\
+  \qquad\qquad\qquad
+  \left[ {\begin{array}{c}
+  0 \\
+  \frac{3}{h_1}(a_2-a_1)-\frac{3}{h_0}(a_1-a_0)\\
+  \vdots \\
+  \vdots \\
+  \frac{3}{h_{n-2}}(a_{n-1}-a_{n-2})-\frac{3}{h_{n-3}}(a_{n-2}-a_{n-3})\\
+  \frac{3}{h_{n-1}}(f(x_n)-a_{n-1})-\frac{3}{h_{n-2}}(a_{n-1}-a_{n-2})\\
+  \end{array}} \right]
+\end{align}\end{split}\]</div>
 <p>for the <em>natural</em> cubic spline (the first equation is the boundary condition that sets <span class="math notranslate nohighlight">\(c_0=0\)</span> and the last equation uses the “dummy” polynomial extension of the equations where <span class="math notranslate nohighlight">\(c_n=0\)</span>). This is a diagonally dominant tridiagonal system which means that solving this system via Gaussian elimination/LU factorization without pivoting will provide a unique solution and will be numerically stable.  In addition, this can be solved in <span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span> flops using the <a class="reference external" href="https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm">Thomas algorithm</a> discussed in the chapter on linear systems.</p>
 <p>So to construct our interpolatory spline <span class="math notranslate nohighlight">\(S(x)\)</span> (or, in other words to construct the set <span class="math notranslate nohighlight">\(\{ S_j(x) \}_{j=0}^{n-1}\)</span>) we</p>
 <ol class="simple">
-<li><p>Use Eq.<code class="xref eq docutils literal notranslate"><span class="pre">ajsolution</span></code> to obtain the <span class="math notranslate nohighlight">\(a_j\)</span>.</p></li>
-<li><p>Solve the linear system in Eq.<code class="xref eq docutils literal notranslate"><span class="pre">cjsolution</span></code> to obtain the <span class="math notranslate nohighlight">\(c_j\)</span>.</p></li>
-<li><p>Use Eq.<code class="xref eq docutils literal notranslate"><span class="pre">bjsolution</span></code> and Eq.<code class="xref eq docutils literal notranslate"><span class="pre">djsolution</span></code>, potentially making use of boundary condtions, to obtain the <span class="math notranslate nohighlight">\(b_j\)</span> and <span class="math notranslate nohighlight">\(d_j\)</span>.</p></li>
+<li><p>Use Eq.<a class="reference internal" href="#equation-ajsolution">(9)</a> to obtain the <span class="math notranslate nohighlight">\(a_j\)</span>.</p></li>
+<li><p>Solve the linear system in Eq.<a class="reference internal" href="#equation-cjsolution">(15)</a> to obtain the <span class="math notranslate nohighlight">\(c_j\)</span>.</p></li>
+<li><p>Use Eq.<a class="reference internal" href="#equation-bjsolution">(14)</a> and Eq.<a class="reference internal" href="#equation-djsolution">(13)</a>, potentially making use of boundary condtions, to obtain the <span class="math notranslate nohighlight">\(b_j\)</span> and <span class="math notranslate nohighlight">\(d_j\)</span>.</p></li>
 </ol>
 <p>Once we have all the paramaters, to evaluate <span class="math notranslate nohighlight">\(S(x)\)</span> at a specific point <span class="math notranslate nohighlight">\(x\)</span> we</p>
 <ol class="simple">
@@ -652,9 +666,8 @@ S''_j(x) &amp;= 2 c_j + 6 d_j(x-x_j).
 \end{split}\]</div>
 <p>As we can see, splines can be reasonably good for obtaining approximations to derivatives of the underlying function as well.</p>
 </div>
-</div>
 <div class="section" id="using-splines">
-<h1>Using Splines<a class="headerlink" href="#using-splines" title="Permalink to this headline">¶</a></h1>
+<h2>Using Splines<a class="headerlink" href="#using-splines" title="Permalink to this headline">¶</a></h2>
 <p>Implementing splines requires solving a tridiagonal system.  While not hard to do, it is usually not worth the effort to implement all of this yourself.  Instead, you should use a library.  <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">SciPy contains an implementation for natural cubic interpolatory splines</a> which we illustrate the use of below.</p>
 <p>We first import the necessary libraries:</p>
 <div class="cell docutils container">
@@ -696,12 +709,13 @@ S''_j(x) &amp;= 2 c_j + 6 d_j(x-x_j).
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {
@@ -726,7 +740,7 @@ S''_j(x) &amp;= 2 c_j + 6 d_j(x-x_j).
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Chebyshev Interpolation</p>
+            <p class="prev-next-title">Chebyshev Polynomials</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="../NDiffInt/NumDiffInt.html" title="next page">
@@ -743,7 +757,7 @@ S''_j(x) &amp;= 2 c_j + 6 d_j(x-x_j).
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>
