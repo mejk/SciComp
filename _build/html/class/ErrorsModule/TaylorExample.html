@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>21. Truncation Error in Taylor’s series &#8212; SciComp9502B</title>
+    <title>Truncation Error in Taylor’s series &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -48,7 +49,7 @@
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
@@ -106,11 +107,11 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/TaylorExample.html" />
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/ErrorsModule/TaylorExample.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="22. Finite Precision" href="FinitePrecision.html" />
-    <link rel="prev" title="19. Sources of Errors in Scientific Computing" href="Error_sources.html" />
+    <link rel="next" title="Finite Precision" href="FinitePrecision.html" />
+    <link rel="prev" title="Sources of Errors in Scientific Computing" href="Error_sources.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -139,7 +140,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -150,59 +151,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -212,13 +234,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
@@ -229,13 +251,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -246,18 +268,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
@@ -268,8 +290,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
@@ -281,37 +303,37 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Errors_summary.html">
-   18. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Error_sources.html">
-   19. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   21. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="FinitePrecision.html">
-   22. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="HornersAlgorithm.html">
-   23. Example: Evaluating polynomials
+   Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="RoundoffAmplification.html">
-   24. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="BackwardForwardConditioning.html">
-   25. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
@@ -343,7 +365,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../InterpFit/Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1">
@@ -488,12 +510,12 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-s-theorem">
-   21.1. Taylor’s Theorem
+   Taylor’s Theorem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example">
-   21.2. Example
+   Example
   </a>
  </li>
 </ul>
@@ -518,12 +540,12 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#taylor-s-theorem">
-   21.1. Taylor’s Theorem
+   Taylor’s Theorem
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#example">
-   21.2. Example
+   Example
   </a>
  </li>
 </ul>
@@ -536,10 +558,10 @@
               <div>
                 
   <div class="section" id="truncation-error-in-taylor-s-series">
-<h1><span class="section-number">21. </span>Truncation Error in Taylor’s series<a class="headerlink" href="#truncation-error-in-taylor-s-series" title="Permalink to this headline">¶</a></h1>
+<h1>Truncation Error in Taylor’s series<a class="headerlink" href="#truncation-error-in-taylor-s-series" title="Permalink to this headline">¶</a></h1>
 <p>Most algorithms in Numerical Analysis suffer from some form of truncation error.  Often this truncation error comes about from some series solution to the problem of interest that we <em>truncate</em> at some finite order in order to solve.  To illustrate the concept of a <em>truncation</em> error, let’s look at an example for Taylor’s series.  It is helpful to recall Taylor’s theorem from first year calculus:</p>
 <div class="section" id="taylor-s-theorem">
-<h2><span class="section-number">21.1. </span>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this headline">¶</a></h2>
+<h2>Taylor’s Theorem<a class="headerlink" href="#taylor-s-theorem" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we have a function <span class="math notranslate nohighlight">\(f\in C^n[a,b]\)</span>  (i.e. <span class="math notranslate nohighlight">\(f\)</span> is <span class="math notranslate nohighlight">\(n\)</span> times continuously differentiable), that <span class="math notranslate nohighlight">\(f^{(n+1)}\)</span> exists on <span class="math notranslate nohighlight">\([a,b]\)</span> and <span class="math notranslate nohighlight">\(x_0\in [a,b]\)</span>.  Then for <span class="math notranslate nohighlight">\(x\in [a,b]\)</span> we have</p>
 <div class="math notranslate nohighlight">
 \[f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2+ ... + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n  + R_n(x,x_0),\]</div>
@@ -554,7 +576,7 @@
 </ul>
 </div>
 <div class="section" id="example">
-<h2><span class="section-number">21.2. </span>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
 <p>Let’s construct the Taylor series and bound the truncation error for the function <span class="math notranslate nohighlight">\(f(x)=1/(1+x)\)</span> about <span class="math notranslate nohighlight">\(x_0=0\)</span>.  First note that <span class="math notranslate nohighlight">\(f^{(n)}(x)=\frac{(-1)^n}{(1+x)^{n+1}}\)</span>.  So, using Taylor’s theorem, we see that</p>
 <div class="math notranslate nohighlight">
 \[\frac{1}{1+x} = 1 - x + x^2 - x^3 + ... + (-1)^n x^n + R_n,\]</div>
@@ -622,13 +644,13 @@ Plugging this into the bound on the absolute error gives</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">19. </span>Sources of Errors in Scientific Computing</p>
+            <p class="prev-next-title">Sources of Errors in Scientific Computing</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="FinitePrecision.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">22. </span>Finite Precision</p>
+        <p class="prev-next-title">Finite Precision</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -639,7 +661,7 @@ Plugging this into the bound on the absolute error gives</p>
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>

@@ -1,0 +1,1334 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background on computers, computing and High Performance Computing &#8212; Scientific Computing</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/IntroSciHPC/hpc-intro.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="General aspects of modeling and computer simulations" href="simulation-general.html" />
+    <link rel="prev" title="Introduction to scientific computing &amp; computational modeling" href="intro-to-modeling.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Prerequisites and installations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simulation-general.html">
+   General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   Numerical Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   Sources of Errors in Scientific Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   Example: Evaluating polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Chebyshev.html">
+   Chebyshev Polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+   Gaussian Integration
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  More on computers / helps
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/IntroSciHPC/hpc-intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/IntroSciHPC/hpc-intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-concepts-in-hpc">
+   Basic concepts in HPC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applications">
+     Applications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-hpc-systems-such-as-compute-canada-computing-is-done-in-computing-clusters">
+     In HPC systems, such as Compute Canada, computing is done in
+     <em>
+      computing clusters
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terminology-cpu-core-thread-gpu-kernel-hyper-thread">
+     Terminology: CPU, Core, Thread, GPU, kernel, hyper-thread
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-reading-for-afficionados">
+     More reading for afficionados:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-the-operating-system-in-hpc">
+   Linux:
+   <em>
+    The
+   </em>
+   operating system in HPC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hardware-software-user-interface">
+   Hardware, software, user interface
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operating-system-os-and-user-interface-ui">
+     Operating system (OS) and User interface (UI)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel">
+     Kernel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moore-s-law">
+   Moore’s law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-top500-list">
+   The TOP500 list
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-power-now-and-in-the-past">
+   Computing power now and in the past
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distributed-computing-cloud-computing-citizen-science">
+   Distributed computing / cloud computing / citizen science
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology-double-precision-vs-single-precision">
+   Terminology: Double precision vs single precision
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Background on computers, computing and High Performance Computing</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-concepts-in-hpc">
+   Basic concepts in HPC
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#applications">
+     Applications
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#in-hpc-systems-such-as-compute-canada-computing-is-done-in-computing-clusters">
+     In HPC systems, such as Compute Canada, computing is done in
+     <em>
+      computing clusters
+     </em>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terminology-cpu-core-thread-gpu-kernel-hyper-thread">
+     Terminology: CPU, Core, Thread, GPU, kernel, hyper-thread
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-reading-for-afficionados">
+     More reading for afficionados:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#linux-the-operating-system-in-hpc">
+   Linux:
+   <em>
+    The
+   </em>
+   operating system in HPC
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hardware-software-user-interface">
+   Hardware, software, user interface
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operating-system-os-and-user-interface-ui">
+     Operating system (OS) and User interface (UI)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kernel">
+     Kernel
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#moore-s-law">
+   Moore’s law
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-top500-list">
+   The TOP500 list
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-power-now-and-in-the-past">
+   Computing power now and in the past
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#distributed-computing-cloud-computing-citizen-science">
+   Distributed computing / cloud computing / citizen science
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology-double-precision-vs-single-precision">
+   Terminology: Double precision vs single precision
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="background-on-computers-computing-and-high-performance-computing">
+<h1>Background on computers, computing and High Performance Computing<a class="headerlink" href="#background-on-computers-computing-and-high-performance-computing" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>-Last updated on Wednesday, March 23 2022 at 22:17</p>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To understand the concept of High Performance Computing</p></li>
+<li><p class="card-text">To understand the concepts computing clusters, GPU computing and remote access</p></li>
+<li><p class="card-text">To understand what the role of operating system is with respect to the user and hardware</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> HPC, operating systems, GPU, computing cluster, node, Moore’s law, double precision, single precision, MIMD, thread</p>
+<!--
+**Associated material:** 
+-->
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr>
+<div class="section" id="basic-concepts-in-hpc">
+<h2>Basic concepts in HPC<a class="headerlink" href="#basic-concepts-in-hpc" title="Permalink to this headline">¶</a></h2>
+<hr>
+<small>
+<blockquote class="epigraph">
+<div><p><em>Never in the history of mankind has it been possible to produce so many wrong answers so quickly!</em></p>
+<p class="attribution">—<a class="reference external" href="https://sv.wikipedia.org/wiki/Carl-Erik_Fr%C3%B6berg">Carl-Erik Fröberg</a>, Swedish mathematician, physicist and chemist. Professor of Numerical Analysis in Lund University, Sweden.     </p>
+</div></blockquote>
+</small>    
+<p>We start by discussing some basic aspects of computers and computing. This includes High Performance Computing (HPC), the basic idea of Graphics Processing Units (GPU) and requirements. The aim is not to have an in-depth discussion but to introduce some of the common terms which we will need later on and which are important for anyone planning to use any type of computing facilities. Basic knowledge about hardware and its relation to software especially when one runs parallel simulations is crucial in order to use the computing facilities efficiently. Is is very easy to have a drastic drop in performance by choosing wrong number of processing cores, GPUs or/and nodes - more or cores and nodes may very easily lead to significant loss in performance. We address some of those issues here and also discuss them later when we set up simulations, but get an idea why that is one needs to keep in mind that in order for processors to operate in parallel thay must share information. If the proportion of information that needs to be shared is large compared to the information each processor can process <em>independent of the other processors</em> then communication regarding the information that must be shared can become an obstacle. Another scenario is when the processor execute tasks that end at different times. In that case, the processors that finish faster must wait for the slowest processes to complete. Thus, one must balance the workload appropriately.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Supercomputer">HPC</a> is also referred to as supercomputing and here those terms are used synoymously.</p>
+<p>Here are also some videos for your entertainment. Computers have come far in a reasonably short time.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Commodore 64 unboxing in 1982<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NfTbgmJf_-E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+The Lost 1984 Video: young Steve Jobs introduces the Macintosh<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2B-XwPjn9YY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+- This video has (sometimes) problems with embedding but the direct link to YouTube works.
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Microsoft Windows 3 and NT, 1991<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/iuMeqcuTjSY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Should you believe what you see?<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/l82PxsKHxYc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<ul class="simple">
+<li><p class="card-text"><a class="reference external" href="https://en.wikipedia.org/wiki/Deepfake">This is DeepFake</a>. This is possible on a normal consumer-grade GPU!</p></li>
+</ul>
+</div>
+</details><div class="section" id="applications">
+<h3>Applications<a class="headerlink" href="#applications" title="Permalink to this headline">¶</a></h3>
+<p>In its early days, weather forecasting was perhaps the most common application. Military-related applications have always been amongs the big ones, the ASC program is probably one of the most famous and resource-intensive ones. The <a class="reference external" href="https://en.wikipedia.org/wiki/Advanced_Simulation_and_Computing_Program">ASC program</a>, or Advanced Simulation and Computing Program, is a program to simulate the US nuclear stockpile. <a class="reference external" href="https://en.wikipedia.org/wiki/Computational_physics">Computational physics</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Computational_chemistry">computational chemistry</a> have always been fields that have been using HPC intensly, but today fields such as banking, film making, animations, neuroscience, digital humanities, smart cities, oil industry, pharmaceutical industry and so on all rely increasingly on HPC.</p>
+<p>Although in this course we will not be using true HPC resources such as those of <a class="reference external" href="https://www.computecanada.ca/">Compute Canada</a>, we take a brief look at the basic concepts when using supercomputer clusters. Some concepts are also important when doing computations on a personal computer and we will return to those issues when we start simulating different systems. It is highly likely that your own personal laptop or desktop is capable for some quite advanced tasks espcially if equipped with a discrete GPU; although the name GPU refers to graphics, GPUs are not limited to graphics and one can program more or less any algorithm and use GPUs. GPUs were designed for <em>floating point arthimetics</em> - this is exactly what is needed in most simulations of physical systems.</p>
+<p><strong>Brief note on HPC in COVID-19 research:</strong> All around the world, HPC has been intensely used for COVID-19 research. The specific questions studies by HPC include diseases spreading strcutural biology of the virus, interactions of the virus and its components with cells.</p>
+<p><strong>More reading:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cen.acs.org/physical-chemistry/computational-chemistry/Consortia-lend-supercomputers-fight-COVID/98/i15">Consortia lend their supercomputers to fight COVID-19</a></p></li>
+<li><p><a class="reference external" href="https://www.suse.com/c/hpc-impacts-lives-ii-hpc-linux-movies/">How HPC Impacts Our Lives II: HPC (and Linux) in the Movies</a></p></li>
+<li><p><a class="reference external" href="https://www.enterpriseai.news/2020/02/10/nvidia-at-the-oscars-ai-based-de-aging-and-other-digital-human-techniques/">AI at the Oscars: De-Aging and Other ‘Digital Human’ Special Effects </a></p></li>
+<li><p><a class="reference external" href="https://www.hpcwire.com/2020/09/09/googles-quantum-chemistry-simulation-suggests-promising-path-forward/">Google’s Quantum Chemistry Simulation Suggests Promising Path Forward</a></p></li>
+</ul>
+</div>
+<div class="section" id="in-hpc-systems-such-as-compute-canada-computing-is-done-in-computing-clusters">
+<h3>In HPC systems, such as Compute Canada, computing is done in <em>computing clusters</em><a class="headerlink" href="#in-hpc-systems-such-as-compute-canada-computing-is-done-in-computing-clusters" title="Permalink to this headline">¶</a></h3>
+<p>Most HPC is done using computer clusters (such as <a class="reference external" href="https://www.computecanada.ca/">Compute Canada</a>). A cluster is - as the name suggests - a cluster of individual computers that are connected to each other. These individual computers are called nodes. Inter-node networking is one of the most critical parts of any cluster since it largelry determines latency - the nodes need to share information between each other and that can easily be the rate-limiting step for a given computing task. This is the reason why there are many different networking solutions such as Infiniband (&gt;200Gb/s). The properties of each node are determined by the individual computer that makes up the node. If all computers, that is nodes,  in a cluster are identical, then the cluster is called homogeneous (in contrast to heretogeneous). An individual user doesn’t access the nodes directly but through a <em>login node</em>, also called <em>head node</em>. That is the user’s gateway to the cluster’s resources and the <em>head node</em> can sometimes be used for quick tests or using GUI-based software over VNC, but the system policies should always be checked beforehand.</p>
+<p>The Figure shows a typical computing cluster with 16 individual nodes. There is also another computing paradigm called SMP - Symmetric Multi-Processing. In this case there are multiple CPUs but they all share the same memory (in a cluster all the nodes have individual independent memory). SMP clusters are typically used for special-purpose simulationsand require very large amount memory.</p>
+<div class="int">
+<p><strong>Important:</strong> If a task fits inside one node (by its memory and processing requirements), performance is always much better when it is kept inside one node rather than distributing it on equal number of cores (or equal resources) across two or mode nodes.</p>
+</div>    
+<p>When starting computing jobs, an individual user cannot simply fire them away and sit back. Rather, all the computing jobs are sent to the cluster using a <em>scheduler.</em> There are several types of schedulers but nowadays the <a class="reference external" href="https://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM scheduler</a> is the most common one, this is also what Compute Canada uses. The name SLURM comes from Simple Linux Utility for Resource Management.</p>
+<!--
+<table class="lblue" style="float: right" width="810px" height="150">
+    <tr>
+        <td>
+            <img src="img/computing-cluster.svg" width="800px"/>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+            Figure: Basic organization of a typical HPC computing cluster. The end user access the cluster thourgh login nodes only, the individual computing clusters are not directly accessible. For connecting to login nodes, the user uses ssh and scp for transferring data from and to personal computer. To enhance security (and also convenience of connecting), ssh keys are typically used. The computing nodes have their own CPU, memomry and storage, possibly also GPU(s). Computing within a node is always faster since otherwise data has to be transferred between the nodes and that causes latency. Computing jobs must be started using a scheduler, SLURM is a commonly used one. Data storage is shared. HPC systems typically have different levels of storage for different types (work vs long term storage) data.
+        </td>
+    </tr>
+</table>  
+<p></p>
+<table class="lblue" style="float: right" width="510px" height="150">
+    <tr>
+        <td>
+            <img src="img/Blue_Gene_Processeing_Units.png" width="500px"/>                                               
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+            Figure: IBM Blue Gene P.
+        </td>
+    </tr>
+</table>  
+
+-->
+<div class="figure align-left" id="hpc-cluster">
+<a class="reference internal image-reference" href="../../_images/computing-cluster.svg"><img alt="../../_images/computing-cluster.svg" src="../../_images/computing-cluster.svg" width="800px" /></a>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text"><em>Basic organization of a typical HPC <a class="reference external" href="https://en.wikipedia.org/wiki/Computer_cluster">computing cluster</a>. The end user accesses the cluster through login nodes only, the individual computing clusters are not directly accessible. For connecting to login nodes, the user uses <code class="docutils literal notranslate"><span class="pre">ssh</span></code> and <code class="docutils literal notranslate"><span class="pre">scp</span></code> for transferring data from and to personal computer. To enhance security (and also convenience of connecting), <a class="reference external" href="https://jumpcloud.com/blog/what-are-ssh-keys">ssh keys</a> are typically used - one should use ssh keys for any remote connections if possible. The computing nodes have their own CPU, memory and storage, possibly also GPU(s). Computing within a node is always faster since otherwise data has to be transferred between the nodes and that causes <a class="reference external" href="https://en.wikipedia.org/wiki/Latency_(engineering)#Computer_hardware_and_operating_system_latency">latency</a>. Computing jobs must be started using a scheduler, <a class="reference external" href="https://en.wikipedia.org/wiki/Slurm_Workload_Manager">SLURM</a> is a commonly used one. Data storage is shared. HPC systems typically have different levels of storage for different types (work vs long term storage) data.</em></span><a class="headerlink" href="#hpc-cluster" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-left" id="chip-to-system">
+<a class="reference internal image-reference" href="../../_images/Blue_Gene_Processeing_Units.png"><img alt="../../_images/Blue_Gene_Processeing_Units.png" src="../../_images/Blue_Gene_Processeing_Units.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 15 </span><span class="caption-text"><em>The figure shows the processing units used in IBM’s second generation <a class="reference external" href="https://en.wikipedia.org/wiki/IBM_Blue_Gene">Blue Gene</a> P supercomputer. The basic compute chip has two processors. This makes a node. At the next level, the compute card bundles two compute chips. At the higher level, the node card has 8 nodes or 16 compute cards. The node cards are put in a cabinet that has 1,024 nodes and the full system has 64 such cabinets. <a class="reference external" href="https://en.wikipedia.org/wiki/IBM_Blue_Gene#/media/File:LLNL_BGL_Diagram.png">Figure: Wikipedia</a>, public domain.</em></span><a class="headerlink" href="#chip-to-system" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="terminology-cpu-core-thread-gpu-kernel-hyper-thread">
+<h3>Terminology: CPU, Core, Thread, GPU, kernel, hyper-thread<a class="headerlink" href="#terminology-cpu-core-thread-gpu-kernel-hyper-thread" title="Permalink to this headline">¶</a></h3>
+<p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Central_processing_unit">CPU</a> - Central Processing Unit.</strong> Also called the processor or processing unit. They represent numbers in binary form, that is, zeros and ones. Physically, CPUs are on an integrated circuit (IC), or what is often called the chip (metal oxide semiconductor). The chip is <em>not</em> synonymous to CPU since it typically has also other components on it, in particular <a class="reference external" href="https://en.wikipedia.org/wiki/CPU_cache">cache memory</a>. Some computers employ a multi-core processor, which is a single chip or “socket” containing two or more CPUs called “cores”.” We will use this concept directly when compiling and running simulations.</p>
+<p><strong>Core.</strong> Core referes to the CPU, a physical component or the processing unit. It is a more general term than CPU and it is also used in the case <a class="reference external" href="https://en.wikipedia.org/wiki/Digital_signal_processor">digital signal processors</a> (DSP) and others. In the case of a single core processor, the commands, or instructions to be more precise, are executed sequentially one after another. A new task cannot start before the previous one has finished. In the case of a <em>multi-core</em> processor, a single integrated circuit (or chip) contains several physical CPUs (cores) that can execute several processes simultaneously in parallel. This sometimes called the <a class="reference external" href="https://en.wikipedia.org/wiki/MIMD">MIMD</a>, or <em>Multiple Instruction, Multiple Data</em> paradigm. Note: The term multi-CPU is <em>not</em> the same as multi-core. In the case of a multi-CPU, the processing units are not on the same integrated circuit as in the case of multicore. More or less all current processors are multicore - if you don’t know how many cores you have, we will check that shortly and make use of the cores to speed up simulations.</p>
+<p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Thread_(computing)">Thread</a>.</strong> It is a unit of execution. In contrast to a core which is a physical component, a thread is a virtual component.</p>
+<p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Thread_(computing)#Single-_vs_multi-processor_systems">Multithreading</a>.</strong> Ability to run many threds simultaneously.</p>
+<p><strong><a class="reference external" href="https://en.wikipedia.org/wiki/Graphics_processing_unit">GPU</a> - Graphics Processing Unit.</strong> As the name suggests, GPUs are processing units specially designed for handling graphics. They are different from CPUs in that they (modern day ones) are massively parallel, one GPU unit can contains thousands of processing units (the consumer level NVIDIA RTX2080 has 2,944 cores and AMD Pro Vega II has 4,096 cores) while CPU has typically a small number cores between 2 and 32. For this reason, GPUs have been optimized for parallel processing as compared to CPUs that have their origin in serial processng. In addition, they were designed to handled floating point numbers very efficiently. Programming-vice, there are significant differences between programs that are designed for GPUs vs CPUs since the parallelism is the paradigm of GPU computing; <em><a class="reference external" href="https://en.wikipedia.org/wiki/Array_programming">vectorisation</a></em> and multi-threading are the two main differences. GPUs are now part of any typical HPC cluster and they for tasks such as molecular simulations and machine learning GPUs are programmed with C+±like languages, the general purpose <a class="reference external" href="https://en.wikipedia.org/wiki/OpenCL">OpenCL</a> and NVIDIA specific <a class="reference external" href="https://en.wikipedia.org/wiki/CUDA">CUDA</a>. The latter is the most common one. The latest AMD GPUs use a language called <a class="reference external" href="https://rocmdocs.amd.com/en/latest/Programming_Guides/HIP-FAQ.html">HIP</a> which is a direct rival to CUDA.</p>
+<div class="int">
+<p><strong>GPUs and software:</strong> Software such as <a class="reference external" href="https://en.wikipedia.org/wiki/GROMACS">Gromacs</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/NAMD">NAMD</a>, <a class="reference external" href="https://ambermd.org/">Amber</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/BigDFT">BigDFT</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/CP2K">CP2K</a>, <a class="reference external" href="http://glotzerlab.engin.umich.edu/hoomd-blue/">HOOMD-Blue</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/LAMMPS">LAMMPS</a>, and so on all have GPU acceleration, as do machine learning software such as <a class="reference external" href="https://www.tensorflow.org/">Tensorflow</a>, image processing software such as <a class="reference external" href="https://www.blender.org/">Blender</a> and Adobe’s software, and the list keeps growing very rapidly.</p>
+<p><strong>GPUs on a personal computer:</strong> It is naturally possible to use the GPU a personal computer or a laptop to run even rather demanding simulations. The basic requirement is a discrete GPU. If one wants to use CUDA acceleration, NVIDIA card is required. OpenCL runs on both NVIDIA and AMD cards. As for efficincy and support, CUDA is currently by far the most used one and this includes software such as Gromacs, NAMD, Amber, Tensorflow etc.</p>
+<p><strong>GPGPU</strong> is not a typo. It stands for <em><a class="reference external" href="https://en.wikipedia.org/wiki/General-purpose_computing_on_graphics_processing_units">General Purpose GPU</a>.</em></p>
+<p><strong>The basic idea of <a class="reference external" href="https://en.wikipedia.org/wiki/Array_programming">vectorization</a>:</strong> Older supercomputers (such as <a class="reference external" href="https://en.wikipedia.org/wiki/Control_Data_Corporation">CDC</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Cray_Y-MP">Cray-YMP</a>) up to the early 1990’s were predominantly <em>vector computers</em>. GPUs also operate similarly to vector computers. So the question is: What is a vector computer? Let’s start from serial computers, that’s essentially what our PCs are. Without going into the details of computer architecture, serial means that one instruction is performed at a time; data is retrieved and then an operation is performed on it. In vector processing the processor uses one instruction to operate on a whole vector at the same time (=parallel operation; <a class="reference external" href="https://en.wikipedia.org/wiki/SIMD">SIMD</a>, Single Instruction Multiple Data). Processors that are designed to operate in parallel on multiple data are called vector processors in contrast to scalar processors that use a single data element at a time (a pure serial processing is <a class="reference external" href="https://en.wikipedia.org/wiki/SISD">SISD</a>, Single Instruction Single Data). We will not discuss these matters in detail in this course, but it is good to have an idea of the concept.</p>
+</div>
+<!--
+ <table class="lblue" style="float: right" width="400 height="150">
+  <tr>
+    <td>
+       <img src="./img/cpu-gpu-parallelism.svg" width="400px"/>
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: 
+     </td>
+   </tr>
+</table>  
+-->
+<div class="figure align-left" id="gpu">
+<a class="reference internal image-reference" href="../../_images/cpu-gpu-parallelism.svg"><img alt="../../_images/cpu-gpu-parallelism.svg" src="../../_images/cpu-gpu-parallelism.svg" width="600px" /></a>
+<p class="caption"><span class="caption-number">Fig. 16 </span><span class="caption-text"><em>Left: In serial processing, one operation is performed at a time and one then moves on in a serial fashion. In vector processing <span class="math notranslate nohighlight">\(N\)</span> operations are performed at the same time. One operates on a <em>pipeline</em>.</em></span><a class="headerlink" href="#gpu" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="more-reading-for-afficionados">
+<h3>More reading for afficionados:<a class="headerlink" href="#more-reading-for-afficionados" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://people.freebsd.org/~lstewart/articles/cpumemory.pdf">What every programmer should know about memory by Ylrich Trepper</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Flynn%27s_taxonomy">Flynn’s classification of computer architectures</a></p></li>
+</ul>
+<!--
+### The concept of parallel processing
+
+--></div>
+</div>
+<div class="section" id="linux-the-operating-system-in-hpc">
+<h2>Linux: <em>The</em> operating system in HPC<a class="headerlink" href="#linux-the-operating-system-in-hpc" title="Permalink to this headline">¶</a></h2>
+<p>The area where <a class="reference external" href="https://en.wikipedia.org/wiki/Linux">Linux</a> adaption is the largest is HPC where it is overwhelmingly the most used operating system. Based on June 2020 data, Linux has 100% share of the <a class="reference external" href="https://www.top500.org/">TOP500 computers</a>. This has been the case since 2017. We will discuss the Linux operating system in more detail and introduce its basic commands in future lectures.</p>
+<p><strong>When using an HPC cluster:</strong></p>
+<ul class="simple">
+<li><p>Knowledge of Linux is vital since 100% of world’s TOP500 computers run on Linux. Connections to computing clusters are only via a specific <em>login</em> or <em>head</em> node that also runs Linux. Your own personal computer can be Windows, Mac or Linux. Each of them have some advantages and can be used to connect to a HPC system via command line.</p></li>
+<li><p>Based on the latest TOP500 list (Nov. 2020), 12 Canadian computers are on the list, 4 of them are commercial, 2 governmental and 6 research.</p></li>
+</ul>
+<p><strong>Data analysis:</strong></p>
+<ul class="simple">
+<li><p>Lots of the modern analysis tools work best on Linux. Since with HPC one often deals with very large amounts of data, processing can take anything from few minutes a day. One of the niceties is that with Linux-based systems it is very easy to put such analysis processes on the background while using the computer for other tasks.</p></li>
+</ul>
+</div>
+<div class="section" id="hardware-software-user-interface">
+<h2>Hardware, software, user interface<a class="headerlink" href="#hardware-software-user-interface" title="Permalink to this headline">¶</a></h2>
+<p>We now discuss some very basic issues regarding hardware, software and user interface.</p>
+<!--
+ <table class="lblue" style="float: right" width="400 height="150">
+  <tr>
+    <td>
+       <img src="./img/operating-system.svg" width="400px"/>
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: 
+     </td>
+   </tr>
+</table>  
+-->
+<div class="figure align-left" id="operating-system">
+<a class="reference internal image-reference" href="../../_images/operating-system.svg"><img alt="../../_images/operating-system.svg" src="../../_images/operating-system.svg" width="700px" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text"><em>Basic relations between the hardware, operating system and the user level. The user interacts with the operating system via a GUI or CLI. The operating system then communicates with the hardware.</em></span><a class="headerlink" href="#operating-system" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="operating-system-os-and-user-interface-ui">
+<h3>Operating system (OS) and User interface (UI)<a class="headerlink" href="#operating-system-os-and-user-interface-ui" title="Permalink to this headline">¶</a></h3>
+<p>The OS is an <em>interface</em> between the hardware and applications the UI is the part of the OS that connects the user with the OS, that is, the UI is a virtual surface that connects the user to the computer.  The two main types of user interfaces are the familiar Graphical User Interface (GUI). Another one is the Command Line Interface (CLI).</p>
+<ol class="simple">
+<li><p>Graphical User Interface (GUI)</p></li>
+<li><p>Command Line Interface (CLI)</p></li>
+</ol>
+<p>While a GUI is handy for certain tasks and requires no knowledge of special commands like CLI does, it is not suitable for certain tasks. This is why CLI is needed. Even installation of simulation software becomes very cumbersome if not impossible without CLI. We focus on CLI, or terminal, below.</p>
+</div>
+<div class="section" id="kernel">
+<h3>Kernel<a class="headerlink" href="#kernel" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Kernel_(operating_system)">Kernel</a> is the heart of the operating system. <a class="reference external" href="https://en.wikipedia.org/wiki/Kernel_(operating_system)">Wikipedia description</a> of kernel</p>
+<div class="int">    
+    <em>'The kernel is a computer program at the core of a computer's operating system with complete control over everything in the system.'</em>
+    </div>    
+    <p></p>    
+describes it very well. The above defines what kernel means in terms of operating systems and it should not be confused with [*compute kernel*](https://en.wikipedia.org/wiki/Compute_kernel), the term is used in GPGPU computing. A compute kernel is the computationally intensive part that typically involves the inner loops.    
+</div>
+</div>
+<div class="section" id="moore-s-law">
+<h2>Moore’s law<a class="headerlink" href="#moore-s-law" title="Permalink to this headline">¶</a></h2>
+<p>Moore’s law is the observation that the number of transistors in integrated circuits doubles every 24 months. Despite the name, this is rather an observation than a law. Moore’s law is due to <a class="reference external" href="https://en.wikipedia.org/wiki/Gordon_Moore">Gordon Moore</a>, co-founder of Intel.</p>
+<!--
+ <table class="lblue" style="float: none" width="800">
+  <tr>
+    <td>
+       <img src="./img/Moores_Law_1971-2018.png" width="800px"/>
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Moore's law. From Wikipedie, Creative Commons license.
+     </td>
+   </tr>
+</table>  
+
+-->
+<div class="figure align-default" id="blue-gene">
+<a class="reference internal image-reference" href="../../_images/Moores_Law_1971-2018.png"><img alt="../../_images/Moores_Law_1971-2018.png" src="../../_images/Moores_Law_1971-2018.png" style="width: 800px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Figure: Moore’s law. From Wikipedia, Creative Commons license.</span><a class="headerlink" href="#blue-gene" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="the-top500-list">
+<h2>The TOP500 list<a class="headerlink" href="#the-top500-list" title="Permalink to this headline">¶</a></h2>
+<!--
+<table class="lblue" style="float: right" width="160 height="150">
+    <tr>
+        <td>
+            <img src="./img/Top500_logo.png" width="150px"/>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+            Figure: TOP500 logo.
+        </td>
+    </tr>
+</table>  
+-->
+<a class="reference internal image-reference" href="../../_images/Top500_logo.png" id="figure-example"><img alt="../../_images/Top500_logo.png" class="align-right" id="figure-example" src="../../_images/Top500_logo.png" style="width: 200px;" /></a>
+<p>The TOP500 list is, as the name suggests, is the list of 500 most powerful computers in the world. The first listing was done in June 1993 and the the list is updated twice a year, June and November. Currently (Nov. 2020), China has 212 systems on the list, the USA is the second with 113, and Japan the third with 34 systems. Canada has 12. Continent-wise top countries: Asia: China (overall #1 in terms of the number of systems), North America: USA (overall #2), Europe: Germany (#4), South America: Brazil (#12), Africa: Morocco (#27), Australia: Australia (#23).
+<p></p></p>
+<div class="int">                       
+<b>Caveat:</b>  That a given country has a large number of systems on the list does not say anything about the <em>access</em> to those resources. For an individual researcher what matters is the ease of access and that is handled differently in each of the countries. In addition, countries and groups of countries have allocation modes that give preference to certain projects, that is, in the same style as grants. For example, In Canada <em><a href="https://www.computecanada.ca/">Compute Canada/Calcul Canada</a></em> has the normal allocation that is very easily accessible to researchers and a separate <em>National Resource Allocation Competition</em> which requires separate application and grants priority allocations to some systems and resources. In Europe, there is <a href="https://prace-ri.eu/">PRACE</a> (Partnership for Advanced Computing in Europe). It has a pan-European competition for resource allocation.
+</div>
+<div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="computing-power-now-and-in-the-past">
+<h2>Computing power now and in the past<a class="headerlink" href="#computing-power-now-and-in-the-past" title="Permalink to this headline">¶</a></h2>
+<p>After discussing the TOP500, it would be interesting to make a qualitative comparison to get a better idea what kind of computing power we all have in our hands. Try to find information on the computational power of</p>
+<ul class="simple">
+<li><p>1990’s suprecomputer</p></li>
+<li><p>Your laptop</p></li>
+<li><p>Android phone</p></li>
+<li><p>Gaming workstation</p></li>
+</ul>
+<!--
+
+ <table class="lblue" style="float: right" width="400 height="150">
+  <tr>
+    <td>
+       <img src="./img/IBM_Blue_Gene_P.jpg" width="400px"/>
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: IBM Blue Gene P.
+     </td>
+   </tr>
+</table>  
+    
+-->
+<div class="figure align-left" id="blue-gene-p">
+<a class="reference internal image-reference" href="../../_images/IBM_Blue_Gene_P.jpg"><img alt="../../_images/IBM_Blue_Gene_P.jpg" src="../../_images/IBM_Blue_Gene_P.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text"><em><a class="reference external" href="https://en.wikipedia.org/wiki/IBM_Blue_Gene">IBM Blue Gene</a> P. The Blue Gene family of computers were among the most powerful systems until to about 2015. Since then, IBM appears to have stopped the development. The Blue Gene/P that is in the figure was a 2nd generation Blue Gene computer. In terms of numbers, the processors on the Blue Gene/P were of IBM’s PowerPC type. A variant of the PowerPC chip was used in Macs before Apple switched to Intel processors in 2005. The Blue Gene/P used 850 GHz PowerPC450 processors. Figure: <a class="reference external" href="https://en.wikipedia.org/wiki/IBM_Blue_Gene#/media/File:IBM_Blue_Gene_P_supercomputer.jpg">Wikipedia</a>.</em></span><a class="headerlink" href="#blue-gene-p" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="distributed-computing-cloud-computing-citizen-science">
+<h2>Distributed computing / cloud computing / citizen science<a class="headerlink" href="#distributed-computing-cloud-computing-citizen-science" title="Permalink to this headline">¶</a></h2>
+<p>Distributed computing in its many forms has lead to very interesting projects including so-called citizen science in which individual people donate the idle time on their computer for research purposes.</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://foldingathome.org/">Folding&#64;home</a></p></li>
+<li><p><a class="reference external" href="http://fold.it/">Foldit</a></p></li>
+<li><p><a class="reference external" href="https://setiathome.berkeley.edu/">SETI&#64;home</a></p></li>
+<li><p><a class="reference external" href="https://www.vodafone.co.uk/mobile/dreamlab">DreamLab</a></p></li>
+<li><p><a class="reference external" href="https://boinc.berkeley.edu/">BOINC, the Berkeley Open Infrastructure for Network Computing</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/List_of_distributed_computing_projects">Wikipedia: List of distributed computing projects</a></p></li>
+</ul>
+</div>
+<div class="section" id="terminology-double-precision-vs-single-precision">
+<h2>Terminology: Double precision vs single precision<a class="headerlink" href="#terminology-double-precision-vs-single-precision" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Single precision: 32 bit. Data type is called single. A floating point number is represented using 32 bits: 1 bit for the sign, 8 bits for the exponent and 23 bits for the mantissa. This means that the range of numbers is <span class="math notranslate nohighlight">\(2^{-126}-2^{127}\)</span> or <span class="math notranslate nohighlight">\(\approx 1.18\times 10^{-38}-3.40\times 10^{38}\)</span> (single precision)</p></li>
+<li><p>Double precision: 64 bit. Data type is called double. A floating point number is represented using 64 bits: 1 bit for the sign, 11 bits for the exponent and 52 bits for the mantissa. The range of numbers is <span class="math notranslate nohighlight">\(2^{-1022}-2^{1023}\)</span>.</p></li>
+<li><p>Special cases: <em>overflow</em>, <em>not-a-number</em>, <em>subnormal number</em></p></li>
+</ul>
+<p>Most simulation software allow for compilaion in either single or double precision.</p>
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ias.ac.in/public/Volumes/reso/021/01/0011-0030.pdf">IEEE Standard for Floating Point Numbers</a></p></li>
+</ul>
+<!--
+**Isn't double precision always better since it is more accurate?:**
+-->
+<p>We can also get that information from Python and Jupyter:</p>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Smallest positive normalized float:&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="o">.</span><span class="n">min</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Largest float:&quot;</span><span class="p">,</span> <span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Float information:&quot;</span><span class="p">,</span><span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Smallest positive normalized float: 2.2250738585072014e-308
+Largest float: 1.7976931348623157e+308
+Float information: sys.float_info(max=1.7976931348623157e+308, max_exp=1024, max_10_exp=308, min=2.2250738585072014e-308, min_exp=-1021, min_10_exp=-307, dig=15, mant_dig=53, epsilon=2.220446049250313e-16, radix=2, rounds=1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-output docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Need help on floats?</span>
+
+<span class="n">help</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on float_info object:
+
+class float_info(builtins.tuple)
+ |  float_info(iterable=(), /)
+ |  
+ |  sys.float_info
+ |  
+ |  A named tuple holding information about the float type. It contains low level
+ |  information about the precision and internal representation. Please study
+ |  your system&#39;s :file:`float.h` for more information.
+ |  
+ |  Method resolution order:
+ |      float_info
+ |      builtins.tuple
+ |      builtins.object
+ |  
+ |  Methods defined here:
+ |  
+ |  __reduce__(...)
+ |      Helper for pickle.
+ |  
+ |  __repr__(self, /)
+ |      Return repr(self).
+ |  
+ |  ----------------------------------------------------------------------
+ |  Static methods defined here:
+ |  
+ |  __new__(*args, **kwargs) from builtins.type
+ |      Create and return a new object.  See help(type) for accurate signature.
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  dig
+ |      DBL_DIG -- digits
+ |  
+ |  epsilon
+ |      DBL_EPSILON -- Difference between 1 and the next representable float
+ |  
+ |  mant_dig
+ |      DBL_MANT_DIG -- mantissa digits
+ |  
+ |  max
+ |      DBL_MAX -- maximum representable finite float
+ |  
+ |  max_10_exp
+ |      DBL_MAX_10_EXP -- maximum int e such that 10**e is representable
+ |  
+ |  max_exp
+ |      DBL_MAX_EXP -- maximum int e such that radix**(e-1) is representable
+ |  
+ |  min
+ |      DBL_MIN -- Minimum positive normalized float
+ |  
+ |  min_10_exp
+ |      DBL_MIN_10_EXP -- minimum int e such that 10**e is a normalized
+ |  
+ |  min_exp
+ |      DBL_MIN_EXP -- minimum int e such that radix**(e-1) is a normalized float
+ |  
+ |  radix
+ |      FLT_RADIX -- radix of exponent
+ |  
+ |  rounds
+ |      FLT_ROUNDS -- rounding mode
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  n_fields = 11
+ |  
+ |  n_sequence_fields = 11
+ |  
+ |  n_unnamed_fields = 0
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from builtins.tuple:
+ |  
+ |  __add__(self, value, /)
+ |      Return self+value.
+ |  
+ |  __contains__(self, key, /)
+ |      Return key in self.
+ |  
+ |  __eq__(self, value, /)
+ |      Return self==value.
+ |  
+ |  __ge__(self, value, /)
+ |      Return self&gt;=value.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(self, key, /)
+ |      Return self[key].
+ |  
+ |  __getnewargs__(self, /)
+ |  
+ |  __gt__(self, value, /)
+ |      Return self&gt;value.
+ |  
+ |  __hash__(self, /)
+ |      Return hash(self).
+ |  
+ |  __iter__(self, /)
+ |      Implement iter(self).
+ |  
+ |  __le__(self, value, /)
+ |      Return self&lt;=value.
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  __lt__(self, value, /)
+ |      Return self&lt;value.
+ |  
+ |  __mul__(self, value, /)
+ |      Return self*value.
+ |  
+ |  __ne__(self, value, /)
+ |      Return self!=value.
+ |  
+ |  __rmul__(self, value, /)
+ |      Return value*self.
+ |  
+ |  count(self, value, /)
+ |      Return number of occurrences of value.
+ |  
+ |  index(self, value, start=0, stop=9223372036854775807, /)
+ |      Return first index of value.
+ |      
+ |      Raises ValueError if the value is not present.
+</pre></div>
+</div>
+</div>
+</div>
+<!--
+## Summary
+--></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/IntroSciHPC"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro-to-modeling.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction to scientific computing &amp; computational modeling</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="simulation-general.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">General aspects of modeling and computer simulations</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen and Colin Denniston<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

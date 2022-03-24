@@ -13,7 +13,7 @@
 # 
 # $$L_j^n(x) = \frac{\mathcal{l}(x)}{(x-x_j)} w_j,$$
 # 
-# where the baricentric weight $w_j$ is  
+# where the barycentric weight $w_j$ is  
 # 
 # $$ w_j \equiv \frac{1}{\prod_{i=0,i\neq j}^n (x_j-x_i)}.$$
 # 
@@ -48,9 +48,9 @@
 # 
 # In this form, we avoid evaluating $\mathcal{l}(x)$ entirely and the sum in the numerator and denominator can easily be constructed simultaneously.
 # 
-# Note that there are two stages to implementation of barycentric Lagrange interpolation: i) computing the weights and ii) computing the interpolation at the desired points.  The first should be done *only once* whereas the second needs to be done at each point where the interpolation is computed.  A python code to do this is below 
+# Note that there are two stages to implementation of barycentric Lagrange interpolation: i) computing the weights and ii) computing the interpolation at the desired points.  The first should be done *only once* whereas the second needs to be done at each point where the interpolation is computed.  A python code to do this is given below. 
 
-# In[31]:
+# In[3]:
 
 
 import numpy as np

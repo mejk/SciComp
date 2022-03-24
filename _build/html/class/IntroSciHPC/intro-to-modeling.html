@@ -1,0 +1,1487 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to scientific computing &amp; computational modeling &#8212; Scientific Computing</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/IntroSciHPC/intro-to-modeling.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Background on computers, computing and High Performance Computing" href="hpc-intro.html" />
+    <link rel="prev" title="Brief introduction to Python" href="../PythonBasics/python-intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Prerequisites and installations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hpc-intro.html">
+   Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="simulation-general.html">
+   General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   Numerical Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   Sources of Errors in Scientific Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   Example: Evaluating polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Chebyshev.html">
+   Chebyshev Polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+   Gaussian Integration
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  More on computers / helps
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/class/IntroSciHPC/intro-to-modeling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/IntroSciHPC/intro-to-modeling.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/IntroSciHPC/intro-to-modeling.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-and-computers">
+   Computing and computers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-computational-chemistry">
+   Example: Computational chemistry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nobel-prizes-to-computational-chemistry-1998-and-2013">
+   Nobel Prizes to Computational Chemistry: 1998 and 2013
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-notable-prizes-in-computational-chemistry-physics">
+     Other notable prizes in computational chemistry &amp; physics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-few-examples">
+   A few examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theory-and-experiment-vs-computation">
+   Theory and experiment vs computation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#experiments-and-in-silico-modeling">
+     Experiments and
+     <em>
+      in silico
+     </em>
+     modeling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-simulations-the-3rd-paradigm-of-research">
+   Modeling &amp; simulations: The 3rd paradigm of research
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#good-practices">
+   Good practices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dangers">
+   Dangers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology-scales">
+   Terminology: Scales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hybrid-models">
+     Hybrid models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implicit-vs-explicit-water">
+     Implicit vs explicit water
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-graining">
+     Coarse-graining
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concurrent-vs-sequential-coarse-graining">
+     Concurrent vs sequential coarse-graining
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-graining-and-software-compatibility">
+     Coarse-graining and software compatibility
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beyond-particles-different-representations-and-methods">
+     Beyond particles: Different representations and methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-need-so-many-methods">
+   Why do we need so many methods?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming-languages">
+   Programming languages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to scientific computing & computational modeling</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#computing-and-computers">
+   Computing and computers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#background">
+   Background
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-computational-chemistry">
+   Example: Computational chemistry
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#nobel-prizes-to-computational-chemistry-1998-and-2013">
+   Nobel Prizes to Computational Chemistry: 1998 and 2013
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-notable-prizes-in-computational-chemistry-physics">
+     Other notable prizes in computational chemistry &amp; physics
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-few-examples">
+   A few examples
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#theory-and-experiment-vs-computation">
+   Theory and experiment vs computation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#experiments-and-in-silico-modeling">
+     Experiments and
+     <em>
+      in silico
+     </em>
+     modeling
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modeling-simulations-the-3rd-paradigm-of-research">
+   Modeling &amp; simulations: The 3rd paradigm of research
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#good-practices">
+   Good practices
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dangers">
+   Dangers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#terminology-scales">
+   Terminology: Scales
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#hybrid-models">
+     Hybrid models
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#implicit-vs-explicit-water">
+     Implicit vs explicit water
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-graining">
+     Coarse-graining
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concurrent-vs-sequential-coarse-graining">
+     Concurrent vs sequential coarse-graining
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-graining-and-software-compatibility">
+     Coarse-graining and software compatibility
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#beyond-particles-different-representations-and-methods">
+     Beyond particles: Different representations and methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-do-we-need-so-many-methods">
+   Why do we need so many methods?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programming-languages">
+   Programming languages
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="n">e341d7124aec</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># Additional styling ; should be moved into helpers</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">HTML</span>
+<span class="ne">---&gt; </span><span class="mi">13</span> <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;&lt;style&gt;</span><span class="si">{}</span><span class="s1">&lt;/style&gt;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;styler.css&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1">#import pandas as pd</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;styler.css&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-scientific-computing-computational-modeling">
+<h1>Introduction to scientific computing &amp; computational modeling<a class="headerlink" href="#introduction-to-scientific-computing-computational-modeling" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<a class="rounded-circle reference internal image-reference" href="../../_images/sna-pop-3.png" id="cglipid"><img alt="../../_images/sna-pop-3.png" class="rounded-circle align-right" id="cglipid" src="../../_images/sna-pop-3.png" style="width: 300px;" /></a>
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To have a basic idea of what scientfic computing and computational modeling are.</p></li>
+<li><p class="card-text">To get some historical background on computing.</p></li>
+<li><p class="card-text">To understand the relation between experiments, theory and computation.</p></li>
+<li><p class="card-text">To understand the need for different models and their relations. Several methods and models that will be discussed later in the course will be mentioned. The aim is to make the students acquainted to the terminology and make them comfortable in using the terms and termonology a litte-by-little over the course.</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> scientific computing, multiscale modeling, high performance computing, history of computing</p>
+<!--
+**Associated material:**
+-->
+<p class="card-text"><strong>Note:</strong> To be more concrete, some of the examples are drawn from physics, chemistry and chemical engineering. The discussion is quite general and doesn’t assume background in them.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr><div class="section" id="computing-and-computers">
+<h2>Computing and computers<a class="headerlink" href="#computing-and-computers" title="Permalink to this headline">¶</a></h2>
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p>Video: <a class="reference external" href="https://www.youtube.com/watch?v=qundvme1Tik">Computer Pioneers: Pioneer Computers Part 1</a> by Computer History Museum</p></li>
+<li><p>Video: <a class="reference external" href="https://www.youtube.com/watch?v=wsirYCAocZk">Computer Pioneers: Pioneer Computers Part 2</a> by Computer History Museum</p></li>
+</ul>
+</div>
+<div class="section" id="background">
+<h2>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h2>
+<!-- Computational chemistry and physics are relatively young fields -->  
+<p>Scientific computing and computational modeling are relatively young fields -
+this is easy to understand since the first digital (in contrast to mechanical) computers were developed in the late 1930’s. The first programmable computer, the <a class="reference external" href="https://en.wikipedia.org/wiki/Z1_(computer)">Z1</a>, was developed by <a class="reference external" href="https://en.wikipedia.org/wiki/Konrad_Zuse">Konrad Zuse</a> in Germany in the late 1930’s. The early developments in programmable digital computers were largely driven by military applications in 1940’s and 1950’s.</p>
+<p>The earliest computers were not reliable or stable, or were built more as calculators for a single purpose. ENIAC (Electronic Numerical Integrator and Computer) that was built in 1946 is often said to be the first real computer. Transistors did not exist at that time and <a class="reference external" href="https://en.wikipedia.org/wiki/ENIAC">ENIAC</a> (in Philadelphia) had 17,480 vacuum tubes. Its original purpose was to determine trajectories for ballistic missiles, but due to the war ending it was used to study nuclear reactions. Nuclear warhead and storage related simulations are still one of the main uses of the largest supercomputers. One additional notable aspect of ENIAC is that, unlike modern computers, it was not able to store programs.</p>
+<p>ENIAC was followed by <a class="reference external" href="https://en.wikipedia.org/wiki/MANIAC_I">MANIAC I</a> (Mathematical Analyzer Numerical Integrator And Computer Model I at Los Alamos) and it was used in the landmark paper <em>“Equations of State Calculations by Fast Computing Machines”</em><span id="id1">[<a class="reference internal" href="#id43">2</a>]</span> by Metropolis et al. that introuced the Metropolis Monte Carlo method, one of the most used and important algorithms even today. MANIAC was also used in the development of the hydrogen bomb. Generalization of the Metropolis Monte Carlo method is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo">Markov Chain Monte Carlo</a> and it is important in fields such as optimization and machine learning. On pure chemistry side, the earliest computational papers appeared in the 1960’s and the term computational chemistry was (probably; hard to trace) first used in 1970’s.</p>
+<p>Historically, scientific computing and computational modeling have their roots in physics and chemistry, but independent if one talks about physics, chemistry or some other field, the development can be divided roughly in the theoretical developments in the field, developments of numerical methods and algorithms, and hardware. The development of numerical methods cannot be over-emphasized as it is critical to be able to model and simulate larger systems and for longer times. This will become clear as we discuss various methods and how they scale in terms of the number of degrees of freedom.</p>
+<p>Currently, computational approaches such as hybrid methods that combine quantum mechanical and classical molecular dynamics and coarse-grained methods have gained a lot of popularity. Methods that combine different time and/or length scales can in general be called <em><a class="reference external" href="https://en.wikipedia.org/wiki/Multiscale_modeling">multiscale methods</a></em> and this will be discussed in more detail later. In addition, methods that go under the term <em><a class="reference external" href="https://en.wikipedia.org/wiki/Machine_learning">machine learning</a></em> are perhaps the most rapidly growing family of methods and they are applied in almost all imaginable fields from medicine to digital humanities and computational chemistry. Machine learning is not a simulation method as such, but rather a class of methods that allows classification (clustering), analyses and model building using large data sets. Machine learning methods rely heavily on statistics, linear algebra and stochastic methods such as <a class="reference external" href="https://en.wikipedia.org/wiki/Markov_chain">Markov processes</a>. We will discuss such methods later.</p>
+<!-- <table class="lblue" style="float: right" width="400">
+  <tr>
+    <td>
+       <img src="img/compsci.svg" width="400px" />     
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Computational modeling in chemistry, physics and engineering require deep background knowledge from a number of fields.
+     </td>
+   </tr>
+</table>
+-->
+<!--
+:::{figure} compsci
+<img src="img/compsci.svg" alt="fishy" width="600px">
+Computational modeling in chemistry, physics and engineering require deep background knowledge from a number of fields.
+:::
+-->
+<div class="figure align-default" id="compsci">
+<a class="reference internal image-reference" href="../../_images/compsci.svg"><img alt="../../_images/compsci.svg" src="../../_images/compsci.svg" width="700px" /></a>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">In addition to programming and numerical methods, computational modeling and scientfic computing require deep background knowledge from a number of fields.</span><a class="headerlink" href="#compsci" title="Permalink to this image">¶</a></p>
+</div>
+<!--
+
+![](img/compsci.svg) 
+-->
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://web.archive.org/web/20170812065758/http://www.mrtc.mdh.se/~gdc/work/ARTICLES/2014/3-CiE-journal/Background/SimulatingPhysicsWithComputers.pdf">Simulating Physics with Computers Richard P. Feynman</a></p></li>
+<li><p><a class="reference external" href="http://www-star.st-and.ac.uk/~kw25/teaching/mcrt/MC_history_4.pdf">Metropolis, Monte Carlo and the MANIAC</a></p></li>
+<li><p><a class="reference external" href="https://www.atomicheritage.org/history/computing-and-manhattan-project">Computing and the Manhattan Project</a></p></li>
+<li><p><a class="reference external" href="https://ieeexplore.ieee.org/document/4392895">A Trilogy on Errors in the History of Computing</a></p></li>
+</ul>
+<!--
+- [The Development of Computational Chemistry in Germany](http://www.quantum-chemistry-history.com/Pey_ff_Dat/CompGerm/Pey_ff_CompGerm.htm)
+- [The Development of Computational Chemistry in the United Kingdom](http://www.chilton-computing.org.uk/acl/applications/qc/p001.htm)
+- [Computational Chemistry in the 1950s](http://curation.cs.manchester.ac.uk/computer50/www.computer50.org/mark1/Huw-Pritchard/history.html)
+--></div>
+<div class="section" id="example-computational-chemistry">
+<h2>Example: Computational chemistry<a class="headerlink" href="#example-computational-chemistry" title="Permalink to this headline">¶</a></h2>
+<p>It is difficult to define what exactly computational chemistry is or is not. Wikipedia defines quite broadly (and one could say adeqately) as follows:</p>
+<blockquote>
+"Computational chemistry is a branch of chemistry that uses computer simulation to assist in solving chemical problems. It uses methods of theoretical chemistry, incorporated into efficient computer programs, to calculate the structures and properties of molecules and solids. It is necessary because, apart from relatively recent results concerning the hydrogen molecular ion (dihydrogen cation, see references therein for more details), the quantum many-body problem cannot be solved analytically, much less in closed form. While computational results normally complement the information obtained by chemical experiments, it can in some cases predict hitherto unobserved chemical phenomena. It is widely used in the design of new drugs and materials. "    
+</blockquote>    
+<p>Although the field of computational chemistry didn’t exist in the 1830’s, <a class="reference external" href="https://en.wikipedia.org/wiki/Auguste_Comte">Auguste Comte</a>, the philosopher behind <a class="reference external" href="https://en.wikipedia.org/wiki/Positivism">positivism</a>, stated that it is impossible and destructive to try to study chemistry using mathematics (and as an extrapolation by computers):</p>
+<blockquote>
+"Every attempt to employ mathematical methods in the study of chemical
+questions must be considered profoundly irrational and contrary to the
+spirit of chemistry.... if mathematical analysis should ever hold a
+prominent place in chemistry - an aberration which is happily almost
+impossible - it would occasion a rapid and widespread degeneration of that
+    science."<p></p>
+&nbsp; &nbsp; -Auguste Comte, <a href="http://www.gutenberg.org/ebooks/31881">Cours de philosophie positive</a>, 1830
+</blockquote>    
+<p>This view is, if course, very fitting with the idea of <a class="reference external" href="https://en.wikipedia.org/wiki/Positivism">positivisim</a> and wrong (or ‘<a class="reference external" href="https://en.wikipedia.org/wiki/Not_even_wrong">not even wrong</a>’) in terms of science as it defies the existence of predictive theories.</p>
+<!--
+It is also somewhat curious given that in Comte's own hierarchy of sciences, mathematics was the most fundamental meaning that all the other sciences use it.
+-->
+<p>Rather than trying to provide a strict defintion or classification as what computational chemistry is, let’s rather list methods and approaches use by computational chemists - after all computational chemistry includes various simulation techniques, structural analysis, using computers to design or predict new molecules or/and molecular binding, and data mining from experimental and/or computational results. It is also hard - and unnecessary - to draw strict defintion between computational chemistry, physics or, say, chemical engineering or pharmacy/drug design. Although these fields all have their own special characteristics, from the computational perspective they share the same methods and methodologies many of them, especially when it come to algorithms and computational techniques, come from applied mathematics and computer science. Right now, we restrict ourselves just to provide and a list and we will discuss some of them in detail later. For most part here, we focus on simulation and we will also discuss some analysis and machine learning techniques. What is also common to the computational disciplines is that one needs in-depth knowledge across traditional disciplines.</p>
+<ul class="simple">
+<li><p>Quantum mechanical methods: <em>ab initio</em> methods, density functional theory, Car-Parrinello simulations</p></li>
+<li><p>Classical molecular dynamics, steered molecular dynamics, non-equilibrium molecular dynamics</p></li>
+<li><p>Coarse-grained molecular dynamics</p></li>
+<li><p>Lattice-Boltzmann simulations</p></li>
+<li><p>Phase field simulations</p></li>
+<li><p>Finite element methods</p></li>
+<li><p>Monte Carlo techniques</p></li>
+<li><p>Optimization techniques</p></li>
+<li><p>Machine learning methods, Bayesian techniques, Markov models, deep learning</p></li>
+<li><p>Free energy calculations</p></li>
+</ul>
+<p>… and the list goes on. This (by necessity incomplete) list aims to convey the idea that the field is very broad with no clear boundries.</p>
+<p>See also the short interview of one of the pioneers of computational chemistry / physics / chemical engineering:</p>
+<p><strong>Beauty in Science: Biophysicist Klaus Schulten &amp; his Computational Microscope</strong></p>
+<div class="container youtube">
+<iframe class="responsive-iframe" src="https://www.youtube-nocookie.com/embed/iqcG4P-lTa0" frameborder="0" allow="accelerometer; autoplay="0"; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></div>
+<div class="section" id="nobel-prizes-to-computational-chemistry-1998-and-2013">
+<h2>Nobel Prizes to Computational Chemistry: 1998 and 2013<a class="headerlink" href="#nobel-prizes-to-computational-chemistry-1998-and-2013" title="Permalink to this headline">¶</a></h2>
+<p>To date, the Nobel Prize is Chemistry has been awarded twice to computational chemists - thus far no Nobel Prizes have been granted directly to computational physics. The first computational chemistry Nobel was <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/summary/">1998</a>, when
+<a class="reference external" href="https://en.wikipedia.org/wiki/Walter_Kohn">Walter Kohn</a> (see also his <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/kohn/biographical/">biographical notes</a>), “for his development of the density-functional theory”, and John A. Pople (see also his <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/pople/biographical/">biographical notes</a>), “for his development of computational methods in quantum chemistry”, were the recipients. Kohn was born in Austria, escaped the nazis to Canada and received his BSc in Applied Mathematics at the University of Toronto. He moved to study physics at Harvard for his PhD. His PhD supervisor was <a class="reference external" href="https://en.wikipedia.org/wiki/Julian_Schwinger">Julian Schwinger</a>, <a class="reference external" href="https://www.nobelprize.org/prizes/physics/1965/summary/">1965 Nobel Laureate in Physics</a>. He was at the University of California in Santa Barbara at the time of his Prize. Kohn passed away in 2016 at the age of 93. <a class="reference external" href="https://en.wikipedia.org/wiki/John_Pople">Sir John Pople</a> received his PhD in Mathematics from Cambridge. He was at Northwestern University at the time of the Nobel Prize. He passed away in 2004 at the age of 78. Pople is one of the authors of the first version of the software suite <a class="reference external" href="https://en.wikipedia.org/wiki/Gaussian_(software)">Gaussian</a>. Pople’s PhD supervisor was <a class="reference external" href="https://en.wikipedia.org/wiki/John_Lennard-Jones">Sir John Lennard-Jones</a>, the <a class="reference external" href="https://en.wikipedia.org/wiki/Lennard-Jones_potential">Lennard-Jones potential</a> used in almost all classical molecular dynamics simulations is named after him.</p>
+<p>The second Nobel Prize to computational chemistry came in <a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2013/summary/">2013</a> when it was awarded to <a class="reference external" href="https://en.wikipedia.org/wiki/Martin_Karplus">Martin Karplus</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Michael_Levitt">Michael Levitt</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Arieh_Warshel">Arieh Warshel</a> “for the development of multiscale models for complex chemical systems.” The press release of the <a class="reference external" href="https://en.wikipedia.org/wiki/Royal_Swedish_Academy_of_Sciences">Royal Swedish Academy of Science</a> stated the importance of computational chemistry very clearly:</p>
+<blockquote>
+"Today the computer is just as important a tool for  chemists as the test tube. Simulations are so realistic that they predict the outcome of traditional experiments." 
+<p></p>
+&nbsp; &nbsp; -<a href="https://www.nobelprize.org/uploads/2018/06/press-22.pdf">Pressmeddelande, Kungliga Vetenskapsakademien</a>
+</blockquote>    
+<p>Like Kohn, Martin Karplus was born in Vienna, Austria and moved to the USA to escape the nazis. He did his PhD in chemistry at Caltech with the two-time Nobel Laureate <a class="reference external" href="https://en.wikipedia.org/wiki/Linus_Pauling">Linus Pauling</a>. He is the originator of the <a class="reference external" href="https://www.charmm.org/">CHARMM</a> molecular simulation package. Karplus was at Université de Strasbourg and Harvard at the time of the Prize. Arieh Warshel was postdoc (1970) with Karplus’ at Harvard in Chemical Physics. He went to the Weizmann Institute in Isreal for a faculty job but moved later to the University of Southern California after <a class="reference external" href="https://www.ynetnews.com/articles/0,7340,L-4438751,00.html">Weizmann didn’t grant him tenure</a>. <a class="reference external" href="https://en.wikipedia.org/wiki/Michael_Levitt">Michael Levitt</a> was born in Pretoria, South Africa and he did his PhD in Biophysics at Cambridge. At the time of the Prize he was at Stanford where he is a professor of Structural Biology. As a side note on tenure and Nobel Prizes, Nobel winners that were not given tenure include at least <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_J._Sargent">Tom Sargent</a> (Economics 2011; University of Pennsylvania didn’t give tenure), <a class="reference external" href="https://en.wikipedia.org/wiki/Lars_Onsager">Lars Onsager</a> (Chemistry 1968; dismissed/let go by both John’s Hopkins and Brown universities).</p>
+<!-- 
+````{margin}
+The Nobel Laurates in computational chemistry. <a href="https://doi.org/10.1073/pnas.1320569110">The 1998 Nobel winners</a> Walter Kohn (UC Santa Barbara) and John Pople (Nortwestern), and the 2013 ones <a href="https://www.nobelprize.org/prizes/chemistry/2013/karplus/biographical/">Martin Karplus</a> (Harvard & Strasbourg), <a href="https://www.nobelprize.org/prizes/chemistry/2013/warshel/biographical/">Arieh Warshel</a> (Southern California), <a href="https://www.nobelprize.org/prizes/chemistry/2013/levitt/biographical/">Michael Levitt</a> (Stanford). Photos from Wikipedia, Creative Commons license.
+```{figure} img/kohn-cc.jpg
+   :height: 150px
+   :name: figure-example
+   [Walter Kohn](https://www.nobelprize.org/prizes/chemistry/1998/kohn/biographical/).
+ ```
+ ```{figure} img/pople-cc.png
+   :height: 150px
+   :name: figure-example
+   [John Pople](https://www.nobelprize.org/prizes/chemistry/1998/pople/biographical/).
+ ```
+  ```{figure} img/karplus-cc.jpg
+   :height: 150px
+   :name: figure-example
+   [Martin Karplus](https://www.nobelprize.org/prizes/chemistry/2013/karplus/biographical/).
+ ```
+  ```{figure} img/warshel-cc.jpg
+   :height: 150px
+   :name: figure-example
+   [Arieh Warshel](https://www.nobelprize.org/prizes/chemistry/2013/warshel/biographical/).
+ ```
+  ```{figure} img/levitt-cc.jpg
+   :height: 150px
+   :name: figure-example
+   [Michael Levitt](https://www.nobelprize.org/prizes/chemistry/2013/levitt/biographical/).
+ ```
+```` 
+
+-->
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="figure-example">
+<a class="reference internal image-reference" href="../../_images/kohn-cc.jpg"><img alt="../../_images/kohn-cc.jpg" src="../../_images/kohn-cc.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text"><a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/kohn/biographical/">Walter Kohn</a>.</span><a class="headerlink" href="#figure-example" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id2">
+<a class="reference internal image-reference" href="../../_images/pople-cc.png"><img alt="../../_images/pople-cc.png" src="../../_images/pople-cc.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text"><a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/pople/biographical/">John Pople</a>.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id3">
+<a class="reference internal image-reference" href="../../_images/karplus-cc.jpg"><img alt="../../_images/karplus-cc.jpg" src="../../_images/karplus-cc.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text"><a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2013/karplus/biographical/">Martin Karplus</a>.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/warshel-cc.jpg"><img alt="../../_images/warshel-cc.jpg" src="../../_images/warshel-cc.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text"><a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2013/warshel/biographical/">Arieh Warshel</a>.</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="id5">
+<a class="reference internal image-reference" href="../../_images/levitt-cc.jpg"><img alt="../../_images/levitt-cc.jpg" src="../../_images/levitt-cc.jpg" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text"><a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/2013/levitt/biographical/">Michael Levitt</a>.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!--
+````{panels}
+:card: shadow-none, border-1
+:column: col-12 p-0 m-0
+**Figure:** The Nobel Laurates in computational chemistry. <a href="https://doi.org/10.1073/pnas.1320569110">The 1998 Nobel winners</a> Walter Kohn (UC Santa Barbara) and John Pople (Nortwestern), and the 2013 ones <a href="https://www.nobelprize.org/prizes/chemistry/2013/karplus/biographical/">Martin Karplus</a> (Harvard & Strasbourg), <a href="https://www.nobelprize.org/prizes/chemistry/2013/warshel/biographical/">Arieh Warshel</a> (Southern California), <a href="https://www.nobelprize.org/prizes/chemistry/2013/levitt/biographical/">Michael Levitt</a> (Stanford). Photos from Wikipedia, Creative Commons license.
+````
+-->
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.chemistryworld.com/features/models-of-success/6701.article">Models of success</a> from <a class="reference external" href="https://www.chemistryworld.com/">Chemistry World</a></p></li>
+<li><p><a class="reference external" href="https://www.lindau-nobel.org/">Lindau Nobel Laureate Meetings</a></p></li>
+<li><p><a class="reference external" href="https://www.nobelprize.org/prizes/facts/nobel-prize-facts/">Nobel Prize facts from the Nobel Foundation</a>. Includes a lot of interesting information including prizes to married couples, mother/father &amp; child and so on.</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Nobel_Prize_controversies">Nobel Prize controversies</a></p></li>
+</ul>
+<div class="section" id="other-notable-prizes-in-computational-chemistry-physics">
+<h3>Other notable prizes in computational chemistry &amp; physics<a class="headerlink" href="#other-notable-prizes-in-computational-chemistry-physics" title="Permalink to this headline">¶</a></h3>
+<p>Since we got into the Nobel Prizes, let’s list a few others.
+Probably the best know is the <a class="reference external" href="https://www.cecam.org/awards">Berni J. Alder CECAM Prize</a>, the acronym <a class="reference external" href="https://www.cecam.org/">CECAM</a> comes from  <em>Centre Européen de Calcul Atomique et Moléculaire</em> and it is currently headquartered at the École polytechnique fédérale de Lausanne (EPFL) in Switzerland. CECAM is a pan-European organization and on the practical side it is well-known for its <a class="reference external" href="https://www.cecam.org/program?type=all&amp;month=all&amp;location=all">workshops, summer schools and conferences</a>. The Prize, named after <a class="reference external" href="https://en.wikipedia.org/wiki/Berni_Alder">Berni Alder</a> one of the pioneers of molecular simulations, is granted every three years. The prize was established in 1999 and has thus far been granted to</p>
+<ul class="simple">
+<li><p>2019: <a class="reference external" href="https://en.wikipedia.org/wiki/Sauro_Succi">Sauro Succi</a>, Italian Institute of Technology, Center for Life Nanosciences at La Sapienza in  Rome, <a class="reference external" href="https://www.cecam.org/award-details/2019-sauro-succi">for his pioneering work in lattice-Boltzmann (LB) simulations</a>.</p></li>
+<li><p>2016: <a class="reference external" href="https://en.wikipedia.org/wiki/David_Ceperley">David M Ceperley</a>, Department of Physics, University of Illinois at Urbana-Champaign and Eberhard Gross, Max Planck Institute of Microstructure Physics, Halle for “<a class="reference external" href="https://www.cecam.org/award-details/2016-david-m-ceperley-and-eberhard-k-u-gross">fundamental ground-breaking contributions to the modern field of electronic structure calculations</a>”.</p></li>
+<li><p>2013: <a class="reference external" href="https://en.wikipedia.org/wiki/Herman_Berendsen">Herman J.C. Berendsen</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Jean-Pierre_Hansen">Jean-Pierre Hansen</a>, Groningen and Cambridge for <a class="reference external" href="https://www.cecam.org/award-details/2013-herman-jc-berendsen-and-jean-pierre-hansen">“outstanding contributions to the developments in molecular dynamics and related simulation methods”</a></p></li>
+<li><p>2010: <a class="reference external" href="https://en.wikipedia.org/wiki/Roberto_Car">Roberto Car</a> (Princeton) and <a class="reference external" href="https://en.wikipedia.org/wiki/Michele_Parrinello">Michele Parrinello</a> (ETH Zürich) for <a class="reference external" href="https://www.cecam.org/award-details/2010-roberto-car-and-michele-parrinello">“their invention and development of an ingenious method that, by unifying approaches based on quantum mechanics and classical dynamics, allows computer experiments to uncover otherwise inaccessible aspects of physical and biological sciences”</a></p></li>
+<li><p>2007: <a class="reference external" href="https://en.wikipedia.org/wiki/Daan_Frenkel">Daan Frenkel</a>, Cambridge. <a class="reference external" href="https://www.cecam.org/award-details/2007-daan-frenkel"></a></p></li>
+<li><p>2004: <a class="reference external" href="https://en.wikipedia.org/wiki/Michael_L._Klein">Mike Klein</a>, Temple University. The committee wrote: <a class="reference external" href="https://www.cecam.org/award-details/2004-mike-klein">“Mike Klein’s leadership has been crucial in the development of a variety of computational tools such as constant-temperature Molecular Dynamics, Quantum simulations (specifically path-integral simulations), extended-Lagrangian methods and multiple-timestep Molecular Dynamics”</a></p></li>
+<li><p>2001: <a class="reference external" href="https://en.wikipedia.org/wiki/Kurt_Binder">Kurt Binder</a>, University of Mainz <a class="reference external" href="https://www.cecam.org/award-details/2001-kurt-binder">“for pioneering the development of the Monte Carlo method as a quantitative tool in Statistical Physics and for catalyzing its application in many areas of physical research”</a></p></li>
+<li><p>1999: <a class="reference external" href="https://en.wikipedia.org/wiki/Giovanni_Ciccotti">Giovanni Ciccotti</a>, University of Rome La Sapienza for <a class="reference external" href="https://www.cecam.org/award-details/1999-giovanni-ciccotti">” pioneering contributions to molecular dynamics”</a></p></li>
+</ul>
+<p>Other prizes include:</p>
+<ul class="simple">
+<li><p>The APS <a class="reference external" href="https://www.aps.org/programs/honors/prizes/rahman.cfm">Aneesur Rahman Prize for Computational Physics</a></p></li>
+<li><p><a class="reference external" href="https://www.acscomp.org/awards/acs-award-for-computers-in-chemical-and-pharmaceutical-research">ACS Award for Computers in  Chemical and Pharmaceutical Research</a></p></li>
+</ul>
+<p>The reason for listing all these is simply to indicate how diverse the field is.</p>
+</div>
+</div>
+<div class="section" id="a-few-examples">
+<h2>A few examples<a class="headerlink" href="#a-few-examples" title="Permalink to this headline">¶</a></h2>
+<p>Before going any further, let’s take a look some examples from simulations to get a more concrete view of what simulations can do. Further examples will be provided as we progress. These are taken from our own simulations to avoid any copyright issues. Use the blue arrow to see more movies.</p>
+<!--
+All of the simulations and visualizations shown in the examples were made with the tools we use in this course.
+--><div class="cell tag_remove-input docutils container">
+</div>
+</div>
+<div class="section" id="theory-and-experiment-vs-computation">
+<h2>Theory and experiment vs computation<a class="headerlink" href="#theory-and-experiment-vs-computation" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="experiments-and-in-silico-modeling">
+<h3>Experiments and <em>in silico</em> modeling<a class="headerlink" href="#experiments-and-in-silico-modeling" title="Permalink to this headline">¶</a></h3>
+<p><strong>Computational microscope.</strong> The term <em>computational microscope</em> was probably introduced first by Walker and Mezey in 1995 in their article “A new computational microscope for molecules: High resolution MEDLA images of taxol and HIV-1 protease, using additive electron density fragmentation principles and fuzzy set methods”<span id="id6">[<a class="reference internal" href="#id41">3</a>]</span>. This combined imagining and <a class="reference external" href="https://en.wikipedia.org/wiki/Density_functional_theory">density functional theory (DFT)</a> calculations. The term was then re-introduced in the context of MD simulations by Lee et al. in their 2009 article “Discovery Through the Computational Microscope”<span id="id7">[<a class="reference internal" href="#id34">1</a>]</span>. The analogy is a very good one: molecular simulations can mimic behvior of systems in the atomic scale and they allow one to see, analyze and track the atoms. Lee et al. conclude their article by saying<span id="id8">[<a class="reference internal" href="#id34">1</a>]</span></p>
+<blockquote><em>
+Overall, simulations can cast light on the basic architectural principles of molecules that explain fundamental cellular mechanics and might eventually direct the design of proteins with desired mechanical properties. Most importantly, beyond the understanding gained regarding the molecular mechanisms of force-bearing proteins, these examples serve to demonstrate that incessant advancements of MD methodology bring about discoveries stemming from simulation rather than from experiment. Molecular modeling, while useful as a means to complement many experimental methodologies, is rapidly becoming a tool for making accurate predictions and, thereby, discoveries that stand on their own. In other words, it is becoming a computational microscope.    
+    </em>
+    </blockquote>    
+<p>This summarizes the situation very well. Although computation has finally gained the recognition as an independent paradigm of research with theory and experiments, every now and then one still hears the comment <em>but it is just a simulation</em> or <em>it is just a model</em>. While that can be politely dismissed, such an ignorant comment deserves an equally polemic answer: <em>utter rubbish from a petrified mind.</em> Independent if one is a theorist, experimentalist or computational scientist, it is imperative to have a reasonable understanding what the other methods of research can and cannot do.</p>
+<!--
+Ultimately, of course, results by computation and theory must be tested experimentally, but simulations and theory are the sources of quantitative and predictive results, framework and theories.     
+-->
+</div>
+</div>
+<div class="section" id="modeling-simulations-the-3rd-paradigm-of-research">
+<h2>Modeling &amp; simulations: The 3rd paradigm of research<a class="headerlink" href="#modeling-simulations-the-3rd-paradigm-of-research" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../../_images/heart-simplified.svg" id="heart"><img alt="../../_images/heart-simplified.svg" class="align-right" id="heart" src="../../_images/heart-simplified.svg" width="300px" /></a>
+<!--
+Relations between experiments and simulations. 
+Slightly modified from the original of Dr. Markus Miettinen.
+-->
+<p>With the above potentially provoking statements, it is important to keep in mind that while we are dealing with <em>empirical sciences</em> and any prediction has to be proven by experiments, theory and computation provide predictions and explanations for observations in a manner that is often impossible for experimentation alone. In addition, experiments have their own problems and to get a signal out of any system, one must poke it, that is, one has to perturb the system to get a response. Simulations don’t have such a limitation but can actually be used to study what the effects of probes or peturbations are on a given system. All in all, experiments, theory and simulations all have their advantages and problems and one should not consider any of them to be more superior than the others. With the rise of big data, one could even extend the methods of research to <em>data-intensive analysis</em>.</p>
+<ul class="simple">
+<li><p>Simulations can be predictive and guide experiments.</p></li>
+<li><p>Can tell what kind of perturbations experimental probes cause.</p></li>
+<li><p>Like any other approach: has its own problems</p></li>
+</ul>
+<!--
+<table class="lblue" style="float: right" width="400">
+  <tr>
+    <td>
+       <img src="../../images/heart-simplified.svg" width="400px" />     
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Relations between experiments and simulations. Slightly modified from the original of Dr. Markus Miettinen.
+     </td>
+   </tr>
+</table>  
+-->
+<!--
+**Molecular models in scattering and NMR:**
+
+Molecular models are used for associating molecular structures from scattering and NMR. Conceptually, this is fitting to a model and not a simulation.
+
+-->
+<p><strong>More:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cacm.acm.org/magazines/2009/11/48443-deep-data-dives-discover-natural-laws/fulltext">Deep Data Dives Discover Natural Laws</a></p></li>
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/books/NBK44988/">Vision 2020: Computational Needs of the Chemical Industry</a></p></li>
+</ul>
+</div>
+<div class="section" id="good-practices">
+<h2>Good practices<a class="headerlink" href="#good-practices" title="Permalink to this headline">¶</a></h2>
+<p>The list below repeats some of the matters discussed earlier, but it is well worth going through them again.</p>
+<ul class="simple">
+<li><p>Keep notes, that is have a lab book. That saves a lot of time and reduces the number of errors. Document the procedures and commands (and they can sometimes be somewhat tricky and finding them quickly without proper notes may be difficult or/and lead to errors. Lab book will help you to avoid mistakes and help you to speed up your work tremendously. One good way is to use something like a github document. That is easy to maintain and it is available from any computer. Other reasonable ways: Google docs, OneDrive, Dropbox, etc.</p></li>
+<li><p>Always remember to back up you critical files! There are great tools for doing that including GitHub, Zenodo and such.</p></li>
+<li><p>When running simulations, ensure that you will not fill your computer (estimate the amount of data that will be generated and is needed for analysis).</p></li>
+<li><p>Check for viruses</p></li>
+<li><p>Always, always, always visualize</p></li>
+<li><p>Always, always, always verify your simulations &amp; system setup against known results from theory, other simulations and experiments.</p></li>
+<li><p>Let the computer do the work! Use <a class="reference external" href="https://en.wikipedia.org/wiki/Shell_script">shell scripts</a>, python, and so on to let the computer to do the repetitive work.</p></li>
+</ul>
+</div>
+<div class="section" id="dangers">
+<h2>Dangers<a class="headerlink" href="#dangers" title="Permalink to this headline">¶</a></h2>
+<p>The biggest problem of any computational modeling is the user, the computer will do what it is told to do.</p>
+<p>We have stated in our paper “The good, the bad and the user in soft matter simulations”<span id="id9">[<a class="reference internal" href="#id42">4</a>]</span>:</p>
+<blockquote><em>
+It may sound absurd and somewhat provoking, but available simulation 
+software (i.e., not home grown programs) becoming very user friendly and easy to 
+obtain can almost be seen as a negative development!
+    </em>
+    </blockquote>
+<p>Not that long ago all simulations were based on house-written programs. Such programs had obvious limitations: They were not available to others, the codes were not maintained for longer periods of time, they were often difficult to use for all but the person who wrote code. It was also difficult to improve their performance due to very limited number (often one) developers. Modern codes are well maintained, have long-term stability, extensive error checking due to large number of users and they offer excellent performance that is impossible reach for any individual developer or even a small group. They are also very easy to use.</p>
+<p>Similarly to experiments, it is easy train a person to use the software and even produce data using the built-in analysis methods. That is, however, a precarious path. It is absolutely imperative to have a very strong background in the application field and its underlying theories and methods to be able to produce something meaningful. One should never use a software package as a black box!</p>
+<p><strong>More on the topic:</strong></p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4629271/">Rampant software errors may undermine scientific results</a></p></li>
+<li><p><a class="reference external" href="https://www.natureindex.com/news-blog/three-ways-researchers-science-can-avoid-common-programming-bugs-errors">Three ways researchers can avoid common programming bugs</a></p></li>
+<li><p><a class="reference external" href="https://www.nature.com/news/2010/101013/full/467775a.html">Computational science: …Error</a></p></li>
+<li><p><a class="reference external" href="https://www.semanticscholar.org/paper/A-Scientist%27s-Nightmare%3A-Software-Problem-Leads-to-Miller/dcbf02005884bf79d80315b250b8d70b7a021a21">A Scientist’s Nightmare: Software Problem Leads to Five Retractions</a></p></li>
+<li><p><a class="reference external" href="https://elemental.medium.com/when-science-needs-self-correcting-a130eacb4235">Scientists Make Mistakes. I Made a Big One.</a></p></li>
+</ul>
+<!-- 
+## The need for different models
+
+
+Just like with experiments, there is no single correct choice for a computational method. Choosing the most appropriate method for the task at hand depends on various issues. First and foremost, what is the phenomenon/phenomena that is being studied. For example, if one is interested in the behavior of electrons, then quantum mechanical methods are the obvious candidates. This immediately brings in additional questions such as are we interested in band structure, chemical reactions, excited states or something else. Such questions are very important since they again narrow down the choice of methods. For example, if one is studied excited states, the usual methods from density functional theory are not enough. On the other hand, if one is interested in formation of micelles or diffusion of molecules, quantum mechanical methods are useless and the more reasonable choices would be classical MD or coarse-grained MD. Why? Collective phenomena such aggregate formation doesn't  depends directly on quantum mechanical properties (although some of them are implicitly integrated in the higher level models such as classical MD). One may also be interested in static or dynamic phenomena. In the former case, optimization methods may be method of choice whereas in the latter case one needs an equation of motion that is integrated in time. 
+
+-->
+<div class="figure align-left" id="scales1">
+<a class="reference internal image-reference" href="../../_images/1280-scales-fs.svg"><img alt="../../_images/1280-scales-fs.svg" src="../../_images/1280-scales-fs.svg" width="700px" /></a>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text"><em>Some common computer simulation methods and typical their time scales. Rough idea of systems sizes in terms of atoms and lengths is given when appropriate. The typical time steps in classical molecular dynamics and coarse-grained MD are also shown.</em></span><a class="headerlink" href="#scales1" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="terminology-scales">
+<h2>Terminology: Scales<a class="headerlink" href="#terminology-scales" title="Permalink to this headline">¶</a></h2>
+<p>The figure aboves show different methods and typical time scales associated with them. It is common to use the following terminology when talking about them. It is also important to notice that the physical time and length scales given below are somewhat arbitrary and depend on the field and there is some overlap:</p>
+<p><strong>Macroscale:</strong> Roughly speaking, denotes time and length scales observable by plain eye.</p>
+<ul class="simple">
+<li><p>Typical times &gt;0.1 sec and lengths &gt;1 mm</p></li>
+<li><p>Topical associated phenomena: instabilities, pattern formation, phase separation</p></li>
+<li><p>Some simulation methods often used to study these scales: phase field models, FEM, Monte Carlo</p></li>
+</ul>
+<p><strong>Mesoscale:</strong> Intermediate scales that are not quite observable directly by eye, but typically accessible by many experimental techniques. This is a very broad concept.</p>
+<ul class="simple">
+<li><p>Typical times from <span class="math notranslate nohighlight">\(10^{-7}\)</span> sec up to <span class="math notranslate nohighlight">\(10^{-1}\)</span> sec and lengths ~<span class="math notranslate nohighlight">\(10^{-7}\)</span>-<span class="math notranslate nohighlight">\(10^{-3}\)</span> m.</p></li>
+<li><p>Typical phenomena: instabilities, pattern formation, aggregation</p></li>
+<li><p>Some commonly used simulation methods: phase field models,  lattice Boltzmann, coarse-grained molecular dynamics, Monte Carlo</p></li>
+</ul>
+<p><strong>Atomistic scale:</strong> Typically indicates molecular scales.</p>
+<ul class="simple">
+<li><p>Are in the range of <span class="math notranslate nohighlight">\(10^{–12}\)</span> – <span class="math notranslate nohighlight">\(10^{-7}\)</span> sec and <span class="math notranslate nohighlight">\(10^{-9}\)</span> - <span class="math notranslate nohighlight">\(10^{-7}\)</span>m.</p></li>
+<li><p>Typical phenomena: microscopic mechanisms and interactions such as hydrogen bonding</p></li>
+<li><p>Some commonly used methods: classical molecular dynamics, Monte Carlo</p></li>
+</ul>
+<p><strong>Subatomistic scale:</strong> Typically used to denote quantum scales.</p>
+<ul class="simple">
+<li><p>Time and length scales below the atomistic</p></li>
+<li><p>Typical phenomena: electronic structure, excitations, chemical reactions</p></li>
+<li><p>Some commonly used methods: <em>ab initio</em> methods, Green’s functions, Monte Carlo, density functional theory</p></li>
+</ul>
+<!--
+ <table class="lblue" style="float: right" width="680">
+  <tr>
+    <td>
+       <img src="../../images/1280-scales-fs.svg" width="680px" />     
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Some common computer simulation methods and typical their time scales. Rough idea of systems sizes in terms of atoms and lengths is given when appropriate. The typical time steps in classical molecular dynamics and coarse-grained MD are also shown.
+     </td>
+   </tr>
+</table>
+-->
+<div class="section" id="hybrid-models">
+<h3>Hybrid models<a class="headerlink" href="#hybrid-models" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference internal" href="#scales1"><span class="std std-numref">Fig. 13</span></a> lists some common models. It is important to notice that it is possible to combine, or hybridize them. The most common hybridization is perhaps the QM/MM methods, that is, combination of a quantum mechanical  method with a method from the classical MD level; the acronym MM stands for molecular mechanics and it is often used synonymously with classical MD although strictly speaking that is not the case. The principle is simple: In QM/MM, a small part of the system is treated using quantum mechanics and the rest with classical (Newtonian) mechanics. Although the idea is simple, there are many complications and limitations.</p>
+<p>Similarly to QM/MM, it is possible combine classical MD and coarse-grained MD. Another fairly common combination is <a class="reference external" href="https://en.wikipedia.org/wiki/Lattice_Boltzmann_methods">lattice-Boltzmann</a> (LB) and molecular dynamics. There, the difficulties are different since the lattice-Boltzmann method uses a grid to solve fluid motion using densities (=no explicit particles), but classical MD brings in particles. This means that the two must coupled in consistent way. Often that means using composite particles instead of ‘normal’ atoms.</p>
+</div>
+<div class="section" id="implicit-vs-explicit-water">
+<h3>Implicit vs explicit water<a class="headerlink" href="#implicit-vs-explicit-water" title="Permalink to this headline">¶</a></h3>
+<p>When simulating biomolecular systems as well as many others, water is present. Water is very challenging for simulations since in practise most of the simulation times goes in simulation water as it is the most abundant component in any given system. This is quite easy to understand: In addition to the molecules of interest, say, proteins, lipids or polymers, for example, the simulation box needs to be filled with water at the <em>correct density</em> and to reach proper <em>solvation</em>, enough water is needed. It is not uncommon that over 90% of the simulation time goes to simulating water.</p>
+<p>While keeping water in is naturally the most correct choice, methods have been developed to include water only implicitly - such models are called implicit solvent models. There are several strategies for doing but the <em>Generalized Born model</em> is probably the most commonly used one.</p>
+</div>
+<div class="section" id="coarse-graining">
+<h3>Coarse-graining<a class="headerlink" href="#coarse-graining" title="Permalink to this headline">¶</a></h3>
+<!-- 
+<table class="lblue" style="float: right" width="220">
+  <tr>
+    <td>
+       <img src="../../images/cgfig.png" width="220px" height="100px"/>
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: In coarse-graned MD, atoms can be considered as 'bundled' such that a cluster of atoms forms a 'superatom' or a coarse-grained bead.
+     </td>
+   </tr>
+</table>
+
+
+
+```{figure} img/cgfig.png
+---
+height: 100px
+name: heart
+---
+In coarse-graned MD, atoms can be considered as 'bundled' such that a cluster of atoms forms a 'superatom' or a coarse-grained bead.
+```
+-->
+<p>Coarse-graining is a process in which one tries to reduce the number of <em>degrees of freedom</em> in order to be able to simulate larger systems for longer times. There many approaches to coarse-grain but as a general idea, one can consider a molecule such as a lipid in the Figure and somehow determine new larger <em>superatoms</em>. It may sound like magic, but there is a solid theoretical procedure do that (Henderson’s theorem) but - like with everything - there are limitations and complexities.</p>
+<p>Here is a brief list of some coarse-grained  MD methods:</p>
+<ul class="simple">
+<li><p>Direct coarse graining using the Henderson theorem.</p></li>
+<li><p>Adaptive Resolution Simulations (AdResS).</p></li>
+<li><p>The MARTINI model. This is the most popular approach. The name MARTINI does not refer to the drink, but the Gothic style church steeple in the city of Groningen, the Netherlands. The tower was completed in 1482 and it is the most famous landmark in the city. The developers of the model, Marrink and co-workers are based at the University of Groningen. As an unrelated note (but Canadian connection), the city of Groningen was librated by Canadian troops in World War II.</p></li>
+<li><p>Dissipative Particle Dynamics (DPD). The DPD method is an other popular coarse-grained method. It was originally developed as a fluid flow solver at Shell laboratories by Hoogerbrugge and Koelman in 1991. The original method had, however, an error: It could not produce the correct equilibrium state with Boltzmann distribution; this is a strict requirement that arises from statistical mechanics (and it will discussed in detail later). This problem was fixed through the theoretical work of Espanol and Warren in 1995, and their formulation is the one that is universally used.</p></li>
+<li><p>PLUM model. The PLUM model resembles MARTINI in the sense that the level of coarse-graining is the same. The philosophies of the two models are, however, different. PLUM was developed by Bereau and Deserno.</p></li>
+<li><p>ELBA model. The ELBA model was developed by Orsi and Essex in 1991 primarly for lipid simulations. Whereas many other CG models igonre electrostatic interactions (or most of them), ELBA is unique in including them. The name ELBA comes from ‘electrostatics-based’.</p></li>
+<li><p>SIRAH model. The name comes from ‘Southamerican Initiative for a Rapid and Accurate Hamiltonian’ and it has its origin in the Institute Pasteour de Montevideo in Urugay. SIRAH is based on a top down approach.</p></li>
+</ul>
+</div>
+<div class="section" id="concurrent-vs-sequential-coarse-graining">
+<h3>Concurrent vs sequential coarse-graining<a class="headerlink" href="#concurrent-vs-sequential-coarse-graining" title="Permalink to this headline">¶</a></h3>
+<p>As the number of different models and the existence of various hybrid models suggests, there are different approached to coarse-graining. These will not be discussed in detail, but it is good to understand the there are two philosophies: <em>sequential</em> and <em>concurrent</em>. Sequential means that data is first extracted from a higher accuracy model. That data is then used construct a coasre-grained model. In <em>concurrent</em> coarse-graining, CG is done on-the-fly.</p>
+<!--
+```{sidebar} Coarse-grained molecule
+In coarse-graned MD, atoms can be considered as 'bundled' such that a cluster of atoms forms a 'superatom' or a coarse-grained bead.
+ ![](img/cgfig.png)
+```
+
+ <table class="lblue" style="float: right" width="220">
+  <tr>
+    <td>
+       <img src="../../images/logos/gromacs-logo.png" width="220px"/>
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Gromacs is one of the world's most popular molecular simulation packages. It is open source and it can perform both atomistic and coarse-grained simulations.
+     </td>
+   </tr>
+</table>
+
+-->
+</div>
+<div class="section" id="coarse-graining-and-software-compatibility">
+<h3>Coarse-graining and software compatibility<a class="headerlink" href="#coarse-graining-and-software-compatibility" title="Permalink to this headline">¶</a></h3>
+<p>It is not possible to run all of the above (or others) using just any software. Below are some notes. The list is not extensive but is updated regularly.</p>
+<ul class="simple">
+<li><p>Direct coarse graining: There is no unified tool.</p></li>
+<li><p>AdResS: Works with Espresso++</p></li>
+<li><p>MARTINI: Works with Gromacs</p></li>
+<li><p>DPD: Works with LAMMPS</p></li>
+<li><p>PLUM: Works with a special version of Gromacs</p></li>
+<li><p>ELBA: Works with LAMMPS</p></li>
+<li><p>SIRAH: Works with Gromacs and Amber</p></li>
+</ul>
+</div>
+<div class="section" id="beyond-particles-different-representations-and-methods">
+<h3>Beyond particles: Different representations and methods<a class="headerlink" href="#beyond-particles-different-representations-and-methods" title="Permalink to this headline">¶</a></h3>
+<p>Not all coarse-grained simulation methods use particles. The most common ones are the finite element method (FEM), phase field models and the lattice-Boltzmann method. In all of these cases the space is meshed, that is, the space is discretized. This discretization is typically regular such as based on squares, cubes, triangle or something else, but it can also be random or adaptive.</p>
+<p><strong>Monte Carlo:</strong> Purely stochastic, total momentum is not conserved. This is a general methodology and does not imply the anything about the application. Monte Carlo can be used for problems as different as optimizing railway network traffic and to study quantum phenomena.</p>
+<p><strong>FEM:</strong> The finite element method is essentially a method for solving partial differential equations (PDE). The idea is simple: discretize the space <em>elements</em>. It then uses methods based on calculus of variations to solve the problem at hand. As the above implies, it is a very general method and not limited to any particular field. Typical application fields include structural analysis and heat flow. The idea of elements in obvious if one considers a bridge: To model various designs, one can consider the trusses to be the finite elements that have, for example, elastic properties. The elements are meshed and the PDEs (what exactly they are depends on the problem at hand) are then solved numerically.</p>
+<p><strong>Phase field:</strong> In the case of phase field models, the space is typically discretized using a regular grid and the relevant PDEs are solved using <em>finite differebce methods</em> on a grid. The PDEs arise from the physical proprties of the system: The system is described by an <em>order parameter</em>. The order parameter is a central concept in fields such as <em>physical chemistry</em> and <em>condensed matter physics</em> and it describes the emergence of order in a system. In the disorder state (high temperature), the order paramater is zero. When the system undergoes a phase transition (temperature is lowered), the order parameter becomes small and finite, and it is bounded from above to the value of one. Thus, order parameter of one describes full order. The difficulty is that there is no unique way of determining the order parameter but its choice depends on the system. One thus needs deep knowledge of ths system and its behavior. Examples of order parameter are the density in the case of a liquid-gas transition and the wavefunction in the case of superconductivity.</p>
+<p><strong>Lattice-Boltzmann:</strong> In this case the space is again meshed using a regular mesh. Then a fluid is described a density at each of the nodes. The idea is to then solve for the density and flow by approximating the Boltzmann transport equation. The simplest single-relaxation time approx to Bolzmann transport equation is the so-called Bhatnagar-Gross-Krook (BGK) equation and it is commonly used in LB.  This method can be hybridized with particle models.</p>
+<!--
+ <table class="lblue" style="float: none" width="680">
+  <tr>
+    <td>
+       <img src="../../images/water-molecule.svg" width="130px" />    
+       <img src="../../images/cgfig.png" width="100px" height="100px"/>
+       <img src="../../images/cdw-snap.png" width="100px"/>
+       <img src="../../images/lb.jpg" width="100px"/>
+       <img src="../../images/phase.jpg" width="100px"/>
+       <img src="../../images/fem.jpg" width="100px"/>    
+     </td>
+    </tr>    
+    <tr>
+     <td colspan="1">
+         Figure: Quantum. The systems are described by the Schrödinger equation and wave functions. In classical molecular dynamics, there are no electrons.  Individual atoms are the smallest single entity. Molecules such as water do have properties such partial charges. Their dynamics is generated by Newton's equations of motion. In coarse-graned MD, atoms can be considered as 'bundled' such that a cluster of atoms forms a 'superatom' or a coarse-grained bead. In lattice-Boltzmann simulations, computation is done on a grid and atoms can be included as coarse-grained composite entities. In phase field models, there are no individual atoms. Instead, density is used. Finally, the finite element method (FEM) uses elements that typically have elastic (and other properties). 
+     </td>
+   </tr>
+</table>  
+
+--></div>
+</div>
+<div class="section" id="why-do-we-need-so-many-methods">
+<h2>Why do we need so many methods?<a class="headerlink" href="#why-do-we-need-so-many-methods" title="Permalink to this headline">¶</a></h2>
+<p>The above examples and discussion are mostly from computational chemistry / physics / chemical engineering. Even when restricted to those fields and just simulations, the number of methods is very large - and we haven’t even talked about algorithms and data analysis yet! Why do we need some many methods? There are various reasons, so let’s take a look at some. First, let’s look at the number of atoms/components - after all, in the context of computational chemistry / physics / chemical engineering they are fundamental units. Analogously, in other problems one has to identify the basic units and behaviours to be modelled and analyzed.</p>
+<p>A typical classical MD simulation has 10,000-100,000 atoms. The atoms are treated as entities interacting via pair potentials, and electrons (or nuclei) are not taken into account separately. Without considering technical details, let’s naively assume that that there is some relatively straightforward way of treating electrons and nuclei. A system of 10,000 atoms would then contain many more entities. If the system has only hydrogens, then the total number of particles would be 20,000. Let’s consider carbon-12. It has 6 protons, 6 neutrons and 6 electrons: Each atom has 18 smaller entities. This would make the 10,000 atom system to a 180,000 atom system. How about gold? It has 79 protons, 118 neutrons and 79 electrons. This means that each Au atom has 276 smaller entities and a system of 10,000 atoms would then consist of 2,760,000 particles. The number alone is overwhelming and the methods to treat them make it an even tougher problem. Here are some issues that one needs to consider.</p>
+<ul class="simple">
+<li><p>Classical treatment: <a class="reference external" href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion">Newton’s equation of motion</a>, positions and velocities</p></li>
+<li><p>Quantum mechanics: <a class="reference external" href="https://en.wikipedia.org/wiki/Schr%C3%B6dinger_equation">Schrödinger equation</a>, <a class="reference external" href="https://en.wikipedia.org/wiki/Wave_function">wavefunction</a></p></li>
+<li><p>Discrepancy in velocities: The fastest motion determines time step.</p>
+<ul>
+<li><p>Consider this: In hydrogen, electrons (1s) move at about 0.7% speed of light!</p></li>
+<li><p>In classical MD, the time step is typically 1-2 fs (or <span class="math notranslate nohighlight">\(1-2 \times 10^{-15}\)</span> s)</p></li>
+<li><p>In coarse-grained MD, the time step depends on the level of description: In the popular MARTINI model the time step is usually 10-40 fs, in dissipative particle dynamics about 10 ps.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="programming-languages">
+<h2>Programming languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h2>
+<p>One typical question is: Does one need to be able to program? The simple answer is yes. One needs to know some programming independent if one does computation, theory or experiments. Below is a brief discussion.</p>
+<p><strong>Which programming language should I use/learn?</strong> Depends on the needs, the level of knowledge and application(s). For example, Python is a general purpose language that can be used for many purposes and it is particularly useful for analyzing and visualzing data indpendent if the data is from simulations, experiments or some database. Python is very quick to learn and it has amazing amount of libraries and routines for almost any imaginable task, and the community is large and very supportive. Python is an interpreted language. Python is a language that has become a must learn independent of field and application, and it is particularly important in machine learning. We will also use Python.</p>
+<p>C and C++ have a different nature than Python. They have to be compiled and they have a much more rigidily defined structure. C/C++ codes are great for writing high-performance simulation codes and, for example in the field of molecular simulations, Gromacs, LAMMPS and NAMD are written in C/C++. As for syntax, C/C++ and Python have lots of similarities.</p>
+<p>Fortran is an older programming language and it was originally designed to be very efficient for numerical calculations. The name Fortran comes from <em>For</em>mula <em>Tran</em>slation. Although there has been a shift to C/C++, many HPC codes such as CP2K, Orca and Gaussian are written in Fortran.</p>
+<p>Graphics processing units (GPU) are used increasingly in high performance computing. They use languages such as CUDA for NVIDIA GPUs, HIP for AMD GPUs and OpenCL that is GPU agnostic. In high performance computing CUDA is the dominant one while HIP is starting to gain ground. Syntactically, they have a very high resemblance to C/C++.</p>
+<p>As for computers,  the Linux operating system is the dominant in the world of higher performance computing. As for programming, it can be done in any of the common environments, that is, Windows, Mac OSX and Linux, or even Android or Chrome.</p>
+</div>
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<p id="id10"><dl class="citation">
+<dt class="label" id="id34"><span class="brackets">1</span><span class="fn-backref">(<a href="#id7">1</a>,<a href="#id8">2</a>)</span></dt>
+<dd><p>Eric H. Lee, Jen Hsin, Marcos Sotomayor, Gemma Comellas, and Klaus Schulten. Discovery through the computational microscope. <em>Structure</em>, 17(10):1295–1306, Oct 2009. <a class="reference external" href="https://doi.org/10.1016/j.str.2009.09.001">doi:10.1016/j.str.2009.09.001</a>.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>Nicholas Metropolis, Arianna W. Rosenbluth, Marshall N. Rosenbluth, Augusta H. Teller, and Edward Teller. Equation of state calculations by fast computing machines. <em>The Journal of Chemical Physics</em>, 21(6):1087, 1953. <a class="reference external" href="https://doi.org/10.1063/1.1699114">doi:10.1063/1.1699114</a>.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id6">3</a></span></dt>
+<dd><p>P. Duane Walker and Paul G. Mezey. A new computational microscope for molecules: high resolution MEDLA images of taxol and HIV-1 protease, using additive electron density fragmentation principles and fuzzy set methods. <em>Journal of Mathematical Chemistry</em>, 17(2):203–234, 1995. <a class="reference external" href="https://doi.org/10.1007/bf01164848">doi:10.1007/bf01164848</a>.</p>
+</dd>
+<dt class="label" id="id42"><span class="brackets"><a class="fn-backref" href="#id9">4</a></span></dt>
+<dd><p>Jirasak Wong-ekkabut and Mikko Karttunen. The good, the bad and the user in soft matter simulations. <em>Biochimica et Biophysica Acta (BBA) - Biomembranes</em>, 1858(10):2529–2538, oct 2016. <a class="reference external" href="https://doi.org/10.1016/j.bbamem.2016.02.004">doi:10.1016/j.bbamem.2016.02.004</a>.</p>
+</dd>
+</dl>
+</p>
+<!--
+## Summary
+--></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/IntroSciHPC"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../PythonBasics/python-intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Brief introduction to Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="hpc-intro.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Background on computers, computing and High Performance Computing</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen and Colin Denniston<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

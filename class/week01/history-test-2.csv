@@ -1,4 +1,0 @@
-Month, Year, Position,Name,System,Design/manufacturer,Country,Cores,Rmax (Tflop/s),Rpeak (Tflop/s),Power (kW)
-6,2020,1,  Supercomputer Fugaku," ""Supercomputer Fugaku,  A64FX 48C 2.2GHz,  Tofu interconnect D""",Fujitsu,JPN,7299072,415530,513854.7,28335
-6,2020,2, Summit ,"""IBM Power System AC922, IBM POWER9 22C 3.07GHz, NVIDIA Volta GV100,  Dual-rail Mellanox EDR Infiniband""",IBM,USA,2414592,148600,200794.9,10096
-6,2020,4, Sunway TaihuLight,"""Sunway MPP, Sunway SW26010 260C 1.45GHz""",Sunway,CHN,10649600,93014.6,125435.9,15371

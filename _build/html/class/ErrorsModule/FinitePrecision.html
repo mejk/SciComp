@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>22. Finite Precision &#8212; SciComp9502B</title>
+    <title>Finite Precision &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -48,7 +49,7 @@
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
@@ -64,11 +65,32 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/ErrorsModule/FinitePrecision.html" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/ErrorsModule/FinitePrecision.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="23. Example: Evaluating polynomials" href="HornersAlgorithm.html" />
-    <link rel="prev" title="21. Truncation Error in Taylor’s series" href="TaylorExample.html" />
+    <link rel="next" title="Example: Evaluating polynomials" href="HornersAlgorithm.html" />
+    <link rel="prev" title="Truncation Error in Taylor’s series" href="TaylorExample.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -97,7 +119,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -108,59 +130,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -170,13 +213,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
@@ -187,13 +230,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -204,18 +247,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
@@ -226,8 +269,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
@@ -239,37 +282,37 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="Errors_summary.html">
-   18. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Error_sources.html">
-   19. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="TaylorExample.html">
-   21. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   22. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="HornersAlgorithm.html">
-   23. Example: Evaluating polynomials
+   Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="RoundoffAmplification.html">
-   24. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="BackwardForwardConditioning.html">
-   25. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
@@ -301,7 +344,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../InterpFit/Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1">
@@ -426,17 +469,17 @@
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#precision-versus-accuracy">
-   22.1. Precision versus Accuracy
+   Precision versus Accuracy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#under-over-flow">
-   22.2. Under/Over-flow
+   Under/Over-flow
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#round-off-errors">
-   22.3. Round-off Errors
+   Round-off Errors
   </a>
  </li>
 </ul>
@@ -461,17 +504,17 @@
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#precision-versus-accuracy">
-   22.1. Precision versus Accuracy
+   Precision versus Accuracy
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#under-over-flow">
-   22.2. Under/Over-flow
+   Under/Over-flow
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#round-off-errors">
-   22.3. Round-off Errors
+   Round-off Errors
   </a>
  </li>
 </ul>
@@ -484,16 +527,16 @@
               <div>
                 
   <div class="section" id="finite-precision">
-<h1><span class="section-number">22. </span>Finite Precision<a class="headerlink" href="#finite-precision" title="Permalink to this headline">¶</a></h1>
+<h1>Finite Precision<a class="headerlink" href="#finite-precision" title="Permalink to this headline">¶</a></h1>
 <p>A transcendental number like <span class="math notranslate nohighlight">\(\pi\)</span> has an infinite number of digits.  Clearly, a computer is capable of only storing a finite number of these digits.  We are familar with the idea that rational numbers like <span class="math notranslate nohighlight">\(1/3 = 0.333333...\)</span> in base 10, or <span class="math notranslate nohighlight">\(0.0101010101...\)</span> in binary, must typically be truncated.  However, it is important to remember that computers store numbers in base 2 (binary) so that numbers like <span class="math notranslate nohighlight">\(1/10 = 0.1\)</span> in base 10, is <span class="math notranslate nohighlight">\(0.000110011001100...\)</span> have an infinite number of digits in binary and will have to be truncated when represented in a computer.  In this section we will discuss the impact of the computer’s finite precision on numerical algorithms.</p>
 <div class="section" id="precision-versus-accuracy">
-<h2><span class="section-number">22.1. </span>Precision versus Accuracy<a class="headerlink" href="#precision-versus-accuracy" title="Permalink to this headline">¶</a></h2>
+<h2>Precision versus Accuracy<a class="headerlink" href="#precision-versus-accuracy" title="Permalink to this headline">¶</a></h2>
 <p>It is important to distinguish what we mean by precision versus what we mean by accuracy.  In numerical computation we typically have 32 or 64 binary digits of <em>precision</em> in our calculations (which translates to roughly 8 or 16 decimal digits).  This does not mean we have anything like this amount of accuracy (as measured by absolute or relative errors).  In high school you may have been taught to discard any digits that were not accurate by keeping only significant digits in calculations.  This philosophy places value only on accuracy and none on precision.  However, there is also value in precision even if it far exceeds the accuracy of the numbers involved.</p>
 <p>An example of the value of precision, even in the absense of accuracy, was in the <a class="reference external" href="https://www.nasa.gov/content/hubbles-mirror-flaw">Hubble space telescope</a>.  The Hubble was a complete embarassment for NASA when it was first launched.  It was ground to the wrong specifications due to a calibration error.  As a result, it produced fuzzy images.  Fortunately, it was ground to a very high precision (with poor accuracy).  The high precision allowed NASA to install corrective lenses to cancel the error (the poor accuracy) resulting in the amazing clear images you are now familar with.</p>
 <p>As we will discuss below, the finite precision of floating-point numbers can result in a loss of accuracy as they lead to errors that can not just propogate but be significantly magnified by arithmetic operations.  The easiest, but not necessarily the best, way to deal with these errors is to increase the number of digits used to store numbers.  Over the years, this has lead to the number of binary digits used to store numbers increasing from 16-bit, to 32-bit, and then to 64-bit.  In addition, typically CPUS use 80-bit registers (at time of writing in 2022) to store intermediate results for 64-bit floating point calculations.  However, many computationally intensive calculations are now moving to GPU-computing (graphics processing unit) which are either limited to 32-bit floating point numbers, or perform significantly faster in 32-bit rather than 64-bit mode.  In addition, many of the typical “shortcuts” done for performance can often lead to a <a class="reference external" href="https://www.intel.com/content/dam/develop/public/us/en/documents/fp-consistency-121918.pdf">reproducability problem</a> (ie. the program may give slightly different results from one run to the next).  The best way to avoid these problems is to have a firm understanding of the origin of errors originating from finite precision arithmetic and design your algorithm and code in such a way to avoid them, or at least minimize their effects.</p>
 </div>
 <div class="section" id="under-over-flow">
-<h2><span class="section-number">22.2. </span>Under/Over-flow<a class="headerlink" href="#under-over-flow" title="Permalink to this headline">¶</a></h2>
+<h2>Under/Over-flow<a class="headerlink" href="#under-over-flow" title="Permalink to this headline">¶</a></h2>
 <p>As we mentioned, numbers have a finite precision in order to be stored in a computer.  Different types of numbers have different precision.  The table below gives the number of digits and range of several types of numerical types.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -556,7 +599,7 @@
 <p>A very similar issue to overflow that is often a problem in numerical codes is array indices going out of bounds.  This can actually be a very difficult bug to detect as it will often not cause an immediate crash.  For example, suppose we have a function defined at <span class="math notranslate nohighlight">\(N\)</span> equally spaced set of points, <span class="math notranslate nohighlight">\(\Delta x\)</span> apart, whose values are stored in an array <code class="docutils literal notranslate"><span class="pre">F</span></code> of type <code class="docutils literal notranslate"><span class="pre">double</span></code>.  We might want to compute the derivative of this function using a finite difference.  In practice, this will involve differences like <span class="math notranslate nohighlight">\((F[i+1]-F[i])/\Delta x\)</span>.  Evaluating this expression for all elements of the array will cause the array index <span class="math notranslate nohighlight">\(i+1\)</span> to go out of bounds when <span class="math notranslate nohighlight">\(i= N-1\)</span> (assuming array indices are numbered from <span class="math notranslate nohighlight">\(0\)</span> to <span class="math notranslate nohighlight">\(N-1\)</span>).  These end cases will require special consideration.  Some languages automatically do bounds checking, but others like C do not.  There is also a performance cost to doing bounds checking every time you index into an array.  A reasonable compromise for high performance computing can be using something like the <a class="reference external" href="https://www.boost.org/">Boost libraries</a> which have C-style array types where bounds checking can be turned on/off using a compiler flag.  In this case, extensive testing can be performed with array bounds checking and then, when you are convined the code is working properly, you can turn off the bounds checking for production runs.</p>
 </div>
 <div class="section" id="round-off-errors">
-<h2><span class="section-number">22.3. </span>Round-off Errors<a class="headerlink" href="#round-off-errors" title="Permalink to this headline">¶</a></h2>
+<h2>Round-off Errors<a class="headerlink" href="#round-off-errors" title="Permalink to this headline">¶</a></h2>
 <p>Round-off errors occur when we perform arithmetic operations with floating-point numbers. These errors can accumulate and become amplified by subsequent operations leading to catastrophic results.  A tragic example of this occured in 1991 in the “first” Gulf War when an <a class="reference external" href="https://www.gao.gov/assets/imtec-92-26.pdf">American Patriot missle failed to track an Iraqi Scud missle</a>.  Instead, it hit an army barracks, killing 26 people.  The cause was determined to be related to <a class="reference external" href="https://web.archive.org/web/20080801202418/http://www.mc.edu/campus/users/travis/syllabi/381/patriot.htm">measuring time in tenths of a second</a>.  <span class="math notranslate nohighlight">\(1/10\)</span> cannot be represented exactly in binary, and particular in the 24-bit floating point numbers used at the time.  A poorly designed algorithm that did not account for this consistently caused an accumulation of these errors leading to the disaster.</p>
 <p>To understand how these errors occur and accumulated, we first need to examine how floating-point numbers are stored.  We can represent any number in the form</p>
 <div class="math notranslate nohighlight">
@@ -565,7 +608,7 @@
 <p>Inside most computers, a 64-bit real number is stored as:</p>
 <div class="figure align-left" id="id1">
 <a class="reference internal image-reference" href="../../_images/IEEE_754_Double_Floating_Point_Format.svg"><img alt="floating-point-format" src="../../_images/IEEE_754_Double_Floating_Point_Format.svg" width="700px" /></a>
-<p class="caption"><span class="caption-number">Fig. 22.1 </span><span class="caption-text"><em><sub><sup>Based on <a class="reference external" href="https://commons.wikimedia.org/wiki/File:IEEE_754_Double_Floating_Point_Format.svg">this source</a> </sup></sub></em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 29 </span><span class="caption-text"><em><sub><sup>Based on <a class="reference external" href="https://commons.wikimedia.org/wiki/File:IEEE_754_Double_Floating_Point_Format.svg">this source</a> </sup></sub></em></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>If we call this number <span class="math notranslate nohighlight">\(x\)</span>, it can be converted back to decimal via</p>
 <div class="math notranslate nohighlight">
@@ -624,13 +667,13 @@ What this does mean, however, is that we have the potential to lose at least 1 b
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">21. </span>Truncation Error in Taylor’s series</p>
+            <p class="prev-next-title">Truncation Error in Taylor’s series</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="HornersAlgorithm.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">23. </span>Example: Evaluating polynomials</p>
+        <p class="prev-next-title">Example: Evaluating polynomials</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -641,7 +684,7 @@ What this does mean, however, is that we have the potential to lose at least 1 b
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>

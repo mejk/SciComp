@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lagrange Form of the Interpolation Polynomial &#8212; SciComp9502B</title>
+    <title>Lagrange Form of the Interpolation Polynomial &#8212; Scientific Computing</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -28,6 +28,7 @@
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
@@ -48,7 +49,7 @@
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
     <script >
@@ -92,7 +93,63 @@
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://mejk.github.io/CHEM3300G/class/InterpFit/LagrangeForm.html" />
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/InterpFit/LagrangeForm.html" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Barycentric Lagrange Interpolation" href="BarycentricInterp.html" />
@@ -125,7 +182,7 @@
       <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SciComp9502B</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
@@ -136,59 +193,80 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../../about/syllabus.html">
-   Scientific Computing - SciComp9502B
+   Scientific Computing
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  MODULE: Practical matters
+  MODULE: Prerequisites and installations
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/week01_summary.html">
-   1. Module: Installation of necessary software
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/install-wsl.html">
-   2. Installation of tools: WSL2/Linux etc.
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/Linux-basics.html">
-   3. Linux - the basics
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/linux-basic-commands-2.html">
-   4. Linux: Some basic &amp; useful commands
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-installation.html">
-   5. Installation of Python and Jupyter
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-virtual-environment.html">
-   6. Python virtual environments
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/jupyter-intro.html">
-   7. Jupyter Notebook / Jupyter Lab
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/editing-ascii.html">
-   8. Editing ASCII files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/vi-editor.html">
-   9. The
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      vi
@@ -198,13 +276,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/helpful-software.html">
-   10. Helpful software
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/command-line-skill-check.html">
-   11. Test your skills: Command line
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
   </a>
  </li>
 </ul>
@@ -215,13 +293,13 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/coding-notes-general.html">
-   12. On computation and codes
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week02/python-intro.html">
-   13. Brief introduction to Python
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
   </a>
  </li>
 </ul>
@@ -232,18 +310,18 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/intro-to-modeling.html">
-   14. Introduction to scientific computing &amp; computational modeling
+  <a class="reference internal" href="../IntroSciHPC/intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/hpc-intro.html">
-   15. Background on computers, computing and High Performance Computing
+  <a class="reference internal" href="../IntroSciHPC/hpc-intro.html">
+   Background on computers, computing and High Performance Computing
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../week01/simulation-general.html">
-   16. General aspects of modeling and computer simulations
+  <a class="reference internal" href="../IntroSciHPC/simulation-general.html">
+   General aspects of modeling and computer simulations
   </a>
  </li>
 </ul>
@@ -254,13 +332,8 @@
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../week03/random_numbers.html">
-   17. Random numbers
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../week02/diffusion-in-brief.html">
-   18. Diffusion - a brief introduction
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
   </a>
  </li>
 </ul>
@@ -272,43 +345,43 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
-   19. Numerical Analysis
+   Numerical Analysis
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/Error_sources.html">
-   20. Sources of Errors in Scientific Computing
+   Sources of Errors in Scientific Computing
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
-   22. Truncation Error in Taylor’s series
+   Truncation Error in Taylor’s series
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
-   23. Finite Precision
+   Finite Precision
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
-   24. Example: Evaluating polynomials
+   Example: Evaluating polynomials
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
-   25. Roundoff Error Amplification
+   Roundoff Error Amplification
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
-   26. Forward and Backwards Errors
+   Forward and Backwards Errors
   </a>
  </li>
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Part 2 - Interpolation
+  MODULE: Interpolation
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -334,7 +407,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="Chebyshev.html">
-   Chebyshev Interpolation
+   Chebyshev Polynomials
   </a>
  </li>
  <li class="toctree-l1">
@@ -345,7 +418,7 @@
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Part 3 - Numerical Differentiation &amp; Integration
+  MODULE: Numerical Differentiation &amp; Integration
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -452,6 +525,24 @@
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lagrange-basis-polynomials">
+   Lagrange basis polynomials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lagrange-form-of-the-interpolating-polynomial">
+   Lagrange form of the interpolating polynomial
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -464,6 +555,24 @@
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lagrange-basis-polynomials">
+   Lagrange basis polynomials
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lagrange-form-of-the-interpolating-polynomial">
+   Lagrange form of the interpolating polynomial
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -472,7 +581,9 @@
                 
   <div class="section" id="lagrange-form-of-the-interpolation-polynomial">
 <h1>Lagrange Form of the Interpolation Polynomial<a class="headerlink" href="#lagrange-form-of-the-interpolation-polynomial" title="Permalink to this headline">¶</a></h1>
-<p>The <em>Lagrange form</em> of the interpolating polynomial was first formulated by Edward Waring in 1779 (Sadly misattribution of scientific results is probably closer to the norm than it should be.  Attempting to correct misattribution later can be next to impossible once a name has become firmly established).  For centuries the Lagrange form was used primarily as a theoretical tool to help prove mathematical results and build intuition as it has a straightforward analytic form.   Until fairly recently it was thought that changing the points <span class="math notranslate nohighlight">\(x_i\)</span> required recalculating the entire interpolant and that evaluating the interpolant was rather inefficient.  However, it is now known that a slight variant, namely barycentric Lagrange interpolation, solves these problems rather straightforwardly.</p>
+<p>The <em>Lagrange form</em> of the interpolating polynomial was first formulated by <a class="reference external" href="https://en.wikipedia.org/wiki/Edward_Waring">Edward Waring</a> in 1779 (sadly misattribution of scientific results is probably closer to the norm than it should be.  Attempting to correct misattribution later can be next to impossible once a name has become firmly established).  For centuries the Lagrange form was used primarily as a theoretical tool to help prove mathematical results and build intuition as it has a straightforward analytic form.   Until fairly recently it was thought that changing the points <span class="math notranslate nohighlight">\(x_i\)</span> required recalculating the entire interpolant and that evaluating the interpolant was rather inefficient.  However, it is now known that a slight variant, namely barycentric Lagrange interpolation, solves these problems rather straightforwardly.</p>
+<div class="section" id="lagrange-basis-polynomials">
+<h2>Lagrange basis polynomials<a class="headerlink" href="#lagrange-basis-polynomials" title="Permalink to this headline">¶</a></h2>
 <p>To first step in constructing the Lagrange interpolating polynomial is to consider the basis polynomials:</p>
 <p>Given <span class="math notranslate nohighlight">\(x_0, x_1, ...,x_n\)</span> the <strong>Lagrange basis polynomials</strong> for these points are</p>
 <div class="math notranslate nohighlight">
@@ -496,7 +607,10 @@ L_i^n(x_k)=\delta_{ki} =
 <p>If we have 4 points <span class="math notranslate nohighlight">\(n=3\)</span> and if the points are equally spaced the Lagrange basis polynomials look like the following:</p>
 <p><span class="xref myst">plot of <span class="math notranslate nohighlight">\(L_n^j(x)\)</span></span></p>
 <p>Examining <span class="math notranslate nohighlight">\(L_2^3(x)\)</span>, for example, we see it is indeed 0 at <span class="math notranslate nohighlight">\(x_0,\,x_1,\)</span> and <span class="math notranslate nohighlight">\(x_3\)</span> but is 1 at <span class="math notranslate nohighlight">\(x_2\)</span>.  Also note that all of these are cubic polynomials (degree 3 when we have 4 interpolation points).</p>
-<p>The <em>Lagrange form of the interpoloating polynomial</em> given data values <span class="math notranslate nohighlight">\((x_0,f(x_0)), (x_1,f(x_1)), (x_2,f(x_2)),..., (x_n,f(x_n))\)</span> is now</p>
+</div>
+<div class="section" id="lagrange-form-of-the-interpolating-polynomial">
+<h2>Lagrange form of the interpolating polynomial<a class="headerlink" href="#lagrange-form-of-the-interpolating-polynomial" title="Permalink to this headline">¶</a></h2>
+<p>The <em>Lagrange form of the interpolating polynomial</em> given data values <span class="math notranslate nohighlight">\((x_0,f(x_0)), (x_1,f(x_1)), (x_2,f(x_2)),..., (x_n,f(x_n))\)</span> is now</p>
 <div class="math notranslate nohighlight">
 \[p_n(x)=\sum_{i=0}^n L_i^n(x) f(x_i)\]</div>
 <p>Keep in mind that the <span class="math notranslate nohighlight">\(f(x_i)\)</span> is given (i.e. is a number) and so this is a sum over the Lagrange basis polynomials.  By construction</p>
@@ -507,7 +621,7 @@ p_n(x_j) &amp;= \sum_{i=0}^n L_i^n(x_j) f(x_i) \\
  &amp;= f(x_j).
  \end{align}
 \end{split}\]</div>
-<p>So <span class="math notranslate nohighlight">\(p_n(x)\)</span> is an interpolating polynomial of degree <span class="math notranslate nohighlight">\(\leq n\)</span> through the specifed points, as desired.</p>
+<p>So <span class="math notranslate nohighlight">\(p_n(x)\)</span> is an interpolating polynomial of degree <span class="math notranslate nohighlight">\(\leq n\)</span> through the specified points, as desired.</p>
 <p>Any important question to ask is whether <strong>our interpolating polynomial <span class="math notranslate nohighlight">\(p_n(x)\)</span> is unique</strong>.  If not, we would need to decide which one was “best” and perhaps this answer would depend on the circumstance.  Fortunately we can show that our interpolating polynomial <em>is</em> unique.</p>
 <p>How?  Suppose not, then there is another polynomial, which we will call <span class="math notranslate nohighlight">\(q_n(x)\)</span> of degree <span class="math notranslate nohighlight">\(\leq n\)</span> with <span class="math notranslate nohighlight">\(q_n(x_i)=f(x_i)\)</span> for all <span class="math notranslate nohighlight">\(i\)</span> and where for general <span class="math notranslate nohighlight">\(x\)</span> we have <span class="math notranslate nohighlight">\(p_n(x)\neq q_n(x)\)</span>.  Now consider</p>
 <div class="math notranslate nohighlight">
@@ -515,13 +629,14 @@ p_n(x_j) &amp;= \sum_{i=0}^n L_i^n(x_j) f(x_i) \\
 <p>which is another polynomial of degree <span class="math notranslate nohighlight">\(\leq n\)</span>.  Now if both <span class="math notranslate nohighlight">\(p_n(x)\)</span> and <span class="math notranslate nohighlight">\(q_n(x)\)</span> are interpolating polynomials through our <span class="math notranslate nohighlight">\(n+1\)</span> points we must have</p>
 <div class="math notranslate nohighlight">
 \[d_n(x_i) = p_n(x_i) - q_n(x_i) = f(x_i)- f(x_i) = 0, \qquad\qquad i=0,1,...,n\]</div>
-<p>which means <span class="math notranslate nohighlight">\(d_n(x_i)\)</span> has <span class="math notranslate nohighlight">\(n+1\)</span> roots (or zeros).  However, the fundamental theorm of algebra tells us that a <span class="math notranslate nohighlight">\(n-\)</span>degree polynomial has at most <span class="math notranslate nohighlight">\(n\)</span> roots.  The only way to resolve this contradiction is if <span class="math notranslate nohighlight">\(d_n(x)\equiv 0\)</span> implying that <span class="math notranslate nohighlight">\(q_n(x)\equiv p_n(x)\)</span> so that the polynomial is unique.</p>
+<p>which means <span class="math notranslate nohighlight">\(d_n(x_i)\)</span> has <span class="math notranslate nohighlight">\(n+1\)</span> roots (or zeros).  However, the fundamental theorem of algebra tells us that a <span class="math notranslate nohighlight">\(n-\)</span>degree polynomial has at most <span class="math notranslate nohighlight">\(n\)</span> roots.  The only way to resolve this contradiction is if <span class="math notranslate nohighlight">\(d_n(x)\equiv 0\)</span> implying that <span class="math notranslate nohighlight">\(q_n(x)\equiv p_n(x)\)</span> so that the polynomial is unique.</p>
 <p>Note that while the polynomial is unique, we are free to rearrange it algebraically to construct a different form of the same polynomial. Why would you want to do this?</p>
 <ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(L_j^n(x)\)</span> is a <span class="math notranslate nohighlight">\(n\)</span>’th degree polynomial and so requires <span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span> flops (we discussed this in conjunction with Horner’s algorithm in an earlier chapter).  We have <span class="math notranslate nohighlight">\(n+1\)</span> of these to compute so direct use of the Lagrange form of <span class="math notranslate nohighlight">\(p_n(x)\)</span> would require <span class="math notranslate nohighlight">\(\mathcal{O}(n^2)\)</span> flops.  This is inefficient for a polynomial that is still of degree <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(L_j^n(x)\)</span> is a <span class="math notranslate nohighlight">\(n\)</span>’th degree polynomial and so requires <span class="math notranslate nohighlight">\(\mathcal{O}(n)\)</span> flops (we discussed this in conjunction with <a class="reference external" href="https://en.wikipedia.org/wiki/Horner%27s_method">Horner’s algorithm</a> in an earlier chapter).  We have <span class="math notranslate nohighlight">\(n+1\)</span> of these to compute so direct use of the Lagrange form of <span class="math notranslate nohighlight">\(p_n(x)\)</span> would require <span class="math notranslate nohighlight">\(\mathcal{O}(n^2)\)</span> flops.  This is inefficient for a polynomial that is still of degree <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
 <li><p>If we decide to change or add another node at <span class="math notranslate nohighlight">\(x_k\)</span> it would appear that all the Lagrange basis polynomials would have to be recalculated.</p></li>
 </ol>
 <p>It is for these reasons that Lagrange interpolating polynomials had limited practical (as opposed to theoretical) application for many years.  However, these problems can be easily fixed as we discuss next.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -570,7 +685,7 @@ p_n(x_j) &amp;= \sum_{i=0}^n L_i^n(x_j) f(x_i) \\
     <footer class="footer">
   <p>
     
-      By Mikko Karttunen<br/>
+      By Mikko Karttunen and Colin Denniston<br/>
     
       <div class="extra_footer">
         <div>

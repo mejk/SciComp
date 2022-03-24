@@ -5,6 +5,19 @@ exp: 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
 exp: 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
 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
 
+Installation:
+============
+
+https://jupyterbook.org/start/overview.html
+
+https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html
+
+https://github.com/git-guides/install-git
+
+git clone https://github.com/executablebooks/sphinx-proof
+cd sphinx-proof
+python setup.py install
+
 GitHub
 ======
 

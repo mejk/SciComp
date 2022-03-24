@@ -1,8 +1,8 @@
 # Book settings
-title: SciComp9502B
-author: Mikko Karttunen
+title: "Scientific Computing"
+author: "Mikko Karttunen and Colin Denniston"
 logo: images/logo-scicomp.svg
-copyright: "Mikko Karttunen"
+copyright: "Mikko Karttunen and COlin Denniston"
 exclude_patterns: ["LICENSE.md", "README.md"]
 
 show_sidebar: true
@@ -18,7 +18,7 @@ html:
 #  use_issues_button: true
 #  use_edit_page_button: true
   navbar_number_sections : false
-  baseurl : "https://mejk.github.io/CHEM3300G/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  baseurl : "https://mejk.github.io/SciComp/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   # google_analytics_id: UA-11111111 # add your Google Analytics Tracking Code
   comments:
     hypothesis: true
@@ -42,17 +42,29 @@ repository:
 
 sphinx:
   config:
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  
     html_show_copyright: false
-    html_extra_path: ['files']
-    autosectionlabel_maxdepth: 1
-    toctree: hidden
+#    html_extra_path: ['files']
+#    autosectionlabel_maxdepth: 1
+#    toctree: hidden
+    myst_enable_extensions: 
+    - amsmath
+    - colon_fence
+    - deflist
+    - dollarmath
+    - html_image
+    - linkify
+    - replacements
+    - substitution
+  extra_extensions:
+    - sphinx_proof
 
 #sphinx:
 #  extra_extensions:
 #    - sphinx_proof
 
-parse:
-  myst_extended_syntax: true
+#parse:
+#  myst_extended_syntax: true
 
 # In _config.yml
 bibtex_bibfiles:

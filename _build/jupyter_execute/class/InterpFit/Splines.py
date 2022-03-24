@@ -31,7 +31,10 @@
 # 
 # Each of the $S_j(x)$ is a cubic polynomial which we will write in the form  
 # 
-# $$S_j(x) = a_j+b_j(x-x_j)+c_j(x-x_j)^2+d_j(x-x_j)^3.$$ (splinepiece)
+# ```{math}
+# :label: splinepiece
+# S_j(x) = a_j+b_j(x-x_j)+c_j(x-x_j)^2+d_j(x-x_j)^3.
+# ```
 # 
 # Each of the $n-1$ different $S_j$ requires four parameters so we will need $4(n-1)$ conditions to determine them.  As the last two conditions above only apply to the interior points, we are short two conditions overall.  These are filled in with two boundary conditions.  There are a number of possibilities for the boundary conditions.  A few common choices are
 # 
@@ -41,22 +44,29 @@
 # 
 # - $S_0'''(x_{1})=S_1'''(x_{1})$ and $S_{n-2}'''(x_{n-1})=S_{n-1}'''(x_{n-1})$.  This choice is called *not-a-knot* as it, together with the continuity of the lower derivatives already required at $x_1$ and $x_{n-1}$, forces $S_0(x)\equiv S_1(x)$ and $S_{n-2}(x)\equiv S_{n-1}(x)$.
 # 
-# Constructing the interpolatory spline requires using the above conditions to find the parameters in {eq}`splinepiece` for all $j$.
+# Constructing the interpolatory spline requires using the above conditions to find the parameters in Equation {eq}`splinepiece` for all $j$.
 
-# Condition 1 can be immediately exploited to find $a_j$ by noting that evaluating {eq}`splinepiece` at $x_j$ gives $S_j(x_j)=a_j$ and combining this with the first condition gives  
+# Condition 1 can be immediately exploited to find $a_j$ by noting that evaluating Equation {eq}`splinepiece` at $x_j$ gives $S_j(x_j)=a_j$ and combining this with the first condition gives  
 # 
-# >  
-# >  $$ a_j=f(x_j),\qquad\qquad j=0,1,...,n-1.$$ (ajsolution)
-# >  
+# ```{math}
+# :label: ajsolution
+# a_j=f(x_j),\qquad\qquad j=0,1,...,n-1.
+# ```
+#   
 # 
 # We now evaluate $S_j$ and $S_{j+1}$ at $x_{j+1}$ and set them equal, as required by condition 2, to get  
 # 
-# $$\begin{align}
-# a_{j+1} &= S_{j+1}(x_{j+1}) = S_j(x_{j+1}) = a_j + b_j(x_{j+1}-x_j) + c_j (x_{j+1}-x_j)^2 + d_j(x_{j+1}-x_j)^3\\
-#  &= a_j + b_j h_j + c_j h_j^2 + d_j h_j^3,\qquad\qquad j=0,...,n-2,
+# ```{math}
+# :label: a_eqn
+# \begin{align}
+# a_{j+1} &= S_{j+1}(x_{j+1}) \\
+# &= S_j(x_{j+1}) \\
+# &= a_j + b_j(x_{j+1}-x_j) + c_j (x_{j+1}-x_j)^2 + d_j(x_{j+1}-x_j)^3\\
+# &= a_j + b_j h_j + c_j h_j^2 + d_j h_j^3,\\
+# & \mathrm{and} \qquad\qquad j=0,...,n-2,
 # \end{align}
-# $$ (a_eqn)
-# 
+# ```
+#  
 # where to simplify the notation going forward, we define  
 # 
 # $$ h_j = (x_{j+1}-x_j). $$
@@ -76,29 +86,41 @@
 # 
 # Continuity of the derivative, condition 3, then implies
 # 
-# $$\begin{align}
-# b_{j+1} &= S_{j+1}'(x_{j+1}) = S_j'(x_{j+1}) = b_j + 2 c_j (x_{j+1}-x_j) + 3d_j(x_{j+1}-x_j)^2\\
-#  &= b_j + 2c_j h_j + 3d_j h_j^2, \qquad\qquad j=0,...,n-2.
+# ```{math}
+# :label: b_eqn
+# \begin{align}
+# b_{j+1} &= S_{j+1}'(x_{j+1}) \\
+# & = S_j'(x_{j+1}) \\
+# & = b_j + 2 c_j (x_{j+1}-x_j) + 3d_j(x_{j+1}-x_j)^2\\
+# &= b_j + 2c_j h_j + 3d_j h_j^2, \\
+# &  \qquad\qquad  \qquad\qquad \qquad\qquad j=0,...,n-2.
 # \end{align}
-# $$ (b_eqn)
+# ```
 # 
 # To extend this equation to $j=n-1$ we must make use of a boundary condition at $x_{j+1}$.  If we are constructing a *clamped* spline this would determine the derivative, and hence $b_{n}$ for the "dummy" polynomial $S_n$ if we extend this equation to $j=n-1$.  A *natural* spline instead just extends this equation to $j=n-1$ by allowing it to effectively determine the derivative $S_j'(x_{j+1})$ once we have determined the other parameters on the right hand side. 
 # 
 # Similarly, continuity of the second derivative, condition 4, then implies
 # 
-# $$\begin{align}
-# c_{j+1} &= S_{j+1}''(x_{j+1}) = S_j''(x_{j+1}) = 2 c_j + 6d_j(x_{j+1}-x_j)\\
-#  &= 2c_j + 3d_j h_j, \qquad\qquad j=0,...,n-2.
+# ```{math}
+# :label: c_eqn
+# \begin{align}
+#    c_{j+1} &= S_{j+1}''(x_{j+1}) \\
+#    &= S_j''(x_{j+1}) \\
+#    & = 2 c_j + 6d_j(x_{j+1}-x_j)\\
+#    &= 2c_j + 3d_j h_j, \\
+#    &   \qquad\qquad \qquad\qquad \qquad\qquad  \mathrm{and\,\,} j=0,...,n-2.
 # \end{align}
-# $$ (c_eqn)
+# ```
 # 
 # We can again extend this equation to $j=n-1$ for a *natural* spline by replacing $c_{j+1}$ with zero (the second derivative at $x_{j+1}$).  The extension for the other boundary conditions are slightly more complicated, but not much.  You will construct these in the problems.
 # 
-# Equations {eq}`a_eqn`, {eq}`b_eqn`, and {eq}`c_eqn` form a coupled linear set of equations for the parameters $b_j$, $c_j$, and $d_j$ given that we know $a_j$ (from {eq}`ajsolution`) and $h_j$.  We can simplify these equations further by eliminating $b_j$ and $d_j$ to get a set of equations for the $c_j$ alone (and then once these are known they can be used to deterime the other parameters).  We first eliminate the $d_j$ by rearranging {eq}`c_eqn`,  
+# Equations {eq}`a_eqn`, {eq}`b_eqn`, and {eq}`c_eqn` form a coupled linear set of equations for the parameters $b_j$, $c_j$, and $d_j$ given that we know $a_j$ (from {eq}`ajsolution`) and $h_j$.  We can simplify these equations further by eliminating $b_j$ and $d_j$ to get a set of equations for the $c_j$ alone (and then once these are known they can be used to deterime the other parameters).  We first eliminate the $d_j$ by rearranging Equation {eq}`c_eqn`,  
 # 
-# >
-# > $$ d_j = \frac{1}{3h_j}(c_{j+1}-c_j). $$ (djsolution)
-# >
+# 
+# ```{math}
+# :label: djsolution
+# d_j = \frac{1}{3h_j}(c_{j+1}-c_j).
+# ```
 # 
 # Substituting this into {eq}`a_eqn` then gives 
 # 
@@ -106,9 +128,11 @@
 # 
 # which can be solved to give the $b_j$ in terms of the $c_j$ to get  
 # 
-# >
-# > $$ b_j=\frac{1}{h_j}(a_{j+1}-a_j)-\frac{h_j}{3}(2c_j+c_{j+1}).$$ (bjsolution)
-# >
+# ```{math}
+# :label: bjsolution
+# b_j=\frac{1}{h_j}(a_{j+1}-a_j)-\frac{h_j}{3}(2c_j+c_{j+1}).
+# ```
+# 
 # 
 # Substituting {eq}`bjsolution` and {eq}`djsolution` into {eq}`b_eqn` gives  
 # 
@@ -122,7 +146,8 @@
 # 
 # and using a boundary condition for $j=0$.  We can rewrite these equation and the boundary contions into a matrix equation as
 # 
-# $$
+# ```{math}
+# :label: cjsolution
 # \begin{align}
 #   \left[ {\begin{array}{cccccc}
 #     1 & 0 & 0 & 0 & \cdots & 0\\
@@ -150,7 +175,7 @@
 #   \frac{3}{h_{n-1}}(f(x_n)-a_{n-1})-\frac{3}{h_{n-2}}(a_{n-1}-a_{n-2})\\
 #   \end{array}} \right]
 # \end{align}
-# $$ (cjsolution)
+# ```
 # 
 # for the *natural* cubic spline (the first equation is the boundary condition that sets $c_0=0$ and the last equation uses the "dummy" polynomial extension of the equations where $c_n=0$). This is a diagonally dominant tridiagonal system which means that solving this system via Gaussian elimination/LU factorization without pivoting will provide a unique solution and will be numerically stable.  In addition, this can be solved in $\mathcal{O}(n)$ flops using the [Thomas algorithm](https://en.wikipedia.org/wiki/Tridiagonal_matrix_algorithm) discussed in the chapter on linear systems.
 # 

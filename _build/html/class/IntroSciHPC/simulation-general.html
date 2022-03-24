@@ -1,0 +1,1081 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>General aspects of modeling and computer simulations &#8212; Scientific Computing</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet">
+  <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom_layouts.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pdf_print.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/extra.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/save_state.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://mejk.github.io/SciComp/class/IntroSciHPC/simulation-general.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Random numbers" href="../RandomNumbers/random_numbers.html" />
+    <link rel="prev" title="Background on computers, computing and High Performance Computing" href="hpc-intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../../_static/logo-scicomp.svg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Scientific Computing</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../about/syllabus.html">
+   Scientific Computing
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Prerequisites and installations
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PreReq/software_1.html">
+   Module: Installation of necessary software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PreReq/install-wsl.html">
+   Installation of tools: WSL2/Linux etc.
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Linux basics
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/Linux-basics.html">
+   Linux - the basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../LinuxBasics/linux-basic-commands-2.html">
+   Linux: Some basic &amp; useful commands
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python and Jupyter
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-installation.html">
+   Installation of Python and Jupyter
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-virtual-environment.html">
+   Python virtual environments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/jupyter-intro.html">
+   Jupyter Notebook / Jupyter Lab
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Other software
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/editing-ascii.html">
+   Editing ASCII files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/vi-editor.html">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     vi
+    </span>
+   </code>
+   editor
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/helpful-software.html">
+   Helpful software
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../OtherSoftware/command-line-skill-check.html">
+   Test your skills: Command line
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Python &amp; programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/coding-notes-general.html">
+   On computation and codes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../PythonBasics/python-intro.html">
+   Brief introduction to Python
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Intro to Scientific computing &amp; HPC
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro-to-modeling.html">
+   Introduction to scientific computing &amp; computational modeling
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hpc-intro.html">
+   Background on computers, computing and High Performance Computing
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   General aspects of modeling and computer simulations
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Random numbers
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../RandomNumbers/random_numbers.html">
+   Random numbers
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Errors in Scientific Computing
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Errors_summary.html">
+   Numerical Analysis
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/Error_sources.html">
+   Sources of Errors in Scientific Computing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/TaylorExample.html">
+   Truncation Error in Taylor’s series
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/FinitePrecision.html">
+   Finite Precision
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
+   Example: Evaluating polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/RoundoffAmplification.html">
+   Roundoff Error Amplification
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ErrorsModule/BackwardForwardConditioning.html">
+   Forward and Backwards Errors
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Interpolation
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpFit_summary.html">
+   Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/LagrangeForm.html">
+   Lagrange Form of the Interpolation Polynomial
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/BarycentricInterp.html">
+   Barycentric Lagrange Interpolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/InterpErrors.html">
+   Interpolation Errors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Chebyshev.html">
+   Chebyshev Polynomials
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../InterpFit/Splines.html">
+   Splines
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  MODULE: Numerical Differentiation &amp; Integration
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt.html">
+   Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/NumDiffInt_Errors.html">
+   Errors in Numerical Differentiation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/Int.html">
+   Numerical Integration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/HigherOrderInt.html">
+   Higher Order Integration Schemes
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../NDiffInt/GaussianInt.html">
+   Gaussian Integration
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  More on computers / helps
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://github.com/mejk/computer-stuff">
+   Random notes on computers, installation, dual boot, vnc, etc.
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/class/IntroSciHPC/simulation-general.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/IntroSciHPC/simulation-general.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-approach">
+   General approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-modeling-water">
+   Example: Modeling water
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information-for-those-interested-water-models">
+   Additional information for those interested: Water models
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historical">
+     Historical:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantum-mechanical">
+     Quantum mechanical:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classical-md-level">
+     Classical MD level:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-grained">
+     Coarse-grained:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>General aspects of modeling and computer simulations</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#general-approach">
+   General approach
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-modeling-water">
+   Example: Modeling water
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#summary">
+   Summary
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#additional-information-for-those-interested-water-models">
+   Additional information for those interested: Water models
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#historical">
+     Historical:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantum-mechanical">
+     Quantum mechanical:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classical-md-level">
+     Classical MD level:
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#coarse-grained">
+     Coarse-grained:
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#references">
+   References
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="cell tag_remove-input docutils container">
+</div>
+<div class="tex2jax_ignore mathjax_ignore section" id="general-aspects-of-modeling-and-computer-simulations">
+<h1>General aspects of modeling and computer simulations<a class="headerlink" href="#general-aspects-of-modeling-and-computer-simulations" title="Permalink to this headline">¶</a></h1>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>-Last updated on Wednesday, March 23 2022 at 22:17</p>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Learning goals:</strong></p>
+<ul class="simple">
+<li><p class="card-text">To have an overview of the <em>process</em> involved in modeling and simulation. This is illustrated by a concrete example. Please notice that although the example is taken from a particular field, the process itself doesn’t depend on the application field.</p></li>
+<li><p class="card-text">To understand how modeling even simple systems can be a very challenging and interdisciplinary problem.</p></li>
+</ul>
+<p class="card-text"><strong>Keywords:</strong> physical phenomena, algorithm, code, model, analysis, debugging, comparison to experiments, visualization</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<small>
+<blockquote class="epigraph">
+<div><p>Big Science. Hallelujah. Big Science. Yodellayheehoo. <br>
+You know. I think we should put some mountains here. <br>
+Otherwise, what are all the characters going to fall off of? <br>
+And what about stairs? Yodellayheehoo. Ooo coo coo.</p>
+<p class="attribution">—Laurie Anderson, Big Science </p>
+</div></blockquote>
+</small>    
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Music: Laurie Anderson, Big Science<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/vTHiN6Qwdgs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</details><div class="section" id="general-approach">
+<h2>General approach<a class="headerlink" href="#general-approach" title="Permalink to this headline">¶</a></h2>
+<p>Let’s discuss a few general and important aspects that relate to all computer simulations and modeling. <a class="reference internal" href="#modeling-schema"><span class="std std-numref">Fig. 20</span></a> shows the general idea - this is independent of the application field.</p>
+<!--
+<table class="lblue">
+    <tr>
+        <td>
+            <img src="./img/modeling-schema.svg" width="100%"/>
+        </td>
+    </tr>    
+    <tr>
+        <td colspan="1">
+        Figure: Some general aspects about modeling and computer simulations. Building a model and setting up simulations is a complex process and each stage needs to be considered carefully and validated extensively.  Mistake at any level can render the whole process wrong with heaps of meaningless data. That happens more frequently that one would expect; that the software doesn't crash doesn't imply anything about the correctness of the results.   
+        </td>
+    </tr>
+</table>    
+-->
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-12 p-2 docutils">
+<div class="card w-100 no-shadow docutils">
+<div class="card-body docutils">
+<div class="figure align-left" id="modeling-schema">
+<a class="reference internal image-reference" href="../../_images/modeling-schema.svg"><img alt="../../_images/modeling-schema.svg" src="../../_images/modeling-schema.svg" width="800px" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text"><em>Some general aspects about modeling and computer simulations. Building a model and setting up simulations is a complex process and each stage needs to be considered carefully and validated extensively.  Mistake at any level can render the whole process wrong with heaps of meaningless data. That happens more frequently that one would expect; that the software doesn’t crash doesn’t imply anything about the correctness of the results. The figure is based on <span id="id1">[<a class="reference internal" href="#id36">2</a>]</span></em></span><a class="headerlink" href="#modeling-schema" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-modeling-water">
+<h2>Example: Modeling water<a class="headerlink" href="#example-modeling-water" title="Permalink to this headline">¶</a></h2>
+<p>Let’s consider the items in <a class="reference internal" href="#modeling-schema"><span class="std std-numref">Fig. 20</span></a> using a concrete example. The procedure and considerations below are, by necessity, simplified but should give an idea the type of considerations one has to take. Some of the choices and decisions are also coupled.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-9 p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Physical phenomenon/phenomena:</strong> Let’s use the behavior of bulk water as an example. We need to decide what we wish to model. Liquid-gas or liquid-ice phase transition? Structure of water? Or perhaps diffusion of water or the dynamics of the hydrogen bond network? Or hydrophobic hydration? One also needs to review previous research to know what kind of problems there have been and what are the undisputed correct results (if any).</p>
+<p class="card-text"><strong>Example:</strong> Water dynamics is complex &amp; has practical importance:</p>
+<div class="figure align-left" id="water-jump">
+<a class="reference internal image-reference" href="../../_images/water-jumping.png"><img alt="../../_images/water-jumping.png" src="../../_images/water-jumping.png" style="width: 100%;" /></a>
+</div>
+<small>
+<p class="card-text"><strong>Some interesting previous results:</strong></p>
+<ul class="simple">
+<li><p class="card-text"><em>A molecular jump mechanism of water reorientation</em> <span id="id2">[<a class="reference internal" href="#id35">5</a>]</span></p></li>
+<li><p class="card-text"><em>Observation of Immobilized Water Molecules around Hydrophobic Groups</em> <span id="id3">[<a class="reference internal" href="#id34">9</a>]</span></p></li>
+</ul>
+</small>
+</div>
+</div>
+</div>
+<div class="d-flex col-3 docutils">
+<div class="card w-100 border-1 docutils">
+<div class="card-body docutils">
+<div class="figure align-right" id="small">
+<a class="reference internal image-reference" href="../../_images/modeling-schema-small-physical.svg"><img alt="../../_images/modeling-schema-small-physical.svg" src="../../_images/modeling-schema-small-physical.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-9 p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Construct/choose a model:</strong> We need to decide what is the level, that is, the level of detail, and time and length scales that we are interested in. Do we need quantum mechanics? Is a classical atomistic model enough or should we use a coarse-grained model? Even at the classical level there are tens of existing models including acronyms such as ST2, TIP3P, TIP4P, TIP4P/2005, TIP5P, TIP5P/2008, SPC, SPC/E and so on. How do we know which one(s) to choose? Should one use more than one model? What has been done with these models? Is it/are they able to capture the phenomena of interest?</p>
+<p class="card-text"><strong>Here:</strong> A quantum level model was needed. The basic model didn’t include van der Waals interactions (density functional theory doesn’t) so they needed to be added. This may sound odd, but <a class="reference external" href="https://www.chemie.uni-bonn.de/pctc/mulliken-center/software/dft-d3/">inclusion of van der Waals interactions in a quantum level simulation</a> is a non-trivial task.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-3 docutils">
+<div class="card w-100 border-1 docutils">
+<div class="card-body docutils">
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../_images/modeling-schema-small-construct.svg"><img alt="../../_images/modeling-schema-small-construct.svg" src="../../_images/modeling-schema-small-construct.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-9 p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Choose numerical algorithm(s):</strong> Even in the case we are planning to use a software package, we need to decide which one of the algorihms the package offers we should use. For example, for integration of the equations of motions each package offers several options. If we are going to write our own code, then we need to decide which one to implement. How do we deal with interactions? They need to be truncated but what is the most reliable way to do it? Does the system have long-range interactions? If so, do we wish to use Fourier transform-based algorithms or real space ones? In either case, there are several choises that one needs to understand. If we are writing out own code, we need to decide how to speed up the simulations - normal MD scales as <span class="math notranslate nohighlight">\(\mathcal{O}(N^2)\)</span> where <span class="math notranslate nohighlight">\(N\)</span> is the number of particles (the so-called <a class="reference external" href="https://en.wikipedia.org/wiki/Big_O_notation">big-O</a> notation is used to express how well algorithms scale). We can do better using tables or multisteping. Which one to choose? Do we need constant temperature or pressure constant pressure to better mimic experimental conditions? Which method to choose? What kind of boundary conditions do we need? How can we simulate bulk conditions with a relatively small number of particles? If one uses a method that is part of an existing code, then the choice of the algorithm comes with the software.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-3 docutils">
+<div class="card w-100 border-1 docutils">
+<div class="card-body docutils">
+<div class="figure align-right" id="id5">
+<a class="reference internal image-reference" href="../../_images/modeling-schema-small-numerical.svg"><img alt="../../_images/modeling-schema-small-numerical.svg" src="../../_images/modeling-schema-small-numerical.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-9 p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Write/choose a simulation program:</strong> Do we need to write our own code or can we use one the existing packages? This problem is very general and we could choose a software package. There are lots of possibilities including CPMD, CP2K, Gromacs, NAMD, Amber, CHARMM, DL Poly, LAMMPS and others. Or should we write your own code? If so, which programming language to use? Fortran, C, C++, python, CUDA or something else? Will this program be used in other projects? How much time will it take to write a code, debug and verify it? Do we wish to provide as open source? If so, how will it be maintained? Debugging is the most time consuming and important part!</p>
+<p class="card-text"><strong>In this case,</strong> we are interested in the picosecond-level dynamics and wish to use a quantum mechanical model. Of the many possible choices, let’s choose the <a class="reference external" href="https://www.cpmd.org/wordpress/">CPMD package</a> (Car-Parrinello Molecular Dynamics). It also turned out that the code needed some additions. They were tested and verified against previous simulations and experiments.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-3 docutils">
+<div class="card w-100 border-1 docutils">
+<div class="card-body docutils">
+<div class="figure align-right" id="id6">
+<a class="reference internal image-reference" href="../../_images/modeling-schema-small-program.svg"><img alt="../../_images/modeling-schema-small-program.svg" src="../../_images/modeling-schema-small-program.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-9 p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Perform computer simulations:</strong> Before starting simulations: Have you debugged your code or/and
+checked that the package that you have chosen is appropriate and has no errors in the parts relevant
+for you? Do you understand the input data and parameters, and the simulation protocol? Important: even the most well-established codes have errors and problems, but the biggest error source of all is the user! Finally, how to run very long runs in batches?</p>
+<p class="card-text"><strong>Here:</strong> We can prepare the systems on local workstations, but the production simulations need large-scale resources with lot of memory. <a class="reference external" href="https://www.computecanada.ca/">Compute Canada</a> comes to help.</p>
+</div>
+</div>
+</div>
+<div class="d-flex col-3 docutils">
+<div class="card w-100 border-1 docutils">
+<div class="card-body docutils">
+<div class="figure align-right" id="id7">
+<a class="reference internal image-reference" href="../../_images/modeling-schema-small-simulation.svg"><img alt="../../_images/modeling-schema-small-simulation.svg" src="../../_images/modeling-schema-small-simulation.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-9 p-0 m-0 docutils">
+<div class="card w-100 shadow-none, border-0 docutils">
+<div class="card-body docutils">
+<p class="card-text"><strong>Analyze data and interpret:</strong> This is where the interesting part starts - provided we have confidence in our simulations. Do we need to write software to analyze the data or do appropriate tools exist? If the former, there are also practical questions such as how to read in the data; the data files may be massive and they may use some specific format(s), or they may be compressed.</p>
+<p class="card-text"><strong>Here,</strong> we can analyze hydrogen bonding in bulk water and in the solvation shell of a small hydrophobic group in a molecule. It is not all
+four-coordinated. Some of the analysis software needed to be written.</p>
+<div class="figure align-left" id="id8">
+<a class="reference internal image-reference" href="../../_images/water-bonds.png"><img alt="../../_images/water-bonds.png" src="../../_images/water-bonds.png" style="width: 100%;" /></a>
+</div>
+<small>
+<ul class="simple">
+<li><p class="card-text"><em>Hydrophobicity: effect of density and order on water’s rotational slowing down</em> <span id="id9">[<a class="reference internal" href="#id33">10</a>]</span></p></li>
+</ul>
+</small>
+</div>
+</div>
+</div>
+<div class="d-flex col-3 docutils">
+<div class="card w-100 border-1 docutils">
+<div class="card-body docutils">
+<div class="figure align-right" id="id10">
+<a class="reference internal image-reference" href="../../_images/modeling-schema-small-analyze.svg"><img alt="../../_images/modeling-schema-small-analyze.svg" src="../../_images/modeling-schema-small-analyze.svg" width="100%" /></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><strong>And one should always create visualizations:</strong></p>
+<p>The video below shows a close-up from an <em>ab initio</em> simulation of water. Hydrogen bonds that form and break are shown as dashed lines. See also how the vibrations of the bonds change when the bonding changes. This is a closeup from a simulation of 54 water molecules using <a class="reference external" href="https://en.wikipedia.org/wiki/Born%E2%80%93Oppenheimer_approximation">Born-Oppenheimer Molecular Dynamics</a> (BOMD). Visualization using VMD (Visual Molecular Dynamics) <span id="id11">[<a class="reference internal" href="#id32">4</a>]</span>, simulation using the CPMD (Car-Parrinello Molecular Dynamics) software.</p>
+<!--
+<div style="padding:100% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/152805742?autoplay=1&loop=1&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:70%;height:70%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+-->
+<div style="float: center;">
+<iframe src="https://player.vimeo.com/video/152805742?title=0&byline=0&portrait=0" width="640" height="426" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+<p></p>
+<p><strong>Additional questions:</strong> What kind of resources are available? How long will the simulations take, that is, how large systems and for how long time can be simulated. Is that enough? How about data storage abd backup, is there enough? Do we need long term data storage?</p>
+</div>
+<div class="section" id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this headline">¶</a></h2>
+<p>In the above, there are several terms and concepts that are new. We will encounter them when we set up and perform simulations. The aim here has been to give a rough idea of the process of modeling works: Simply downloading a well-known software package and using the default parameters and inputs is not acceptable. The software will run, but there is no guarantee that the results will be correct if one doesn’t understand the inputs and outputs. In addtion, the results will not be relevant (even if correct) if one doesn’t have a good research question. Reproducing data is not research. The software is not to blame for any of those matters, it does what the user tells it do. The user is the source of most errors; even if/when there is a bug/are bugs (and there are always are some), it is the user’s responsibility to test and ensure the validity of results. If bugs are found in a published software, one should notify the developers with precise information including test results.</p>
+</div>
+<div class="section" id="additional-information-for-those-interested-water-models">
+<h2>Additional information for those interested: Water models<a class="headerlink" href="#additional-information-for-those-interested-water-models" title="Permalink to this headline">¶</a></h2>
+<p>To put the example above to further perspective and to give an idea how complex water the simple looking humble water molecule is, below are lists of water models at different levels of description. None of the lists are by no means exhaustive and its purpose is simply to give an idea of the complexity of the problem - textbooks tend to give a simplified view. Water, as simple as it is, remains to be very difficult to model correctly. Some recent reviews are provided for example by <span id="id12">[<a class="reference internal" href="#id39">1</a>, <a class="reference internal" href="#id41">3</a>, <a class="reference internal" href="#id40">6</a>, <a class="reference internal" href="#id43">7</a>, <a class="reference internal" href="#id38">8</a>]</span></p>
+<div class="section" id="historical">
+<h3>Historical:<a class="headerlink" href="#historical" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Wilhelm_R%C3%B6ntgen">W.C. Röntgen</a> - the same person who discovered x-rays (and was the recipient of the <a class="reference external" href="https://www.nobelprize.org/prizes/physics/1901/rontgen/facts/">1901 Nobel Prize in Physics</a>), developed a two species model (1897). The water molecules were classified into fluid-like and ice-like. <a class="reference external" href="https://en.wikipedia.org/wiki/J._D._Bernal">J.D. Bernal</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Ralph_H._Fowler">R.H. Fowler</a> developed a model with tetrahedral geometry (1933). This is the model that forms the basis of current understanding. <a class="reference external" href="https://en.wikipedia.org/wiki/Linus_Pauling">Linux Pauling’s</a> (<a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1954/pauling/facts/">Nobel Prize in Chemistry 1954</a> and <a class="reference external" href="https://www.nobelprize.org/prizes/peace/1962/pauling/facts/">Nobel Prize in Peace 1962</a>)) model established clathrate structure (1935) and the model of <a class="reference external" href="https://en.wikipedia.org/wiki/John_Pople">John Pople</a> (<a class="reference external" href="https://www.nobelprize.org/prizes/chemistry/1998/summary/">Nobel Prize in Chemistry 1998</a>) showed hydrogen bond bending (1951).</p>
+</div>
+<div class="section" id="quantum-mechanical">
+<h3>Quantum mechanical:<a class="headerlink" href="#quantum-mechanical" title="Permalink to this headline">¶</a></h3>
+<p>All the approaches have their own models. Importantly, however, van der Waals interactions are <em>not</em> part of the standard quantum mechanical approach and they have to be added separately. As a side note the van der Waals interactions are named after <a class="reference external" href="https://en.wikipedia.org/wiki/Johannes_Diderik_van_der_Waals">J.D. van der Waals</a>, the recipient of the <a class="reference external" href="https://www.nobelprize.org/prizes/physics/1910/waals/biographical/">1910 Nobel Prize in Physics</a>.</p>
+</div>
+<div class="section" id="classical-md-level">
+<h3>Classical MD level:<a class="headerlink" href="#classical-md-level" title="Permalink to this headline">¶</a></h3>
+<p>There are two main families of water models:</p>
+<ul class="simple">
+<li><p>TIP = Transferrable Intermolecular Potential</p></li>
+<li><p>SPC = Simple Point Charge</p></li>
+</ul>
+<p>To given an idea of the abundance of models, here are some without explanations: BF, ST2, TIPS, TIPS2,  TIP3P, TIP3Pm, TIP3P/Fs TIP4P, TIP4P-Ew, TIP4P/2005, TIP4P/2005f, TIP4P/<span class="math notranslate nohighlight">\(\varepsilon\)</span>, TIP4P/FQ, TIP4P-HB, TIP4P-i, TIPTP/ice, TIP4P-pol, TIP4PQ, TIP4P-QDP, TIP4P-D, TIP5P, TIP5P-E, TIP5P/2019, OPC, SPC, SPC/E, SPC/<span class="math notranslate nohighlight">\(\varepsilon\)</span>, SPC/A, SPC/F, SPC/F2, SPC/FQ, SPC/Fw, SPC-pol, SPC/HW.</p>
+<p>We will use some of these models during this course.</p>
+</div>
+<div class="section" id="coarse-grained">
+<h3>Coarse-grained:<a class="headerlink" href="#coarse-grained" title="Permalink to this headline">¶</a></h3>
+<p>There are also models that descrive water in a larger scale. The idea is that one so-called coarse-grained molecule somehow approximates a bundle of 3 or 4 actual water molecules. Here are some:
+MARTINI, MARTINI polarized, ELBA, SIRAH, DPD, Mercedes-Benz, BMW, mW.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p id="id13"><dl class="citation">
+<dt class="label" id="id39"><span class="brackets"><a class="fn-backref" href="#id12">1</a></span></dt>
+<dd><p>Emiliano Brini, Christopher J. Fennell, Marivi Fernandez-Serra, Barbara Hribar-Lee, Miha Lukšič, and Ken A. Dill. How water's properties are encoded in its molecular structure and energies. <em>Chemical Reviews</em>, 117(19):12385–12414, sep 2017. <a class="reference external" href="https://doi.org/10.1021/acs.chemrev.7b00259">doi:10.1021/acs.chemrev.7b00259</a>.</p>
+</dd>
+<dt class="label" id="id36"><span class="brackets"><a class="fn-backref" href="#id1">2</a></span></dt>
+<dd><p>R. W. Eastwood and J. W. Hockney. <em>Computer Simulation Using Particles</em>. Adam Hilger, 1988.</p>
+</dd>
+<dt class="label" id="id41"><span class="brackets"><a class="fn-backref" href="#id12">3</a></span></dt>
+<dd><p>Aziz Ghoufi and Patrice Malfreyt. Calculation of the surface tension of water: 40 years of molecular simulations. <em>Molecular Simulation</em>, pages 1–9, aug 2018. <a class="reference external" href="https://doi.org/10.1080/08927022.2018.1513648">doi:10.1080/08927022.2018.1513648</a>.</p>
+</dd>
+<dt class="label" id="id32"><span class="brackets"><a class="fn-backref" href="#id11">4</a></span></dt>
+<dd><p>William Humphrey, Andrew Dalke, and Klaus Schulten. VMD: visual molecular dynamics. <em>Journal of Molecular Graphics</em>, 14(1):33–38, Feb 1996. <a class="reference external" href="https://doi.org/10.1016/0263-7855(96)00018-5">doi:10.1016/0263-7855(96)00018-5</a>.</p>
+</dd>
+<dt class="label" id="id35"><span class="brackets"><a class="fn-backref" href="#id2">5</a></span></dt>
+<dd><p>Damien Laage and James T. Hynes. A molecular jump mechanism of water reorientation. <em>Science</em>, 311(5762):832–835, Feb 2006. <a class="reference external" href="https://doi.org/10.1126/science.1122154">doi:10.1126/science.1122154</a>.</p>
+</dd>
+<dt class="label" id="id40"><span class="brackets"><a class="fn-backref" href="#id12">6</a></span></dt>
+<dd><p>Alexey V. Onufriev and Saeed Izadi. Water models for biomolecular simulations. <em>Wiley Interdisciplinary Reviews: Computational Molecular Science</em>, pages e1347, nov 2017. <a class="reference external" href="https://doi.org/10.1002/wcms.1347">doi:10.1002/wcms.1347</a>.</p>
+</dd>
+<dt class="label" id="id43"><span class="brackets"><a class="fn-backref" href="#id12">7</a></span></dt>
+<dd><p>Jeremy C. Palmer, Peter H. Poole, Francesco Sciortino, and Pablo G. Debenedetti. Advances in computational studies of the liquid-liquid transition in water and water-like models. <em>Chemical Reviews</em>, 118(18):9129–9151, aug 2018. <a class="reference external" href="https://doi.org/10.1021/acs.chemrev.8b00228">doi:10.1021/acs.chemrev.8b00228</a>.</p>
+</dd>
+<dt class="label" id="id38"><span class="brackets"><a class="fn-backref" href="#id12">8</a></span></dt>
+<dd><p>Lars Gunnar Moody Pettersson, Richard Humfry Henchman, and Anders Nilsson. Water—the most anomalous liquid. <em>Chemical Reviews</em>, 116(13):7459–7462, jul 2016. <a class="reference external" href="https://doi.org/10.1021/acs.chemrev.6b00363">doi:10.1021/acs.chemrev.6b00363</a>.</p>
+</dd>
+<dt class="label" id="id34"><span class="brackets"><a class="fn-backref" href="#id3">9</a></span></dt>
+<dd><p>Y. L. A. Rezus and H. J. Bakker. Observation of immobilized water molecules around hydrophobic groups. <em>Physical Review Letters</em>, Oct 2007. <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.99.148301">doi:10.1103/PhysRevLett.99.148301</a>.</p>
+</dd>
+<dt class="label" id="id33"><span class="brackets"><a class="fn-backref" href="#id9">10</a></span></dt>
+<dd><p>John Tatini Titantah and Mikko Karttunen. Hydrophobicity: effect of density and order on water's rotational slowing down. <em>Soft Matter</em>, 11(40):7977–7985, 2015. <a class="reference external" href="https://doi.org/10.1039/c5sm00930h">doi:10.1039/c5sm00930h</a>.</p>
+</dd>
+</dl>
+</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "firasm/jupyterbook_course_template",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./class/IntroSciHPC"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="hpc-intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Background on computers, computing and High Performance Computing</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="../RandomNumbers/random_numbers.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Random numbers</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Mikko Karttunen and Colin Denniston<br/>
+    
+      <div class="extra_footer">
+        <div>
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://licensebuttons.net/l/by-nc-sa/3.0/88x31.png"></a>
+    All content on this site (unless otherwise specified) is licensed under the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0 license</a>
+</div>
+
+      </div>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

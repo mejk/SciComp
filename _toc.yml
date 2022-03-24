@@ -8,62 +8,99 @@ root: about/syllabus
 #numbered: true
 #
 parts:
-  - caption: "MODULE: Practical matters"
-    numbered: true
-    chapters:
-    - file: class/week01/week01_summary.md
-    - file: class/week02/install-wsl
-    - file: class/week02/Linux-basics    
-    - file: class/week02/linux-basic-commands-2    
-    - file: class/week02/python-installation    
-    - file: class/week02/python-virtual-environment
-    - file: class/week02/jupyter-intro
-    - file: class/week02/editing-ascii    
-    - file: class/week02/vi-editor
-    - file: class/week02/helpful-software
-    - file: class/week02/command-line-skill-check    
+
+##############3
+#  - caption: "MODULE: Practical matters"
+#    numbered: true
+#    chapters:
+#    - file: class/week01/week01_summary.md
+#    - file: class/week02/install-wsl
+#    - file: class/week02/Linux-basics    
+#    - file: class/week02/linux-basic-commands-2    
+#    - file: class/week02/python-installation    
+#    - file: class/week02/python-virtual-environment
+#    - file: class/week02/jupyter-intro
+#    - file: class/week02/editing-ascii    
+#    - file: class/week02/vi-editor
+#    - file: class/week02/helpful-software
+#    - file: class/week02/command-line-skill-check    
 
 
 #############################################3
-  - caption: "MODULE: Python & programming"
-    numbered: true
+
+  - caption: "MODULE: Prerequisites and installations"
+#    numbered: false
     chapters:
-    - file: class/week02/coding-notes-general
-    - file: class/week02/python-intro
+    - file: class/PreReq/software_1.md
+    - file: class/PreReq/install-wsl    
+
+#############################################3
+
+  - caption: "MODULE: Linux basics"
+ #   numbered: true
+    chapters:
+    - file: class/LinuxBasics/Linux-basics    
+    - file: class/LinuxBasics/linux-basic-commands-2    
+
+#############################################3
+
+  - caption: "MODULE: Python and Jupyter"
+#    numbered: true
+    chapters:
+    - file: class/PythonBasics/python-installation    
+    - file: class/PythonBasics/python-virtual-environment
+    - file: class/PythonBasics/jupyter-intro    
+
+#############################################3
+
+  - caption: "MODULE: Other software"
+#    numbered: true
+    chapters:
+    - file: class/OtherSoftware/editing-ascii    
+    - file: class/OtherSoftware/vi-editor
+    - file: class/OtherSoftware/helpful-software
+    - file: class/OtherSoftware/command-line-skill-check        
+
+#############################################3
+  - caption: "MODULE: Python & programming"
+#    numbered: true
+    chapters:
+    - file: class/PythonBasics/coding-notes-general
+    - file: class/PythonBasics/python-intro
 ##########################################
 
 #################################
-  - caption: "MODULE: Intro to Scientific computing & HPC"
-    numbered: true
-    chapters:
-    - file: class/week01/intro-to-modeling    
-    - file: class/week01/hpc-intro
-    - file: class/week01/simulation-general
-#################################
-
-
-
-###############################################
-#  - caption: "MODULE: Operating systems"
+#  - caption: "MODULE: Intro to Scientific computing & HPC"
 #    numbered: true
 #    chapters:
-#    - file: class/week02/Linux-basics
-#    - file: class/week02/linux-basic-commands-2
-################################################
+#    - file: class/week01/intro-to-modeling    
+#    - file: class/week01/hpc-intro
+#    - file: class/week01/simulation-general
+#################################
+
+#################################
+  - caption: "MODULE: Intro to Scientific computing & HPC"
+#    numbered: true
+    chapters:
+    - file: class/IntroSciHPC/intro-to-modeling    
+    - file: class/IntroSciHPC/hpc-intro
+    - file: class/IntroSciHPC/simulation-general
+#################################
+
 
 
 ################################################3
   - caption: "MODULE: Random numbers"
-    numbered: true
+#    numbered: true
     chapters:
-    - file: class/week03/random_numbers
+    - file: class/RandomNumbers/random_numbers
 #    - file: class/week02/diffusion-in-brief
 #    - file: extras/python-virtual-environment
 ###################################################
 
 #################################
   - caption: "MODULE: Errors in Scientific Computing"
-    numbered: true
+#    numbered: true
     chapters:
     - file: class/ErrorsModule/Errors_summary
     - file: class/ErrorsModule/Error_sources
