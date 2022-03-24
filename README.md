@@ -75,7 +75,7 @@ Install the dependencies first, The material uses
 
 This project is made possible with funding by the Government of Ontario and through eCampusOntario’s support of the Virtual Learning Strategy. To learn more about the Virtual Learning Strategy visit: [https://vls.ecampusontario.ca](https://vls.ecampusontario.ca.).
 
-![Ontario](./images/logos/ON_POS_LOGO_RGB_sm.png)
+![Ontario](./images/logos/ON_POS_LOGO_RGB-sm.png)
 
 
 - The [Jupyter Project](https://jupyter.org/)
