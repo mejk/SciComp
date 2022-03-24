@@ -53,6 +53,11 @@ Install the depenencies first, The material uses
 
 Use at your own risk. We take no responsibility or liability of any kind. 
 
+## Copyright 
+
+By Mikko Karttunen and Colin Denniston.  All content on this site (unless otherwise specified) is licensed under the [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
+
 ## Acknowledgments
 
 
