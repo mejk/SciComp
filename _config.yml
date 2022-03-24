@@ -36,13 +36,13 @@ launch_buttons:
   thebe              : true
 
 repository: 
-  url          : https://github.com/firasm/jupyterbook_course_template
+  url          : https://github.com/mejk/SciComp
   path_to_book : ""
   branch       : master
 
 sphinx:
   config:
-    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  
+#    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  
     html_show_copyright: false
 #    html_extra_path: ['files']
 #    autosectionlabel_maxdepth: 1

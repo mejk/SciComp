@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Gaussian Integration
+# # Gaussian Integration
 # 
 # So far, we have focussed on integration schemes where the function is sampled at regular intervals.  These are very useful for data that comes to us in this form, but if we wish to integrate a known function as accurately as possible it is better to take advantage of the freedom we have to choose our nodes, just as we did for interpolation where selecting Chebyshev points was optimal.
 # 
 # Consider that quadrature formulas are typically of the form
 # 
 # $$
-# \int_a^b f(x) dx = \sum_{i=0}^{n-1} c_i f(x_i) + error,
+# \int_a^b f(x) dx = \sum_{i=0}^{n-1} c_i f(x_i) + \mathrm{error},
 # $$
 # 
 # which has $2n$ parameters (note for this section we are stopping the sum at $n-1$ rather than $n$ as this is conventional for Gaussian quadrature formulas).  The idea of Gaussian integration is that with these $2n$ parameters it should be possible to chose them to ensure that we can integrate all polynomials of degree less than or equal to $2n-1$ *exactly*.  
@@ -27,7 +27,9 @@
 # 
 # So, we will focus on integration over $[-1,1]$ below.
 # 
-# **Theorem** Suppose $\{x_0,x_1,\cdots,x_{n-1}\}$ are the roots of the $n$th Legendre polynomial $P_n(x)$ and 
+# 
+# ````{prf:theorem}
+# Suppose $\{x_0,x_1,\cdots,x_{n-1}\}$ are the roots of the $n$th Legendre polynomial $P_n(x)$ and 
 # 
 # $$ c_i=\int_{-1}^1 L_i^{n-1}(x) dx,\quad i=0,1,\cdots,n-1$$
 # 
@@ -36,8 +38,12 @@
 # $$ \int_{-1}^1 p(x) dx = \sum_{i=0}^{n-1} c_i p(x_i),$$
 # 
 # exactly.
+# ````
 # 
-# **Proof:**  First look at the case where the degree of $p(x)$ is less than $n$.  Then
+# 
+# 
+# ````{prf:proof}
+# First look at the case where the degree of $p(x)$ is less than $n$.  Then
 # 
 # $$ p(x) = \sum_{i=0}^{n-1} L_i^n(x) p(x_i) $$
 # 
@@ -45,7 +51,10 @@
 # 
 # $$\int_{-1}^1 p(x)dx = \int_{-1}^1 \sum_{i=0}^{n-1} L_i^n(x) p(x_i) = \sum_{i=0}^{n-1} c_i p(x_i),$$
 # 
-# as claimed in the theorem.  Now suppose that the degree of $p(x)$ is at least $n$ but less than or equal to $2n-1$.  Then we can write 
+# as claimed in the theorem.  
+# ````
+# 
+# Now suppose that the degree of $p(x)$ is at least $n$ but less than or equal to $2n-1$.  Then we can write 
 # 
 # $$p(x) = q(x)P_n(x) + r(x),$$
 # 

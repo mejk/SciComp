@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ### Example: Evaluating polynomials
+# # Horner's algorithm
 # 
-# *Example*: To illustrate the affect of accumulation of roundoff errors let's imagine a decimal computer that does floating point arithemetic using a 3-digit chop.  Let's use this to compute the value of a polynomial written in the standard monomial basis:
+# ## Example: Evaluating polynomials
+# 
+# To illustrate the affect of accumulation of roundoff errors let's imagine a decimal computer that does floating point arithemetic using a 3-digit chop.  Let's use this to compute the value of a polynomial written in the standard monomial basis:
 # 
 # $$ p(x) = x^3-6x^2+3x-0.147 $$
 # 
@@ -27,7 +29,8 @@
 # 
 # Let's generalize this to a generic polynomial in an [algorithm usually attributed to William Horner](https://en.wikipedia.org/wiki/Horner%27s_method#:~:text=In%20mathematics%20and%20computer%20science%2C%20Horner%27s%20method%20%28or,hundreds%20of%20years%20to%20Chinese%20and%20Persian%20mathematicians.).  There is evidence, however, that it is actually much older.
 # 
-# **Horner's Algorithm** (a.k.a. "nested multiplication")
+# ## Horner's Algorithm (a.k.a. "nested multiplication")
+# 
 # To evaluate the polynomial  
 # 
 # $$p(x) = a_{n-1} x^{n-1} + a_{n-2} x^{n-2} + ... + a_1 x + a_0,$$  

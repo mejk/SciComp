@@ -168,7 +168,7 @@
 # Methods are common throughout the fields. For example, the [Monte Carlo method](https://en.wikipedia.org/wiki/Monte_Carlo_method) is used to optimize public transportation schedules, design of integrated circuits, used in modeling quantum phenomena, to mention a few applications. Similarly, machine learning is used in everything from image processing to analyzing protein conformations and optimization methods are used in virtually all fields. 
 # 
 # **More:**
-# - [Some general notes on programming]()
+# - [Some general notes on programming](./coding-notes-general.md)
 
 # ## How to use the rest of this section
 # 
@@ -593,7 +593,7 @@ print(music['La Femme'])                # Check that the substitution was made
 
 # ````{dropdown} **Links to music that was referenced in the example.**
 # 
-# **Note:** Videos may contain material that some people may find offensive. Watch at your own discretion. YouTube is also a bot unpredictable in what it allows so you may or may not be able to watch the videos.
+# **Note:** Videos may contain material that some people may find offensive. Watch at your own discretion. YouTube is also a bit unpredictable in what it allows so you may or may not be able to watch the videos.
 # 
 # 
 # ```{tabbed} Justin Bieber: 
@@ -831,6 +831,8 @@ help("random.randint")
 # 
 # This also provides an introduction to `numpy`, loops and plotting options.
 
+# This is very handy for generating arrays:
+# 
 # `np.arange(start=1, stop=10, step=3)`
 
 # In[31]:

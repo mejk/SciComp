@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Chebyshev Polynomials
+# # Chebyshev Polynomials
 # 
 # In the last section, we found that a set of nodes with points more densely spaced at the edges of the interval seemed to work much better for polynomial interpolation than equally spaced points.  It turns out, the points we choose were roots of a [Chebyshev polynomial](https://en.wikipedia.org/wiki/Chebyshev_polynomials).  Chebyshev polynomials are a set of orthogonal polynomials on the interval $[-1,1]$ with respect to the weight function $1/\sqrt{1-x^2}$.  They can be defined via trignometric functions as
 # 
@@ -126,7 +126,7 @@
 # 
 # We illustrate these points with an example below.
 # 
-# ### Example. 
+# ## Example
 # 
 # Let's construct a fourth order polynomial intepolation ($n=4$) for $f(x)=e^{-x^2}$ on the interval $[0,1]$.
 # 

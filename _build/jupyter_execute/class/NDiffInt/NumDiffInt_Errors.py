@@ -1,34 +1,44 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# (page_topic1)=
-# Errors in Numerical Differentiation
-# =======================
+# 
+# # Errors in Numerical Differentiation
+# 
 # 
 # In order for the finite difference formulas derived in the previous section to be useful, we need to have some idea of the errors involved in using these formulas.  As mentioned, we are replacing $f(x)$ with its polynomial interpolant $p_n(x)$ and then taking the derivatives, so that 
 # 
 # $$ f'(x) = p_n'(x) + \epsilon'(x),\qquad f''(x) = p_n''(x) + \epsilon''(x).$$
 # 
-# We need to $\epsilon'(x)$ and \epsilon''(x) to determine the errors in the formulas we derived.
+# We need to $\epsilon'(x)$ and $\epsilon''(x)$ to determine the errors in the formulas we derived.
 # 
 # First recall [the polynomial interpolation error](../InterpFit/InterpErrors) is
 # 
-# $$\begin{equation} \epsilon(x)= f(x)-p_n(x) = \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0}^n (x-x_j). \end{equation}$$ (inter_err)
+# ```{math}
+# :label: inter_err_a
+# \epsilon(x)= f(x)-p_n(x) = \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0}^n (x-x_j).
+# ```
 # 
 # Taking the derivative of this using the product rule yields
 # 
-# $$
-# \begin{equation} \epsilon'(x) = \frac{f^{n+1}(\xi)}{(n+1)!}\left[\sum_{k=0}^n \prod_{j=0,j\neq k}^n (x-x_j)\right] + \frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0}^n (x-x_j), \end{equation}$$ (errprime)
+#  
+# ```{math}
+# :label: errprime
+# \epsilon'(x) = \frac{f^{n+1}(\xi)}{(n+1)!}\left[\sum_{k=0}^n \prod_{j=0,j\neq k}^n (x-x_j)\right] + \frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0}^n (x-x_j), 
+# ```
+# 
 # 
 # where the second term arises from the fact that $\xi$ may depend on $x$.  Evaluating this at one of the gridpoints, say $x_i$, simplifies the expression considerably as all but one of the terms contain the factor $(x_i-x_i)$,
 # 
-# $$
-# \begin{equation} \epsilon'(x_i) = \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j). \end{equation}$$ (pprimeerr)
+# 
+# ```{math}
+# :label: pprimeerr
+# \epsilon'(x_i) = \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j). 
+# ```
 # 
 # We can now use this expression for the errors in our first derivative finite difference formulas.  Before we do, let's derive the error formula for the second derivatives.
 # 
 # 
-# Taking the derivative {eq}`errprime` yields
+# Taking the derivative Equation {eq}`errprime` yields
 # 
 # $$
 # \begin{align} \epsilon''(x) = & \frac{f^{n+1}(\xi)}{(n+1)!}\left[ \sum_{k=0}^n \sum_{m=0, m\neq k}^n \prod_{j=0,j\neq k,m}^n (x-x_j)\right]\\
@@ -37,22 +47,26 @@
 # 
 # Evaluating this at one of the gridpoints, say $x_i$, simplifies the expression to,
 # 
-# $$
-# \begin{align}
+# 
+# ```{math}
+# :label: ppperr
 # \epsilon''(x_i) &=\frac{f^{n+1}(\xi)}{(n+1)!}\left[\sum_{m=0,m\neq i}^n \prod_{j=0, j\neq i,m} (x_i-x_j) + \sum_{k=0,k\neq i}^n \prod_{j=0, j\neq i,k} (x_i-x_j) \right] +\frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j),\\
 # &=\frac{2f^{n+1}(\xi)}{(n+1)!}\left[\sum_{k=0,k\neq i}^n \prod_{j=0, j\neq i,k} (x_i-x_j) \right] +\frac{f^{n+2}(\xi)\xi'}{(n+1)!}\prod_{j=0,j\neq i}^n (x_i-x_j).
-# \end{align}$$ (ppperr)
+# ```
 # 
-# This is a bit messier than the error for the first derivative {eq}`pprimeerr`.  In most cases one can argue that the second term is small compared to the first as it contains one additional factor of the difference of grid points and one expects $\xi'$ to be small.
+# This is a bit messier than the error for the first derivative Equation {eq}`pprimeerr`.  In most cases one can argue that the second term is small compared to the first as it contains one additional factor of the difference of grid points and one expects $\xi'$ to be small.
 # 
-# **Example: Error in the two point formulas**  In the previous section, for two points $x_0$ and $x_1=x_0+h$ we derived the forward/backwards difference formulae and we would now like to know the error in using these formulae.  Using {eq}`pprimeerr` with $n=1$ we straightforwardly get
+# ## Example: Error in the two point formulas 
+# 
+# In the previous section, for two points $x_0$ and $x_1=x_0+h$ we derived the forward/backwards difference formulae and we would now like to know the error in using these formulae.  Using Equation {eq}`pprimeerr` with $n=1$ we straightforwardly get
 # 
 # $$ \epsilon'(x_0) = \frac{f''(\xi)}{2}(-h),\quad \text{and}\quad  \epsilon'(x_1) = \frac{f''(\xi)}{2}(h),$$
 # 
 # noting that $\xi$ is not likely to be the same number in the two cases.  So, in summary, we now have
 # 
-# $$
-# \begin{equation}
+# 
+# ```{math}
+# :label: twopoint
 # \left[{\begin{array}{c}
 # f'(x_0) \\
 # f'(x_1) \\
@@ -65,10 +79,12 @@
 #   -\frac{h}{2}f''(\xi) \\
 #    \frac{h}{2}f''(\xi) \\
 # \end{array}} \right].
-# \end{equation}
-# $$ (twopoint)
+# ```
 # 
-# **Example: Error in the three point formulae**  In the previous section, for three points $x_0,\,x_1=x_0+h,$ and $x_2=x_0+2h,$ $x_0$ we derived finite difference formulae for first and second derivatives and we would now like to know the error in using these formulae.  Using {eq}`pprimeerr` with $n=2$ we straightforwardly get the result for the first derivatives:
+# 
+# ## Example: Error in the three point formulae 
+# 
+# In the previous section, for three points $x_0,\,x_1=x_0+h,$ and $x_2=x_0+2h,$ $x_0$ we derived finite difference formulae for first and second derivatives and we would now like to know the error in using these formulae.  Using Equation {eq}`pprimeerr` with $n=2$ we straightforwardly get the result for the first derivatives:
 # 
 # $$
 # \begin{equation}
@@ -90,9 +106,9 @@
 # \end{equation}
 # $$
 # 
-# First note that the errors here are $\mathcal{O}(h^2)$ compared to {eq}`twopoint` for the two-point formulae which are $\mathcal{O}(h)$.  So, assuming $h$ is small, these do indeed have a higher order accuracy.  Further, the error in the *central* difference formula is *half* that of the backward/forward differences.  As a result, the central difference formula is the one most widely used.
+# First note that the errors here are $\mathcal{O}(h^2)$ compared to Equation {eq}`twopoint` for the two-point formulae which are $\mathcal{O}(h)$.  So, assuming $h$ is small, these do indeed have a higher order accuracy.  Further, the error in the *central* difference formula is *half* that of the backward/forward differences.  As a result, the central difference formula is the one most widely used.
 # 
-# We now turn to the second derivative errors.  At $x_0$ {eq}`ppperr` gives
+# We now turn to the second derivative errors.  At $x_0$ Equation {eq}`ppperr` gives
 # 
 # $$
 # \begin{align}
@@ -137,7 +153,7 @@
 # $$ f''(x_1) \approx \frac{f(x_0)-2f(x_1)+f(x_2)}{h^2} -\frac{h^2}{12}f^{(4)}(\eta). $$
 # 
 # 
-# ### Stability
+# ## Stability
 # 
 # The central difference formula we derived
 # 
@@ -182,12 +198,16 @@
 # 
 # If $f(x)\sim 1$ we would expect the roundoff to be of order of the machine epsilon $\epsilon_r$.  For $f(x)$ not of order unity, we would expect $\beta \approx \epsilon_r |f(x)|$. So around a given $x$ we expect roughly
 # 
-# $$
+# 
+# ```{math}
+# :label: hop
 # h_{op}\approx  \sqrt[3]{\frac{3 \epsilon_r |f(x)|}{|f^{(3)}(x)|}}.
-# $$ (hop)
+# ```
 # 
 # 
-# **Example** Suppose we use the central difference formula to evaluate the derivative of $f(x)=e^x$.  What is the error and what is the optimal $h_{op}$?  
+# ### Example 
+# 
+# Suppose we use the central difference formula to evaluate the derivative of $f(x)=e^x$.  What is the error and what is the optimal $h_{op}$?  
 # 
 # First note that we can work out the analytic derivative ($f'(x)=e^x$) and the third derivative here ($f^{(3)}(x)=e^x$).  In this case, {eq}`hop` then gives,
 # 
@@ -197,7 +217,7 @@
 # 
 # We can test this assertion with a short python script:
 
-# In[11]:
+# In[1]:
 
 
 from matplotlib import pyplot as plt

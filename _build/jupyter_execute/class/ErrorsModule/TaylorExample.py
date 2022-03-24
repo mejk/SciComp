@@ -1,11 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Truncation Error in Taylor's series
+# # Truncation Error in Taylor's series
 # 
 # Most algorithms in Numerical Analysis suffer from some form of truncation error.  Often this truncation error comes about from some series solution to the problem of interest that we *truncate* at some finite order in order to solve.  To illustrate the concept of a *truncation* error, let's look at an example for Taylor's series.  It is helpful to recall Taylor's theorem from first year calculus:
 # 
-# ### Taylor's Theorem
+# ## Taylor's Theorem
 #  Suppose we have a function $f\in C^n[a,b]$  (i.e. $f$ is $n$ times continuously differentiable), that $f^{(n+1)}$ exists on $[a,b]$ and $x_0\in [a,b]$.  Then for $x\in [a,b]$ we have 
 #  
 # $$f(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2}(x-x_0)^2+ ... + \frac{f^{(n)}(x_0)}{n!}(x-x_0)^n  + R_n(x,x_0),$$

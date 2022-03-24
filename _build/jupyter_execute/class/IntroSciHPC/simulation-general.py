@@ -101,7 +101,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/water-jumping.png
 #    :width: 100%
-#    :name: water-jump
+#    :name: water-jump-jumping
 #    :align: left
 # ```
 # <small>
@@ -119,7 +119,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/modeling-schema-small-physical.svg
 #    :width: 100%
-#    :name: small
+#    :name: schema-small
 #    :align: right
 # ```
 # ````
@@ -139,7 +139,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/modeling-schema-small-construct.svg
 #    :width: 100%
-#    :name: small
+#    :name: construct-small
 #    :align: right
 # ```
 # 
@@ -156,7 +156,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/modeling-schema-small-numerical.svg
 #    :width: 100%
-#    :name: small
+#    :name: numerical-small
 #    :align: right
 # ```
 # ````
@@ -174,7 +174,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/modeling-schema-small-program.svg
 #    :width: 100%
-#    :name: small
+#    :name: prgm-small
 #    :align: right
 # ```
 # ````
@@ -196,7 +196,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/modeling-schema-small-simulation.svg
 #    :width: 100%
-#    :name: small
+#    :name: sim-small
 #    :align: right
 # ```
 # ````
@@ -229,7 +229,7 @@ md(f"-Last updated on {now}")
 # 
 # ```{figure} img/modeling-schema-small-analyze.svg
 #    :width: 100%
-#    :name: small
+#    :name: analyze-small
 #    :align: right
 # ```
 # ````

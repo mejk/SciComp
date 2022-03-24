@@ -120,7 +120,7 @@ In addition to the above design issues, here are a few often overlooked practica
 
 __Summations:__ One can minimize roundoff errors if summations are performed in the order of increasing magnitude (add smaller numbers first). 
 
-__Avoid mixing of types:__ Do not add floating point numbers and integers. Instead,  use a type conversion (functions such as `REAL` in Fortran) when performing such an operation. `REAL(i)` converts an integer *i* into a floating point number and it can then be used in operations with other floating point numbers. Although Python does not have type declarations, this issue still matters: For example, consider the difference between 1/3 and 1.0/3.0. Python 2 (no longer maintened but lots of libraries and codes are still using Python 2) and Python 3 handle these expression differently!
+__Avoid mixing of types:__ Do not add floating point numbers and integers. Instead,  use a type conversion (functions such as `REAL` in Fortran) when performing such an operation. `REAL(i)` converts an integer *i* into a floating point number and it can then be used in operations with other floating point numbers. Although Python does not have type declarations, this issue still matters: For example, consider the difference between 1/3 and 1.0/3.0. Python 2 (no longer maintained but lots of libraries and codes are still using Python 2) and Python 3 handle these expression differently!
 
 __Memory access:__ Make sure you access computer memory in the most efficient way. For example, in the case nested loops, the first index runs fastest in Fortran, whereas in C/C++ and Python it is the last one. This can make a huge difference in performance. 
 

@@ -1,6 +1,6 @@
-(page_topic1)=
-Numerical Integration
-=======================
+
+# Numerical Integration
+
 
 Numerical integration has a long history.  Older literature refers to this as numerical "quadrature".  Numerical differentiation is primarily used for cases where we have discrete data corresponding to measurements of our underlying function. While numerical integration is used in similar circumstances, it is also often a necessity even when we have a relatively simple analytic form for the underlying function due to the lack of an analytic form for most anti-derivatives.  For example, $f(x) = e^{-x^2}$ can be easily differentiated ($f'(x)=2x e^{-x^2}$) but lacks an analytic antiderivative.  Statistics textbooks still typically contain tables related to the antiderivative of this function that are obtained by numerical integration.
 
@@ -14,13 +14,15 @@ $$ \int_a^b f(x) dx= \int_a^b p(x) dx + \int_a^b \epsilon(x) dx.$$
 
 Applying this to Lagrange interpolation we get  
 
-$$
+
+```{math}
+:label: LagrangeInt
 \begin{align}
 \int_a^b f(x) dx &\approx \int_a^b \sum_{k=0}^n f(x_k) L_k(x) dx,\\
 & = \sum_{k=0}^n f(x_k)  \int_a^b L_k(x) dx,\\
 & = \sum_{k=0}^n a_k f(x_k),
 \end{align}
-$$ (LagrangeInt)
+```
 
 with  
 
@@ -34,7 +36,9 @@ $$
 E =  \int_a^b  \frac{f^{n+1}(\xi)}{(n+1)!}\prod_{j=0}^n (x-x_j) dx.
 $$  
 
-**Example: Trapezoidal Rule.**  Here we use a linear interpolation between the endpoints so $x_0=a$ and $x_1=b$.  Integration of the Lagrange polynomials for this case gives  
+## Example: Trapezoidal Rule.  
+
+Here we use a linear interpolation between the endpoints so $x_0=a$ and $x_1=b$.  Integration of the Lagrange polynomials for this case gives  
  
 $$
 \begin{align}
@@ -64,8 +68,8 @@ $$
 
 The difficulty here is that $\xi$ depends on $x$ in an unknown manner.  Noting that $(x-x_0)(x-x_1) \leq 0$ on $[x_0,x_1]$ we can make use of
 
-````{dropdown} **The Weighted Mean Value Theorem**  
-
+````{prf:theorem} **The Weighted Mean Value Theorem**  
+:label: weigthed-mean-value
 If $f(x)$ is continuously and $g(x)$ is an integrable function that does not change sign on $[a,b]$, then there exists $\eta \in (a,b)$ such that  
 
 $$
@@ -90,9 +94,9 @@ Often quadrature formulas are characterized by the *degree of accuracy*.  This i
 
 To improve upon the trapezoidal rule (i.e. reduce the error) we could use more points and a higher degree polynomial.  However, we actually have another option which we will consider first.  In particular, we can break up the interval and apply the trapezoidal rule on each interval.  We will illustrate this next.
 
-### Composite Integration
+## Composite Integration
 
-Let's assume that we are given data at equally spaced points $x_j=a+jh$ on the interval $[a,b]$, for $j=0,\cdots,n$ so $h=(b-a)/n$.  We break up the integral into $n$ separate intevals over each segment $(x_j,x_{j+1})$ and apply the trapezoidal rule to each segment:  
+Let's assume that we are given data at equally spaced points $x_j=a+jh$ on the interval $[a,b]$, for $j=0,\cdots,n$ so $h=(b-a)/n$.  We break up the integral into $n$ separate intervals over each segment $(x_j,x_{j+1})$ and apply the trapezoidal rule to each segment:  
 
 $$
 \begin{align}
@@ -102,7 +106,7 @@ $$
 \end{align}
 $$  
 
-Note that the unknown $\xi_j$'s are each in a differnt subinterval $(x_j,x_{j+1})$. In additon, any given $f(x_i)$ appears in two terms in the first sum, except for the endpoints.  We can the rearrange the terms to get
+Note that the unknown $\xi_j$'s are each in a different subinterval $(x_j,x_{j+1})$. In addition, any given $f(x_i)$ appears in two terms in the first sum, except for the endpoints.  We can the rearrange the terms to get
 
 $$
 \begin{align}
@@ -124,7 +128,7 @@ where we also used the fact that $nh=(b-a)$.
 
 
 
-### Stability
+## Stability
 
 We discovered that numerical differentiation using finite differences was numerically unstable for small $h$.  We now examine the stability of numerical integration, and in particular, the composite trapezoidal rule.   As in [that discussion](./NumDiffInt_Errors), we will let $\mathcal{fl}(.)$ denote the finite precision arithmetic on the computer, i.e.
 

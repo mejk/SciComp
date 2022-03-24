@@ -26,8 +26,8 @@ from myst_nb import glue
 from IPython.display import IFrame
 from IPython.display import Markdown
 # Additional styling ; should be moved into helpers
-from IPython.core.display import display, HTML
-HTML('<style>{}</style>'.format(open('styler.css').read()))
+#from IPython.core.display import display, HTML
+#HTML('<style>{}</style>'.format(open('styler.css').read()))
 #import pandas as pd
 from datetime import datetime
 from IPython.display import Markdown as md
@@ -254,32 +254,32 @@ The Nobel Laurates in computational chemistry. <a href="https://doi.org/10.1073/
 
 ```{figure} img/kohn-cc.jpg
    :width: 200px
-   :name: figure-example
-   [Walter Kohn](https://www.nobelprize.org/prizes/chemistry/1998/kohn/biographical/).
+   :name: figure-kohn
+   [Walter Kohn](https://www.nobelprize.org/prizes/chemistry/1998/kohn/biographical/). Photo from Wikipedia, Creative Commons license.
  ```
 ---
 ```{figure} img/pople-cc.png
    :width: 200px
-   :name: figure-example
-   [John Pople](https://www.nobelprize.org/prizes/chemistry/1998/pople/biographical/).
+   :name: figure-pople
+   [John Pople](https://www.nobelprize.org/prizes/chemistry/1998/pople/biographical/). Photo from Wikipedia, Creative Commons license.
  ```
 ---
 ```{figure} img/karplus-cc.jpg
    :width: 200px
-   :name: figure-example
-   [Martin Karplus](https://www.nobelprize.org/prizes/chemistry/2013/karplus/biographical/).
+   :name: figure-karplus
+   [Martin Karplus](https://www.nobelprize.org/prizes/chemistry/2013/karplus/biographical/). Photo from Wikipedia, Creative Commons license.
  ```
 ---
 ```{figure} img/warshel-cc.jpg
    :width: 200px
-   :name: figure-example
-   [Arieh Warshel](https://www.nobelprize.org/prizes/chemistry/2013/warshel/biographical/).
+   :name: figure-warshel
+   [Arieh Warshel](https://www.nobelprize.org/prizes/chemistry/2013/warshel/biographical/). Photo from Wikipedia, Creative Commons license.
  ```
 ---
 ```{figure} img/levitt-cc.jpg
    :width: 200px
-   :name: figure-example
-   [Michael Levitt](https://www.nobelprize.org/prizes/chemistry/2013/levitt/biographical/).
+   :name: figure-levitt
+   [Michael Levitt](https://www.nobelprize.org/prizes/chemistry/2013/levitt/biographical/). Photo from Wikipedia, Creative Commons license.
  ```
 ````
 
@@ -342,7 +342,7 @@ from IPython.display import FileLink
 from IPython.display import display_pdf
 from IPython.display import display_markdown
 from IPython.display import IFrame
-from IPython.core.display import display
+#from IPython.core.display import display
 
 #display.IFrame('https://en.wikipedia.org/wiki/Chocolate_chip_cookie_dough_ice_cream', 700, 500)
 #display.IFrame('https://mikko.slides.com/mka/chem3300g-winter-2020/fullscreen?token=gBWSLGtb', 600, 300)

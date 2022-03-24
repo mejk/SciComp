@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Interpolation Errors
+# # Interpolation Errors
 # 
 # In order to talk about the errors in an interpolating polynomial, we must assume that there is a reasonably well behaved underlying function $f(x)$.  The error can the be characterized by asking: What is $f(x)-p_n(x)$?  
 # 
@@ -16,6 +16,7 @@
 # -->
 # 
 # ````{prf:theorem}
+# :label: thrm-err
 # Given *distinct* $x_0, x_1, ... , x_n$ in an interval $[a,b]$, and with $f(x)\in C^{n+1}[a,b]$, 
 # for any $x\in[a,b]$  there exists $\xi\in(a,b)$ such that   
 # ```{math}
@@ -37,12 +38,12 @@
 # 
 # We now make use of  
 # 
-# ````{prf:theorem} **Rolle's Theorem**  
+# ````{prf:theorem} Rolle's Theorem  
+# :label: rolle
 # 
 # If $r(x)$ is a continuously differentiable function with $r(c)=r(d)=0$ then $r'(\xi)=0$ for some $\xi \in (c,d)$.  This is usually proved in first year calculus textbooks but is fairly obvious when you plot any reasonably behaved function that is zero at two points $c$ and $d$ which will have to look something like one of the below:
 # 
 # <img src="./img/rolle.svg" width="600">
-# 
 # 
 # ````
 # 

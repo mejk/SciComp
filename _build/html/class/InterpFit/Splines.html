@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -37,29 +37,21 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -113,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Prerequisites and installations
  </span>
@@ -130,7 +122,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Linux basics
  </span>
@@ -147,7 +139,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python and Jupyter
  </span>
@@ -169,7 +161,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Other software
  </span>
@@ -202,7 +194,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
@@ -219,7 +211,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
@@ -241,7 +233,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
@@ -253,7 +245,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -281,7 +273,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../ErrorsModule/HornersAlgorithm.html">
-   Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
@@ -295,7 +287,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Interpolation
  </span>
@@ -332,7 +324,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Numerical Differentiation &amp; Integration
  </span>
@@ -364,7 +356,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -441,7 +433,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/firasm/jupyterbook_course_template/master?urlpath=lab/tree/class/InterpFit/Splines.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/mejk/SciComp_template/master?urlpath=lab/tree/class/InterpFit/Splines.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -466,24 +458,17 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Splines
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
+   Cubic interpolatory splines
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
-     Cubic interpolatory splines
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
-     Errors in Cubic Interpolatory Splines
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
+   Errors in Cubic Interpolatory Splines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-splines">
    Using Splines
   </a>
@@ -508,24 +493,17 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Splines
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
+   Cubic interpolatory splines
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#cubic-interpolatory-splines">
-     Cubic interpolatory splines
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
-     Errors in Cubic Interpolatory Splines
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors-in-cubic-interpolatory-splines">
+   Errors in Cubic Interpolatory Splines
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#using-splines">
    Using Splines
   </a>
@@ -539,7 +517,7 @@
             
               <div>
                 
-  <div class="section" id="splines">
+  <div class="tex2jax_ignore mathjax_ignore section" id="splines">
 <h1>Splines<a class="headerlink" href="#splines" title="Permalink to this headline">¶</a></h1>
 <p>It should be clear at this point that if we want to approximate a function with an interpolating polynomial then selecting the nodes as something like Chebyshev points is essential.  However, data from many sources comes to us at node intervals that we do not control.  Most often, this is at regularly spaced intervals.  How should we interpolate between such data?  In most cases, the answer to this is that you should use splines.  Interpolation using splines is a generalization of “connecting the dots”.  The most simple form, a linear interpolating spline, involves just connecting the data points with straight lines to find intermediate values.  This is illustrated below using a set of uniformly spaced points with the underlying function <span class="math notranslate nohighlight">\(f(x)=e^{-x^2}\)</span>.</p>
 <a class="reference internal image-reference" href="../../_images/linspline.svg"><img alt="../../_images/linspline.svg" src="../../_images/linspline.svg" width="400" /></a>
@@ -688,9 +666,8 @@ b_{j+1} &amp;= S_{j+1}'(x_{j+1}) \\
 \end{split}\]</div>
 <p>As we can see, splines can be reasonably good for obtaining approximations to derivatives of the underlying function as well.</p>
 </div>
-</div>
 <div class="section" id="using-splines">
-<h1>Using Splines<a class="headerlink" href="#using-splines" title="Permalink to this headline">¶</a></h1>
+<h2>Using Splines<a class="headerlink" href="#using-splines" title="Permalink to this headline">¶</a></h2>
 <p>Implementing splines requires solving a tridiagonal system.  While not hard to do, it is usually not worth the effort to implement all of this yourself.  Instead, you should use a library.  <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/tutorial/interpolate.html">SciPy contains an implementation for natural cubic interpolatory splines</a> which we illustrate the use of below.</p>
 <p>We first import the necessary libraries:</p>
 <div class="cell docutils container">
@@ -732,12 +709,13 @@ b_{j+1} &amp;= S_{j+1}'(x_{j+1}) \\
 </div>
 </div>
 </div>
+</div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {

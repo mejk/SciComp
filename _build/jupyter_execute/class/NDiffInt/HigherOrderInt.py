@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Higher Order Integration Schemes
+# # Higher Order Integration Schemes
 # 
 # The composite trapezoidal rule is functional, but not all that accurate.  At this point, the only method we have to improve accuracy is to divide the interval into smaller segments.  We can, however, use results for different step sizes $h$ to improve both results by eliminating the lowest order error.  To illustrate, consider the trapezoidal rule for a step $h_1=(b-a)$ and then $h_2=(b-a)/2$,  
 # 
@@ -70,7 +70,8 @@
 # $$
 # 
 # 
-# **Example**  Suppose we want to compute $\int_0^\pi \sin x\, dx$  (which in this case we know is $2$).  We construct the following tableau:  
+# ### Example  
+# Suppose we want to compute $\int_0^\pi \sin x\, dx$  (which in this case we know is $2$).  We construct the following tableau:  
 # 
 # $$
 # \begin{align}
@@ -111,6 +112,7 @@
 
 
 import numpy as np
+from scipy import integrate
 
 def f(x):
    return 1/np.sqrt(np.pi) * np.exp(-x**2)
@@ -119,15 +121,16 @@ x = np.linspace(0, 2, num=9, endpoint=True)
 print("sample points: ",x)
 
 y = f(x)
-from scipy import integrate
+
 I1 = integrate.trapezoid(y, x)
 I2 = integrate.simpson(y, x)
+
 print("trapezoidal = ",I1, ", Simpsons = ",I2)
 
 
 # The accuracy of these results is difficult to judge, other than by comparing them which gives us an estimate for the trapezoidal rule.  In contrast, the Romberg integration keeps adding a row to the tableau until the results converge:
 
-# In[14]:
+# In[4]:
 
 
 from scipy import integrate

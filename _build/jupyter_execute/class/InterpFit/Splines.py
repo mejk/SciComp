@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Splines
+# # Splines
 # 
 # It should be clear at this point that if we want to approximate a function with an interpolating polynomial then selecting the nodes as something like Chebyshev points is essential.  However, data from many sources comes to us at node intervals that we do not control.  Most often, this is at regularly spaced intervals.  How should we interpolate between such data?  In most cases, the answer to this is that you should use splines.  Interpolation using splines is a generalization of "connecting the dots".  The most simple form, a linear interpolating spline, involves just connecting the data points with straight lines to find intermediate values.  This is illustrated below using a set of uniformly spaced points with the underlying function $f(x)=e^{-x^2}$.
 # 
@@ -9,7 +9,7 @@
 # 
 # This is also a common technique for interpolating between values in a table.  An obvious question is: Is this the best we can do with using different polynomials between each set of points (i.e. a function defined *piecewise*)?  Aside from the issue of absolute errors in the interpolation (i.e. $|f(x)-s_i(x)|$ where $s_i(x)$ is the polynomial defined on the interval between points $i$ and $i+1$), a linear interpolatory spline is not differentiable at the node points, typically called **knots** when discussing splines, which could be problematic for many applications.  The kinks are also visually unappealing in the plot.  It turns out that it is not that difficult to construct an interpolating spline that is continuous in both first and second derivatives at the knots by using piecewise cubic polynomial functions.
 
-# ### Cubic interpolatory splines
+# ## Cubic interpolatory splines
 # 
 # To be more specific, we are looking for a set of cubic polynomials $\{ S_j(x) \}_{j=0}^{n-1}$ where our interpolatory function  
 # 
@@ -193,7 +193,7 @@
 # 
 # 2. Evaluate and return $S_j(x)$. 
 
-# ### Errors in Cubic Interpolatory Splines
+# ## Errors in Cubic Interpolatory Splines
 # 
 # As usual, we wish to ensure our errors are bounded and have some form of this error bound so it is clear what measures may, or may not, improve (or worsen) these errors.  This is provided by the following theorem which summarizes the results of [Hall and Meyer](https://doi.org/10.1016/0021-9045(76)90040-X) which also provides bounds on the derivatives.
 # 

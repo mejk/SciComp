@@ -27,43 +27,59 @@ help()
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mStdinNotImplementedError[0m                  Traceback (most recent call last)
-[0;32m<ipython-input-1-c0b331d65c79>[0m in [0;36m<module>[0;34m[0m
-[1;32m      4[0m [0;31m# is ignored by the interpreter.[0m[0;34m[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0;34m[0m[0m
-[0;32m----> 6[0;31m [0mhelp[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/anaconda3/lib/python3.8/_sitebuiltins.py[0m in [0;36m__call__[0;34m(self, *args, **kwds)[0m
-[1;32m    101[0m     [0;32mdef[0m [0m__call__[0m[0;34m([0m[0mself[0m[0;34m,[0m [0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwds[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    102[0m         [0;32mimport[0m [0mpydoc[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 103[0;31m         [0;32mreturn[0m [0mpydoc[0m[0;34m.[0m[0mhelp[0m[0;34m([0m[0;34m*[0m[0margs[0m[0;34m,[0m [0;34m**[0m[0mkwds[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;32m~/anaconda3/lib/python3.8/pydoc.py[0m in [0;36m__call__[0;34m(self, request)[0m
-[1;32m   1909[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1910[0m             [0mself[0m[0;34m.[0m[0mintro[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1911[0;31m             [0mself[0m[0;34m.[0m[0minteract[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1912[0m             self.output.write('''
-[1;32m   1913[0m [0mYou[0m [0mare[0m [0mnow[0m [0mleaving[0m [0mhelp[0m [0;32mand[0m [0mreturning[0m [0mto[0m [0mthe[0m [0mPython[0m [0minterpreter[0m[0;34m.[0m[0;34m[0m[0;34m[0m[0m
+Input [0;32mIn [1][0m, in [0;36m<cell line: 6>[0;34m()[0m
+[1;32m      1[0m [38;5;66;03m# Important: Try the command in the Code cells in your own notebook. [39;00m
+[1;32m      2[0m [38;5;66;03m# The hashtag (#) character starts a comment.[39;00m
+[1;32m      3[0m [38;5;66;03m# Note that if a comment is put in the middle of a Code cell, everything that is after it[39;00m
+[1;32m      4[0m [38;5;66;03m# is ignored by the interpreter.[39;00m
+[0;32m----> 6[0m [43mhelp[49m[43m([49m[43m)[49m
 
-[0;32m~/anaconda3/lib/python3.8/pydoc.py[0m in [0;36minteract[0;34m(self)[0m
-[1;32m   1921[0m         [0;32mwhile[0m [0;32mTrue[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1922[0m             [0;32mtry[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1923[0;31m                 [0mrequest[0m [0;34m=[0m [0mself[0m[0;34m.[0m[0mgetline[0m[0;34m([0m[0;34m'help> '[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1924[0m                 [0;32mif[0m [0;32mnot[0m [0mrequest[0m[0;34m:[0m [0;32mbreak[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1925[0m             [0;32mexcept[0m [0;34m([0m[0mKeyboardInterrupt[0m[0;34m,[0m [0mEOFError[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m~/anaconda3/lib/python3.8/_sitebuiltins.py:103[0m, in [0;36m_Helper.__call__[0;34m(self, *args, **kwds)[0m
+[1;32m    101[0m [38;5;28;01mdef[39;00m [38;5;21m__call__[39m([38;5;28mself[39m, [38;5;241m*[39margs, [38;5;241m*[39m[38;5;241m*[39mkwds):
+[1;32m    102[0m     [38;5;28;01mimport[39;00m [38;5;21;01mpydoc[39;00m
+[0;32m--> 103[0m     [38;5;28;01mreturn[39;00m [43mpydoc[49m[38;5;241;43m.[39;49m[43mhelp[49m[43m([49m[38;5;241;43m*[39;49m[43margs[49m[43m,[49m[43m [49m[38;5;241;43m*[39;49m[38;5;241;43m*[39;49m[43mkwds[49m[43m)[49m
 
-[0;32m~/anaconda3/lib/python3.8/pydoc.py[0m in [0;36mgetline[0;34m(self, prompt)[0m
-[1;32m   1941[0m         [0;34m"""Read one line, using input() when appropriate."""[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1942[0m         [0;32mif[0m [0mself[0m[0;34m.[0m[0minput[0m [0;32mis[0m [0msys[0m[0;34m.[0m[0mstdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m-> 1943[0;31m             [0;32mreturn[0m [0minput[0m[0;34m([0m[0mprompt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m   1944[0m         [0;32melse[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[1;32m   1945[0m             [0mself[0m[0;34m.[0m[0moutput[0m[0;34m.[0m[0mwrite[0m[0;34m([0m[0mprompt[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+File [0;32m~/anaconda3/lib/python3.8/pydoc.py:1911[0m, in [0;36mHelper.__call__[0;34m(self, request)[0m
+[1;32m   1909[0m         [38;5;28;01melse[39;00m:
+[1;32m   1910[0m             [38;5;28mself[39m[38;5;241m.[39mintro()
+[0;32m-> 1911[0m             [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43minteract[49m[43m([49m[43m)[49m
+[1;32m   1912[0m             [38;5;28mself[39m[38;5;241m.[39moutput[38;5;241m.[39mwrite([38;5;124m'''[39m
+[1;32m   1913[0m [38;5;124mYou are now leaving help and returning to the Python interpreter.[39m
+[1;32m   1914[0m [38;5;124mIf you want to ask for help on a particular object directly from the[39m
+[1;32m   1915[0m [38;5;124minterpreter, you can type [39m[38;5;124m"[39m[38;5;124mhelp(object)[39m[38;5;124m"[39m[38;5;124m.  Executing [39m[38;5;124m"[39m[38;5;124mhelp([39m[38;5;124m'[39m[38;5;124mstring[39m[38;5;124m'[39m[38;5;124m)[39m[38;5;124m"[39m
+[1;32m   1916[0m [38;5;124mhas the same effect as typing a particular string at the help> prompt.[39m
+[1;32m   1917[0m [38;5;124m'''[39m)
 
-[0;32m~/.local/lib/python3.8/site-packages/ipykernel/kernelbase.py[0m in [0;36mraw_input[0;34m(self, prompt)[0m
-[1;32m    852[0m         """
-[1;32m    853[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0m_allow_stdin[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
-[0;32m--> 854[0;31m             raise StdinNotImplementedError(
-[0m[1;32m    855[0m                 [0;34m"raw_input was called, but this frontend does not support input requests."[0m[0;34m[0m[0;34m[0m[0m
-[1;32m    856[0m             )
+File [0;32m~/anaconda3/lib/python3.8/pydoc.py:1923[0m, in [0;36mHelper.interact[0;34m(self)[0m
+[1;32m   1921[0m [38;5;28;01mwhile[39;00m [38;5;28;01mTrue[39;00m:
+[1;32m   1922[0m     [38;5;28;01mtry[39;00m:
+[0;32m-> 1923[0m         request [38;5;241m=[39m [38;5;28;43mself[39;49m[38;5;241;43m.[39;49m[43mgetline[49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mhelp> [39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m   1924[0m         [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m request: [38;5;28;01mbreak[39;00m
+[1;32m   1925[0m     [38;5;28;01mexcept[39;00m ([38;5;167;01mKeyboardInterrupt[39;00m, [38;5;167;01mEOFError[39;00m):
+
+File [0;32m~/anaconda3/lib/python3.8/pydoc.py:1943[0m, in [0;36mHelper.getline[0;34m(self, prompt)[0m
+[1;32m   1941[0m [38;5;124;03m"""Read one line, using input() when appropriate."""[39;00m
+[1;32m   1942[0m [38;5;28;01mif[39;00m [38;5;28mself[39m[38;5;241m.[39minput [38;5;129;01mis[39;00m sys[38;5;241m.[39mstdin:
+[0;32m-> 1943[0m     [38;5;28;01mreturn[39;00m [38;5;28;43minput[39;49m[43m([49m[43mprompt[49m[43m)[49m
+[1;32m   1944[0m [38;5;28;01melse[39;00m:
+[1;32m   1945[0m     [38;5;28mself[39m[38;5;241m.[39moutput[38;5;241m.[39mwrite(prompt)
+
+File [0;32m~/.local/lib/python3.8/site-packages/ipykernel/kernelbase.py:854[0m, in [0;36mKernel.raw_input[0;34m(self, prompt)[0m
+[1;32m    847[0m [38;5;124;03m"""Forward raw_input to frontends[39;00m
+[1;32m    848[0m 
+[1;32m    849[0m [38;5;124;03mRaises[39;00m
+[1;32m    850[0m [38;5;124;03m------[39;00m
+[1;32m    851[0m [38;5;124;03mStdinNotImplentedError if active frontend doesn't support stdin.[39;00m
+[1;32m    852[0m [38;5;124;03m"""[39;00m
+[1;32m    853[0m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m[38;5;241m.[39m_allow_stdin:
+[0;32m--> 854[0m     [38;5;28;01mraise[39;00m StdinNotImplementedError(
+[1;32m    855[0m         [38;5;124m"[39m[38;5;124mraw_input was called, but this frontend does not support input requests.[39m[38;5;124m"[39m
+[1;32m    856[0m     )
+[1;32m    857[0m [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39m_input_request([38;5;28mstr[39m(prompt),
+[1;32m    858[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_ident,
+[1;32m    859[0m     [38;5;28mself[39m[38;5;241m.[39m_parent_header,
+[1;32m    860[0m     password[38;5;241m=[39m[38;5;28;01mFalse[39;00m,
+[1;32m    861[0m )
 
 [0;31mStdinNotImplementedError[0m: raw_input was called, but this frontend does not support input requests.
 StdinNotImplementedError: raw_input was called, but this frontend does not support input requests.

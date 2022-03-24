@@ -27,7 +27,7 @@
 **Associated material:** 
 
 
-- [Python virtual environments](../../extras/python-virtual-environment)
+- [Python virtual environments](./python-virtual-environment)
 
 
 ````
@@ -245,5 +245,5 @@ conda install <package name>
 ## Virtual environments
 
 ```{important}
-Install and use [Python virtual environments](../../extras/python-virtual-environment). That is very helpful and also helps to avoid potential package conflicts upon updates. 
+Install and use [Python virtual environments](./python-virtual-environment). That is very helpful and also helps to avoid potential package conflicts upon updates. 
 ```

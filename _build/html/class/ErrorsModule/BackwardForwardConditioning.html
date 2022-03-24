@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -37,29 +37,21 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -113,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Prerequisites and installations
  </span>
@@ -130,7 +122,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Linux basics
  </span>
@@ -147,7 +139,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python and Jupyter
  </span>
@@ -169,7 +161,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Other software
  </span>
@@ -202,7 +194,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
@@ -219,7 +211,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
@@ -241,7 +233,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
@@ -253,7 +245,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -281,7 +273,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="HornersAlgorithm.html">
-   Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
@@ -295,7 +287,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Interpolation
  </span>
@@ -332,7 +324,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Numerical Differentiation &amp; Integration
  </span>
@@ -364,7 +356,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -505,7 +497,7 @@
             
               <div>
                 
-  <div class="section" id="forward-and-backwards-errors">
+  <div class="tex2jax_ignore mathjax_ignore section" id="forward-and-backwards-errors">
 <h1>Forward and Backwards Errors<a class="headerlink" href="#forward-and-backwards-errors" title="Permalink to this headline">¶</a></h1>
 <p>You might assume that scientific computing consists of the process:</p>
 <p>Problem formulated mathematically <span class="math notranslate nohighlight">\(\Rightarrow\)</span> algorithm <span class="math notranslate nohighlight">\(\Rightarrow\)</span> solution.</p>
@@ -529,7 +521,7 @@
 <li><p><strong>condition number</strong>, <span class="math notranslate nohighlight">\(\mathcal{C}=\frac{E_f}{E_b}\)</span>.</p></li>
 </ul>
 <p>Note that these definitions are not precise in the sense that they leave a few choices open, such as whether <span class="math notranslate nohighlight">\(E_f\)</span> and <span class="math notranslate nohighlight">\(E_b\)</span> are absolute or relative errors.  However, independent of this choice, a larger condition number <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> indicates a more poorly conditioned problem.  As such, the relative magnitude of <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> can be used to evaluate different formulations of a given mathematical problem to decide which formulation is better conditioned.</p>
-<p>In our example above where we solve the differential equation analytically, the perturbed solution <span class="math notranslate nohighlight">\(\tilda{x}(t)\)</span> satisfies the differential equation exactly so the only source of backward error here is the initial condition so <span class="math notranslate nohighlight">\(E_b=\epsilon\)</span>.  The forward error is also fairly straightforward as <span class="math notranslate nohighlight">\(E_f = |x(t)-\tilde{x}(t)| = \epsilon e^t\)</span>.  So here we see the condition number</p>
+<p>In our example above where we solve the differential equation analytically, the perturbed solution <span class="math notranslate nohighlight">\(\tilde{x}(t)\)</span> satisfies the differential equation exactly so the only source of backward error here is the initial condition so <span class="math notranslate nohighlight">\(E_b=\epsilon\)</span>.  The forward error is also fairly straightforward as <span class="math notranslate nohighlight">\(E_f = |x(t)-\tilde{x}(t)| = \epsilon e^t\)</span>.  So here we see the condition number</p>
 <div class="math notranslate nohighlight">
 \[\mathcal{C} =  \frac{E_f}{E_b} = e^t.\]</div>
 <p>The condition number here grows with time.  What this means is that if we refine our question to something like: What is <span class="math notranslate nohighlight">\(x(T)\)</span> for <span class="math notranslate nohighlight">\(T=0.5\)</span>?  The condition number for this more precise problem is <span class="math notranslate nohighlight">\(\mathcal{C}=e^{0.5}\approx 1.64\)</span> which makes this a reasonable question to ask (i.e. is reasonably well-conditioned).  However, if you ask the question: What is <span class="math notranslate nohighlight">\(x(T)\)</span> for <span class="math notranslate nohighlight">\(T=25\)</span>? then the condition number is <span class="math notranslate nohighlight">\(\mathcal{C}=e^{25} \approx 7\times 10^{10}\)</span> which is a very poorly conditioned problem, meaning it is not really a question you can give a meaningful answer to.</p>
@@ -560,7 +552,7 @@
 <div class="section" id="stability">
 <h2>Stability<a class="headerlink" href="#stability" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we are given a well-conditioned problem, then a <strong>stable algorithm</strong> is one that preserves this property (i.e. small changes in the problem data formulation <em>and</em> application of our algorithm result in small changes to our approximate solution).  Conversely, an <strong>unstable algorithm</strong> is one where, given a well-conditioned problem, small errors in the problem data and application of the algorithm gives large changes in the approximate solution.  Typically, a stable algorithm is one that gives us a numerically exact solution to a problem that is nearby (in the backward error sense) to our original problem.</p>
-<p>When you encounter what appears to a large condition number (it is usually fairly obvious is small changes to input result in huge changes to output), it is very important to undersand whether the issue is due to poor conditioning of the underlying problem or application of an unstable algortihm.  Applying a stable algorithm to a poorly conditioned problem will give very similar results to applying an unstable algorithm to a well conditioned problem.  The solution is <em>very</em> different for these two cases.  In the case where the underlying problem is poorly conditioned you are <em>asking the wrong question</em> and need to think hard about what the right question would be.  If the problem is well conditioned but the algorithm is unstable there may be algorithmic parameter that could be adjusted (such as making a step size smaller) or perhaps a completely different algorithm is needed.</p>
+<p>When you encounter what appears to a large condition number (it is usually fairly obvious is small changes to input result in huge changes to output), it is very important to understand whether the issue is due to poor conditioning of the underlying problem or application of an unstable algorithm.  Applying a stable algorithm to a poorly conditioned problem will give very similar results to applying an unstable algorithm to a well conditioned problem.  The solution is <em>very</em> different for these two cases.  In the case where the underlying problem is poorly conditioned you are <em>asking the wrong question</em> and need to think hard about what the right question would be.  If the problem is well conditioned but the algorithm is unstable there may be algorithmic parameter that could be adjusted (such as making a step size smaller) or perhaps a completely different algorithm is needed.</p>
 <p>In algorithms that involve a large number of repeated steps, such as integrating a differential equation forward in time, it is clear that the absolute error will inevitably grow with time as errors accumulate.  As a rule of thumb, if the input error is <span class="math notranslate nohighlight">\(\epsilon\)</span> and after <span class="math notranslate nohighlight">\(n\)</span> steps the error is <span class="math notranslate nohighlight">\(E_n\)</span> then</p>
 <ul class="simple">
 <li><p>if <span class="math notranslate nohighlight">\(E_n \approx C n \epsilon\)</span> where C is constant, then the algorithm is stable,</p></li>
@@ -573,7 +565,7 @@
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {

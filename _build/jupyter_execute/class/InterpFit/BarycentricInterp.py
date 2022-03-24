@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## Barycentric Lagrange Interpolation
+# # Barycentric Lagrange Interpolation
 # 
 # This rewriting of the Lagrange interpolation goes back at least seventy-five years but was popularized by [Berrut and Trefethen](https://epubs.siam.org/doi/pdf/10.1137/S0036144502417715) in the early 21st century.  The idea here is basically to rewrite the Lagrange form to avoid the problems mentioned above.
 # 

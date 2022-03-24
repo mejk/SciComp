@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -37,36 +37,21 @@
     
   <link rel="preload" as="script" href="../../_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script src="../../_static/togglebutton.js"></script>
     <script src="../../_static/clipboard.min.js"></script>
     <script src="../../_static/copybutton.js"></script>
     <script src="../../_static/save_state.js"></script>
     <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe,.cell"
-        const thebe_selector_input = "pre,.cell_input div.highlight"
-        const thebe_selector_output = ".output,.cell_output"
-    </script>
-    <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -120,7 +105,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Prerequisites and installations
  </span>
@@ -137,7 +122,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Linux basics
  </span>
@@ -154,7 +139,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python and Jupyter
  </span>
@@ -176,7 +161,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Other software
  </span>
@@ -209,7 +194,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Python &amp; programming
  </span>
@@ -226,7 +211,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Intro to Scientific computing &amp; HPC
  </span>
@@ -248,7 +233,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Random numbers
  </span>
@@ -260,7 +245,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Errors in Scientific Computing
  </span>
@@ -288,7 +273,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="HornersAlgorithm.html">
-   Example: Evaluating polynomials
+   Horner’s algorithm
   </a>
  </li>
  <li class="toctree-l1">
@@ -302,7 +287,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Interpolation
  </span>
@@ -339,7 +324,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   MODULE: Numerical Differentiation &amp; Integration
  </span>
@@ -371,7 +356,7 @@
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   More on computers / helps
  </span>
@@ -453,12 +438,7 @@
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Sources of Errors in Scientific Computing
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantifying-error">
    Quantifying Error
   </a>
@@ -483,12 +463,7 @@
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Sources of Errors in Scientific Computing
-  </a>
- </li>
- <li class="toc-h1 nav-item toc-entry">
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#quantifying-error">
    Quantifying Error
   </a>
@@ -502,35 +477,35 @@
             
               <div>
                 
-  <div class="section" id="sources-of-errors-in-scientific-computing">
+  <div class="tex2jax_ignore mathjax_ignore section" id="sources-of-errors-in-scientific-computing">
 <h1>Sources of Errors in Scientific Computing<a class="headerlink" href="#sources-of-errors-in-scientific-computing" title="Permalink to this headline">¶</a></h1>
-<p>Errors can come from a number of sources and it is helpful to catergorize these sources first:</p>
+<p>Errors can come from a number of sources and it is helpful to categorize these sources first:</p>
 <ol class="simple">
-<li><p><strong>Blunders</strong>.  This includes <em>syntax errors</em> and <em>logic errors</em> in your code.  The first are relatively easy to find, especially if you use a compiled language such as C/C++ and learn how to read the error messages from the compiler/interpreter.  The second are much harder to find but are problably most likely when your code gives results that don’t seem to make sense.</p></li>
-<li><p><strong>Data errors from measurements</strong>.  The old saying “garbage in = garbage out” is relevent here.  This is can be a significant problem in data sciences.  It includes “over-fitting” where the misguided researcher fits not just the signal in a measurement but also the noise.  Another example we will examine in more detail in the section on interpolation is the “Runge Phenomenon”.  This is an error that arises from using polynomial interpolation on equally spaced data points that can cause huge errors near the boundaries of the fitted domain.  It is also something that is common in extrapolation which is rarely succesful just fitting data without an underlying model that you have strong reason to believe is valid outside the fitted domain.</p></li>
+<li><p><strong>Blunders</strong>.  This includes <em>syntax errors</em> and <em>logic errors</em> in your code.  The first are relatively easy to find, especially if you use a compiled language such as C/C++ and learn how to read the error messages from the compiler/interpreter.  The second are much harder to find but are probably most likely when your code gives results that don’t seem to make sense.</p></li>
+<li><p><strong>Data errors from measurements</strong>.  The old saying “garbage in = garbage out” is relevant here.  This is can be a significant problem in data sciences.  It includes “over-fitting” where the misguided researcher fits not just the signal in a measurement but also the noise.  Another example we will examine in more detail in the section on interpolation is the “Runge Phenomenon”.  This is an error that arises from using polynomial interpolation on equally spaced data points that can cause huge errors near the boundaries of the fitted domain.  It is also something that is common in extrapolation which is rarely successful just fitting data without an underlying model that you have strong reason to believe is valid outside the fitted domain.</p></li>
 <li><p><strong>Truncation or discretization errors</strong>.  We will discuss this in more detail later in this chapter.  These arise from the fact that our models and algorithms usually only try to approximate the solution.</p></li>
 <li><p><strong>Finite precision arithmetic</strong>.  These stem from the fact that we cannot represent all possible real numbers on a computer.  This leads to issues of over/underflow and roundoff errors which we will explore in more detail in this chapter.</p></li>
 <li><p><strong>Attempting to solve the wrong problem</strong>.  This is much more common that you would think.  An example is trying to predict whether or not it will rain in a certain location 60 days from now (i.e. yes or no).  This is a poorly conditioned problem.  However, if you change the problem slightly and ask for the probability that it will rain in a certain location 60 days from now, this new problem is now solvable within reasonably well-defined error bounds.</p></li>
 </ol>
-<p>The first of these sources of errors are the sort of thing that is usually addressed in a computer science course and we will not spend much time here discussing it.  However, when you sit down to do the excercises this is likely to be the primarly source of errors that will consume your time.  Good coding practise and ensuring you understand the algorithm you are trying to implement before trying to code it up are the best way to avoid spending too much time on blunders.</p>
-<p>While we will return to data errors later in the course when we discuss interoplation and regression, they are not the main focus of a numerical analysis course.  A good understanding of probability and statistics will help you in knowing how significant these sorts of errors may be in the problem you are trying to solve.</p>
+<p>The first of these sources of errors are the sort of thing that is usually addressed in a computer science course and we will not spend much time here discussing it.  However, when you sit down to do the exercises this is likely to be the primarily source of errors that will consume your time.  Good coding practise and ensuring you understand the algorithm you are trying to implement before trying to code it up are the best way to avoid spending too much time on blunders.</p>
+<p>While we will return to data errors later in the course when we discuss interpolation and regression, they are not the main focus of a numerical analysis course.  A good understanding of probability and statistics will help you in knowing how significant these sorts of errors may be in the problem you are trying to solve.</p>
 <p>The last three sources of error will be something we will cover in detail in this course and by completion you should be adept at avoiding them.</p>
-</div>
 <div class="section" id="quantifying-error">
-<h1>Quantifying Error<a class="headerlink" href="#quantifying-error" title="Permalink to this headline">¶</a></h1>
+<h2>Quantifying Error<a class="headerlink" href="#quantifying-error" title="Permalink to this headline">¶</a></h2>
 <p>To quantify error we need to first define what we mean.
 If <span class="math notranslate nohighlight">\(p^*\)</span> is an approximation to <span class="math notranslate nohighlight">\(p\)</span>, then:</p>
 <p>-the <em>absolute</em> error is <span class="math notranslate nohighlight">\(|p-p^*|\)</span>,</p>
 <p>-the <em>relative</em> error is <span class="math notranslate nohighlight">\(\frac{|p-p^*|}{|p|}\)</span>,</p>
 <p>-and the number of <em>significant digits</em> is <span class="math notranslate nohighlight">\(t\)</span> if <span class="math notranslate nohighlight">\(t\)</span> is the largest positive integer with <span class="math notranslate nohighlight">\(\frac{|p-p^*|}{|p|} \leq 5 \times 10^{-t}\)</span>.</p>
-<p>The advantage of the relative error is that it is scale invariant.  For example, if you measure the length of a pencil with a ruler to be <span class="math notranslate nohighlight">\(16\)</span> cm with an absolute error of <span class="math notranslate nohighlight">\(0.5\)</span> mm.  This absolute error depends on the unit of measurment.  If you measure in nm, then it is huge.  If you measure in parsecs, it is miniscule.  However, the relative error is <span class="math notranslate nohighlight">\(0.003\)</span> independent of the units of measurement.  Note that the formula above actually says the realtive error is <span class="math notranslate nohighlight">\(0.003125\)</span>, but we typically only quote errors to one significant digit.</p>
+<p>The advantage of the relative error is that it is scale invariant.  For example, if you measure the length of a pencil with a ruler to be <span class="math notranslate nohighlight">\(16\)</span> cm with an absolute error of <span class="math notranslate nohighlight">\(0.5\)</span> mm.  This absolute error depends on the unit of measurement.  If you measure in nm, then it is huge.  If you measure in parsecs, it is minuscule.  However, the relative error is <span class="math notranslate nohighlight">\(0.003\)</span> independent of the units of measurement.  Note that the formula above actually says the relative error is <span class="math notranslate nohighlight">\(0.003125\)</span>, but we typically only quote errors to one significant digit.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
     {
         requestKernel: true,
         binderOptions: {
-            repo: "firasm/jupyterbook_course_template",
+            repo: "mejk/SciComp_template",
             ref: "master",
         },
         codeMirrorConfig: {

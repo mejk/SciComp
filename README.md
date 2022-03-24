@@ -1,14 +1,12 @@
-# JupyterBook Course Template
+# JupyterBook Course Template for SciComp
 
-This is a template repository that makes it drop-dead simple for anyone to create a JupyterBook course website and deploy it using GH Pages.
-No configuration is necessary, there are just three steps.
+This is a repository the Scientific Computing course.
+
+This is a template repository that makes it drop-dead simple for anyone to create a JupyterBook course website and deploy it using GH Pages. No configuration is necessary, there are just three steps.
 
 ## Course Website
 
-To access the rendered version of this JupyterBook, visit https://firasm.github.io/jupyterbook_course_template.
-
-Each time there is a commit to master, the website will re-deploy.
-Currently it takes about 70s for the website to update.
+To access the rendered version of this JupyterBook, visit https://mejk.github.io/SciComp
 
 
 ## Usage
@@ -62,9 +60,9 @@ I might miss a few things, so this list is a work in progress:
 1. In the `about` and `class` folders:
 	- [ ] Edit the .md and .ipynb files with your course content
 
-## Attribution
+## Acknowledgments
 
 - Thanks to [Tomas Beuzen](https://github.com/TomasBeuzen) for his GH Actions workflow that deploys JupyterBooks using GH pages.
 - Thanks the entire [Jupyter Project](https://jupyter.org/about)
 - Finally, a big thanks to the [JupyterBook community](https://github.com/executablebooks/jupyter-book/graphs/contributors) for my incessant issues, questions, and PR requests on documentation changes.
-# SciComp9502B
+
