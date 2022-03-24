@@ -1,5 +1,7 @@
+*.log 
 *~
 *-orig*
 _build/
 _static/
 instructions.txt
+token*
