@@ -77,5 +77,5 @@ We do wish that if you use the material, please include an acknowledgment.
 
 - The [Jupyter Project](https://jupyter.org/)
 - The [JupyterBook community](https://github.com/executablebooks/jupyter-book/graphs/contributors).
-- [Dr. Firas Moosvi](https://github.com/firasm) for the initial inspiration.
+- [Dr. Firas Moosvi](https://github.com/firasm) for the initial inspiration. Check his pages, there's more cool Jupyter Book stuff!
 
