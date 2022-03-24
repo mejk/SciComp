@@ -16,11 +16,12 @@
 </small>
 </div><p></p>
 
-## Source files
+## Source files and extra tips
 
 The source files are available at github:
 
 - [JupyterBook Course Template and Material for SciComp](https://github.com/mejk/SciComp)
+  - The github site has also some extra tips and tricks.
 
 ## Target audience
 

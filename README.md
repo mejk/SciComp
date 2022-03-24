@@ -32,7 +32,10 @@ Install the depenencies first, The material uses
 - [Jupyter Book](https://jupyterbook.org/start/overview.html)
 - [sphinx-proof](https://github.com/executablebooks/sphinx-proof)
 
+### Annotations, pdf and such
 
+- The [course web site](https://mejk.github.io/SciComp/) uses [https://hypothes.is](https://hypothes.is) that allows for both private and public annotations. This is a useful feature for both the teacher and the student.
+-  The [course web site](https://mejk.github.io/SciComp/) allows saving the source code of each page as well as producing a PDF file of the page 
 
 ### Here's one possible way using command line:
 
@@ -49,9 +52,10 @@ Install the depenencies first, The material uses
   ``` 
 6. Check the progress from the github repository under `Actions`. Once done, go the web site (as listed under `Actions`.
 
-## Important
+## Important!!!
 
-Use at your own risk. We take no responsibility or liability of any kind. 
+- Use at your own risk. We take no responsibility or liability of any kind. 
+- The various installations have all been tested and tried, but if you choose to follow the notes, the risk is entirly yours. Please be aware that computer software and operating systems develop rapidly: Pay attention to the version numbers.
 
 ## Copyright 
 
@@ -63,4 +67,5 @@ By Mikko Karttunen and Colin Denniston.  All content on this site (unless otherw
 
 - The [Jupyter Project](https://jupyter.org/)
 - The [JupyterBook community](https://github.com/executablebooks/jupyter-book/graphs/contributors).
+- [Dr. Firas Moosvi](https://github.com/firasm) for the initial inspiration.
 
