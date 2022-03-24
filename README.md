@@ -11,7 +11,14 @@ https://mejk.github.io/SciComp
 
 ## How to use the material for your own course or such
 
-Just clone the site. It is expected that you know how git and friends work. The lectrues are written as both markdown and Jupyter notebooks depending on the type of material. 
+Just clone the site (as you see below, this is CC licensed). It is expected that you know how git and friends work. The lectures are written as both markdown and Jupyter notebooks depending on the type of material. Should be easy to modify and adjust. 
+
+## Updates and contributions
+
+- This material is updated continously and new modules are added.
+- If you wish to contribute, just contact us! Contributions are very welcome. The one requirement is that all the material is original or Creative Commons licensed.
+- If you find typos or errors, let us know.
+
 
 ## How to make a copy
 
