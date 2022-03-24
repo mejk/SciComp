@@ -8,6 +8,7 @@ To access the rendered version of this course, visit
 
 https://mejk.github.io/SciComp
 
+If you wish to use it as such, you're most welcome to do so.
 
 ## How to use the material for your own course or such
 
@@ -44,7 +45,7 @@ Install the depenencies first, The material uses
 - The [course web site](https://mejk.github.io/SciComp/) uses [https://hypothes.is](https://hypothes.is) that allows for both private and public annotations. This is a useful feature for both the teacher and the student.
 -  The [course web site](https://mejk.github.io/SciComp/) allows saving the source code of each page as well as producing a PDF file of the page 
 
-### Here's one possible way using command line:
+### Here's one possible way using the command line:
 
 1. Clone the material to a directory on your local computer
 1. Create a github repository for the material.
