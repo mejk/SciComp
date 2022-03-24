@@ -43,11 +43,11 @@ Install the depenencies first, The material uses
   ```
   jupyter-book build .
   ```
-1. Use `ghp-import` to push the built to `gh-pages`
+5. Use `ghp-import` to push the built to `gh-pages`
   ```
    ghp-import -n -p -f _build/html
   ``` 
-1. Check the progress from the github repository under `Actions`. Once done, go the web site (as listed under `Actions`.
+6. Check the progress from the github repository under `Actions`. Once done, go the web site (as listed under `Actions`.
 
 ## Important
 
